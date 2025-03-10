@@ -10,7 +10,9 @@ with open("/home/cdp/.cache/kagglehub/datasets/Cornell-University/arxiv/versions
 json_objects = [json.loads(obj) for obj in json_str.strip().split("\n")]
 
 # 正则表达式匹配 GitHub 链接
-github_pattern = re.compile(r"https://github\.com/[^\s,]+")
+# github_pattern = re.compile(r"https://github\.com/[^\s,]+")
+
+github_pattern = re.compile(r"[\(\[\{]?(https://github\.com/[^\s,)\]}\.]+(?:\.[^\s,)\]}\.]+)*)[\)\]}\.]?")
 
 filtered_data = []
 total_count = len(json_objects)  # 总数据量
