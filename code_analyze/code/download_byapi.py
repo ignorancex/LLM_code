@@ -4,10 +4,10 @@ import json
 
 # GitHub Token（建议用环境变量）
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN",
-                         "your_token")
+                         "token")
 
 # 所有代码存放的主目录
-BASE_DIR = "github_code"
+BASE_DIR = "github_code/2020"
 
 
 def download_file(url, save_path):
