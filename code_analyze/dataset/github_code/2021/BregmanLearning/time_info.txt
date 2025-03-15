@@ -1,0 +1,10 @@
+models/aux_funs.py: 2021-07-22T00:03:58Z
+models/fully_connected.py: 2021-05-02T16:10:43Z
+models/mnist_conv.py: 2021-06-03T15:01:14Z
+models/resnet.py: 2023-04-19T11:22:46Z
+models/vgg.py: 2021-04-09T12:36:58Z
+optimizers.py: 2024-01-30T14:29:14Z
+regularizers.py: 2021-07-22T00:03:31Z
+train.py: 2021-07-22T00:03:31Z
+utils/configuration.py: 2021-07-22T00:02:53Z
+utils/datasets.py: 2021-07-22T00:02:53Z

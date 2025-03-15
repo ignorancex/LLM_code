@@ -1,0 +1,8 @@
+model/architecture/cropping.py: 2021-07-19T07:33:24Z
+model/architecture/dir.py: 2021-07-19T07:33:24Z
+model/architecture/generic_UNet.py: 2021-07-19T07:33:24Z
+model/architecture/help.py: 2021-07-19T07:33:24Z
+model/architecture/neural_network.py: 2021-07-19T07:33:24Z
+model/architecture/preprocessing.py: 2021-07-19T07:33:24Z
+model/architecture/segmentation_export.py: 2021-07-19T07:33:24Z
+model/model.py: 2021-07-19T07:33:24Z

@@ -1,0 +1,15 @@
+docs/source/conf.py: 2020-12-31T12:01:34Z
+examples/exact_calculation_example.py: 2021-01-03T20:52:32Z
+examples/exact_marginal_contributions_example.py: 2021-01-03T20:58:40Z
+examples/multilinear_extension_example.py: 2021-02-01T14:15:13Z
+examples/permutation_sampler_example.py: 2020-12-31T12:53:04Z
+setup.py: 2023-07-01T21:42:58Z
+shapley/__init__.py: 2022-04-28T16:19:48Z
+shapley/solution_concept.py: 2022-04-28T16:23:18Z
+shapley/solvers/__init__.py: 2020-12-31T11:28:53Z
+shapley/solvers/exact_enumeration.py: 2022-04-28T16:15:58Z
+shapley/solvers/expected_marginal_contributions.py: 2022-04-28T16:23:18Z
+shapley/solvers/multilinear_extension.py: 2022-04-28T16:15:58Z
+shapley/solvers/permutation_sampler.py: 2022-04-28T16:15:58Z
+shapley/version.py: 2022-05-26T19:53:22Z
+tests/unit/test_shapley.py: 2021-11-20T23:15:16Z

@@ -1,0 +1,9 @@
+SDK/BLE_General/1.Find_Device.py: 2025-01-10T10:34:46Z
+SDK/BLE_General/2.Read_data.py: 2025-02-07T21:58:18Z
+SDK/BLE_General/3.Read_data_graph.py: 2025-02-07T22:59:49Z
+SDK/BLE_General/4.Read_gpaph_Autoscale.py: 2025-02-07T23:13:35Z
+SDK/BLE_General/how_it_works.py: 2025-02-07T23:00:56Z
+SDL/1.Read_data_via_BLE_windows.py: 2024-11-11T13:46:59Z
+SDL/Data_visualisation/1.Alpha_marker.py: 2024-11-11T15:54:50Z
+SDL/Data_visualisation/2.Data_Visualisation.py: 2024-11-19T00:10:42Z
+dataset/1.Convert_and_read_data.py: 2025-01-08T10:49:06Z

@@ -1,0 +1,15 @@
+voxpopuli/__init__.py: 2022-01-31T10:27:42Z
+voxpopuli/download_audios.py: 2021-07-27T03:43:29Z
+voxpopuli/get_asr_data.py: 2022-01-31T10:27:42Z
+voxpopuli/get_lm_data.py: 2021-03-14T03:03:09Z
+voxpopuli/get_s2s_data.py: 2021-03-05T17:36:30Z
+voxpopuli/get_unlabelled_data.py: 2021-07-27T03:43:29Z
+voxpopuli/segmentation/__init__.py: 2021-03-05T17:36:30Z
+voxpopuli/segmentation/cut_from_labels.py: 2021-03-05T17:36:30Z
+voxpopuli/segmentation/cut_with_align_files.py: 2021-03-05T17:36:30Z
+voxpopuli/segmentation/get_segment_pyannote_speaker.py: 2021-03-05T17:36:30Z
+voxpopuli/segmentation/run_pyannote_sd.py: 2021-03-05T17:36:30Z
+voxpopuli/text/__init__.py: 2021-03-05T17:36:30Z
+voxpopuli/text/wer_tools.py: 2021-03-05T17:36:30Z
+voxpopuli/text/word_align_tools.py: 2021-03-05T17:36:30Z
+voxpopuli/utils.py: 2021-03-05T17:36:30Z

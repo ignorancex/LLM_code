@@ -1,0 +1,13 @@
+code/meas_code/heliocorr.py: 2020-12-31T07:57:58Z
+code/meas_code/rv_functions.py: 2020-12-31T07:57:58Z
+code/meas_code/rv_met_mg.py: 2020-12-31T07:57:58Z
+code/redux_code/functions.py: 2020-12-31T07:57:58Z
+code/redux_code/giraffe_spec_combine.py: 2020-12-31T07:57:58Z
+code/redux_code/giraffe_spec_shift_fit.py: 2020-12-31T07:57:58Z
+code/redux_code/giraffe_spec_sky_remove_adjust_width.py: 2020-12-31T07:57:58Z
+code/redux_code/giraffe_spec_snr_cal.py: 2020-12-31T07:57:58Z
+code/redux_code/heliocorr.py: 2020-12-31T07:57:58Z
+code/redux_code/list_target_info.py: 2020-12-31T07:57:58Z
+code/redux_code/mpfit.py: 2020-12-31T07:57:58Z
+code/redux_code/mpfitexpr.py: 2020-12-31T07:57:58Z
+code/redux_code/robust_polyfit.py: 2020-12-31T07:57:58Z

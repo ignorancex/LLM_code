@@ -1,0 +1,5 @@
+docs/conf.py: 2024-04-23T13:26:20Z
+examples/IRA/python_program.py: 2024-02-26T20:32:59Z
+examples/SOFI/ex_D6h_subgroup/test.py: 2024-03-06T17:29:52Z
+examples/SOFI/python_program.py: 2024-04-25T08:22:55Z
+interface/ira_mod.py: 2024-08-13T11:48:07Z

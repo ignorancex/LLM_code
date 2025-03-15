@@ -1,0 +1,14 @@
+from .CIFAR10NET import CIFAR10NET
+from .CIFAR10NET_INT import CIFAR10NET_INT
+
+from .MNISTNET import MNISTNET
+from .MNISTNET_INT import MNISTNET_INT
+
+from .RESNET import RESNET
+from .RESNET_INT import RESNET_INT
+
+from .CIFAR100NET import CIFAR100NET
+from .CIFAR100NET_INT import CIFAR100NET_INT
+
+from .VGG import VGG
+from .VGG_INT import VGG_INT

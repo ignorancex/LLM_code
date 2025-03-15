@@ -1,0 +1,8 @@
+make_data.py: 2022-08-10T15:04:13Z
+necessary_functions.py: 2022-08-10T15:04:13Z
+run_autocorrelation_and_thinning.py: 2022-08-10T15:04:13Z
+run_gibbs_sampler_one_walker.py: 2022-09-07T12:57:36Z
+run_plotter_all_thinned_walkers.py: 2022-09-07T12:57:36Z
+run_plotter_all_walkers.py: 2022-09-07T12:57:36Z
+run_plotter_make_corner_for_letter.py: 2022-09-07T12:57:36Z
+run_vb.py: 2022-09-07T12:57:36Z

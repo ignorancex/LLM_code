@@ -1,0 +1,8 @@
+Bimodal_example/Bimodal_example.py: 2021-06-03T01:10:00Z
+Bimodal_example/Bimodal_example_make_plots.py: 2021-06-03T01:10:00Z
+Bundesliga_example/Bundesliga_example.py: 2021-06-03T01:10:00Z
+Bundesliga_example/make_bundesliga_table.py: 2021-06-03T01:10:00Z
+Bundesliga_example/make_leave_one_out_hists.py: 2021-06-03T01:10:00Z
+Toy_example/EMD_for_single_draw.py: 2021-06-03T01:10:00Z
+Toy_example/Simulate_urn_draws.py: 2021-06-03T01:10:00Z
+Toy_example/Toy_example.py: 2021-06-03T01:10:00Z

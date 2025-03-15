@@ -1,0 +1,7 @@
+clip/__init__.py: 2021-01-29T18:05:01Z
+clip/clip.py: 2024-06-04T19:47:22Z
+clip/model.py: 2022-07-27T19:42:37Z
+clip/simple_tokenizer.py: 2021-01-29T18:05:01Z
+hubconf.py: 2022-07-14T12:40:02Z
+setup.py: 2021-01-29T18:05:01Z
+tests/test_consistency.py: 2021-07-19T03:28:30Z

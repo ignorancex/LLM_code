@@ -1,0 +1,16 @@
+SciANN-ConstitutiveModeling/Tensor.py: 2023-01-06T07:52:59Z
+SciANN-ConstitutiveModeling/druckerPrager_dimensionless-biaxial-undrained.py: 2023-01-06T07:52:59Z
+SciANN-ConstitutiveModeling/druckerPrager_dimensionless-biaxial.py: 2023-01-06T07:52:59Z
+SciANN-ConstitutiveModeling/vonMises_isotropic_dimensionless.py: 2023-01-06T07:52:59Z
+SciANN-ConstitutiveModeling/vonMises_isotropic_stochastic.py: 2023-01-06T07:52:59Z
+SciANN-DataGenerator/sciann-datagenerator.py: 2021-04-18T22:51:26Z
+SciANN-Elasticity/sciann_datagenerator.py: 2021-08-05T06:47:46Z
+SciANN-ElastoPlasticity/plotting.py: 2020-06-12T01:04:46Z
+SciANN-ElastoPlasticity/utility_functions.py: 2020-06-12T01:04:46Z
+SciANN-LaplaceEq-Forward/sciann_datagenerator.py: 2021-08-05T06:44:14Z
+SciANN-SolidMechanics-BCs/SciANN-SolidMechanics-BCs.py: 2021-03-02T17:24:52Z
+SciANN-SolidMechanics/SciANN-SolidMechanics.py: 2021-03-02T17:16:54Z
+SciANN-Vibrations/PlateVibration/gen_dataset.py: 2021-07-12T23:02:25Z
+SciANN-Vibrations/PlateVibration/membrane.py: 2021-07-12T23:02:25Z
+SciANN-Vibrations/PlateVibration/membrane_inv.py: 2021-07-12T23:02:25Z
+SciANN-Vibrations/PlateVibration/plate.py: 2021-07-12T23:02:25Z

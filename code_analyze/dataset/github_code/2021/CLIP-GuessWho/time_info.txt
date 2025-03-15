@@ -1,0 +1,16 @@
+app_qesq.py: 2024-09-04T13:19:03Z
+app_qesq_friends.py: 2024-09-04T13:06:25Z
+app_qesq_only_celeba.py: 2021-11-09T23:03:46Z
+app_qesq_v6_random_images_zip.py: 2021-08-17T12:06:28Z
+app_qesq_v7.py: 2021-09-10T07:51:10Z
+app_qesq_v8.py: 2021-09-14T05:40:48Z
+app_qesq_v8b.py: 2021-09-14T05:41:21Z
+app_qesq_v9.py: 2023-07-26T07:44:03Z
+clip/__init__.py: 2021-06-29T16:05:33Z
+clip/clip.py: 2021-06-29T16:05:33Z
+clip/clip_old.py: 2021-06-29T16:05:33Z
+clip/model.py: 2021-06-29T16:05:33Z
+clip/simple_tokenizer.py: 2021-06-29T16:05:33Z
+clip/simple_tokenizer_old.py: 2021-06-29T16:05:33Z
+setup.py: 2021-06-29T16:05:33Z
+tests/test_consistency.py: 2021-06-29T16:05:33Z

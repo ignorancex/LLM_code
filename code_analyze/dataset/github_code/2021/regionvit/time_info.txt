@@ -1,0 +1,16 @@
+datasets.py: 2021-12-16T19:19:25Z
+detection/config.py: 2021-12-16T19:19:25Z
+detection/detector_wrapper.py: 2021-12-16T19:19:25Z
+engine.py: 2021-12-16T19:19:25Z
+main.py: 2021-12-16T19:19:25Z
+main_detection.py: 2021-12-16T19:19:25Z
+regionvit/__init__.py: 2021-12-16T19:19:25Z
+regionvit/attention/__init__.py: 2021-12-16T19:19:25Z
+regionvit/attention/attention2d.py: 2021-12-16T19:19:25Z
+regionvit/attention/attention_variants.py: 2021-12-16T19:19:25Z
+regionvit/regionvit.py: 2021-12-17T14:21:59Z
+run_with_submitit.py: 2021-12-16T19:19:25Z
+samplers.py: 2021-12-16T19:19:25Z
+tools/convert_cls_model_to_d2.py: 2021-12-16T19:19:25Z
+tools/convert_cls_model_to_diff_ws.py: 2021-12-16T19:19:25Z
+utils.py: 2021-12-16T19:19:25Z

@@ -1,0 +1,12 @@
+davis.py: 2021-07-02T09:54:28Z
+eval.py: 2021-07-02T09:54:28Z
+evaldavis2017/__init__.py: 2021-07-02T09:54:28Z
+evaldavis2017/davis2017/__init__.py: 2021-07-02T09:54:28Z
+evaldavis2017/davis2017/davis.py: 2021-07-02T09:54:28Z
+evaldavis2017/davis2017/evaluation.py: 2021-07-02T09:54:28Z
+evaldavis2017/davis2017/metrics.py: 2021-07-02T09:54:28Z
+evaldavis2017/davis2017/results.py: 2021-07-02T09:54:28Z
+evaldavis2017/davis2017/utils.py: 2021-07-02T09:54:28Z
+evaldavis2017/evaluation_method.py: 2021-07-02T09:54:28Z
+helpers.py: 2021-07-02T09:54:28Z
+swiftnet.py: 2021-07-02T09:54:28Z

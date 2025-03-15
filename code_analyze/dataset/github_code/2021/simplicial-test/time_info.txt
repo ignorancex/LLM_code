@@ -1,0 +1,16 @@
+docs/conf.py: 2021-04-12T05:17:56Z
+docs/extlinks_fancy.py: 2020-10-29T01:38:51Z
+setup.py: 2021-06-02T05:42:59Z
+simplicial_test/Test.py: 2021-09-29T07:58:04Z
+simplicial_test/__init__.py: 2021-09-29T07:58:04Z
+simplicial_test/custom_exceptions.py: 2021-08-24T08:54:07Z
+simplicial_test/draw.py: 2021-06-01T23:45:24Z
+simplicial_test/enumeration.py: 2021-08-24T08:54:07Z
+simplicial_test/sample.py: 2021-06-01T23:45:24Z
+simplicial_test/utils.py: 2021-09-06T09:20:10Z
+simplicial_test/validators.py: 2021-09-16T02:56:51Z
+tests/__init__.py: 2021-06-01T23:45:24Z
+tests/test_empirical_data.py: 2021-06-01T23:45:24Z
+tests/test_not_simplicial.py: 2021-06-01T23:45:24Z
+tests/test_simplicial.py: 2021-09-29T07:58:04Z
+utils/is_simplicial.py: 2021-09-29T07:58:04Z

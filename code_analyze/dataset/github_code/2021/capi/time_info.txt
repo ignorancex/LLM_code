@@ -1,0 +1,8 @@
+capi/__init__.py: 2021-01-02T03:49:10Z
+capi/agents.py: 2021-01-02T03:49:10Z
+capi/games.py: 2021-01-02T03:49:10Z
+capi/models.py: 2021-01-02T03:49:10Z
+capi/trainers.py: 2021-01-02T03:49:10Z
+capi/type_checking.py: 2021-01-02T03:49:10Z
+scripts/interface.py: 2021-01-02T03:49:10Z
+setup.py: 2021-01-02T03:49:10Z

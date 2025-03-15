@@ -1,0 +1,17 @@
+docs/source/conf.py: 2021-03-02T10:08:17Z
+minvime-runner.py: 2024-09-06T08:27:34Z
+minvime/__init__.py: 2021-04-13T22:37:21Z
+minvime/__main__.py: 2020-09-25T00:06:50Z
+minvime/estimator_classification.py: 2021-04-13T11:34:17Z
+minvime/estimator_regression.py: 2020-09-25T00:06:50Z
+minvime/generator.py: 2020-09-25T00:06:50Z
+minvime/minvime.py: 2021-03-02T10:08:17Z
+scripts/paper_simplicity_plot.py: 2021-01-14T07:11:29Z
+scripts/paper_simulation_one.py: 2020-09-25T00:06:50Z
+scripts/paper_simulation_two.py: 2020-09-25T00:06:50Z
+scripts/run_churn_simulation.py: 2021-04-13T11:34:17Z
+scripts/run_simulation_one.py: 2021-04-13T11:34:17Z
+setup.py: 2024-03-27T22:11:01Z
+tests/__init__.py: 2020-09-13T02:51:12Z
+tests/test_estimator.py: 2020-09-25T00:06:50Z
+tests/test_generator.py: 2020-09-25T00:06:50Z

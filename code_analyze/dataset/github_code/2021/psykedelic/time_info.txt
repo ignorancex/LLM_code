@@ -1,0 +1,15 @@
+analysis/ExperimentProcessor.py: 2021-03-06T23:49:23Z
+analysis/ExperimentRecorder.py: 2020-12-16T08:44:52Z
+applications/microresnet/MicroResNet.py: 2020-12-16T08:46:07Z
+callbacks/ComperativeTestingCallback.py: 2020-12-16T08:46:56Z
+callbacks/CompressionCallback.py: 2020-12-16T08:46:56Z
+callbacks/EigenvalueCallback.py: 2020-12-16T08:46:56Z
+callbacks/HistoryCallback.py: 2020-12-16T08:46:56Z
+callbacks/RegularizationCallback.py: 2020-12-16T08:46:56Z
+layers/MicroConv2D.py: 2020-12-16T08:47:31Z
+run.py: 2021-01-09T16:58:33Z
+testers/Base_tester.py: 2020-12-16T08:48:09Z
+testers/CIFAR100_tester.py: 2020-12-16T08:48:09Z
+testers/CIFAR10_tester.py: 2020-12-16T08:48:09Z
+testers/tinyimagenet_tester.py: 2020-12-16T08:48:09Z
+tools.py: 2020-12-16T08:43:50Z

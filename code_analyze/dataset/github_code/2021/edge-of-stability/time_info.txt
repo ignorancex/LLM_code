@@ -1,0 +1,11 @@
+src/__init__.py: 2021-02-26T16:19:57Z
+src/adam.py: 2024-12-07T04:53:07Z
+src/archs.py: 2021-06-26T18:26:38Z
+src/cifar.py: 2021-02-26T16:19:57Z
+src/data.py: 2021-06-26T18:26:38Z
+src/flow.py: 2021-03-05T02:16:40Z
+src/gd.py: 2021-02-28T17:52:35Z
+src/resnet_cifar.py: 2021-02-26T16:19:57Z
+src/synthetic.py: 2021-06-26T18:26:38Z
+src/utilities.py: 2024-12-07T04:53:07Z
+src/vgg.py: 2021-02-26T16:19:57Z
