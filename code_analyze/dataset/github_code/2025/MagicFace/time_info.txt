@@ -1,0 +1,17 @@
+inference.py: 2025-01-18T08:01:37Z
+mgface/pipelines_mgface/attention_ID.py: 2025-01-04T12:27:21Z
+mgface/pipelines_mgface/attention_deno.py: 2025-01-04T12:27:21Z
+mgface/pipelines_mgface/pipeline_mgface.py: 2025-01-04T12:27:21Z
+mgface/pipelines_mgface/transformer_ID_2d.py: 2025-01-04T12:27:21Z
+mgface/pipelines_mgface/transformer_deno_2d.py: 2025-01-04T12:27:21Z
+mgface/pipelines_mgface/unet_ID_2d_blocks.py: 2025-01-04T12:27:21Z
+mgface/pipelines_mgface/unet_ID_2d_condition.py: 2025-01-04T12:27:21Z
+mgface/pipelines_mgface/unet_deno_2d_blocks.py: 2025-01-04T12:27:21Z
+mgface/pipelines_mgface/unet_deno_2d_condition.py: 2025-01-04T12:27:21Z
+utils/__init__.py: 2025-01-04T12:27:21Z
+utils/data/datasets_faceswap.py: 2025-01-04T12:27:21Z
+utils/model.py: 2025-01-04T12:27:21Z
+utils/preprocess.py: 2025-01-04T12:27:21Z
+utils/resnet.py: 2025-01-04T12:27:21Z
+utils/retrieve_bg.py: 2025-01-04T12:27:21Z
+utils/util.py: 2025-01-04T12:27:21Z
