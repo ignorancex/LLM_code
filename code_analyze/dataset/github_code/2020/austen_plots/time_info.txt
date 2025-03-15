@@ -1,0 +1,5 @@
+austen_plots/AustenPlot.py: 2021-11-09T14:03:26Z
+austen_plots/__init__.py: 2021-10-31T22:13:18Z
+austen_plots/math_helpers.py: 2021-11-08T17:35:13Z
+austen_plots/plot_helpers.py: 2021-11-03T20:35:33Z
+setup.py: 2021-11-09T14:08:19Z

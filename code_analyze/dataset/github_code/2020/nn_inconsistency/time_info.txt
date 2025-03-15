@@ -1,0 +1,13 @@
+TrainingSetup.py: 2019-11-09T11:28:44Z
+custom_paths.py: 2022-06-01T16:47:11Z
+eval_nn_setups.py: 2022-06-01T15:46:11Z
+eval_star_dataset.py: 2022-06-01T16:47:11Z
+mc_event_estimation.py: 2019-11-07T17:23:42Z
+mc_plotting.py: 2022-06-01T15:46:11Z
+mc_sgd_keras.py: 2019-11-07T17:23:42Z
+mc_training.py: 2022-06-01T15:46:11Z
+plot_examples.py: 2022-06-01T15:46:11Z
+run_nn_setups.py: 2022-06-01T15:46:11Z
+show_training.py: 2022-06-01T15:46:11Z
+train_star_dataset.py: 2022-06-01T16:47:11Z
+utils.py: 2019-11-09T11:28:44Z

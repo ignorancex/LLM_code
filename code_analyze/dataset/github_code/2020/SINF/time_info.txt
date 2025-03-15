@@ -1,0 +1,9 @@
+setup.py: 2022-01-18T03:06:35Z
+sinf/GIS.py: 2022-01-18T03:06:35Z
+sinf/RQspline.py: 2022-01-18T03:06:35Z
+sinf/SIG.py: 2022-01-18T03:06:35Z
+sinf/SINF.py: 2022-01-18T03:06:35Z
+sinf/SlicedWasserstein.py: 2022-01-18T03:06:35Z
+sinf/fid_score.py: 2022-12-06T22:41:01Z
+sinf/inception.py: 2022-01-18T03:06:35Z
+sinf/load_data.py: 2022-01-18T03:06:35Z

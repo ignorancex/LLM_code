@@ -1,0 +1,13 @@
+classitransformers/__init__.py: 2020-08-28T13:51:45Z
+classitransformers/configs.py: 2020-08-10T05:57:18Z
+classitransformers/downloader.py: 2020-08-10T05:57:18Z
+classitransformers/inference.py: 2021-01-28T17:47:17Z
+classitransformers/pytransformers.py: 2021-01-28T11:49:00Z
+classitransformers/report.py: 2020-08-10T05:57:18Z
+classitransformers/tfbert.py: 2020-08-08T07:21:23Z
+classitransformers/tfelectra.py: 2020-08-08T07:21:23Z
+electra/__init__.py: 2020-08-08T07:21:23Z
+electra/modeling.py: 2020-08-08T07:21:23Z
+electra/optimization.py: 2020-08-08T07:21:23Z
+electra/tokenization.py: 2020-08-08T07:21:23Z
+setup.py: 2020-08-28T18:15:54Z

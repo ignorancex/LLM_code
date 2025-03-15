@@ -1,0 +1,7 @@
+QASMConverter/qasm_converter.py: 2022-07-13T11:53:48Z
+UNSTABLE/CircuitParser/CircuitParser/CircuitParser.py: 2019-04-01T19:52:35Z
+UNSTABLE/CircuitParser/CircuitParser/Gates.py: 2019-04-01T19:52:35Z
+UNSTABLE/CircuitParser/setup.py: 2019-04-01T19:52:35Z
+UNSTABLE/MathematicaLink/setup.py: 2019-04-01T19:52:35Z
+UNSTABLE/QSimplify/QSimplify/Pythematica.py: 2019-04-01T19:52:35Z
+UNSTABLE/QSimplify/setup.py: 2019-04-01T19:52:35Z

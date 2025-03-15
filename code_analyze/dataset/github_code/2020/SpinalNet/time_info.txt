@@ -1,0 +1,37 @@
+CIFAR-10/CNN_dropout_CIFAR10.py: 2020-07-02T08:11:26Z
+CIFAR-10/CNN_dropout_SpinalFC_CIFAR10.py: 2020-07-02T08:11:26Z
+CIFAR-10/ResNet_default_and_SpinalFC_CIFAR10.py: 2020-07-02T08:11:26Z
+CIFAR-10/VGG_default_and_SpinalFC_CIFAR10.py: 2020-07-02T08:11:26Z
+CIFAR-100/CNN_dropout_Default_and_SpinalFC_CIFAR100.py: 2020-07-02T08:11:26Z
+CIFAR-100/ResNet_Default_and_SpinalFC_CIFAR100.py: 2020-07-02T08:11:26Z
+CIFAR-100/VGG_Default_and_SpinalFC_CIFAR_100.py: 2020-07-02T08:11:26Z
+Customizable Model/spinalnettorch.py: 2022-06-19T13:15:58Z
+MNIST/Arch2_EMNIST_Digits.py: 2020-07-02T08:11:26Z
+MNIST/Arch2_Fashion_MNIST.py: 2020-07-02T08:11:26Z
+MNIST/Arch2_KMNIST.py: 2020-07-02T08:11:26Z
+MNIST/Arch2_MNIST.py: 2020-07-02T08:11:26Z
+MNIST/Arch2_QMNIST.py: 2020-07-02T08:11:26Z
+MNIST/SpinalNet_EMNIST_Digits.py: 2020-07-02T08:11:26Z
+MNIST/SpinalNet_MNIST.py: 2020-07-02T08:11:26Z
+MNIST/default_pytorch_EMNIST.py: 2024-06-10T08:26:08Z
+MNIST/default_pytorch_MNIST.py: 2020-07-02T08:11:26Z
+MNIST_VGG/EMNIST_digits_VGG_and _SpinalVGG.py: 2020-07-10T03:44:44Z
+MNIST_VGG/EMNIST_letters_VGG_and _SpinalVGG.py: 2020-07-10T03:47:58Z
+MNIST_VGG/FashionMNIST_VGG_and _SpinalVGG.py: 2020-07-06T04:53:24Z
+MNIST_VGG/KMNIST_VGG_and_SpinalVGG.py: 2020-07-06T01:37:53Z
+MNIST_VGG/MNIST_VGG_and_SpinalVGG.py: 2020-07-06T04:52:30Z
+MNIST_VGG/QMNIST_VGG_and _SpinalVGG.py: 2020-07-06T04:53:55Z
+Regression/Regression_NN_and_SpinalNet.py: 2020-07-05T00:39:17Z
+Transfer Learning/Pytorch_data_to_folders.py: 2020-10-12T11:03:30Z
+Transfer Learning/Transfer_Learning_Bird225.py: 2020-09-02T05:57:57Z
+Transfer Learning/Transfer_Learning_CIFAR10.py: 2020-09-07T23:20:37Z
+Transfer Learning/Transfer_Learning_CIFAR100.py: 2020-09-02T01:27:51Z
+Transfer Learning/Transfer_Learning_CINIC10.py: 2020-09-08T00:09:52Z
+Transfer Learning/Transfer_Learning_Caltech101.py: 2020-09-07T23:20:37Z
+Transfer Learning/Transfer_Learning_Fruits360.py: 2020-09-08T00:10:26Z
+Transfer Learning/Transfer_Learning_MNIST.py: 2021-05-15T03:07:39Z
+Transfer Learning/Transfer_Learning_Oxford102flower.py: 2020-10-20T07:50:14Z
+Transfer Learning/Transfer_Learning_STL10.py: 2020-09-02T05:57:57Z
+Transfer Learning/Transfer_Learning_SVHN.py: 2020-09-07T23:50:03Z
+Transfer Learning/Transfer_Learning_Stanford_Cars.py: 2020-09-07T23:50:03Z
+Transfer Learning/Transfer_Learning_hymenoptera.py: 2020-09-02T01:27:51Z

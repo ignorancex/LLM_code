@@ -1,0 +1,5 @@
+.ipynb_checkpoints/trappist_machine-checkpoint.py: 2019-07-02T17:39:14Z
+VPlanetRuns/AtmEsc+EqTide/makeplot.py: Unknown
+VPlanetRuns/run02/makeplot.py: 2020-03-25T03:48:38Z
+VPlanetRuns/run03/makeplot.py: 2020-03-25T04:45:33Z
+trappist_machine.py: 2019-07-02T17:39:14Z

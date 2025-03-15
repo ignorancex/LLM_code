@@ -1,0 +1,15 @@
+example/xSM/grid_scan.py: 2022-06-20T06:02:16Z
+example/xSM/plot_scripts/1d_plot_band.py: 2022-07-15T19:30:17Z
+example/xSM/plot_scripts/1d_plot_line.py: 2022-07-15T19:30:17Z
+example/xSM/plot_scripts/plot_fun.py: 2022-03-27T17:45:25Z
+example/xSM/plot_scripts/potential_plotter_daisy.py: 2022-05-15T19:15:08Z
+example/xSM/plot_scripts/potential_plotter_mu.py: 2022-06-17T06:14:07Z
+example/xSM/plot_scripts/style.py: 2022-01-21T07:44:05Z
+example/xSM/plot_scripts/three_dim.py: 2022-07-24T14:05:44Z
+example/xSM/plot_scripts/two_dim.py: 2022-07-14T04:06:28Z
+example/xSM/random_scan.py: 2022-06-16T18:10:30Z
+example/xSM/scan_scale_T.py: 2022-06-21T08:04:22Z
+make_plots/compare_against_analytic_z2.py: 2024-11-04T23:13:37Z
+make_plots/phase_plotter.py: 2024-11-21T02:18:43Z
+make_plots/plot_1D_test_model.py: 2020-03-04T03:27:30Z
+make_plots/spectrum_plotter.py: 2024-11-26T11:55:30Z

@@ -1,0 +1,13 @@
+Stefan 1D1P/Stefan1D_direct.py: 2020-10-15T02:18:32Z
+Stefan 1D1P/Stefan1D_inverse_II.py: 2020-10-15T02:18:32Z
+Stefan 1D1P/Stefan_1D_inverse_I.py: 2020-10-15T02:18:32Z
+Stefan 1D1P/Stefan_models_tf.py: 2020-10-15T02:18:32Z
+Stefan 1D2P/Stefan1D_2P_direct.py: 2020-10-15T02:19:22Z
+Stefan 1D2P/Stefan1D_2P_inverse_I.py: 2020-10-15T02:19:22Z
+Stefan 1D2P/Stefan1D_2P_inverse_II.py: 2020-10-15T02:19:22Z
+Stefan 1D2P/Stefan1D_2P_inverse_III.py: 2020-10-15T02:19:22Z
+Stefan 1D2P/Stefan1D_2p_models_tf.py: 2020-10-15T02:19:22Z
+Stefan 2D1P/Stefan2D_direct.py: 2020-10-15T02:20:06Z
+Stefan 2D1P/Stefan2D_inverse_I.py: 2020-10-15T02:20:06Z
+Stefan 2D1P/Stefan2D_inverse_II.py: 2020-10-15T02:20:06Z
+Stefan 2D1P/Stefan2D_models_tf.py: 2020-10-15T02:20:06Z

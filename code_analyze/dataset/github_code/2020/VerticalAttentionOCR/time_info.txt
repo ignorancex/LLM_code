@@ -1,0 +1,12 @@
+Datasets/format_datasets.py: 2022-01-26T09:08:29Z
+OCR/document_OCR/v_attention/main_pg_va.py: 2021-12-03T14:48:31Z
+OCR/document_OCR/v_attention/models_pg_va.py: 2021-09-29T07:13:07Z
+OCR/document_OCR/v_attention/trainer_pg_va.py: 2021-12-03T14:48:31Z
+OCR/line_OCR/ctc/main_line_ctc.py: 2022-05-20T06:43:56Z
+OCR/line_OCR/ctc/models_line_ctc.py: 2021-02-16T09:31:29Z
+OCR/line_OCR/ctc/trainer_line_ctc.py: 2021-12-03T14:48:31Z
+basic/generic_dataset_manager.py: 2021-12-03T14:48:31Z
+basic/generic_training_manager.py: 2021-02-16T09:31:29Z
+basic/models.py: 2021-02-16T09:31:29Z
+basic/transforms.py: 2021-02-16T09:31:29Z
+basic/utils.py: 2021-12-03T14:48:31Z

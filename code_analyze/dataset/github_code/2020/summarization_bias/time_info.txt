@@ -1,0 +1,75 @@
+Corpus/Abstractiveness.py: 2020-10-06T06:29:56Z
+Corpus/Compression_score.py: 2020-10-06T06:29:56Z
+Corpus/IDS_Redundancy.py: 2020-10-06T06:29:56Z
+Corpus/Layout_bias.py: 2020-10-06T06:29:56Z
+Corpus/Pyramid Score/PyrEval/Preprocess/SIF_embedding_lib.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/data_io.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/elmo_sif_api.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/elmo_sif_master.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/embedding_ELMO/SIF_embedding_lib.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/embedding_ELMO/__init__.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/embedding_ELMO/cmd_test.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/embedding_ELMO/elmo.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/embedding_ELMO/elmo_sif_api.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/embedding_ELMO/elmo_sif_wrapper.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/embedding_ELMO/sif_embedding.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/embedding_ELMO/src/SIF_embedding.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/embedding_ELMO/src/__init__.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/embedding_ELMO/src/data_io.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/embedding_ELMO/src/eval.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/embedding_ELMO/src/lasagne_average_layer.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/embedding_ELMO/src/new_data_io.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/embedding_ELMO/src/params.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/embedding_ELMO/src/proj_model_sentiment.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/embedding_ELMO/src/proj_model_sim.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/embedding_ELMO/src/sim_algo.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/embedding_ELMO/src/train.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/embedding_ELMO/src/tree.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/lib_parser.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/lib_preprocessing.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/ormf/__init__.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/ormf/ormf.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/ormf/test_ormf.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/preprocess.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/rearrange.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/sbar.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/sbarnew.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/sentparser-k.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/sentparser.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/sif_embedding.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/src/SIF_embedding.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/src/__init__.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/src/data_io.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/src/eval.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/src/lasagne_average_layer.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/src/params.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/src/proj_model_sentiment.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/src/proj_model_sim.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/src/sim_algo.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/src/train.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/src/tree.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/test_preprocess.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Preprocess/weiwei.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Pyramid/05_ps.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Pyramid/dfs_search.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Pyramid/eduac.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Pyramid/graph.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Pyramid/js_similarity.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Pyramid/lib_eduac.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Pyramid/lib_pyramid.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Pyramid/parameters.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Pyramid/pyramid.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Pyramid/sanitycheck.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Scoring/js_similarity.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Scoring/lib_scoring.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Scoring/printEsumLog.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/Scoring/scoring.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/pyreval.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/split-sent.py: 2020-10-17T16:22:06Z
+Corpus/Pyramid Score/PyrEval/stanford.py: 2020-10-17T16:22:06Z
+system/src/DP_and_Red.py: 2020-10-06T06:29:56Z
+system/src/abstractness.py: 2020-10-06T06:29:56Z
+system/src/f1_oracle.py: 2020-10-06T06:29:56Z
+system/src/position_jumble.py: 2020-10-06T06:29:56Z
+system/src/position_relevance.py: 2020-10-06T06:29:56Z
+system/src/rouge.py: 2020-10-06T06:29:56Z

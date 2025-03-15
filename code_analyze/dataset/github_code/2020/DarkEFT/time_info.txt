@@ -1,0 +1,12 @@
+Amplitudes.py: 2020-01-08T08:53:17Z
+Detection.py: 2020-01-08T08:53:17Z
+Examples/Example1.py: 2019-12-29T16:36:25Z
+Examples/Example2.py: 2019-12-29T16:36:25Z
+Examples/Example3.py: 2019-12-29T16:36:25Z
+Examples/Example4.py: 2019-12-29T16:36:25Z
+Examples/Example5.py: 2020-01-06T10:58:42Z
+Examples/Plots_Paper.py: 2020-01-06T10:58:42Z
+LimitsList.py: 2020-01-08T08:53:17Z
+Plots_Paper.py: 2020-01-08T08:53:17Z
+Production.py: 2020-01-08T08:53:17Z
+UsefulFunctions.py: 2020-01-08T08:53:17Z

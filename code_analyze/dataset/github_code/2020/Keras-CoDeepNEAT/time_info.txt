@@ -1,0 +1,5 @@
+base/__init__.py: 2019-12-09T22:23:20Z
+base/kerascodeepneat.py: 2019-12-09T22:23:20Z
+example_scripts/run_cifar10.py: 2019-12-09T22:23:20Z
+example_scripts/run_mnist.py: 2019-12-09T22:23:20Z
+example_scripts/test_model.py: 2019-12-09T22:23:20Z

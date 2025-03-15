@@ -1,0 +1,14 @@
+capacity/libs/_3d/__init__.py: 2020-09-04T03:41:56Z
+capacity/libs/_3d/projection.py: 2020-09-04T05:07:28Z
+capacity/libs/detection/detection.py: 2020-09-04T03:41:56Z
+capacity/main.py: 2020-10-31T14:01:36Z
+capacity/utilities.py: 2020-10-31T14:01:36Z
+filling_level/r21d_rgb/dataset.py: 2020-11-02T08:11:30Z
+filling_level/r21d_rgb/main.py: 2020-11-02T13:19:06Z
+filling_level/r21d_rgb/model.py: 2020-09-03T18:54:56Z
+filling_level/vggish/dataset.py: 2020-10-28T15:48:25Z
+filling_level/vggish/main.py: 2020-10-28T15:48:25Z
+filling_level/vggish/model.py: 2020-09-02T19:37:06Z
+filling_type/r21d_rgb/main.py: 2020-11-02T08:11:30Z
+filling_type/vggish/main.py: 2020-10-28T15:48:25Z
+form_predictions_for_all_tasks.py: 2020-11-03T19:56:03Z

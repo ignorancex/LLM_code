@@ -1,0 +1,11 @@
+cordic/python/cordic.py: 2020-03-20T03:30:07Z
+cordic/python/ieee.py: 2020-01-07T14:11:00Z
+cordic_dbl/python/ke_cordic_dbl.py: 2020-06-29T09:12:36Z
+cordic_dbl/python/ke_dbl_f.py: 2020-04-22T21:54:46Z
+cordic_dbl/python/ke_dbl_i.py: 2020-04-22T21:54:46Z
+cordic_dbl/python/ke_dbl_np.py: 2020-06-29T16:44:59Z
+cordic_dbl/python/setup.py: 2020-04-26T22:23:35Z
+cordic_like/python/ke.py: 2020-04-23T17:14:18Z
+cordic_like/python/ke_cordic.py: 2020-04-23T17:14:18Z
+cordic_like/python/ke_timing.py: 2020-04-23T17:14:18Z
+cordic_like/python/setup.py: 2020-04-23T17:14:18Z

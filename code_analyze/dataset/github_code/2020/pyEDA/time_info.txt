@@ -1,0 +1,12 @@
+main.py: 2021-06-03T23:51:23Z
+pyEDA/__ init __.py: 2020-04-02T02:34:00Z
+pyEDA/autoencoder.py: 2020-11-18T03:16:56Z
+pyEDA/calculateFeatures.py: 2020-05-13T20:53:19Z
+pyEDA/calculate_onSetOffSet.py: 2020-05-13T20:53:19Z
+pyEDA/calculate_thepeaks.py: 2020-05-13T20:53:19Z
+pyEDA/cvxEDA.py: 2020-04-02T02:34:00Z
+pyEDA/filtering.py: 2020-05-13T20:53:19Z
+pyEDA/openShimmerFile.py: 2020-05-13T20:53:19Z
+pyEDA/preprocessing.py: 2020-05-13T20:53:19Z
+pyEDA/pyEDA.py: 2021-03-24T21:03:55Z
+pyEDA/windowing.py: 2020-08-25T20:11:04Z

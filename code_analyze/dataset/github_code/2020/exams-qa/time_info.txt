@@ -1,0 +1,13 @@
+scripts/dataset/WikiExtractor.py: 2020-11-05T17:34:40Z
+scripts/dataset/context_resolver.py: 2020-11-05T17:34:40Z
+scripts/dataset/fill_contexts_to_questions.py: 2020-11-05T17:34:40Z
+scripts/dataset/fill_elastic.py: 2020-11-05T17:34:40Z
+scripts/evaluation/evaluate_exams.py: 2020-11-05T17:34:40Z
+scripts/experiments/run_multiple_choice.py: 2020-11-05T17:34:40Z
+scripts/experiments/utils_multiple_choice.py: 2020-11-05T17:34:40Z
+setup.py: 2020-11-05T17:34:40Z
+src/examsqa/__init__.py: 2020-11-05T17:34:40Z
+src/examsqa/mappings.py: 2020-11-05T17:34:40Z
+src/examsqa/models_multiple_choice.py: 2020-11-05T17:34:40Z
+src/examsqa/parser.py: 2020-11-05T17:34:40Z
+src/examsqa/tools.py: 2020-11-05T17:34:40Z

@@ -1,0 +1,12 @@
+.maintenance/update_zenodo.py: 2020-05-06T03:09:59Z
+docs/_templates/numpydoc_docstring.py: 2020-09-20T20:11:54Z
+docs/conf.py: 2021-06-20T02:52:26Z
+examples/plot_alpha_vs_gamma.py: 2022-05-18T05:11:48Z
+examples/plot_paths_cv_curves.py: 2020-09-23T02:18:47Z
+examples/plot_pipeline.py: 2020-09-23T02:18:47Z
+fracridge/__init__.py: 2020-09-20T22:00:41Z
+fracridge/_linalg.py: 2021-10-20T09:32:22Z
+fracridge/_numba.py: 2020-02-24T17:03:57Z
+fracridge/fracridge.py: 2022-05-18T05:30:03Z
+fracridge/tests/test_fracridge.py: 2022-05-18T04:50:53Z
+setup.py: 2020-09-20T21:56:48Z

@@ -1,0 +1,26 @@
+CVPR2020_paper_codes/Load_OULUNPU_train.py: 2020-03-08T22:11:31Z
+CVPR2020_paper_codes/Load_OULUNPU_valtest.py: 2020-03-08T22:11:31Z
+CVPR2020_paper_codes/models/CDCNs.py: 2020-03-31T08:24:41Z
+CVPR2020_paper_codes/train_CDCN.py: 2020-03-12T11:27:20Z
+CVPR2020_paper_codes/utils.py: 2020-03-08T22:11:31Z
+DC_CDN_IJCAI21.py: 2021-05-01T08:19:49Z
+FAS_challenge_CVPRW2020/Track1 Multi-modal/model1_2_pytorch/Loadtemporal_BinaryMask_train_3modality.py: 2020-03-08T21:57:59Z
+FAS_challenge_CVPRW2020/Track1 Multi-modal/model1_2_pytorch/Loadtemporal_valtest_3modality.py: 2020-03-08T21:57:59Z
+FAS_challenge_CVPRW2020/Track1 Multi-modal/model1_2_pytorch/models/CDCNs.py: 2020-03-08T21:57:59Z
+FAS_challenge_CVPRW2020/Track1 Multi-modal/model1_2_pytorch/test_CDCN_3modality2_model2.py: 2020-03-08T21:57:59Z
+FAS_challenge_CVPRW2020/Track1 Multi-modal/model1_2_pytorch/test_CDCNpp_RGBorDepth_model1.py: 2020-03-08T21:57:59Z
+FAS_challenge_CVPRW2020/Track1 Multi-modal/model1_2_pytorch/train_CDCN_3modality2_model2.py: 2020-03-08T21:57:59Z
+FAS_challenge_CVPRW2020/Track1 Multi-modal/model1_2_pytorch/train_CDCNpp_RGBorDepth_model1.py: 2020-03-08T21:57:59Z
+FAS_challenge_CVPRW2020/Track1 Multi-modal/model1_2_pytorch/utils.py: 2020-03-08T21:57:59Z
+FAS_challenge_CVPRW2020/Track1 Multi-modal/model3_tensorflow/data.py: 2020-03-08T21:57:59Z
+FAS_challenge_CVPRW2020/Track1 Multi-modal/model3_tensorflow/main.py: 2020-03-08T21:57:59Z
+FAS_challenge_CVPRW2020/Track1 Multi-modal/model3_tensorflow/model.py: 2020-03-08T21:57:59Z
+FAS_challenge_CVPRW2020/Track1 Multi-modal/model3_tensorflow/networks.py: 2020-03-08T21:57:59Z
+FAS_challenge_CVPRW2020/Track1 Multi-modal/model3_tensorflow/util_network_CDCN.py: 2020-03-08T21:57:59Z
+FAS_challenge_CVPRW2020/Track1 Multi-modal/model3_tensorflow/utils.py: 2020-03-08T21:57:59Z
+FAS_challenge_CVPRW2020/Track2 Single-modal/model1_pytorch/Loadtemporal_BinaryMask_train.py: 2020-03-08T22:11:31Z
+FAS_challenge_CVPRW2020/Track2 Single-modal/model1_pytorch/Loadtemporal_valtest.py: 2020-03-08T22:11:31Z
+FAS_challenge_CVPRW2020/Track2 Single-modal/model1_pytorch/models/CDCNs.py: 2020-03-08T22:11:31Z
+FAS_challenge_CVPRW2020/Track2 Single-modal/model1_pytorch/test_CDCNpp_model1.py: 2020-03-08T22:11:31Z
+FAS_challenge_CVPRW2020/Track2 Single-modal/model1_pytorch/train_CDCNpp_model1.py: 2020-03-08T22:11:31Z
+FAS_challenge_CVPRW2020/Track2 Single-modal/model1_pytorch/utils.py: 2020-03-08T22:11:31Z
