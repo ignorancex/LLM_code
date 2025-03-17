@@ -1,6 +1,0 @@
-[
-    {
-        "old_path": "LLM_code/code_analyze/dataset/github_code/2022/ContraCLIP/lib/aux.py",
-        "new_path": "LLM_code/code_analyze/dataset/github_code/2022/ContraCLIP/lib/aux_file.py"
-    }
-]
