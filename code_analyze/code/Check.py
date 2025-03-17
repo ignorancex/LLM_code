@@ -1,14 +1,14 @@
 import os
 import json
 
-year = "2023"
+year = "2022"
 output_original_links = True  # 设为 True 输出原始链接，设为 False 输出 repo 名称
 
 # 定义仓库存储的根目录
 repo_base_path = f"LLM_code/code_analyze/dataset/github_code/{year}"
 
 # 定义 JSON 文件路径
-json_file_path = f"Code/link_{year}.json"
+json_file_path = f"LLM_code/code_analyze/dataset/github_links/link_{year}.json"
 
 # 读取 JSON 文件
 with open(json_file_path, "r", encoding="utf-8") as file:
