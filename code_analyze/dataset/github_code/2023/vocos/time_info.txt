@@ -1,0 +1,16 @@
+metrics/UTMOS.py: 2023-10-13T13:09:22Z
+metrics/periodicity.py: 2023-06-11T19:57:24Z
+setup.py: 2023-06-11T19:57:24Z
+train.py: 2023-06-11T19:57:24Z
+vocos/__init__.py: 2023-10-14T00:34:27Z
+vocos/dataset.py: 2023-06-11T19:57:24Z
+vocos/discriminators.py: 2023-10-14T00:34:27Z
+vocos/experiment.py: 2023-10-14T00:34:27Z
+vocos/feature_extractors.py: 2023-10-13T13:09:22Z
+vocos/heads.py: 2023-10-13T13:09:22Z
+vocos/helpers.py: 2023-06-11T19:57:24Z
+vocos/loss.py: 2023-10-13T13:09:22Z
+vocos/models.py: 2023-10-13T13:09:22Z
+vocos/modules.py: 2023-10-13T13:09:22Z
+vocos/pretrained.py: 2023-10-13T19:38:43Z
+vocos/spectral_ops.py: 2023-06-11T19:57:24Z

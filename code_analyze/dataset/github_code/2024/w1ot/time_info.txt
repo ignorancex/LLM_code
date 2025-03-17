@@ -1,0 +1,14 @@
+Experiments/4i.py: 2024-10-23T15:23:47Z
+Experiments/results.py: 2024-10-21T15:20:53Z
+Experiments/sciplex3-1k.py: 2024-10-21T15:20:53Z
+Experiments/sciplex3-50ae.py: 2024-10-21T15:20:53Z
+setup.py: 2024-10-23T15:18:10Z
+w1ot/__init__.py: 2024-10-21T15:20:53Z
+w1ot/data.py: 2024-10-23T15:18:10Z
+w1ot/eval.py: 2024-10-23T15:18:10Z
+w1ot/experiments.py: 2024-10-23T15:18:10Z
+w1ot/layers.py: 2024-10-21T15:20:53Z
+w1ot/models.py: 2024-10-21T15:20:53Z
+w1ot/ot.py: 2024-10-23T15:18:10Z
+w1ot/utils.py: 2024-10-21T15:20:53Z
+w1ot/vae.py: 2024-10-21T15:20:53Z

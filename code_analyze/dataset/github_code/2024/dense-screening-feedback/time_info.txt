@@ -1,0 +1,8 @@
+baselines/bm25_baseline.py: 2024-07-17T17:06:19Z
+baselines/goldilocks_lr.py: 2024-07-17T17:06:19Z
+baselines/goldilocks_screen.py: 2024-07-17T17:06:19Z
+dense_query_tar.py: 2024-06-30T08:54:04Z
+eval_measures.py: 2024-06-30T08:54:04Z
+rf_rocchio.py: 2024-06-30T08:54:04Z
+tevatron_pipe.py: 2024-06-30T08:54:04Z
+utils.py: 2024-06-30T08:54:04Z

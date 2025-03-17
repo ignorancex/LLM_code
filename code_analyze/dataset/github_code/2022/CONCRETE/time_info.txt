@@ -1,0 +1,14 @@
+CORA/mDPR/create_ict_samples.py: 2022-08-17T00:34:12Z
+CORA/mDPR/dense_retriever.py: 2022-08-17T00:34:12Z
+CORA/mDPR/generate_dense_embeddings.py: 2022-08-17T00:34:12Z
+CORA/mDPR/run_xict.py: 2022-08-17T00:34:12Z
+CORA/mDPR/train_dense_encoder.py: 2022-08-17T00:34:12Z
+commoncrawl.py: 2022-08-17T00:34:12Z
+src/constants.py: 2022-08-17T00:34:12Z
+src/data.py: 2022-08-17T00:34:12Z
+src/model.py: 2022-08-17T00:34:12Z
+src/test.py: 2022-08-17T00:34:12Z
+src/train.py: 2022-08-17T00:34:12Z
+src/translate_claim.py: 2022-08-17T00:34:12Z
+src/utils.py: 2022-08-17T00:34:12Z
+src/xfact_eval.py: 2022-08-17T00:34:12Z

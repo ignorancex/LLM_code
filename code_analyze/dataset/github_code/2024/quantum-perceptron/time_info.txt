@@ -1,0 +1,11 @@
+gradio_app.py: 2023-04-08T18:42:44Z
+quantum_perceptron/__init__.py: 2023-04-08T04:33:38Z
+quantum_perceptron/perceptron.py: 2023-04-08T04:33:38Z
+quantum_perceptron/tests/test_utils.py: 2023-04-08T04:33:38Z
+quantum_perceptron/train/__init__.py: 2023-04-15T22:47:48Z
+quantum_perceptron/train/data_gen.py: 2023-04-15T23:04:28Z
+quantum_perceptron/train/training.py: 2023-04-15T22:54:14Z
+quantum_perceptron/utils/__init__.py: 2023-04-15T22:47:48Z
+quantum_perceptron/utils/data_utils.py: 2023-04-15T22:47:48Z
+quantum_perceptron/utils/plot_utils.py: 2023-04-15T22:47:48Z
+quantum_perceptron/utils/quantum_utils.py: 2023-04-08T04:33:38Z

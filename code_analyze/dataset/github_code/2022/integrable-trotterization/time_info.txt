@@ -1,0 +1,8 @@
+public_code/GENERATED/parameters.py: 2022-07-28T14:46:51Z
+public_code/PLOT_MATERIAL/config_10_sites.py: 2022-07-28T14:46:51Z
+public_code/PLOT_MATERIAL/config_12_sites.py: 2022-07-28T14:46:51Z
+public_code/PLOT_MATERIAL/config_4_sites.py: 2022-07-28T14:46:51Z
+public_code/PLOT_MATERIAL/config_6_sites.py: 2022-07-28T14:46:51Z
+public_code/PLOT_MATERIAL/config_8_sites.py: 2022-07-28T14:46:51Z
+public_code/SCRIPT/get_coef.py: 2022-07-30T19:55:53Z
+public_code/parameters.py: 2022-07-28T14:38:30Z

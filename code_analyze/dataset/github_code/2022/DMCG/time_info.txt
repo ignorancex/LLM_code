@@ -1,0 +1,16 @@
+confgen/__init__.py: 2022-01-28T03:49:08Z
+confgen/e2c/__init__.py: 2022-01-28T03:49:08Z
+confgen/e2c/dataset.py: 2022-01-28T03:49:08Z
+confgen/model/__init__.py: 2022-01-28T03:49:08Z
+confgen/model/conv.py: 2022-01-28T03:49:08Z
+confgen/model/gnn.py: 2022-01-28T03:49:08Z
+confgen/molecule/__init__.py: 2022-01-28T03:49:08Z
+confgen/molecule/features.py: 2022-01-28T03:49:08Z
+confgen/molecule/graph.py: 2022-01-28T03:49:08Z
+confgen/molecule/gt.py: 2022-01-28T03:49:08Z
+confgen/utils/__init__.py: 2022-01-28T03:49:08Z
+confgen/utils/psi4_utils.py: 2022-01-28T03:49:08Z
+confgen/utils/utils.py: 2022-01-28T03:49:08Z
+evaluate.py: 2022-01-28T03:49:08Z
+setup.py: 2022-01-28T03:49:08Z
+train.py: 2022-01-28T03:49:08Z

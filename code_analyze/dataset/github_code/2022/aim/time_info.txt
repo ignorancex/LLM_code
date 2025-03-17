@@ -1,0 +1,6 @@
+NW/DPU-MRAM/run-nw-pim-mram.py: 2022-07-25T11:04:12Z
+NW/DPU-WRAM/run-nw-pim-wram.py: 2022-07-25T11:04:12Z
+SWG/DPU-MRAM/run-swg-pim-mram.py: 2022-07-25T11:04:12Z
+SWG/DPU-WRAM/run-swg-pim-wram.py: 2022-07-25T11:04:12Z
+WFA/DPU-MRAM/run-wfa-pim-mram.py: 2022-07-25T11:04:12Z
+WFA/DPU-WRAM/run-wfa-pim-wram.py: 2022-07-25T11:04:12Z

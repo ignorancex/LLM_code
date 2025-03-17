@@ -1,0 +1,38 @@
+Data Preprocessing/NER_and_document_division.py: 2022-04-04T20:10:53Z
+Data Preprocessing/RemovingJudgeOpinion.py: 2022-04-06T18:05:50Z
+Data Preprocessing/bail_decision_and_amount_extraction.py: 2022-04-04T20:10:53Z
+Data Preprocessing/ocr.py: 2022-03-04T18:36:16Z
+Data Preprocessing/train_test_split_code.py: 2022-04-04T20:10:53Z
+Exploratory Data Analysis/GatheringStatistics.py: 2022-04-04T20:10:53Z
+Exploratory Data Analysis/LexicalDiversity-TFIDF.py: 2022-04-04T20:10:53Z
+Exploratory Data Analysis/LexicalDiversity.py: 2022-04-04T20:10:53Z
+Exploratory Data Analysis/sample_read_zipped_data.py: 2022-03-10T14:14:59Z
+Model/Doc2Vec+SVM/d2v-svm-alldistricts.py: Unknown
+Model/Doc2Vec+SVM/d2v-svm-districtwise.py: Unknown
+Model/Doc2Vec+XGBoost/d2v+XGB-alldistricts.py: Unknown
+Model/Doc2Vec+XGBoost/d2v+XGB-districtwise.py: Unknown
+Model/Indicbert/train_first_512_alldistricts.py: 2022-03-04T18:36:16Z
+Model/Indicbert/train_first_512_district_split.py: 2022-03-04T18:36:16Z
+Model/Indicbert/train_last_512_alldistricts.py: 2022-03-04T18:36:16Z
+Model/Indicbert/train_last_512_district_split.py: 2022-03-04T18:36:16Z
+Model/Multi-Task/multi-task-alldistricts.py: 2022-03-04T18:36:16Z
+Model/Multi-Task/multi-task-districtwise.py: 2022-03-04T18:36:16Z
+Model/Multi-Task/muti-task-all-hpsearch.py: 2022-03-04T18:36:16Z
+Model/Saliency_Pred+IndicBert/SC-IndicBert-AllDIstricts.py: Unknown
+Model/Saliency_Pred+IndicBert/SC-indicBert-Districtwise.py: Unknown
+Model/Saliency_Pred+IndicBert/infer_saliencies.py: Unknown
+Model/Saliency_Pred+IndicBert/saliency_classifier-alldistricts.py: Unknown
+Model/Saliency_Pred+IndicBert/saliency_classifier-districtwise.py: Unknown
+Model/TF-IDF+IndicBert/tfidf_sum+indic-ad.py: Unknown
+Model/TF-IDF+IndicBert/tfidf_sum+indic-dw.py: Unknown
+Model/TextRank+IndicBert/textrank_sum+indic-ad.py: Unknown
+Model/TextRank+IndicBert/textrank_sum+indic-dw.py: Unknown
+summarization/textRank/textRank_splits.py: 2022-04-04T20:10:53Z
+summarization/textRank/textrank_test_all.py: 2022-03-04T18:36:16Z
+summarization/textRank/textrank_test_specific.py: 2022-03-04T18:36:16Z
+summarization/textRank/textrank_train_all.py: 2022-03-04T18:36:16Z
+summarization/textRank/textrank_train_specific.py: 2022-03-04T18:36:16Z
+summarization/textRank/textrank_val_all.py: 2022-03-04T18:36:16Z
+summarization/tf-idf/sum-tfidf-ad.py: 2022-04-04T20:10:53Z
+summarization/tf-idf/sum-tfidf-dw.py: 2022-04-04T20:10:53Z
+summarization/transformer/transformer.py: 2022-04-04T20:10:53Z

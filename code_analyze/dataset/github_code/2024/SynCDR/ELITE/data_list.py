@@ -1,0 +1,95 @@
+import torch
+import numpy as np
+import random
+import torch.utils.data as data
+import os
+import os.path
+import PIL
+from PIL import Image
+import pdb
+import random
+# import cPickle
+from torch.utils.data.sampler import WeightedRandomSampler
+
+
+def pil_loader(path):
+    # open path as file to avoid ResourceWarning (https://github.com/python-pillow/Pillow/issues/835)
+    with open(path, 'rb') as f:
+        img = Image.open(f)
+        return img.convert('RGB')
+
+
+def m_hot(labels, num_class):
+    vector = np.zeros(num_class)
+    for label in labels:
+        vector[label] = 1.0
+    return vector
+
+def make_dataset_nolist(image_list):
+    image_paths = []
+    label_list = []
+    with open(image_list) as f:
+        for r in f.read().splitlines():
+            curr_path, curr_lbl = r.split(' ')
+            image_paths.append(curr_path)
+            label_list.append(int(curr_lbl))
+    
+    return image_paths, label_list
+
+class Imagelist(torch.utils.data.Dataset):
+    """A generic data loader where the images are arranged in this way: ::
+        root/dog/xxx.png
+        root/dog/xxy.png
+        root/dog/xxz.png
+        root/cat/123.png
+        root/cat/nsdf3.png
+        root/cat/asd932_.png
+    Args:
+        root (string): Root directory path.
+        transform (callable, optional): A function/transform that  takes in an PIL image
+            and returns a transformed version. E.g, ``transforms.RandomCrop``
+        target_transform (callable, optional): A function/transform that takes in the
+            target and transforms it.
+        loader (callable, optional): A function to load an image given its path.
+     Attributes:
+        classes (list): List of the class names.
+        class_to_idx (dict): Dict with items (class_name, class_index).
+        imgs (list): List of (image path, class_index) tuples
+    """
+
+    def __init__(self, image_list, transform=None, target_transform=None, mode_self=True):
+        imgs, labels = make_dataset_nolist(image_list)
+        self.imgs = imgs
+        self.labels = np.array(labels)
+        
+        self.transform = transform
+        self.target_transform = target_transform
+        self.loader = pil_loader
+        self.mode_self = mode_self
+        
+    def __getitem__(self, index):
+        """
+        Args:
+            index (int): Index
+        Returns:
+            tuple: (image, target) where target is class_index of the target class.
+        """
+
+
+        path = self.imgs[index]
+        target = self.labels[index]
+
+        img = self.loader(path)
+        if self.transform is not None:
+            img = self.transform(img)
+        if self.target_transform is not None:
+            target = self.target_transform(target)
+        if self.mode_self:
+            return img, target, index
+        else:
+            return img, target
+
+
+    def __len__(self):
+        return len(self.imgs)
+

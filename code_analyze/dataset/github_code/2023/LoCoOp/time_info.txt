@@ -1,0 +1,16 @@
+clip_w_local/__init__.py: 2023-08-13T14:30:36Z
+clip_w_local/clip.py: 2023-08-13T14:30:36Z
+clip_w_local/model.py: 2023-08-13T14:30:36Z
+clip_w_local/simple_tokenizer.py: 2023-08-13T14:30:36Z
+datasets/__init__.py: 2023-08-13T14:30:36Z
+datasets/imagenet.py: 2023-08-13T14:30:36Z
+datasets/oxford_pets.py: 2023-08-13T14:30:36Z
+demo_visualization.py: 2023-08-13T14:30:36Z
+eval_ood_detection.py: 2023-08-13T14:30:36Z
+train.py: 2023-08-13T14:30:36Z
+trainers/__init__.py: 2023-08-13T14:30:36Z
+trainers/locoop.py: 2023-09-22T01:22:29Z
+utils/__init__.py: 2023-08-13T14:30:36Z
+utils/detection_util.py: 2023-08-13T14:30:36Z
+utils/plot_util.py: 2023-08-13T14:30:36Z
+utils/train_eval_util.py: 2023-08-13T14:30:36Z

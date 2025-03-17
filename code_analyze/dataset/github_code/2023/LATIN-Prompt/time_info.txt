@@ -1,0 +1,16 @@
+examples/claude_docvqa.py: 2023-09-07T11:10:57Z
+examples/claude_docvqa_due_azure.py: 2023-09-07T11:10:57Z
+examples/claude_infographicvqa.py: 2023-09-07T11:10:57Z
+examples/claude_mpdocvqa.py: 2023-09-07T11:10:57Z
+examples/llama_docvqa.py: 2023-09-07T11:10:57Z
+examples/llama_docvqa_due_azure.py: 2023-09-07T11:10:57Z
+examples/vllm_docvqa_due_azure.py: 2023-09-07T11:10:57Z
+metric/anls.py: 2023-06-29T07:22:40Z
+utils/__init__.py: 2023-09-07T11:10:57Z
+utils/claude.py: 2023-06-29T07:22:40Z
+utils/docvqa.py: 2023-06-01T08:50:20Z
+utils/docvqa_due_azure.py: 2023-06-29T07:22:40Z
+utils/model_path_config.py: 2024-05-28T07:16:02Z
+utils/openai_api.py: 2023-06-29T07:22:40Z
+utils/space_layout.py: 2023-06-01T08:50:20Z
+utils/util.py: 2023-09-07T11:10:57Z

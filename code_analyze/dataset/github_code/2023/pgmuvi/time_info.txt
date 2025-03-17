@@ -1,0 +1,7 @@
+docs/source/conf.py: 2023-07-26T19:30:33Z
+pgmuvi/__init__.py: 2023-07-27T18:41:10Z
+pgmuvi/gps.py: 2023-07-27T18:41:10Z
+pgmuvi/lightcurve.py: 2024-09-19T16:48:35Z
+pgmuvi/trainers.py: 2024-09-12T16:48:12Z
+setup.py: 2023-07-26T19:01:01Z
+tests/tests.py: 2023-08-24T16:12:23Z

@@ -1,0 +1,4 @@
+.ipynb_checkpoints/functions-checkpoint.py: 2024-05-30T13:48:15Z
+.ipynb_checkpoints/functions_for_check-checkpoint.py: 2024-05-30T13:48:15Z
+functions.py: 2024-05-30T13:48:15Z
+functions_for_check.py: 2024-05-30T13:48:15Z

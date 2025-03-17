@@ -1,0 +1,8 @@
+data/reaction_diffusion.py: 2023-02-24T01:05:23Z
+data/transport.py: 2023-04-29T21:35:59Z
+modules/__init__.py: 2022-11-01T16:53:31Z
+modules/data.py: 2023-05-24T23:04:41Z
+modules/models.py: 2024-01-10T02:09:29Z
+modules/optimizers.py: 2022-11-01T16:53:31Z
+modules/plots.py: 2023-02-05T20:30:07Z
+modules/utils.py: 2023-01-05T22:13:17Z

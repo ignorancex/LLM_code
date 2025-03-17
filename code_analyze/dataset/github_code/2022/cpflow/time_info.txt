@@ -1,0 +1,13 @@
+cpflow/__init__.py: 2022-04-22T19:09:05Z
+cpflow/circuit_assembly.py: 2022-04-15T11:08:57Z
+cpflow/cp_utils.py: 2022-04-18T10:52:55Z
+cpflow/exact_decompositions.py: 2022-04-22T11:15:02Z
+cpflow/gates.py: 2022-04-15T07:29:25Z
+cpflow/main.py: 2022-04-19T19:07:19Z
+cpflow/matrix_utils.py: 2022-04-17T11:44:30Z
+cpflow/optimization.py: 2022-04-15T11:08:57Z
+cpflow/penalty.py: 2022-04-15T07:29:25Z
+cpflow/topology.py: 2022-04-15T07:29:25Z
+cpflow/trigonometric_utils.py: 2022-04-15T07:29:25Z
+paper/benchmark_circuits/decompose_script.py: 2022-04-15T11:08:57Z
+setup.py: 2022-04-22T19:09:05Z

@@ -1,0 +1,15 @@
+maxvit/__init__.py: 2023-06-02T00:28:23Z
+maxvit/models/__init__.py: 2023-06-02T00:28:23Z
+maxvit/models/attention_utils.py: 2023-06-02T00:28:23Z
+maxvit/models/common_ops.py: 2023-06-02T00:28:23Z
+maxvit/models/eval_ckpt.py: 2023-06-02T00:28:23Z
+maxvit/models/hp/__init__.py: 2023-06-02T00:28:23Z
+maxvit/models/hp/vision.py: 2023-06-02T00:28:23Z
+maxvit/models/hp/vision_i1k.py: 2023-06-02T00:28:23Z
+maxvit/models/hparam_configs.py: 2023-06-02T00:28:23Z
+maxvit/models/hparams.py: 2023-06-02T00:28:23Z
+maxvit/models/hparams_registry.py: 2023-06-02T00:28:23Z
+maxvit/models/maxvit.py: 2023-06-02T00:28:23Z
+maxvit/models/utils.py: 2023-06-02T00:28:23Z
+maxvit/test_maxvit.py: 2023-06-02T00:28:23Z
+setup.py: 2023-06-02T00:28:23Z

@@ -1,0 +1,14 @@
+src/__init__.py: 2023-10-08T15:43:58Z
+src/classification_test.py: 2023-10-08T15:43:58Z
+src/config.py: 2023-10-08T15:43:58Z
+src/core_on_demand.py: 2023-10-08T15:43:58Z
+src/example_creation.py: 2023-10-08T15:43:58Z
+src/feature_generation.py: 2023-10-08T15:43:58Z
+src/full_llm.py: 2023-10-08T15:43:58Z
+src/model_aplication.py: 2023-10-08T15:43:58Z
+src/model_check_model.py: 2023-10-08T15:43:58Z
+src/model_embedding.py: 2023-10-08T15:43:58Z
+src/model_test_model_classification.py: 2023-10-08T15:43:58Z
+src/run_tests.py: 2023-10-08T15:43:58Z
+src/triplets_test.py: 2023-10-08T15:43:58Z
+src/using_pickle.py: 2023-10-08T15:43:58Z

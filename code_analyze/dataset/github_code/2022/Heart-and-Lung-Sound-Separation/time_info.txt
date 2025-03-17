@@ -1,0 +1,2 @@
+Past Work Code/Toolbox-for-Adaptive-Fourier-Decomposition-master/Docs/conf.py: 2022-01-10T03:32:46Z
+Past Work Code/Toolbox-for-Adaptive-Fourier-Decomposition-master/Python/AFD.py: 2022-01-10T03:32:46Z

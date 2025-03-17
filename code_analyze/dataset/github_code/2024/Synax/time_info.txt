@@ -1,0 +1,8 @@
+docs/conf.py: 2025-02-27T18:39:39Z
+setup.py: 2024-07-25T01:59:01Z
+synax/__init__.py: 2024-07-25T01:59:01Z
+synax/bfield.py: 2025-02-18T23:08:06Z
+synax/cfield.py: 2024-08-01T21:23:26Z
+synax/coords.py: 2024-12-13T22:36:59Z
+synax/synax.py: 2024-12-13T22:36:59Z
+synax/tefield.py: 2024-08-01T21:23:26Z

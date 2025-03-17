@@ -1,0 +1,7 @@
+translate/evaluation/evaluate_translations.py: 2023-08-01T15:13:03Z
+translate/scripts/dataset.py: 2023-08-01T15:13:03Z
+translate/scripts/dataset_configs.py: 2023-08-01T15:13:03Z
+translate/scripts/translate.py: 2023-08-01T15:13:03Z
+translate/scripts/translate_dataset_few_shot.py: 2023-08-01T15:13:03Z
+translate/scripts/translate_dataset_nllb.py: 2023-08-01T15:13:03Z
+translate/scripts/translate_few_shot.py: 2023-08-01T15:13:03Z
