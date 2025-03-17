@@ -1,0 +1,26 @@
+[
+    {
+        "old_path": "LLM_code/code_analyze/dataset/github_code/2024/tp-berta/lib/aux.py",
+        "new_path": "LLM_code/code_analyze/dataset/github_code/2024/tp-berta/lib/aux_file.py"
+    },
+    {
+        "old_path": "LLM_code/code_analyze/dataset/github_code/2024/hyperspectral_pansharpening_toolbox/PCA_Z_PNN/aux.py",
+        "new_path": "LLM_code/code_analyze/dataset/github_code/2024/hyperspectral_pansharpening_toolbox/PCA_Z_PNN/aux_file.py"
+    },
+    {
+        "old_path": "LLM_code/code_analyze/dataset/github_code/2024/hyperspectral_pansharpening_toolbox/R_PNN/aux.py",
+        "new_path": "LLM_code/code_analyze/dataset/github_code/2024/hyperspectral_pansharpening_toolbox/R_PNN/aux_file.py"
+    },
+    {
+        "old_path": "LLM_code/code_analyze/dataset/github_code/2024/hyperspectral_pansharpening_toolbox/ModelBasedOptimization/aux.py",
+        "new_path": "LLM_code/code_analyze/dataset/github_code/2024/hyperspectral_pansharpening_toolbox/ModelBasedOptimization/aux_file.py"
+    },
+    {
+        "old_path": "LLM_code/code_analyze/dataset/github_code/2024/hyperspectral_pansharpening_toolbox/DHPDarn/aux.py",
+        "new_path": "LLM_code/code_analyze/dataset/github_code/2024/hyperspectral_pansharpening_toolbox/DHPDarn/aux_file.py"
+    },
+    {
+        "old_path": "LLM_code/code_analyze/dataset/github_code/2024/hyperspectral_pansharpening_toolbox/DIPHyperKite/aux.py",
+        "new_path": "LLM_code/code_analyze/dataset/github_code/2024/hyperspectral_pansharpening_toolbox/DIPHyperKite/aux_file.py"
+    }
+]

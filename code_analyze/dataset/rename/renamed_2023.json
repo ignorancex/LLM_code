@@ -1,0 +1,10 @@
+[
+    {
+        "old_path": "LLM_code/code_analyze/dataset/github_code/2023/locvqa/core/datasets/aux.py",
+        "new_path": "LLM_code/code_analyze/dataset/github_code/2023/locvqa/core/datasets/aux_file.py"
+    },
+    {
+        "old_path": "LLM_code/code_analyze/dataset/github_code/2023/TreeProbe/data/aux.py",
+        "new_path": "LLM_code/code_analyze/dataset/github_code/2023/TreeProbe/data/aux_file.py"
+    }
+]

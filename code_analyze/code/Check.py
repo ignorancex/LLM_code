@@ -1,7 +1,7 @@
 import os
 import json
 
-year = "2022"
+year = "2025"
 output_original_links = True  # 设为 True 输出原始链接，设为 False 输出 repo 名称
 
 # 定义仓库存储的根目录
