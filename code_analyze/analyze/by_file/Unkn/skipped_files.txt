@@ -1,0 +1,8 @@
+Skipped ./github_code\2021\PSSAttention\MN(+AS)/scripts/erasing_data.py: Missing parentheses in call to 'print'. Did you mean print(text)? (<unknown>, line 23)
+Skipped ./github_code\2021\PSSAttention\MN(+AS)/utils/hooks.py: inconsistent use of tabs and spaces in indentation (<unknown>, line 351)
+Skipped ./github_code\2022\CANA\GNIA+CANA/run_gnia_cana.py: invalid syntax (<unknown>, line 311)
+Skipped ./github_code\2022\DRAC\challenge2&3/main.py: expected an indented block (<unknown>, line 165)
+Skipped ./github_code\2022\KG-Multi-Bias\Headline+Attn(IC_Knwl).py: unindent does not match any outer indentation level (<unknown>, line 295)
+Skipped ./github_code\2022\KG-Multi-Bias\Headline+IC_Knwl.py: unindent does not match any outer indentation level (<unknown>, line 266)
+Skipped ./github_code\2023\MolecularEL\Multi-modalityRegistration/Step7_matrix_20Xmat_affine_4points_WSI_SG+ANTs.py: leading zeros in decimal integer literals are not permitted; use an 0o prefix for octal integers (<unknown>, line 53)
+Skipped ./github_code\2023\SFAGC\segmentation/existing_methods/pointnet++_part_seg/pointnet2_utils.py: invalid non-printable character U+FEFF (<unknown>, line 1)
