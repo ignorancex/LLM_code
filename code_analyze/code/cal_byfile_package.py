@@ -50,6 +50,7 @@ def analyze_directory(root_dir):
 
     for year_folder in os.listdir(root_dir):
         year_path = os.path.join(root_dir, year_folder)
+        print(year_path)
         if not os.path.isdir(year_path):
             continue
 
@@ -68,13 +69,19 @@ def analyze_directory(root_dir):
                     parts = line.strip().split(': ')
                     if len(parts) == 2:
                         file_path, timestamp = parts
-                        file_years[os.path.join(project_path, file_path)] = timestamp[:4]
+                        pt=os.path.join(project_path, file_path)
+                        pt=pt.replace('/', '\\')
+                        file_years[pt] = timestamp[:4]
+                        #print(pt)
 
             for subdir, _, files in os.walk(project_path):
                 for file in files:
                     if file.endswith('.py'):
                         file_path = os.path.join(subdir, file)
+                        file_path=file_path.replace('/', '\\')
                         if file_path not in file_years:
+                            print("error")
+                            #print("path: "+file_path)
                             continue
 
                         year = file_years[file_path]
