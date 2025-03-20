@@ -1,0 +1,29 @@
+{
+    "sys": {
+        "count": 2,
+        "methods": {
+            "sys.exit": 2,
+            "sys.path": 2,
+            "sys.argv": 1,
+            "sys.stdout": 1
+        }
+    },
+    "json": {
+        "count": 2,
+        "methods": {}
+    },
+    "os": {
+        "count": 1,
+        "methods": {
+            "os.path": 2
+        }
+    },
+    "jsonSchemaToRsT": {
+        "count": 1,
+        "methods": {}
+    },
+    "collections": {
+        "count": 1,
+        "methods": {}
+    }
+}

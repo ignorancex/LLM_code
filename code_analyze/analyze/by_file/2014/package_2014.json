@@ -1,0 +1,48 @@
+{
+    "os": {
+        "count": 2,
+        "methods": {
+            "os.path": 5
+        }
+    },
+    "PyQt4": {
+        "count": 2,
+        "methods": {
+            "PyQt4.QtCore": 1,
+            "PyQt4.QtGui": 1
+        }
+    },
+    "watchdog": {
+        "count": 1,
+        "methods": {
+            "watchdog.events": 1
+        }
+    },
+    "numpy": {
+        "count": 1,
+        "methods": {}
+    },
+    "matplotlib": {
+        "count": 1,
+        "methods": {
+            "matplotlib.pyplot": 1
+        }
+    },
+    "optparse": {
+        "count": 1,
+        "methods": {}
+    },
+    "collections": {
+        "count": 1,
+        "methods": {
+            "collections.deque": 1
+        }
+    },
+    "json": {
+        "count": 1,
+        "methods": {
+            "json.dump": 2,
+            "json.load": 1
+        }
+    }
+}

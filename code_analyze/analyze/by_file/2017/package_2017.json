@@ -1,0 +1,797 @@
+{
+    "mxnet": {
+        "count": 119,
+        "methods": {
+            "mxnet.base": 6,
+            "mxnet.ndarray": 4,
+            "mxnet.test_utils": 3,
+            "mxnet.gluon": 3,
+            "mxnet.MXSetNumOMPThreads": 2,
+            "mxnet.Block": 2,
+            "mxnet.Dense": 2,
+            "mxnet.sym": 2,
+            "mxnet.symbol_doc": 2,
+            "mxnet.optimizer": 1,
+            "mxnet.io": 1,
+            "mxnet.Embedding": 1,
+            "mxnet.MXCVImdecode": 1,
+            "mxnet.MXCVResize": 1,
+            "mxnet.MXCVcopyMakeBorder": 1,
+            "mxnet.symbol": 1,
+            "mxnet.MXRecordIOReaderTell": 1
+        }
+    },
+    "numpy": {
+        "count": 65,
+        "methods": {
+            "numpy.ndarray": 12,
+            "numpy.arange": 8,
+            "numpy.random": 4,
+            "numpy.array": 4,
+            "numpy.float32": 3,
+            "numpy.int": 2,
+            "numpy.zeros": 2,
+            "numpy.clip": 2,
+            "numpy.sqrt": 2,
+            "numpy.int32": 2,
+            "numpy.exp": 2,
+            "numpy.log": 2,
+            "numpy.testing": 2,
+            "numpy.empty": 1,
+            "numpy.searchsorted": 1,
+            "numpy.cumsum": 1,
+            "numpy.max": 1,
+            "numpy.load": 1,
+            "numpy.sum": 1
+        }
+    },
+    "": {
+        "count": 57,
+        "methods": {
+            ".MXAutogradBackward": 2,
+            ".__all__": 2,
+            ".MXEngineSetBulkSize": 1,
+            ".MXKVStoreRunServer": 1,
+            ".MXKVStoreIsWorkerNode": 1,
+            ".MXRtcCudaModuleCreate": 1,
+            ".MXRtcCudaModuleFree": 1,
+            ".MXRtcCudaKernelCreate": 1,
+            ".MXRtcCudaKernelFree": 1,
+            ".MXRtcCudaKernelCall": 1,
+            ".MXAutogradSetIsTraining": 1,
+            ".MXAutogradSetIsRecording": 1,
+            ".MXAutogradMarkVariables": 1,
+            ".NNSymbolFree": 1,
+            ".NNSymbolCompose": 1,
+            ".MXSymbolSetAttrs": 1,
+            ".MXSymbolCreateAtomicSymbol": 1
+        }
+    },
+    "os": {
+        "count": 42,
+        "methods": {
+            "os.path": 156,
+            "os.system": 11,
+            "os.mkdir": 8,
+            "os.remove": 5,
+            "os.makedirs": 5,
+            "os.chdir": 4,
+            "os.listdir": 4,
+            "os.walk": 3,
+            "os.curdir": 3,
+            "os.getcwd": 2,
+            "os.rename": 2,
+            "os.environ": 1
+        }
+    },
+    "__future__": {
+        "count": 34,
+        "methods": {}
+    },
+    "logging": {
+        "count": 29,
+        "methods": {
+            "logging.info": 39,
+            "logging.DEBUG": 18,
+            "logging.basicConfig": 13,
+            "logging.INFO": 9,
+            "logging.getLogger": 7,
+            "logging.WARNING": 5,
+            "logging.warn": 4,
+            "logging.Formatter": 3,
+            "logging.FileHandler": 3,
+            "logging.StreamHandler": 3,
+            "logging.root": 3,
+            "logging.CRITICAL": 2,
+            "logging.ERROR": 2,
+            "logging.error": 1,
+            "logging.NOTSET": 1,
+            "logging.html": 1,
+            "logging.warning": 1
+        }
+    },
+    "argparse": {
+        "count": 28,
+        "methods": {
+            "argparse.ArgumentParser": 26,
+            "argparse.ArgumentDefaultsHelpFormatter": 4,
+            "argparse.Action": 2,
+            "argparse.Namespace": 1
+        }
+    },
+    "sys": {
+        "count": 27,
+        "methods": {
+            "sys.argv": 16,
+            "sys.exit": 11,
+            "sys.stdout": 10,
+            "sys.path": 7,
+            "sys.stderr": 3,
+            "sys.version_info": 2
+        }
+    },
+    "collections": {
+        "count": 20,
+        "methods": {
+            "collections.namedtuple": 2,
+            "collections.OrderedDict": 1,
+            "collections.Mapping": 1
+        }
+    },
+    "time": {
+        "count": 13,
+        "methods": {
+            "time.time": 20,
+            "time.sleep": 3,
+            "time.strftime": 1
+        }
+    },
+    "math": {
+        "count": 10,
+        "methods": {
+            "math.floor": 4,
+            "math.pow": 3,
+            "math.sqrt": 3,
+            "math.ceil": 1
+        }
+    },
+    "ctypes": {
+        "count": 9,
+        "methods": {
+            "ctypes.c_int": 19,
+            "ctypes.byref": 11,
+            "ctypes.c_void_p": 5,
+            "ctypes.c_char_p": 2,
+            "ctypes.c_double": 1,
+            "ctypes.CFUNCTYPE": 1,
+            "ctypes.data_as": 1,
+            "ctypes.c_size_t": 1
+        }
+    },
+    "re": {
+        "count": 9,
+        "methods": {
+            "re.compile": 8,
+            "re.sub": 7,
+            "re.findall": 3,
+            "re.split": 1
+        }
+    },
+    "random": {
+        "count": 9,
+        "methods": {
+            "random.randint": 15,
+            "random.shuffle": 6,
+            "random.uniform": 3,
+            "random.seed": 2
+        }
+    },
+    "caffe": {
+        "count": 8,
+        "methods": {
+            "caffe.proto": 7,
+            "caffe.TEST": 5,
+            "caffe.NetParameter": 3,
+            "caffe.set_mode_cpu": 1,
+            "caffe.Net": 1,
+            "caffe.BlobProto": 1,
+            "caffe.io": 1
+        }
+    },
+    "utils": {
+        "count": 7,
+        "methods": {
+            "utils.load_model": 3,
+            "utils.replace_conv_layer": 2
+        }
+    },
+    "scipy": {
+        "count": 6,
+        "methods": {
+            "scipy.signal": 4,
+            "scipy.misc": 1,
+            "scipy.stats": 1
+        }
+    },
+    "skimage": {
+        "count": 6,
+        "methods": {
+            "skimage.resize": 6,
+            "skimage.imread": 5,
+            "skimage.restoration": 2,
+            "skimage.imsave": 2
+        }
+    },
+    "nce": {
+        "count": 6,
+        "methods": {}
+    },
+    "csv": {
+        "count": 5,
+        "methods": {
+            "csv.writer": 3,
+            "csv.reader": 2
+        }
+    },
+    "find_mxnet": {
+        "count": 5,
+        "methods": {}
+    },
+    "caffe_parser": {
+        "count": 5,
+        "methods": {
+            "caffe_parser.caffe_pb2": 3,
+            "caffe_parser.get_layers": 2,
+            "caffe_parser.read_prototxt": 2,
+            "caffe_parser.read_caffemodel": 1,
+            "caffe_parser.layer_iter": 1
+        }
+    },
+    "shutil": {
+        "count": 4,
+        "methods": {
+            "shutil.move": 1
+        }
+    },
+    "importlib": {
+        "count": 4,
+        "methods": {
+            "importlib.import_module": 3
+        }
+    },
+    "matplotlib": {
+        "count": 4,
+        "methods": {
+            "matplotlib.pyplot": 1,
+            "matplotlib.ticker": 1
+        }
+    },
+    "data_processing": {
+        "count": 4,
+        "methods": {
+            "data_processing.PreprocessContentImage": 2,
+            "data_processing.SaveImage": 1,
+            "data_processing.PreprocessStyleImage": 1
+        }
+    },
+    "cv2": {
+        "count": 4,
+        "methods": {
+            "cv2.INTER_LINEAR": 3,
+            "cv2.INTER_CUBIC": 2,
+            "cv2.imdecode": 2,
+            "cv2.imresize": 2,
+            "cv2.copyMakeBorder": 2,
+            "cv2.INTER_AREA": 1,
+            "cv2.INTER_NEAREST": 1,
+            "cv2.INTER_LANCZOS4": 1,
+            "cv2.imread": 1,
+            "cv2.BORDER_CONSTANT": 1
+        }
+    },
+    "json": {
+        "count": 4,
+        "methods": {
+            "json.loads": 13,
+            "json.dump": 3,
+            "json.load": 2
+        }
+    },
+    "pickle": {
+        "count": 4,
+        "methods": {
+            "pickle.dump": 1,
+            "pickle.load": 1,
+            "pickle.loads": 1
+        }
+    },
+    "stt_layer_batchnorm": {
+        "count": 4,
+        "methods": {}
+    },
+    "google": {
+        "count": 4,
+        "methods": {
+            "google.protobuf": 4,
+            "google.Merge": 3
+        }
+    },
+    "scriptCommon": {
+        "count": 4,
+        "methods": {}
+    },
+    "glob": {
+        "count": 3,
+        "methods": {
+            "glob.glob": 4
+        }
+    },
+    "subprocess": {
+        "count": 3,
+        "methods": {
+            "subprocess.Popen": 2,
+            "subprocess.STDOUT": 2,
+            "subprocess.check_output": 2,
+            "subprocess.run": 2,
+            "subprocess.PIPE": 2
+        }
+    },
+    "common": {
+        "count": 3,
+        "methods": {
+            "common.download_model": 1,
+            "common.util": 1
+        }
+    },
+    "optparse": {
+        "count": 3,
+        "methods": {}
+    },
+    "text8_data": {
+        "count": 3,
+        "methods": {}
+    },
+    "itertools": {
+        "count": 3,
+        "methods": {
+            "itertools.from_iterable": 2
+        }
+    },
+    "xml": {
+        "count": 3,
+        "methods": {
+            "xml.etree": 3
+        }
+    },
+    "modules": {
+        "count": 3,
+        "methods": {
+            "modules.active_cfg": 3,
+            "modules.gb": 1,
+            "modules.utils": 1
+        }
+    },
+    "yt": {
+        "count": 3,
+        "methods": {
+            "yt.mods": 1,
+            "yt.units": 1
+        }
+    },
+    "PIL": {
+        "count": 2,
+        "methods": {
+            "PIL.open": 3
+        }
+    },
+    "copy": {
+        "count": 2,
+        "methods": {
+            "copy.deepcopy": 6
+        }
+    },
+    "model": {
+        "count": 2,
+        "methods": {
+            "model.save_checkpoint": 1
+        }
+    },
+    "random_data": {
+        "count": 2,
+        "methods": {}
+    },
+    "wordvec_net": {
+        "count": 2,
+        "methods": {}
+    },
+    "gen_v3": {
+        "count": 2,
+        "methods": {
+            "gen_v3.get_module": 4
+        }
+    },
+    "gen_v4": {
+        "count": 2,
+        "methods": {
+            "gen_v4.get_module": 4
+        }
+    },
+    "rllab": {
+        "count": 2,
+        "methods": {
+            "rllab.envs": 2
+        }
+    },
+    "ast": {
+        "count": 2,
+        "methods": {
+            "ast.literal_eval": 1
+        }
+    },
+    "cPickle": {
+        "count": 2,
+        "methods": {}
+    },
+    "dataset": {
+        "count": 2,
+        "methods": {
+            "dataset.imdb": 2
+        }
+    },
+    "caffe_parse": {
+        "count": 2,
+        "methods": {
+            "caffe_parse.caffe_pb2": 3
+        }
+    },
+    "array": {
+        "count": 2,
+        "methods": {}
+    },
+    "functools": {
+        "count": 2,
+        "methods": {
+            "functools.wraps": 2
+        }
+    },
+    "nose": {
+        "count": 2,
+        "methods": {
+            "nose.runmodule": 1
+        }
+    },
+    "converter": {
+        "count": 2,
+        "methods": {
+            "converter._mxnet_converter": 1,
+            "converter.utils": 1
+        }
+    },
+    "h5py": {
+        "count": 2,
+        "methods": {
+            "h5py.Dataset": 4,
+            "h5py.File": 2,
+            "h5py.Group": 1
+        }
+    },
+    "bs4": {
+        "count": 1,
+        "methods": {}
+    },
+    "sparse_sgd": {
+        "count": 1,
+        "methods": {}
+    },
+    "pygal": {
+        "count": 1,
+        "methods": {
+            "pygal.Line": 1
+        }
+    },
+    "threading": {
+        "count": 1,
+        "methods": {
+            "threading.Thread": 2
+        }
+    },
+    "submission_dsb": {
+        "count": 1,
+        "methods": {
+            "submission_dsb.gen_sub": 1
+        }
+    },
+    "pandas": {
+        "count": 1,
+        "methods": {}
+    },
+    "dicom": {
+        "count": 1,
+        "methods": {
+            "dicom.read_file": 1
+        }
+    },
+    "joblib": {
+        "count": 1,
+        "methods": {}
+    },
+    "dill": {
+        "count": 1,
+        "methods": {}
+    },
+    "get_data": {
+        "count": 1,
+        "methods": {}
+    },
+    "lstm_net": {
+        "count": 1,
+        "methods": {}
+    },
+    "operator": {
+        "count": 1,
+        "methods": {}
+    },
+    "model_vgg19": {
+        "count": 1,
+        "methods": {}
+    },
+    "basic": {
+        "count": 1,
+        "methods": {
+            "basic.get_style_module": 1,
+            "basic.get_content_module": 1,
+            "basic.get_loss_module": 1
+        }
+    },
+    "ddpg": {
+        "count": 1,
+        "methods": {}
+    },
+    "policies": {
+        "count": 1,
+        "methods": {}
+    },
+    "qfuncs": {
+        "count": 1,
+        "methods": {}
+    },
+    "strategies": {
+        "count": 1,
+        "methods": {}
+    },
+    "inspect": {
+        "count": 1,
+        "methods": {
+            "inspect.stack": 1
+        }
+    },
+    "numbers": {
+        "count": 1,
+        "methods": {
+            "numbers.Number": 1
+        }
+    },
+    "gym": {
+        "count": 1,
+        "methods": {
+            "gym.make": 1
+        }
+    },
+    "config": {
+        "count": 1,
+        "methods": {
+            "config.__dict__": 1
+        }
+    },
+    "envs": {
+        "count": 1,
+        "methods": {}
+    },
+    "lstm": {
+        "count": 1,
+        "methods": {}
+    },
+    "rnn": {
+        "count": 1,
+        "methods": {}
+    },
+    "weighted_softmax_ce": {
+        "count": 1,
+        "methods": {}
+    },
+    "stt_layer_conv": {
+        "count": 1,
+        "methods": {}
+    },
+    "stt_layer_fc": {
+        "count": 1,
+        "methods": {}
+    },
+    "stt_layer_gru": {
+        "count": 1,
+        "methods": {}
+    },
+    "stt_layer_lstm": {
+        "count": 1,
+        "methods": {}
+    },
+    "stt_layer_slice": {
+        "count": 1,
+        "methods": {}
+    },
+    "stt_layer_warpctc": {
+        "count": 1,
+        "methods": {}
+    },
+    "configparser": {
+        "count": 1,
+        "methods": {
+            "configparser.ConfigParser": 1
+        }
+    },
+    "ConfigParser": {
+        "count": 1,
+        "methods": {}
+    },
+    "bisect": {
+        "count": 1,
+        "methods": {
+            "bisect.bisect_left": 1
+        }
+    },
+    "tools": {
+        "count": 1,
+        "methods": {
+            "tools.rand_sampler": 1
+        }
+    },
+    "evaluate": {
+        "count": 1,
+        "methods": {
+            "evaluate.eval_voc": 1
+        }
+    },
+    "imdb": {
+        "count": 1,
+        "methods": {}
+    },
+    "symbol": {
+        "count": 1,
+        "methods": {
+            "symbol.get_symbol_train": 2,
+            "symbol.import_module": 2,
+            "symbol.get_symbol": 2
+        }
+    },
+    "symbol_factory": {
+        "count": 1,
+        "methods": {
+            "symbol_factory.get_symbol": 1,
+            "symbol_factory.get_symbol_train": 1
+        }
+    },
+    "caffe_pb2": {
+        "count": 1,
+        "methods": {
+            "caffe_pb2.NetParameter": 5
+        }
+    },
+    "convert_symbol": {
+        "count": 1,
+        "methods": {}
+    },
+    "warnings": {
+        "count": 1,
+        "methods": {
+            "warnings.warn": 1
+        }
+    },
+    "bokeh": {
+        "count": 1,
+        "methods": {}
+    },
+    "boken": {
+        "count": 1,
+        "methods": {
+            "boken.io": 1
+        }
+    },
+    "train_mnist": {
+        "count": 1,
+        "methods": {
+            "train_mnist.parse_args": 1,
+            "train_mnist.get_iterator": 1,
+            "train_mnist.get_lenet": 1
+        }
+    },
+    "doctest": {
+        "count": 1,
+        "methods": {
+            "doctest.testmod": 2
+        }
+    },
+    "mxnet_predict": {
+        "count": 1,
+        "methods": {}
+    },
+    "acc_conv": {
+        "count": 1,
+        "methods": {
+            "acc_conv.conv_vh_decomposition": 1
+        }
+    },
+    "acc_fc": {
+        "count": 1,
+        "methods": {
+            "acc_fc.fc_decomposition": 1
+        }
+    },
+    "rank_selection": {
+        "count": 1,
+        "methods": {
+            "rank_selection.get_ranksel": 1
+        }
+    },
+    "pdb": {
+        "count": 1,
+        "methods": {}
+    },
+    "yaml": {
+        "count": 1,
+        "methods": {
+            "yaml.safe_load": 2
+        }
+    },
+    "coremltools": {
+        "count": 1,
+        "methods": {
+            "coremltools.proto": 1
+        }
+    },
+    "signal": {
+        "count": 1,
+        "methods": {
+            "signal.signal": 1,
+            "signal.SIGINT": 1
+        }
+    },
+    "hdf5tools": {
+        "count": 1,
+        "methods": {}
+    },
+    "statistics": {
+        "count": 1,
+        "methods": {}
+    },
+    "datetime": {
+        "count": 1,
+        "methods": {
+            "datetime.now": 1
+        }
+    },
+    "urllib2": {
+        "count": 1,
+        "methods": {
+            "urllib2.urlopen": 1
+        }
+    },
+    "gdb": {
+        "count": 1,
+        "methods": {
+            "gdb.TYPE_CODE_REF": 3,
+            "gdb.TYPE_CODE_STRUCT": 1
+        }
+    },
+    "distutils": {
+        "count": 1,
+        "methods": {
+            "distutils.core": 1
+        }
+    },
+    "catkin_pkg": {
+        "count": 1,
+        "methods": {
+            "catkin_pkg.python_setup": 1
+        }
+    }
+}
