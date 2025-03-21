@@ -9,10 +9,7 @@
         "count": 2,
         "methods": {
             "PyQt4.QtCore": 1,
-            "PyQt4.QtGui": 1,
-            "PyQt4.QObject": 1,
-            "PyQt4.QAction": 1,
-            "PyQt4.SIGNAL": 1
+            "PyQt4.QtGui": 1
         }
     },
     "watchdog": {
@@ -23,23 +20,12 @@
     },
     "numpy": {
         "count": 1,
-        "methods": {
-            "numpy.loadtxt": 3,
-            "numpy.clip": 2,
-            "numpy.array": 1,
-            "numpy.interp": 1
-        }
+        "methods": {}
     },
     "matplotlib": {
         "count": 1,
         "methods": {
-            "matplotlib.yscale": 2,
-            "matplotlib.title": 2,
-            "matplotlib.pyplot": 1,
-            "matplotlib.subplots": 1,
-            "matplotlib.xscale": 1,
-            "matplotlib.savefig": 1,
-            "matplotlib.show": 1
+            "matplotlib.pyplot": 1
         }
     },
     "optparse": {

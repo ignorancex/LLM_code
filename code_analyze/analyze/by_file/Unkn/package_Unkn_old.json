@@ -4,29 +4,20 @@
         "methods": {
             "torch.nn": 349,
             "torch.cat": 201,
-            "torch.Linear": 175,
-            "torch.Module": 172,
-            "torch.Conv2d": 159,
             "torch.tensor": 153,
             "torch.float32": 145,
-            "torch.utils": 143,
-            "torch.BatchNorm2d": 127,
+            "torch.utils": 139,
             "torch.Tensor": 122,
-            "torch.Sequential": 120,
             "torch.cuda": 119,
             "torch.load": 89,
             "torch.optim": 83,
-            "torch.GroupNorm": 83,
             "torch.from_numpy": 79,
             "torch.zeros": 76,
-            "torch.ReLU": 75,
-            "torch.relu": 69,
             "torch.no_grad": 62,
             "torch.ones": 58,
             "torch.long": 58,
             "torch.randint": 53,
             "torch.mean": 52,
-            "torch.init": 50,
             "torch.randn": 47,
             "torch.LongTensor": 46,
             "torch.autograd": 44,
@@ -34,135 +25,89 @@
             "torch.save": 42,
             "torch.arange": 41,
             "torch.float": 40,
-            "torch.LayerNorm": 40,
-            "torch.MaxPool2d": 39,
             "torch.stack": 38,
             "torch.clamp": 37,
-            "torch.ModuleList": 36,
             "torch.device": 35,
             "torch.rand": 34,
-            "torch.Parameter": 34,
-            "torch.Dropout": 33,
+            "torch.Module": 30,
             "torch.FloatTensor": 30,
-            "torch.Identity": 29,
-            "torch.AvgPool2d": 27,
-            "torch.CrossEntropyLoss": 23,
             "torch.norm": 23,
-            "torch.LeakyReLU": 23,
-            "torch.softmax": 22,
-            "torch.avg_pool2d": 22,
+            "torch.Parameter": 23,
             "torch.manual_seed": 21,
+            "torch.Linear": 21,
+            "torch.init": 20,
             "torch.backends": 19,
             "torch.jit": 16,
             "torch.distributed": 15,
-            "torch.Sigmoid": 15,
             "torch.matmul": 15,
             "torch.mm": 15,
             "torch.zeros_like": 14,
-            "torch.BatchNorm1d": 14,
             "torch.empty": 14,
-            "torch.DataParallel": 13,
             "torch.exp": 12,
             "torch.log": 12,
-            "torch.ReLU6": 12,
             "torch.bfloat16": 12,
-            "torch.cross_entropy": 12,
             "torch.meshgrid": 12,
             "torch.multiprocessing": 11,
-            "torch.Upsample": 11,
-            "torch.sigmoid": 11,
             "torch.ones_like": 10,
             "torch.unsqueeze": 10,
             "torch.argmax": 10,
             "torch.channels_last": 10,
             "torch.as_tensor": 10,
-            "torch.Softmax": 9,
+            "torch.Conv2d": 10,
+            "torch.Dropout": 9,
+            "torch.BatchNorm2d": 9,
             "torch.random": 9,
+            "torch.Sequential": 9,
             "torch.Generator": 9,
-            "torch.pad": 9,
             "torch.gather": 8,
             "torch.where": 8,
-            "torch.Adam": 8,
             "torch.bmm": 8,
-            "torch.dropout": 8,
             "torch.randperm": 8,
             "torch.is_tensor": 8,
             "torch.sin": 8,
-            "torch.affine_grid": 8,
-            "torch.grid_sample": 8,
-            "torch.GRU": 7,
+            "torch.sigmoid": 8,
+            "torch.Identity": 8,
             "torch.transpose": 7,
-            "torch.BCELoss": 7,
             "torch.cos": 7,
             "torch.concat": 7,
-            "torch.upsample": 7,
             "torch.distributions": 6,
             "torch.int64": 6,
-            "torch.Dataset": 6,
-            "torch.AdaptiveAvgPool2d": 6,
-            "torch.L1Loss": 6,
+            "torch.ModuleList": 6,
             "torch.equal": 6,
-            "torch.Conv1d": 6,
+            "torch.ReLU": 6,
             "torch.uint8": 6,
             "torch.ModuleDict": 6,
-            "torch.benchmark": 5,
             "torch.squeeze": 5,
             "torch.full": 5,
-            "torch.LSTM": 5,
-            "torch.TransformerEncoderLayer": 5,
-            "torch.TransformerEncoder": 5,
             "torch.max": 5,
-            "torch.DataLoader": 5,
-            "torch.nll_loss": 5,
             "torch.spmm": 5,
-            "torch.GELU": 5,
             "torch.contiguous_format": 5,
+            "torch.LayerNorm": 5,
             "torch._C": 4,
-            "torch.Queue": 4,
             "torch.signal_handling": 4,
-            "torch.MSELoss": 4,
             "torch.diag": 4,
-            "torch.one_hot": 4,
-            "torch.SGD": 4,
             "torch.float16": 4,
-            "torch.PReLU": 4,
             "torch.sqrt": 4,
-            "torch.log_softmax": 4,
-            "torch.constant": 4,
             "torch.topk": 4,
             "torch.__version__": 4,
-            "torch.functional": 4,
             "torch.bool": 4,
-            "torch.interpolate": 4,
-            "torch.is_available": 4,
-            "torch.is_initialized": 4,
             "torch.std": 4,
-            "torch.spawn": 3,
-            "torch.init_process_group": 3,
-            "torch.Flatten": 3,
             "torch.flatten": 3,
+            "torch.Softmax": 3,
             "torch.eye": 3,
             "torch.ByteTensor": 3,
             "torch.sort": 3,
-            "torch.Tanh": 3,
-            "torch.normal": 3,
             "torch.rsqrt": 3,
             "torch.mv": 3,
             "torch.apply": 3,
-            "torch.TensorDataset": 3,
-            "torch.cosine_similarity": 3,
             "torch.nonzero": 3,
-            "torch.leaky_relu": 3,
-            "torch.elu": 3,
             "torch.median": 3,
             "torch.linspace": 3,
             "torch.rot90": 3,
-            "torch.get_rank": 3,
+            "torch.AvgPool2d": 3,
             "torch.cpu": 3,
             "torch.set_num_threads": 2,
             "torch.ExceptionWrapper": 2,
-            "torch.SimpleQueue": 2,
-            "torch.Process": 2,
             "torch.pin_memory": 2,
             "torch.collate": 2,
             "torch.hub": 2,
@@ -174,46 +119,36 @@
             "torch.t": 2,
             "torch.abs": 2,
             "torch.einsum": 2,
-            "torch.Embedding": 2,
-            "torch.max_pool2d": 2,
-            "torch.normalize": 2,
-            "torch.pairwise_distance": 2,
+            "torch.normal": 2,
             "torch.sparse": 2,
             "torch.atan": 2,
             "torch.tanh": 2,
-            "torch.deterministic": 2,
-            "torch.lr_scheduler": 2,
-            "torch.InstanceNorm2d": 2,
+            "torch.Dataset": 2,
+            "torch.Adam": 2,
             "torch.finfo": 2,
             "torch.add": 2,
             "torch.MultiheadAttention": 2,
-            "torch.get_world_size": 2,
             "torch.cdist": 2,
+            "torch.AdaptiveAvgPool2d": 1,
             "torch.LSTMCell": 1,
-            "torch.gumbel_softmax": 1,
             "torch.triu_indices": 1,
-            "torch.margin_ranking_loss": 1,
-            "torch.max_pool3d": 1,
             "torch.ByteStorage": 1,
             "torch.range": 1,
-            "torch.AdaptiveAvgPool1d": 1,
             "torch.log2": 1,
             "torch.isnan": 1,
             "torch.argmin": 1,
-            "torch.load_url": 1,
             "torch.dot": 1,
-            "torch.batch_norm": 1,
-            "torch.uniform_": 1,
-            "torch.zeros_": 1,
             "torch.allclose": 1,
             "torch.rand_like": 1,
-            "torch.relu_": 1,
             "torch.arctan": 1,
             "torch.logical_and": 1,
             "torch.pow": 1,
             "torch.sparse_coo_tensor": 1,
+            "torch.DataParallel": 1,
+            "torch.CrossEntropyLoss": 1,
             "torch.log10": 1,
-            "torch.kaiming_normal": 1,
+            "torch.SGD": 1,
+            "torch.softmax": 1,
             "torch.atan2": 1,
             "torch.get_default_dtype": 1,
             "torch.broadcast_tensors": 1,
@@ -221,124 +156,27 @@
             "torch._assert": 1,
             "torch.Assert": 1,
             "torch.addcmul": 1,
-            "torch.conv2d": 1,
             "torch.broadcast_to": 1,
             "torch.svd": 1,
             "torch.IntTensor": 1,
             "torch.int": 1,
-            "torch.multi_head_attention_forward": 1,
-            "torch.binary_cross_entropy_with_logits": 1,
+            "torch.Embedding": 1,
+            "torch.Conv1d": 1,
             "torch.float64": 1,
             "torch.int32": 1,
-            "torch.Insta": 1,
+            "torch.GELU": 1,
             "torch.Size": 1,
             "torch.roll": 1,
             "torch.tile": 1,
-            "torch.parallel": 1,
-            "torch.split": 1,
-            "torch.SyncBatchNorm": 1
+            "torch.split": 1
         }
     },
     "numpy": {
         "count": 189,
         "methods": {
-            "numpy.array": 184,
-            "numpy.random": 138,
-            "numpy.mean": 94,
-            "numpy.sum": 91,
-            "numpy.zeros": 68,
-            "numpy.uint8": 44,
-            "numpy.concatenate": 43,
-            "numpy.isnan": 40,
-            "numpy.float32": 35,
-            "numpy.argmax": 33,
-            "numpy.arange": 32,
-            "numpy.unique": 27,
-            "numpy.asarray": 22,
-            "numpy.load": 22,
-            "numpy.log2": 20,
-            "numpy.std": 18,
-            "numpy.save": 18,
-            "numpy.transpose": 17,
-            "numpy.sqrt": 17,
-            "numpy.loadtxt": 17,
-            "numpy.ones": 16,
-            "numpy.pi": 15,
-            "numpy.sort": 13,
-            "numpy.max": 11,
-            "numpy.linspace": 10,
-            "numpy.ceil": 10,
-            "numpy.equal": 10,
-            "numpy.ndarray": 9,
-            "numpy.zeros_like": 9,
-            "numpy.squeeze": 8,
-            "numpy.argsort": 8,
-            "numpy.hstack": 7,
-            "numpy.where": 7,
-            "numpy.rint": 7,
-            "numpy.rot90": 6,
-            "numpy.clip": 6,
-            "numpy.int32": 6,
-            "numpy.all": 6,
-            "numpy.cos": 6,
-            "numpy.expand_dims": 5,
-            "numpy.reshape": 5,
-            "numpy.exp": 5,
-            "numpy.log": 5,
-            "numpy.float": 5,
-            "numpy.average": 5,
-            "numpy.aload": 5,
-            "numpy.int": 5,
-            "numpy.median": 5,
-            "numpy.vstack": 4,
-            "numpy.flipud": 4,
-            "numpy.savetxt": 4,
-            "numpy.savez": 4,
-            "numpy.inf": 4,
-            "numpy.append": 4,
-            "numpy.newaxis": 4,
-            "numpy.broadcast_to": 4,
-            "numpy.sin": 4,
-            "numpy.abs": 3,
-            "numpy.min": 3,
-            "numpy.maximum": 3,
-            "numpy.randint": 3,
-            "numpy.power": 3,
-            "numpy.isinf": 3,
-            "numpy.dstack": 3,
-            "numpy.ix_": 3,
-            "numpy.isrealobj": 3,
-            "numpy.iscomplexobj": 3,
-            "numpy.outer": 3,
-            "numpy.argwhere": 3,
-            "numpy.float64": 2,
-            "numpy.moveaxis": 2,
-            "numpy.mgrid": 2,
-            "numpy.multiply": 2,
-            "numpy.floating": 2,
-            "numpy.nan_to_num": 2,
-            "numpy.prod": 2,
-            "numpy.linalg": 2,
-            "numpy.minimum": 2,
-            "numpy.nonzero": 2,
-            "numpy.stack": 2,
-            "numpy.dtype": 2,
-            "numpy.integer": 2,
-            "numpy.hypot": 2,
-            "numpy.meshgrid": 2,
-            "numpy.kaiser": 2,
-            "numpy.any": 2,
-            "numpy.isin": 2,
-            "numpy.cumsum": 2,
-            "numpy.bool": 1,
-            "numpy.pad": 1,
-            "numpy.count_nonzero": 1,
-            "numpy.nanmean": 1,
-            "numpy.seterr": 1,
-            "numpy.eye": 1,
-            "numpy.triu": 1,
-            "numpy.ones_like": 1,
-            "numpy.array_equal": 1
+            "numpy.random": 6,
+            "numpy.ndarray": 1,
+            "numpy.arange": 1
         }
     },
     "os": {
@@ -441,56 +279,37 @@
         "count": 55,
         "methods": {
             "torchvision.transforms": 66,
-            "torchvision.Compose": 45,
-            "torchvision.ToTensor": 36,
-            "torchvision.Normalize": 27,
-            "torchvision.Resize": 15,
+            "torchvision.Compose": 28,
+            "torchvision.ToTensor": 25,
+            "torchvision.Normalize": 18,
             "torchvision.utils": 13,
-            "torchvision.RandomHorizontalFlip": 12,
-            "torchvision.CenterCrop": 12,
-            "torchvision.RandomCrop": 9,
+            "torchvision.Resize": 11,
+            "torchvision.CenterCrop": 10,
             "torchvision.models": 7,
-            "torchvision.Scale": 7,
             "torchvision.CIFAR10": 7,
             "torchvision.datasets": 6,
-            "torchvision.ImageFolder": 6,
             "torchvision.SVHN": 6,
             "torchvision.CIFAR100": 6,
-            "torchvision.RandomResizedCrop": 4,
             "torchvision.MNIST": 4,
             "torchvision.FashionMNIST": 4,
             "torchvision.ConvertImageDtype": 4,
             "torchvision.PILToTensor": 2,
             "torchvision.folder": 2,
+            "torchvision.RandomResizedCrop": 2,
+            "torchvision.ImageFolder": 2,
             "torchvision.ImageNet": 2,
             "torchvision.inception_v3": 1,
             "torchvision.BICUBIC": 1,
-            "torchvision.Pad": 1,
-            "torchvision.DatasetFolder": 1
+            "torchvision.DatasetFolder": 1,
+            "torchvision.RandomHorizontalFlip": 1
         }
     },
     "matplotlib": {
         "count": 48,
         "methods": {
             "matplotlib.pyplot": 31,
-            "matplotlib.plot": 16,
-            "matplotlib.savefig": 16,
-            "matplotlib.figure": 10,
-            "matplotlib.title": 10,
-            "matplotlib.xlabel": 9,
             "matplotlib.use": 8,
-            "matplotlib.ylabel": 7,
-            "matplotlib.show": 5,
-            "matplotlib.legend": 5,
-            "matplotlib.close": 4,
-            "matplotlib.subplots": 4,
-            "matplotlib.imshow": 3,
-            "matplotlib.ylim": 2,
-            "matplotlib.rcParams": 2,
             "matplotlib.patches": 2,
-            "matplotlib.subplot": 2,
-            "matplotlib.imsave": 2,
-            "matplotlib.style": 1,
             "matplotlib.cm": 1,
             "matplotlib._png": 1,
             "matplotlib.cbook": 1
@@ -616,23 +435,7 @@
             "thumt.data": 9,
             "thumt.models": 7,
             "thumt.layers": 6,
-            "thumt.load_vocabulary": 3,
-            "thumt.process_vocabulary": 3,
-            "thumt.get_control_mapping": 3,
-            "thumt.get_model": 3,
-            "thumt.read_eval_input_file": 3,
-            "thumt.get_predict_input": 3,
-            "thumt.create_predict_graph": 3,
-            "thumt.interface": 3,
-            "thumt.cache_features": 2,
-            "thumt.create_train_op": 2,
-            "thumt.EvaluationHook": 2,
-            "thumt.nn": 2,
-            "thumt.SEMEVALModel": 2,
-            "thumt.get_final_training_input": 1,
-            "thumt.data_parallelism": 1,
-            "thumt.get_training_input": 1,
-            "thumt.parallel_model": 1
+            "thumt.interface": 3
         }
     },
     "json": {
@@ -649,20 +452,13 @@
         "count": 34,
         "methods": {
             "scipy.sparse": 12,
-            "scipy.csr_matrix": 12,
             "scipy.signal": 7,
-            "scipy.eye": 6,
             "scipy.stats": 6,
             "scipy.io": 5,
             "scipy.ndimage": 5,
-            "scipy.coo_matrix": 3,
-            "scipy.diags": 3,
-            "scipy.vstack": 2,
-            "scipy.hstack": 2,
             "scipy.fft": 2,
             "scipy.optimize": 2,
             "scipy.special": 2,
-            "scipy.zoom": 2,
             "scipy.interpolate": 1,
             "scipy.misc": 1,
             "scipy.fit": 1
@@ -671,8 +467,8 @@
     "pickle": {
         "count": 33,
         "methods": {
-            "pickle.load": 23,
             "pickle.dump": 21,
+            "pickle.load": 17,
             "pickle.HIGHEST_PROTOCOL": 2
         }
     },
@@ -686,12 +482,7 @@
     "pandas": {
         "count": 31,
         "methods": {
-            "pandas.DataFrame": 108,
-            "pandas.read_csv": 80,
-            "pandas.concat": 2,
-            "pandas.set_option": 1,
-            "pandas.isna": 1,
-            "pandas.read_pickle": 1
+            "pandas.read_csv": 8
         }
     },
     "PIL": {
@@ -750,8 +541,7 @@
             "collections.namedtuple": 5,
             "collections.OrderedDict": 2,
             "collections.Counter": 1,
-            "collections.abc": 1,
-            "collections.Iterable": 1
+            "collections.abc": 1
         }
     },
     "warnings": {
@@ -790,104 +580,7 @@
     "tensorflow": {
         "count": 22,
         "methods": {
-            "tensorflow.logging": 47,
-            "tensorflow.gfile": 45,
-            "tensorflow.train": 43,
-            "tensorflow.shape": 31,
-            "tensorflow.get_variable": 25,
-            "tensorflow.nn": 23,
-            "tensorflow.contrib": 21,
-            "tensorflow.reshape": 18,
-            "tensorflow.to_int32": 17,
-            "tensorflow.expand_dims": 17,
-            "tensorflow.variable_scope": 15,
-            "tensorflow.placeholder": 12,
-            "tensorflow.data": 12,
-            "tensorflow.to_float": 11,
-            "tensorflow.int32": 11,
-            "tensorflow.matmul": 11,
-            "tensorflow.device": 9,
-            "tensorflow.name_scope": 9,
-            "tensorflow.string_split": 9,
-            "tensorflow.concat": 9,
-            "tensorflow.trainable_variables": 8,
-            "tensorflow.group": 7,
-            "tensorflow.summary": 7,
-            "tensorflow.reduce_mean": 7,
-            "tensorflow.OptimizerOptions": 6,
-            "tensorflow.convert_to_tensor": 6,
-            "tensorflow.float32": 6,
-            "tensorflow.reduce_sum": 6,
-            "tensorflow.constant_initializer": 6,
-            "tensorflow.no_op": 5,
-            "tensorflow.Graph": 5,
-            "tensorflow.string_to_number": 5,
-            "tensorflow.constant": 5,
-            "tensorflow.squeeze": 5,
-            "tensorflow.tile": 5,
-            "tensorflow.multiply": 5,
-            "tensorflow.variance_scaling_initializer": 4,
-            "tensorflow.assign": 4,
-            "tensorflow.split": 4,
-            "tensorflow.range": 4,
-            "tensorflow.tanh": 4,
-            "tensorflow.Variable": 4,
-            "tensorflow.GraphOptions": 3,
-            "tensorflow.ConfigProto": 3,
-            "tensorflow.GraphKeys": 3,
-            "tensorflow.Session": 3,
-            "tensorflow.Dimension": 3,
-            "tensorflow.transpose": 3,
-            "tensorflow.matrix_band_part": 3,
-            "tensorflow.ones": 3,
-            "tensorflow.log": 3,
-            "tensorflow.int64": 3,
-            "tensorflow.zeros": 3,
-            "tensorflow.random_uniform_initializer": 2,
-            "tensorflow.random_normal_initializer": 2,
-            "tensorflow.minimum": 2,
-            "tensorflow.losses": 2,
-            "tensorflow.add_to_collection": 2,
-            "tensorflow.add_n": 2,
-            "tensorflow.pad": 2,
-            "tensorflow.mod": 2,
-            "tensorflow.cast": 2,
-            "tensorflow.get_variable_scope": 2,
-            "tensorflow.reduce_max": 2,
-            "tensorflow.square": 2,
-            "tensorflow.sequence_mask": 2,
-            "tensorflow.global_variables_initializer": 2,
-            "tensorflow.app": 2,
-            "tensorflow.python_io": 2,
-            "tensorflow.assign_add": 2,
-            "tensorflow.global_norm": 2,
-            "tensorflow.random": 2,
-            "tensorflow.tables_initializer": 1,
-            "tensorflow.errors": 1,
-            "tensorflow.FIFOQueue": 1,
-            "tensorflow.maximum": 1,
-            "tensorflow.exp": 1,
-            "tensorflow.sin": 1,
-            "tensorflow.cos": 1,
-            "tensorflow.abs": 1,
-            "tensorflow.where": 1,
-            "tensorflow.pow": 1,
-            "tensorflow.ones_initializer": 1,
-            "tensorflow.zeros_initializer": 1,
-            "tensorflow.rsqrt": 1,
-            "tensorflow.one_hot": 1,
-            "tensorflow.global_variables": 1,
-            "tensorflow.Record": 1,
-            "tensorflow.TensorShape": 1,
-            "tensorflow.stack": 1,
-            "tensorflow.gather_nd": 1,
-            "tensorflow.get_collection": 1,
-            "tensorflow.python": 1,
-            "tensorflow.argmax": 1,
-            "tensorflow.Tensor": 1,
-            "tensorflow.scatter_add": 1,
-            "tensorflow.IndexedSlices": 1,
-            "tensorflow.clip_by_global_norm": 1
+            "tensorflow.python": 1
         }
     },
     "re": {
@@ -1037,8 +730,7 @@
             "basic_tools.start": 4,
             "basic_tools.checkpoint": 4,
             "basic_tools.utils": 3,
-            "basic_tools.logger": 1,
-            "basic_tools.set_all_seeds": 1
+            "basic_tools.logger": 1
         }
     },
     "diffusers": {
@@ -1086,8 +778,7 @@
         "count": 9,
         "methods": {
             "pytorch_lightning.callbacks": 3,
-            "pytorch_lightning.loggers": 2,
-            "pytorch_lightning.LightningModule": 1
+            "pytorch_lightning.loggers": 2
         }
     },
     "model": {
@@ -1139,29 +830,10 @@
         "count": 7,
         "methods": {
             "theano.shared": 12,
-            "theano.nnet": 10,
-            "theano.batched_dot": 7,
-            "theano.concatenate": 5,
             "theano.tensor": 4,
-            "theano.fmatrix": 4,
-            "theano.dot": 3,
-            "theano.tanh": 3,
-            "theano.switch": 3,
-            "theano.eq": 3,
             "theano.function": 3,
-            "theano.zeros_like": 2,
-            "theano.stack": 2,
-            "theano.imatrix": 2,
-            "theano.cast": 2,
-            "theano.grad": 2,
-            "theano.sqrt": 2,
             "theano.sandbox": 1,
-            "theano.scan": 1,
-            "theano.tile": 1,
-            "theano.ivector": 1,
-            "theano.iscalar": 1,
-            "theano.argmax": 1,
-            "theano.constant": 1
+            "theano.scan": 1
         }
     },
     "pathlib": {
@@ -1291,8 +963,7 @@
         "count": 5,
         "methods": {
             "urllib.request": 3,
-            "urllib.parse": 2,
-            "urllib.urljoin": 2
+            "urllib.parse": 2
         }
     },
     "training": {
@@ -1366,9 +1037,7 @@
     "autolens": {
         "count": 4,
         "methods": {
-            "autolens.plot": 2,
-            "autolens.Imaging": 2,
-            "autolens.ImagingPlotter": 2
+            "autolens.plot": 2
         }
     },
     "codecs": {
@@ -1622,9 +1291,7 @@
     },
     "seaborn": {
         "count": 2,
-        "methods": {
-            "seaborn.heatmap": 3
-        }
+        "methods": {}
     },
     "postprocess": {
         "count": 2,
@@ -1666,9 +1333,7 @@
     },
     "nibabel": {
         "count": 2,
-        "methods": {
-            "nibabel.load": 1
-        }
+        "methods": {}
     },
     "solver": {
         "count": 2,
@@ -1678,27 +1343,12 @@
     },
     "regex": {
         "count": 2,
-        "methods": {
-            "regex.sub": 3,
-            "regex.compile": 2,
-            "regex.IGNORECASE": 1,
-            "regex.findall": 1,
-            "regex.UNICODE": 1,
-            "regex.MULTILINE": 1,
-            "regex.DOTALL": 1
-        }
+        "methods": {}
     },
     "tkinter": {
         "count": 2,
         "methods": {
-            "tkinter.Button": 3,
-            "tkinter.END": 2,
-            "tkinter.askopenfilename": 1,
-            "tkinter.Tk": 1,
-            "tkinter.StringVar": 1,
-            "tkinter.Label": 1,
-            "tkinter.Text": 1,
-            "tkinter.WORD": 1
+            "tkinter.askopenfilename": 1
         }
     },
     "open_clip": {
@@ -1759,11 +1409,7 @@
     },
     "utils_edc": {
         "count": 2,
-        "methods": {
-            "utils_edc.py": 1,
-            "utils_edc.ColorJitter": 1,
-            "utils_edc.Lighting": 1
-        }
+        "methods": {}
     },
     "data_edc": {
         "count": 2,
@@ -1805,9 +1451,7 @@
     },
     "Model_DiscSeg": {
         "count": 1,
-        "methods": {
-            "Model_DiscSeg.DeepModel": 1
-        }
+        "methods": {}
     },
     "utils_Mnet": {
         "count": 1,
@@ -1815,10 +1459,7 @@
     },
     "vplot": {
         "count": 1,
-        "methods": {
-            "vplot.colors": 12,
-            "vplot.GetOutput": 1
-        }
+        "methods": {}
     },
     "signal": {
         "count": 1,
@@ -1855,11 +1496,7 @@
     },
     "casadi": {
         "count": 1,
-        "methods": {
-            "casadi.SX": 4,
-            "casadi.Function": 2,
-            "casadi.vertcat": 1
-        }
+        "methods": {}
     },
     "casadi_generator": {
         "count": 1,
@@ -1999,9 +1636,7 @@
     },
     "netCDF4": {
         "count": 1,
-        "methods": {
-            "netCDF4.Dataset": 9
-        }
+        "methods": {}
     },
     "ctypes": {
         "count": 1,
@@ -2040,15 +1675,7 @@
     "jax": {
         "count": 1,
         "methods": {
-            "jax.abs": 7,
-            "jax.arange": 3,
-            "jax.mean": 3,
-            "jax.sum": 2,
-            "jax.zeros": 2,
-            "jax.numpy": 1,
-            "jax.fft": 1,
-            "jax.meshgrid": 1,
-            "jax.maximum": 1
+            "jax.numpy": 1
         }
     },
     "loguru": {
@@ -2069,9 +1696,7 @@
     },
     "SimpleITK": {
         "count": 1,
-        "methods": {
-            "SimpleITK.ReadTransform": 1
-        }
+        "methods": {}
     },
     "openslide": {
         "count": 1,
@@ -2108,7 +1733,6 @@
     "fvcore": {
         "count": 1,
         "methods": {
-            "fvcore.c2_xavier_fill": 3,
             "fvcore.nn": 1
         }
     },
@@ -2212,9 +1836,7 @@
     },
     "intel_extension_for_pytorch": {
         "count": 1,
-        "methods": {
-            "intel_extension_for_pytorch.optimize": 8
-        }
+        "methods": {}
     },
     "packaging": {
         "count": 1,
@@ -2240,9 +1862,7 @@
     },
     "kornia": {
         "count": 1,
-        "methods": {
-            "kornia.enhance": 1
-        }
+        "methods": {}
     },
     "enum": {
         "count": 1,

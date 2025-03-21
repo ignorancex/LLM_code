@@ -2,124 +2,47 @@
     "mxnet": {
         "count": 119,
         "methods": {
-            "mxnet.sym": 641,
-            "mxnet.symbol": 328,
-            "mxnet.nd": 136,
-            "mxnet.io": 37,
-            "mxnet.cpu": 37,
-            "mxnet.gpu": 20,
-            "mxnet.mod": 16,
-            "mxnet.init": 12,
-            "mxnet.ndarray": 11,
-            "mxnet.AttrScope": 11,
-            "mxnet.operator": 10,
-            "mxnet.metric": 8,
-            "mxnet.callback": 7,
             "mxnet.base": 6,
-            "mxnet.optimizer": 6,
-            "mxnet.model": 6,
-            "mxnet.module": 5,
-            "mxnet.gluon": 4,
+            "mxnet.ndarray": 4,
             "mxnet.test_utils": 3,
-            "mxnet.context": 3,
-            "mxnet.img": 3,
+            "mxnet.gluon": 3,
             "mxnet.MXSetNumOMPThreads": 2,
             "mxnet.Block": 2,
             "mxnet.Dense": 2,
-            "mxnet.rnd": 2,
-            "mxnet.lr_scheduler": 2,
+            "mxnet.sym": 2,
             "mxnet.symbol_doc": 2,
-            "mxnet.Context": 2,
-            "mxnet.Dataset": 1,
+            "mxnet.optimizer": 1,
+            "mxnet.io": 1,
             "mxnet.Embedding": 1,
-            "mxnet.save": 1,
-            "mxnet.norm": 1,
-            "mxnet.load": 1,
-            "mxnet.rnn": 1,
-            "mxnet.initializer": 1,
-            "mxnet.viz": 1,
             "mxnet.MXCVImdecode": 1,
             "mxnet.MXCVResize": 1,
             "mxnet.MXCVcopyMakeBorder": 1,
-            "mxnet.kvstore": 1,
-            "mxnet.rtc": 1,
-            "mxnet.engine": 1,
-            "mxnet.recordio": 1,
-            "mxnet.MXRecordIOReaderTell": 1,
-            "mxnet.kv": 1,
-            "mxnet.random": 1
+            "mxnet.symbol": 1,
+            "mxnet.MXRecordIOReaderTell": 1
         }
     },
     "numpy": {
         "count": 65,
         "methods": {
-            "numpy.array": 77,
-            "numpy.random": 28,
-            "numpy.zeros": 27,
-            "numpy.arange": 18,
-            "numpy.sum": 18,
-            "numpy.swapaxes": 16,
-            "numpy.where": 14,
-            "numpy.float32": 13,
             "numpy.ndarray": 12,
-            "numpy.prod": 10,
-            "numpy.ones": 10,
-            "numpy.float16": 7,
-            "numpy.asarray": 6,
-            "numpy.resize": 6,
-            "numpy.maximum": 6,
-            "numpy.vstack": 5,
-            "numpy.int32": 5,
-            "numpy.bool": 5,
-            "numpy.argsort": 5,
-            "numpy.expand_dims": 4,
-            "numpy.max": 4,
-            "numpy.uint8": 4,
-            "numpy.clip": 4,
-            "numpy.searchsorted": 4,
-            "numpy.cumsum": 4,
-            "numpy.abs": 4,
-            "numpy.argmax": 3,
-            "numpy.inf": 3,
-            "numpy.sqrt": 3,
-            "numpy.exp": 3,
-            "numpy.loadtxt": 2,
-            "numpy.savetxt": 2,
-            "numpy.ceil": 2,
-            "numpy.reshape": 2,
+            "numpy.arange": 8,
+            "numpy.random": 4,
+            "numpy.array": 4,
+            "numpy.float32": 3,
             "numpy.int": 2,
+            "numpy.zeros": 2,
+            "numpy.clip": 2,
+            "numpy.sqrt": 2,
+            "numpy.int32": 2,
+            "numpy.exp": 2,
             "numpy.log": 2,
-            "numpy.float": 2,
-            "numpy.newaxis": 2,
-            "numpy.mean": 2,
-            "numpy.bincount": 2,
-            "numpy.concatenate": 2,
-            "numpy.minimum": 2,
-            "numpy.float64": 2,
-            "numpy.lib": 2,
-            "numpy.int8": 2,
             "numpy.testing": 2,
-            "numpy.diag": 2,
-            "numpy.longlong": 2,
-            "numpy.fabs": 2,
-            "numpy.ogrid": 1,
-            "numpy.str_": 1,
-            "numpy.ravel": 1,
-            "numpy.square": 1,
-            "numpy.genfromtxt": 1,
             "numpy.empty": 1,
+            "numpy.searchsorted": 1,
+            "numpy.cumsum": 1,
+            "numpy.max": 1,
             "numpy.load": 1,
-            "numpy.all": 1,
-            "numpy.digitize": 1,
-            "numpy.sort": 1,
-            "numpy.finfo": 1,
-            "numpy.amax": 1,
-            "numpy.int64": 1,
-            "numpy.linalg": 1,
-            "numpy.percentile": 1,
-            "numpy.min": 1,
-            "numpy.any": 1,
-            "numpy.in1d": 1
+            "numpy.sum": 1
         }
     },
     "": {
@@ -158,8 +81,6 @@
             "os.curdir": 3,
             "os.getcwd": 2,
             "os.rename": 2,
-            "os.relpath": 1,
-            "os.join": 1,
             "os.environ": 1
         }
     },
@@ -341,16 +262,7 @@
     "matplotlib": {
         "count": 4,
         "methods": {
-            "matplotlib.plot": 2,
             "matplotlib.pyplot": 1,
-            "matplotlib.figure": 1,
-            "matplotlib.xlabel": 1,
-            "matplotlib.ylabel": 1,
-            "matplotlib.legend": 1,
-            "matplotlib.xticks": 1,
-            "matplotlib.yticks": 1,
-            "matplotlib.ylim": 1,
-            "matplotlib.show": 1,
             "matplotlib.ticker": 1
         }
     },
@@ -388,10 +300,9 @@
     "pickle": {
         "count": 4,
         "methods": {
-            "pickle.loads": 3,
-            "pickle.dumps": 2,
             "pickle.dump": 1,
-            "pickle.load": 1
+            "pickle.load": 1,
+            "pickle.loads": 1
         }
     },
     "stt_layer_batchnorm": {
@@ -449,35 +360,15 @@
     "xml": {
         "count": 3,
         "methods": {
-            "xml.etree": 3,
-            "xml.parse": 3
+            "xml.etree": 3
         }
     },
     "modules": {
         "count": 3,
         "methods": {
             "modules.active_cfg": 3,
-            "modules.getParameterDefs": 2,
-            "modules.getVariablesDict": 2,
-            "modules.output_file_path_be_types": 2,
-            "modules.output_file_path_frontend": 2,
             "modules.gb": 1,
-            "modules.utils": 1,
-            "modules.removeComments": 1,
-            "modules.removeStatementLabels": 1,
-            "modules.removeBlankLines": 1,
-            "modules.joinContinuedLines": 1,
-            "modules.removeLeadingTrailingBlanks": 1,
-            "modules.allSingleSpace": 1,
-            "modules.removeKeywords": 1,
-            "modules.getCodeParts": 1,
-            "modules.getFunctionReturnType": 1,
-            "modules.getFunctionArgumentNames": 1,
-            "modules.generateFrontendFunction": 1,
-            "modules.getCommonBlockDicts": 1,
-            "modules.generateTypeDeclCommonBlock": 1,
-            "modules.generateFrontendCommonBlock": 1,
-            "modules.addNamespace": 1
+            "modules.utils": 1
         }
     },
     "yt": {
@@ -550,8 +441,7 @@
     "caffe_parse": {
         "count": 2,
         "methods": {
-            "caffe_parse.caffe_pb2": 3,
-            "caffe_parse.NetParameter": 1
+            "caffe_parse.caffe_pb2": 3
         }
     },
     "array": {
@@ -613,10 +503,7 @@
     },
     "pandas": {
         "count": 1,
-        "methods": {
-            "pandas.read_csv": 2,
-            "pandas.DataFrame": 1
-        }
+        "methods": {}
     },
     "dicom": {
         "count": 1,
@@ -646,9 +533,7 @@
     },
     "model_vgg19": {
         "count": 1,
-        "methods": {
-            "model_vgg19.get_vgg_symbol": 3
-        }
+        "methods": {}
     },
     "basic": {
         "count": 1,

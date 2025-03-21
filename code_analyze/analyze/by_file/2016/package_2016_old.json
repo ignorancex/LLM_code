@@ -1,10 +1,7 @@
 {
     "numpy": {
         "count": 4,
-        "methods": {
-            "numpy.array": 1,
-            "numpy.sqrt": 1
-        }
+        "methods": {}
     },
     "modules": {
         "count": 2,
@@ -17,9 +14,7 @@
     },
     "cPickle": {
         "count": 2,
-        "methods": {
-            "cPickle.load": 26
-        }
+        "methods": {}
     },
     "pylab": {
         "count": 2,
@@ -49,14 +44,7 @@
     },
     "pyUni10": {
         "count": 1,
-        "methods": {
-            "pyUni10.Bond": 36,
-            "pyUni10.UniTensor": 23,
-            "pyUni10.BD_IN": 18,
-            "pyUni10.BD_OUT": 18,
-            "pyUni10.Matrix": 4,
-            "pyUni10.Network": 3
-        }
+        "methods": {}
     },
     "random": {
         "count": 1,
