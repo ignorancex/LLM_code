@@ -1,1 +1,0 @@
-from .fnmg_likelihood import FNMGLikelihood

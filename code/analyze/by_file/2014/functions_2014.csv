@@ -1,0 +1,17 @@
+Function Name,Frequency
+__init__,3
+addtoqueue,1
+on_created,1
+on_modified,1
+AttrDict,1
+parseopt,1
+plotchi,1
+makeplot,1
+align_yaxis,1
+recentfilemenue,1
+openuserconf,1
+updaterecentfilelist,1
+addtomenue,1
+append,1
+save,1
+openRecentFile,1

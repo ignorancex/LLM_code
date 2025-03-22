@@ -1,0 +1,2126 @@
+{
+    "mxnet": {
+        "count": 330,
+        "methods": {
+            "mxnet.test_utils": 38,
+            "mxnet.gluon": 30,
+            "mxnet.vocab": 26,
+            "mxnet.Conv2D": 25,
+            "mxnet.embedding": 24,
+            "mxnet.Dense": 23,
+            "mxnet.utils": 17,
+            "mxnet.current": 17,
+            "mxnet.ndarray": 16,
+            "mxnet.contrib": 14,
+            "mxnet.record": 13,
+            "mxnet.nn": 11,
+            "mxnet.Trainer": 11,
+            "mxnet.loss": 11,
+            "mxnet.base": 9,
+            "mxnet.data": 9,
+            "mxnet.array": 8,
+            "mxnet.Activation": 8,
+            "mxnet.Sequential": 7,
+            "mxnet.set_state": 4,
+            "mxnet.concatenate": 4,
+            "mxnet.io": 4,
+            "mxnet.MaxPool2D": 4,
+            "mxnet.default_ctx": 4,
+            "mxnet.HybridSequential": 4,
+            "mxnet.symbol": 3,
+            "mxnet.Block": 3,
+            "mxnet.random": 3,
+            "mxnet.s3": 3,
+            "mxnet.Variable": 3,
+            "mxnet.MXSetNumOMPThreads": 2,
+            "mxnet.argmax": 2,
+            "mxnet.module": 2,
+            "mxnet.model": 2,
+            "mxnet.resnet18_v1": 2,
+            "mxnet.alexnet": 2,
+            "mxnet.ImageDetIter": 2,
+            "mxnet.HybridBlock": 2,
+            "mxnet.download": 2,
+            "mxnet.load": 2,
+            "mxnet.devtype2str": 2,
+            "mxnet._BlockScope": 2,
+            "mxnet.Group": 2,
+            "mxnet.libinfo": 1,
+            "mxnet.optimizer": 1,
+            "mxnet.create": 1,
+            "mxnet.metric": 1,
+            "mxnet.set_config": 1,
+            "mxnet.dumps": 1,
+            "mxnet.backward": 1,
+            "mxnet.softmax": 1,
+            "mxnet.flip": 1,
+            "mxnet.transpose": 1,
+            "mxnet.tile": 1,
+            "mxnet.sum": 1,
+            "mxnet.dot": 1,
+            "mxnet.sqrt": 1,
+            "mxnet.mean": 1,
+            "mxnet.executor": 1,
+            "mxnet.KVStore": 1,
+            "mxnet.squeezenet1_0": 1,
+            "mxnet.densenet_161": 1,
+            "mxnet.Embedding": 1,
+            "mxnet.Dropout": 1,
+            "mxnet.to_mxnet_func": 1,
+            "mxnet.__name__": 1,
+            "mxnet.incubator": 1,
+            "mxnet.context": 1,
+            "mxnet.attribute": 1,
+            "mxnet.name": 1,
+            "mxnet.NDArray": 1,
+            "mxnet.__version__": 1,
+            "mxnet.__file__": 1
+        }
+    },
+    "": {
+        "count": 256,
+        "methods": {
+            ".HybridSequential": 28,
+            ".Conv2D": 28,
+            ".BatchNorm": 24,
+            ".Activation": 18,
+            ".data_dir": 16,
+            ".MaxPool2D": 16,
+            ".Dense": 12,
+            ".Flatten": 7,
+            ".Dropout": 7,
+            ".array": 6,
+            ".AvgPool2D": 6,
+            ".__all__": 6,
+            ".GlobalAvgPool2D": 4,
+            "._DownloadedDataset": 3,
+            ".vocab": 3,
+            ".HybridBlock": 3,
+            ".collate_tokens": 3,
+            ".imdecode": 2,
+            ".get_batch_axis": 2,
+            ".train_translation_model": 2,
+            ".MXKVStoreFree": 1,
+            ".MXKVStoreInitEx": 1,
+            ".MXKVStoreInit": 1,
+            ".MXKVStorePushEx": 1,
+            ".MXKVStorePush": 1,
+            ".MXKVStorePullWithSparseEx": 1,
+            ".MXKVStorePullWithSparse": 1,
+            ".MXKVStorePullRowSparseEx": 1,
+            ".MXKVStorePullRowSparse": 1,
+            ".MXKVStoreSetGradientCompression": 1,
+            ".MXKVStoreIsWorkerNode": 1,
+            ".MXKVStoreGetType": 1,
+            ".MXKVStoreGetRank": 1,
+            ".MXKVStoreGetGroupSize": 1,
+            ".MXKVStoreSetUpdaterEx": 1,
+            ".MXKVStoreBarrier": 1,
+            ".MXKVStoreSendCommmandToServers": 1,
+            ".MXKVStoreCreate": 1,
+            ".MXFuncDescribe": 1,
+            ".MXFuncGetInfo": 1,
+            ".MXFuncInvokeEx": 1,
+            ".MXListFunctions": 1,
+            ".Symbol": 1,
+            ".__name__": 1,
+            ".Sampler": 1,
+            ".utils": 1,
+            ".NDArray": 1,
+            ".MXIndexedRecordIO": 1,
+            ".RecordFileDataset": 1,
+            ".unpack": 1,
+            ".Dataset": 1,
+            ".imread": 1,
+            ".makedirs": 1,
+            ".MXNDArrayLoad": 1,
+            ".MXNDArrayLoadFromBuffer": 1,
+            ".MXNDArraySave": 1,
+            ".MXNDArrayFree": 1,
+            ".MXImperativeInvokeEx": 1,
+            ".MXCreateCachedOpEx": 1,
+            ".MXFreeCachedOp": 1,
+            ".MXInvokeCachedOpEx": 1,
+            ".get_scheduler": 1,
+            ".LanguagePairDataset": 1,
+            ".collate": 1,
+            ".numpy_seed": 1,
+            ".create_dummy_data": 1,
+            ".preprocess_translation_data": 1
+        }
+    },
+    "numpy": {
+        "count": 252,
+        "methods": {
+            "numpy.zeros": 16,
+            "numpy.arange": 14,
+            "numpy.empty": 7,
+            "numpy.ndarray": 6,
+            "numpy.random": 5,
+            "numpy.any": 4,
+            "numpy.asarray": 4,
+            "numpy.array": 3,
+            "numpy.testing": 3,
+            "numpy.clip": 1,
+            "numpy.argmax": 1,
+            "numpy.get_include": 1,
+            "numpy.lib": 1,
+            "numpy.float64": 1,
+            "numpy.fromfile": 1
+        }
+    },
+    "os": {
+        "count": 211,
+        "methods": {
+            "os.path": 755,
+            "os.environ": 69,
+            "os.makedirs": 36,
+            "os.listdir": 36,
+            "os.remove": 28,
+            "os.system": 24,
+            "os.getcwd": 18,
+            "os.name": 16,
+            "os.chdir": 12,
+            "os.mkdir": 11,
+            "os.walk": 8,
+            "os.WEXITSTATUS": 7,
+            "os.rename": 5,
+            "os.close": 4,
+            "os.WIFEXITED": 3,
+            "os.uname": 3,
+            "os.error": 3,
+            "os.rmdir": 2,
+            "os.getenv": 2,
+            "os.getpid": 2,
+            "os.open": 2,
+            "os.O_CREAT": 2,
+            "os.chmod": 2,
+            "os.execv": 2,
+            "os.kill": 2,
+            "os.fstat": 2,
+            "os.sep": 1,
+            "os.linesep": 1,
+            "os.removedirs": 1,
+            "os.popen": 1,
+            "os.WIFSIGNALED": 1,
+            "os.WTERMSIG": 1,
+            "os.fdopen": 1
+        }
+    },
+    "sys": {
+        "count": 157,
+        "methods": {
+            "sys.exit": 99,
+            "sys.argv": 91,
+            "sys.path": 44,
+            "sys.stderr": 44,
+            "sys.stdout": 17,
+            "sys.stdin": 12,
+            "sys.version_info": 6,
+            "sys.platform": 4,
+            "sys.exc_info": 2,
+            "sys.executable": 2,
+            "sys.modules": 1,
+            "sys.setdefaultencoding": 1,
+            "sys.maxsize": 1
+        }
+    },
+    "__future__": {
+        "count": 137,
+        "methods": {}
+    },
+    "torch": {
+        "count": 137,
+        "methods": {
+            "torch.nn": 68,
+            "torch.LongTensor": 46,
+            "torch.utils": 33,
+            "torch.FloatTensor": 25,
+            "torch.cat": 23,
+            "torch.Tensor": 19,
+            "torch.cuda": 14,
+            "torch.optim": 14,
+            "torch.mean": 12,
+            "torch.IntTensor": 11,
+            "torch.abs": 9,
+            "torch.arange": 9,
+            "torch.init": 9,
+            "torch.save": 8,
+            "torch.gather": 8,
+            "torch.autograd": 7,
+            "torch.load": 7,
+            "torch.no_grad": 6,
+            "torch.distributed": 6,
+            "torch.masked_select": 6,
+            "torch.from_numpy": 6,
+            "torch.Linear": 5,
+            "torch.max": 5,
+            "torch.sum": 5,
+            "torch.DoubleTensor": 4,
+            "torch.zeros_like": 4,
+            "torch.is_tensor": 4,
+            "torch.bmm": 4,
+            "torch.zeros": 3,
+            "torch.stack": 3,
+            "torch.index_select": 3,
+            "torch.triu": 3,
+            "torch.ModuleList": 3,
+            "torch.onnx": 3,
+            "torch.exp": 3,
+            "torch.HalfTensor": 2,
+            "torch.ByteTensor": 2,
+            "torch.device": 2,
+            "torch.parallel": 2,
+            "torch.topk": 2,
+            "torch.add": 2,
+            "torch.multinomial": 2,
+            "torch.serialization": 2,
+            "torch.remainder": 2,
+            "torch.DistributedDataParallel": 2,
+            "torch.float": 2,
+            "torch.rand": 2,
+            "torch.randn": 2,
+            "torch.median": 2,
+            "torch.matmul": 2,
+            "torch.sqrt": 2,
+            "torch.torch": 1,
+            "torch.CharTensor": 1,
+            "torch.ShortTensor": 1,
+            "torch.backends": 1,
+            "torch.unsqueeze": 1,
+            "torch.multiprocessing": 1,
+            "torch.div": 1,
+            "torch.sort": 1,
+            "torch._dim_arange": 1,
+            "torch.norm": 1,
+            "torch._DistributedDataParallelC10d": 1,
+            "torch.deprecated": 1,
+            "torch.Module": 1,
+            "torch.LogSoftmax": 1,
+            "torch.Sequential": 1,
+            "torch.Dropout": 1,
+            "torch.mm": 1,
+            "torch.Embedding": 1,
+            "torch.Parameter": 1,
+            "torch.Conv1d": 1,
+            "torch.conv_tbc": 1,
+            "torch.tril": 1,
+            "torch.ReLU": 1,
+            "torch.sin": 1,
+            "torch.cos": 1,
+            "torch.floor": 1,
+            "torch.min": 1
+        }
+    },
+    "argparse": {
+        "count": 98,
+        "methods": {
+            "argparse.ArgumentParser": 93,
+            "argparse.ArgumentDefaultsHelpFormatter": 18,
+            "argparse.Namespace": 6,
+            "argparse.ArgumentTypeError": 1,
+            "argparse.Action": 1,
+            "argparse.RawDescriptionHelpFormatter": 1
+        }
+    },
+    "logging": {
+        "count": 93,
+        "methods": {
+            "logging.info": 156,
+            "logging.basicConfig": 61,
+            "logging.DEBUG": 49,
+            "logging.INFO": 28,
+            "logging.getLogger": 25,
+            "logging.debug": 10,
+            "logging.Formatter": 8,
+            "logging.error": 8,
+            "logging.StreamHandler": 6,
+            "logging.warn": 5,
+            "logging.FileHandler": 3,
+            "logging.warning": 3,
+            "logging.handlers": 2,
+            "logging.ERROR": 1,
+            "logging.CRITICAL": 1
+        }
+    },
+    "keras": {
+        "count": 88,
+        "methods": {
+            "keras.models": 21,
+            "keras.layers": 17,
+            "keras.datasets": 12,
+            "keras.load_data": 12,
+            "keras.preprocessing": 7,
+            "keras.utils": 7,
+            "keras.optimizers": 3,
+            "keras.io": 1,
+            "keras.adam": 1,
+            "keras.losses": 1
+        }
+    },
+    "fairseq": {
+        "count": 72,
+        "methods": {
+            "fairseq.data": 27,
+            "fairseq.item": 12,
+            "fairseq.modules": 9,
+            "fairseq.parse_args_and_arch": 8,
+            "fairseq.Dictionary": 8,
+            "fairseq.models": 8,
+            "fairseq.criterions": 6,
+            "fairseq.get_incremental_state": 6,
+            "fairseq.set_incremental_state": 6,
+            "fairseq.tokenize": 5,
+            "fairseq.get_training_parser": 4,
+            "fairseq.Tokenizer": 4,
+            "fairseq.parse_embedding": 4,
+            "fairseq.load_embedding": 4,
+            "fairseq.make_positions": 4,
+            "fairseq.load_ensemble_for_inference": 3,
+            "fairseq.resolve_max_positions": 3,
+            "fairseq.tokenizer": 3,
+            "fairseq.strip_pad": 3,
+            "fairseq.tasks": 3,
+            "fairseq.print_embed_overlap": 3,
+            "fairseq.eval_str_list": 3,
+            "fairseq.eval_bool": 3,
+            "fairseq.convert_padding_direction": 3,
+            "fairseq.distributed_init": 2,
+            "fairseq.meters": 2,
+            "fairseq.sequence_scorer": 2,
+            "fairseq.setup_task": 2,
+            "fairseq.get_eval_lm_parser": 2,
+            "fairseq.sequence_generator": 2,
+            "fairseq.LanguagePairDataset": 2,
+            "fairseq.get_generation_parser": 2,
+            "fairseq.IndexedDatasetBuilder": 2,
+            "fairseq.binarize": 2,
+            "fairseq.tokenize_line": 2,
+            "fairseq.optim": 2,
+            "fairseq.is_default": 2,
+            "fairseq.fill_with_neg_inf": 2,
+            "fairseq.EpochBatchIterator": 2,
+            "fairseq.build_progress_bar": 1,
+            "fairseq.load_align_dict": 1,
+            "fairseq.post_process_prediction": 1,
+            "fairseq.add_file_to_dictionary": 1,
+            "fairseq.find_offsets": 1,
+            "fairseq.data_file_path": 1,
+            "fairseq.index_file_path": 1,
+            "fairseq.Scorer": 1,
+            "fairseq.so": 1,
+            "fairseq.__file__": 1,
+            "fairseq.Sampling": 1,
+            "fairseq.DiverseBeamSearch": 1,
+            "fairseq.BeamSearch": 1,
+            "fairseq.move_to_cuda": 1,
+            "fairseq.SequenceGenerator": 1,
+            "fairseq.distributed_utils": 1,
+            "fairseq.has_c10d": 1,
+            "fairseq.FairseqOptimizer": 1,
+            "fairseq.build_optimizer": 1,
+            "fairseq.clip_grad_norm_": 1,
+            "fairseq.iterators": 1,
+            "fairseq.numpy_seed": 1,
+            "fairseq.filter_by_size": 1,
+            "fairseq.batch_by_size": 1,
+            "fairseq.build_model": 1,
+            "fairseq.build_criterion": 1,
+            "fairseq.load": 1,
+            "fairseq.CountingIterator": 1,
+            "fairseq.TokenBlockDataset": 1
+        }
+    },
+    "tensorflow": {
+        "count": 59,
+        "methods": {
+            "tensorflow.examples": 11,
+            "tensorflow.read_data_sets": 11,
+            "tensorflow.contrib": 1
+        }
+    },
+    "time": {
+        "count": 42,
+        "methods": {
+            "time.time": 102,
+            "time.clock": 4,
+            "time.sleep": 4,
+            "time.strftime": 4,
+            "time.ctime": 3
+        }
+    },
+    "re": {
+        "count": 41,
+        "methods": {
+            "re.sub": 60,
+            "re.compile": 38,
+            "re.match": 13,
+            "re.search": 8,
+            "re.findall": 6,
+            "re.split": 4,
+            "re.DOTALL": 2,
+            "re.html": 1,
+            "re.finditer": 1
+        }
+    },
+    "math": {
+        "count": 41,
+        "methods": {
+            "math.sqrt": 23,
+            "math.fabs": 13,
+            "math.log": 12,
+            "math.ceil": 10,
+            "math.inf": 4,
+            "math.floor": 3,
+            "math.exp": 2,
+            "math.cos": 1,
+            "math.pi": 1
+        }
+    },
+    "TensorFI": {
+        "count": 34,
+        "methods": {}
+    },
+    "utils": {
+        "count": 33,
+        "methods": {
+            "utils.subtract_imagenet_mean_preprocess_batch": 4,
+            "utils.tensor_load_rgbimage": 4,
+            "utils.init_vgg_params": 2,
+            "utils.preprocess_batch": 2,
+            "utils.tensor_save_bgrimage": 2,
+            "utils.get_mnist": 2,
+            "utils.Compose": 1,
+            "utils.Scale": 1,
+            "utils.CenterCrop": 1,
+            "utils.ToTensor": 1,
+            "utils.StyleLoader": 1,
+            "utils.subtract_imagenet_mean_batch": 1,
+            "utils.imagenet_clamp_batch": 1,
+            "utils.add_imagenet_mean_batch": 1,
+            "utils.topsort": 1,
+            "utils.is_input": 1
+        }
+    },
+    "flow": {
+        "count": 33,
+        "methods": {
+            "flow.core": 16,
+            "flow.benchmarks": 9,
+            "flow.scenarios": 4,
+            "flow.get": 4,
+            "flow.controllers": 3,
+            "flow.envs": 3,
+            "flow.copy": 2,
+            "flow.utils": 2,
+            "flow.renderer": 1
+        }
+    },
+    "random": {
+        "count": 32,
+        "methods": {
+            "random.uniform": 12,
+            "random.shuffle": 10,
+            "random.random": 9,
+            "random.randint": 6,
+            "random.seed": 2,
+            "random.choices": 2,
+            "random.Random": 1,
+            "random.choice": 1,
+            "random.normal": 1,
+            "random.sample": 1
+        }
+    },
+    "collections": {
+        "count": 32,
+        "methods": {
+            "collections.Counter": 7,
+            "collections.OrderedDict": 7,
+            "collections.fromkeys": 5,
+            "collections.Iterable": 1
+        }
+    },
+    "unittest": {
+        "count": 32,
+        "methods": {
+            "unittest.TestCase": 28,
+            "unittest.main": 19,
+            "unittest.skip": 6,
+            "unittest.skipIf": 1,
+            "unittest.TestLoader": 1,
+            "unittest.TextTestRunner": 1,
+            "unittest.mock": 1,
+            "unittest.stopall": 1
+        }
+    },
+    "modules": {
+        "count": 31,
+        "methods": {
+            "modules.active_cfg": 6,
+            "modules.gb": 6,
+            "modules.utils": 5,
+            "modules.classutils": 5,
+            "modules.funcutils": 4,
+            "modules.infomsg": 4,
+            "modules.exceptions": 1
+        }
+    },
+    "common": {
+        "count": 28,
+        "methods": {
+            "common.util": 4,
+            "common.add_fit_args": 4,
+            "common.fit": 4,
+            "common.add_data_args": 3,
+            "common.add_data_aug_args": 3,
+            "common.get_rec_iter": 3,
+            "common.mxnet": 2,
+            "common.download_model": 1,
+            "common.GetSvnInfo": 1
+        }
+    },
+    "nose": {
+        "count": 24,
+        "methods": {
+            "nose.runmodule": 20,
+            "nose.tools": 4
+        }
+    },
+    "scipy": {
+        "count": 23,
+        "methods": {
+            "scipy.interpolate": 5,
+            "scipy.sparse": 3,
+            "scipy.io": 3,
+            "scipy.misc": 3,
+            "scipy.stats": 3,
+            "scipy.optimize": 3,
+            "scipy.map_coordinates": 2,
+            "scipy.integrate": 1
+        }
+    },
+    "matplotlib": {
+        "count": 23,
+        "methods": {
+            "matplotlib.pyplot": 17,
+            "matplotlib.collections": 1,
+            "matplotlib.patches": 1,
+            "matplotlib.use": 1,
+            "matplotlib.colors": 1
+        }
+    },
+    "importlib": {
+        "count": 20,
+        "methods": {
+            "importlib.import_module": 8
+        }
+    },
+    "json": {
+        "count": 20,
+        "methods": {
+            "json.loads": 9,
+            "json.load": 7,
+            "json.dumps": 6,
+            "json.dump": 2,
+            "json.decoder": 1
+        }
+    },
+    "PIL": {
+        "count": 18,
+        "methods": {
+            "PIL.open": 17,
+            "PIL.Image": 7,
+            "PIL.fromarray": 5,
+            "PIL.BICUBIC": 5,
+            "PIL.ANTIALIAS": 3,
+            "PIL.BILINEAR": 2,
+            "PIL.new": 2,
+            "PIL.TRANSPOSE": 1
+        }
+    },
+    "datetime": {
+        "count": 17,
+        "methods": {
+            "datetime.now": 18,
+            "datetime.datetime": 10,
+            "datetime.strptime": 1,
+            "datetime.timedelta": 1
+        }
+    },
+    "preprocessing": {
+        "count": 17,
+        "methods": {
+            "preprocessing.cleanDataForClassification": 17
+        }
+    },
+    "io": {
+        "count": 16,
+        "methods": {
+            "io.open": 18,
+            "io.BytesIO": 1
+        }
+    },
+    "warnings": {
+        "count": 15,
+        "methods": {
+            "warnings.warn": 22,
+            "warnings.catch_warnings": 3,
+            "warnings.simplefilter": 2
+        }
+    },
+    "data": {
+        "count": 15,
+        "methods": {
+            "data.base_dataset": 4,
+            "data.image_folder": 3,
+            "data.ImageFolder": 1,
+            "data.from_file": 1,
+            "data.base_data_loader": 1,
+            "data.initialize": 1,
+            "data.DataLoader": 1
+        }
+    },
+    "gtest_test_utils": {
+        "count": 15,
+        "methods": {
+            "gtest_test_utils.Subprocess": 25,
+            "gtest_test_utils.GetTestExecutablePath": 17,
+            "gtest_test_utils.TestCase": 14,
+            "gtest_test_utils.Main": 14,
+            "gtest_test_utils.GetTempDir": 8,
+            "gtest_test_utils.GetSourceDir": 4,
+            "gtest_test_utils.environ": 3,
+            "gtest_test_utils.SetEnvVar": 3,
+            "gtest_test_utils.PREMATURE_EXIT_FILE_ENV_VAR": 3
+        }
+    },
+    "cv2": {
+        "count": 14,
+        "methods": {
+            "cv2.resize": 12,
+            "cv2.imread": 10,
+            "cv2.INTER_LINEAR": 4,
+            "cv2.cvtColor": 3,
+            "cv2.COLOR_BGR2RGB": 3,
+            "cv2.imshow": 2,
+            "cv2.waitKey": 2,
+            "cv2.CAP_PROP_FRAME_WIDTH": 2,
+            "cv2.CAP_PROP_FRAME_HEIGHT": 2,
+            "cv2.imwrite": 2,
+            "cv2.CV_LOAD_IMAGE_COLOR": 2,
+            "cv2.applyColorMap": 1,
+            "cv2.COLORMAP_COOL": 1,
+            "cv2.imencode": 1,
+            "cv2.rectangle": 1,
+            "cv2.putText": 1,
+            "cv2.FONT_HERSHEY_COMPLEX_SMALL": 1,
+            "cv2.VideoCapture": 1,
+            "cv2.IMREAD_GRAYSCALE": 1,
+            "cv2.INTER_CUBIC": 1
+        }
+    },
+    "subprocess": {
+        "count": 12,
+        "methods": {
+            "subprocess.PIPE": 9,
+            "subprocess.Popen": 7,
+            "subprocess.call": 3,
+            "subprocess.check_output": 2,
+            "subprocess.STDOUT": 2,
+            "subprocess.check_call": 1,
+            "subprocess.CalledProcessError": 1
+        }
+    },
+    "itertools": {
+        "count": 12,
+        "methods": {
+            "itertools.chain": 2,
+            "itertools.islice": 2,
+            "itertools.count": 2,
+            "itertools.product": 1,
+            "itertools.zip_longest": 1
+        }
+    },
+    "ctypes": {
+        "count": 11,
+        "methods": {
+            "ctypes.byref": 46,
+            "ctypes.c_int": 30,
+            "ctypes.c_char_p": 18,
+            "ctypes.POINTER": 17,
+            "ctypes.c_size_t": 12,
+            "ctypes.c_void_p": 8,
+            "ctypes.cast": 6,
+            "ctypes.cdll": 2,
+            "ctypes.c_uint": 2,
+            "ctypes.c_char": 2,
+            "ctypes.c_bool": 2,
+            "ctypes.CFUNCTYPE": 2,
+            "ctypes.c_float": 1,
+            "ctypes.addressof": 1,
+            "ctypes.CDLL": 1,
+            "ctypes.RTLD_GLOBAL": 1,
+            "ctypes.util": 1,
+            "ctypes.Structure": 1
+        }
+    },
+    "multiprocessing": {
+        "count": 11,
+        "methods": {
+            "multiprocessing.pool": 2,
+            "multiprocessing.Queue": 2,
+            "multiprocessing.Process": 2,
+            "multiprocessing.cpu_count": 1,
+            "multiprocessing.Lock": 1
+        }
+    },
+    "model": {
+        "count": 11,
+        "methods": {
+            "model.state_names": 2,
+            "model.sample_names": 2,
+            "model.initialization": 2,
+            "model.get_net": 1,
+            "model.train": 1,
+            "model.eval": 1,
+            "model.lstm_args": 1,
+            "model.batch_fit": 1,
+            "model.predict": 1,
+            "model.utils": 1
+        }
+    },
+    "lib": {
+        "count": 11,
+        "methods": {
+            "lib.readTFRecord": 3,
+            "lib.ops": 3,
+            "lib.model": 2,
+            "lib.defaultFlags": 1,
+            "lib.TEResNet": 1,
+            "lib.TEGAN": 1
+        }
+    },
+    "shutil": {
+        "count": 10,
+        "methods": {
+            "shutil.copy": 8,
+            "shutil.rmtree": 5,
+            "shutil.move": 3,
+            "shutil.copyfileobj": 2,
+            "shutil.copytree": 1,
+            "shutil.copyfile": 1
+        }
+    },
+    "pickle": {
+        "count": 10,
+        "methods": {
+            "pickle.dump": 4,
+            "pickle.load": 3,
+            "pickle.HIGHEST_PROTOCOL": 3,
+            "pickle.dumps": 3,
+            "pickle.loads": 2
+        }
+    },
+    "copy": {
+        "count": 10,
+        "methods": {
+            "copy.deepcopy": 8,
+            "copy.copy": 3
+        }
+    },
+    "tempfile": {
+        "count": 10,
+        "methods": {
+            "tempfile.TemporaryDirectory": 13,
+            "tempfile.mkdtemp": 5,
+            "tempfile.mktemp": 4,
+            "tempfile.mkstemp": 2,
+            "tempfile.NamedTemporaryFile": 1
+        }
+    },
+    "urllib": {
+        "count": 9,
+        "methods": {
+            "urllib.urlencode": 6,
+            "urllib.request": 2,
+            "urllib.splituser": 2,
+            "urllib.urlretrieve": 1,
+            "urllib.parse": 1
+        }
+    },
+    "cpp": {
+        "count": 9,
+        "methods": {
+            "cpp.SYNTAX": 41,
+            "cpp.NAME": 23,
+            "cpp.Token": 7,
+            "cpp.IsKeyword": 5,
+            "cpp.WHENCE_QUEUE": 4,
+            "cpp.ReadFile": 4,
+            "cpp.DEBUG": 3,
+            "cpp.BuilderFromSource": 3,
+            "cpp.__doc__": 2,
+            "cpp.PREPROCESSOR": 2,
+            "cpp.WHENCE_STREAM": 2,
+            "cpp.py": 1,
+            "cpp.main": 1,
+            "cpp.IsBuiltinType": 1,
+            "cpp.CONSTANT": 1,
+            "cpp.GetTokens": 1,
+            "cpp.FUNCTION_VIRTUAL": 1,
+            "cpp.FUNCTION_PURE_VIRTUAL": 1,
+            "cpp.FUNCTION_OVERRIDE": 1,
+            "cpp.FUNCTION_CTOR": 1,
+            "cpp.FUNCTION_DTOR": 1,
+            "cpp.Function": 1,
+            "cpp.FUNCTION_CONST": 1,
+            "cpp.Class": 1,
+            "cpp._GenerateMethods": 1,
+            "cpp._GenerateMocks": 1
+        }
+    },
+    "pandas": {
+        "count": 8,
+        "methods": {
+            "pandas.DataFrame": 3
+        }
+    },
+    "dataset": {
+        "count": 8,
+        "methods": {
+            "dataset.pickle": 3,
+            "dataset.iterator": 2,
+            "dataset.cv2Iterator": 1,
+            "dataset.testdb": 1,
+            "dataset.pascal_voc": 1,
+            "dataset.mscoco": 1,
+            "dataset.concat_db": 1
+        }
+    },
+    "dmlc_tracker": {
+        "count": 7,
+        "methods": {
+            "dmlc_tracker.submit": 6,
+            "dmlc_tracker.get_opts": 1
+        }
+    },
+    "rllab": {
+        "count": 7,
+        "methods": {
+            "rllab.misc": 2,
+            "rllab.envs": 2,
+            "rllab.algos": 1,
+            "rllab.baselines": 1,
+            "rllab.policies": 1
+        }
+    },
+    "symbol": {
+        "count": 7,
+        "methods": {
+            "symbol.symbol_factory": 5,
+            "symbol.json": 2
+        }
+    },
+    "glob": {
+        "count": 7,
+        "methods": {
+            "glob.glob": 18
+        }
+    },
+    "torchvision": {
+        "count": 7,
+        "methods": {
+            "torchvision.Compose": 4,
+            "torchvision.Resize": 4,
+            "torchvision.ToTensor": 4,
+            "torchvision.ImageFolder": 4,
+            "torchvision.transforms": 2,
+            "torchvision.models": 2,
+            "torchvision.RandomCrop": 2,
+            "torchvision.RandomHorizontalFlip": 2
+        }
+    },
+    "sherpa": {
+        "count": 7,
+        "methods": {
+            "sherpa.algorithms": 5,
+            "sherpa.schedulers": 4,
+            "sherpa.Client": 3,
+            "sherpa.Continuous": 3,
+            "sherpa.optimize": 2,
+            "sherpa.Choice": 2,
+            "sherpa.Parameter": 1,
+            "sherpa.Ordinal": 1
+        }
+    },
+    "requests": {
+        "count": 6,
+        "methods": {
+            "requests.get": 5,
+            "requests.Response": 1,
+            "requests.exceptions": 1
+        }
+    },
+    "zipfile": {
+        "count": 6,
+        "methods": {
+            "zipfile.ZipFile": 8
+        }
+    },
+    "sklearn": {
+        "count": 6,
+        "methods": {
+            "sklearn.cross_validation": 1,
+            "sklearn.utils": 1,
+            "sklearn.datasets": 1,
+            "sklearn.model_selection": 1,
+            "sklearn.preprocessing": 1,
+            "sklearn.pipeline": 1
+        }
+    },
+    "threading": {
+        "count": 6,
+        "methods": {
+            "threading.Thread": 10,
+            "threading.Event": 4,
+            "threading.local": 2
+        }
+    },
+    "traceback": {
+        "count": 6,
+        "methods": {
+            "traceback.print_exc": 5,
+            "traceback.format_exc": 3
+        }
+    },
+    "ray": {
+        "count": 6,
+        "methods": {
+            "ray.tune": 2,
+            "ray.init": 2,
+            "ray.rllib": 2,
+            "ray.remote": 1,
+            "ray.get": 1
+        }
+    },
+    "sets": {
+        "count": 6,
+        "methods": {
+            "sets.Set": 3
+        }
+    },
+    "cplex": {
+        "count": 6,
+        "methods": {
+            "cplex.infinity": 54,
+            "cplex.Cplex": 6
+        }
+    },
+    "yt": {
+        "count": 6,
+        "methods": {
+            "yt.load": 4,
+            "yt.SlicePlot": 3,
+            "yt.units": 2
+        }
+    },
+    "setuptools": {
+        "count": 5,
+        "methods": {}
+    },
+    "tarfile": {
+        "count": 5,
+        "methods": {
+            "tarfile.open": 4
+        }
+    },
+    "builtins": {
+        "count": 5,
+        "methods": {}
+    },
+    "xml": {
+        "count": 5,
+        "methods": {
+            "xml.CDATA_SECTION_NODE": 5,
+            "xml.ELEMENT_NODE": 4,
+            "xml.dom": 3,
+            "xml.parse": 3,
+            "xml.etree": 2,
+            "xml.parseString": 2,
+            "xml.TEXT_NODE": 1
+        }
+    },
+    "log_util": {
+        "count": 5,
+        "methods": {
+            "log_util.getInstance": 5
+        }
+    },
+    "train": {
+        "count": 5,
+        "methods": {
+            "train.load_checkpoint": 3,
+            "train.out": 2,
+            "train.main": 2,
+            "train.in": 1
+        }
+    },
+    "skimage": {
+        "count": 5,
+        "methods": {
+            "skimage.io": 5,
+            "skimage.transform": 2,
+            "skimage.resize": 1
+        }
+    },
+    "onnx": {
+        "count": 5,
+        "methods": {
+            "onnx.NP_TYPE_TO_TENSOR_TYPE": 3,
+            "onnx.backend": 2,
+            "onnx.make_model": 1,
+            "onnx.load_model": 1
+        }
+    },
+    "h5py": {
+        "count": 5,
+        "methods": {
+            "h5py.Dataset": 5,
+            "h5py.File": 3
+        }
+    },
+    "tests": {
+        "count": 5,
+        "methods": {
+            "tests.utils": 4,
+            "tests.setup_scripts": 1
+        }
+    },
+    "graphpipe": {
+        "count": 4,
+        "methods": {
+            "graphpipe.execute": 3
+        }
+    },
+    "errno": {
+        "count": 4,
+        "methods": {
+            "errno.EEXIST": 1,
+            "errno.ENOENT": 1
+        }
+    },
+    "csv": {
+        "count": 4,
+        "methods": {
+            "csv.writer": 3,
+            "csv.reader": 2,
+            "csv.field_size_limit": 1,
+            "csv.DictReader": 1
+        }
+    },
+    "symdata": {
+        "count": 4,
+        "methods": {
+            "symdata.bbox": 2,
+            "symdata.anchor": 1,
+            "symdata.image": 1
+        }
+    },
+    "signal": {
+        "count": 4,
+        "methods": {
+            "signal.signal": 3,
+            "signal.SIGINT": 3,
+            "signal.SIGUSR1": 2
+        }
+    },
+    "straight_dope_test_utils": {
+        "count": 4,
+        "methods": {}
+    },
+    "socket": {
+        "count": 4,
+        "methods": {
+            "socket.setdefaulttimeout": 5,
+            "socket.getdefaulttimeout": 2,
+            "socket.gethostbyname": 1,
+            "socket.gethostname": 1
+        }
+    },
+    "six": {
+        "count": 4,
+        "methods": {
+            "six.moves": 4
+        }
+    },
+    "contextlib": {
+        "count": 4,
+        "methods": {
+            "contextlib.redirect_stdout": 17,
+            "contextlib.contextmanager": 1
+        }
+    },
+    "hitDataTools": {
+        "count": 4,
+        "methods": {}
+    },
+    "advbox": {
+        "count": 3,
+        "methods": {
+            "advbox.adversary": 1,
+            "advbox.attacks": 1,
+            "advbox.models": 1
+        }
+    },
+    "util": {
+        "count": 3,
+        "methods": {
+            "util.visualizer": 1
+        }
+    },
+    "gym": {
+        "count": 3,
+        "methods": {
+            "gym.make": 2
+        }
+    },
+    "librosa": {
+        "count": 3,
+        "methods": {
+            "librosa.feature": 4,
+            "librosa.load": 2,
+            "librosa.github": 1
+        }
+    },
+    "tqdm": {
+        "count": 3,
+        "methods": {}
+    },
+    "gzip": {
+        "count": 3,
+        "methods": {
+            "gzip.open": 4
+        }
+    },
+    "symnet": {
+        "count": 3,
+        "methods": {
+            "symnet.info": 17,
+            "symnet.logger": 3
+        }
+    },
+    "flask": {
+        "count": 3,
+        "methods": {
+            "flask.__init__": 1
+        }
+    },
+    "binary_rbm": {
+        "count": 3,
+        "methods": {
+            "binary_rbm.estimate_log_likelihood": 2
+        }
+    },
+    "bucket_io": {
+        "count": 3,
+        "methods": {}
+    },
+    "config_util": {
+        "count": 3,
+        "methods": {}
+    },
+    "label_util": {
+        "count": 3,
+        "methods": {
+            "label_util.getInstance": 4
+        }
+    },
+    "tools": {
+        "count": 3,
+        "methods": {
+            "tools.find_mxnet": 3
+        }
+    },
+    "evaluate": {
+        "count": 3,
+        "methods": {
+            "evaluate.evaluate_net": 1,
+            "evaluate.eval_metric": 1
+        }
+    },
+    "config": {
+        "count": 3,
+        "methods": {
+            "config.config": 1,
+            "config.valid": 1
+        }
+    },
+    "caffe": {
+        "count": 3,
+        "methods": {
+            "caffe.set_mode_cpu": 2,
+            "caffe.Net": 2,
+            "caffe.TEST": 2,
+            "caffe.proto": 2,
+            "caffe.__path__": 1
+        }
+    },
+    "struct": {
+        "count": 3,
+        "methods": {
+            "struct.unpack": 5,
+            "struct.pack": 3
+        }
+    },
+    "models": {
+        "count": 3,
+        "methods": {
+            "models.base_model": 1
+        }
+    },
+    "string": {
+        "count": 3,
+        "methods": {
+            "string.ascii_uppercase": 1,
+            "string.digits": 1
+        }
+    },
+    "urlparse": {
+        "count": 3,
+        "methods": {
+            "urlparse.urlunparse": 4,
+            "urlparse.urlparse": 2
+        }
+    },
+    "urllib2": {
+        "count": 3,
+        "methods": {
+            "urllib2.HTTPError": 12,
+            "urllib2.OpenerDirector": 6,
+            "urllib2.Request": 2,
+            "urllib2.ProxyHandler": 2,
+            "urllib2.UnknownHandler": 2,
+            "urllib2.HTTPHandler": 2,
+            "urllib2.HTTPDefaultErrorHandler": 2,
+            "urllib2.HTTPSHandler": 2,
+            "urllib2.HTTPErrorProcessor": 2,
+            "urllib2.HTTPCookieProcessor": 2
+        }
+    },
+    "caffe_parser": {
+        "count": 3,
+        "methods": {
+            "caffe_parser.get_layers": 2,
+            "caffe_parser.read_prototxt": 2,
+            "caffe_parser.caffe_pb2": 1,
+            "caffe_parser.read_caffemodel": 1,
+            "caffe_parser.layer_iter": 1
+        }
+    },
+    "__builtin__": {
+        "count": 3,
+        "methods": {}
+    },
+    "codecs": {
+        "count": 2,
+        "methods": {
+            "codecs.open": 2,
+            "codecs.StreamReaderWriter": 1,
+            "codecs.getreader": 1,
+            "codecs.getwriter": 1
+        }
+    },
+    "cpplint": {
+        "count": 2,
+        "methods": {
+            "cpplint.ParseArguments": 1,
+            "cpplint._SetFilters": 1,
+            "cpplint._SetCountingStyle": 1,
+            "cpplint._line_length": 1,
+            "cpplint.ResetErrorCounts": 1,
+            "cpplint.ProcessFile": 1,
+            "cpplint.verbose_level": 1,
+            "cpplint.PrintErrorCounts": 1,
+            "cpplint.errors_by_category": 1,
+            "cpplint.FileInfo": 1,
+            "cpplint.GetHeaderGuardCPPVariable": 1
+        }
+    },
+    "bs4": {
+        "count": 2,
+        "methods": {}
+    },
+    "transforms": {
+        "count": 2,
+        "methods": {}
+    },
+    "numbers": {
+        "count": 2,
+        "methods": {
+            "numbers.Number": 1
+        }
+    },
+    "cPickle": {
+        "count": 2,
+        "methods": {}
+    },
+    "metrics": {
+        "count": 2,
+        "methods": {
+            "metrics.evaluate": 2,
+            "metrics.composite_classifier_metrics": 1
+        }
+    },
+    "bisect": {
+        "count": 2,
+        "methods": {
+            "bisect.bisect_left": 4
+        }
+    },
+    "pycocotools": {
+        "count": 2,
+        "methods": {
+            "pycocotools.coco": 1,
+            "pycocotools.cocoeval": 1
+        }
+    },
+    "queue": {
+        "count": 2,
+        "methods": {
+            "queue.Queue": 2,
+            "queue.get": 1,
+            "queue.Empty": 1
+        }
+    },
+    "Queue": {
+        "count": 2,
+        "methods": {}
+    },
+    "game": {
+        "count": 2,
+        "methods": {
+            "game.begin_episode": 1,
+            "game.start": 1
+        }
+    },
+    "base": {
+        "count": 2,
+        "methods": {}
+    },
+    "operators": {
+        "count": 2,
+        "methods": {}
+    },
+    "atari_game": {
+        "count": 2,
+        "methods": {}
+    },
+    "ast": {
+        "count": 2,
+        "methods": {
+            "ast.literal_eval": 2
+        }
+    },
+    "distutils": {
+        "count": 2,
+        "methods": {
+            "distutils.core": 1,
+            "distutils.dir_util": 1
+        }
+    },
+    "operator": {
+        "count": 2,
+        "methods": {
+            "operator.itemgetter": 1
+        }
+    },
+    "singleton": {
+        "count": 2,
+        "methods": {}
+    },
+    "stt_metric": {
+        "count": 2,
+        "methods": {}
+    },
+    "stt_bi_graphemes_util": {
+        "count": 2,
+        "methods": {}
+    },
+    "stt_bucketing_module": {
+        "count": 2,
+        "methods": {}
+    },
+    "mxboard": {
+        "count": 2,
+        "methods": {}
+    },
+    "convert_model": {
+        "count": 2,
+        "methods": {}
+    },
+    "sd_module": {
+        "count": 2,
+        "methods": {
+            "sd_module.StochasticDepthModule": 2
+        }
+    },
+    "enchant": {
+        "count": 2,
+        "methods": {
+            "enchant.checker": 2,
+            "enchant.DictWithPWL": 1
+        }
+    },
+    "tvm": {
+        "count": 2,
+        "methods": {
+            "tvm.contrib": 2,
+            "tvm.placeholder": 2,
+            "tvm.compute": 2,
+            "tvm.var": 1,
+            "tvm.target": 1,
+            "tvm.build": 1
+        }
+    },
+    "test_quantization": {
+        "count": 2,
+        "methods": {}
+    },
+    "platform": {
+        "count": 2,
+        "methods": {
+            "platform.system": 2,
+            "platform.python_version": 1,
+            "platform.python_compiler": 1,
+            "platform.python_build": 1,
+            "platform.architecture": 1,
+            "platform.platform": 1,
+            "platform.node": 1,
+            "platform.release": 1,
+            "platform.version": 1,
+            "platform.machine": 1,
+            "platform.processor": 1
+        }
+    },
+    "nbformat": {
+        "count": 2,
+        "methods": {
+            "nbformat.read": 2,
+            "nbformat.write": 2,
+            "nbformat.NO_CONVERT": 2
+        }
+    },
+    "converter": {
+        "count": 2,
+        "methods": {
+            "converter._mxnet_converter": 1,
+            "converter.load_model": 1
+        }
+    },
+    "base64": {
+        "count": 2,
+        "methods": {
+            "base64.decodestring": 1
+        }
+    },
+    "cookielib": {
+        "count": 2,
+        "methods": {
+            "cookielib.MozillaCookieJar": 2,
+            "cookielib.LoadError": 2,
+            "cookielib.CookieJar": 2
+        }
+    },
+    "getpass": {
+        "count": 2,
+        "methods": {
+            "getpass.getpass": 2
+        }
+    },
+    "md5": {
+        "count": 2,
+        "methods": {
+            "md5.new": 4
+        }
+    },
+    "mimetypes": {
+        "count": 2,
+        "methods": {
+            "mimetypes.guess_type": 4
+        }
+    },
+    "optparse": {
+        "count": 2,
+        "methods": {
+            "optparse.OptionParser": 2
+        }
+    },
+    "readline": {
+        "count": 2,
+        "methods": {}
+    },
+    "gmock_test_utils": {
+        "count": 2,
+        "methods": {
+            "gmock_test_utils.Subprocess": 9,
+            "gmock_test_utils.GetTestExecutablePath": 2,
+            "gmock_test_utils.TestCase": 2,
+            "gmock_test_utils.Main": 2,
+            "gmock_test_utils.environ": 1,
+            "gmock_test_utils.SetEnvVar": 1,
+            "gmock_test_utils.PREMATURE_EXIT_FILE_ENV_VAR": 1,
+            "gmock_test_utils.GetSourceDir": 1
+        }
+    },
+    "gtest_xml_test_utils": {
+        "count": 2,
+        "methods": {
+            "gtest_xml_test_utils.GTestXMLTestCase": 2
+        }
+    },
+    "dominate": {
+        "count": 2,
+        "methods": {
+            "dominate.tags": 1,
+            "dominate.document": 1
+        }
+    },
+    "typing": {
+        "count": 2,
+        "methods": {}
+    },
+    "lp_bc": {
+        "count": 2,
+        "methods": {}
+    },
+    "lp_nc": {
+        "count": 2,
+        "methods": {}
+    },
+    "lp_ssc": {
+        "count": 2,
+        "methods": {}
+    },
+    "l0_bc": {
+        "count": 2,
+        "methods": {}
+    },
+    "l0_nc": {
+        "count": 2,
+        "methods": {}
+    },
+    "pixel_bc": {
+        "count": 2,
+        "methods": {}
+    },
+    "pixel_nc": {
+        "count": 2,
+        "methods": {}
+    },
+    "misc": {
+        "count": 2,
+        "methods": {
+            "misc.resnet_utils": 1,
+            "misc.resnet": 1
+        }
+    },
+    "mmd": {
+        "count": 2,
+        "methods": {
+            "mmd.mmd": 5
+        }
+    },
+    "pylint": {
+        "count": 1,
+        "methods": {
+            "pylint.py_run": 1
+        }
+    },
+    "hotshot": {
+        "count": 1,
+        "methods": {
+            "hotshot.stats": 2,
+            "hotshot.Profile": 1
+        }
+    },
+    "datasets": {
+        "count": 1,
+        "methods": {}
+    },
+    "bottleneck": {
+        "count": 1,
+        "methods": {}
+    },
+    "imageio": {
+        "count": 1,
+        "methods": {
+            "imageio.imwrite": 1
+        }
+    },
+    "net": {
+        "count": 1,
+        "methods": {
+            "net.gram_matrix": 4,
+            "net.Vgg16": 2,
+            "net.Net": 2
+        }
+    },
+    "option": {
+        "count": 1,
+        "methods": {}
+    },
+    "tree_lstm": {
+        "count": 1,
+        "methods": {}
+    },
+    "find_mxnet": {
+        "count": 1,
+        "methods": {}
+    },
+    "train_model": {
+        "count": 1,
+        "methods": {
+            "train_model.fit": 1
+        }
+    },
+    "numba": {
+        "count": 1,
+        "methods": {
+            "numba.jit": 2
+        }
+    },
+    "iterators": {
+        "count": 1,
+        "methods": {
+            "iterators.BucketNerIter": 2
+        }
+    },
+    "memonger": {
+        "count": 1,
+        "methods": {
+            "memonger.search_plan": 1
+        }
+    },
+    "rl_data": {
+        "count": 1,
+        "methods": {
+            "rl_data.GymDataIter": 2
+        }
+    },
+    "sym": {
+        "count": 1,
+        "methods": {
+            "sym.get_symbol_atari": 1,
+            "sym.get_symbol_thor": 1
+        }
+    },
+    "replay_mem": {
+        "count": 1,
+        "methods": {}
+    },
+    "pyprind": {
+        "count": 1,
+        "methods": {
+            "pyprind.prog_bar": 1
+        }
+    },
+    "replay_memory": {
+        "count": 1,
+        "methods": {}
+    },
+    "ale_python_interface": {
+        "count": 1,
+        "methods": {}
+    },
+    "pygame": {
+        "count": 1,
+        "methods": {
+            "pygame.init": 1
+        }
+    },
+    "log_uniform": {
+        "count": 1,
+        "methods": {
+            "log_uniform.LogUniformSampler": 1
+        }
+    },
+    "Cython": {
+        "count": 1,
+        "methods": {
+            "Cython.Build": 1
+        }
+    },
+    "run_utils": {
+        "count": 1,
+        "methods": {
+            "run_utils.get_parser": 1,
+            "run_utils.evaluate": 1
+        }
+    },
+    "custom_module": {
+        "count": 1,
+        "methods": {
+            "custom_module.load": 1
+        }
+    },
+    "sampler": {
+        "count": 1,
+        "methods": {}
+    },
+    "gru": {
+        "count": 1,
+        "methods": {}
+    },
+    "lstm": {
+        "count": 1,
+        "methods": {}
+    },
+    "module": {
+        "count": 1,
+        "methods": {
+            "module.bind": 1,
+            "module.init_params": 1,
+            "module.init_optimizer": 1,
+            "module.forward": 1,
+            "module.backward": 1,
+            "module.update": 1,
+            "module.get_loss": 1
+        }
+    },
+    "metric": {
+        "count": 1,
+        "methods": {
+            "metric.reset": 1
+        }
+    },
+    "linear_model": {
+        "count": 1,
+        "methods": {}
+    },
+    "stt_io_iter": {
+        "count": 1,
+        "methods": {}
+    },
+    "stt_datagenerator": {
+        "count": 1,
+        "methods": {}
+    },
+    "stt_io_bucketingiter": {
+        "count": 1,
+        "methods": {}
+    },
+    "stt_utils": {
+        "count": 1,
+        "methods": {}
+    },
+    "soundfile": {
+        "count": 1,
+        "methods": {
+            "soundfile.SoundFile": 1
+        }
+    },
+    "detect": {
+        "count": 1,
+        "methods": {
+            "detect.detector": 1
+        }
+    },
+    "timeit": {
+        "count": 1,
+        "methods": {}
+    },
+    "caffe_proto_utils": {
+        "count": 1,
+        "methods": {}
+    },
+    "bz2": {
+        "count": 1,
+        "methods": {
+            "bz2.BZ2File": 1
+        }
+    },
+    "data_reader": {
+        "count": 1,
+        "methods": {}
+    },
+    "array": {
+        "count": 1,
+        "methods": {}
+    },
+    "bokeh": {
+        "count": 1,
+        "methods": {
+            "bokeh.plotting": 5,
+            "bokeh.io": 3
+        }
+    },
+    "test_kvstore": {
+        "count": 1,
+        "methods": {}
+    },
+    "train_mnist": {
+        "count": 1,
+        "methods": {
+            "train_mnist.get_lenet": 1
+        }
+    },
+    "boto3": {
+        "count": 1,
+        "methods": {
+            "boto3.resource": 1
+        }
+    },
+    "notebook_test": {
+        "count": 1,
+        "methods": {}
+    },
+    "HTMLParser": {
+        "count": 1,
+        "methods": {
+            "HTMLParser.__init__": 1
+        }
+    },
+    "grammar_check": {
+        "count": 1,
+        "methods": {
+            "grammar_check.LanguageTool": 1
+        }
+    },
+    "html2text": {
+        "count": 1,
+        "methods": {
+            "html2text.html2text": 1
+        }
+    },
+    "topi": {
+        "count": 1,
+        "methods": {
+            "topi.generic": 1
+        }
+    },
+    "mock": {
+        "count": 1,
+        "methods": {
+            "mock.patch": 3,
+            "mock.Mock": 3
+        }
+    },
+    "mxnet_predict": {
+        "count": 1,
+        "methods": {}
+    },
+    "backend_rep": {
+        "count": 1,
+        "methods": {}
+    },
+    "nbconvert": {
+        "count": 1,
+        "methods": {
+            "nbconvert.preprocessors": 1
+        }
+    },
+    "pip": {
+        "count": 1,
+        "methods": {
+            "pip.__version__": 1,
+            "pip.__file__": 1
+        }
+    },
+    "caffe_pb2": {
+        "count": 1,
+        "methods": {
+            "caffe_pb2.NetParameter": 5
+        }
+    },
+    "google": {
+        "count": 1,
+        "methods": {
+            "google.protobuf": 1,
+            "google.Merge": 1
+        }
+    },
+    "convert_mean": {
+        "count": 1,
+        "methods": {}
+    },
+    "convert_symbol": {
+        "count": 1,
+        "methods": {}
+    },
+    "wheel": {
+        "count": 1,
+        "methods": {
+            "wheel.bdist_wheel": 1
+        }
+    },
+    "pathlib": {
+        "count": 1,
+        "methods": {}
+    },
+    "data_helper": {
+        "count": 1,
+        "methods": {}
+    },
+    "solution": {
+        "count": 1,
+        "methods": {}
+    },
+    "benchmarks": {
+        "count": 1,
+        "methods": {
+            "benchmarks.bottleneck0": 1
+        }
+    },
+    "itk": {
+        "count": 1,
+        "methods": {
+            "itk.GetArrayFromVnlVector": 1,
+            "itk.GetArrayFromVnlMatrix": 1,
+            "itk.GetArrayViewFromImage": 1,
+            "itk.imread": 1
+        }
+    },
+    "nrrd": {
+        "count": 1,
+        "methods": {
+            "nrrd.read": 2,
+            "nrrd.write": 2
+        }
+    },
+    "data_pre": {
+        "count": 1,
+        "methods": {
+            "data_pre.image_manipulations": 1
+        }
+    },
+    "abc": {
+        "count": 1,
+        "methods": {}
+    },
+    "main": {
+        "count": 1,
+        "methods": {}
+    },
+    "yaml": {
+        "count": 1,
+        "methods": {
+            "yaml.dump": 1,
+            "yaml.h": 1
+        }
+    },
+    "hashlib": {
+        "count": 1,
+        "methods": {
+            "hashlib.sha1": 1
+        }
+    },
+    "fuse_gtest_files": {
+        "count": 1,
+        "methods": {}
+    },
+    "difflib": {
+        "count": 1,
+        "methods": {
+            "difflib.unified_diff": 1
+        }
+    },
+    "atexit": {
+        "count": 1,
+        "methods": {
+            "atexit.register": 1
+        }
+    },
+    "popen2": {
+        "count": 1,
+        "methods": {
+            "popen2.Popen4": 1,
+            "popen2.Popen3": 1
+        }
+    },
+    "options": {
+        "count": 1,
+        "methods": {
+            "options.train_options": 1
+        }
+    },
+    "pdb": {
+        "count": 1,
+        "methods": {
+            "pdb.Pdb": 2,
+            "pdb.set_trace": 1
+        }
+    },
+    "scripts": {
+        "count": 1,
+        "methods": {
+            "scripts.average_checkpoints": 1
+        }
+    },
+    "preprocess": {
+        "count": 1,
+        "methods": {
+            "preprocess.get_parser": 2,
+            "preprocess.main": 2
+        }
+    },
+    "generate": {
+        "count": 1,
+        "methods": {
+            "generate.main": 1
+        }
+    },
+    "interactive": {
+        "count": 1,
+        "methods": {
+            "interactive.main": 1
+        }
+    },
+    "eval_lm": {
+        "count": 1,
+        "methods": {
+            "eval_lm.main": 1
+        }
+    },
+    "writeTFRecord": {
+        "count": 1,
+        "methods": {}
+    },
+    "pyevtk": {
+        "count": 1,
+        "methods": {
+            "pyevtk.hl": 1
+        }
+    },
+    "readTFRecord": {
+        "count": 1,
+        "methods": {}
+    },
+    "enum": {
+        "count": 1,
+        "methods": {}
+    },
+    "sympy": {
+        "count": 1,
+        "methods": {
+            "sympy.solve_linear_system": 1
+        }
+    },
+    "xarray": {
+        "count": 1,
+        "methods": {}
+    },
+    "mpl_toolkits": {
+        "count": 1,
+        "methods": {
+            "mpl_toolkits.axes_grid1": 1
+        }
+    },
+    "zlib": {
+        "count": 1,
+        "methods": {}
+    },
+    "mmap": {
+        "count": 1,
+        "methods": {}
+    }
+}

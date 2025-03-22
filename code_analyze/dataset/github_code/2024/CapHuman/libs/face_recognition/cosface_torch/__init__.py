@@ -1,1 +1,0 @@
-from .cosface import CosFace

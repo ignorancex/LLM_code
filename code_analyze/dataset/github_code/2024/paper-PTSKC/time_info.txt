@@ -1,7 +1,0 @@
-scripts/calculateF1Score.py: 2024-02-01T19:00:04Z
-scripts/fewShot.py: 2024-02-01T19:00:04Z
-scripts/fineTunedShot.py: 2024-02-01T19:00:04Z
-scripts/generateGroundTruth.py: 2024-02-01T19:00:04Z
-scripts/generateTestTrainValid.py: 2024-02-01T19:00:04Z
-scripts/runBenchmarks.py: 2024-02-01T19:00:04Z
-scripts/zeroShot.py: 2024-02-01T19:00:04Z

@@ -1,1 +1,0 @@
- #TODO: metric related static functions.

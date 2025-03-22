@@ -1,0 +1,4 @@
+newsqa/newsqa_to_squad.py: 2020-10-03T11:56:47Z
+nq/nq_to_squad.py: 2020-10-03T11:56:47Z
+quac/quac_to_squad.py: 2020-10-03T11:56:47Z
+triviaqa/triviaqa_to_squad.py: 2020-10-03T11:56:47Z

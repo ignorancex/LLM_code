@@ -1,3 +1,0 @@
-"""
-dynamics.py
-"""

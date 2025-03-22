@@ -1,1 +1,0 @@
-from .cached_imagefolder import CachedImageFolder

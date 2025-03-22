@@ -1,3 +1,0 @@
-.ipynb_checkpoints/extinction_correct-checkpoint.py: 2022-03-26T22:36:30Z
-.ipynb_checkpoints/map_download-checkpoint.py: 2022-03-27T15:56:34Z
-extinction_correct.py: 2022-03-26T22:36:30Z

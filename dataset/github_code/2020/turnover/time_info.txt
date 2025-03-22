@@ -1,0 +1,16 @@
+code/config/config.py: 2020-08-02T20:46:00Z
+code/debug/infinite-zeta/infinite-zeta.py: 2019-01-09T21:22:58Z
+code/debug/propfrom/debug-propfrom.py: 2019-05-24T00:27:53Z
+code/debug/surface-6d/gif.py: 2019-05-24T00:27:53Z
+code/debug/surface-6d/surface-6d.py: 2019-05-24T00:27:53Z
+code/debug/turnover/test.py: 2019-01-08T15:04:34Z
+code/debug/turnover/turnover.py: 2019-05-24T00:27:53Z
+code/idea/turnover.py: 2018-08-03T16:14:24Z
+code/main/converge.py: 2019-04-30T20:38:31Z
+code/main/flows.py: 2019-12-20T16:59:38Z
+code/main/main.py: 2019-10-11T15:55:38Z
+code/main/sensitivity.py: 2020-08-02T20:46:00Z
+code/main/system.py: 2020-08-02T20:46:00Z
+code/main/variants.py: 2020-08-02T20:46:00Z
+code/symbolic/solve-symbolic.py: 2018-11-07T21:16:49Z
+docs/idea/py/turnover.py: 2018-10-17T13:27:55Z

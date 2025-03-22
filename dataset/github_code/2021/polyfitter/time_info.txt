@@ -1,0 +1,6 @@
+examples/run_polyfit_as_script.py: 2021-04-19T19:45:22Z
+setup.py: 2021-04-19T19:45:22Z
+src/__init__.py: 2021-04-19T19:45:22Z
+src/polyfit_parallel_utils.py: 2021-04-19T20:12:02Z
+src/version.py: 2021-06-01T13:08:40Z
+tests/test_polyfit.py: 2021-04-19T19:45:22Z

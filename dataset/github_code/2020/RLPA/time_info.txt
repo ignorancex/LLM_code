@@ -1,0 +1,16 @@
+Refuge_Classification_Deeplab+3/Model_DiscSeg.py: Unknown
+Refuge_Classification_Deeplab+3/evaluation_metrics_for_classification.py: Unknown
+Refuge_Classification_Deeplab+3/file_management.py: Unknown
+Refuge_Classification_Deeplab+3/model.py: Unknown
+Refuge_Classification_Deeplab+3/test.py: Unknown
+Refuge_Classification_Deeplab+3/train.py: Unknown
+Refuge_Classification_Deeplab+3/utils.py: Unknown
+Refuge_Classification_Deeplab+3/utils_Mnet.py: Unknown
+XUnet-Segmentation/ApplyCRF.py: 2020-01-06T23:31:04Z
+XUnet-Segmentation/Model_DiscSeg.py: 2020-01-06T23:31:04Z
+XUnet-Segmentation/data.py: 2020-01-06T23:31:04Z
+XUnet-Segmentation/model.py: 2020-01-06T23:31:04Z
+XUnet-Segmentation/se.py: 2020-01-06T23:31:04Z
+XUnet-Segmentation/test.py: 2020-01-06T23:31:04Z
+XUnet-Segmentation/train.py: 2020-01-06T23:31:04Z
+XUnet-Segmentation/utils.py: 2020-01-06T23:31:04Z

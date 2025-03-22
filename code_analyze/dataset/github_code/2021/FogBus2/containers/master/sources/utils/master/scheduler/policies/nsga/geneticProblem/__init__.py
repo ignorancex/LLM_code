@@ -1,1 +1,0 @@
-from .geneticProblem import GeneticProblem

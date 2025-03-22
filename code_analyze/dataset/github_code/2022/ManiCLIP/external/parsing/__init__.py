@@ -1,1 +1,0 @@
-from .bisenet import BiSeNet

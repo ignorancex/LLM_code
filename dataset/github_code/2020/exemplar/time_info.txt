@@ -1,0 +1,27 @@
+Source Code/Image Synthetization/classifier.py: 2020-09-16T20:14:57Z
+Source Code/Image Synthetization/convergence_test_es.py: 2020-09-16T20:14:57Z
+Source Code/Image Synthetization/convergence_test_es_momentum.py: 2020-09-16T20:14:57Z
+Source Code/Image Synthetization/convergence_test_gd.py: 2020-09-16T20:14:57Z
+Source Code/Image Synthetization/discriminator.py: 2020-09-16T20:14:57Z
+Source Code/Image Synthetization/eqalized_layers.py: 2020-09-16T20:14:57Z
+Source Code/Image Synthetization/extract_fer.py: 2020-09-16T20:14:57Z
+Source Code/Image Synthetization/generator.py: 2020-09-16T20:14:57Z
+Source Code/Image Synthetization/optimizer.py: 2020-09-16T20:14:57Z
+Source Code/Image Synthetization/synthesize_exemplars_es_momentum.py: 2020-09-16T20:14:57Z
+Source Code/Image Synthetization/synthesize_exemplars_gd.py: 2020-09-16T20:14:57Z
+Source Code/Image Synthetization/train_classifier.py: 2020-09-16T20:14:57Z
+Source Code/Image Synthetization/train_vae.py: 2020-09-16T20:14:57Z
+Source Code/Image Synthetization/vae.py: 2020-09-16T20:14:57Z
+Source Code/Tabular Data Synthetization/dataset.py: 2020-09-16T20:14:57Z
+Source Code/Tabular Data Synthetization/synthesize_exemplars.py: 2020-09-16T20:14:57Z
+Source Code/Tabular Data Synthetization/train_classifier.py: 2020-09-16T20:14:57Z
+Source Code/Tabular Data Synthetization/train_vae.py: 2020-09-16T20:14:57Z
+Source Code/Tabular Data Synthetization/vae.py: 2020-09-16T20:14:57Z
+Source Code/Text Synthetization/dataset.py: 2020-09-16T20:14:57Z
+Source Code/Text Synthetization/download_and_prepare_dataset.py: 2020-09-16T20:14:57Z
+Source Code/Text Synthetization/helper_functions.py: 2020-09-16T20:14:57Z
+Source Code/Text Synthetization/model.py: 2020-09-16T20:14:57Z
+Source Code/Text Synthetization/optimizer.py: 2020-09-16T20:14:57Z
+Source Code/Text Synthetization/synthetize.py: 2020-09-16T20:14:57Z
+Source Code/Text Synthetization/train_classifier.py: 2020-09-16T20:14:57Z
+Source Code/Text Synthetization/train_generator.py: 2020-09-16T20:14:57Z

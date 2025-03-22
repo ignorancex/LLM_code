@@ -1,0 +1,13 @@
+models/AlexNet_model.py: 2022-02-02T09:45:49Z
+models/ConvNet_model.py: 2021-11-25T20:01:16Z
+scripts/AlexNet/alexnet.py: 2022-02-07T21:17:31Z
+scripts/LeNet/mnist.py: 2021-11-25T20:01:16Z
+scripts/tf2plots.py: 2021-03-25T13:10:07Z
+src/approxlowrankmodel.py: 2021-10-01T09:11:44Z
+src/cp_compress.py: 2021-10-01T09:11:44Z
+src/cp_norm.py: 2022-02-10T17:54:33Z
+tests/cp_norm/alexnet_model.py: 2021-04-02T11:47:38Z
+tests/cp_norm/cp_norm.py: 2021-04-01T09:01:50Z
+tests/cp_norm/mnist.py: 2021-04-02T11:47:38Z
+tests/cp_norm/test_cp_norm.py: 2021-04-02T11:24:37Z
+tests/cp_norm/test_reconstruction.py: 2021-04-02T11:47:38Z

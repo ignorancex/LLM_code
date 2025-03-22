@@ -1,0 +1,17 @@
+experiment.py: 2022-03-02T09:56:21Z
+helpers/basic_classes.py: 2022-03-02T09:56:21Z
+helpers/general.py: 2022-03-02T09:56:21Z
+helpers/git_path.py: 2022-03-02T09:56:21Z
+helpers/mlp.py: 2022-03-02T09:56:21Z
+helpers/train.py: 2022-03-02T09:56:21Z
+helpers/vn_modelnet_dataloader.py: 2022-03-02T09:56:21Z
+main.py: 2022-03-02T09:56:21Z
+model.py: 2022-03-02T09:56:21Z
+tests/test_permutation.py: 2022-03-02T09:56:21Z
+tests/test_rotation.py: 2022-03-02T09:56:21Z
+trainer.py: 2022-03-02T10:26:46Z
+universal_blocks/contraction.py: 2022-03-02T09:56:21Z
+universal_blocks/kronecker.py: 2022-03-02T09:56:21Z
+universal_blocks/linear.py: 2022-03-02T09:56:21Z
+universal_blocks/vn_pooling.py: 2022-03-02T09:56:21Z
+universal_blocks/vn_relu.py: 2022-03-02T09:56:21Z

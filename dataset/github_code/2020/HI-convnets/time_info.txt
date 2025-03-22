@@ -1,0 +1,7 @@
+src/get_a100_nd_cutouts.py: 2020-06-17T21:25:41Z
+src/get_legacy_cutouts.py: 2019-09-30T13:15:05Z
+src/get_sdss_cutouts.py: 2020-03-11T15:44:54Z
+src/mxresnet.py: 2019-09-04T15:18:06Z
+src/ranger.py: 2019-09-04T15:18:06Z
+src/train_alfalfa.py: 2019-12-18T00:48:13Z
+src/train_xGASS.py: 2019-12-18T20:24:51Z

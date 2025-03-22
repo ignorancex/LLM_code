@@ -1,6 +1,0 @@
-Skipped ./github_code\2020\gambit_1.5\Backends/scripts/CBGB/cbgb.py: Missing parentheses in call to 'print'. Did you mean print('  ~~~~  CBGB  -  Common Block harvester for GAMBIT Backends  ~~~~')? (<unknown>, line 20)
-Skipped ./github_code\2020\gambit_1.5\Printers/scripts/combine_hdf5.py: Missing parentheses in call to 'print'. Did you mean print('CTRL+C is blocked while the HDF5Printer combine script runs! Signal received, but ignored.')? (<unknown>, line 6)
-Skipped ./github_code\2020\gambit_1.5\Printers/scripts/hdf5tools.py: invalid syntax (<unknown>, line 88)
-Skipped ./github_code\2020\Mutationpp\thirdparty/catch/scripts/releaseNotes.py: invalid syntax (<unknown>, line 61)
-Skipped ./github_code\2020\Mutationpp\thirdparty/eigen/scripts/relicense.py: Missing parentheses in call to 'print'. Did you mean print('SKIPPED', filename)? (<unknown>, line 55)
-Skipped ./github_code\2022\Castro\Exec/science/planet/dataset_sliceplot.py: Missing parentheses in call to 'print'. Did you mean print(profilefilelist)? (<unknown>, line 20)

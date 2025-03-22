@@ -1,0 +1,8 @@
+script/LogicAsker.py: 2025-01-04T15:13:09Z
+script/apis.py: 2025-01-04T15:13:09Z
+script/example_generation.py: 2024-04-11T14:51:14Z
+script/inference_methods.py: 2024-04-11T14:51:14Z
+script/inference_problems.py: 2024-04-11T14:51:14Z
+script/logic_inference_lib.py: 2024-04-11T14:51:14Z
+script/rules.py: 2025-01-04T15:13:09Z
+script/splits.py: 2024-04-11T14:51:14Z

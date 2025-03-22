@@ -1,7 +1,0 @@
-hopular/__init__.py: 2022-06-01T13:19:16Z
-hopular/auxiliary/__init__.py: 2022-06-01T13:19:16Z
-hopular/auxiliary/data.py: 2022-06-01T13:19:16Z
-hopular/blocks.py: 2022-06-01T13:19:16Z
-hopular/interactive.py: 2022-06-01T13:19:16Z
-hopular/optim.py: 2022-06-01T13:19:16Z
-setup.py: 2022-06-01T13:19:16Z

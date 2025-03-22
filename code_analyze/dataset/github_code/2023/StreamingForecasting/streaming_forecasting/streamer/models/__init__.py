@@ -1,1 +1,0 @@
-from .streaming_vectornet import StreamingVectorNet

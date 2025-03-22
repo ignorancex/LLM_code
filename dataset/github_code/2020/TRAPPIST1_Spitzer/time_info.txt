@@ -1,0 +1,6 @@
+tex/figures/figure_placeholders.py: 2020-06-25T21:55:38Z
+tex/figures/python/plotCorner_photdyn.py: 2020-09-17T00:37:50Z
+tex/figures/python/plot_histogram_normalized_density_agol_et_al.py: 2020-10-05T17:29:28Z
+tex/figures/python/plot_water_versus_period_agol_et_al.py: 2020-06-21T17:51:07Z
+tex/figures/python/plot_water_versus_period_agol_et_al_v2.py: 2020-06-25T02:00:30Z
+tex/figures/python/plotphiM2.py: 2020-06-25T21:10:30Z

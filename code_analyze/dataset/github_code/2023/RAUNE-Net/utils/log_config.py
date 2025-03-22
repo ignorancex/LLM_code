@@ -1,1 +1,0 @@
-LOGURU_FORMAT = "<white><dim>{time:YYYY-MM-DD HH:mm:ss}</dim></white> | <level>{level}</level> - <level>{message}</level>"

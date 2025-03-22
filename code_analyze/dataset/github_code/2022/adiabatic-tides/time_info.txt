@@ -1,6 +1,0 @@
-adiabatic_tides/__init__.py: 2022-12-01T22:24:14Z
-adiabatic_tides/h5methods.py: 2022-10-15T17:35:45Z
-adiabatic_tides/mathtools.py: 2022-11-04T13:12:32Z
-adiabatic_tides/phasespace.py: 2022-12-01T22:24:14Z
-adiabatic_tides/potentials.py: 2022-07-01T16:21:16Z
-adiabatic_tides/profiles.py: 2023-01-11T15:27:12Z

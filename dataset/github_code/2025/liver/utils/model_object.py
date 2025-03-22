@@ -1,0 +1,276 @@
+from torch.nn import CrossEntropyLoss
+from torch.optim import Adam, SGD
+from Net.loss_functions import *
+from Net.api import *
+from Net.networks import *
+from Net.cp_networks import *
+
+models = {
+    'Base': {
+        'Name': 'Example',
+        'Data': './data/summery.txt',
+        'Batch': 2,
+        'Lr': 0.0001,
+        'Epoch': 300,
+        'Dataset_mode': 'default',
+        'Model': Vis_only,
+        'Optimizer': Adam,
+        'Loss': CrossEntropyLoss,
+        'Run': run
+    },
+    'Vision': {
+        'Name': 'Vision only with pre_resnet3D',
+        'Data': './data/summery_new.txt',
+        'Batch': 2,
+        'Lr': 0.0001,
+        'Epoch': 300,
+        'Dataset_mode': 'img',
+        'Model': Vis_only,
+        'Optimizer': Adam,
+        'Loss': CrossEntropyLoss,
+        'Run': run
+    },
+    'RadioSA': {
+        'Name': 'Radio SelfAttention Norm',
+        'Data': './data/summery_new.txt',
+        'Batch': 16,
+        'Lr': 0.0001,
+        'Epoch': 300,
+        'Dataset_mode': 'mamba_test',
+        'Model': Radio_only_SA,
+        'Optimizer': Adam,
+        'Loss': CrossEntropyLoss,
+        'Run': run_single
+    },
+    'RadioMamba': {
+        'Name': 'Radio Mamba Norm',
+        'Data': './data/summery_new.txt',
+        'Batch': 16,
+        'Lr': 0.0001,
+        'Epoch': 300,
+        'Dataset_mode': 'mamba_test',
+        'Model': Radio_only_Mamba,
+        'Optimizer': Adam,
+        'Loss': CrossEntropyLoss,
+        'Run': run_single
+    },
+    'Fusion': {
+        'Name': 'Fusion based on contrast learning',
+        'Data': './data/summery_new.txt',
+        'Batch': 2,
+        'Lr': 0.0001,
+        'Epoch': 300,
+        'Dataset_mode': 'fusion',
+        'Model': Fusion_Main,
+        'Optimizer': Adam,
+        'Loss': joint_loss,
+        'Run': run_main
+    },
+
+    'AllMamba': {
+        'Name': 'ALLModelC',
+        'Data': './data/summery_new.txt',
+        'Batch': 2,
+        'Lr': 0.001,
+        'Epoch': 200,
+        'Dataset_mode': 'all_model',
+        'Model': Multi_model_MLP,
+        'Optimizer': Adam,
+        'Loss': CrossEntropyLoss,
+        'Run': run_fusion_all
+    },
+    'climamba': {
+        'Name': '2model',
+        'Data': './data/summery_new.txt',
+        'Batch': 2,
+        'Lr': 0.001,
+        'Epoch': 200,
+        'Dataset_mode': '2_model',
+        'Model': Multi_model_mambacli,
+        'Optimizer': Adam,
+        'Loss': CrossEntropyLoss,
+        'Run': run_fusion_test
+    },
+    'CA3fusion': {
+        'Name': 'CA3fusion',
+        'Data': './data/summery_new.txt',
+        'Batch': 2,
+        'Lr': 0.0001,
+        'Epoch': 300,
+        'Dataset_mode': 'all_model',
+        'Model': Triple_model_CrossAttentionFusion,
+        'Optimizer': Adam,
+        'Loss': CrossEntropyLoss,
+        'Run': run_fusion_all
+    },
+    'SCA3fusion': {
+        'Name': 'SCA3fusion without mamba',
+        'Data': './data/summery_new.txt',
+        'Batch': 2,
+        'Lr': 0.0001,
+        'Epoch': 300,
+        'Dataset_mode': 'fusion',
+        'Model': Triple_model_Self_CrossAttentionFusion,
+        'Optimizer': Adam,
+        'Loss': joint_loss,
+        'w1': 0.2,
+        'w2': 0.01,
+        'Run': run_main_1
+    },
+    'CSA3fusion': {
+        'Name': 'CSA3fusion without mamba',
+        'Data': './data/summery_new.txt',
+        'Batch': 2,
+        'Lr': 0.0001,
+        'Epoch': 300,
+        'Dataset_mode': 'fusion',
+        'Model': Triple_model_Cross_SelfAttentionFusion,
+        'Optimizer': Adam,
+        'Loss': joint_loss,
+        'Run': run_main_1
+    },
+    'Resnet50': {
+        'Name': 'Resnet50',
+        'Data': './data/summery_new.txt',
+        'Batch': 2,
+        'Lr': 0.0001,
+        'Epoch': 300,
+        'Dataset_mode': 'img',
+        'Model': Resnet50,
+        'Optimizer': Adam,
+        'Loss': CrossEntropyLoss,
+        'Run': run
+    },
+    'ViT': {
+        'Name': 'ViT',
+        'Data': './data/summery_new.txt',
+        'Batch': 2,
+        'Lr': 0.0001,
+        'Epoch': 300,
+        'Dataset_mode': 'img',
+        'Model': MyViT,
+        'Optimizer': Adam,
+        'Loss': CrossEntropyLoss,
+        'Run': run
+    },
+    'SimpleFF': {
+        'Name': 'SimpleFF',
+        'Data': './data/summery_new.txt',
+        'Batch': 1,
+        'Lr': 0.0001,
+        'Epoch': 300,
+        'Dataset_mode': 'radio_img_label',
+        'Model': SimpleFF,
+        'Optimizer': Adam,
+        'Loss': CrossEntropyLoss,
+        'Run': run_fusion_radio_img
+    },
+    'HFBSurv': {
+        'Name': 'HFBSurv',
+        'Data': './data/summery_new.txt',
+        'Batch': 2,
+        'Lr': 0.0001,
+        'Epoch': 300,
+        'Dataset_mode': 'fusion',
+        'Model': HFBSurv,
+        'Optimizer': Adam,
+        'Loss': CrossEntropyLoss,
+        'Run': run_main
+    },
+    'MMD': {
+        'Name': 'MMD',
+        'Data': './data/summery_new.txt',
+        'Batch': 2,
+        'Lr': 0.0001,
+        'Epoch': 300,
+        'Dataset_mode': 'fusion',
+        'Model': MMD,
+        'Optimizer': Adam,
+        'Loss': CrossEntropyLoss,
+        'Run': run_main
+    },
+    'two_model': {
+        'Name': 'two_model',
+        'Data': './data/summery_new.txt',
+        'Batch': 2,
+        'Lr': 0.0001,
+        'Epoch': 300,
+        'Dataset_mode': 'two_model',
+        'Model': Two_model_CrossAttentionFusion,
+        'Optimizer': Adam,
+        'Loss': CrossEntropyLoss,
+        'Run': run_main_text_img
+    },
+    'two_text_modality': {
+        'Name': 'two_text_modality',
+        'Data': './data/summery_new.txt',
+        'Batch': 2,
+        'Lr': 0.0001,
+        'Epoch': 300,
+        'Dataset_mode': 'two_textmodel',
+        'Model': Two_textmodel_Fusion,
+        'Optimizer': Adam,
+        'Loss': CrossEntropyLoss,
+        'Run': run_main_text_img
+    },
+    'OmniDirectional3DMamba': {
+        'Name': 'Test for OmniDirectional3DMamba depth3',
+        'Data': './data/summery_new.txt',
+        'Batch': 2,
+        'Lr': 0.0001,
+        'Epoch': 300,
+        'Dataset_mode': 'img',
+        'Model': Vis_mamba_only,
+        'Optimizer': Adam,
+        'Loss': CrossEntropyLoss,
+        'Run': run_single
+    },
+    'two_model_radio': {
+        'Name': 'two_model_radio',
+        'Data': './data/summery_new.txt',
+        'Batch': 2,
+        'Lr': 0.0001,
+        'Epoch': 300,
+        'Dataset_mode': 'radio_img_label',
+        'Model': Two_model_CrossAttentionFusion_radio,
+        'Optimizer': Adam,
+        'Loss': CrossEntropyLoss,
+        'Run': run_double
+    },
+    'OmniDirectional3DMamba_version2': {
+        'Name': 'OmniDirectional3DMamba Mamba2',
+        'Data': './data/summery_new.txt',
+        'Batch': 2,
+        'Lr': 0.0001,
+        'Epoch': 300,
+        'Dataset_mode': 'img',
+        'Model': Vis_mamba_only,
+        'Optimizer': Adam,
+        'Loss': CrossEntropyLoss,
+        'Run': run_single
+    },
+    'ROI_vision_only': {
+        'Name': 'ROIdataset test',
+        'Data': './data/summery_new.txt',
+        'Batch': 2,
+        'Lr': 0.0001,
+        'Epoch': 300,
+        'Dataset_mode': 'img',
+        'Model': Vis_only,
+        'Optimizer': Adam,
+        'Loss': CrossEntropyLoss,
+        'Run': run_single
+    },
+    'ROI_vision_only_mamba': {
+        'Name': 'ROIdataset test',
+        'Data': './data/summery_new.txt',
+        'Batch': 2,
+        'Lr': 0.0001,
+        'Epoch': 300,
+        'Dataset_mode': 'img',
+        'Model': Vis_mamba_only,
+        'Optimizer': Adam,
+        'Loss': CrossEntropyLoss,
+        'Run': run_single
+    },
+}

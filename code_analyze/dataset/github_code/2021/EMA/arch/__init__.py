@@ -1,1 +1,0 @@
-from .COVIDmodel import CNN, CovidNet

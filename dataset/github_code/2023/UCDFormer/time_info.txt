@@ -1,0 +1,21 @@
+UCDFormer/change_prior.py: 2023-08-02T12:58:25Z
+UCDFormer/data.py: 2023-08-02T12:58:25Z
+UCDFormer/dataset.py: 2023-08-02T12:58:25Z
+UCDFormer/dcvaUnequalRowColumn.py: 2023-08-02T12:58:25Z
+UCDFormer/img_augm.py: 2023-08-02T12:58:25Z
+UCDFormer/main_landslide.py: 2023-08-02T12:58:25Z
+UCDFormer/main_seasonal_change_from _summer_to_autumn.py: 2023-08-02T12:58:25Z
+UCDFormer/main_seasonal_change_from_spring to_winter.py: 2023-08-02T12:58:25Z
+UCDFormer/main_style_changes.py: 2023-08-02T12:58:25Z
+UCDFormer/mask_transfer.py: 2023-08-02T12:58:25Z
+UCDFormer/model.py: 2023-08-02T12:58:25Z
+UCDFormer/networks.py: 2023-08-02T12:58:25Z
+UCDFormer/networksForFeatureExtraction.py: 2023-08-02T12:58:25Z
+UCDFormer/options.py: 2023-08-02T12:58:25Z
+UCDFormer/pre_process.py: 2023-08-02T12:58:25Z
+UCDFormer/prepare_dataset.py: 2023-08-02T12:58:25Z
+UCDFormer/process_mask.py: 2023-08-02T12:58:25Z
+UCDFormer/saturateSomePercentile.py: 2023-08-02T12:58:25Z
+UCDFormer/utilf.py: 2023-08-02T12:58:25Z
+UCDFormer/utils.py: 2023-08-02T12:58:25Z
+UCDFormer/vgg.py: 2023-08-02T12:58:25Z

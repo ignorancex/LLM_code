@@ -1,0 +1,92 @@
+{
+    "numpy": {
+        "count": 4,
+        "methods": {
+            "numpy.array": 1,
+            "numpy.sqrt": 1
+        }
+    },
+    "modules": {
+        "count": 2,
+        "methods": {
+            "modules.alphabet": 3,
+            "modules.active_cfg": 2,
+            "modules.type_translation_dict": 2,
+            "modules.default_implicit_types": 1
+        }
+    },
+    "cPickle": {
+        "count": 2,
+        "methods": {
+            "cPickle.load": 26
+        }
+    },
+    "pylab": {
+        "count": 2,
+        "methods": {}
+    },
+    "read_gnu": {
+        "count": 2,
+        "methods": {}
+    },
+    "phys": {
+        "count": 2,
+        "methods": {
+            "phys.a": 4
+        }
+    },
+    "collections": {
+        "count": 1,
+        "methods": {
+            "collections.fromkeys": 1
+        }
+    },
+    "importlib": {
+        "count": 1,
+        "methods": {
+            "importlib.import_module": 1
+        }
+    },
+    "pyUni10": {
+        "count": 1,
+        "methods": {
+            "pyUni10.Bond": 36,
+            "pyUni10.UniTensor": 23,
+            "pyUni10.BD_IN": 18,
+            "pyUni10.BD_OUT": 18,
+            "pyUni10.Matrix": 4,
+            "pyUni10.Network": 3
+        }
+    },
+    "random": {
+        "count": 1,
+        "methods": {}
+    },
+    "copy": {
+        "count": 1,
+        "methods": {
+            "copy.copy": 92
+        }
+    },
+    "matplotlib": {
+        "count": 1,
+        "methods": {
+            "matplotlib.use": 1
+        }
+    },
+    "sys": {
+        "count": 1,
+        "methods": {
+            "sys.argv": 1,
+            "sys.exit": 1
+        }
+    },
+    "yt": {
+        "count": 1,
+        "methods": {
+            "yt.visualization": 1,
+            "yt.load": 1,
+            "yt.ColorTransferFunction": 1
+        }
+    }
+}
