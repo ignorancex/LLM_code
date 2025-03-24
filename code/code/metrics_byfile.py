@@ -3,7 +3,13 @@ import ast
 import re
 import csv
 from collections import defaultdict
-from tqdm import tqdm  # Import tqdm
+from tqdm import tqdm  # 导入 tqdm
+
+"""
+该脚本提取并统计每年项目中的函数、变量、注释等信息,
+并将结果按年份存储为CSV文件,
+对于无法解析的文件，它会将错误记录到日志中
+"""
 
 def parse_time_info(file_path):
     """解析 time_info.txt，返回 {python_file_path: 年份}"""
@@ -18,7 +24,6 @@ def parse_time_info(file_path):
     return year_mapping
 
 def calculate_indentation_consistency(lines):
-    """计算缩进一致性"""
     indent_unit_counts = {}
     total_indented_lines = 0
     for line in lines:
@@ -42,10 +47,10 @@ def calculate_indentation_consistency(lines):
     consistency = most_common_indent_count / total_indented_lines
     return consistency
 
-def calculate_function_length(lines):
-    """计算函数长度"""
+def calculate_avg_function_length(lines):
     function_lengths = []
     function_pattern = r'^\s*def\s+\w+\s*\(.*\):'
+
     function_starts = [i for i, line in enumerate(lines) if re.match(function_pattern, line)]
     for start_line in function_starts:
         length = 0
@@ -62,8 +67,7 @@ def calculate_function_length(lines):
         function_lengths.append(length)
     return sum(function_lengths) / len(function_lengths) if function_lengths else 0.0
 
-def calculate_nesting_depth(lines):
-    """计算嵌套深度"""
+def calculate_avg_nesting_depth(lines):
     nesting_depths = []
     indent_levels = []
     for line in lines:
@@ -81,7 +85,6 @@ def calculate_nesting_depth(lines):
     return sum(nesting_depths) / len(nesting_depths) if nesting_depths else 0.0
 
 def calculate_comment_ratio(lines):
-    """计算注释比例"""
     comment_lines = 0
     code_lines = 0
     in_block_comment = False
@@ -99,94 +102,105 @@ def calculate_comment_ratio(lines):
             comment_lines += 1
         else:
             code_lines += 1
-
+            
     total_code_lines = code_lines + comment_lines
     return comment_lines / total_code_lines if total_code_lines > 0 else 0.0
 
-def extract_code_info(file_path):
-    """解析 Python 代码，提取代码行"""
+def process_file_metrics(file_path):
+    """读取 Python 文件并计算四个指标"""
     try:
         with open(file_path, "r", encoding="utf-8") as f:
-            code = f.readlines()
-        return code, None
-    except (SyntaxError, UnicodeDecodeError, ValueError) as e:
+            lines = f.readlines()
+
+        # 计算四个指标
+        metrics = {
+            "indentation_consistency": calculate_indentation_consistency(lines),
+            "avg_function_length": calculate_avg_function_length(lines),
+            "avg_nesting_depth": calculate_avg_nesting_depth(lines),
+            "comment_ratio": calculate_comment_ratio(lines)
+        }
+        return metrics, None
+
+    except Exception as e:
         return None, str(e)
 
-def process_files(base_directory):
-    """处理所有 Python 文件并计算每年的四个指标的平均值"""
-    year_metrics = defaultdict(lambda: {"indentation_consistency": 0.0, "function_length": 0.0, 
-                                        "nesting_depth": 0.0, "comment_ratio": 0.0, 
-                                        "count": 0})
+def scan_directory(base_directory, output_file):
+    """扫描所有年份文件夹，并按更新时间归类统计"""
+    year_data = defaultdict(lambda: {"metrics": defaultdict(list), "skipped_files": []})
 
-    total_files = 0  # 记录文件总数
-    all_files = []   # 用于存储所有的文件路径，以便给 tqdm 传递
-
-    for year_folder in os.listdir(base_directory):
+    # 使用 tqdm 显示年份和项目的进度条
+    for year_folder in tqdm(os.listdir(base_directory), desc="Scanning years"):
         year_path = os.path.join(base_directory, year_folder)
         if not os.path.isdir(year_path):
             continue
 
-        for project in os.listdir(year_path):
+        for project in tqdm(os.listdir(year_path), desc=f"Scanning projects in {year_folder}", leave=False):
             project_path = os.path.join(year_path, project)
             if not os.path.isdir(project_path):
                 continue
 
             time_info_path = os.path.join(project_path, "time_info.txt")
             if not os.path.exists(time_info_path):
-                continue
+                continue  # 没有 time_info.txt，跳过该项目
 
             file_year_mapping = parse_time_info(time_info_path)
 
-            for file_rel_path, year in file_year_mapping.items():
+            # 对每个文件进行处理，显示进度条
+            for file_rel_path, year in tqdm(file_year_mapping.items(), desc=f"Processing files in {project}", leave=False):
                 python_file_path = os.path.join(project_path, file_rel_path)
                 if not python_file_path.endswith(".py") or not os.path.exists(python_file_path):
+                    continue  # 只处理 .py 文件，且文件必须存在
+
+                metrics, error = process_file_metrics(python_file_path)
+                if error:
+                    year_data[year]["skipped_files"].append(f"Skipped {python_file_path}: {error}")
                     continue
-                all_files.append(python_file_path)  # 添加到待处理文件列表
-                total_files += 1
 
-    # 使用 tqdm 进行进度条显示
-    with tqdm(total=total_files, desc="Processing files") as pbar:
-        for python_file_path in all_files:
-            code, error = extract_code_info(python_file_path)
-            if error:
-                continue
+                for metric, value in metrics.items():
+                    year_data[year]["metrics"][metric].append(value)
 
-            # 计算四个指标
-            indentation_consistency = calculate_indentation_consistency(code)
-            function_length = calculate_function_length(code)
-            nesting_depth = calculate_nesting_depth(code)
-            comment_ratio = calculate_comment_ratio(code)
+    # 计算每年的平均值
+    result_data = []
+    for year, data in year_data.items():
+        avg_metrics = {metric: sum(values) / len(values) if values else 0.0
+                       for metric, values in data["metrics"].items()}
+        avg_metrics["Year"] = year
+        result_data.append(avg_metrics)
 
-            # 通过文件路径解析出年份
-            year = python_file_path.split(os.sep)[-3]  # 假设路径格式为 base_directory/year_folder/project/file.py
+    # 保存最终的结果到 CSV 文件
+    save_to_csv(result_data, output_file)
 
-            # 将结果添加到对应年份的统计数据
-            year_metrics[year]["indentation_consistency"] += indentation_consistency
-            year_metrics[year]["function_length"] += function_length
-            year_metrics[year]["nesting_depth"] += nesting_depth
-            year_metrics[year]["comment_ratio"] += comment_ratio
-            year_metrics[year]["count"] += 1
+    # 记录跳过的文件
+    skipped_files = []
+    for year, skipped_files_data in year_data.items():
+        skipped_files.extend(skipped_files_data["skipped_files"])
 
-            pbar.update(1)  # 更新进度条
+    skipped_log = os.path.join(os.path.dirname(output_file), "skipped_files.txt")
+    with open(skipped_log, "w", encoding="utf-8") as log:
+        for entry in skipped_files:
+            log.write(entry + "\n")
 
-    # 计算每年的平均值并保存到 CSV 文件
-    output_file = "code_metrics_by_year.csv"
-    with open(output_file, "w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        writer.writerow(["Year", "Average Indentation Consistency", "Average Function Length", 
-                         "Average Nesting Depth", "Average Comment Ratio"])
+    return year_data
 
-        for year, metrics in year_metrics.items():
-            if metrics["count"] > 0:
-                avg_indentation_consistency = metrics["indentation_consistency"] / metrics["count"]
-                avg_function_length = metrics["function_length"] / metrics["count"]
-                avg_nesting_depth = metrics["nesting_depth"] / metrics["count"]
-                avg_comment_ratio = metrics["comment_ratio"] / metrics["count"]
-                writer.writerow([year, avg_indentation_consistency, avg_function_length, avg_nesting_depth, avg_comment_ratio])
+def save_to_csv(data, file_path):
+    """将结果保存到 CSV 文件"""
+    if not data:
+        return
+    
+    header = data[0].keys()
+    with open(file_path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=header)
+        writer.writeheader()
+        for row in data:
+            writer.writerow(row)
+
 
 # 运行
-base_directory = "./github_code"  # 输入目录
+base_directory = "LLM_code/dataset/github_code"
+output_file = "LLM_code/average_metrics_by_year.csv"  # 最终保存的文件
 
-process_files(base_directory)
+os.makedirs(os.path.dirname(output_file), exist_ok=True)  # 确保输出目录存在
 
-print("Processing completed. Check the 'code_metrics_by_year.csv' for results.")
+scan_directory(base_directory, output_file)
+
+print("Processing completed. Check the 'output' folder for results.")
