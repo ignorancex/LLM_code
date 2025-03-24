@@ -42,7 +42,6 @@ def extract_constant_names(code):
 # 分析代码并计算指标
 def analyze_code(code):
     lines = code.splitlines()
-    total_lines = len(lines)
 
     metrics = {
         "function_naming_consistency": 0.0,
@@ -54,7 +53,11 @@ def analyze_code(code):
         "avg_nesting_depth": 0.0,
         "comment_ratio": 0.0,
         "avg_function_name_length": 0.0,
-        "avg_variable_name_length": 0.0
+        "avg_variable_name_length": 0.0,
+        "function_naming_counts": {},
+        "variable_naming_counts": {},
+        "class_naming_counts": {},
+        "constant_naming_counts": {}
     }
 
     # 提取名字
@@ -64,7 +67,7 @@ def analyze_code(code):
     constant_names = extract_constant_names(code)
 
     # 命名一致性计算
-    def calculate_naming_consistency(names):
+    def calculate_naming_consistency(names, naming_counts_key):
         naming_counts = {
             "camelCase": 0,
             "snake_case": 0,
@@ -78,7 +81,9 @@ def analyze_code(code):
                 naming_counts[naming_style] += 1
             else:
                 naming_counts["Other"] += 1
+
         total_names = sum(naming_counts.values())
+        metrics[naming_counts_key] = naming_counts  # Store counts
         if total_names > 0:
             most_common_style_count = max(naming_counts.values())
             return most_common_style_count / total_names
@@ -86,10 +91,10 @@ def analyze_code(code):
             return 0.0
 
     # 计算每种命名一致性
-    metrics["function_naming_consistency"] = calculate_naming_consistency(function_names)
-    metrics["variable_naming_consistency"] = calculate_naming_consistency(variable_names)
-    metrics["class_naming_consistency"] = calculate_naming_consistency(class_names)
-    metrics["constant_naming_consistency"] = calculate_naming_consistency(constant_names)
+    metrics["function_naming_consistency"] = calculate_naming_consistency(function_names, "function_naming_counts")
+    metrics["variable_naming_consistency"] = calculate_naming_consistency(variable_names, "variable_naming_counts")
+    metrics["class_naming_consistency"] = calculate_naming_consistency(class_names, "class_naming_counts")
+    metrics["constant_naming_consistency"] = calculate_naming_consistency(constant_names, "constant_naming_counts")
 
     # 计算平均名字长度
     metrics["avg_function_name_length"] = sum(len(name) for name in function_names) / len(function_names) if function_names else 0.0
