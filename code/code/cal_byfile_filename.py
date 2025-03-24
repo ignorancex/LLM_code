@@ -4,6 +4,12 @@ import re
 from collections import Counter
 from pathlib import Path
 
+"""
+该脚本处理按年份组织的Python文件,
+提取文件名基础部分的频率和注释行数,
+然后为每个年份生成一个包含文件名频率的CSV文件,
+同时输出每个年份的文件和注释的统计信息。
+"""
 
 def parse_time_info(file_path):
     """

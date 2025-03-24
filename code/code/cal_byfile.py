@@ -4,6 +4,11 @@ import re
 import csv
 from collections import Counter, defaultdict
 
+"""
+该脚本提取并统计每年项目中的函数、变量、注释等信息,
+并将结果按年份存储为CSV文件,
+对于无法解析的文件，它会将错误记录到日志中
+"""
 
 def parse_time_info(file_path):
     """解析 time_info.txt，返回 {python_file_path: 年份}"""

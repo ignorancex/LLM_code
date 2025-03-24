@@ -3,6 +3,9 @@ import ast
 import csv
 from collections import Counter
 
+"""
+统计函数名和变量名在多少个repo中出现过,而不是一共出现了多少次
+"""
 
 def extract_code_info(file_path, skipped_files_log):
     """解析 Python 代码，提取函数名、变量名"""
