@@ -129,7 +129,6 @@ def analyze_code(code):
     function_starts = [i for i, line in enumerate(lines) if re.match(function_pattern, line)]
     for start_line in function_starts:
         length = 0
-        nesting_level = 0
         i = start_line
         while i < len(lines):
             line = lines[i]
@@ -182,8 +181,6 @@ def analyze_code(code):
 
     total_code_lines = code_lines + comment_lines
     metrics["comment_ratio"] = comment_lines / total_code_lines if total_code_lines > 0 else 0.0
-    print(code_lines)
-    print(comment_lines)
     return metrics
 
 
