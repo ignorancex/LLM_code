@@ -3,8 +3,8 @@ import json
 
 # 目录和文件路径
 year = "2022"
-repo_base_path = f"LLM_code/code_analyze/dataset/github_code/{year}"
-json_file_path = f"LLM_code/code_analyze/dataset/github_links/link_{year}.json"
+repo_base_path = f"github_code/{year}"
+json_file_path = f"link_{year}_new.json"
 output_file_path = f"add_{year}.json"
 
 # 读取 JSON 文件

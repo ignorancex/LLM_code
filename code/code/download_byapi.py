@@ -4,10 +4,13 @@ import json
 
 # GitHub Token（建议用环境变量）
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN",
-                         "token")
+                         "YOUR_TOKEN")
+
+
+year = "2022"
 
 # 所有代码存放的主目录
-BASE_DIR = "github_code/2020"
+BASE_DIR = f"github_code/{year}"
 
 
 def download_file(url, save_path):
@@ -112,4 +115,5 @@ def process_github_links(json_file):
 
 
 # 使用示例
-process_github_links("link_2020.json")
+# process_github_links(f"link_{year}_new.json")
+process_github_links(f"add_{year}.json")
