@@ -1,0 +1,12 @@
+01_write_out_astep_all.py: 2020-12-04T08:38:08Z
+01_write_out_bring_all.py: 2020-10-30T14:42:47Z
+01_write_out_brite_all.py: 2021-02-11T16:39:55Z
+02_write_out_binned_flux.py: 2021-02-10T13:40:06Z
+03_fit_tilted_thin_disk_model_chisq.py: 2021-02-10T13:40:06Z
+04_cpdfit_combined.py: 2021-02-10T13:40:06Z
+05_fit_1981_all_data_with_offset.py: 2021-02-10T13:40:06Z
+06_plot_all_binned_photometry.py: 2021-02-10T13:40:06Z
+betapic.py: 2021-02-10T13:40:06Z
+exorings3.py: 2020-10-30T14:42:47Z
+kepler3.py: 2020-10-30T14:42:47Z
+lecavelierdesetangs1995/plot_lecavelierdesetangs1995.py: 2021-02-05T08:26:40Z

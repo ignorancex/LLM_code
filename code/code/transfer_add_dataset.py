@@ -2,8 +2,9 @@ import os
 import shutil
 
 # 原始路径和目标路径
-src_dir = 'github_code/2020'
-dst_dir = 'LLM_code/dataset/github_code/2020'
+year = '2024'
+src_dir = f'github_code/{year}'
+dst_dir = f'LLM_code/dataset/github_code/{year}'
 
 # 创建目标目录（如果不存在）
 os.makedirs(dst_dir, exist_ok=True)

@@ -1,0 +1,10 @@
+config.py: 2020-05-14T01:33:22Z
+main.py: 2020-05-14T01:33:22Z
+qanet/__init__.py: 2020-05-14T01:37:32Z
+qanet/cnn.py: 2020-05-14T01:36:48Z
+qanet/context_query_attention.py: 2020-05-14T01:36:48Z
+qanet/encoder.py: 2020-05-14T01:36:48Z
+qanet/position_encoding.py: 2020-05-14T01:36:48Z
+qanet/self_attention.py: 2020-05-14T01:36:48Z
+qanet/tvqanet.py: 2020-05-14T01:36:48Z
+tvqa_dataset.py: 2020-05-14T01:33:22Z

@@ -1,0 +1,8 @@
+SOFT/kernel/__init__.py: 2022-07-04T17:01:57Z
+SOFT/kernel/inverse.py: 2022-07-04T17:01:57Z
+SOFT/kernel/subtraction.py: 2021-09-11T11:22:51Z
+main.py: 2021-11-13T11:41:49Z
+models/__init__.py: 2021-10-19T05:04:16Z
+models/softmax_free_transformer.py: 2022-07-04T17:13:21Z
+models/softmax_free_vision_transformer.py: 2022-07-04T17:13:21Z
+setup.py: 2021-10-19T04:43:42Z

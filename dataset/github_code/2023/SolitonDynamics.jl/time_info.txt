@@ -1,0 +1,11 @@
+scripts/gva.py: 2025-02-14T14:57:03Z
+scripts/laguerre-gauss/plot.py: 2024-11-29T16:43:43Z
+scripts/laguerre-gauss/plotting_base.py: 2024-11-29T16:43:43Z
+scripts/laguerre-gauss/watch_plot.py: 2024-11-29T16:43:43Z
+scripts/npse_quench/phase_diagram.py: 2025-02-25T09:12:07Z
+scripts/npse_quench/plot.py: 2025-02-25T09:11:42Z
+scripts/npse_quench/plotting_base.py: 2025-02-25T09:11:42Z
+scripts/npse_quench/watch_phase_diagram.py: 2025-02-25T09:11:42Z
+scripts/npse_quench/watch_plot.py: 2025-02-25T09:11:42Z
+scripts/phase_diagram_kl.py: 2025-02-25T09:11:42Z
+scripts/phase_diagram_v0.py: 2025-02-25T09:11:42Z

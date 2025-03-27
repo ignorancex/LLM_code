@@ -1,0 +1,17 @@
+defsent/__init__.py: 2021-08-02T17:24:21Z
+defsent/model.py: 2021-08-02T17:24:21Z
+defsent/pooling.py: 2021-08-02T17:24:21Z
+examples/src/demo_def2word.py: 2021-08-02T17:24:21Z
+experiments/main.py: 2021-08-01T05:30:58Z
+experiments/src/data_module.py: 2021-08-02T17:24:21Z
+experiments/src/dataset.py: 2021-08-02T17:24:21Z
+experiments/src/evaluation/__init__.py: 2021-08-02T17:24:21Z
+experiments/src/evaluation/def2word.py: 2021-08-02T17:24:21Z
+experiments/src/evaluation/senteval.py: 2021-08-01T05:30:58Z
+experiments/src/evaluation/sts.py: 2021-08-02T17:24:21Z
+experiments/src/experiment.py: 2021-08-02T17:24:21Z
+experiments/src/lr_scheduler.py: 2021-08-02T17:24:21Z
+experiments/src/model.py: 2021-08-02T17:24:21Z
+experiments/src/pooling.py: 2021-08-02T17:24:21Z
+experiments/src/scripts/extract_data_from_ishiwatari.py: 2021-08-01T05:30:58Z
+experiments/src/utils.py: 2021-08-02T17:24:21Z

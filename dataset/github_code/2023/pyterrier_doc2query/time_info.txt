@@ -1,0 +1,5 @@
+pyterrier_doc2query/__init__.py: 2024-12-14T20:24:54Z
+pyterrier_doc2query/artefact.py: 2023-07-20T20:16:35Z
+pyterrier_doc2query/filtering.py: 2024-12-14T20:24:54Z
+pyterrier_doc2query/stores.py: 2024-12-14T20:24:54Z
+tests/test_transform.py: 2022-10-28T11:54:33Z

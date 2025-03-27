@@ -1,0 +1,8 @@
+gpsd/__init__.py: 2023-04-03T11:18:42Z
+gpsd/gpc/__init__.py: 2023-04-03T11:18:42Z
+gpsd/gpc/data_centric.py: 2023-04-03T12:04:43Z
+gpsd/gpc/distribution_centric.py: 2023-05-16T12:28:08Z
+gpsd/gpr/__init__.py: 2023-04-03T11:18:42Z
+gpsd/gpr/data_centric.py: 2023-05-16T12:28:08Z
+gpsd/gpr/distribution_centric.py: 2023-05-16T12:28:08Z
+setup.py: 2023-04-25T11:49:18Z

@@ -1,0 +1,11 @@
+task1/generate_evalfile.py: 2020-05-06T13:15:30Z
+task1/model.py: 2020-05-06T13:15:30Z
+task1/process.py: 2020-05-06T13:15:30Z
+task1/train.py: 2020-05-06T13:15:30Z
+task1/utils.py: 2020-05-06T13:15:30Z
+task2/models.py: 2020-05-06T13:15:30Z
+task2/predict.py: 2020-05-06T13:15:30Z
+task2/process.py: 2020-05-06T13:15:30Z
+task2/train.py: 2020-11-20T13:52:47Z
+task2/utils.py: 2020-05-06T13:15:30Z
+task2/verify_output.py: 2020-05-06T13:15:30Z

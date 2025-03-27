@@ -1,0 +1,14 @@
+1D/architecture.py: 2020-11-11T02:12:39Z
+1D/data.py: 2020-11-11T02:12:39Z
+1D/fit.py: 2020-11-11T02:12:39Z
+1D/main.py: 2020-11-11T02:12:39Z
+1D/test_model.py: 2020-11-11T02:12:39Z
+2D/architecture.py: 2020-11-11T02:12:39Z
+2D/compute_number_modes.py: 2020-11-11T02:12:39Z
+2D/data.py: 2020-11-11T02:12:39Z
+2D/data/generate_fields.py: 2020-11-11T02:12:39Z
+2D/data/generate_fields_test.py: 2020-11-11T02:12:39Z
+2D/data/generate_fields_with_astrophysics.py: 2020-11-11T02:12:39Z
+2D/main_maps.py: 2020-11-11T02:12:39Z
+2D/saliency_maps.py: 2020-11-11T02:12:39Z
+2D/test_maps.py: 2020-11-11T02:12:39Z

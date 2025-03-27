@@ -1,0 +1,8 @@
+Evalution/API_Openai.py: 2024-09-06T13:06:24Z
+Evalution/API_test.py: 2024-08-07T14:49:35Z
+Evalution/check_gpu.py: 2024-08-30T06:49:04Z
+Evalution/check_gpu_4GPU.py: 2024-08-17T07:39:21Z
+Evalution/check_gpu_4GPU_2.py: 2024-08-17T09:29:36Z
+Evalution/eval.py: 2025-02-06T03:25:13Z
+Evalution/inference.py: 2024-08-17T10:36:08Z
+Evalution/inference_API.py: 2024-08-17T08:37:06Z

@@ -1,0 +1,13 @@
+nvratemodel/GLOBAL.py: 2024-05-07T11:10:07Z
+nvratemodel/__init__.py: 2024-02-16T14:59:25Z
+nvratemodel/examples/__init__.py: 2023-06-28T17:41:06Z
+nvratemodel/examples/example_PRB_Fig3b.py: 2024-05-21T05:48:29Z
+nvratemodel/examples/example_PRB_Fig4h.py: 2024-05-21T05:48:29Z
+nvratemodel/examples/example_PRB_Fig7a.py: 2024-05-21T05:48:29Z
+nvratemodel/examples/example_PRB_Fig7b.py: 2024-05-21T05:48:29Z
+nvratemodel/examples/example_PRL_Fig3a.py: 2024-05-21T05:48:29Z
+nvratemodel/src/__init__.py: 2023-06-28T17:41:17Z
+nvratemodel/src/auxRoutines.py: 2023-09-21T12:55:32Z
+nvratemodel/src/core.py: 2024-05-21T05:48:29Z
+nvratemodel/src/simulationRoutines.py: 2024-05-21T05:48:29Z
+setup.py: 2023-12-21T12:10:16Z

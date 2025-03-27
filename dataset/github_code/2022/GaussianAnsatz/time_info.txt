@@ -1,0 +1,15 @@
+Architectures/__init__.py: 2022-03-03T21:19:01Z
+JEC/DNN.py: 2023-04-17T18:27:43Z
+JEC/EFN.py: 2023-04-17T18:27:43Z
+JEC/JEC_utils.py: 2022-05-12T17:35:00Z
+JEC/PFN.py: 2023-04-17T18:27:43Z
+JEC/PFN_PID.py: 2023-04-17T18:27:43Z
+JEC/config.py: 2022-01-05T03:56:31Z
+JEC/download_dataset.py: 2023-04-17T18:27:43Z
+JEC/plots.py: 2022-01-05T20:50:25Z
+src/GaussianAnsatz/__init__.py: 2023-04-15T20:02:59Z
+src/GaussianAnsatz/_version.py: 2023-04-17T18:27:43Z
+src/GaussianAnsatz/archs.py: 2023-04-17T18:27:43Z
+src/GaussianAnsatz/dnn.py: 2023-04-17T18:27:43Z
+src/GaussianAnsatz/factorizer.py: 2023-04-15T20:02:59Z
+src/GaussianAnsatz/utils.py: 2023-04-17T18:27:43Z

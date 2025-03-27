@@ -1,0 +1,7 @@
+preformat iam/preformat_iam.py: 2021-02-16T09:43:09Z
+source/format_data.py: 2021-02-16T09:43:09Z
+source/main.py: 2021-02-16T09:43:09Z
+source/models.py: 2021-02-16T09:43:09Z
+source/ocr.py: 2021-02-16T09:43:09Z
+source/ocr_dataset.py: 2021-02-16T09:43:09Z
+source/utils.py: 2021-02-16T09:43:09Z

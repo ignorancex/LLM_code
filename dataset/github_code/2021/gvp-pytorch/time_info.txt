@@ -1,0 +1,8 @@
+gvp/__init__.py: 2021-07-14T01:05:39Z
+gvp/atom3d.py: 2021-07-14T01:00:51Z
+gvp/data.py: 2021-04-30T22:29:18Z
+gvp/models.py: 2021-04-30T22:29:18Z
+run_atom3d.py: 2021-07-14T01:00:51Z
+run_cpd.py: 2021-04-30T22:29:18Z
+setup.py: 2021-07-14T01:00:51Z
+test_equivariance.py: 2021-07-14T01:00:51Z

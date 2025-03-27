@@ -1,0 +1,10 @@
+DataGenerator.py: 2024-01-08T08:31:45Z
+Extension/BaseNetwork_3.py: 2023-12-21T14:01:33Z
+ExternalModules.py: 2024-01-08T08:31:45Z
+ModelNetworks/BaseNetwork_3.py: 2023-04-05T17:34:20Z
+ModelNetworks/config.py: 2021-01-24T06:20:31Z
+ModelNetworks/deformable_conv.py: 2021-01-24T06:20:31Z
+ResNet.py: 2024-01-08T08:31:45Z
+Testing.py: 2024-01-08T08:31:45Z
+Training.py: 2023-12-08T14:42:27Z
+deformable_conv.py: 2021-01-24T06:20:31Z

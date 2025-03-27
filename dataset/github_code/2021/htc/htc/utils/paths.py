@@ -1,0 +1,154 @@
+# SPDX-FileCopyrightText: 2022 Division of Intelligent Medical Systems, DKFZ
+# SPDX-License-Identifier: MIT
+
+import argparse
+from collections.abc import Callable
+from pathlib import Path
+
+from htc.models.data.DataSpecification import DataSpecification
+from htc.settings import settings
+from htc.settings_seg import settings_seg
+from htc.tivita.DataPath import DataPath
+from htc.utils.LabelMapping import LabelMapping
+
+
+def filter_semantic_labels_only(path: "DataPath") -> bool:
+    labels = path.annotated_labels()
+    if any(l in settings_seg.labels[1:] for l in labels):
+        # We are only interested in images with one of the organs which we use for training (without background)
+        return True
+    else:
+        return False
+
+
+def filter_min_labels(path: "DataPath", min_labels: int = 1) -> bool:
+    labels = path.annotated_labels(annotation_name="all")
+    if len(labels) >= min_labels:
+        return True
+    else:
+        return False
+
+
+def filter_labels(path: "DataPath", mapping: LabelMapping) -> bool:
+    labels = set(mapping.label_names(all_names=True))
+    return len(set(path.annotated_labels()).intersection(labels)) > 0
+
+
+def filter_is_in_situ(p: DataPath) -> bool:
+    label_meta_data = p.meta("label_meta")
+    if label_meta_data is None:
+        # An image is in_situ per default
+        return True
+
+    for label_meta in label_meta_data.values():
+        if label_meta.get("in_situ", True) is True:
+            return True
+
+    return False
+
+
+def all_masks_paths() -> list[DataPath]:
+    paths = list(DataPath.iterate(settings.data_dirs.masks))
+    paths += list(DataPath.iterate(settings.data_dirs.masks / "overlap"))
+
+    return paths
+
+
+class ParserPreprocessing:
+    def __init__(self, description: str, inplace: bool = False):
+        """
+        Helper class for the preprocessing scripts.
+
+        Args:
+            description: A short description of what the preprocessing script does.
+            inplace: Set this to true if your preprocessing scripts operates in-place and hence does not need an output path.
+        """
+        self.inplace = inplace
+        self.parser = argparse.ArgumentParser(
+            description=description, formatter_class=argparse.ArgumentDefaultsHelpFormatter
+        )
+        self.parser.add_argument(
+            "--spec",
+            required=False,
+            type=Path,
+            default=None,
+            help=(
+                "Path or name to the data specification file in which case all paths from this file will be used"
+                " (including the test set). Please note that you should still either provide the --dataset-name"
+                " argument for a default intermediates folder or the --output-path argument."
+            ),
+        )
+        self.parser.add_argument(
+            "--dataset-path",
+            required=False,
+            type=Path,
+            default=None,
+            help=(
+                "Path to the directory from which DataPaths should be collected (e.g. an existing data directory)."
+                " Please note that you should still either provide the --dataset-name argument for a default"
+                " intermediates folder or the --output-path argument."
+            ),
+        )
+        self.parser.add_argument(
+            "--dataset-name",
+            required=False,
+            default=None,
+            help=(
+                "Name of the dataset (e.g. name of the corresponding folder on the network drive). This will be used to"
+                " set the default intermediates directory, i.e. the generated files will be stored in the intermediates"
+                " directory corresponding to the given dataset name (if --output-path is not given). If both --spec and"
+                " --dataset-path are None, then the paths will be collected from the dataset."
+            ),
+        )
+        self.parser.add_argument(
+            "--output-path",
+            required=False,
+            type=Path,
+            default=None,
+            help=(
+                "Path to the directory where the generated files should be stored (e.g."
+                " '...intermediates/preprocessing' to store parameter images in"
+                " '...intermediates/preprocessing/parameter_images')."
+            ),
+        )
+        self.parser.add_argument(
+            "--file-type",
+            default="blosc",
+            choices=["npy", "blosc"],
+            help="Output file type for scripts which produce one file per image (e.g. L1 preprocessing).",
+        )
+        self.parser.add_argument(
+            "--regenerate",
+            action="store_true",
+            default=False,
+            help=(
+                "To regenerate the files, even if the files are already stored in the output location (for scripts with"
+                " output files e.g. L1 processing)."
+            ),
+        )
+
+    def get_paths(self, filters: list[Callable[["DataPath"], bool]] | None = None) -> list[DataPath]:
+        self.args = self.parser.parse_args()
+        if self.args.spec is not None:
+            assert self.args.dataset_path is None, "--dataset-path is not used if --spec is given"
+            specs = DataSpecification(self.args.spec)
+            specs.activate_test_set()
+            paths = specs.paths()
+        elif self.args.dataset_path is not None:
+            assert self.args.spec is None, "--spec is not used if --dataset-path is given"
+            paths = list(DataPath.iterate(self.args.dataset_path))
+        else:
+            paths = list(DataPath.iterate(settings.data_dirs[self.args.dataset_name], filters))
+            if (overlap_dir := settings.data_dirs[self.args.dataset_name] / "overlap").exists():
+                paths += list(DataPath.iterate(overlap_dir, filters))
+
+        if self.args.dataset_name is not None:
+            # From now on, we write to the intermediates directory of the selected dataset
+            settings.intermediates_dir_all.set_default_location(self.args.dataset_name)
+        else:
+            assert self.inplace or self.args.output_path is not None, (
+                "Either --dataset-name or --output-path must be given (we need to know where the generated files should"
+                " be stored)"
+            )
+
+        return paths

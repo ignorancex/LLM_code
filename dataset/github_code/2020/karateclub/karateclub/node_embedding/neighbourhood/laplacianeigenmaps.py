@@ -1,0 +1,54 @@
+import numpy as np
+import networkx as nx
+import scipy.sparse as sps
+from karateclub.estimator import Estimator
+
+
+class LaplacianEigenmaps(Estimator):
+    r"""An implementation of `"Laplacian Eigenmaps" <https://papers.nips.cc/paper/1961-laplacian-eigenmaps-and-spectral-techniques-for-embedding-and-clustering>`_
+    from the NIPS '01 paper "Laplacian Eigenmaps and Spectral Techniques for Embedding and Clustering".
+    The procedure extracts the eigenvectors corresponding to the largest eigenvalues
+    of the graph Laplacian. These vectors are used as the node embedding.
+
+    Args:
+        dimensions (int): Dimensionality of embedding. Default is 128.
+        maximum_number_of_iterations (int): Maximum number of iterations to execute with ARPACK. The value will be multiplied by the number of nodes.
+        seed (int): Random seed value. Default is 42.
+    """
+
+    def __init__(
+        self,
+        dimensions: int = 128,
+        maximum_number_of_iterations: int = 100,
+        seed: int = 42
+    ):
+        self.dimensions = dimensions
+        self.maximum_number_of_iterations = maximum_number_of_iterations
+        self.seed = seed
+
+    def fit(self, graph: nx.classes.graph.Graph):
+        """
+        Fitting a Laplacian EigenMaps model.
+
+        Arg types:
+            * **graph** *(NetworkX graph)* - The graph to be embedded.
+        """
+        self._set_seed()
+        graph = self._check_graph(graph)
+        number_of_nodes = graph.number_of_nodes()
+        L_tilde = nx.normalized_laplacian_matrix(graph, nodelist=range(number_of_nodes))
+        _, self._embedding = sps.linalg.eigsh(
+            L_tilde,
+            k=self.dimensions,
+            which="SM",
+            maxiter=self.maximum_number_of_iterations * number_of_nodes,
+            return_eigenvectors=True
+        )
+
+    def get_embedding(self) -> np.array:
+        r"""Getting the node embedding.
+
+        Return types:
+            * **embedding** *(Numpy array)* - The embedding of nodes.
+        """
+        return self._embedding

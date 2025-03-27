@@ -1,7 +1,7 @@
 import os
 
 # 目标路径
-year = "2022"  # 可以修改年份
+year = "2024"  # 可以修改年份
 repo_base_path = f"github_code/{year}"
 
 # 检查路径是否存在

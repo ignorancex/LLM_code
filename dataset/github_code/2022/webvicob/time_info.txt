@@ -1,0 +1,7 @@
+tests/test_basic.py: 2023-02-11T05:39:29Z
+webvicob/__init__.py: 2022-11-04T03:38:33Z
+webvicob/lmdb_maker.py: 2023-02-11T03:26:36Z
+webvicob/shrinkbox.py: 2023-02-11T03:26:36Z
+webvicob/wikipedia/__init__.py: 2022-11-04T03:38:33Z
+webvicob/wikipedia/chunker.py: 2023-02-21T22:40:18Z
+webvicob/wikipedia/wikipedia.py: 2023-02-11T06:07:16Z

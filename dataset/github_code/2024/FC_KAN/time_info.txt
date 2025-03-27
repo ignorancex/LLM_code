@@ -1,0 +1,13 @@
+file_io.py: 2024-12-06T06:50:35Z
+models/__init__.py: 2024-12-06T06:56:38Z
+models/bsrbf_kan.py: 2024-09-02T11:02:19Z
+models/efficient_kan.py: 2024-09-02T11:02:19Z
+models/fast_kan.py: 2024-09-02T11:02:19Z
+models/faster_kan.py: 2024-09-02T11:02:19Z
+models/fc_kan.py: 2025-02-24T04:30:41Z
+models/functions.py: 2024-12-06T06:51:28Z
+models/gottlieb_kan.py: 2024-09-02T11:02:19Z
+models/mlp.py: 2024-09-02T11:02:19Z
+models/skan.py: 2024-12-06T06:51:28Z
+models/wav_kan.py: 2024-09-02T11:02:19Z
+run.py: 2024-12-06T06:56:20Z

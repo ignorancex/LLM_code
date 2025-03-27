@@ -1,0 +1,14 @@
+DataCollection/distributed/LUMI_LKOKKOS_VQE/qchem.py: 2024-03-01T22:01:15Z
+DataCollection/distributed/Perlmutter_LGPU_MPI/sampling_results/test_sample_script.py: 2024-03-01T22:01:15Z
+DataCollection/distributed/Perlmutter_LGPU_MPI/sel_gradient_results/test_sel_adj.py: 2024-03-01T22:01:15Z
+DataCollection/distributed/Perlmutter_LGPU_QAOA/QAOA_QCUT_BATCHED_CUDA12/common_utils.py: 2024-03-01T22:01:15Z
+DataCollection/distributed/Perlmutter_LGPU_QAOA/QAOA_QCUT_BATCHED_CUDA12/qaoa_workload_ray.py: 2024-03-01T22:01:15Z
+DataCollection/distributed/Perlmutter_LGPU_QAOA/QAOA_QCUT_ONDEMAND_CUDA12/common_utils.py: 2024-03-01T22:01:15Z
+DataCollection/distributed/Perlmutter_LGPU_QAOA/QAOA_QCUT_ONDEMAND_CUDA12/qaoa_workload_ray.py: 2024-03-01T22:01:15Z
+DataCollection/single_node/VQE/genplot.py: 2024-03-01T22:01:15Z
+DataCollection/single_node/VQE/lightning_gpu/bench.py: 2024-03-01T22:01:15Z
+DataCollection/single_node/VQE/lightning_kokkos/bench.py: 2024-03-01T22:01:15Z
+DataCollection/single_node/VQE/lightning_kokkos_openmp/bench.py: 2024-03-01T22:01:15Z
+DataCollection/single_node/VQE/lightning_kokkos_openmp/genplot.py: 2024-03-01T22:01:15Z
+DataCollection/single_node/VQE/lightning_qubit/bench.py: 2024-03-01T22:01:15Z
+DataCollection/single_node/VQE/lightning_qubit/genplot.py: 2024-03-01T22:01:15Z

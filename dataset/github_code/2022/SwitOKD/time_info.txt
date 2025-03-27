@@ -1,0 +1,41 @@
+SwitOKD_code/CIFAR-10/WRN-16-1_8/main.py: 2022-11-07T04:05:42Z
+SwitOKD_code/CIFAR-10/WRN-16-1_8/models/__init__.py: 2022-11-01T02:47:32Z
+SwitOKD_code/CIFAR-10/WRN-16-1_8/models/resnet20.py: 2022-11-01T08:07:12Z
+SwitOKD_code/CIFAR-10/WRN-16-1_8/models/wrnet16_1.py: 2022-11-01T02:47:32Z
+SwitOKD_code/CIFAR-10/WRN-16-1_8/models/wrnet16_8.py: 2022-11-01T02:47:32Z
+SwitOKD_code/CIFAR-100/WRN16-2_0.5mobilenetv2/main.py: 2022-11-07T04:01:41Z
+SwitOKD_code/CIFAR-100/WRN16-2_0.5mobilenetv2/models/__init__.py: 2022-11-01T02:47:32Z
+SwitOKD_code/CIFAR-100/WRN16-2_0.5mobilenetv2/models/mobilenetv2.py: 2022-11-01T02:47:32Z
+SwitOKD_code/CIFAR-100/WRN16-2_0.5mobilenetv2/models/wrn-40-2.py: 2023-03-17T08:41:10Z
+SwitOKD_code/CIFAR-100/WRN16-2_0.5mobilenetv2/models/wrnet.py: 2022-11-01T02:47:32Z
+SwitOKD_code/ImageNet/ResNet18_34/folder2lmdb.py: 2022-11-01T03:27:14Z
+SwitOKD_code/ImageNet/ResNet18_34/main.py: 2022-11-01T08:41:04Z
+SwitOKD_code/ImageNet/ResNet18_34/models/resnet18.py: 2022-11-01T03:27:14Z
+SwitOKD_code/ImageNet/ResNet18_34/models/resnet34.py: 2022-11-01T03:27:14Z
+SwitOKD_code/Tiny-ImageNet/Test/SwitOKD/main.py: 2022-11-01T07:29:18Z
+SwitOKD_code/Tiny-ImageNet/Test/SwitOKD/models/__init__.py: 2022-11-01T07:29:18Z
+SwitOKD_code/Tiny-ImageNet/Test/SwitOKD/models/mobilenet_v2/__init__.py: 2022-11-01T07:29:18Z
+SwitOKD_code/Tiny-ImageNet/Test/SwitOKD/models/mobilenet_v2/conv_bn_relu.py: 2022-11-01T07:29:18Z
+SwitOKD_code/Tiny-ImageNet/Test/SwitOKD/models/mobilenet_v2/inverted_residual.py: 2022-11-01T07:29:18Z
+SwitOKD_code/Tiny-ImageNet/Test/SwitOKD/models/mobilenet_v2/mobilenet_v2.py: 2022-11-01T07:29:18Z
+SwitOKD_code/Tiny-ImageNet/Test/SwitOKD/models/resnet34.py: 2022-11-01T07:29:18Z
+SwitOKD_code/Tiny-ImageNet/Test/SwitOKD/tiny_imagenet.py: 2022-11-01T07:29:18Z
+SwitOKD_code/Tiny-ImageNet/Train/SwitOKD/main.py: 2022-11-01T07:29:18Z
+SwitOKD_code/Tiny-ImageNet/Train/SwitOKD/models/__init__.py: 2022-11-01T07:29:18Z
+SwitOKD_code/Tiny-ImageNet/Train/SwitOKD/models/mobilenet_v2/__init__.py: 2022-11-01T07:29:18Z
+SwitOKD_code/Tiny-ImageNet/Train/SwitOKD/models/mobilenet_v2/conv_bn_relu.py: 2022-11-01T07:29:18Z
+SwitOKD_code/Tiny-ImageNet/Train/SwitOKD/models/mobilenet_v2/inverted_residual.py: 2022-11-01T07:29:18Z
+SwitOKD_code/Tiny-ImageNet/Train/SwitOKD/models/mobilenet_v2/mobilenet_v2.py: 2022-11-01T07:29:18Z
+SwitOKD_code/Tiny-ImageNet/Train/SwitOKD/models/resnet20.py: 2023-03-17T08:42:08Z
+SwitOKD_code/Tiny-ImageNet/Train/SwitOKD/models/resnet34.py: 2022-11-01T07:29:18Z
+SwitOKD_code/Tiny-ImageNet/Train/SwitOKD/tiny_imagenet.py: 2022-11-01T07:29:18Z
+SwitOKD_code/multi-net results (table 7)/1T2S/CIFAR_100_wrn16-10_wrn16-2_mobilenet/main.py: 2022-11-01T14:31:04Z
+SwitOKD_code/multi-net results (table 7)/1T2S/CIFAR_100_wrn16-10_wrn16-2_mobilenet/models/__init__.py: 2022-11-01T13:41:14Z
+SwitOKD_code/multi-net results (table 7)/1T2S/CIFAR_100_wrn16-10_wrn16-2_mobilenet/models/mobilenet.py: 2022-11-01T13:41:14Z
+SwitOKD_code/multi-net results (table 7)/1T2S/CIFAR_100_wrn16-10_wrn16-2_mobilenet/models/wrnet.py: 2022-11-01T13:41:14Z
+SwitOKD_code/multi-net results (table 7)/1T2S/CIFAR_100_wrn16-10_wrn16-2_mobilenet/models/wrnet2.py: 2022-11-01T13:41:14Z
+SwitOKD_code/multi-net results (table 7)/2T1S/CIFAR_100_wrn16-10_wrn16-2_mobilenet/main.py: 2022-11-01T14:38:13Z
+SwitOKD_code/multi-net results (table 7)/2T1S/CIFAR_100_wrn16-10_wrn16-2_mobilenet/models/__init__.py: 2022-11-01T13:41:14Z
+SwitOKD_code/multi-net results (table 7)/2T1S/CIFAR_100_wrn16-10_wrn16-2_mobilenet/models/mobilenet.py: 2022-11-01T13:41:14Z
+SwitOKD_code/multi-net results (table 7)/2T1S/CIFAR_100_wrn16-10_wrn16-2_mobilenet/models/wrnet.py: 2022-11-01T13:41:14Z
+SwitOKD_code/multi-net results (table 7)/2T1S/CIFAR_100_wrn16-10_wrn16-2_mobilenet/models/wrnet2.py: 2022-11-01T13:41:14Z

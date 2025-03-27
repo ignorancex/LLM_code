@@ -1,0 +1,3 @@
+M2/Macaulay2/docs/conf.py: 2020-05-05T13:23:27Z
+M2/Macaulay2/packages/MonodromySolver/under-construction-examples/deprecated-examples/M2-test-wrapper.py: 2017-05-23T16:16:29Z
+M2/Macaulay2/packages/MonodromySolver/under-construction-examples/deprecated-examples/katsuraComparison.py: 2017-05-23T16:16:29Z

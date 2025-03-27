@@ -1,0 +1,15 @@
+__init__.py: 2020-11-02T10:55:58Z
+download_glue_data.py: 2020-11-02T10:55:58Z
+flow/__init__.py: 2020-11-02T10:55:58Z
+flow/config/dump_config.py: 2020-11-02T10:55:58Z
+flow/glow_1x1.py: 2020-11-02T10:55:58Z
+flow/glow_init_hook.py: 2020-11-02T10:55:58Z
+flow/glow_ops_1x1.py: 2020-11-02T10:55:58Z
+modeling.py: 2020-11-02T10:55:58Z
+optimization.py: 2020-11-02T10:55:58Z
+optimization_bert_flow.py: 2020-11-02T10:55:58Z
+run_siamese.py: 2020-11-02T10:55:58Z
+scripts/eval_stsb.py: 2020-11-25T07:07:19Z
+siamese_utils.py: 2020-11-02T10:55:58Z
+tokenization.py: 2020-11-02T10:55:58Z
+tokenization_test.py: 2020-11-02T10:55:58Z
