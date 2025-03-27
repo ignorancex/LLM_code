@@ -7,6 +7,7 @@ GITHUB_TOKEN = os.getenv("GITHUB_TOKEN",
                          "YOUR_TOKEN")
 
 
+
 year = "2022"
 
 # 所有代码存放的主目录
