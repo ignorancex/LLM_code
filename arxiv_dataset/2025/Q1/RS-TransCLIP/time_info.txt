@@ -1,0 +1,10 @@
+TransCLIP_solver/TransCLIP.py: 2024-08-15T22:41:43Z
+TransCLIP_solver/TransCLIP_inference.py: 2024-08-15T22:41:43Z
+TransCLIP_solver/TransCLIP_utils.py: 2024-08-15T22:41:43Z
+averageprompt_generator/averageprompt.py: 2024-08-15T22:41:43Z
+feature_generator/featuregeneration.py: 2024-08-15T22:41:43Z
+run_TransCLIP.py: 2024-08-15T22:41:43Z
+run_averageprompt.py: 2024-08-15T22:41:43Z
+run_dataset_download.py: 2025-02-06T08:30:03Z
+run_dataset_formatting.py: 2024-09-01T10:40:21Z
+run_featuregeneration.py: 2024-08-15T22:41:43Z

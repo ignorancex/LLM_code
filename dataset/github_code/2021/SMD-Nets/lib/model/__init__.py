@@ -1,2 +1,0 @@
-from .SMDHead import SMDHead
-

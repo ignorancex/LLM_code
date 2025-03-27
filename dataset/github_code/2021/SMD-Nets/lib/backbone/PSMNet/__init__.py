@@ -1,2 +1,0 @@
-from .stackhourglass import PSMNet
-

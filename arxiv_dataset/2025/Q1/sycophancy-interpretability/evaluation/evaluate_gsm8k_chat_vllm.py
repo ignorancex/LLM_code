@@ -1,0 +1,155 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+'''
+Author             : 陈蔚 (cy424151@alibaba-inc.com)
+Date               : 2024-10-17 21:52
+Last Modified By   : 殊理 (husile.hsl@alibaba-inc.com)
+Last Modified Date : 2024-10-18 15:34
+Description        : 
+-------- 
+Copyright (c) 2024 Alibaba Inc. 
+'''
+
+import argparse
+import json
+import math
+import os
+from typing import Dict
+
+from tqdm import tqdm
+from vllm import SamplingParams
+
+from utils import EOS_TOKEN_LIST
+from utils import build_model_tokenizer, construct_text_from_messages, filter_already_generated, read_jsonl, extract_answer_last_digits
+
+"""
+python evaluate_gsm8k_chat_vllm.py \
+    --model_path /path/to/model \
+    --data_path datasets/gsm8k_test.jsonl \
+    --tensor_parallel_size 4
+"""
+
+
+def construct_messages(datapoint: Dict) -> Dict:
+    """Construct messages for vllm."""
+
+    messages = [{"role": "system", "content": "You are a helpful assistant."}]
+
+    # Insert prompt
+    messages.append({"role": "user", "content": datapoint["question"]})
+    
+    return messages
+
+def is_correct(completion, answer):
+    """Test if the completion is correct."""
+
+    gold = extract_answer_last_digits(answer)
+    assert gold is not None, "No ground truth answer found in the document."
+
+    def number_equal(answer, pred):
+        if pred is None:
+            return False
+        try:
+            return math.isclose(eval(answer), eval(pred), rel_tol=0, abs_tol=1e-4)
+        except:
+            print(
+                f"cannot compare two numbers: answer={answer}, pred={pred}", flush=True
+            )
+            return False
+
+    return number_equal(gold, extract_answer_last_digits(completion))
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description=
+        "Example of using Huggingface transformers to generate text.")
+
+    parser.add_argument('--model_path',
+                        type=str,
+                        required=True,
+                        help='Path to the model.')
+    parser.add_argument('--data_path',
+                        type=str,
+                        required=True,
+                        help='Path to the data.')
+    parser.add_argument('--output_dir',
+                        type=str,
+                        default='results/gsm8k',
+                        help='Path to save the output.')
+    parser.add_argument('--torch_dtype',
+                        type=str,
+                        default='float16',
+                        choices=['float16', 'bfloat16', 'float32'])
+    parser.add_argument('--tensor_parallel_size',
+                        type=int,
+                        default=1,
+                        help='Tensor parallel size.')
+    parser.add_argument('--batch_size', type=int, default=128)
+
+    args = parser.parse_args()
+
+    model_path = args.model_path.rstrip('/')
+    data_path = args.data_path
+    torch_dtype = args.torch_dtype
+    batch_size = args.batch_size
+
+    output_dir = args.output_dir
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+    output_path = os.path.join(output_dir,
+                               os.path.basename(model_path) + '.jsonl')
+    
+    all_data = read_jsonl(data_path)
+
+    # Filter already generated data
+    if os.path.exists(output_path):
+        print(
+            f"Found existing output file {output_path}, skipping already generated data."
+        )
+        all_data, already_generated_data = filter_already_generated(all_data, output_path, 'question')
+    else:
+        already_generated_data = []
+
+    all_acc = [item['is_correct'] for item in already_generated_data]
+
+    # Prepare model, tokenizer and generation configuration
+    model, tokenizer = build_model_tokenizer(model_path, torch_dtype,
+                                             args.tensor_parallel_size)
+    sampling_params = SamplingParams(temperature=0.,
+                                     top_p=.95,
+                                     max_tokens=1024,
+                                     stop=EOS_TOKEN_LIST +
+                                     [tokenizer.eos_token])
+
+    pbar = tqdm(range(0, len(all_data), batch_size), desc="Generating answers")
+    for index in pbar:
+        batch_data = all_data[index:index + batch_size]
+
+        input_texts = []
+        for datapoint in batch_data:
+            messages = construct_messages(datapoint)
+            input_texts.append(construct_text_from_messages(messages, tokenizer, continue_generation=True))
+
+        if index == 0:
+            print(input_texts[0])
+
+        outputs = model.generate(input_texts, sampling_params=sampling_params)
+        completions = [output.outputs[0].text for output in outputs]
+
+        # Save batch results
+        with open(output_path, 'a', encoding='utf-8') as file:
+            for datapoint, completion in zip(batch_data, completions):
+                datapoint['completion'] = completion
+                datapoint['is_correct'] = is_correct(completion, datapoint['answer'])
+                file.write(json.dumps(datapoint, ensure_ascii=False) + '\n')
+                all_acc.append(datapoint['is_correct'])
+
+            pbar.set_description(f"AVG ACC: {sum(all_acc) / len(all_acc) * 100:.2f}%")
+
+    print(f"Finished!")
+    print(f"Final AVG ACC: {sum(all_acc) / len(all_acc) * 100:.2f}%")
+
+
+if __name__ == '__main__':
+    main()

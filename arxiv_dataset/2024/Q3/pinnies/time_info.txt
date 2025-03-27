@@ -1,0 +1,8 @@
+pinnies/__init__.py: 2024-09-02T22:12:35Z
+pinnies/base.py: 2024-09-02T22:12:35Z
+pinnies/fractinoal.py: 2024-09-02T22:12:35Z
+pinnies/fredholm.py: 2024-09-02T22:12:35Z
+pinnies/ie.py: 2024-09-02T22:12:35Z
+pinnies/utils.py: 2024-09-02T22:12:35Z
+pinnies/volterra.py: 2024-09-02T22:12:35Z
+setup.py: 2024-09-02T22:12:35Z

@@ -1,0 +1,15 @@
+deploy/augment.py: 2021-12-09T03:23:53Z
+examples/pennylane_bp.py: 2021-12-09T03:25:42Z
+testing/blobs.py: 2021-09-05T23:35:09Z
+testing/circles.py: 2021-09-05T23:37:11Z
+testing/circles_noisy.py: 2021-09-05T23:38:39Z
+testing/moons.py: 2021-09-05T23:38:01Z
+testing/moons_noisy.py: 2021-09-05T23:38:21Z
+testing/qaoa.py: 2021-09-05T23:36:03Z
+testing/qaoa_noisy.py: 2021-09-05T23:38:51Z
+testing/regression.py: 2021-09-05T23:35:34Z
+testing/vqe.py: 2021-09-05T23:36:32Z
+testing/vqe_noisy.py: 2021-09-05T23:39:11Z
+training/cnn_train.py: 2021-09-05T23:33:36Z
+training/env.py: 2021-09-05T23:34:04Z
+training/mlp_train.py: 2021-09-05T23:33:09Z

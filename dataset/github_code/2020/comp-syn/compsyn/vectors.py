@@ -1,1 +1,0 @@
-from .wordtocolor_vector import WordToColorVector

@@ -1,0 +1,17 @@
+RAdam.py: 2020-11-24T06:30:29Z
+cell_registry.py: 2021-07-20T07:24:59Z
+cells/BasicLSTMCell.py: 2021-01-26T09:51:01Z
+cells/GRUCell.py: 2021-01-26T09:51:01Z
+cells/MogrifierLSTM/tiled_linear.py: 2021-07-20T09:23:11Z
+cells/MogrifierLSTM/utils.py: 2021-07-20T09:23:11Z
+cells/MogrifierLSTMCell.py: 2021-01-26T09:51:01Z
+cells/RRUCell.py: 2021-07-20T07:24:59Z
+lm_main.py: 2021-07-20T09:33:02Z
+lm_utils.py: 2021-07-20T07:24:59Z
+mm_main.py: 2021-07-20T09:33:02Z
+mm_utils.py: 2021-07-20T09:33:02Z
+mnist_main.py: 2021-07-20T09:33:02Z
+mnist_utils.py: 2021-07-20T07:24:59Z
+sa_main.py: 2021-07-20T09:33:02Z
+sa_utils.py: 2021-07-20T07:24:59Z
+utils.py: 2021-07-20T07:24:59Z

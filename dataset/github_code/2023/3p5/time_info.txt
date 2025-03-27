@@ -1,6 +1,0 @@
-ChandraReduction/DeepField_Data.py: 2023-09-07T17:58:56Z
-ChandraReduction/Perseus_Data.py: 2023-09-07T03:00:10Z
-ChandraReduction/response_matrix.py: 2023-09-07T03:00:10Z
-XMMReduction/XMMStack.py: 2023-09-06T16:19:28Z
-XMMReduction/get_science_exposures.py: 2023-09-06T16:19:28Z
-XMMReduction/spc2dat.py: 2023-09-06T16:19:28Z

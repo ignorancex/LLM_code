@@ -1,0 +1,6 @@
+Coefficients-Plots/CoefficientsPlotHexagon.py: 2025-02-05T08:59:08Z
+Coefficients-Plots/CoefficientsRegimeHexagon.py: 2025-01-16T13:45:18Z
+Coefficients-Plots/CoefficientsRegimeHexagon_largeDomain.py: 2024-10-01T22:42:54Z
+Coefficients-Plots/CoefficientsRegimeSquare.py: 2025-01-16T13:45:18Z
+Coefficients-Plots/CoefficientsRegimeSquare_largeDomain.py: 2025-01-16T13:45:18Z
+Coefficients-Plots/Difference_M.py: 2024-09-30T20:03:26Z

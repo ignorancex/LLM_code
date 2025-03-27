@@ -1,1 +1,0 @@
-from spanet.network.jet_reconstruction import JetReconstructionModel

@@ -1,0 +1,11 @@
+bibliobanana/__init__.py: 2020-10-10T17:00:50Z
+bibliobanana/get.py: 2020-10-10T17:00:50Z
+bibliobanana/io.py: 2020-07-26T16:32:57Z
+bibliobanana/plot.py: 2020-10-09T10:08:11Z
+manuscript_examples/example_cancer.py: 2020-10-10T17:07:16Z
+manuscript_examples/example_fruit.py: 2020-10-10T17:07:16Z
+manuscript_examples/example_interest.py: 2020-10-10T17:07:16Z
+manuscript_examples/example_mesh.py: 2021-02-08T00:31:38Z
+manuscript_examples/example_neuroimaging.py: 2020-10-10T17:07:16Z
+manuscript_examples/example_respiratory.py: 2020-10-10T17:07:16Z
+setup.py: 2020-06-19T17:04:31Z

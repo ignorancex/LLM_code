@@ -1,1 +1,0 @@
-../../../librispeech/ASR/local/validate_manifest.py

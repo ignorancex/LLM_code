@@ -1,7 +1,0 @@
-python/fastchem.py: 2023-08-15T13:38:32Z
-python/fastchem_c_o.py: 2023-08-15T13:38:32Z
-python/fastchem_cond.py: 2024-03-14T12:36:33Z
-python/fastchem_cond_disk.py: 2024-03-14T12:38:57Z
-python/fastchem_metallicity.py: 2023-08-15T13:38:32Z
-python/save_output.py: 2023-11-20T16:00:26Z
-setup.py: 2024-10-08T12:13:46Z

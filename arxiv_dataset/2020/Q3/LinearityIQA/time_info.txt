@@ -1,0 +1,17 @@
+IQAdataset.py: 2021-07-20T08:41:29Z
+IQAloss.py: 2021-03-26T06:35:02Z
+IQAmodel.py: 2020-07-31T14:53:16Z
+IQAperformance.py: 2020-08-18T09:13:55Z
+main.py: 2021-07-20T08:41:29Z
+modified_ignite_engine.py: 2020-07-31T14:53:16Z
+results_in_the_paper/backbone_performance_plot.py: 2020-08-26T01:48:32Z
+results_in_the_paper/batch_size_performance_plot.py: 2020-08-26T01:48:32Z
+results_in_the_paper/bhat.py: 2020-08-26T01:48:32Z
+results_in_the_paper/bnMSE.py: 2020-08-26T01:48:32Z
+results_in_the_paper/ft_lr_ratio_performance_plot.py: 2020-08-26T01:48:32Z
+results_in_the_paper/image_size_performance_plot.py: 2020-08-26T01:48:32Z
+results_in_the_paper/loss_performance_curves.py: 2020-08-26T01:48:32Z
+results_in_the_paper/lr_performance_plot.py: 2020-08-26T01:48:32Z
+results_in_the_paper/scatter_plots.py: 2020-08-26T01:48:32Z
+test_dataset.py: 2021-07-20T08:41:29Z
+test_demo.py: 2023-08-14T01:03:16Z

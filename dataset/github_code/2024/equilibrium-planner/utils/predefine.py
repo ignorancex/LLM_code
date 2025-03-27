@@ -1,6 +1,0 @@
-MODEL_DIR = './models'
-RAW_DATA_DIR = './raw_data'
-DATASPLITS_DIR = './runs/datasplit'
-DATASET_DIR = './runs/dataset'
-FINTUNE_DIR = './runs/finetune'
-TEST_DIR = './runs/test'

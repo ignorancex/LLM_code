@@ -1,2 +1,0 @@
-demo_color_transfer.py: 2022-05-31T14:59:52Z
-polynomial_matching.py: 2022-05-31T14:59:52Z

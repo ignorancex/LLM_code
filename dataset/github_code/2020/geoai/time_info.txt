@@ -1,9 +1,0 @@
-demo/GeoAI.py: 2018-05-25T17:19:47Z
-demo/Score.py: 2018-05-25T17:19:47Z
-demo/blur_detection_predict.py: 2018-05-24T17:48:05Z
-demo/blur_detection_train.py: 2018-05-25T17:19:47Z
-demo/crop.py: 2018-05-25T17:19:47Z
-demo/dowork.py: 2018-05-25T17:19:47Z
-demo/helpers.py: 2018-05-25T17:19:47Z
-flask/dowork.py: 2018-05-24T17:48:05Z
-flask/helpers.py: 2018-05-24T17:48:05Z

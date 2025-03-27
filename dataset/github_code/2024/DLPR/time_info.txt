@@ -1,8 +1,0 @@
-dataset_generation.py: 2024-07-10T05:39:11Z
-functions/data_read.py: 2024-03-30T05:46:43Z
-functions/network.py: 2024-03-30T05:46:43Z
-functions/propagation.py: 2025-01-18T03:35:04Z
-functions/train_func.py: 2024-07-10T05:39:11Z
-multiple_infer.py: 2024-03-30T05:46:19Z
-one_infer.py: 2024-03-30T05:46:19Z
-train.py: 2024-07-10T05:39:11Z

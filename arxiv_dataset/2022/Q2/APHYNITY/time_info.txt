@@ -1,0 +1,10 @@
+__init__.py: 2021-11-13T11:53:51Z
+datasets/__init__.py: 2021-11-13T11:53:51Z
+datasets/pendulum.py: 2022-12-20T23:40:00Z
+datasets/rd.py: 2021-11-13T11:53:51Z
+datasets/wave.py: 2021-11-13T11:53:51Z
+experiments.py: 2023-11-24T00:59:01Z
+forecasters.py: 2021-11-13T11:53:51Z
+networks.py: 2021-11-13T11:53:51Z
+train_aphynity.py: 2023-11-24T00:59:01Z
+utils.py: 2021-11-13T11:53:51Z

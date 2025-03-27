@@ -1,0 +1,27 @@
+Inference/Task1/V1_majority_0.8881/model.py: 2023-09-14T08:38:55Z
+Inference/Task1/V1_majority_0.8881/resnet50.py: 2023-09-14T08:38:55Z
+Inference/Task1/V2_majority_TTA_0.8821/model.py: 2023-09-14T08:41:09Z
+Inference/Task1/V2_majority_TTA_0.8821/resnet50.py: 2023-09-14T08:41:09Z
+Inference/Task1/V3_all_0.8821/model.py: 2023-09-14T08:46:41Z
+Inference/Task1/V3_all_0.8821/resnet50.py: 2023-09-14T08:46:41Z
+Inference/Task1/V4_mean_0.8781/model.py: 2023-09-14T08:49:40Z
+Inference/Task1/V4_mean_0.8781/resnet50.py: 2023-09-14T08:49:40Z
+Inference/Task2/V1_0.7678.py: 2023-09-14T08:58:16Z
+Inference/Task2/V2_0.7318.py: 2023-09-14T08:59:20Z
+Inference/Task2/V3_0.7652.py: 2023-09-14T09:00:45Z
+Inference/Task2/V4_0.7383.py: 2023-09-14T09:02:09Z
+Inference/Task3/V1_f3_0.8622.py: 2023-09-14T11:29:35Z
+Inference/Task3/V2_TTA_ensemble_0.8669.py: 2023-09-14T11:30:37Z
+Inference/Task3/V3_ENSEMBLE_f3_f4_0.8734.py: 2023-09-14T11:31:35Z
+Inference/Task3/V4_ENSEMBLE_f3_f2_f4_0.8745.py: 2023-09-14T11:32:22Z
+Training/Task2/MAnet/Choroidal_Neovascularization.py: 2023-09-13T19:22:38Z
+Training/Task2/MAnet/Fuchs_Spot.py: 2023-09-13T19:25:09Z
+Training/Task2/MAnet/Lacquer_Cracks.py: 2023-09-13T19:21:08Z
+Training/Task2/U2-Net/Choroidal_Neovascularization.py: 2023-09-13T19:28:55Z
+Training/Task2/U2-Net/Fuchs_Spot.py: 2023-09-13T19:27:40Z
+Training/Task2/U2-Net/Lacquer_Cracks.py: 2023-09-13T19:44:28Z
+Training/Task3/Backbone selection/tf_efficientnet_b8.py: 2023-09-13T19:56:09Z
+Training/Task3/Backbone selection/tf_efficientnetv2_l.py: 2023-09-13T19:59:33Z
+Training/Task3/Backbone selection/tf_efficientnetv2_xl.py: 2023-09-13T20:00:47Z
+Training/Task3/Model Re-training/tf_efficientnet_b8.py: 2023-09-13T20:06:52Z
+Training/Task3/Model Re-training/tf_efficientnetv2_l.py: 2023-09-13T20:04:49Z

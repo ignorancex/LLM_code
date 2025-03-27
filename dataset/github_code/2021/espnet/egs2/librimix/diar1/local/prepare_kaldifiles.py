@@ -1,1 +1,0 @@
-../../enh_diar1/local/prepare_kaldifiles.py

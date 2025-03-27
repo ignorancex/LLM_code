@@ -1,0 +1,16 @@
+Classifiers/.~OS_CNN.py: 2020-02-23T01:02:16Z
+Classifiers/FCN.py: 2020-02-23T01:02:16Z
+Classifiers/FCN_Kernel_size.py: 2020-02-23T01:02:16Z
+Classifiers/OS_CNN/OS_CNN.py: 2020-06-15T09:25:42Z
+Classifiers/OS_CNN/OS_CNN_Structure_build.py: 2020-06-15T09:25:42Z
+Classifiers/OS_CNN/OS_CNN_easy_use.py: 2022-06-10T05:23:20Z
+Classifiers/OS_CNN/OS_CNN_res.py: 2022-06-10T05:23:20Z
+Classifiers/OS_CNN/OS_CNN_res_easy_use.py: 2022-06-10T05:23:20Z
+Classifiers/OS_CNN/OS_block.py: 2022-06-10T05:23:20Z
+Classifiers/OS_CNN/log_manager.py: 2020-02-23T01:02:16Z
+Classifiers/ResNet.py: 2020-02-23T01:02:16Z
+Texas_Sharpshooter_plot/N_fold_dataset_sampler.py: 2020-03-18T06:46:31Z
+utils/dataloader/Few_shot_sampler.py: 2020-02-23T01:02:16Z
+utils/dataloader/TSC_data_loader.py: 2022-05-20T01:35:56Z
+utils/dataloader/TimeSeriesDataset.py: 2020-02-23T01:02:16Z
+utils/log_manager.py: 2020-02-23T01:02:16Z

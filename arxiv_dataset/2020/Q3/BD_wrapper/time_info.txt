@@ -1,0 +1,9 @@
+BD_wrapper/BD_multiprocessing.py: 2020-06-03T12:31:26Z
+BD_wrapper/BD_wrapper.py: 2020-06-04T18:57:59Z
+BD_wrapper/KDA_tables.py: 2020-06-03T12:31:26Z
+BD_wrapper/__init__.py: 2020-06-03T12:31:26Z
+BD_wrapper/kinematic_distance.py: 2020-06-03T12:31:26Z
+setup.py: 2020-06-04T12:14:36Z
+tests/test_BD_wrapper.py: 2020-06-03T12:31:26Z
+tutorials/example_plot_distance_pdf.py: 2020-06-04T12:12:44Z
+tutorials/example_table_grs_mcs.py: 2020-06-04T12:12:44Z

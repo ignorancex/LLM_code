@@ -1,9 +1,0 @@
-src/CombineCatalogs.py: 2021-08-04T00:38:25Z
-src/Galaxy.py: 2021-08-04T00:38:25Z
-src/MCMCfit.py: 2021-08-04T00:38:25Z
-src/Menon21_Plots.py: 2021-08-04T00:38:25Z
-src/Plot_Class.py: 2021-08-24T02:34:20Z
-src/TPCF.py: 2021-08-04T00:38:25Z
-src/footprintfinder.py: 2021-08-04T00:38:25Z
-src/header.py: 2021-08-04T02:02:43Z
-src/main.py: 2021-08-04T00:38:25Z

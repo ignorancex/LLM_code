@@ -1,0 +1,12 @@
+setup.py: 2022-04-22T22:20:06Z
+victor/__init__.py: 2022-04-22T22:20:06Z
+victor/_version.py: 2022-05-04T10:24:08Z
+victor/ccf.py: 2022-04-22T22:20:06Z
+victor/ccf_fit.py: 2023-05-18T12:19:44Z
+victor/ccf_model.py: 2023-07-10T14:05:43Z
+victor/cosmology.py: 2022-04-22T22:20:06Z
+victor/eisenstein_hu.py: 2022-04-22T22:20:06Z
+victor/excursion_set_profile.py: 2022-04-22T22:20:06Z
+victor/likelihoods/CCFLikelihood.py: 2022-04-22T22:20:06Z
+victor/plottools.py: 2022-04-22T22:20:06Z
+victor/utils.py: 2022-04-22T22:20:06Z

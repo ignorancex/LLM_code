@@ -1,0 +1,12 @@
+docs/conf.py: 2020-11-02T15:41:51Z
+sbml2julia/__init__.py: 2020-11-02T17:41:57Z
+sbml2julia/__main__.py: 2020-11-02T17:41:57Z
+sbml2julia/_version.py: 2020-11-03T14:53:09Z
+sbml2julia/core.py: 2022-03-07T19:39:07Z
+setup.py: 2020-11-03T14:53:09Z
+tests/__init__.py: 2020-04-17T01:02:29Z
+tests/fixtures/0015_objectivePrior/0015.py: 2020-08-31T11:39:09Z
+tests/fixtures/__init__.py: 2020-04-17T01:02:29Z
+tests/test_core.py: 2020-11-02T20:39:16Z
+tests/test_main.py: 2020-11-02T15:41:51Z
+tests/test_petab_suite.py: 2020-11-09T12:30:07Z

@@ -1,1 +1,0 @@
-from .image_folder_caption import ImageFolderCaption

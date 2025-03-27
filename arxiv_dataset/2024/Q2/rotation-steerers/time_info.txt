@@ -1,0 +1,15 @@
+experiments/SettingA-C4-B.py: 2024-05-17T14:37:03Z
+experiments/SettingB-C4-Perm-B.py: 2024-05-17T14:37:03Z
+experiments/SettingB-SO2-Spread-B.py: 2024-06-30T11:04:47Z
+experiments/SettingC-C4-Perm-B.py: 2024-05-17T14:37:03Z
+experiments/SettingC-SO2-Freq1-B.py: 2024-05-17T14:37:03Z
+experiments/SettingC-SO2-Spread-B.py: 2024-06-30T11:03:37Z
+rotation_steerers/checkpoint.py: 2024-05-17T14:37:03Z
+rotation_steerers/descriptor_loss.py: 2024-05-17T14:37:03Z
+rotation_steerers/matchers/dual_softmax_matcher.py: 2023-12-08T13:57:03Z
+rotation_steerers/matchers/max_matches.py: 2023-12-08T13:57:03Z
+rotation_steerers/matchers/max_similarity.py: 2023-12-08T13:57:03Z
+rotation_steerers/matchers/procrustes_matcher.py: 2024-05-17T14:20:34Z
+rotation_steerers/steerers.py: 2024-05-17T14:37:03Z
+rotation_steerers/train.py: 2024-05-17T14:37:03Z
+setup.py: 2024-05-17T14:37:03Z

@@ -1,2 +1,0 @@
-CLIPMIN = 1e-5 # 1e-5
-CLIPMAX = 1e4 # 1e4

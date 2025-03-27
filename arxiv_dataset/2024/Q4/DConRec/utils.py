@@ -1,0 +1,325 @@
+# @Time   : 2020/7/21
+# @Author : Yupeng Hou
+# @Email  : houyupeng@ruc.edu.cn
+
+# UPDATE:
+# @Time   : 2021/7/9, 2020/9/17, 2020/8/31, 2021/2/20, 2021/3/1
+# @Author : Yupeng Hou, Yushuo Chen, Kaiyuan Li, Haoran Cheng, Jiawei Guan
+# @Email  : houyupeng@ruc.edu.cn, chenyushuo@ruc.edu.cn, tsotfsk@outlook.com, chenghaoran29@foxmail.com, guanjw@ruc.edu.cn
+
+"""
+recbole.data.utils
+########################
+"""
+import json
+import copy
+import importlib
+import os
+import pickle
+import tqdm
+
+import numpy as np
+from recbole.data.dataloader import *
+from recbole.sampler import KGSampler, Sampler, RepeatableSampler
+from recbole.utils import ModelType, ensure_dir, get_local_time, set_color
+import torch
+from pseudoDataGenerationNew.pdd import PDD
+from pseudoDataGenerationNew.trainer import PDDTrainer
+import copy
+
+def create_dataset(config):
+    """Create dataset according to :attr:`config['model']` and :attr:`config['MODEL_TYPE']`.
+
+    Args:
+        config (Config): An instance object of Config, used to record parameter information.
+
+    Returns:
+        Dataset: Constructed dataset.
+    """
+    dataset_module = importlib.import_module('recbole.data.dataset')
+    if hasattr(dataset_module, config['model'] + 'Dataset'):
+        return getattr(dataset_module, config['model'] + 'Dataset')(config)
+    else:
+        model_type = config['MODEL_TYPE']
+        if model_type == ModelType.SEQUENTIAL:
+            from recbole.data.dataset import SequentialDataset
+            return SequentialDataset(config)
+        elif model_type == ModelType.KNOWLEDGE:
+            from recbole.data.dataset import KnowledgeBasedDataset
+            return KnowledgeBasedDataset(config)
+        elif model_type == ModelType.DECISIONTREE:
+            from recbole.data.dataset import DecisionTreeDataset
+            return DecisionTreeDataset(config)
+        else:
+            from pdd_dataset import Dataset
+            return Dataset(config)
+
+def save_split_dataloaders(config, dataloaders):
+    """Save split dataloaders.
+
+    Args:
+        config (Config): An instance object of Config, used to record parameter information.
+        dataloaders (tuple of AbstractDataLoader): The split dataloaders.
+    """
+    save_path = config['checkpoint_dir']
+    saved_dataloaders_file = f'{config["dataset"]}-for-{config["model"]}-dataloader.pth'
+    file_path = os.path.join(save_path, saved_dataloaders_file)
+    logger = getLogger()
+    logger.info(set_color('Saved split dataloaders', 'blue') + f': {file_path}')
+    with open(file_path, 'wb') as f:
+        pickle.dump(dataloaders, f)
+
+def load_split_dataloaders(saved_dataloaders_file):
+    """Load split dataloaders.
+
+    Args:
+        saved_dataloaders_file (str): The path of split dataloaders.
+
+    Returns:
+        dataloaders (tuple of AbstractDataLoader): The split dataloaders.
+    """
+    with open(saved_dataloaders_file, 'rb') as f:
+        dataloaders = pickle.load(f)
+    return dataloaders
+
+def data_preparation(config, dataset, save=False):
+    """Split the dataset by :attr:`config['eval_args']` and create training, validation and test dataloader.
+
+    Args:
+        config (Config): An instance object of Config, used to record parameter information.
+        dataset (Dataset): An instance object of Dataset, which contains all interaction records.
+        save (bool, optional): If ``True``, it will call :func:`save_datasets` to save split dataset.
+            Defaults to ``False``.
+
+    Returns:
+        tuple:
+            - train_data (AbstractDataLoader): The dataloader for training.
+            - valid_data (AbstractDataLoader): The dataloader for validation.
+            - test_data (AbstractDataLoader): The dataloader for testing.
+    """
+    model_type = config['MODEL_TYPE']
+    built_datasets = dataset.build()
+    logger = getLogger()
+
+    train_dataset, valid_dataset, test_dataset = built_datasets
+    train_sampler, valid_sampler, test_sampler = create_samplers(config, dataset, built_datasets)
+
+    if model_type != ModelType.KNOWLEDGE:
+        train_data = get_dataloader(config, 'train')(config, train_dataset, train_sampler, shuffle=True)
+    else:
+        kg_sampler = KGSampler(dataset, config['train_neg_sample_args']['distribution'])
+        train_data = get_dataloader(config, 'train')(config, train_dataset, train_sampler, kg_sampler, shuffle=True)
+
+    valid_data = get_dataloader(config, 'evaluation')(config, valid_dataset, valid_sampler, shuffle=False)
+    test_data = get_dataloader(config, 'evaluation')(config, test_dataset, test_sampler, shuffle=False)
+    logger.info(
+        set_color('[Training]: ', 'pink') + set_color('train_batch_size', 'cyan') + ' = ' +
+        set_color(f'[{config["train_batch_size"]}]', 'yellow') + set_color(' negative sampling', 'cyan') + ': ' +
+        set_color(f'[{config["neg_sampling"]}]', 'yellow')
+    )
+    logger.info(
+        set_color('[Evaluation]: ', 'pink') + set_color('eval_batch_size', 'cyan') + ' = ' +
+        set_color(f'[{config["eval_batch_size"]}]', 'yellow') + set_color(' eval_args', 'cyan') + ': ' +
+        set_color(f'[{config["eval_args"]}]', 'yellow')
+    )
+    if save:
+        save_split_dataloaders(config, dataloaders=(train_data, valid_data, test_data))
+
+    return train_data, valid_data, test_data#, train_dataset
+
+def get_dataloader(config, phase):
+    """Return a dataloader class according to :attr:`config` and :attr:`phase`.
+
+    Args:
+        config (Config): An instance object of Config, used to record parameter information.
+        phase (str): The stage of dataloader. It can only take two values: 'train' or 'evaluation'.
+
+    Returns:
+        type: The dataloader class that meets the requirements in :attr:`config` and :attr:`phase`.
+    """
+    register_table = {
+        "MultiDAE": _get_AE_dataloader,
+        "MultiVAE": _get_AE_dataloader,
+        'MacridVAE': _get_AE_dataloader,
+        'CDAE': _get_AE_dataloader,
+        'ENMF': _get_AE_dataloader,
+        'RaCT': _get_AE_dataloader,
+        'RecVAE': _get_AE_dataloader,
+    }
+
+    if config['model'] in register_table:
+        return register_table[config['model']](config, phase)
+
+    model_type = config['MODEL_TYPE']
+    if phase == 'train':
+        if model_type != ModelType.KNOWLEDGE:
+            return TrainDataLoader
+        else:
+            return KnowledgeBasedDataLoader
+    else:
+        eval_strategy = config['eval_neg_sample_args']['strategy']
+        if eval_strategy in {'none', 'by'}:
+            return NegSampleEvalDataLoader
+        elif eval_strategy == 'full':
+            return FullSortEvalDataLoader
+
+def _get_AE_dataloader(config, phase):
+    """Customized function for VAE models to get correct dataloader class.
+
+    Args:
+        config (Config): An instance object of Config, used to record parameter information.
+        phase (str): The stage of dataloader. It can only take two values: 'train' or 'evaluation'.
+
+    Returns:
+        type: The dataloader class that meets the requirements in :attr:`config` and :attr:`phase`.
+    """
+    if phase == 'train':
+        return UserDataLoader
+    else:
+        eval_strategy = config['eval_neg_sample_args']['strategy']
+        if eval_strategy in {'none', 'by'}:
+            return NegSampleEvalDataLoader
+        elif eval_strategy == 'full':
+            return FullSortEvalDataLoader
+
+def create_samplers(config, dataset, built_datasets):
+    """Create sampler for training, validation and testing.
+
+    Args:
+        config (Config): An instance object of Config, used to record parameter information.
+        dataset (Dataset): An instance object of Dataset, which contains all interaction records.
+        built_datasets (list of Dataset): A list of split Dataset, which contains dataset for
+            training, validation and testing.
+
+    Returns:
+        tuple:
+            - train_sampler (AbstractSampler): The sampler for training.
+            - valid_sampler (AbstractSampler): The sampler for validation.
+            - test_sampler (AbstractSampler): The sampler for testing.
+    """
+    phases = ['train', 'valid', 'test']
+    train_neg_sample_args = config['train_neg_sample_args']
+    eval_neg_sample_args = config['eval_neg_sample_args']
+    sampler = None
+    train_sampler, valid_sampler, test_sampler = None, None, None
+
+    if train_neg_sample_args['strategy'] != 'none':
+        if not config['repeatable']:
+            sampler = Sampler(phases, built_datasets, train_neg_sample_args['distribution'])
+        else:
+            sampler = RepeatableSampler(phases, dataset, train_neg_sample_args['distribution'])
+        train_sampler = sampler.set_phase('train')
+
+    if eval_neg_sample_args['strategy'] != 'none':
+        if sampler is None:
+            if not config['repeatable']:
+                sampler = Sampler(phases, built_datasets, eval_neg_sample_args['distribution'])
+            else:
+                sampler = RepeatableSampler(phases, dataset, eval_neg_sample_args['distribution'])
+        else:
+            sampler.set_distribution(eval_neg_sample_args['distribution'])
+        valid_sampler = sampler.set_phase('valid')
+        test_sampler = sampler.set_phase('test')
+
+    return train_sampler, valid_sampler, test_sampler
+
+def obtain_mask(scores):
+    subnet = (torch.rand_like(scores) < scores).float()
+    return subnet, (subnet - scores) / ((scores + 1e-20) * (1 - scores + 1e-20))
+
+def calculate_score_grad(scores, loss_list, derivations_bernoulli_list_K, K):
+    for i in range(K):
+        scores.grad.data += 1/K*loss_list[i]*derivations_bernoulli_list_K[i]
+def calculate_score_grad_vr(scores, loss_list, loss_avg, derivations_bernoulli_list_K, K):
+    for i in range(K):
+        scores.grad.data += 1 / (K-1) * (loss_list[i]-loss_avg) * derivations_bernoulli_list_K[i]
+def assign_learning_rate(optimizer, new_lr):
+    for param_group in optimizer.param_groups:
+        param_group["lr"] = new_lr
+def constrain_score_by_whole(scores, dd_rate):
+    with torch.no_grad():
+        v = solve_v_whole(scores, dd_rate)
+        scores.sub_(v).clamp_(0, 1)
+    # return scores
+def solve_v_whole(scores, dd_rate):
+
+    scores = scores.view(-1)
+    k = dd_rate*scores.shape[0]
+    a, b = 0, 0
+    b = max(b, scores.max())
+    def f(v):
+        s = (scores - v).clamp(0, 1).sum()
+        return s - k
+    if f(0) < 0:
+        return 0
+    itr = 0
+    while (1):
+        itr += 1
+        v = (a + b) / 2
+        obj = f(v)
+        if abs(obj) < 1e-3 or itr > 20:
+            break
+        if obj < 0:
+            b = v
+        else:
+            a = v
+    v = max(0, v)
+    return v
+
+def load_pseudo_data(dataset):
+    pseudo_data_path = 'pseudoDataGeneration/pseudo-data/'+dataset+'.json'
+    with open(pseudo_data_path, 'r') as fcc_file:
+        fcc_data = json.load(fcc_file)
+    return fcc_data
+
+def pseudo_data_generation(config, train_dataset, valid_dataset, train_sampler, valid_sampler, logger):
+    logger.info(set_color("Critical Sampling Via Proxy Model:","yellow"))
+    # built_datasets = dataset.build()
+    # train_dataset, valid_dataset, test_dataset = built_datasets
+    # train_sampler, valid_sampler, test_sampler = create_samplers(config, dataset, built_datasets)
+    config_proxy = copy.deepcopy(config)
+    # config_proxy['model_selection'] = 'BPRMF'
+    config_proxy['model_selection'] = config['proxy_model_selection']
+    config_proxy['ssl_or_not'] = config['proxy_model_ssl']
+    if config_proxy['proxy_model_selection'] == 'XSimGCL':
+        config_proxy['ssl_or_not'] = True
+    config_proxy['learning_rate'] = config['proxy_model_learning_rate']
+    config_proxy['noise_eps'] = config['proxy_noise_eps']
+    # config_proxy['n_layers'] = config['pseudo_n_layers']
+
+    train_data = get_dataloader(config_proxy, 'train')(config_proxy, train_dataset, train_sampler, shuffle=True)
+    valid_data = get_dataloader(config_proxy, 'evaluation')(config_proxy, valid_dataset, valid_sampler, shuffle=False)
+    proxy_model = PDD(config_proxy, train_data.dataset).to(config_proxy['device'])
+    proxy_trainer = PDDTrainer(config_proxy, proxy_model)
+    # import pdb;pdb.set_trace()
+    best_valid_score, best_valid_result, model_parameter, pseudo_dataset = proxy_trainer.fit(
+        train_data, train_sampler, valid_data, saved=True, show_progress=config['show_progress']
+    )
+    logger.info(set_color("Finished Critical Sampling!","yellow"))
+    
+    return pseudo_dataset
+
+def longtail_interaction_compensation(train_users, train_items, threshold_tail):
+    interactions = {'user':np.array([]), 'item':np.array([])}
+    user_np = train_users.detach().numpy()
+    item_np = train_items.detach().numpy()
+    unique_user_ids = np.unique(user_np)
+    unique_counts = np.bincount(user_np)
+    for user_id in unique_user_ids:
+        user_degree = unique_counts[user_id]
+        if user_degree <= threshold_tail:
+            index = single_np(user_np,user_id)
+            tail_users = user_np[index]
+            tail_user_items = item_np[index]
+            interactions['user'] = np.append(interactions['user'], tail_users)
+            interactions['item'] = np.append(interactions['item'], tail_user_items)
+    # import pdb;pdb.set_trace()
+    tensor_tail_users = torch.from_numpy(interactions['user']).long()
+    tensor_tail_items = torch.from_numpy(interactions['item']).long()
+    return tensor_tail_users, tensor_tail_items
+
+def single_np(arr, target):
+    arr = np.array(arr)
+    mask = (arr == target)
+    # arr_new = arr[mask]
+    return mask

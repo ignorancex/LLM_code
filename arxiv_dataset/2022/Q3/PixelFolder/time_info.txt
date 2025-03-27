@@ -1,0 +1,15 @@
+calculate_fid.py: 2022-07-20T09:53:39Z
+dataset.py: 2022-07-20T09:53:39Z
+distributed.py: 2022-07-20T09:53:39Z
+model/Discriminators.py: 2022-07-20T09:53:39Z
+model/GeneratorPixelFolder.py: 2022-07-20T09:53:39Z
+model/GeneratorStyleganv2.py: 2022-07-20T09:53:39Z
+model/GeneratorsCIPS.py: 2022-07-20T09:53:39Z
+model/__init__.py: 2022-07-20T09:53:39Z
+model/blocks.py: 2022-07-20T09:53:39Z
+op/__init__.py: 2022-07-20T09:53:39Z
+op/fused_act.py: 2022-07-20T09:53:39Z
+op/upfirdn2d.py: 2022-07-20T09:53:39Z
+prepare_data.py: 2022-07-20T09:53:39Z
+tensor_transforms.py: 2022-07-20T09:53:39Z
+train.py: 2022-07-20T09:53:39Z

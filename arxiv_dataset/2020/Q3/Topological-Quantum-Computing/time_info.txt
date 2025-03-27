@@ -1,0 +1,4 @@
+SQBG_v0/BraidsDrawer/braidsdrawer.py: 2020-08-29T15:56:13Z
+SQBG_v0/braidgenerator.py: 2020-08-29T15:56:13Z
+SQBG_v0/gatefinder.py: 2020-08-29T15:56:13Z
+SQBG_v0/weavescalculator.py: 2020-08-29T15:56:13Z

@@ -1,0 +1,9 @@
+examples/examples.py: 2023-07-11T18:52:15Z
+examples/experiments_for_paper.py: 2023-07-12T23:15:02Z
+src/ntd/__init__.py: 2023-07-11T15:18:33Z
+src/ntd/ntd.py: 2023-07-12T23:15:02Z
+src/ntd/plot_statistics.py: 2023-07-12T23:15:02Z
+src/ntd/polyak.py: 2023-07-11T15:18:33Z
+src/ntd/run_optimizer.py: 2023-07-12T23:15:02Z
+src/ntd/save_statistics.py: 2023-07-11T15:18:33Z
+src/ntd/utils.py: 2023-07-11T15:18:33Z

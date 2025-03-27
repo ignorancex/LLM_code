@@ -1,0 +1,12 @@
+setup.py: 2020-12-18T12:28:33Z
+super_selfish/__init__.py: 2020-11-13T09:34:10Z
+super_selfish/data.py: 2020-12-04T14:26:05Z
+super_selfish/efficientnet_pytorch/__init__.py: 2020-11-13T09:34:10Z
+super_selfish/efficientnet_pytorch/model.py: 2020-11-13T14:23:23Z
+super_selfish/efficientnet_pytorch/utils.py: 2020-11-13T09:34:10Z
+super_selfish/memory.py: 2020-12-04T14:26:05Z
+super_selfish/models.py: 2020-12-04T14:37:42Z
+super_selfish/perms.py: 2020-11-13T09:34:10Z
+super_selfish/supervisors.py: 2020-12-18T12:22:52Z
+super_selfish/utils.py: 2020-11-13T09:34:10Z
+tests.py: 2020-12-18T12:28:33Z

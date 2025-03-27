@@ -1,0 +1,12 @@
+lattice_operations/simulate_lattice_surgery.py: 2024-03-27T11:37:52Z
+lattice_operations/to_lattice_operations.py: 2024-03-27T11:37:52Z
+logical_circuit/clifford_plus_t.py: 2024-03-27T11:37:52Z
+logical_circuit/decomposition_accuracy/decomposition_accuracy.py: 2024-03-27T11:37:52Z
+logical_circuit/decomposition_accuracy/gate_counts.py: 2024-03-27T11:37:52Z
+logical_circuit/decomposition_accuracy/plot_decomposition_accuracy.py: 2024-03-27T11:37:52Z
+pauli_operations/analyse_branches.py: 2024-03-27T11:37:52Z
+pauli_operations/analyse_pauli_products.py: 2024-03-27T11:37:52Z
+pauli_operations/commute_paulis.py: 2024-03-27T11:37:52Z
+pauli_operations/to_pauli_ops.py: 2024-03-27T11:37:52Z
+resource_estimates/estimate_resources.py: 2024-03-27T11:37:52Z
+tools.py: 2024-03-27T11:37:52Z

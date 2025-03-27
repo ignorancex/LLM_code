@@ -1,8 +1,0 @@
-datasets/ucf101.py: 2020-09-13T07:42:00Z
-models/c3d.py: 2020-09-13T07:42:00Z
-models/params_settings.py: 2020-09-13T07:42:00Z
-models/r21d.py: 2020-09-13T07:42:00Z
-models/r3d.py: 2020-09-13T07:42:00Z
-models/s3d_g.py: 2020-09-13T07:42:00Z
-train.py: 2020-09-13T07:42:00Z
-utils/video_transforms.py: 2020-09-13T07:42:00Z

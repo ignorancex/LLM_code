@@ -1,0 +1,91 @@
+BigGAN and DiffAugGAN/data_utils/load_dataset.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/inception_tf13.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/load_framework.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/load_framework_adv.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/load_framework_impg.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/load_framework_ompg.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/main.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/main_impg.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/main_ompg.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/metrics/Accuracy.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/metrics/FID.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/metrics/F_beta.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/metrics/IS.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/metrics/inception_network.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/metrics/prepare_inception_moments.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/models/big_resnet.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/models/big_resnet_deep.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/models/dcgan.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/models/resnet.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/split_cub.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/sync_batchnorm/batchnorm.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/sync_batchnorm/batchnorm_reimpl.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/sync_batchnorm/comm.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/sync_batchnorm/replicate.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/sync_batchnorm/unittest.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/train_eval.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/train_eval_impg.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/utils/ada.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/utils/ada_op/__init__.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/utils/ada_op/fused_act.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/utils/ada_op/upfirdn2d.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/utils/biggan_utils.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/utils/cr_diff_aug.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/utils/diff_aug.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/utils/load_checkpoint.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/utils/log.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/utils/losses.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/utils/make_hdf5.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/utils/misc.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/utils/model_ops.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/utils/prune.py: 2021-02-28T05:01:35Z
+BigGAN and DiffAugGAN/utils/sample.py: 2021-02-28T05:01:35Z
+SNGAN/align.py: 2021-02-28T05:01:35Z
+SNGAN/cfg.py: 2021-02-28T05:01:35Z
+SNGAN/count.py: 2021-02-28T05:01:35Z
+SNGAN/datasets.py: 2021-02-28T05:01:35Z
+SNGAN/evaluation.py: 2021-02-28T05:01:35Z
+SNGAN/extract.py: 2021-02-28T05:01:35Z
+SNGAN/extract_cifar10.py: 2021-02-28T05:01:35Z
+SNGAN/extract_prune.py: 2021-02-28T05:01:35Z
+SNGAN/extract_stl.py: 2021-02-28T05:01:35Z
+SNGAN/functions.py: 2021-02-28T05:01:35Z
+SNGAN/functions_adv.py: 2021-02-28T05:01:35Z
+SNGAN/generate_initial_weights.py: 2021-02-28T05:01:35Z
+SNGAN/mask_intersect.py: 2021-02-28T05:01:35Z
+SNGAN/models/__init__.py: 2021-02-28T05:01:35Z
+SNGAN/models/sngan_cifar10.py: 2021-02-28T05:01:35Z
+SNGAN/models/sngan_imagenet.py: 2021-02-28T05:01:35Z
+SNGAN/test.py: 2021-02-28T05:01:35Z
+SNGAN/test_prune.py: 2021-02-28T05:01:35Z
+SNGAN/train.py: 2021-02-28T05:01:35Z
+SNGAN/train_adv_d.py: 2021-02-28T05:01:35Z
+SNGAN/train_adv_d_less.py: 2021-02-28T05:01:35Z
+SNGAN/train_adv_g.py: 2021-02-28T05:01:35Z
+SNGAN/train_adv_g_less.py: 2021-02-28T05:01:35Z
+SNGAN/train_adv_gd.py: 2021-02-28T05:01:35Z
+SNGAN/train_adv_gd_less.py: 2021-02-28T05:01:35Z
+SNGAN/train_gau_gd.py: 2021-02-28T05:01:35Z
+SNGAN/train_impg.py: 2021-02-28T05:01:35Z
+SNGAN/train_impg_less.py: 2021-02-28T05:01:35Z
+SNGAN/train_impgd.py: 2021-02-28T05:01:35Z
+SNGAN/train_less.py: 2021-02-28T05:01:35Z
+SNGAN/train_ompg_less.py: 2021-02-28T05:01:35Z
+SNGAN/train_oneshot.py: 2021-02-28T05:01:35Z
+SNGAN/train_prune_D.py: 2021-02-28T05:01:35Z
+SNGAN/train_random_less_oneshot.py: 2021-02-28T05:01:35Z
+SNGAN/train_with_masks.py: 2021-02-28T05:01:35Z
+SNGAN/train_with_masks_adv_d.py: 2021-02-28T05:01:35Z
+SNGAN/train_with_masks_adv_d_less.py: 2021-02-28T05:01:35Z
+SNGAN/train_with_masks_adv_g_less.py: 2021-02-28T05:01:35Z
+SNGAN/train_with_masks_adv_gd_less.py: 2021-02-28T05:01:35Z
+SNGAN/train_with_masks_gau_gd_less.py: 2021-02-28T05:01:35Z
+SNGAN/train_with_masks_less.py: 2021-02-28T05:01:35Z
+SNGAN/utils/__init__.py: 2021-02-28T05:01:35Z
+SNGAN/utils/cal_fid_stat.py: 2021-02-28T05:01:35Z
+SNGAN/utils/fid_score.py: 2021-02-28T05:01:35Z
+SNGAN/utils/inception_score.py: 2021-02-28T05:01:35Z
+SNGAN/utils/spectral_norm_prune.py: 2021-02-28T05:01:35Z
+SNGAN/utils/utils.py: 2021-02-28T05:01:35Z
+SNGAN/visualize.py: 2021-02-28T05:01:35Z
+SNGAN/visualize_prune.py: 2021-02-28T05:01:35Z

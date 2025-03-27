@@ -1,1 +1,0 @@
-from .mask2former_nusc_occ import Mask2FormerNuscOccHead

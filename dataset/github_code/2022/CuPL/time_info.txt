@@ -1,6 +1,0 @@
-classify_imagenet.py: 2022-09-07T02:05:43Z
-generate_image_prompts.py: 2022-09-07T02:05:43Z
-imagenet_classnames/imagenet_classes.py: 2022-09-07T02:05:43Z
-imagenet_classnames/sense_to_idx.py: 2022-09-07T02:05:43Z
-imagenet_prompts/standard_image_prompts.py: 2022-09-07T02:05:43Z
-imagenetdataset.py: 2022-09-07T02:05:43Z

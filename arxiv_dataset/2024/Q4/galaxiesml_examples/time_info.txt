@@ -1,0 +1,11 @@
+redshift_estimation/DataMakerPlus.py: 2024-09-28T22:21:14Z
+redshift_estimation/evaluate_cnn.py: 2024-09-28T22:21:14Z
+redshift_estimation/evaluate_cnn_v2.py: 2025-01-30T08:28:38Z
+redshift_estimation/evaluate_nn.py: 2024-09-28T22:21:14Z
+redshift_estimation/example_error_producer.py: 2024-09-28T22:21:14Z
+redshift_estimation/photoz_utils.py: 2024-09-28T22:21:14Z
+redshift_estimation/train_cnn.py: 2024-09-28T22:21:14Z
+redshift_estimation/train_cnn_v2.py: 2024-09-28T22:21:14Z
+redshift_estimation/train_cnn_v3.py: 2025-01-30T08:28:38Z
+redshift_estimation/train_nn.py: 2024-09-28T22:21:14Z
+redshift_estimation/validate_data.py: 2024-09-28T22:21:14Z

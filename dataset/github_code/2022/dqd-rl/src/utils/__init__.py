@@ -1,1 +1,0 @@
-"""Miscellaneous project-wide utilities."""

@@ -1,5 +1,0 @@
-SIMCLR = 'simclr'
-BYOL = 'byol'
-DINO = 'dino'
-# DEIT = 'DEIT'
-# MAE = 'MAE'

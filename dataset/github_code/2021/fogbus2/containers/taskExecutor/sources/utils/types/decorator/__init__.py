@@ -1,2 +1,0 @@
-from .loopSourceDestination import LoopSourceDestination
-from .synchronizedAttribute import SynchronizedAttribute

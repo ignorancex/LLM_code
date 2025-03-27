@@ -1,1 +1,0 @@
-from ._mistake_detection import check_precondition

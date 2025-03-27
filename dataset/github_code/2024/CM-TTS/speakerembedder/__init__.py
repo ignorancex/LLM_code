@@ -1,1 +1,0 @@
-from .speaker_embedder import PreDefinedEmbedder

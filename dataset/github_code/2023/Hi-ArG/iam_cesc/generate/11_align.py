@@ -1,1 +1,0 @@
-../../public/generate/11_align.py

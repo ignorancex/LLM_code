@@ -1,0 +1,15 @@
+.ipynb_checkpoints/Create-Spectra-all-checkpoint.py: 2022-06-28T15:14:10Z
+Apply-Network1.py: 2021-06-08T20:04:57Z
+Create-Spectra-all.py: 2022-06-28T15:14:10Z
+Generate.py: 2021-06-08T21:34:52Z
+Train.py: 2021-06-08T21:34:52Z
+natastro/.ipynb_checkpoints/reddening-checkpoint.py: 2022-06-28T15:14:10Z
+natastro/__init__.py: 2022-06-28T15:14:10Z
+natastro/labels.py: 2022-06-28T15:14:10Z
+natastro/plotutils.py: 2022-06-28T15:14:10Z
+natastro/pycasso2/__init__.py: 2022-06-28T15:14:10Z
+natastro/pycasso2/reddening.py: 2022-06-28T15:14:10Z
+natastro/pycasso2/wcs.py: 2022-06-28T15:14:10Z
+natastro/reddening.py: 2022-06-28T15:14:10Z
+natastro/utils.py: 2022-06-28T15:14:10Z
+reddening.py: 2022-06-28T15:14:10Z

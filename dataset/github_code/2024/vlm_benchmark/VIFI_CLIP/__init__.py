@@ -1,1 +1,0 @@
-from .wrapper import ViFiCLIP_SimilarityVLM

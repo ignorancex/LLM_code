@@ -1,1 +1,0 @@
-from .stformer import STFormer

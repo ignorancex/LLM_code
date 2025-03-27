@@ -1,3 +1,0 @@
-generated_video_examples/assets/compress_gif.py: 2023-10-17T11:12:26Z
-generated_video_examples/assets/copy_file.py: 2023-10-17T11:12:26Z
-video_qa_eval/instruction_template.py: 2023-10-11T03:18:29Z

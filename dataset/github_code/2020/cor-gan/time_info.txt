@@ -1,5 +1,0 @@
-Generative/VAE/MIMIC/vae.py: 2020-04-26T16:39:09Z
-Generative/VAE/MIMIC/vaeConvolutional.py: 2020-04-26T16:39:35Z
-Generative/corGAN/pytorch/CNN/MIMIC/wgancnnmimic.py: 2020-05-31T21:02:10Z
-Generative/corGAN/pytorch/MLP/MIMIC/wgan.py: 2020-04-29T18:49:46Z
-Generative/medGAN/MIMIC/pytorch/MLP/medGAN.py: 2020-04-29T18:49:09Z

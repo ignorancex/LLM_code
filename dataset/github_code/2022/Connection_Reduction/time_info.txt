@@ -1,8 +1,0 @@
-cifar10/main.py: 2022-09-08T16:58:08Z
-cifar10/misc.py: 2022-09-08T14:33:09Z
-cifar10/models/DenseNet43.py: 2022-09-08T14:33:09Z
-cifar10/models/DenseNet43_sht1.py: 2022-09-08T14:33:09Z
-cifar10/models/DenseNet43_sht2.py: 2022-09-08T14:33:09Z
-cifar10/models/DenseNet53.py: 2022-09-08T14:33:09Z
-cifar10/models/DenseNet53_sht1.py: 2022-09-08T14:33:09Z
-cifar10/models/DenseNet53_sht2.py: 2022-09-08T14:33:09Z

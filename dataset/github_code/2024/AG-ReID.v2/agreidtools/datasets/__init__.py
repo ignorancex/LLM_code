@@ -1,1 +1,0 @@
-from .agreidv2 import AG_ReID_v2

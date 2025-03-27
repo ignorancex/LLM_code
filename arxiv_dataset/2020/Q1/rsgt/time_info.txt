@@ -1,0 +1,7 @@
+docs/conf.py: 2020-03-13T13:13:29Z
+rsgt/__init__.py: 2020-01-17T16:07:41Z
+rsgt/augmentation.py: 2020-02-15T18:40:08Z
+rsgt/normalization.py: 2020-01-16T15:21:45Z
+setup.py: 2020-03-08T16:14:11Z
+tests/test_augmentation.py: 2020-02-15T18:16:34Z
+tests/test_normalization.py: 2020-01-16T15:21:45Z

@@ -1,2 +1,0 @@
-REGRESSION = 'regression'
-CLASSIFICATION = 'classification'

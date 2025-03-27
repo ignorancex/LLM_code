@@ -1,0 +1,14 @@
+SOC_matching/experiment_settings/OU_linear.py: 2023-12-13T20:57:31Z
+SOC_matching/experiment_settings/OU_quadratic.py: 2023-12-13T20:57:31Z
+SOC_matching/experiment_settings/double_well.py: 2023-12-13T20:57:31Z
+SOC_matching/experiment_settings/molecular_dynamics.py: 2024-01-07T17:31:20Z
+SOC_matching/experiment_settings/multiagent_8.py: 2023-12-13T20:57:31Z
+SOC_matching/experiment_settings/settings.py: 2024-01-07T17:31:20Z
+SOC_matching/gsbm_lib.py: 2023-12-13T20:57:31Z
+SOC_matching/interp1d.py: 2023-12-13T20:57:31Z
+SOC_matching/method.py: 2024-01-10T09:50:16Z
+SOC_matching/models.py: 2024-01-10T09:50:16Z
+SOC_matching/utils.py: 2024-01-10T09:50:16Z
+main.py: 2024-01-10T09:50:16Z
+plots.py: 2024-03-20T14:21:24Z
+setup.py: 2023-12-13T20:57:31Z

@@ -1,6 +1,0 @@
-EgClassical.py: 2020-05-21T12:56:49Z
-EgQuantum.py: 2020-05-21T14:03:15Z
-Leapfrog4.py: 2020-06-15T09:31:57Z
-Paper/Classical.py: 2020-06-16T14:43:16Z
-Paper/Leapfrog4.py: 2020-06-15T09:31:57Z
-Paper/Quantum.py: 2020-06-19T09:19:28Z

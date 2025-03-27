@@ -1,1 +1,0 @@
-../../s2st1/local/cvss_data_prep.py

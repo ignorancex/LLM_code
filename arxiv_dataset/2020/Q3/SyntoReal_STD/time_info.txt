@@ -1,0 +1,14 @@
+dataset/ICDAR15.py: 2021-06-14T16:16:05Z
+dataset/SynthText.py: 2021-06-14T16:16:05Z
+dataset/dataset.py: 2021-06-14T16:16:05Z
+eval.py: 2020-08-28T12:54:46Z
+lib/detect.py: 2021-06-14T16:16:05Z
+lib/pseduo_label.py: 2021-06-14T16:16:05Z
+lib/swt.py: 2020-08-28T12:54:46Z
+lib/utils.py: 2020-08-28T12:54:46Z
+network/TextDomainAdaptation.py: 2020-08-28T12:54:46Z
+network/gradient_scalar_layer.py: 2020-08-28T12:54:46Z
+network/loss.py: 2020-08-28T12:54:46Z
+network/loss_target.py: 2022-05-02T05:43:44Z
+network/model.py: 2020-08-28T12:54:46Z
+trainSyndataToICDAR15.py: 2021-06-14T16:16:05Z

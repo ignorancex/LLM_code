@@ -1,3 +1,0 @@
-from .fcos_head_discriminator import FCOSDiscriminator
-from .fcos_head_discriminator_CA import FCOSDiscriminator_CA
-from .fcos_head_discriminator_CC import FCOSDiscriminator_CC

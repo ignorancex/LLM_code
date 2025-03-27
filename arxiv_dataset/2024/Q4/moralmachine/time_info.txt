@@ -1,0 +1,12 @@
+code/generate_plots/fig_radar.py: 2023-06-13T08:34:46Z
+code/get_char_importance.py: 2023-05-20T13:08:12Z
+code/question_generator.py: 2023-05-20T13:08:12Z
+code/run_llama.py: 2024-06-05T16:21:30Z
+code/run_toy_examples.py: 2023-05-20T13:08:12Z
+code/step1_reformat_existing_files.py: 2023-05-20T13:08:12Z
+code/step2_get_gpt_response.py: 2023-05-20T13:08:12Z
+code/step3_back_trans_response.py: 2023-05-20T13:08:12Z
+code/step4_parse_choice.py: 2023-05-20T13:08:12Z
+code/step6_reason_decomposition.py: 2023-05-20T13:08:12Z
+code/step7_get_vectors.py: 2023-05-20T13:08:12Z
+code/step8_compile_to_country_vec.py: 2023-05-20T13:08:12Z

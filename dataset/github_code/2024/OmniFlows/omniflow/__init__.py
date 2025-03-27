@@ -1,1 +1,0 @@
-from omniflow.pipelines.omniflow_pipeline import OmniFlowPipeline

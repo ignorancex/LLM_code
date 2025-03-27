@@ -1,0 +1,15 @@
+serrant/__init__.py: 2021-04-19T15:04:42Z
+serrant/alignment.py: 2023-03-23T15:02:12Z
+serrant/annotator.py: 2020-09-15T00:39:16Z
+serrant/commands/__init__.py: 2020-09-15T00:39:16Z
+serrant/commands/compare_m2.py: 2020-09-15T00:39:16Z
+serrant/commands/m2_to_m2.py: 2021-04-19T14:48:17Z
+serrant/commands/parallel_to_m2.py: 2020-09-15T00:39:16Z
+serrant/edit.py: 2020-09-15T00:39:16Z
+serrant/en/__init__.py: 2020-09-15T00:39:16Z
+serrant/en/classifier.py: 2023-03-23T15:02:12Z
+serrant/en/lancaster.py: 2020-09-15T00:39:16Z
+serrant/en/merger.py: 2023-03-23T14:27:55Z
+serrant/en/sercl_errant_combine.py: 2020-09-24T08:13:44Z
+serrant/syntactic_classifier.py: 2020-09-15T00:39:16Z
+setup.py: 2023-03-23T14:27:55Z

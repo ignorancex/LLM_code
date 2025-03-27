@@ -1,2 +1,0 @@
-import config
-import identity_predicition.face_model

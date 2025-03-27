@@ -1,2 +1,0 @@
-from models.imagenet_resnet import resnet50
-from models.get_feature_and_linear import get_feature_and_linear_resnet50

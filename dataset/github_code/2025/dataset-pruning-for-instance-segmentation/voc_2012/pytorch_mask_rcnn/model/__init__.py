@@ -1,1 +1,0 @@
-from .mask_rcnn_test import maskrcnn_resnet50

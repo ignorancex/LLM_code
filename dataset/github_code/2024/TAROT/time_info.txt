@@ -1,9 +1,0 @@
-examples/motion_prediction/tarot_train.py: 2024-12-05T13:16:38Z
-setup.py: 2024-11-30T19:16:33Z
-tarot/__init__.py: 2024-11-30T19:16:33Z
-tarot/data_selector.py: 2024-12-05T13:16:38Z
-tarot/gradient_computers.py: 2024-12-05T13:16:38Z
-tarot/projectors.py: 2024-11-30T19:16:33Z
-tarot/savers.py: 2024-12-05T13:16:38Z
-tarot/utils.py: 2024-12-05T13:16:38Z
-tarot/wfd_estimator.py: 2024-12-05T13:16:38Z

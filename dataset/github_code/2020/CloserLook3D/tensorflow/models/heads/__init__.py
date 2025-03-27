@@ -1,2 +1,0 @@
-from .seg_head import resnet_multi_part_segmentation_head, resnet_scene_segmentation_head
-from .cls_head import resnet_classification_head

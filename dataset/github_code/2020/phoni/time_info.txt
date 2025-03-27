@@ -1,3 +1,0 @@
-catfasta.py: 2020-11-03T02:35:16Z
-prefixpattern.py: 2020-11-10T06:44:18Z
-splitpattern.py: 2020-11-04T04:39:56Z

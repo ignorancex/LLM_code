@@ -1,7 +1,0 @@
-reaction/chemical_example.py: 2021-01-24T00:57:23Z
-reaction/multiscale_reaction.py: 2021-01-24T00:57:23Z
-reaction/reaction_ODE_solver.py: 2021-01-24T00:57:23Z
-regression/data/plot_loss_1d.py: 2021-01-24T00:57:23Z
-regression/data/plot_loss_2d.py: 2021-01-24T00:57:23Z
-regression/data/plot_loss_history.py: 2021-01-24T00:57:23Z
-regression/regression.py: 2021-01-24T00:57:23Z

@@ -1,2 +1,0 @@
-from .swin import SwinTrans
-

@@ -1,1 +1,0 @@
-ananke/_version.py

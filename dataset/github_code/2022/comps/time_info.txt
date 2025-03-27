@@ -1,7 +1,0 @@
-src/__init__.py: 2022-04-30T18:54:06Z
-src/generate_mini_comps.py: 2023-02-20T19:59:31Z
-src/generate_stimuli.py: 2023-03-05T21:07:30Z
-src/pseudowords.py: 2023-01-25T23:09:40Z
-src/run_comps.py: 2023-10-14T19:36:33Z
-src/run_minicomps_gpt3.py: 2023-02-20T19:59:31Z
-src/world.py: 2022-04-30T23:29:01Z

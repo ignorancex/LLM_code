@@ -1,8 +1,0 @@
-Alg1_MLP_1channel_2classes.py: 2018-09-09T16:13:12Z
-Alg4_RNN_1channel_2classes.py: 2018-09-09T16:13:12Z
-Alg6_CNN_spectrumgram.py: 2018-09-09T16:13:12Z
-Audio_data.py: 2017-12-14T19:41:27Z
-Labels.py: 2017-12-14T19:41:27Z
-MLP.py: 2018-09-09T16:13:12Z
-MLP_2channel_4classes.py: 2018-09-09T16:13:12Z
-NN_Convo_Sample.py: 2018-09-09T16:13:12Z

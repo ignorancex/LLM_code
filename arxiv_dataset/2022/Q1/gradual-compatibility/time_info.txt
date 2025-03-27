@@ -1,0 +1,12 @@
+config.py: 2021-09-08T22:07:51Z
+data.py: 2021-09-08T22:07:51Z
+data/update_compas_csv.py: 2021-09-08T22:07:51Z
+evaluate_adult.py: 2021-09-08T22:07:51Z
+evaluate_compas.py: 2021-09-08T22:07:51Z
+evaluate_german.py: 2021-09-08T22:07:51Z
+evaluate_regularizers.py: 2021-09-08T22:07:51Z
+it.py: 2021-09-08T22:07:51Z
+lr.py: 2021-09-08T22:07:51Z
+optimize_lambda.py: 2021-09-08T22:07:51Z
+plots.py: 2021-09-08T22:07:51Z
+utils.py: 2021-09-08T22:07:51Z

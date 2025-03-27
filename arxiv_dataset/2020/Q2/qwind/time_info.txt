@@ -1,0 +1,16 @@
+qwind/__init__.py: 2019-07-30T10:03:42Z
+qwind/constants.py: 2019-10-04T12:45:52Z
+qwind/grid.py: 2019-12-19T23:17:09Z
+qwind/integration/__init__.py: 2019-12-24T07:11:04Z
+qwind/integration/integration.py: 2020-10-09T09:56:19Z
+qwind/radiation/__init__.py: 2019-08-12T15:31:05Z
+qwind/radiation/simple_sed.py: 2020-10-09T09:56:19Z
+qwind/streamline/euler.py: 2019-12-05T05:59:50Z
+qwind/streamline/ida.py: 2020-10-09T09:56:19Z
+qwind/utils.py: 2019-11-29T23:08:19Z
+qwind/wind.py: 2020-10-09T09:56:19Z
+setup.py: 2019-12-24T07:22:46Z
+tests/__init__.py: 2019-10-08T15:51:14Z
+tests/test_simplesed.py: 2020-10-09T09:56:19Z
+tests/test_streamline_class.py: 2019-12-24T08:06:02Z
+tests/test_wind_class.py: 2020-10-09T09:56:19Z

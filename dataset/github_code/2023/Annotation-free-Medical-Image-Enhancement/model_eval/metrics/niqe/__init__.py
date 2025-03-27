@@ -1,1 +1,0 @@
-from .niqe import niqe  

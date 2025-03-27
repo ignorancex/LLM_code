@@ -1,0 +1,14 @@
+py/drag_force.py: 2024-01-09T12:24:22Z
+py/plot_control.py: 2024-12-12T08:53:05Z
+py/plot_control_TGyro.py: 2024-11-05T07:24:47Z
+py/plot_drag.py: 2024-11-05T07:24:47Z
+py/plot_dynamics.py: 2024-06-21T06:43:58Z
+py/plot_dynamics_old.py: 2024-06-21T06:43:58Z
+py/plot_dynamics_temp.py: 2024-06-05T02:21:19Z
+py/plot_motor.py: 2024-06-05T02:21:19Z
+py/plot_params.py: 2024-11-05T07:24:47Z
+py/plot_path_comparison.py: 2024-11-05T07:24:47Z
+py/plot_recovery.py: 2024-11-05T07:24:47Z
+py/plot_traj.py: 2024-06-21T06:43:58Z
+py/plot_vss.py: 2024-06-21T06:43:58Z
+py/time_constant.py: 2024-01-09T12:24:22Z

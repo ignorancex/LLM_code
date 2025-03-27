@@ -1,6 +1,0 @@
-microprocessor/rpi_transfer.py: 2022-08-06T12:17:28Z
-software_platform/Detection_system_Lite.py: 2022-06-18T01:26:49Z
-software_platform/Mainv_Lite.py: 2022-06-18T01:26:49Z
-software_platform/WaveformWindow.py: 2022-06-18T01:26:49Z
-software_platform/process.py: 2022-06-18T01:26:49Z
-software_platform/stop_thread.py: 2022-06-18T01:26:49Z

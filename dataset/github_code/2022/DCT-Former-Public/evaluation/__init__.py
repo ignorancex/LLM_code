@@ -1,1 +1,0 @@
-from evaluation.inference import pt_inference_on_test, ft_inference_on_test

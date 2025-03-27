@@ -1,0 +1,6 @@
+curvit/__init__.py: 2023-05-07T09:14:01Z
+curvit/curvit.py: 2024-12-09T09:54:25Z
+curvit/profile_curvit.py: 2023-05-07T09:14:01Z
+curvit/test_curvit.py: 2023-05-07T09:14:01Z
+docs/conf.py: 2021-06-26T12:48:14Z
+setup.py: 2024-04-10T07:45:15Z

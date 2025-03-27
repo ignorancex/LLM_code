@@ -1,0 +1,8 @@
+kenn/AttCaptionsModel.py: 2020-08-17T12:33:51Z
+kenn/AttCaptionsSolver.py: 2020-08-17T12:33:51Z
+kenn/evaluate.py: 2020-08-17T12:33:51Z
+kenn/utils.py: 2020-08-17T12:33:51Z
+kenn/visual.py: 2020-08-17T12:33:51Z
+multiAtt_test.py: 2020-08-17T12:33:51Z
+multiAtt_train.py: 2020-08-17T12:33:51Z
+visualization.py: 2020-08-17T12:33:51Z
