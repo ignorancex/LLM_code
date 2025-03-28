@@ -42,8 +42,8 @@ features/keynet/HSequences_bench/tools/opencv_matcher.py: 2024-06-16T21:16:49Z
 features/keynet/HSequences_bench/tools/repeatability_tools.py: 2024-06-16T21:16:49Z
 features/keynet/extract_multiscale_features.py: 2024-06-16T21:16:49Z
 features/keynet/hsequeces_bench.py: 2024-06-16T21:16:49Z
-features/keynet/keyNet/aux/desc_aux_function.py: 2024-06-16T21:16:49Z
-features/keynet/keyNet/aux/tools.py: 2024-06-16T21:16:49Z
+features/keynet/keyNet/aux_file/desc_aux_function.py: 2024-06-16T21:16:49Z
+features/keynet/keyNet/aux_file/tools.py: 2024-06-16T21:16:49Z
 features/keynet/keyNet/datasets/dataset_utils.py: 2024-06-16T21:16:49Z
 features/keynet/keyNet/datasets/tf_dataset.py: 2024-06-16T21:16:49Z
 features/keynet/keyNet/loss/score_loss_function.py: 2024-06-16T21:16:49Z

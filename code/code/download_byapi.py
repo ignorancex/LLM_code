@@ -7,11 +7,11 @@ GITHUB_TOKEN = os.getenv("GITHUB_TOKEN",
                          "YOUR_TOKEN")
 
 
-
-year = "2022"
+year = "2020"
+season = "Q1"
 
 # 所有代码存放的主目录
-BASE_DIR = f"github_code/{year}"
+BASE_DIR = f"github_code/{year}/{season}"
 
 
 def download_file(url, save_path):
@@ -93,14 +93,34 @@ def fetch_python_files_from_github(repo_owner, repo_name, branch=None):
     print(f"Timestamps saved in: {timestamp_file}")
 
 
+# def process_github_links(json_file):
+#     """处理 JSON 文件中的 GitHub 链接"""
+#     with open(json_file, 'r') as f:
+#         data = json.load(f)
+
+#     github_links = data.get("github_links", [])
+
+#     for link in github_links:
+#         # 提取仓库的 owner 和 name
+#         repo_owner, repo_name = link.split("/")[-2], link.split("/")[-1]
+#         save_dir = os.path.join(BASE_DIR, repo_name)
+
+#         # 如果项目文件夹下已经存在 time_info.txt 文件，跳过
+#         if os.path.exists(os.path.join(save_dir, "time_info.txt")):
+#             print(f"Skipping {repo_name} as time_info.txt already exists.")
+#             continue
+
+#         # 否则，获取该仓库的 .py 文件并下载时间戳
+#         print(f"Processing {repo_name}...")
+#         fetch_python_files_from_github(repo_owner, repo_name, branch=None)
+
+
 def process_github_links(json_file):
     """处理 JSON 文件中的 GitHub 链接"""
     with open(json_file, 'r') as f:
-        data = json.load(f)
+        data = json.load(f)  # 现在 data 是一个字符串列表
 
-    github_links = data.get("github_links", [])
-
-    for link in github_links:
+    for link in data:
         # 提取仓库的 owner 和 name
         repo_owner, repo_name = link.split("/")[-2], link.split("/")[-1]
         save_dir = os.path.join(BASE_DIR, repo_name)
@@ -116,5 +136,4 @@ def process_github_links(json_file):
 
 
 # 使用示例
-# process_github_links(f"link_{year}_new.json")
-process_github_links(f"add_{year}.json")
+process_github_links(f"target_{year}{season}.json")
