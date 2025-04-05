@@ -1,0 +1,24 @@
+# -*- coding: utf-8 -*-
+
+def get(network_spec):
+    """Retrieve a PiNN network
+
+    Args:
+       network_spec: serialized specification of network, or a Keras model.
+    """
+    import tensorflow as tf
+    from pinn.networks.pinet import PiNet
+    from pinn.networks.bpnn import BPNN
+    from pinn.networks.lj import LJ
+    from pinn.networks.pinet2 import PiNet2
+    implemented_networks = {
+        'LJ': LJ,
+        'BPNN': BPNN,
+        'PiNet': PiNet,
+        'PiNet2': PiNet2    
+    }
+    if isinstance(network_spec, tf.keras.Model):
+        return network_spec
+    else:
+        return  implemented_networks[network_spec['name']](
+            **network_spec['params'])

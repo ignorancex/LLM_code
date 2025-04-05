@@ -1,0 +1,12 @@
+MUSEpack/MUSEreduce.py: 2021-11-02T20:22:25Z
+MUSEpack/__init__.py: 2018-08-09T21:52:50Z
+MUSEpack/cubes.py: 2021-10-19T13:52:01Z
+MUSEpack/line_fitter.py: 2021-01-28T18:13:57Z
+MUSEpack/ppxf_MC.py: 2019-08-16T20:32:28Z
+MUSEpack/radial_velocities.py: 2021-01-28T18:13:57Z
+MUSEpack/utils.py: 2021-01-28T20:14:14Z
+docs/build/html/_downloads/5a413622b2410f9728d436212fd7e3f2/exec.py: 2019-07-03T22:13:42Z
+docs/build/html/_downloads/875ca4f08a443972c97c8843bb2b7202/exec.py: 2020-01-22T17:59:38Z
+docs/source/conf.py: 2021-01-28T20:14:14Z
+docs/source/files/exec.py: 2019-07-03T22:13:42Z
+setup.py: 2021-11-02T20:22:25Z

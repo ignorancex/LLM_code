@@ -1,0 +1,14 @@
+docs/source/conf.py: 2024-04-08T15:23:47Z
+python/famed/__init__.py: 2022-01-14T09:17:09Z
+python/famed/asteroseismic_functions.py: 2022-01-14T21:03:32Z
+python/famed/chunk_object.py: 2024-09-30T17:34:28Z
+python/famed/configuring_parameters.py: 2021-12-02T13:41:13Z
+python/famed/diamonds_functions.py: 2024-06-19T10:50:25Z
+python/famed/global_object.py: 2024-09-30T17:34:28Z
+python/famed/plotting_functions.py: 2024-09-30T17:34:28Z
+python/famed/run.py: 2024-06-19T10:50:25Z
+python/famed/star_object.py: 2024-09-30T17:34:28Z
+python/famed/utils.py: 2022-01-14T09:17:09Z
+python/famed/version.py: 2021-04-07T15:08:25Z
+python/tests/__init__.py: 2021-04-07T15:08:25Z
+python/tests/test_famed.py: 2024-04-10T10:04:28Z

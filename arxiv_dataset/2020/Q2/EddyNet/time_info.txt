@@ -1,0 +1,3 @@
+old code /eddynet.py: 2018-10-16T11:00:26Z
+old code /eddynet_selu.py: 2018-10-16T11:00:26Z
+old code /ghosteddies.py: 2018-10-16T11:00:26Z

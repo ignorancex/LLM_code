@@ -1,17 +1,13 @@
 import os
 import requests
 import json
+from tqdm import tqdm
 
 # GitHub Token（建议用环境变量）
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN",
-                         "YOUR_TOKEN")
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "YOUR_TOKEN")
 
-
-year = "2020"
-season = "Q1"
-
-# 所有代码存放的主目录
-BASE_DIR = f"github_code/{year}/{season}"
+SEASONS = ["Q1","Q2", "Q3", "Q4"]
+YEARS = ["2020", "2021", "2022", "2023", "2024", "2025"]
 
 
 def download_file(url, save_path):
@@ -35,7 +31,7 @@ def get_file_timestamp(repo_owner, repo_name, file_path, branch):
     response = requests.get(api_url, headers=headers)
     if response.status_code == 200 and response.json():
         last_commit = response.json()[0]
-        return last_commit["commit"]["committer"]["date"]  # 返回 ISO 时间字符串
+        return last_commit["commit"]["committer"]["date"]
     return "Unknown"
 
 
@@ -46,16 +42,15 @@ def get_default_branch(repo_owner, repo_name):
 
     response = requests.get(api_url, headers=headers)
     if response.status_code == 200:
-        return response.json().get("default_branch", "main")  # 默认返回 'main'，如果没有字段
+        return response.json().get("default_branch", "main")
     return "main"
 
 
-def fetch_python_files_from_github(repo_owner, repo_name, branch=None):
+def fetch_python_files_from_github(repo_owner, repo_name, base_dir, branch=None):
     """使用 GitHub API 获取仓库中的 .py 文件并下载，同时获取更新时间"""
-    save_dir = os.path.join(BASE_DIR, repo_name)  # 每个仓库存放到 github_code/repo_name
+    save_dir = os.path.join(base_dir, repo_name)
     os.makedirs(save_dir, exist_ok=True)
 
-    # 如果没有提供分支，则获取默认分支
     if not branch:
         branch = get_default_branch(repo_owner, repo_name)
 
@@ -71,21 +66,18 @@ def fetch_python_files_from_github(repo_owner, repo_name, branch=None):
         return
 
     data = response.json()
-    timestamps = []  # 存储每个文件的更新时间
+    tree_items = [file for file in data.get("tree", []) if file["type"] == "blob" and file["path"].endswith(".py")]
 
-    for file in data.get("tree", []):
-        if file["type"] == "blob" and file["path"].endswith(".py"):
-            raw_url = f"https://raw.githubusercontent.com/{repo_owner}/{repo_name}/{branch}/{file['path']}"
-            save_path = os.path.join(save_dir, file["path"])
+    timestamps = []
 
-            # 下载文件
-            download_file(raw_url, save_path)
+    for file in tqdm(tree_items, desc=f"Downloading {repo_name}", leave=False):
+        raw_url = f"https://raw.githubusercontent.com/{repo_owner}/{repo_name}/{branch}/{file['path']}"
+        save_path = os.path.join(save_dir, file["path"])
 
-            # 获取文件更新时间
-            last_modified = get_file_timestamp(repo_owner, repo_name, file["path"], branch)
-            timestamps.append(f"{file['path']}: {last_modified}")
+        download_file(raw_url, save_path)
+        last_modified = get_file_timestamp(repo_owner, repo_name, file["path"], branch)
+        timestamps.append(f"{file['path']}: {last_modified}")
 
-    # 把所有的时间信息写入文件
     timestamp_file = os.path.join(save_dir, "time_info.txt")
     with open(timestamp_file, "w", encoding="utf-8") as f:
         f.write("\n".join(timestamps))
@@ -93,47 +85,31 @@ def fetch_python_files_from_github(repo_owner, repo_name, branch=None):
     print(f"Timestamps saved in: {timestamp_file}")
 
 
-# def process_github_links(json_file):
-#     """处理 JSON 文件中的 GitHub 链接"""
-#     with open(json_file, 'r') as f:
-#         data = json.load(f)
-
-#     github_links = data.get("github_links", [])
-
-#     for link in github_links:
-#         # 提取仓库的 owner 和 name
-#         repo_owner, repo_name = link.split("/")[-2], link.split("/")[-1]
-#         save_dir = os.path.join(BASE_DIR, repo_name)
-
-#         # 如果项目文件夹下已经存在 time_info.txt 文件，跳过
-#         if os.path.exists(os.path.join(save_dir, "time_info.txt")):
-#             print(f"Skipping {repo_name} as time_info.txt already exists.")
-#             continue
-
-#         # 否则，获取该仓库的 .py 文件并下载时间戳
-#         print(f"Processing {repo_name}...")
-#         fetch_python_files_from_github(repo_owner, repo_name, branch=None)
-
-
-def process_github_links(json_file):
+def process_github_links(json_file, base_dir):
     """处理 JSON 文件中的 GitHub 链接"""
     with open(json_file, 'r') as f:
-        data = json.load(f)  # 现在 data 是一个字符串列表
+        data = json.load(f)
 
-    for link in data:
-        # 提取仓库的 owner 和 name
+    for link in tqdm(data, desc=f"Processing Repositories from {json_file}"):
         repo_owner, repo_name = link.split("/")[-2], link.split("/")[-1]
-        save_dir = os.path.join(BASE_DIR, repo_name)
+        save_dir = os.path.join(base_dir, repo_name)
 
-        # 如果项目文件夹下已经存在 time_info.txt 文件，跳过
         if os.path.exists(os.path.join(save_dir, "time_info.txt")):
-            print(f"Skipping {repo_name} as time_info.txt already exists.")
+            tqdm.write(f"Skipping {repo_name} as time_info.txt already exists.")
             continue
 
-        # 否则，获取该仓库的 .py 文件并下载时间戳
-        print(f"Processing {repo_name}...")
-        fetch_python_files_from_github(repo_owner, repo_name, branch=None)
+        tqdm.write(f"Processing {repo_name}...")
+        fetch_python_files_from_github(repo_owner, repo_name, base_dir, branch=None)
 
 
-# 使用示例
-process_github_links(f"target_{year}{season}.json")
+# 主循环处理 2021~2024 年的每个季度
+for year in YEARS:
+    for season in SEASONS:
+        BASE_DIR = f"github_code/{year}/{season}"
+        json_path = f"target/target_{year}{season}.json"
+
+        if os.path.exists(json_path):
+            print(f"\n=== Processing {year} {season} ===")
+            process_github_links(json_path, BASE_DIR)
+        else:
+            print(f"JSON file not found: {json_path}")

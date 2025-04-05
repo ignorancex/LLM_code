@@ -1,0 +1,12 @@
+animate_face.py: 2021-10-27T15:00:54Z
+models/context_model.py: 2021-10-27T15:00:54Z
+models/encoders.py: 2021-10-27T15:00:54Z
+models/vertex_unet.py: 2021-10-27T15:00:54Z
+training/dataset.py: 2022-10-03T19:01:07Z
+training/forwarder.py: 2022-10-03T19:01:07Z
+training/train_step1.py: 2022-10-03T19:01:07Z
+training/train_step2.py: 2022-10-03T19:01:07Z
+training/trainer.py: 2022-10-03T19:01:07Z
+utils/helpers.py: 2021-10-27T15:00:54Z
+utils/multiface2meshtalk.py: 2022-08-19T15:21:34Z
+utils/renderer.py: 2021-10-27T15:00:54Z

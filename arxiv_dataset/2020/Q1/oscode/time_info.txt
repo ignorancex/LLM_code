@@ -1,0 +1,8 @@
+examples/airy.py: 2022-03-30T20:35:00Z
+examples/plot_burst.py: 2021-01-23T18:14:12Z
+examples/test-rk.py: 2020-07-19T19:27:35Z
+pyoscode/__init__.py: 2022-03-30T20:35:00Z
+pyoscode/docs/source/conf.py: 2020-10-07T13:37:39Z
+setup.py: 2025-01-23T21:36:02Z
+tests/test_airy.py: 2022-03-30T20:35:00Z
+tests/test_arrays.py: 2020-10-07T12:18:55Z

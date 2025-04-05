@@ -1,0 +1,12 @@
+M2GRL/config.py: 2020-06-01T15:10:01Z
+M2GRL/const.py: 2020-06-01T15:10:01Z
+M2GRL/embedding_mgr.py: 2020-06-01T15:10:01Z
+M2GRL/extract_networks.py: 2020-06-01T15:10:01Z
+M2GRL/hetero_graph.py: 2020-06-01T15:10:01Z
+M2GRL/local_main.py: 2020-06-01T15:10:01Z
+M2GRL/losses.py: 2020-06-01T15:10:01Z
+M2GRL/multi_loss_handler.py: 2020-06-01T15:10:01Z
+M2GRL/networks.py: 2020-06-01T15:10:01Z
+M2GRL/reader.py: 2020-06-01T15:10:01Z
+M2GRL/utils.py: 2020-06-01T15:10:01Z
+M2GRL/w2v.py: 2020-06-01T15:10:01Z

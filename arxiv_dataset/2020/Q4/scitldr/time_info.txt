@@ -1,0 +1,14 @@
+SciTLDR-Data/build_ctrl_datasets.py: 2020-05-01T20:06:06Z
+SciTLDR-Data/make_datafiles.py: 2020-05-01T20:06:06Z
+SciTLDR-Data/multiprocessing_bpe_encoder.py: 2020-05-01T01:35:10Z
+SciTLDR-Data/to_stories.py: 2020-09-25T22:43:53Z
+scripts/analyze_email_arxiv_authors.py: 2020-10-02T00:35:33Z
+scripts/cal-rouge.py: 2021-01-25T18:57:19Z
+scripts/convert_matchsum_predictions_to_files2rouge.py: 2020-10-02T00:35:33Z
+scripts/convert_scitldr_to_matchsum.py: 2020-10-02T00:35:33Z
+scripts/generate.py: 2020-10-02T00:35:33Z
+scripts/generation_stats.py: 2020-10-02T00:35:33Z
+scripts/get_oracle_sents.py: 2020-10-02T00:35:33Z
+scripts/lexical_variation.py: 2020-10-02T00:35:33Z
+scripts/novelty_stats.py: 2020-10-02T00:35:33Z
+scripts/tldr_analyze_nuggets.py: 2020-10-02T00:35:33Z

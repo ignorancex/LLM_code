@@ -1,0 +1,8 @@
+data.py: 2020-07-15T15:35:39Z
+data_generation.py: 2020-07-09T04:14:51Z
+demo.py: 2020-07-09T03:47:26Z
+evaluate.py: 2020-10-24T13:40:01Z
+model.py: 2020-06-06T11:33:22Z
+model_maxpool.py: 2020-06-06T06:28:12Z
+train.py: 2020-06-06T11:32:16Z
+utils.py: 2020-06-06T11:27:11Z

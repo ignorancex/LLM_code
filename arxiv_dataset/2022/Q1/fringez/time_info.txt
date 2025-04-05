@@ -1,0 +1,7 @@
+fringez/__init__.py: 2019-09-08T20:03:22Z
+fringez/fringe.py: 2025-02-04T15:41:14Z
+fringez/metric.py: 2025-02-04T15:38:52Z
+fringez/model.py: 2021-04-28T20:10:11Z
+fringez/plot.py: 2020-04-10T19:16:41Z
+fringez/utils.py: 2025-02-04T15:38:52Z
+setup.py: 2019-09-08T17:44:52Z

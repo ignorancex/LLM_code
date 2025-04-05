@@ -1,0 +1,13 @@
+HeatingRate_alpha/bateman.py: 2021-04-05T16:32:06Z
+HeatingRate_alpha/heat_alpha.py: 2019-09-04T15:10:25Z
+HeatingRate_alpha/lightcurve.py: 2021-04-06T02:33:49Z
+HeatingRate_alpha/thermalization.py: 2021-04-05T17:00:15Z
+HeatingRate_beta/bateman.py: 2021-04-05T16:34:44Z
+HeatingRate_beta/heat.py: 2019-09-04T03:51:54Z
+HeatingRate_beta/lightcurve.py: 2021-04-06T02:19:42Z
+HeatingRate_beta/thermalization.py: 2021-04-05T16:59:45Z
+HeatingRate_fission/bateman.py: 2019-08-28T17:47:22Z
+HeatingRate_fission/heat_fission.py: 2019-09-04T15:10:25Z
+HeatingRate_fission/lightcurve.py: 2021-04-06T02:45:22Z
+HeatingRate_fission/thermalization.py: 2021-04-05T17:00:40Z
+lightcurve.py: 2021-04-06T04:25:30Z

@@ -1,0 +1,10 @@
+data/dataGen.py: 2018-09-28T15:30:50Z
+data/shearAirfoils.py: 2018-09-28T15:30:50Z
+data/utils.py: 2018-09-28T15:30:50Z
+train/DfpNet.py: 2021-03-20T07:20:24Z
+train/dataset.py: 2018-09-30T14:33:05Z
+train/runTest.py: 2021-01-01T07:06:57Z
+train/runTestCpu.py: 2021-11-07T11:31:32Z
+train/runTrain.py: 2021-01-01T06:21:08Z
+train/runTrainCpu.py: 2021-01-01T06:21:08Z
+train/utils.py: 2018-10-11T11:48:05Z

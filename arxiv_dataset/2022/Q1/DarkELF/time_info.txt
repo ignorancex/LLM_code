@@ -1,0 +1,11 @@
+darkelf/Migdal.py: 2022-03-23T23:32:52Z
+darkelf/__init__.py: 2024-11-07T00:19:42Z
+darkelf/absorption.py: 2024-08-16T18:10:07Z
+darkelf/electron.py: 2021-06-06T02:02:03Z
+darkelf/epsilon.py: 2024-08-16T20:35:08Z
+darkelf/fnomega.py: 2024-08-16T18:10:07Z
+darkelf/fnomega_anisotropic.py: 2024-11-06T18:27:51Z
+darkelf/multiphonon.py: 2022-08-26T18:46:58Z
+darkelf/multiphonon_anisotropic.py: 2024-11-06T18:27:51Z
+darkelf/phonon.py: 2022-03-17T15:38:15Z
+darkelf/targets.py: 2022-05-03T01:07:38Z

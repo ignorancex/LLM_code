@@ -1,0 +1,10 @@
+algebra.py: 2020-01-04T20:47:15Z
+bent_identity.py: 2020-01-04T20:47:15Z
+demo.py: 2020-01-04T20:47:15Z
+dist.py: 2020-01-04T20:47:15Z
+ent.py: 2020-08-20T23:43:15Z
+linalg_grad.py: 2020-01-04T20:47:15Z
+obs.py: 2020-01-04T20:47:15Z
+tests.py: 2020-01-04T20:47:15Z
+train.py: 2020-01-04T20:47:15Z
+wavefunc.py: 2020-01-04T20:47:15Z

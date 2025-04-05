@@ -1,0 +1,5 @@
+data_and_posterior/jolly_seber_model.py: 2017-07-05T16:20:59Z
+data_and_posterior/pac_bayes_model.py: 2017-07-07T20:44:02Z
+dhmc/dhmc_sampler.py: 2018-08-01T00:47:19Z
+other_samplers/mcmc_diagnostic.py: 2017-07-05T16:28:49Z
+other_samplers/nuts_sampler.py: 2017-07-04T21:16:26Z

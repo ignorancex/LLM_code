@@ -1,0 +1,234 @@
+import dataclasses
+from collections import defaultdict
+from dataclasses import dataclass
+from typing import (
+    Any,
+    DefaultDict,
+    Dict,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    TypeVar,
+    Union,
+)
+
+import numpy as np
+
+from rl_algo_impls.shared.summary_wrapper.abstract_summary_wrapper import (
+    AbstractSummaryWrapper,
+)
+from rl_algo_impls.wrappers.vector_wrapper import extract_info
+
+
+@dataclass
+class Episode:
+    score: float = 0
+    length: int = 0
+    info: Dict[str, Dict[str, Any]] = dataclasses.field(default_factory=dict)
+
+
+StatisticSelf = TypeVar("StatisticSelf", bound="Statistic")
+
+
+@dataclass
+class Statistic:
+    values: np.ndarray
+    round_digits: int = 2
+    score_function: str = "mean-std"
+
+    @property
+    def mean(self) -> float:
+        return np.mean(self.values).item()
+
+    @property
+    def std(self) -> float:
+        return np.std(self.values).item()
+
+    @property
+    def min(self) -> float:
+        return np.min(self.values).item()
+
+    @property
+    def max(self) -> float:
+        return np.max(self.values).item()
+
+    def sum(self) -> float:
+        return np.sum(self.values).item()
+
+    def __len__(self) -> int:
+        return len(self.values)
+
+    def score(self) -> float:
+        if self.score_function == "mean-std":
+            return self.mean - self.std
+        elif self.score_function == "mean":
+            return self.mean
+        else:
+            raise NotImplemented(
+                f"Only mean-std and mean score_functions supported ({self.score_function})"
+            )
+
+    def _diff(self: StatisticSelf, o: StatisticSelf) -> float:
+        return self.score() - o.score()
+
+    def __gt__(self: StatisticSelf, o: StatisticSelf) -> bool:
+        return self._diff(o) > 0
+
+    def __ge__(self: StatisticSelf, o: StatisticSelf) -> bool:
+        return self._diff(o) >= 0
+
+    def __repr__(self) -> str:
+        mean = round(self.mean, self.round_digits)
+        if self.round_digits == 0:
+            mean = int(mean)
+        if self.score_function == "mean":
+            return f"{mean}"
+
+        std = round(self.std, self.round_digits)
+        if self.round_digits == 0:
+            std = int(std)
+        return f"{mean} +/- {std}"
+
+    def to_dict(self) -> Dict[str, float]:
+        return {
+            "mean": self.mean,
+            "std": self.std,
+            "min": self.min,
+            "max": self.max,
+        }
+
+
+EpisodesStatsSelf = TypeVar("EpisodesStatsSelf", bound="EpisodesStats")
+
+
+def _add_info_values(
+    values: DefaultDict[str, List[Union[float, int]]],
+    info: Dict[str, Any],
+    path: Optional[Tuple[str, ...]] = None,
+) -> None:
+    if path is None:
+        path = tuple()
+    for k, v in info.items():
+        if isinstance(v, dict):
+            _add_info_values(values, v, path=(*path, k))
+        else:
+            values["_".join((*path, k))].append(v)
+
+
+class EpisodesStats:
+    def __init__(
+        self,
+        episodes: Sequence[Episode],
+        simple: bool = False,
+        score_function: str = "mean-std",
+    ) -> None:
+        self.episodes = episodes
+        self.simple = simple
+        self.score = Statistic(
+            np.array([e.score for e in episodes]), score_function=score_function
+        )
+        self.length = Statistic(np.array([e.length for e in episodes]), round_digits=0)
+        additional_values = defaultdict(list)
+        for e in self.episodes:
+            if e.info:
+                _add_info_values(additional_values, e.info)
+        self.additional_stats = {
+            k: Statistic(np.array(values)) for k, values in additional_values.items()
+        }
+        self.score_function = score_function
+
+    def __gt__(self: EpisodesStatsSelf, o: EpisodesStatsSelf) -> bool:
+        return self.score > o.score
+
+    def __ge__(self: EpisodesStatsSelf, o: EpisodesStatsSelf) -> bool:
+        return self.score >= o.score
+
+    def __repr__(self) -> str:
+        mean = self.score.mean
+        score = self.score.score()
+        items = [
+            (
+                f"Score: {self.score} ({round(score)})"
+                if mean != score
+                else f"Score: {self.score}"
+            ),
+            f"Length: {self.length}",
+        ]
+        if "results_WinLoss" in self.additional_stats:
+            items.append(
+                f"WinLoss: {round(self.additional_stats['results_WinLoss'].mean, 2)}"
+            )
+        return " | ".join(items)
+
+    def __len__(self) -> int:
+        return len(self.episodes)
+
+    def _asdict(self) -> dict:
+        return {
+            "n_episodes": len(self.episodes),
+            "score": self.score.to_dict(),
+            "length": self.length.to_dict(),
+        }
+
+    def write_to_tensorboard(
+        self,
+        tb_writer: AbstractSummaryWrapper,
+        main_tag: str,
+    ) -> None:
+        stats = {"mean": self.score.mean}
+        if not self.simple:
+            stats.update(
+                {
+                    "min": self.score.min,
+                    "max": self.score.max,
+                    "result": self.score.score(),
+                    "n_episodes": len(self.episodes),
+                    "length": self.length.mean,
+                }
+            )
+            for k, addl_stats in self.additional_stats.items():
+                stats[k] = addl_stats.mean
+        for name, value in stats.items():
+            tb_writer.add_scalar(f"{main_tag}/{name}", value)
+
+
+class EpisodeAccumulator:
+    def __init__(self, num_envs: int):
+        self._episodes = []
+        self.current_episodes = [Episode() for _ in range(num_envs)]
+
+    @property
+    def episodes(self) -> List[Episode]:
+        return self._episodes
+
+    def step(self, reward: np.ndarray, done: np.ndarray, info: dict) -> None:
+        for idx, current in enumerate(self.current_episodes):
+            current.score += reward[idx]
+            current.length += 1
+            if done[idx]:
+                self._episodes.append(current)
+                self.current_episodes[idx] = Episode()
+                self.on_done(idx, current, extract_info(info, idx))
+
+    def __len__(self) -> int:
+        return len(self.episodes)
+
+    def on_done(self, ep_idx: int, episode: Episode, info: Dict) -> None:
+        pass
+
+    def stats(self) -> EpisodesStats:
+        return EpisodesStats(self.episodes)
+
+
+def log_scalars(
+    tb_writer: AbstractSummaryWrapper,
+    main_tag: str,
+    tag_scalar_dict: Dict[str, Union[int, float]],
+) -> None:
+    for tag, value in tag_scalar_dict.items():
+        if isinstance(value, np.ndarray):
+            for idx, v in enumerate(value.flatten()):
+                tb_writer.add_scalar(f"{main_tag}/{tag}_{idx}", v)
+        else:
+            tb_writer.add_scalar(f"{main_tag}/{tag}", value)

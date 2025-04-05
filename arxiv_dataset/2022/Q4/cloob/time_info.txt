@@ -1,0 +1,13 @@
+src/clip/clip.py: 2022-02-07T11:58:24Z
+src/clip/model.py: 2022-02-07T11:58:24Z
+src/clip/tokenizer.py: 2021-10-21T22:28:51Z
+src/data/gather_cc.py: 2021-10-21T22:28:51Z
+src/training/data.py: 2021-10-21T22:28:51Z
+src/training/logger.py: 2021-10-21T22:28:51Z
+src/training/main.py: 2022-02-07T11:58:24Z
+src/training/methods.py: 2022-02-07T11:58:24Z
+src/training/params.py: 2022-02-07T11:58:24Z
+src/training/scheduler.py: 2021-10-21T22:28:51Z
+src/training/train.py: 2022-02-07T11:58:24Z
+src/training/zero_shot.py: 2021-10-21T22:28:51Z
+src/training/zeroshot_data.py: 2021-10-21T22:28:51Z

@@ -1,0 +1,15 @@
+data_duffing.py: 2020-10-22T12:36:37Z
+data_real.py: 2020-10-22T12:36:37Z
+data_strange.py: 2020-10-22T12:36:37Z
+model.py: 2020-10-22T12:36:37Z
+model_strange.py: 2020-10-22T12:36:37Z
+run_exp1.py: 2020-12-06T09:39:09Z
+run_exp2.py: 2020-12-06T09:40:00Z
+run_exp3.py: 2020-12-06T09:40:49Z
+run_exp4.py: 2020-12-06T09:41:30Z
+run_exp5.py: 2020-12-06T09:42:19Z
+run_exp6.py: 2020-10-22T12:36:37Z
+train_duffing.py: 2020-12-06T09:43:40Z
+train_real.py: 2020-12-06T09:43:14Z
+train_strange.py: 2020-10-22T12:36:37Z
+utils.py: 2020-10-22T12:36:37Z

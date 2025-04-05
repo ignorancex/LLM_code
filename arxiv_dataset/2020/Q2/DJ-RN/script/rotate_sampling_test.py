@@ -1,0 +1,101 @@
+import os
+import os.path as osp
+import numpy as np
+import pickle
+import trimesh
+import torch
+import argparse
+from generate_utils import get_order_obj, get_joints, get_param, rotate_mul, rotate
+
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description='Rotate and downsampling on vertexs')
+    
+    parser.add_argument('--smplx_path', dest='smplx_path',
+            help='Path to your SMPLX model',
+            default='', type=str)
+
+    parser.add_argument('--gender', dest='gender',
+            help='Use gender neutral or gender specific SMPLX' + 'model',
+            default='male',choices=['neutral', 'male', 'female'],
+            type=str )
+
+    parser.add_argument('--res', dest='res',
+            help='Path to your SMPLify-X result',
+            default='', type=str)
+
+    parser.add_argument('--obj_path', dest='obj_path',
+            help='Path to get your obj 3D mesh',
+            default='', type=str)
+
+    parser.add_argument('--save_path', dest='save_path',
+            help='Path to save the picking vertexs pkl',
+            default='', type=str)
+
+    args = parser.parse_args()
+    return args
+
+args = parse_args()
+
+vertex_choice = pickle.load(open('remaining_vertexs-part.pkl','rb'),encoding='latin1')
+vertex_choice = np.array(vertex_choice)
+vertex_choice = vertex_choice[:,0]
+
+data = pickle.load(open('../Data/Test_Faster_RCNN_R-50-PFN_2x_HICO_DET_with_idx.pkl', 'rb'), encoding='latin1')
+
+obj_path_txt = ''
+
+for key in data.keys():
+    for i, item in enumerate(data[key]):
+        if (item[1] == 'Object'):
+            continue
+        for j, item2 in enumerate(data[key]):
+            if (j == i): continue
+            # The structure of item here:
+            # item[0]: image id
+            # item[1]: 'Human' of 'Object'
+            # item[2]: human bounding box
+            # item[3]: nan
+            # item[4]: object category
+            # item[5]: object detection score
+            # item[6]: alphapose
+            # item[7]: openpose index, -1 means none
+            if not os.path.exists(os.path.join(args.res, 'results/HICO_test2015_%08d/%03d.pkl' % (key, item[7]))):
+                    continue
+            result = pickle.load(open(os.path.join(args.res, 'results/HICO_test2015_%08d/%03d.pkl' % (key, item[7])), 'rb'), encoding='latin1')
+            hbox = item[2]
+            obox = item2[2]
+
+            mesh       = os.path.join(args.res, 'meshes/HICO_test2015_%08d/%03d.obj' % (key, item[7]))
+            htri       = trimesh.load_mesh(mesh)
+            vertice    = np.array(htri.vertices,dtype=np.float32)
+            
+
+            joints = get_joints(args,torch.FloatTensor(torch.from_numpy(vertice.reshape(1,-1,3))))
+            ansp = rotate(joints - joints[0])
+
+            obj_file = os.path.join(args.obj_path, 'HICO_test2015_%08d/human_%03d/object_%03d.pkl' % (key, i, j))
+            obj_vertice = np.array(pickle.load(open(obj_file, 'rb'),encoding='latin1'))
+            
+            path = os.path.join(args.save_path, 'HICO_test2015_%08d' % key)
+            if (not os.path.exists(path)):
+                os.makedirs(path)
+            path = os.path.join(args.save_path, 'HICO_test2015_%08d/human_%03d' % (key,i))
+            if (not os.path.exists(path)):
+                os.makedirs(path)    
+            
+            vertice = vertice[vertex_choice,:]
+
+            pick_vertex = np.vstack((vertice,obj_vertice))
+            pick_vertex = pick_vertex - joints[0]
+            pick_vertex = rotate_mul(pick_vertex, ansp)
+            
+            file_path = os.path.join(args.save_path, 'HICO_test2015_%08d/human_%03d/%03d.pkl' % (key, i, j))
+            f = open(file_path,'wb') 
+            pickle.dump(pick_vertex, f, protocol=2)
+
+            obj_path_txt = obj_path_txt + file_path + '\n'
+
+f = open('vertex_path_Test.txt', 'w')
+f.write(obj_path_txt)

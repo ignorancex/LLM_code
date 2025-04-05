@@ -1,0 +1,17 @@
+aircraft/utils/__init__.py: 2021-04-04T01:21:01Z
+aircraft/utils/attention.py: 2021-04-04T01:21:01Z
+aircraft/utils/custom_vit.py: 2021-04-04T01:21:01Z
+aircraft/utils/pooling_nms_crops.py: 2021-04-04T01:21:01Z
+plant_2021/train_plant_baseline.py: 2021-03-29T07:18:10Z
+plant_2021/train_plant_vit.py: 2021-03-29T07:18:10Z
+stanford_dog/utils/__init__.py: 2021-04-02T00:57:50Z
+stanford_dog/utils/attention.py: 2021-04-03T01:34:26Z
+stanford_dog/utils/custom_vit.py: 2021-04-02T00:57:50Z
+stanford_dog/utils/multi_crop_model.py: 2021-04-04T01:21:01Z
+stanford_dog/utils/object_crops.py: 2021-04-05T04:38:06Z
+stanford_dog/utils/part_crops.py: 2021-04-05T06:43:48Z
+utils/__init__.py: 2021-04-04T00:22:59Z
+utils/attention.py: 2021-04-04T00:22:59Z
+utils/custom_vit.py: 2021-04-04T00:22:59Z
+utils/pooling_nms_crops.py: 2021-04-04T00:22:59Z
+vit.py: 2021-03-22T07:45:26Z

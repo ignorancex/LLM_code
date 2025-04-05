@@ -1,0 +1,7 @@
+aas_generation/bert_embedding/embedding.py: 2022-03-18T04:55:56Z
+aas_generation/bert_embedding/run.py: 2022-03-18T04:55:56Z
+aas_generation/conceptNet/run.py: 2022-03-18T04:55:56Z
+aas_generation/counter_fit_synonyms/run.py: 2022-03-18T04:55:56Z
+aas_generation/wordNet/run.py: 2022-03-18T04:55:56Z
+entailment/entailment_score.py: 2022-03-18T04:55:56Z
+evaluation/evaluation.py: 2022-03-18T04:55:56Z

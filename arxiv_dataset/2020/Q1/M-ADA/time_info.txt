@@ -1,0 +1,5 @@
+main_Digits.py: 2020-06-15T07:36:17Z
+models/ada_conv.py: 2020-06-14T21:04:04Z
+utils/digits_process_dataset.py: 2020-06-15T07:36:17Z
+utils/download_and_process_mnist.py: 2020-06-15T06:21:49Z
+utils/ops.py: 2020-06-14T21:04:04Z

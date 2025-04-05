@@ -1,0 +1,3 @@
+from .inception import InceptionV3BinaryClassifier
+from .squeezenet import SqueezeNetBinaryClassifier
+from .resnet18 import Resnet18BinaryClassifier

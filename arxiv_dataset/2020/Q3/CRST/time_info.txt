@@ -1,0 +1,12 @@
+crst_seg.py: 2019-10-10T19:56:01Z
+dataset/helpers/labels.py: 2019-10-10T19:56:01Z
+dataset/helpers/labels_cityscapes_synthia.py: 2019-10-10T19:56:01Z
+dataset/helpers/labels_synthia.py: 2019-10-10T19:56:01Z
+deeplab/__init__.py: 2019-10-10T19:56:01Z
+deeplab/datasets.py: 2019-10-10T19:56:01Z
+deeplab/loss.py: 2019-10-10T19:56:01Z
+deeplab/metric.py: 2019-10-10T19:56:01Z
+deeplab/model.py: 2019-10-10T19:56:01Z
+evaluate.py: 2019-10-10T20:16:40Z
+train.py: 2019-10-10T19:56:01Z
+util.py: 2019-10-10T19:56:01Z

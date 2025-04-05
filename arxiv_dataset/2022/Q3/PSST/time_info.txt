@@ -1,0 +1,8 @@
+Tutorial/Day 5 Optimal Mind Control/call.py: 2021-08-27T09:13:56Z
+Tutorial/Day 5 Optimal Mind Control/run.py: 2022-02-19T21:44:35Z
+Tutorial/Day 5 Optimal Mind Control/static/call.py: 2021-08-27T10:17:10Z
+Tutorial/Day 5 Optimal Mind Control/static/run.py: 2021-08-27T10:17:10Z
+Tutorial/Day 5 Optimal Mind Control/static/tf_integrator.py: 2021-08-27T10:17:10Z
+Tutorial/Day 5 Optimal Mind Control/tf_integrator.py: 2022-02-19T21:44:35Z
+Tutorial/Example Implementation Locust AL/static/tf_integrator.py: 2021-08-27T13:03:15Z
+Tutorial/Example Implementation Locust AL/tf_integrator.py: 2022-02-19T21:44:35Z

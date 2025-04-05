@@ -1,0 +1,5 @@
+modules/__init__.py: 2019-08-11T21:10:10Z
+modules/mc_ising2d.py: 2019-08-11T21:10:10Z
+modules/mc_ising2d_MF.py: 2019-08-11T21:10:10Z
+modules/net.py: 2019-08-11T21:10:10Z
+modules/rbm.py: 2019-08-11T22:16:21Z

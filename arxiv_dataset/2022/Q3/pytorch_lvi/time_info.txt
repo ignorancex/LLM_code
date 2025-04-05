@@ -1,0 +1,7 @@
+lvi/__init__.py: 2021-03-25T20:00:43Z
+lvi/components.py: 2023-09-10T19:00:43Z
+lvi/components_reservoir.py: 2022-04-27T17:05:31Z
+lvi/mnist_utils.py: 2021-06-04T06:17:44Z
+lvi/optimizers.py: 2021-05-11T06:16:00Z
+lvi/utils.py: 2021-06-04T06:17:44Z
+main.py: 2021-06-04T06:18:52Z

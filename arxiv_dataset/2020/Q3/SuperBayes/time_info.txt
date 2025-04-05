@@ -1,0 +1,6 @@
+NewRun/redCA.py: 2020-08-17T12:23:12Z
+NewRun/redqpoCA.py: 2020-08-17T12:24:43Z
+NewRun/redsinCA.py: 2020-08-17T12:26:17Z
+redonly3.py: 2020-08-17T12:29:41Z
+redqpo3.py: 2020-08-17T12:28:40Z
+redsin3.py: 2020-08-17T12:27:30Z

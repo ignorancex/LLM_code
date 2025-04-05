@@ -1,0 +1,10 @@
+nazgul/__init__.py: 2020-09-15T07:42:53Z
+nazgul/_version.py: 2020-09-10T15:31:55Z
+nazgul/fit.py: 2020-09-14T06:59:11Z
+nazgul/nazgul.py: 2020-09-15T09:22:26Z
+nazgul/stan_models/__init__.py: 2020-09-10T15:31:55Z
+nazgul/stan_models/stan_models.py: 2020-09-15T08:20:59Z
+nazgul/test/basic_test.py: 2020-09-15T09:22:26Z
+nazgul/versioneer.py: 2020-09-10T15:31:55Z
+setup.py: 2020-09-10T15:31:55Z
+versioneer.py: 2020-09-10T15:31:55Z

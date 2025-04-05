@@ -1,0 +1,8 @@
+src/atomic_response_evaluation.py: 2022-02-14T08:39:28Z
+src/atomic_responses.py: 2019-12-20T13:41:21Z
+src/atomic_responses_tabulation.py: 2020-08-19T09:33:31Z
+src/radial_integrals.py: 2019-12-20T13:41:21Z
+src/radial_integrals_tabulation.py: 2020-07-14T08:29:33Z
+src/units.py: 2022-01-05T09:25:17Z
+src/vector_spherical_harmonics.py: 2019-12-17T14:48:50Z
+src/wave_functions.py: 2021-04-08T15:03:35Z

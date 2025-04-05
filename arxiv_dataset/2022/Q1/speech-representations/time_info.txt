@@ -1,0 +1,8 @@
+setup.py: 2020-05-14T16:15:43Z
+src/speech_reps/cmds.py: 2020-05-14T16:15:43Z
+src/speech_reps/featurize.py: 2021-06-17T18:45:45Z
+src/speech_reps/models/bertphone.py: 2020-12-09T12:18:31Z
+src/speech_reps/models/decoar.py: 2021-06-17T18:45:45Z
+src/speech_reps/models/decoar2.py: 2021-06-17T18:45:45Z
+src/speech_reps/models/wav2vec.py: 2020-05-14T16:15:43Z
+src/speech_reps/models/wav2vec2.py: 2020-12-09T12:18:31Z

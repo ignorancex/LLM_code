@@ -1,0 +1,13 @@
+doc/source/conf.py: 2020-06-11T09:55:29Z
+examples/e01_search_gs_droplet_instances.py: 2020-05-19T17:12:22Z
+examples/e02_sample_droplet_instances.py: 2020-05-19T17:12:22Z
+examples/e03_search_spectrum_droplet_instances.py: 2020-05-19T17:12:22Z
+examples/e04_load_spectrum_droplet_instances.py: 2020-05-19T17:12:22Z
+examples/e05_minimal_RMF.py: 2020-05-19T17:12:22Z
+examples/e06_search_gs_degeneracy_J124.py: 2021-06-23T10:21:00Z
+examples/test_examples.py: 2021-06-23T10:21:00Z
+setup.py: 2020-04-29T15:40:37Z
+tnac4o/__init__.py: 2021-09-16T07:50:07Z
+tnac4o/auxx.py: 2021-09-16T07:50:07Z
+tnac4o/mps.py: 2020-04-29T15:40:37Z
+tnac4o/tnac4o.py: 2020-06-04T11:01:12Z

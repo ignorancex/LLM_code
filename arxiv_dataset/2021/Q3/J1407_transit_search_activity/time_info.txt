@@ -1,0 +1,9 @@
+Data/make_cds_table.py: 2021-07-08T08:42:52Z
+Figure_2/bro.py: 2021-06-23T13:28:20Z
+Figure_2/butcher.py: 2021-06-23T13:28:20Z
+Figure_4/bro.py: 2021-06-23T14:14:30Z
+Figure_4/butcher.py: 2021-06-23T14:14:30Z
+Figure_6/alt_period_finder.py: 2021-06-24T14:48:48Z
+Figure_6/bootstrap.py: 2021-06-24T14:48:48Z
+Figure_6/butcher.py: 2021-06-24T14:48:48Z
+Figure_7/spotter.py: 2021-06-24T14:49:17Z

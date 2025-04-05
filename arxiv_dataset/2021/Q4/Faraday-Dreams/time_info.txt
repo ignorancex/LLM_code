@@ -1,0 +1,10 @@
+faradaydreams/__init__.py: 2020-05-07T20:22:15Z
+faradaydreams/convex_solvers.py: 2021-11-16T22:34:54Z
+faradaydreams/measurement_operator.py: 2021-11-16T22:34:54Z
+faradaydreams/models.py: 2021-11-16T22:34:54Z
+faradaydreams/recover_faraday_spectra.py: 2021-11-16T22:34:54Z
+faradaydreams/utilities.py: 2021-10-06T03:33:38Z
+setup.py: 2021-11-17T07:02:30Z
+tests/__init__.py: 2021-09-10T03:24:54Z
+tests/op_tests.py: 2021-10-05T02:15:40Z
+tests/solver_tests.py: 2021-10-05T02:15:40Z

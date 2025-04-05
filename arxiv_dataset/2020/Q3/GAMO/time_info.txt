@@ -1,0 +1,10 @@
+MNIST_process.py: 2019-04-04T11:39:50Z
+dense_gamo_main.py: 2019-04-04T11:30:03Z
+dense_net.py: 2019-04-04T11:30:03Z
+dense_suppli.py: 2019-04-04T11:30:03Z
+fMNIST_process.py: 2019-04-04T11:39:50Z
+fashion_mnist_gamo2pix_main.py: 2019-04-04T11:30:03Z
+fashion_mnist_gamo2pix_net.py: 2019-06-12T05:48:16Z
+fashion_mnist_gamo_main.py: 2019-04-04T11:30:03Z
+fashion_mnist_net.py: 2019-04-04T11:30:03Z
+fashion_mnist_suppli.py: 2019-04-04T11:30:03Z

@@ -1,0 +1,12 @@
+python/setup.py: 2024-02-02T11:39:48Z
+python/tests/test_annotated_text.py: 2022-11-08T19:00:06Z
+python/tests/test_corpus.py: 2023-01-19T21:31:38Z
+python/ua_gec/__init__.py: 2024-02-02T11:39:48Z
+python/ua_gec/annotated_text.py: 2022-11-08T19:00:06Z
+python/ua_gec/corpus.py: 2024-02-10T10:31:15Z
+python/ua_gec/stats.py: 2022-11-08T19:00:06Z
+python/ua_gec/version.py: 2024-02-10T10:31:15Z
+scripts/make_m2.py: 2023-01-24T20:56:28Z
+scripts/normalize_trailing_newslines.py: 2022-11-08T19:00:06Z
+scripts/postprocess_dataset.py: 2024-02-10T10:31:15Z
+scripts/validate.py: 2024-02-10T10:31:15Z

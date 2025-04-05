@@ -1,0 +1,11 @@
+adatune/__init__.py: 2019-10-18T22:47:02Z
+adatune/data_loader.py: 2019-10-18T22:47:02Z
+adatune/hd_adam.py: 2019-10-18T22:47:02Z
+adatune/hd_sgd.py: 2019-10-18T22:47:02Z
+adatune/mu_adam.py: 2019-10-18T22:47:02Z
+adatune/mu_sgd.py: 2019-10-27T21:26:18Z
+adatune/network.py: 2019-10-18T22:47:02Z
+adatune/utils.py: 2019-10-18T22:47:02Z
+bin/baselines.py: 2019-11-14T20:12:00Z
+bin/rtho.py: 2019-11-14T20:12:00Z
+setup.py: 2019-10-18T22:47:02Z

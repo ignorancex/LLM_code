@@ -1,0 +1,14 @@
+lib/core/config.py: 2021-11-04T02:33:41Z
+lib/core/mast.py: 2021-11-04T02:33:41Z
+lib/dataset/Loader.py: 2021-11-04T02:33:41Z
+lib/gui/MainWidget.py: 2021-11-04T02:33:41Z
+lib/gui/MastServer.py: 2021-11-04T02:33:41Z
+lib/gui/PaintBoard.py: 2021-11-04T02:33:41Z
+lib/models/base_models.py: 2021-11-04T02:33:41Z
+lib/utils/GIFSmoothing.py: 2021-11-04T02:33:41Z
+lib/utils/photo_smooth.py: 2021-11-04T02:33:41Z
+lib/utils/smooth_filter.py: 2021-11-04T02:33:41Z
+lib/utils/utils.py: 2021-11-04T02:33:41Z
+test_artistic.py: 2021-11-04T02:33:41Z
+test_gui.py: 2021-11-04T02:33:41Z
+test_photorealistic.py: 2021-11-04T02:33:41Z

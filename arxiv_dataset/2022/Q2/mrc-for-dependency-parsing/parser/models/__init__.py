@@ -1,0 +1,8 @@
+
+from parser.models.biaffine_dependency_config import BertDependencyConfig
+from parser.models.span_proposal_config import SpanProposalConfig
+from parser.models.s2s_query_dependency_config import S2SConfig
+
+from parser.models.biaffine_dependency_parser import BiaffineDependencyParser
+from parser.models.span_proposal import SpanProposal
+from parser.models.s2s_query_dependency_parser import BiaffineDependencyS2SQueryParser

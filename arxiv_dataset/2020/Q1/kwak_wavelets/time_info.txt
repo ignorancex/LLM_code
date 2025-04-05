@@ -1,0 +1,14 @@
+examples/generate_examples.py: 2019-04-30T09:27:11Z
+kwak/__init__.py: 2019-09-13T09:50:50Z
+kwak/plotting/__init__.py: 2019-09-13T09:50:50Z
+kwak/plotting/nsigmaplots.py: 2019-09-13T09:50:50Z
+kwak/plotting/plottingtools.py: 2019-09-13T09:50:50Z
+kwak/plotting/scalograms.py: 2019-09-13T09:50:50Z
+kwak/tools/__init__.py: 2019-09-13T09:50:50Z
+kwak/tools/analysistools.py: 2019-09-13T09:50:50Z
+kwak/tools/exact.py: 2019-09-13T23:02:18Z
+kwak/tools/nsets.py: 2019-09-13T23:02:18Z
+kwak/w_analysis.py: 2019-09-13T23:02:18Z
+kwak/w_plotting.py: 2019-09-13T09:50:50Z
+kwak/w_transform.py: 2019-09-13T23:02:18Z
+setup.py: 2019-05-29T03:01:13Z

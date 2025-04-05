@@ -1,0 +1,14 @@
+FPGA/power/cnn_power.py: 2019-08-01T09:04:53Z
+Models/Inception.py: 2019-05-20T13:26:40Z
+Models/MobileNetV2.py: 2019-05-20T13:26:40Z
+Models/ResNet.py: 2019-05-20T13:26:40Z
+Models/ResNetAbsorbed.py: 2019-05-20T13:26:40Z
+Models/__init__.py: 2019-05-20T13:26:40Z
+absorbe_bn.py: 2019-05-20T13:26:40Z
+entropy.py: 2019-05-20T13:26:40Z
+huffman.py: 2019-05-20T13:26:40Z
+main.py: 2019-05-20T13:26:40Z
+operations.py: 2019-05-20T13:26:40Z
+quantizeWeights.py: 2019-05-20T13:26:40Z
+run.py: 2019-05-20T13:26:40Z
+utils.py: 2019-05-20T13:26:40Z

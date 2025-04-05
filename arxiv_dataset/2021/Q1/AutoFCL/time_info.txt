@@ -1,0 +1,10 @@
+Models/DenseNet121/AutoFC_DenseNet_CalTech101_Bayesian.py: 2020-12-16T07:05:47Z
+Models/DenseNet121/AutoFC_DenseNet_CalTech101_random.py: 2020-12-16T07:05:47Z
+Models/MobileNet/AutoFC_MobileNet_Bayesian.py: 2020-12-16T07:05:47Z
+Models/MobileNet/AutoFC_MobileNet_random.py: 2020-12-16T07:05:47Z
+Models/NASNet-Mobile/AutoFC_NASNet_Bayesian.py: 2020-12-16T07:05:47Z
+Models/NASNet-Mobile/AutoFC_NASNet_random.py: 2020-12-16T07:05:47Z
+Models/ResNet50/AutoFC_ResNet_bayesian.py: 2020-12-16T07:05:47Z
+Models/ResNet50/AutoFC_ResNet_randomsearch.py: 2020-12-16T07:05:47Z
+Models/VGG16/AutoFC_VGG16_bayesian.py: 2020-12-16T07:05:47Z
+Models/VGG16/AutoFC_VGG16_randomsearch.py: 2020-12-16T07:05:47Z

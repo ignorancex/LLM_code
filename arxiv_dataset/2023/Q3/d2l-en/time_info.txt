@@ -1,0 +1,9 @@
+ci/docker/print_versions.py: 2023-08-08T11:16:42Z
+ci/submit-job.py: 2023-05-11T15:57:28Z
+d2l/__init__.py: 2023-08-18T19:03:25Z
+d2l/jax.py: 2023-08-12T08:37:44Z
+d2l/mxnet.py: 2023-08-16T00:16:42Z
+d2l/tensorflow.py: 2023-08-12T08:37:44Z
+d2l/torch.py: 2023-08-12T08:37:44Z
+setup.py: 2023-08-18T19:03:25Z
+static/post_latex/main.py: 2023-08-17T04:00:34Z

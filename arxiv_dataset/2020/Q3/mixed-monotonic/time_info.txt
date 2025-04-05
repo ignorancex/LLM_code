@@ -1,0 +1,15 @@
+results/aloha/aloha_evaluate.py: 2019-10-11T19:18:47Z
+results/tin_benchmark/eval.py: 2019-10-11T19:18:47Z
+src/code/appl/aloha/aloha_createData_3.py: 2019-10-11T19:18:47Z
+src/code/appl/aloha/aloha_createData_4.py: 2019-10-11T19:18:47Z
+src/code/appl/aloha/collect_aloha.py: 2019-10-11T19:18:47Z
+src/code/appl/tinGEE/collect.py: 2019-10-11T19:18:47Z
+src/code/appl/tinGEE/run_gee.py: 2019-10-11T19:18:47Z
+src/code/appl/tinGEE/setup.py: 2019-10-11T19:18:47Z
+src/code/appl/tinGEE/test_gee.py: 2019-10-11T19:18:47Z
+src/code/appl/tinWSR/collect.py: 2019-10-11T19:18:47Z
+src/code/appl/tinWSR/filelock.py: 2019-10-11T19:18:47Z
+src/code/appl/tinWSR/run_tin.py: 2019-10-11T19:18:47Z
+src/code/appl/tinWSR/run_tin2.py: 2019-10-11T19:18:47Z
+src/code/appl/tinWSR/setup.py: 2019-10-11T19:18:47Z
+src/code/appl/tinWSR/test_tin.py: 2019-10-11T19:18:47Z

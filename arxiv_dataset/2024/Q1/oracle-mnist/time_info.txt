@@ -1,0 +1,5 @@
+src/mnist_reader.py: 2022-05-19T11:51:20Z
+src/mnist_reader_tf.py: 2022-05-19T08:07:09Z
+src/train_pytorch.py: 2022-05-13T02:32:52Z
+src/train_tensorflow.py: 2022-05-13T02:32:52Z
+src/train_tensorflow_keras.py: 2022-05-13T02:32:52Z

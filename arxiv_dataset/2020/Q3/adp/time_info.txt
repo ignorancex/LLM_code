@@ -1,0 +1,14 @@
+adp/__init__.py: 2020-06-19T23:49:45Z
+adp/curve.py: 2020-07-30T22:07:35Z
+adp/funcs.py: 2020-06-19T23:49:45Z
+adp/optim.py: 2020-08-01T22:17:39Z
+adp/plot.py: 2020-08-01T18:26:56Z
+adp/utility.py: 2020-08-01T22:19:00Z
+notebooks/helpers.py: 2020-07-30T22:29:13Z
+notebooks/ice.py: 2020-06-19T23:49:45Z
+scripts/__init__.py: 2020-06-19T23:49:45Z
+scripts/data_utils_sign.py: 2020-06-19T23:49:45Z
+scripts/test_util.py: 2020-06-19T23:49:45Z
+scripts/train_mnist.py: 2020-06-19T23:49:45Z
+scripts/train_sign_detector.py: 2020-06-19T23:49:45Z
+scripts/train_vae.py: 2020-06-19T23:49:45Z

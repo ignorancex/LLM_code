@@ -1,0 +1,12 @@
+seampy/__init__.py: 2020-10-30T14:07:47Z
+seampy/amplitudes.py: 2023-07-25T10:51:33Z
+seampy/integrands.py: 2022-07-03T17:44:57Z
+seampy/solver.py: 2023-07-25T10:51:33Z
+seampy/tools.py: 2019-09-24T10:47:01Z
+setup.py: 2023-07-25T10:51:33Z
+sphinx/source/conf.py: 2023-07-25T10:40:38Z
+tests/external_amplitudes_test.py: 2023-07-25T10:51:33Z
+tests/test_amplitudes.py: 2023-07-25T10:51:33Z
+tests/test_pfaffian.py: 2023-07-25T10:51:33Z
+tests/test_solver.py: 2023-07-25T10:51:33Z
+update-badges.py: 2022-07-03T17:44:57Z

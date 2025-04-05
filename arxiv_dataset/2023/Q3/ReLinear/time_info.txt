@@ -1,0 +1,6 @@
+TrainCompactQuadraticNetworksViaReLinear/qresnet_smaller.py: 2021-09-25T00:03:44Z
+TrainCompactQuadraticNetworksViaReLinear/smaller_qresnet56.py: 2021-09-25T00:03:44Z
+TrainQuadraticNetworksViaReLinear+ReZero/Rezero_train_56.py: Unknown
+TrainQuadraticNetworksViaReLinear+ReZero/qresnet_rezero.py: Unknown
+TrainQuadraticNetworksViaReLinear/qresnet.py: 2022-06-03T18:58:52Z
+TrainQuadraticNetworksViaReLinear/qtrainer_10_5.py: 2021-09-25T00:03:44Z

@@ -1,0 +1,64 @@
+docs/conf.py: 2021-12-04T16:42:55Z
+mlf_core/__init__.py: 2021-12-04T16:42:55Z
+mlf_core/__main__.py: 2021-10-02T13:35:12Z
+mlf_core/bump_version/__init__.py: 2021-05-03T07:56:35Z
+mlf_core/bump_version/bump_version.py: 2021-10-02T13:35:12Z
+mlf_core/common/__init__.py: 2021-05-03T07:56:35Z
+mlf_core/common/levensthein_dist.py: 2021-05-03T07:56:35Z
+mlf_core/common/load_yaml.py: 2021-05-03T07:56:35Z
+mlf_core/common/suggest_similar_commands.py: 2021-05-03T07:56:35Z
+mlf_core/common/version.py: 2021-10-02T13:35:12Z
+mlf_core/config/__init__.py: 2021-05-03T07:56:35Z
+mlf_core/config/config.py: 2021-10-02T13:35:12Z
+mlf_core/create/__init__.py: 2021-05-03T07:56:35Z
+mlf_core/create/create.py: 2021-05-03T07:56:35Z
+mlf_core/create/domains/__init__.py: 2021-05-03T07:56:35Z
+mlf_core/create/domains/mlf_core_template_struct.py: 2021-05-03T07:56:35Z
+mlf_core/create/domains/mlflow_creator.py: 2021-05-03T07:56:35Z
+mlf_core/create/domains/package_creator.py: 2021-05-03T07:56:35Z
+mlf_core/create/github_support.py: 2021-10-02T13:50:12Z
+mlf_core/create/template_creator.py: 2021-05-03T07:56:35Z
+mlf_core/create/templates/common_all_files/{{cookiecutter.common_all}}/docs/conf.py: 2021-05-03T07:56:35Z
+mlf_core/create/templates/common_mlflow_files/{{ cookiecutter.common_mlflow }}/{{ cookiecutter.project_slug_no_hyphen }}/mlf_core/__init__.py: 2021-05-03T07:56:35Z
+mlf_core/create/templates/common_mlflow_files/{{ cookiecutter.common_mlflow }}/{{ cookiecutter.project_slug_no_hyphen }}/mlf_core/mlf_core.py: 2021-05-03T07:56:35Z
+mlf_core/create/templates/mlflow/mlflow_pytorch/{{ cookiecutter.project_slug }}/{{ cookiecutter.project_slug_no_hyphen }}/data_loading/data_loader.py: 2021-05-03T07:56:35Z
+mlf_core/create/templates/mlflow/mlflow_pytorch/{{ cookiecutter.project_slug }}/{{ cookiecutter.project_slug_no_hyphen }}/model/model.py: 2021-05-03T07:56:35Z
+mlf_core/create/templates/mlflow/mlflow_pytorch/{{ cookiecutter.project_slug }}/{{ cookiecutter.project_slug_no_hyphen }}/{{ cookiecutter.project_slug_no_hyphen }}.py: 2021-05-03T07:56:35Z
+mlf_core/create/templates/mlflow/mlflow_tensorflow/{{ cookiecutter.project_slug }}/{{ cookiecutter.project_slug_no_hyphen }}/data_loading/data_loader.py: 2021-05-03T07:56:35Z
+mlf_core/create/templates/mlflow/mlflow_tensorflow/{{ cookiecutter.project_slug }}/{{ cookiecutter.project_slug_no_hyphen }}/model/model.py: 2021-05-03T07:56:35Z
+mlf_core/create/templates/mlflow/mlflow_tensorflow/{{ cookiecutter.project_slug }}/{{ cookiecutter.project_slug_no_hyphen }}/training/train.py: 2021-05-03T07:56:35Z
+mlf_core/create/templates/mlflow/mlflow_tensorflow/{{ cookiecutter.project_slug }}/{{ cookiecutter.project_slug_no_hyphen }}/{{ cookiecutter.project_slug_no_hyphen }}.py: 2021-05-03T07:56:35Z
+mlf_core/create/templates/mlflow/mlflow_xgboost/{{ cookiecutter.project_slug }}/{{ cookiecutter.project_slug_no_hyphen }}/data_loading/data_loader.py: 2021-05-03T07:56:35Z
+mlf_core/create/templates/mlflow/mlflow_xgboost/{{ cookiecutter.project_slug }}/{{ cookiecutter.project_slug_no_hyphen }}/{{ cookiecutter.project_slug_no_hyphen }}.py: 2021-05-03T07:56:35Z
+mlf_core/create/templates/package/package_prediction/hooks/__init__.py: 2021-05-03T07:56:35Z
+mlf_core/create/templates/package/package_prediction/hooks/post_gen_project.py: 2021-05-03T07:56:35Z
+mlf_core/create/templates/package/package_prediction/{{ cookiecutter.project_slug_no_hyphen }}/setup.py: 2021-05-03T07:56:35Z
+mlf_core/create/templates/package/package_prediction/{{ cookiecutter.project_slug_no_hyphen }}/{{cookiecutter.project_slug_no_hyphen}}/__init__.py: 2021-05-03T07:56:35Z
+mlf_core/create/templates/package/package_prediction/{{ cookiecutter.project_slug_no_hyphen }}/{{cookiecutter.project_slug_no_hyphen}}/cli_pytorch.py: 2021-05-03T07:56:35Z
+mlf_core/create/templates/package/package_prediction/{{ cookiecutter.project_slug_no_hyphen }}/{{cookiecutter.project_slug_no_hyphen}}/cli_tensorflow.py: 2021-05-03T07:56:35Z
+mlf_core/create/templates/package/package_prediction/{{ cookiecutter.project_slug_no_hyphen }}/{{cookiecutter.project_slug_no_hyphen}}/cli_xgboost.py: 2021-05-03T07:56:35Z
+mlf_core/custom_cli/__init__.py: 2021-05-03T07:56:35Z
+mlf_core/custom_cli/click.py: 2021-10-02T13:35:12Z
+mlf_core/custom_cli/questionary.py: 2021-05-03T07:56:35Z
+mlf_core/info/__init__.py: 2021-05-03T07:56:35Z
+mlf_core/info/info.py: 2021-10-02T13:35:12Z
+mlf_core/lint/__init__.py: 2021-05-03T07:56:35Z
+mlf_core/lint/domains/__init__.py: 2021-05-03T07:56:35Z
+mlf_core/lint/domains/mlflow.py: 2021-10-02T13:35:12Z
+mlf_core/lint/domains/package.py: 2021-10-02T13:35:12Z
+mlf_core/lint/lint.py: 2021-10-02T13:35:12Z
+mlf_core/lint/template_linter.py: 2021-10-02T13:35:12Z
+mlf_core/list/__init__.py: 2021-05-03T07:56:35Z
+mlf_core/list/list.py: 2021-10-02T13:35:12Z
+mlf_core/sync/__init__.py: 2021-05-03T07:56:35Z
+mlf_core/sync/sync.py: 2021-10-02T13:35:12Z
+mlf_core/upgrade/__init__.py: 2021-05-03T07:56:35Z
+mlf_core/upgrade/upgrade.py: 2021-10-02T13:35:12Z
+mlf_core/util/__init__.py: 2021-05-03T07:56:35Z
+mlf_core/util/dict_util.py: 2021-05-03T07:56:35Z
+mlf_core/util/dir_util.py: 2021-05-03T07:56:35Z
+mlf_core/util/docs_util.py: 2021-05-03T07:56:35Z
+mlf_core/util/rich.py: 2021-05-03T07:56:35Z
+noxfile.py: 2021-10-02T13:35:12Z
+tests/__init__.py: 2021-04-11T02:01:04Z
+tests/test_main.py: 2021-05-03T07:56:35Z

@@ -1,0 +1,11 @@
+AnalyseData.py: 2020-01-17T16:39:26Z
+DNFGen.py: 2020-01-17T16:39:26Z
+DNFProblem.py: 2020-01-17T16:39:26Z
+GraphNeuralNet.py: 2020-01-17T16:39:26Z
+Train.py: 2020-01-17T16:39:26Z
+generateData.py: 2020-01-17T16:39:26Z
+generateTestData.py: 2020-01-17T16:39:26Z
+runExperiments.py: 2020-01-17T16:39:26Z
+runExperimentsBySize.py: 2020-01-17T16:39:26Z
+runtimeTesting.py: 2020-01-17T16:39:26Z
+visualisation.py: 2020-01-17T16:39:26Z

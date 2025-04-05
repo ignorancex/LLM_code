@@ -1,0 +1,12 @@
+DeepSurrogates/DeepSurrogate_models.py: 2024-06-25T16:33:27Z
+DeepSurrogates/DrivAerNetDataset.py: 2024-06-25T17:34:35Z
+DeepSurrogates/train_GNN.py: 2025-01-15T14:12:47Z
+DeepSurrogates/train_RegPointNet.py: 2025-01-15T14:05:41Z
+DrivAerNet_v1/RegDGCNN/DrivAerNetDataset.py: 2024-06-23T17:19:23Z
+DrivAerNet_v1/RegDGCNN/model.py: 2024-06-23T17:19:23Z
+DrivAerNet_v1/RegDGCNN/train.py: 2025-01-15T14:18:09Z
+ParametricModels/AutoML_parametric.py: 2024-12-05T01:59:47Z
+ParametricModels/align_grids_on_cutline.py: 2024-06-24T12:52:06Z
+ParametricModels/morph_box_load_elements.py: 2024-06-24T12:53:06Z
+ParametricModels/projected_frontal_area_in_m2.py: 2024-06-24T12:54:40Z
+tutorials/DrivAerNet_tutorial.py: 2024-06-25T22:15:17Z

@@ -1,31 +1,34 @@
 import os
 
-# 目标路径
-year = "2024"  # 可以修改年份
-repo_base_path = f"github_code/{year}"
+# 定义年份和季度范围
+years = [str(y) for y in range(2020, 2026)]
+seasons = ["Q1", "Q2", "Q3", "Q4"]
 
-# 检查路径是否存在
-if not os.path.exists(repo_base_path):
-    print(f"Error: Path '{repo_base_path}' does not exist.")
-    exit(1)
+# 记录所有缺失或为空的文件夹
+all_missing_or_empty = []
 
-# 获取所有直接子文件夹
-subfolders = [f for f in os.listdir(repo_base_path) if os.path.isdir(os.path.join(repo_base_path, f))]
+for year in years:
+    for season in seasons:
+        repo_base_path = f"github_code/{year}/{season}"
 
-# 记录缺失或为空的文件夹
-missing_or_empty = []
+        # 检查路径是否存在
+        if not os.path.exists(repo_base_path):
+            print(f"Warning: Path '{repo_base_path}' does not exist.")
+            continue
 
-# 检查每个文件夹是否包含非空的 time_info.txt
-for folder in subfolders:
-    time_info_path = os.path.join(repo_base_path, folder, "time_info.txt")
-    # if not os.path.exists(time_info_path) or os.path.getsize(time_info_path) == 0:
-    if not os.path.exists(time_info_path):
-        missing_or_empty.append(folder)
+        # 获取所有直接子文件夹
+        subfolders = [f for f in os.listdir(repo_base_path) if os.path.isdir(os.path.join(repo_base_path, f))]
+
+        # 检查每个文件夹是否包含 time_info.txt 且文件不为空
+        for folder in subfolders:
+            time_info_path = os.path.join(repo_base_path, folder, "time_info.txt")
+            if not os.path.exists(time_info_path) or os.path.getsize(time_info_path) == 0:
+                all_missing_or_empty.append(os.path.join(year, season, folder))
 
 # 输出结果
-if missing_or_empty:
+if all_missing_or_empty:
     print("Folders missing 'time_info.txt' or containing an empty file:")
-    for folder in missing_or_empty:
+    for folder in all_missing_or_empty:
         print(folder)
 else:
     print("All folders contain a non-empty 'time_info.txt'.")

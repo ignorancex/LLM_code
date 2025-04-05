@@ -1,0 +1,12 @@
+amp.py: 2021-05-16T11:25:32Z
+amp_hf.py: 2021-05-16T11:25:32Z
+amp_hf_damp.py: 2021-05-16T11:25:32Z
+hopfield.py: 2021-05-16T11:25:32Z
+priors.py: 2021-05-16T11:25:32Z
+se_hf_p2.py: 2021-05-16T11:25:32Z
+se_p1.py: 2021-05-16T12:53:10Z
+setup.py: 2021-05-16T11:25:32Z
+tests/test_amp.py: 2021-05-16T12:53:10Z
+tests/test_hopfield.py: 2021-05-16T12:53:10Z
+tests/test_priors.py: 2021-05-16T12:53:10Z
+tests/test_se.py: 2021-05-16T12:53:10Z

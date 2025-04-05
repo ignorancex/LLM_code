@@ -1,0 +1,8 @@
+examples/mnist.py: 2019-01-28T08:50:26Z
+hyperspherical_vae/__init__.py: 2018-06-29T09:19:25Z
+hyperspherical_vae/distributions/__init__.py: 2020-03-21T16:06:41Z
+hyperspherical_vae/distributions/hyperspherical_uniform.py: 2020-03-21T16:06:41Z
+hyperspherical_vae/distributions/von_mises_fisher.py: 2020-03-21T16:06:41Z
+hyperspherical_vae/ops/__init__.py: 2018-06-29T09:19:25Z
+hyperspherical_vae/ops/ive.py: 2020-03-21T16:06:41Z
+setup.py: 2018-07-29T00:29:31Z

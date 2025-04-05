@@ -1,0 +1,9 @@
+doc/conf.py: 2021-09-17T20:38:03Z
+setup.py: 2021-09-17T20:38:03Z
+subseasonal_data/__init__.py: 2021-09-17T20:38:03Z
+subseasonal_data/data_loaders.py: 2023-02-14T19:11:58Z
+subseasonal_data/downloader.py: 2024-11-01T21:18:40Z
+subseasonal_data/tests/__init__.py: 2021-09-17T20:38:03Z
+subseasonal_data/tests/test_data_loaders.py: 2021-09-17T20:38:03Z
+subseasonal_data/tests/test_downloader.py: 2021-09-17T20:38:03Z
+subseasonal_data/utils.py: 2023-02-14T19:11:58Z

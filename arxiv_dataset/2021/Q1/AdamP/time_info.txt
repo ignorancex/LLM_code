@@ -1,0 +1,4 @@
+adamp/__init__.py: 2020-06-15T08:27:45Z
+adamp/adamp.py: 2020-08-27T08:40:52Z
+adamp/sgdp.py: 2020-08-27T08:40:52Z
+setup.py: 2020-08-27T08:53:38Z

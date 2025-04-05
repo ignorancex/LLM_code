@@ -1,0 +1,13 @@
+dataset.py: 2020-02-08T06:54:59Z
+meter.py: 2020-02-08T06:54:59Z
+optimizers/adamod.py: 2020-01-26T16:44:25Z
+optimizers/diffgrad.py: 2020-01-26T16:44:25Z
+optimizers/lamb.py: 2020-01-26T16:44:25Z
+optimizers/lookahead.py: 2020-01-26T16:44:25Z
+optimizers/novograd.py: 2020-01-26T16:44:25Z
+optimizers/over9000.py: 2020-01-26T16:44:25Z
+optimizers/radam.py: 2020-01-26T16:44:25Z
+optimizers/ralamb.py: 2020-01-26T16:44:25Z
+optimizers/ranger.py: 2020-01-26T16:44:25Z
+trainer.py: 2020-02-08T14:19:41Z
+utils.py: 2020-01-27T06:45:55Z

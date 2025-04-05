@@ -1,0 +1,1 @@
+SimpNet_V1/Benchmarks Results with Models/MNIST/Normal Arch_NoDrpOut_99.75/normal solver 99.75/create_mean_normalized_lmdb.py: 2017-05-07T11:36:42Z

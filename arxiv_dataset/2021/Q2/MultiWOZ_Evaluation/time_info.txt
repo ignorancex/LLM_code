@@ -1,0 +1,11 @@
+add_slot_domains.py: 2021-10-08T15:27:48Z
+evaluate.py: 2021-10-08T15:27:48Z
+mwzeval/__init__.py: 2021-10-08T15:44:21Z
+mwzeval/data/__init__.py: 2022-01-14T08:28:36Z
+mwzeval/data/database/__init__.py: 2022-01-14T08:28:36Z
+mwzeval/data/references/__init__.py: 2022-01-14T08:28:36Z
+mwzeval/database.py: 2021-10-12T15:31:53Z
+mwzeval/metrics.py: 2022-02-09T14:25:37Z
+mwzeval/normalization.py: 2023-01-18T13:15:36Z
+mwzeval/utils.py: 2021-10-12T15:31:53Z
+setup.py: 2022-01-19T11:40:16Z

@@ -1,0 +1,46 @@
+1_digit_model/1_digit_model.py: 2019-06-28T06:39:56Z
+1_digit_model/predict_sqlite_en.py: 2019-06-28T06:39:56Z
+1_digit_model/validation.py: 2019-06-28T06:39:56Z
+3_digit_model/3_digit_model_training.py: 2019-07-08T07:31:24Z
+3_digit_model/predict_sqlite_tre.py: 2019-07-08T07:31:24Z
+Birthplaces/Fsted_training.py: 2019-06-28T06:45:29Z
+Birthplaces/birthplaces.py: 2019-06-28T06:45:29Z
+Birthplaces/create_lists_for_images_and_labels.py: 2019-06-28T06:45:29Z
+Field Extraction/Database/dbHandler.py: 2020-01-31T15:18:17Z
+Field Extraction/Database/init_db.py: 2020-01-31T15:18:17Z
+Field Extraction/FieldExtraction/CoordinateFileReader.py: 2020-01-31T15:18:17Z
+Field Extraction/FieldExtraction/FieldSplitter.py: 2020-01-31T15:18:17Z
+Field Extraction/FieldExtraction/ImageParser.py: 2020-01-31T15:18:17Z
+Field Extraction/FieldExtraction/ParallelExecutor.py: 2020-01-31T15:18:17Z
+Field Extraction/FieldExtraction/ProgressFileHandler.py: 2020-01-31T15:18:17Z
+Field Extraction/__init__.py: 2020-01-31T15:18:17Z
+Field Extraction/extract_fields.py: 2020-01-31T15:18:17Z
+HelperFunctions/Database/dbHandler.py: 2021-01-20T14:51:48Z
+HelperFunctions/Database/init_db.py: 2021-01-20T14:51:48Z
+HelperFunctions/GND_Clustering/Clustering.py: 2020-01-31T15:13:18Z
+HelperFunctions/GND_Clustering/Clustering_28-28.py: 2020-01-31T15:13:18Z
+HelperFunctions/GND_Clustering/ImageSegClustering.py: 2020-01-31T15:13:18Z
+HelperFunctions/color_convert.py: 2020-01-31T15:13:18Z
+HelperFunctions/db_image_decode.py: 2020-01-31T15:13:18Z
+HelperFunctions/get_skeleton.py: 2020-01-31T15:13:18Z
+HelperFunctions/loadImagesFromFolders.py: 2020-01-31T15:13:18Z
+HelperFunctions/sheer_image.py: 2021-01-20T14:51:48Z
+Model_Evaluation/PrecisionRecall_curves.py: 2019-06-28T06:56:54Z
+Model_Evaluation/PrecisionRecall_list_generation.py: 2019-06-28T06:56:54Z
+Model_Evaluation/calculate_recall_precision_score.py: 2019-06-28T06:56:54Z
+Model_Evaluation/confusionMatrix.py: 2019-06-28T06:56:54Z
+Preprocessing/centering.py: 2019-06-28T06:59:13Z
+Production/production.py: 2020-06-05T07:49:20Z
+Testing/inference.py: 2021-05-05T08:55:25Z
+Testing/inference_runner.py: 2021-05-05T08:43:14Z
+Testing/validation.py: 2020-06-24T09:20:42Z
+Training/create_1digit_trainingset.py: 2020-04-27T09:16:44Z
+Training/create_models_and_ground_truth.py: 2020-07-02T21:36:28Z
+Training/ctc_training.py: 2021-05-05T08:36:09Z
+Training/get_images.py: 2021-01-20T15:06:20Z
+Training/train_model.py: 2021-01-20T14:50:15Z
+Validation_methods/label_validation.py: 2021-05-05T09:13:56Z
+Validation_methods/paper_plots.py: 2021-05-10T14:05:03Z
+Validation_methods/thresholds.py: 2021-05-05T09:29:25Z
+loadImagesFromFolders.py: 2019-06-28T06:47:48Z
+send_to_manual.py: 2021-05-11T11:22:39Z

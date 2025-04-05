@@ -1,0 +1,16 @@
+00_parameter_fit.py: 2024-04-19T10:10:28Z
+01_run_simulations.py: 2024-04-19T10:10:28Z
+02_read_simulations.py: 2024-04-19T10:10:28Z
+03_plot_efficiency.py: 2024-04-19T10:10:28Z
+04_fig_efficiency.py: 2024-04-19T10:10:28Z
+05_fig_regression_to_goal.py: 2024-04-19T10:10:28Z
+agents.py: 2024-04-19T10:10:28Z
+preprint/01_run_simulations.py: 2024-04-19T10:08:53Z
+preprint/02_read_simulations.py: 2024-04-19T10:08:53Z
+preprint/03_fig_efficiency.py: 2024-04-19T10:08:53Z
+preprint/04_fig_polar_plot.py: 2024-04-19T10:08:53Z
+preprint/agents.py: 2024-04-19T10:08:53Z
+preprint/simulation_settings.py: 2024-04-19T10:08:53Z
+preprint/simulations.py: 2024-04-19T10:08:53Z
+simulation_settings.py: 2024-04-19T10:10:28Z
+simulations.py: 2024-04-19T10:10:28Z

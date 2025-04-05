@@ -1,0 +1,17 @@
+adapt/__init__.py: 2020-12-22T02:24:24Z
+adapt/models/__init__.py: 2020-12-22T02:24:24Z
+adapt/models/adapt_net.py: 2020-12-22T02:24:24Z
+adapt/models/models.py: 2020-12-22T02:24:24Z
+adapt/models/task_net.py: 2020-12-22T02:24:24Z
+adapt/solvers/__init__.py: 2020-12-22T02:24:24Z
+adapt/solvers/adapt.py: 2020-12-22T02:24:24Z
+adapt/solvers/solver.py: 2020-12-22T02:24:24Z
+datasets/__init__.py: 2020-12-22T02:24:24Z
+datasets/base.py: 2020-12-22T02:24:24Z
+datasets/datasets.py: 2020-12-22T02:24:24Z
+datasets/digits.py: 2020-12-22T02:24:24Z
+datasets/domainnet.py: 2020-12-22T02:24:24Z
+datasets/officehome.py: 2020-12-22T02:24:24Z
+datasets/visda.py: 2020-12-22T02:24:24Z
+train.py: 2020-12-22T02:24:24Z
+utils.py: 2020-12-22T02:24:24Z

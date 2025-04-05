@@ -1,0 +1,7 @@
+ManualProgram/eval_equ.py: 2021-06-07T14:06:13Z
+ManualProgram/operators.py: 2021-06-07T14:06:13Z
+NGS_Aux.py: 2021-06-07T13:58:23Z
+NGS_Aux_test.py: 2021-06-09T03:35:26Z
+mcan.py: 2021-06-07T13:58:23Z
+resnet.py: 2021-06-07T13:58:23Z
+utils.py: 2021-06-07T13:58:23Z

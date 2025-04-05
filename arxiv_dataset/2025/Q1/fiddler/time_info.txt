@@ -1,0 +1,13 @@
+benchmarks/eval-baseline.py: 2024-02-12T15:40:46Z
+benchmarks/latency.py: 2024-04-13T22:19:22Z
+benchmarks/microbench.py: 2024-02-15T05:15:53Z
+benchmarks/mixtral_offloading/src/build_model.py: 2024-02-08T09:16:21Z
+benchmarks/mixtral_offloading/src/custom_layers.py: 2024-02-08T09:16:21Z
+benchmarks/mixtral_offloading/src/expert_cache.py: 2024-02-08T09:16:21Z
+benchmarks/mixtral_offloading/src/expert_wrapper.py: 2024-02-08T09:16:21Z
+benchmarks/mixtral_offloading/src/packing.py: 2024-02-08T09:16:21Z
+benchmarks/mixtral_offloading/src/triton_kernels.py: 2024-02-08T09:16:21Z
+benchmarks/mixtral_offloading/src/utils.py: 2024-02-08T09:16:21Z
+src/fiddler/__init__.py: 2024-04-18T00:55:48Z
+src/fiddler/infer.py: 2024-04-25T18:46:59Z
+src/fiddler/mixtral.py: 2024-04-28T23:00:50Z

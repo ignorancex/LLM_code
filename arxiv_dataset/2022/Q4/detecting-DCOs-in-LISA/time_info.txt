@@ -1,0 +1,12 @@
+paper/combine_tex_files.py: 2021-11-26T09:13:38Z
+paper/figure_notebooks/bootstrap.py: 2021-08-27T17:19:42Z
+paper/figure_notebooks/seaborn_utility.py: 2021-05-10T20:04:18Z
+paper/figure_notebooks/uncertainties.py: 2021-07-31T17:43:21Z
+paper/figure_notebooks/verification_binaries.py: 2021-05-10T20:04:18Z
+simulation/output/combine_output.py: 2021-08-19T10:43:00Z
+simulation/output/formation_channels.py: 2021-03-20T02:13:17Z
+simulation/slurm/generate_scripts.py: 2021-11-23T02:41:25Z
+simulation/src/compas_processing.py: 2021-03-16T20:57:20Z
+simulation/src/galaxy.py: 2022-02-02T23:35:28Z
+simulation/src/simulate_DCO_detections.py: 2021-11-23T06:31:21Z
+simulation/src/variations.py: 2021-11-26T07:10:47Z

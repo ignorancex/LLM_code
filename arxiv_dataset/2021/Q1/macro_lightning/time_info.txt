@@ -1,0 +1,15 @@
+docs/conf.py: 2021-02-24T02:00:52Z
+docs/papers_and_presentations/UofT_Astro-Ph/figures/constraints_plot/lightning_constraints.py: 2021-02-24T02:00:52Z
+macro_lightning/__init__.py: 2021-02-24T02:00:52Z
+macro_lightning/_astropy_init.py: 2021-02-24T02:00:52Z
+macro_lightning/conftest.py: 2021-02-24T02:00:52Z
+macro_lightning/data/__init__.py: 2021-02-24T02:00:52Z
+macro_lightning/parameters.py: 2021-02-24T02:00:52Z
+macro_lightning/physics.py: 2021-02-24T02:17:33Z
+macro_lightning/plot.py: 2021-02-24T02:00:52Z
+macro_lightning/tests/__init__.py: 2020-06-26T16:43:38Z
+macro_lightning/tests/test_parameters.py: 2021-02-24T02:00:52Z
+macro_lightning/tests/test_plot.py: 2021-02-24T02:00:52Z
+macro_lightning/tests/test_utils.py: 2021-02-24T02:00:52Z
+macro_lightning/utils.py: 2021-02-24T02:17:33Z
+setup.py: 2021-02-24T02:00:52Z

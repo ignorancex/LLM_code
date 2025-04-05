@@ -1,0 +1,5 @@
+erqa/__init__.py: 2021-09-10T12:05:57Z
+erqa/__main__.py: 2021-09-10T12:05:57Z
+erqa/erqa.py: 2021-09-11T16:07:44Z
+tests/__init__.py: 2021-09-10T12:05:57Z
+tests/test_erqa.py: 2021-09-10T12:05:57Z

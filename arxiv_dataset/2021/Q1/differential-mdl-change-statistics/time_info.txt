@@ -1,0 +1,17 @@
+jupyter/symptom/functions.py: 2020-06-11T03:59:35Z
+jupyter/symptom/mdlcstat_adwin1/__init__.py: 2020-06-11T13:07:17Z
+jupyter/symptom/mdlcstat_adwin1/mdlcstat_adwin1.py: 2021-02-07T17:06:42Z
+jupyter/synthetic/adwin/adwin.py: 2020-06-11T12:53:34Z
+jupyter/synthetic/adwin/adwin2.py: 2020-06-11T12:53:34Z
+jupyter/synthetic/adwin/adwin2_orig.py: 2020-06-11T12:53:34Z
+jupyter/synthetic/adwin/adwin_bucket_row.py: 2020-06-11T12:53:34Z
+jupyter/synthetic/adwin/adwin_buckets.py: 2020-06-11T12:53:34Z
+jupyter/synthetic/bocpd/mybocpd.py: 2020-06-11T12:53:34Z
+jupyter/synthetic/cf/mycf.py: 2020-06-11T12:53:34Z
+jupyter/synthetic/evaluation.py: 2020-06-11T12:53:34Z
+jupyter/synthetic/generate_data.py: 2020-06-11T12:53:34Z
+jupyter/synthetic/mdl/model.py: 2022-03-27T10:57:50Z
+jupyter/synthetic/mdl/smdl.py: 2020-06-11T12:53:34Z
+jupyter/synthetic/scaw/SCAW2.py: 2020-06-11T12:53:34Z
+jupyter/synthetic/scaw/SCAW2_orig.py: 2020-06-11T12:53:34Z
+jupyter/synthetic/scaw/myscaw2.py: 2020-06-11T12:53:34Z

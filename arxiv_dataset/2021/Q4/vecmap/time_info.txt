@@ -1,0 +1,7 @@
+cupy_utils.py: 2018-01-12T11:51:36Z
+embeddings.py: 2018-06-08T14:43:50Z
+eval_analogy.py: 2018-06-08T14:43:50Z
+eval_similarity.py: 2018-06-08T14:43:50Z
+eval_translation.py: 2018-06-08T14:43:50Z
+map_embeddings.py: 2018-06-08T14:43:50Z
+normalize_embeddings.py: 2018-06-08T14:43:50Z

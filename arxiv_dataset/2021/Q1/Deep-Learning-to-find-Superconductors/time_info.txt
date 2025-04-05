@@ -1,0 +1,15 @@
+2007/material_to_dict.py: 2020-12-22T06:53:27Z
+2007/matter_data_to_formats.py: 2020-12-14T10:44:25Z
+2007/matter_data_to_formats_open.py: 2020-12-14T10:44:25Z
+2007/networks_go_open.py: 2020-12-22T06:53:27Z
+2007/preprocessing_open.py: 2020-12-14T10:44:25Z
+2009/material_to_dict.py: 2020-12-22T06:53:27Z
+2009/matter_data_to_formats.py: 2020-12-14T10:44:25Z
+2009/matter_data_to_formats_open.py: 2020-12-14T10:44:25Z
+2009/networks_go_open.py: 2020-12-22T06:53:27Z
+2009/preprocessing_open.py: 2020-12-14T10:44:25Z
+2018/material_to_dict.py: 2020-12-22T06:53:27Z
+2018/matter_data_to_formats.py: 2020-12-14T10:44:25Z
+2018/networks_go_open.py: 2020-12-22T05:41:11Z
+2018/preprocessing_open.py: 2020-12-11T14:10:07Z
+chemical_formula_to_reading_periodic_table.py: 2020-12-22T06:53:27Z

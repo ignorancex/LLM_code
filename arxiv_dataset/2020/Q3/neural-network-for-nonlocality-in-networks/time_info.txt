@@ -1,0 +1,12 @@
+sample_code/config.py: 2020-09-10T13:26:14Z
+sample_code/targets.py: 2019-11-13T13:18:59Z
+sample_code/train.py: 2020-09-10T13:26:14Z
+sample_code/utils_nn.py: 2019-11-13T13:18:59Z
+sample_code_CHSH/config.py: 2019-11-13T13:18:59Z
+sample_code_CHSH/targets.py: 2019-11-13T13:18:59Z
+sample_code_CHSH/train_multiple_sweeps.py: 2019-11-13T13:18:59Z
+sample_code_CHSH/utils_nn.py: 2019-11-18T10:09:59Z
+sample_code_multiple_sweeps/config.py: 2020-09-10T13:26:14Z
+sample_code_multiple_sweeps/targets.py: 2019-11-13T13:18:59Z
+sample_code_multiple_sweeps/train_multiple_sweeps.py: 2019-11-13T13:18:59Z
+sample_code_multiple_sweeps/utils_nn.py: 2019-11-13T13:18:59Z

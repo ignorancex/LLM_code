@@ -1,0 +1,7 @@
+scripts/align.py: 2024-10-27T18:13:47Z
+scripts/bbox.py: 2024-10-12T20:05:52Z
+scripts/check_uniq.py: 2024-09-25T20:56:51Z
+scripts/coord.py: 2024-11-18T05:29:11Z
+scripts/parser.py: 2024-10-28T22:47:04Z
+scripts/pdf2svg.py: 2024-10-29T02:50:50Z
+scripts/uniq.py: 2024-11-24T05:53:16Z

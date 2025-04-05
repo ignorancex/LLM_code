@@ -1,0 +1,8 @@
+examples/cifar.py: 2020-04-06T23:39:40Z
+examples/cifar_task_spec.py: 2020-04-06T23:39:40Z
+examples/heatmap.py: 2020-04-06T23:39:40Z
+examples/mnist.py: 2020-04-06T23:39:40Z
+examples/mnist_task_spec.py: 2020-04-06T23:39:40Z
+examples/problems.py: 2020-04-06T23:39:40Z
+examples/trainer.py: 2020-04-06T23:39:40Z
+mnist_evaluate.py: 2020-04-06T23:58:20Z

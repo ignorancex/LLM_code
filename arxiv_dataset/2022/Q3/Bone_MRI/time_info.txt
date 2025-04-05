@@ -1,0 +1,13 @@
+scripts_notebooks/evaluation_metrics/compute_dice.py: 2021-06-17T12:31:46Z
+scripts_notebooks/evaluation_metrics/compute_dice_test.py: 2021-06-17T12:31:46Z
+scripts_notebooks/evaluation_metrics/compute_vs.py: 2021-06-17T12:31:46Z
+scripts_notebooks/evaluation_metrics/compute_vs_test.py: 2021-06-17T12:31:46Z
+scripts_notebooks/functions/modify_label.py: 2021-06-17T12:31:46Z
+scripts_notebooks/segmentation_disease_region/augmentation.py: 2021-06-17T12:31:46Z
+scripts_notebooks/segmentation_disease_region/db_load_pytable.py: 2021-06-17T12:31:46Z
+scripts_notebooks/segmentation_disease_region/db_modify_array.py: 2021-06-17T12:31:46Z
+scripts_notebooks/segmentation_disease_region/dice_generalization.py: 2021-06-17T12:31:46Z
+scripts_notebooks/segmentation_disease_region/dice_generalization_test.py: 2021-06-17T12:31:46Z
+scripts_notebooks/segmentation_disease_region/model.py: 2021-06-17T12:31:46Z
+scripts_notebooks/segmentation_inflammatory_lesions/segment.py: 2021-06-17T12:31:46Z
+scripts_notebooks/segmentation_inflammatory_lesions/segment_test.py: 2021-06-17T12:31:46Z

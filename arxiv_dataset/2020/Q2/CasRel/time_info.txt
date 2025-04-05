@@ -1,0 +1,15 @@
+data/NYT/build_data.py: 2020-04-05T17:00:09Z
+data/NYT/raw_NYT/generate.py: 2020-04-05T17:00:09Z
+data/NYT/test_split_by_num/split_by_num.py: 2020-04-05T17:00:09Z
+data/NYT/test_split_by_type/generate_triples.py: 2020-04-05T17:00:09Z
+data/NYT10-HRL/build_data.py: 2020-04-05T17:00:09Z
+data/NYT11-HRL/build_data.py: 2020-04-05T17:00:09Z
+data/WebNLG/build_data.py: 2020-04-05T17:00:09Z
+data/WebNLG/raw_WebNLG/generate.py: 2020-04-05T17:00:09Z
+data/WebNLG/test_split_by_num/split_by_num.py: 2020-04-05T17:00:09Z
+data/WebNLG/test_split_by_type/generate_triples.py: 2020-04-05T17:00:09Z
+data/Wiki-KBP/build_data.py: 2020-04-05T17:00:09Z
+data_loader.py: 2020-04-05T17:00:09Z
+model.py: 2020-04-05T17:00:09Z
+run.py: 2020-04-05T17:00:09Z
+utils.py: 2020-04-05T17:00:09Z

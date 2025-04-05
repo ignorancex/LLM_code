@@ -1,0 +1,8 @@
+benchmarks/FB15K/n-n.py: 2020-11-11T04:28:20Z
+benchmarks/FB15K237/n-n.py: 2020-11-11T04:28:20Z
+benchmarks/WN18/n-n.py: 2020-11-11T04:28:20Z
+benchmarks/WN18RR/n-n.py: 2020-11-11T04:28:20Z
+config/Config.py: 2020-11-11T04:28:20Z
+models/Model.py: 2020-11-11T04:28:20Z
+models/QuatRE.py: 2020-11-11T04:28:20Z
+train_QuatRE.py: 2020-11-11T04:28:20Z

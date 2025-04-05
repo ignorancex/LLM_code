@@ -1,0 +1,10 @@
+docs/conf.py: 2021-05-27T16:24:56Z
+examples/online_linear_regression.py: 2021-05-27T14:29:37Z
+examples/phase_retrieval.py: 2021-05-27T14:29:37Z
+examples/tools.py: 2021-05-27T14:29:37Z
+reg4opt/__init__.py: 2020-12-24T14:06:19Z
+reg4opt/interpolation.py: 2021-01-08T13:56:31Z
+reg4opt/operators.py: 2021-01-14T15:53:53Z
+reg4opt/regression.py: 2021-05-27T13:53:08Z
+reg4opt/utils.py: 2021-05-27T13:53:08Z
+setup.py: 2020-12-24T14:06:19Z

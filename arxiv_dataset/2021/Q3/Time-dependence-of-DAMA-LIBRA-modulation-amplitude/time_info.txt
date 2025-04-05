@@ -1,0 +1,4 @@
+Chi2_code_full.py: 2021-06-11T15:41:51Z
+Chi2_code_mean.py: 2021-06-11T15:51:41Z
+bayesian_full.py: 2021-06-11T15:41:51Z
+meancycleamplitude_bayesian.py: 2021-07-11T12:57:07Z

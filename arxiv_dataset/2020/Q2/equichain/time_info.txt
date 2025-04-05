@@ -1,0 +1,10 @@
+equichain/__init__.py: 2019-10-18T00:59:22Z
+equichain/grps.py: 2019-10-18T22:33:58Z
+equichain/linalg.py: 2019-10-19T00:22:57Z
+equichain/lsm.py: 2019-10-18T22:34:53Z
+equichain/magmaconv.py: 2019-10-18T00:28:55Z
+equichain/resolutions.py: 2019-10-18T00:28:55Z
+equichain/sageutils.py: 2019-10-18T00:28:55Z
+equichain/setup.py: 2019-10-16T21:02:54Z
+equichain/utils.py: 2019-10-18T00:28:55Z
+equichain/wigner_seitz.py: 2019-10-18T00:28:55Z

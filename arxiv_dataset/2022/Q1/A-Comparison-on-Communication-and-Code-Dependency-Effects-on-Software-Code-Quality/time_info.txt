@@ -1,0 +1,15 @@
+RQ2_data_analysis.py: 2022-02-04T16:48:31Z
+src/RQ1_RQ2_data_extraction.py: 2022-02-04T16:48:31Z
+src/RQ2_data_merging.py: 2022-02-04T16:50:12Z
+src/git_mine.py: 2022-02-04T16:50:12Z
+src/interaction/code_interaction.py: 2022-02-04T16:50:35Z
+src/interaction/get_commit_lines.py: 2022-02-04T16:50:35Z
+src/interaction/social_interaction.py: 2022-02-04T16:50:12Z
+src/main/api/api_access.py: 2022-02-04T16:52:03Z
+src/main/api/git_access.py: 2022-02-04T16:52:03Z
+src/main/git_log/buggy_commit.py: 2022-02-04T16:50:12Z
+src/main/git_log/git2data.py: 2022-02-04T16:52:03Z
+src/main/git_log/git2repo.py: 2022-02-04T16:52:03Z
+src/main/git_log/git_commit_info.py: 2022-02-04T16:52:03Z
+src/main/git_understand/git_understand.py: 2022-02-04T16:52:03Z
+src/main/utils/utils.py: 2022-02-04T16:52:03Z
