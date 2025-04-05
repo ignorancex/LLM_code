@@ -11,11 +11,11 @@ import openai
 import openai.error as ERR
 
 key_list = [
-    "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",
-    "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",
-    "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",
-    "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",
-    "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",
+    "",
+    "",
+    "",
+    "",
+    "",
 ]
 
 

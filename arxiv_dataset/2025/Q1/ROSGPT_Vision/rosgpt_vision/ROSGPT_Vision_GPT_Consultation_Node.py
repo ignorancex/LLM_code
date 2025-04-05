@@ -23,7 +23,7 @@ parser = argparse.ArgumentParser(description='RosGPT Vision')
 parser.add_argument('path_yaml', type=str, help='write a path of yaml file')
 args = parser.parse_args()
 
-openai_api_key = "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"#os.getenv('OPENAI_API_KEY') 
+openai_api_key = ""#os.getenv('OPENAI_API_KEY') 
 
 
 with open(args.path_yaml, "r") as file:

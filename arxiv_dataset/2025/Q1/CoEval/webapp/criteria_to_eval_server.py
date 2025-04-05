@@ -831,7 +831,7 @@ def build_demo():
 
 
 if __name__ == "__main__":
-    os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY", default='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')
+    os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY", default='')
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--host", type=str, default="0.0.0.0")

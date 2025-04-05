@@ -54,7 +54,7 @@ def load_model(base_name="ViT-B/32", lora_r=-1, weight_name=""):
 
 # Replace with an auth token, which you can get from your huggingface account: Profile -> Settings -> Access Tokens -> New Token
 #auth_token = get_token()
-auth_token = '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'
+auth_token = ''
 
 winoground = load_dataset("facebook/winoground", use_auth_token=auth_token)["test"]
 
