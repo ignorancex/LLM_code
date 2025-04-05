@@ -2,8 +2,8 @@ import os
 import shutil
 
 # 年份与季度
-year = '2025'
-seasons = ['Q1']
+year = '2022'
+seasons = ['Q3']
 
 for season in seasons:
     src_dir = f'github_code/{year}/{season}'

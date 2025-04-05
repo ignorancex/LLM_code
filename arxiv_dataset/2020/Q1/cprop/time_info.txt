@@ -1,0 +1,12 @@
+cprop/__init__.py: 2019-11-17T12:21:14Z
+cprop/cprop_adam.py: 2019-11-17T12:41:37Z
+cprop/cprop_lib.py: 2020-01-05T03:03:01Z
+cprop/cprop_sgd.py: 2019-11-17T12:26:35Z
+cprop/cprop_universal.py: 2019-11-17T12:26:35Z
+cprop/test/test_update_avg.py: 2020-01-05T03:03:01Z
+setup.py: 2019-11-17T12:21:14Z
+tf/cprop_tf/__init__.py: 2019-11-19T09:25:32Z
+tf/cprop_tf/cprop.py: 2019-12-19T10:02:04Z
+tf/cprop_tf/cprop_common.py: 2019-12-26T04:06:56Z
+tf/cprop_tf/cprop_tf1.py: 2019-12-19T10:02:04Z
+tf/setup.py: 2019-11-19T09:25:32Z

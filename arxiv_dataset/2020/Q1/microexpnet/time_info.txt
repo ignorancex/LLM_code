@@ -1,0 +1,8 @@
+Candidates/CandidateExpNet_p1.py: 2017-11-19T12:36:50Z
+Candidates/CandidateExpNet_p12.py: 2017-11-19T12:36:50Z
+Candidates/CandidateExpNet_p2.py: 2017-11-19T12:36:50Z
+Candidates/CandidateExpNet_v.py: 2017-11-19T12:36:50Z
+Candidates/Preprocessing.py: 2019-06-08T23:24:43Z
+Candidates/trainCandidates.py: 2019-06-08T23:24:43Z
+MicroExpNet.py: 2019-04-10T21:57:14Z
+exampleUsage.py: 2017-12-09T22:12:24Z

@@ -1,0 +1,15 @@
+docs/conf.py: 2020-05-06T14:16:46Z
+python/.ipynb_checkpoints/compute_correction_function-checkpoint.py: 2023-02-27T21:56:33Z
+python/.ipynb_checkpoints/compute_correction_function_lya-checkpoint.py: 2023-02-27T21:56:33Z
+python/.ipynb_checkpoints/compute_window_lya-checkpoint.py: 2023-11-01T21:07:09Z
+python/.ipynb_checkpoints/reconstruct_power-checkpoint.py: 2023-02-27T21:56:33Z
+python/compute_binning_file_linear.py: 2019-10-23T02:33:40Z
+python/compute_binning_file_log.py: 2019-10-23T02:33:40Z
+python/compute_correction_function.py: 2023-01-05T21:33:59Z
+python/compute_window_lya.py: 2023-11-01T21:07:09Z
+python/convert_to_xyz.py: 2019-10-23T15:50:26Z
+python/reconstruct_power.py: 2022-12-03T16:44:34Z
+python/take_subset_of_particles.py: 2019-12-21T19:38:52Z
+python/wcdm/__init__.py: 2019-10-23T15:50:26Z
+python/wcdm/incomplete_beta.py: 2019-10-23T15:50:26Z
+python/wcdm/wcdm.py: 2019-10-23T15:50:26Z

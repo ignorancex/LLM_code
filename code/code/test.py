@@ -3,11 +3,10 @@ import requests
 from urllib.parse import urlparse
 from tqdm import tqdm
 import time
-from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # === 配置路径 ===
 only_links_path = 'LLM_code/code/github_links/Only_links_by_quarter.json'
-valid_links_path = 'LLM_code/code/github_links/valid_links_by_quarter_new.json'
+valid_links_path = 'LLM_code/code/github_links/valid_links_by_quarter.json'
 
 # === GitHub Token ===
 GITHUB_TOKEN = ''  # ✅ 实际使用中建议放到环境变量中
@@ -18,10 +17,12 @@ HEADERS = {
 }
 
 # === 要处理的季度列表 ===
-quarters = [
-    f"{year}Q{q}" for year in range(2020, 2026)
-    for q in range(1, 5) if not (year == 2020 and q == 1) and not (year == 2025 and q > 1)
-]
+# quarters = [
+#     f"{year}Q{q}" for year in range(2020, 2026)
+#     for q in range(1, 5) if not (year == 2025 and q > 1) and not (year == 2020 and q == 1)
+# ]
+
+quarters = ["2021Q4", "2022Q2", "2022Q3"]
 
 # === 加载链接数据 ===
 with open(only_links_path, 'r', encoding='utf-8') as f:
@@ -50,31 +51,15 @@ def has_python_file_recursive(user, repo, path=""):
         print(f"⚠️ Error accessing {url}: {e}")
         return False
 
-# === 多线程处理单个链接 ===
-def check_link(link, existing_repos):
-    parts = urlparse(link).path.strip("/").split("/")
-    if len(parts) != 2:
-        return None
-    user, repo = parts
-
-    if repo in existing_repos:
-        return None
-
-    if has_python_file_recursive(user, repo):
-        return link
-    return None
-
 # === 主逻辑 ===
 for quarter in quarters:
     print(f"\n📦 处理季度：{quarter}")
 
     only_links = all_only_links.get(quarter, [])
     existing_links = set(all_valid_links.get(quarter, []))
-    existing_repos = {urlparse(link).path.strip("/").split("/")[-1] for link in existing_links}
+    to_check_links = [link for link in reversed(only_links) if link not in existing_links]
 
-    to_check_links = [link for link in only_links if link not in existing_links]
-
-    needed_count = 610 - len(existing_links)
+    needed_count = 502 - len(existing_links)
     if needed_count <= 0:
         print(f"✅ {quarter} 已有 {len(existing_links)} 个有效链接，无需补充。")
         continue
@@ -82,17 +67,16 @@ for quarter in quarters:
     print(f"🔍 {quarter} 需要补充 {needed_count} 个链接，共可选 {len(to_check_links)} 个")
 
     results = []
-    with ThreadPoolExecutor(max_workers=2) as executor:
-        futures = {executor.submit(check_link, link, existing_repos): link for link in to_check_links}
-        for future in tqdm(as_completed(futures), total=len(futures), desc=f"Checking {quarter}"):
-            result = future.result()
-            if result:
-                repo_name = urlparse(result).path.strip("/").split("/")[-1]
-                if repo_name not in existing_repos:
-                    results.append(result)
-                    existing_repos.add(repo_name)
-            if len(results) >= needed_count:
-                break
+    for link in tqdm(to_check_links, desc=f"Checking {quarter}"):
+        parts = urlparse(link).path.strip("/").split("/")
+        if len(parts) != 2:
+            continue
+        user, repo = parts
+        if has_python_file_recursive(user, repo):
+            results.append(link)
+        time.sleep(0.2)
+        if len(results) >= needed_count:
+            break
 
     # 保存本季度临时结果
     output_target_path = f'target/target_{quarter}.json'
@@ -106,7 +90,7 @@ for quarter in quarters:
     print(f"✅ {quarter} 筛选完成，添加 {len(results)} 个链接，保存至 {output_target_path}")
 
 # === 保存更新后的 valid_links_by_quarter.json ===
-with open(valid_links_path, 'w', encoding='utf-8') as f:
-    json.dump(all_valid_links, f, indent=4)
+# with open(valid_links_path, 'w', encoding='utf-8') as f:
+#     json.dump(all_valid_links, f, indent=4)
 
 print("\n📝 所有季度处理完成，valid_links_by_quarter.json 已更新。")

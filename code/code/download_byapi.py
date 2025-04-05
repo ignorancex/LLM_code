@@ -4,10 +4,10 @@ import json
 from tqdm import tqdm
 
 # GitHub Token（建议用环境变量）
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "YOUR_TOKEN")
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "")
 
-SEASONS = ["Q1","Q2", "Q3", "Q4"]
-YEARS = ["2020", "2021", "2022", "2023", "2024", "2025"]
+SEASONS = ["Q2", "Q3", "Q4"]
+YEARS = ["2021", "2022"]
 
 
 def download_file(url, save_path):
