@@ -40,7 +40,7 @@ def build_WSI_backbone_model(model_name="gigapath", local_weight_path=None,
     """
     # fixme internal token
     # Hugging Face API token
-    os.environ["HF_TOKEN"] = "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"
+    os.environ["HF_TOKEN"] = ""
 
     if model_name == "SlideViT":
         default_ROI_feature_dim = 768  # the embedding input size for vit_base_patch16_224
