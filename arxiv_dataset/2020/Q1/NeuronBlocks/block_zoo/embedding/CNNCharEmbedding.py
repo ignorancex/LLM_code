@@ -1,0 +1,166 @@
+# Copyright (c) Microsoft Corporation. All rights reserved.
+# Licensed under the MIT license.
+
+
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+from torch.autograd import Variable
+
+import numpy as np
+from block_zoo.BaseLayer import BaseLayer, BaseConf
+from utils.DocInherit import DocInherit
+
+
+class CNNCharEmbeddingConf(BaseConf):
+    """ Configuration of CNNCharEmbedding
+
+    Args:
+        dim (int, optional): the dimension of character embedding after convolution. Default: 30
+        embedding_matrix_dim(int, optional): the dimension of character initialized embedding. Default: 30
+        stride(int, optional): Stride of the convolution. Default: 1
+        padding(int, optional): Zero-padding added to both sides of the input. Default: 0
+        window_size(int, optional): width of convolution kernel. Default: 3
+        activation(Str, optional): activation after convolution operation, can set null. Default: 'ReLU'
+    """
+    def __init__(self, **kwargs):
+        super(CNNCharEmbeddingConf, self).__init__(**kwargs)
+
+    @DocInherit
+    def default(self):
+        self.dim = [30]       # cnn's output channel dim
+        self.embedding_matrix_dim = 30      #
+        self.stride = [1]
+        self.padding = 0
+        self.window_size = [3]
+        self.activation = 'ReLU'
+
+    @DocInherit
+    def declare(self):
+        self.input_channel_num = 1
+        self.num_of_inputs = 1
+        self.input_ranks = [3]
+
+    def change_to_list(self, attribute):
+        for single in attribute:
+            if not isinstance(getattr(self, single), list):
+                setattr(self, single, [getattr(self, single)])
+
+    @DocInherit
+    def inference(self):
+        self.change_to_list(['dim', 'stride', 'window_size'])
+        self.output_channel_num = self.dim
+        self.output_rank = 3
+
+    @DocInherit
+    def verify(self):
+        # super(CNNCharEmbeddingConf, self).verify()
+
+        necessary_attrs_for_user = ['dim', 'embedding_matrix_dim', 'stride', 'window_size', 'activation', 'vocab_size']
+        for attr in necessary_attrs_for_user:
+            self.add_attr_exist_assertion_for_user(attr)
+
+
+class CNNCharEmbedding(BaseLayer):
+    """
+    This layer implements the character embedding use CNN
+    Args:
+        layer_conf (CNNCharEmbeddingConf): configuration of CNNCharEmbedding
+    """
+    def __init__(self, layer_conf):
+        super(CNNCharEmbedding, self).__init__(layer_conf)
+        self.layer_conf = layer_conf
+
+        assert len(layer_conf.dim) == len(layer_conf.window_size) == len(layer_conf.stride), "The attribute dim/window_size/stride must have the same length."
+
+        self.char_embeddings = nn.Embedding(layer_conf.vocab_size, layer_conf.embedding_matrix_dim, padding_idx=self.layer_conf.padding)
+        nn.init.uniform_(self.char_embeddings.weight, -0.001, 0.001)
+
+        self.char_cnn = nn.ModuleList()
+        for i in range(len(layer_conf.output_channel_num)):
+            self.char_cnn.append(nn.Conv2d(1, layer_conf.output_channel_num[i], (layer_conf.window_size[i], layer_conf.embedding_matrix_dim),
+                                   stride=self.layer_conf.stride[i], padding=self.layer_conf.padding))
+        if layer_conf.activation:
+            self.activation = eval("nn." + self.layer_conf.activation)()
+        else:
+            self.activation = None
+        # if self.is_cuda():
+        #     self.char_embeddings = self.char_embeddings.cuda()
+        #     self.char_cnn = self.char_cnn.cuda()
+        #     if self.activation and hasattr(self.activation, 'weight'):
+        #         self.activation.weight = torch.nn.Parameter(self.activation.weight.cuda())
+
+    def forward(self, string):
+        """
+        Step1: [batch_size, seq_len, char num in words] -> [batch_size, seq_len * char num in words]
+        Step2: lookup embedding matrix -> [batch_size, seq_len * char num in words, embedding_dim]
+        reshape -> [batch_size * seq_len, char num in words, embedding_dim]
+        Step3: after convolution operation, got [batch_size * seq_len, char num related, output_channel_num]
+        Step4: max pooling on axis 1 and -reshape-> [batch_size * seq_len, output_channel_dim]
+        Step5: reshape -> [batch_size, seq_len, output_channel_dim]
+
+        Args:
+            string (Variable): [[char ids of word1], [char ids of word2], [...], ...], shape: [batch_size, seq_len, char num in words]
+
+        Returns:
+            Variable: [batch_size, seq_len, output_dim]
+
+        """
+        string_reshaped = string.view(string.size()[0], -1)     #[batch_size, seq_len * char num in words]
+
+        char_embs_lookup = self.char_embeddings(string_reshaped).float()    # [batch_size, seq_len * char num in words, embedding_dim]
+        char_embs_lookup = char_embs_lookup.view(-1, string.size()[2], self.layer_conf.embedding_matrix_dim)    #[batch_size * seq_len, char num in words, embedding_dim]
+
+        string_input = torch.unsqueeze(char_embs_lookup, 1)   # [batch_size * seq_len, input_channel_num=1, char num in words, embedding_dim]
+
+        outputs = []
+        for index, single_cnn in enumerate(self.char_cnn):
+            string_conv = single_cnn(string_input).squeeze(3)
+            if self.activation:
+                string_conv = self.activation(string_conv)
+
+            string_maxpooling = F.max_pool1d(string_conv, string_conv.size(2)).squeeze()
+            string_out = string_maxpooling.view(string.size()[0], -1, self.layer_conf.output_channel_num[index])
+
+            outputs.append(string_out)
+
+        if len(outputs) > 1:
+            string_output = torch.cat(outputs, 2)
+        else:
+            string_output = outputs[0]
+
+        return string_output
+
+
+if __name__ == '__main__':
+    conf = {
+        'dim': 30,
+        'output_channel_num': 30,
+        'input_channel_num': 1,
+        'window_size': 3,
+        'activation': 'PReLU',
+
+        # should be infered from the corpus
+        'vocab_size': 10,
+        'input_dims': [5],
+        'input_ranks': [3],
+        'use_gpu': True
+    }
+    layer_conf = CNNCharEmbeddingConf(**conf)
+
+    # make a fake input: [bs, seq_len, char num in words]
+    # assume in this batch, the padded sentence length is 3 and the each word has 5 chars, including padding 0.
+    input_chars = np.array([
+        [[3, 1, 2, 5, 4], [1, 2, 3, 4, 0], [0, 0, 0, 0, 0]],
+        [[1, 1, 0, 0, 0], [2, 3, 1, 0, 0], [1, 2, 3, 4, 5]]
+    ])
+
+    char_emb_layer = CNNCharEmbedding(layer_conf)
+
+    input_chars = torch.LongTensor(input_chars)
+    output = char_emb_layer(input_chars)
+
+    print(output)
+
+
+

@@ -1,7 +1,7 @@
 import os
 
 # 定义年份和季度范围
-years = [str(y) for y in range(2020, 2026)]
+years = [str(y) for y in range(2020, 2022)]
 seasons = ["Q1", "Q2", "Q3", "Q4"]
 
 # 记录所有缺失或为空的文件夹

@@ -2,8 +2,8 @@ import os
 import shutil
 
 # 年份与季度
-year = '2022'
-seasons = ['Q3']
+year = '2021'
+seasons = ['Q1', 'Q2', 'Q3', 'Q4']
 
 for season in seasons:
     src_dir = f'github_code/{year}/{season}'
@@ -22,9 +22,14 @@ for season in seasons:
         src_path = os.path.join(src_dir, item)
         dst_path = os.path.join(dst_dir, item)
 
+        # 如果目标中已存在同名文件或文件夹，则跳过
+        if os.path.exists(dst_path):
+            print(f"⛔ 目标中已存在：{dst_path}，跳过该项。")
+            continue
+
         # 移动文件或文件夹
         shutil.move(src_path, dst_path)
 
-    print(f"✅ {season} 所有内容已成功移动。")
+    print(f"✅ {season} 所有内容已成功处理。")
 
 print("🎉 全部季度处理完毕。")

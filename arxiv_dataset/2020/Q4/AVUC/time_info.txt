@@ -1,0 +1,15 @@
+models/bayesian/resnet.py: 2020-11-11T01:49:03Z
+models/bayesian/resnet_large.py: 2020-11-11T01:49:03Z
+models/bayesian/simple_cnn.py: 2020-11-11T01:49:03Z
+models/deterministic/resnet.py: 2020-11-11T01:49:03Z
+models/deterministic/resnet_large.py: 2020-11-11T01:49:03Z
+models/deterministic/simple_cnn.py: 2020-11-11T01:49:03Z
+src/avuc_loss.py: 2020-11-11T01:49:03Z
+src/main_bayesian_cifar.py: 2020-11-11T01:49:03Z
+src/main_bayesian_cifar_auavu.py: 2020-11-11T01:49:03Z
+src/main_bayesian_cifar_avu.py: 2020-11-11T01:49:03Z
+src/main_bayesian_imagenet_avu.py: 2020-11-11T01:49:03Z
+src/main_deterministic_cifar.py: 2020-11-11T01:49:03Z
+src/util.py: 2021-01-12T01:21:02Z
+variational_layers/conv_variational.py: 2020-11-11T01:49:03Z
+variational_layers/linear_variational.py: 2020-11-11T01:49:03Z

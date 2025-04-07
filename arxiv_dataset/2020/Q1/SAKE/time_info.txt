@@ -1,0 +1,11 @@
+src/ResnetModel.py: 2019-09-27T17:43:46Z
+src/Sketchy.py: 2019-09-27T17:43:46Z
+src/TUBerlin.py: 2019-09-27T17:43:46Z
+src/resnet.py: 2019-09-27T17:43:46Z
+src/senet.py: 2019-09-27T17:43:46Z
+src/sketchy_to_wnid.py: 2019-09-27T17:43:46Z
+src/test_cse_resnet_sketchy_zeroshot.py: 2019-09-27T17:43:46Z
+src/test_cse_resnet_tuberlin_zeroshot.py: 2019-09-27T17:43:46Z
+src/train_cse_resnet_sketchy_ext.py: 2019-09-27T17:43:46Z
+src/train_cse_resnet_tuberlin_ext.py: 2019-09-27T17:43:46Z
+src/tuberlin_to_wnid.py: 2019-09-27T17:43:46Z

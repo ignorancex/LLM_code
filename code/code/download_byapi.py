@@ -6,9 +6,11 @@ from tqdm import tqdm
 # GitHub Token（建议用环境变量）
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "")
 
-SEASONS = ["Q2", "Q3", "Q4"]
-YEARS = ["2021", "2022"]
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "")
 
+SEASONS = ["Q1", "Q2", "Q3", "Q4"]
+YEARS = ["2021", "2022", "2023", "2024", "2025"]
+YEARS = ["2024", "2025"]
 
 def download_file(url, save_path):
     """下载单个 .py 文件"""

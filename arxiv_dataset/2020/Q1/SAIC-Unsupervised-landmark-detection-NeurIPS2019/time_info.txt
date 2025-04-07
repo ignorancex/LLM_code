@@ -1,0 +1,9 @@
+MTFAN.py: 2019-10-22T00:07:37Z
+Train_options.py: 2019-10-22T00:07:37Z
+affine_all_epochs.py: 2019-10-22T00:07:37Z
+databases.py: 2019-10-22T00:16:41Z
+extract_data.py: 2019-10-22T00:07:37Z
+model.py: 2019-10-22T00:07:37Z
+test.py: 2019-10-22T00:07:37Z
+train.py: 2019-10-22T00:07:37Z
+utils.py: 2019-10-22T00:07:37Z

@@ -1,0 +1,7 @@
+example/example_MaNGA_without_template.py: 2021-12-14T16:37:06Z
+example/example_NBursts_with_template.py: 2021-12-11T06:38:11Z
+example/example_NBursts_without_template.py: 2021-12-11T13:13:57Z
+setup.py: 2023-10-20T10:14:07Z
+sla/__init__.py: 2021-12-11T06:38:11Z
+sla/core.py: 2023-10-20T10:14:07Z
+sla/utils.py: 2022-10-26T12:26:33Z

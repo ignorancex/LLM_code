@@ -1,0 +1,4 @@
+AvatarControl/avatar_blink.py: 2019-10-14T23:14:20Z
+AvatarControl/avatar_head_movement.py: 2019-10-14T23:14:20Z
+AvatarControl/conversational_agent_demo.py: 2019-10-14T23:14:20Z
+AvatarControl/face_synthesis_demo.py: 2019-02-03T20:53:37Z

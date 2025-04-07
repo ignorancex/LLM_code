@@ -1,0 +1,6 @@
+bem/__init__.py: 2019-08-22T16:16:04Z
+bem/bem.py: 2019-10-04T14:40:51Z
+bem/format_dataset.py: 2019-09-16T18:00:31Z
+bem/teq_planet.py: 2019-09-16T18:00:31Z
+minimal_run_bem.py: 2019-10-04T14:40:51Z
+setup.py: 2019-10-04T14:40:51Z

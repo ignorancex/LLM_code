@@ -1,0 +1,13 @@
+diff_triangles/__init__.py: 2021-09-06T16:00:11Z
+diff_triangles/config.py: 2021-09-06T16:00:11Z
+diff_triangles/weighted_triangulation2D.py: 2021-09-06T16:00:11Z
+losses.py: 2021-09-06T16:00:11Z
+model.py: 2021-09-06T16:00:11Z
+optimization_utils.py: 2021-09-06T16:00:11Z
+optimize_curvature.py: 2021-09-06T16:00:11Z
+optimize_triangle_size.py: 2021-10-13T16:35:13Z
+postprocessing/cut_boundary.py: 2021-10-13T16:35:13Z
+postprocessing/flip-geodesics-demo/deps/polyscope/misc/generate_colormap_constant.py: 2021-10-13T16:35:13Z
+postprocessing/flip-geodesics-demo/src/view_mesh.py: 2021-10-13T16:35:13Z
+preprocessing/cut_patches.py: 2021-10-13T16:35:13Z
+preprocessing/parametrize_patches.py: 2021-10-13T16:35:13Z

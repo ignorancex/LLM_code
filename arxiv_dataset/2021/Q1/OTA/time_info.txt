@@ -1,0 +1,12 @@
+playground/detection/coco/ota.res101.fpn.coco.800size.1x/config.py: 2021-03-22T10:33:09Z
+playground/detection/coco/ota.res101.fpn.coco.800size.1x/fcos.py: 2021-03-29T02:28:26Z
+playground/detection/coco/ota.res101.fpn.coco.800size.1x/net.py: 2021-03-22T10:33:28Z
+playground/detection/coco/ota.res50.fpn.coco.800size.1x/config.py: 2021-03-22T07:11:22Z
+playground/detection/coco/ota.res50.fpn.coco.800size.1x/fcos.py: 2021-03-29T02:27:56Z
+playground/detection/coco/ota.res50.fpn.coco.800size.1x/net.py: 2021-03-22T07:11:22Z
+playground/detection/coco/ota.x101.dcnv2.fpn.coco.800size.1x/config.py: 2021-03-22T10:35:30Z
+playground/detection/coco/ota.x101.dcnv2.fpn.coco.800size.1x/fcos.py: 2021-03-29T02:28:53Z
+playground/detection/coco/ota.x101.dcnv2.fpn.coco.800size.1x/net.py: 2021-03-22T10:35:44Z
+playground/detection/coco/ota.x101.fpn.coco.800size.1x/config.py: 2021-03-22T10:34:37Z
+playground/detection/coco/ota.x101.fpn.coco.800size.1x/fcos.py: 2021-03-29T02:29:14Z
+playground/detection/coco/ota.x101.fpn.coco.800size.1x/net.py: 2021-03-22T10:35:02Z

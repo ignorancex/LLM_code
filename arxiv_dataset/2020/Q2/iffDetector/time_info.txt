@@ -1,0 +1,4 @@
+configs/fovea_r50_fpn_4gpu_1x.py: 2020-02-29T14:32:32Z
+iff-heads/FoveaBox/fovea_head.py: 2020-03-09T08:22:08Z
+iff-heads/FreeAnchor-ResNeXt101/retinanet.py: 2020-03-09T10:29:39Z
+iff-heads/YOLOv2/darknet.py: 2020-03-09T08:22:08Z

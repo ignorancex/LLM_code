@@ -1,0 +1,14 @@
+source/evaluation.py: 2023-12-08T15:42:37Z
+source/generate-points.py: 2023-12-06T20:50:23Z
+source/paths.py: 2023-12-06T20:50:23Z
+source/tensir/__init__.py: 2023-12-09T16:00:38Z
+source/tensir/_pool.py: 2022-06-01T12:04:31Z
+source/tensir/data.py: 2023-12-06T20:50:23Z
+source/tensir/optimize/__init__.py: 2023-12-06T20:50:23Z
+source/tensir/optimize/deterministic.py: 2023-12-06T20:50:23Z
+source/tensir/optimize/gradient.py: 2023-12-06T20:50:23Z
+source/tensir/optimize/grid.py: 2023-12-06T20:50:23Z
+source/tensir/uniformization/__init__.py: 2023-12-06T20:50:23Z
+source/tensir/uniformization/_tensormath.py: 2023-12-06T20:50:23Z
+source/tensir/uniformization/derivative.py: 2023-12-06T20:50:23Z
+source/tensir/uniformization/forward.py: 2023-12-06T20:50:23Z

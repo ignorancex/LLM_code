@@ -1,0 +1,14 @@
+data/__init__.py: 2019-09-28T10:41:30Z
+data/cifar10.py: 2019-09-28T10:41:30Z
+main_teacher.py: 2019-09-28T10:41:30Z
+model/cifar10/__init__.py: 2019-09-28T10:41:30Z
+model/cifar10/shiftnet_cuda_v2/build_ffi.py: 2019-09-28T10:41:30Z
+model/cifar10/shiftnet_cuda_v2/module_test.py: 2019-09-28T10:41:30Z
+model/cifar10/shiftnet_cuda_v2/nn.py: 2019-09-28T10:41:30Z
+model/cifar10/shiftnet_cuda_v2/shiftnet_cuda/__init__.py: 2019-09-28T10:41:30Z
+model/cifar10/shiftnet_cuda_v2/test_shiftnet.py: 2019-09-28T10:41:30Z
+model/cifar10/shiftresnet.py: 2019-09-28T10:41:30Z
+utils/__init__.py: 2019-09-28T10:41:30Z
+utils/common.py: 2019-09-28T10:41:30Z
+utils/logger.py: 2019-09-28T10:41:30Z
+utils/options.py: 2019-09-28T10:41:30Z

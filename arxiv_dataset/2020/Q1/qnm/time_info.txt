@@ -1,0 +1,17 @@
+.github/workflows/build_matrix.py: 2025-03-24T16:59:40Z
+docs/conf.py: 2025-03-24T17:23:43Z
+qnm/__init__.py: 2019-10-01T20:00:02Z
+qnm/_version.py: 2025-03-24T17:04:55Z
+qnm/angular.py: 2019-09-15T17:48:28Z
+qnm/cached.py: 2019-09-24T16:44:35Z
+qnm/contfrac.py: 2025-03-24T16:59:40Z
+qnm/nearby.py: 2019-09-23T22:50:05Z
+qnm/radial.py: 2025-03-24T16:59:40Z
+qnm/schwarzschild/__init__.py: 2019-09-15T15:55:43Z
+qnm/schwarzschild/approx.py: 2019-02-19T05:03:09Z
+qnm/schwarzschild/overtonesequence.py: 2025-04-04T14:43:02Z
+qnm/schwarzschild/tabulated.py: 2019-09-24T16:44:35Z
+qnm/spinsequence.py: 2025-04-04T14:43:02Z
+setup.py: 2025-03-24T17:04:55Z
+test/conftest.py: 2020-10-06T00:24:05Z
+test/test_qnm.py: 2021-10-17T22:57:56Z

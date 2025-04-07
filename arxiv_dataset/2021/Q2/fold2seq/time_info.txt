@@ -1,0 +1,12 @@
+data/determine_ss.py: 2020-10-06T15:20:28Z
+data/fold_feat_gen.py: 2021-06-06T00:18:00Z
+data/pdb_pre.py: 2020-10-06T15:20:28Z
+data/ss_dense_gen.py: 2021-06-06T00:18:00Z
+src/Utils/amino_acid.py: 2020-10-06T15:20:28Z
+src/Utils/hparam.py: 2020-10-06T15:20:28Z
+src/Utils/model_statistics.py: 2020-10-06T15:20:28Z
+src/fold_encoder.py: 2020-10-06T15:20:28Z
+src/generator.py: 2020-10-06T15:20:28Z
+src/inference.py: 2021-06-06T23:43:37Z
+src/seq_decoder.py: 2020-10-06T15:20:28Z
+src/train.py: 2021-06-06T23:43:37Z

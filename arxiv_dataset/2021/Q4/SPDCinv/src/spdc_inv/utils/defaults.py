@@ -1,0 +1,11 @@
+COINCIDENCE_RATE = 'coincidence_rate'
+DENSITY_MATRIX = 'density_matrix'
+TOMOGRAPHY_MATRIX = 'tomography_matrix'
+REAL = 'real'
+IMAG = 'imag'
+QUBIT = 'qubit'
+QUTRIT = 'qutrit'
+qubit_projection_n_state2 = 6
+qubit_tomography_dimensions = 2
+qutrit_projection_n_state2 = 15
+qutrit_tomography_dimensions = 3

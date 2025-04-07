@@ -1,0 +1,49 @@
+code/CSOL/data/MUSIC_dataset.py: 2022-02-22T10:59:12Z
+code/CSOL/data/__init__.py: 2022-02-22T10:59:12Z
+code/CSOL/data/cut_audios.py: 2022-02-22T10:59:12Z
+code/CSOL/data/cut_videos.py: 2022-02-22T10:59:12Z
+code/CSOL/data/syn_dataset.py: 2022-02-22T10:59:12Z
+code/CSOL/eval.py: 2022-02-22T10:59:12Z
+code/CSOL/eval_duet.py: 2022-02-22T10:59:12Z
+code/CSOL/match_cluster.py: 2022-02-22T10:59:12Z
+code/CSOL/model/__init__.py: 2022-02-22T10:59:12Z
+code/CSOL/model/base_model.py: 2022-02-22T10:59:12Z
+code/CSOL/model/base_model2.py: 2022-02-22T10:59:12Z
+code/CSOL/model/init.py: 2022-02-22T10:59:12Z
+code/CSOL/model/location_model.py: 2022-02-22T10:59:12Z
+code/CSOL/test.py: 2022-02-22T10:59:12Z
+code/CSOL/test_stage_two.py: 2022-02-22T10:59:12Z
+code/CSOL/test_stage_two_duet.py: 2022-02-22T10:59:12Z
+code/CSOL/tools.py: 2022-02-22T10:59:12Z
+code/CSOL/training_stage_one.py: 2022-02-22T10:59:12Z
+code/CSOL/training_stage_two.py: 2022-02-22T10:59:12Z
+code/CSOL/training_stage_two_duet.py: 2022-02-22T10:59:12Z
+code/audioset-instrument/data/audioset.py: 2022-02-22T10:59:12Z
+code/audioset-instrument/model/__init__.py: 2022-02-22T10:59:12Z
+code/audioset-instrument/model/base_model.py: 2022-02-22T10:59:12Z
+code/audioset-instrument/model/location_model.py: 2022-02-22T10:59:12Z
+code/audioset-instrument/scripts/conver_to_audio.py: 2022-02-22T10:59:12Z
+code/audioset-instrument/scripts/cut_audio.py: 2022-02-22T10:59:12Z
+code/audioset-instrument/scripts/cut_video.py: 2022-02-22T10:59:12Z
+code/audioset-instrument/scripts/generate_test.py: 2022-02-22T10:59:12Z
+code/audioset-instrument/training_stage_one.py: 2022-02-22T10:59:12Z
+code/audioset-instrument/training_stage_two.py: 2022-02-22T10:59:12Z
+code/compared model/Sound-of-Pixels/arguments.py: 2022-02-22T10:59:12Z
+code/compared model/Sound-of-Pixels/create_index_files.py: 2022-02-22T10:59:12Z
+code/compared model/Sound-of-Pixels/dataset/__init__.py: 2022-02-22T10:59:12Z
+code/compared model/Sound-of-Pixels/dataset/base.py: 2022-02-22T10:59:12Z
+code/compared model/Sound-of-Pixels/dataset/music.py: 2022-02-22T10:59:12Z
+code/compared model/Sound-of-Pixels/dataset/video_transforms.py: 2022-02-22T10:59:12Z
+code/compared model/Sound-of-Pixels/main.py: 2022-02-22T10:59:12Z
+code/compared model/Sound-of-Pixels/models/__init__.py: 2022-02-22T10:59:12Z
+code/compared model/Sound-of-Pixels/models/audio_net.py: 2022-02-22T10:59:12Z
+code/compared model/Sound-of-Pixels/models/criterion.py: 2022-02-22T10:59:12Z
+code/compared model/Sound-of-Pixels/models/synthesizer_net.py: 2022-02-22T10:59:12Z
+code/compared model/Sound-of-Pixels/models/vision_net.py: 2022-02-22T10:59:12Z
+code/compared model/Sound-of-Pixels/utils.py: 2022-02-22T10:59:12Z
+code/compared model/Sound-of-Pixels/viz.py: 2022-02-22T10:59:12Z
+code/compared model/attention_net.py: 2022-02-22T10:59:12Z
+code/compared model/dmc_model.py: 2022-02-22T10:59:12Z
+code/compared model/location_attention_stage_one.py: 2022-02-22T10:59:12Z
+code/compared model/location_dmc_stage_one.py: 2022-02-22T10:59:12Z
+code/compared model/visualization_attention.py: 2022-02-22T10:59:12Z

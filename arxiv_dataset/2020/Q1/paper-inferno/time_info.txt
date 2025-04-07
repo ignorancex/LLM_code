@@ -1,0 +1,12 @@
+code/benchmarking.py: 2018-09-14T10:58:11Z
+code/extended_model.py: 2018-09-04T13:33:44Z
+code/fisher_matrix.py: 2018-08-31T17:18:35Z
+code/summary_statistic_computer.py: 2018-09-04T12:37:43Z
+code/synthetic_3D_cross_entropy.py: 2018-09-01T15:31:08Z
+code/synthetic_3D_example.py: 2018-08-31T17:18:35Z
+code/synthetic_3D_inferno.py: 2018-09-03T12:44:50Z
+code/synthetic_3D_train_cross_entropy.py: 2018-09-04T12:37:43Z
+code/synthetic_3D_train_inferno.py: 2018-09-01T15:31:08Z
+code/template_likelihood.py: 2018-06-12T12:35:38Z
+code/template_model.py: 2018-09-13T14:11:14Z
+code/train_helpers.py: 2018-09-03T12:44:50Z

@@ -1,0 +1,44 @@
+import sys
+import os
+from  collections import  OrderedDict
+sys.path.append("../")
+os.environ["DATASETS_FOLDER"] = "../"
+os.environ["EXPERIMENTS_FOLDER"] = "../"
+import boml as boml
+import tensorflow as tf
+
+
+def test_setup_model():
+    # def test_meta_init_v2():
+    _input_1 = tf.placeholder(tf.float32, (None, 28, 28, 1))
+    _input_2 = tf.placeholder(tf.float32, (None, 84, 84, 3))
+    boml_meta_repr_v1_t = boml.BOMLNetMiniMetaFeatV1(
+        _input_2, use_t=True, use_warp=False
+    )
+    boml_meta_repr_v1_warp = boml.BOMLNetMiniMetaFeatV1(
+        _input_2, use_t=False,outer_param_dict=OrderedDict(),
+        model_param_dict=OrderedDict(), use_warp=True, name="warp_test"
+    )
+    boml_meta_init_v1_mini = boml.BOMLNetMiniMetaInitV1(_input_2, dim_output=5)
+    boml_meta_init_v2_omniglot = boml.BOMLNetOmniglotMetaInitV2(_input_1, dim_output=5)
+    boml_meta_init_v2 = boml.BOMLNetMiniMetaInitV2(_input_2, dim_output=5)
+    boml_meta_repr_v2_omniglot = boml.BOMLNetOmniglotMetaFeatV2(_input_1)
+    boml_meta_repr_v2 = boml.BOMLNetMiniMetaFeatV2(_input_2)
+
+    print(boml_meta_init_v1_mini.out)
+    print(boml_meta_repr_v1_t.out)
+    print(boml_meta_repr_v1_warp.out)
+    print(boml_meta_init_v2.out)
+    print(boml_meta_init_v2.re_forward().out)
+    print(boml_meta_init_v2_omniglot.out)
+    print(boml_meta_init_v2_omniglot.re_forward().out)
+    print(boml_meta_repr_v2.out)
+    print(boml_meta_repr_v2_omniglot.out)
+    print(boml_meta_repr_v2_omniglot.re_forward().out)
+    print(boml_meta_repr_v2.re_forward().out)
+    print(boml.utils.get_rand_state(6))
+    print(boml_meta_repr_v2.filter_vars("weights"))
+
+
+if __name__ == "__main__":
+    test_setup_model()
