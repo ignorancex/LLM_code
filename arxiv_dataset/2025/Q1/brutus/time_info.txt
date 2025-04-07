@@ -1,0 +1,11 @@
+brutus/__init__.py: 2021-04-07T19:04:58Z
+brutus/cluster.py: 2020-05-27T15:45:26Z
+brutus/dust.py: 2020-04-17T00:24:53Z
+brutus/filters.py: 2020-02-02T04:51:25Z
+brutus/fitting.py: 2021-05-06T05:27:39Z
+brutus/los.py: 2020-05-27T15:45:26Z
+brutus/pdf.py: 2023-08-18T19:55:09Z
+brutus/plotting.py: 2020-05-30T04:05:30Z
+brutus/seds.py: 2024-05-23T03:04:24Z
+brutus/utils.py: 2021-04-07T19:04:58Z
+setup.py: 2020-05-25T20:57:46Z

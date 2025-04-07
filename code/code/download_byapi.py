@@ -9,8 +9,9 @@ GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "")
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "")
 
 SEASONS = ["Q1", "Q2", "Q3", "Q4"]
+
 YEARS = ["2021", "2022", "2023", "2024", "2025"]
-YEARS = ["2024", "2025"]
+YEARS = ["2024"]
 
 def download_file(url, save_path):
     """下载单个 .py 文件"""

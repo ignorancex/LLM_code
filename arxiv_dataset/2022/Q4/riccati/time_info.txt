@@ -1,0 +1,12 @@
+benchmarks/fig1.py: 2023-06-01T22:12:10Z
+docs/conf.py: 2023-06-01T23:58:06Z
+riccati/__init__.py: 2023-02-22T20:54:37Z
+riccati/_version.py: 2023-02-20T00:38:27Z
+riccati/chebutils.py: 2024-02-17T00:14:17Z
+riccati/evolve.py: 2024-02-17T01:04:39Z
+riccati/solversetup.py: 2023-02-03T21:56:18Z
+riccati/step.py: 2024-02-17T01:04:39Z
+riccati/stepsize.py: 2024-02-17T00:14:17Z
+riccati/tests/__init__.py: 2023-02-23T15:16:57Z
+riccati/tests/test_riccati.py: 2024-02-21T20:34:17Z
+setup.py: 2023-02-20T00:38:27Z

@@ -1,0 +1,13 @@
+code/ANCE/ance_index_embedding_generator.py: 2022-02-25T07:45:58Z
+code/ANCE/format_input.py: 2022-02-25T07:45:58Z
+code/DocumentCrawler/grdc_reports/add_new_reports_for_index.py: 2022-02-25T07:45:58Z
+code/DocumentCrawler/grdc_reports/generate_valid_json_for_report_and_journal.py: 2022-02-28T06:33:33Z
+code/DocumentCrawler/grdc_reports/main.py: 2022-02-25T07:45:58Z
+code/DocumentCrawler/grdc_reports/methods.py: 2022-02-25T07:45:58Z
+code/DocumentCrawler/grdc_reports/split_doc_into_para.py: 2022-02-25T07:45:58Z
+code/DocumentCrawler/journals/elsevier_crawler.py: 2022-02-28T06:33:33Z
+code/DocumentCrawler/journals/mdpi_crawler.py: 2022-02-28T06:33:33Z
+code/DocumentCrawler/journals/springer_crawler.py: 2022-02-28T06:33:33Z
+code/DocumentCrawler/journals/wiley_crawler.py: 2022-02-28T06:33:33Z
+code/extract_articles_dois.py: 2022-03-01T02:06:02Z
+code/form_assigned_query_pool.py: 2022-03-01T01:54:42Z

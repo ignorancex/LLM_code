@@ -1,0 +1,17 @@
+functions/__init__.py: 2025-01-22T22:20:12Z
+functions/fp/__init__.py: 2025-01-22T22:20:12Z
+functions/fp/gross/__init__.py: 2025-01-22T22:20:12Z
+functions/fp/gross/numeric.py: 2025-01-22T22:20:12Z
+functions/fp/gross/symbolic.py: 2025-01-22T22:20:12Z
+functions/fp/gross/type.py: 2025-01-22T22:20:12Z
+functions/fp/ibukiyama/__init__.py: 2025-01-22T22:20:12Z
+functions/fp/ibukiyama/maximal.py: 2025-01-22T22:20:12Z
+functions/fp2/__init__.py: 2025-01-22T22:20:12Z
+functions/fp2/deuring/__init__.py: 2025-01-22T22:20:12Z
+functions/fp2/deuring/correspondence.py: 2025-01-22T22:20:12Z
+functions/fp2/deuring/cost.py: 2025-01-22T22:20:12Z
+functions/fp2/deuring/klpt.py: 2025-01-22T22:20:12Z
+functions/fp2/deuring/xonly.py: 2025-01-22T22:20:12Z
+functions/fp2/eichler/__init__.py: 2025-01-22T22:20:12Z
+functions/fp2/eichler/bounds.py: 2025-02-01T02:34:46Z
+functions/fp2/eichler/maximal.py: 2025-02-01T02:34:46Z

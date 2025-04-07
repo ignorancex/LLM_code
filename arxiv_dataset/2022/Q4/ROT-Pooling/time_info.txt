@@ -1,0 +1,10 @@
+MindSpore_version/rotlayers.py: 2023-09-24T13:57:02Z
+backbones/adgcl.py: 2022-12-12T12:32:27Z
+backbones/attention_mil.py: 2022-12-12T12:32:27Z
+backbones/ddi_gin.py: 2022-12-12T12:58:59Z
+backbones/resnet_imagenet.py: 2024-03-17T05:54:53Z
+pooling/__init__.py: 2022-09-17T12:49:52Z
+pooling/baselines.py: 2022-08-21T13:21:45Z
+pooling/rotlayers.py: 2022-12-12T12:32:27Z
+pooling/rotpooling.py: 2022-12-12T12:32:27Z
+pooling/utils.py: 2022-08-24T11:16:47Z

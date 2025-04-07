@@ -36,7 +36,7 @@ src/garoupa/algebra/dihedral/dr.py: 2021-09-01T18:33:51Z
 src/garoupa/algebra/dihedral/ds.py: 2021-09-01T18:33:51Z
 src/garoupa/algebra/math.py: 2021-12-05T02:08:09Z
 src/garoupa/algebra/matrix/__init__.py: 2021-09-01T18:33:51Z
-src/garoupa/algebra/matrix/aux.py: 2021-12-12T20:55:34Z
+src/garoupa/algebra/matrix/aux_file.py: 2021-12-12T20:55:34Z
 src/garoupa/algebra/matrix/group.py: 2021-09-01T18:33:51Z
 src/garoupa/algebra/matrix/m.py: 2021-09-01T18:33:51Z
 src/garoupa/algebra/matrix/m128bit.py: 2021-09-01T18:33:51Z

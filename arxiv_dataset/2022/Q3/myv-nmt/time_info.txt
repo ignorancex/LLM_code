@@ -1,0 +1,8 @@
+slone_nmt/__init__.py: 2023-11-01T22:09:51Z
+slone_nmt/dictionary_tools/__init__.py: 2024-04-19T19:57:27Z
+slone_nmt/dictionary_tools/explainer.py: 2024-07-03T18:43:02Z
+slone_nmt/document_alignment.py: 2024-04-19T19:56:58Z
+slone_nmt/metrics_2024.py: 2024-10-30T22:20:08Z
+slone_nmt/myv_translit.py: 2024-04-19T19:56:58Z
+slone_nmt/nllb_preprocessing.py: 2024-06-18T19:09:51Z
+slone_nmt/nllb_update.py: 2024-06-23T17:04:15Z
