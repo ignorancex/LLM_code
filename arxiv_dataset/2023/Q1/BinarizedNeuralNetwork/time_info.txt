@@ -1,0 +1,6 @@
+src/3QConv.py: 2023-03-25T11:07:51Z
+src/3QConv_v2.py: 2023-03-25T11:07:51Z
+src/3QConv_v3.py: 2023-03-25T11:07:51Z
+src/3QConv_v4.py: 2023-03-25T11:07:51Z
+src/prediction.py: 2023-03-25T11:07:51Z
+src/xnor.py: 2023-03-25T11:07:51Z

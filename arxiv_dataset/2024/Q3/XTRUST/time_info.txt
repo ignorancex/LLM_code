@@ -1,0 +1,17 @@
+code/Evaluate_Mark_Me.py: 2024-04-03T06:01:38Z
+code/Evaluate_Mark_Privacy.py: 2024-04-03T06:01:38Z
+code/Evaluate_Mark_Tasks.py: 2024-04-03T06:01:38Z
+code/Model/evaluator_series/Evaluate_Score_total_Model.py: 2024-04-03T06:01:38Z
+code/Model/evaluator_series/eval_MultiLanguage_model.py: 2024-04-03T06:01:38Z
+code/Model/evaluator_series/evaluators/ChatGLM_1.py: 2024-04-03T06:01:38Z
+code/Model/evaluator_series/evaluators/ChatGLM_2.py: 2024-04-03T06:01:38Z
+code/Model/evaluator_series/evaluators/ChatGLM_3.py: 2024-04-03T06:01:38Z
+code/Model/evaluator_series/evaluators/InternLM.py: 2024-04-03T06:01:38Z
+code/Model/evaluator_series/evaluators/Qwen.py: 2024-04-03T06:01:38Z
+code/Model/evaluator_series/evaluators/chatgpt.py: 2024-04-03T06:01:38Z
+code/Model/evaluator_series/evaluators/evaluator.py: 2024-04-03T06:01:38Z
+code/api/evaluator_series/Evaluate_Score_total_api.py: 2024-04-03T06:01:38Z
+code/api/evaluator_series/eval_MultiLanguage_api.py: 2024-04-03T06:01:38Z
+code/api/evaluator_series/evaluators/all_api.py: 2024-04-03T06:01:38Z
+code/api/evaluator_series/evaluators/all_api_response.py: 2024-04-03T06:01:38Z
+code/api/evaluator_series/evaluators/evaluator.py: 2024-04-03T06:01:38Z

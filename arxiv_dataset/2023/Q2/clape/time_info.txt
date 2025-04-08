@@ -1,0 +1,7 @@
+clape/__init__.py: 2024-12-30T14:20:01Z
+clape/clape.py: 2024-12-30T14:20:01Z
+clape/clape_cli.py: 2024-08-23T20:56:26Z
+clape/model.py: 2024-08-20T19:25:56Z
+clape/retrieval.py: 2024-08-18T08:52:32Z
+clape/vis.py: 2024-08-23T22:03:47Z
+setup.py: 2024-08-23T20:56:26Z

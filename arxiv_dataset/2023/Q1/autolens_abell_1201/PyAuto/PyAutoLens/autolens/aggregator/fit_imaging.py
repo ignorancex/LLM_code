@@ -1,0 +1,166 @@
+from typing import Optional, List
+
+import autofit as af
+import autoarray as aa
+import autogalaxy as ag
+
+from autogalaxy.aggregator.imaging import _imaging_from
+from autogalaxy.aggregator.abstract import AbstractAgg
+
+from autolens.imaging.fit_imaging import FitImaging
+from autolens.analysis.preloads import Preloads
+from autolens.aggregator.tracer import _tracer_from
+
+
+def _fit_imaging_from(
+    fit: af.Fit,
+    galaxies: List[ag.Galaxy],
+    settings_imaging: aa.SettingsImaging = None,
+    settings_pixelization: aa.SettingsPixelization = None,
+    settings_inversion: aa.SettingsInversion = None,
+    use_preloaded_grid: bool = True,
+    use_hyper_scaling: bool = True,
+) -> FitImaging:
+    """
+    Returns a `FitImaging` object from a PyAutoFit database `Fit` object and an instance of galaxies from a non-linear
+    search model-fit.
+
+    This function adds the `hyper_model_image` and `hyper_galaxy_image_path_dict` to the galaxies before performing the
+    fit, if they were used.
+
+    Parameters
+    ----------
+    fit
+        A PyAutoFit database Fit object containing the generators of the results of PyAutoGalaxy model-fits.
+    galaxies
+        A list of galaxies corresponding to a sample of a non-linear search and model-fit.
+
+    Returns
+    -------
+    FitImaging
+        The fit to the imaging dataset computed via an instance of galaxies.
+    """
+
+    imaging = _imaging_from(fit=fit, settings_imaging=settings_imaging)
+
+    tracer = _tracer_from(fit=fit, galaxies=galaxies)
+
+#    tracer.planes[0].galaxies[0].bulge.mass_to_light_ratio *= 2.5
+#    tracer.planes[0].galaxies[0].disk.mass_to_light_ratio *= 2.5
+#    tracer.planes[0].galaxies[0].envelope.mass_to_light_ratio *= 2.5
+
+    settings_pixelization = settings_pixelization or fit.value(
+        name="settings_pixelization"
+    )
+    settings_inversion = settings_inversion or fit.value(name="settings_inversion")
+
+    preloads = Preloads(use_w_tilde=False)
+
+    if use_preloaded_grid:
+
+        sparse_grids_of_planes = fit.value(name="preload_sparse_grids_of_planes")
+
+        if sparse_grids_of_planes is not None:
+
+            preloads = Preloads(
+                sparse_image_plane_grid_pg_list=sparse_grids_of_planes,
+                use_w_tilde=False,
+            )
+
+            if len(preloads.sparse_image_plane_grid_pg_list) == 2:
+                if type(preloads.sparse_image_plane_grid_pg_list[1]) != list:
+                    preloads.sparse_image_plane_grid_pg_list[1] = [
+                        preloads.sparse_image_plane_grid_pg_list[1]
+                    ]
+
+    return FitImaging(
+        dataset=imaging,
+        tracer=tracer,
+        settings_pixelization=settings_pixelization,
+        settings_inversion=settings_inversion,
+        preloads=preloads,
+        use_hyper_scaling=use_hyper_scaling,
+    )
+
+
+class FitImagingAgg(AbstractAgg):
+    def __init__(
+        self,
+        aggregator: af.Aggregator,
+        settings_imaging: Optional[aa.SettingsImaging] = None,
+        settings_pixelization: Optional[aa.SettingsPixelization] = None,
+        settings_inversion: Optional[aa.SettingsInversion] = None,
+        use_preloaded_grid: bool = True,
+        use_hyper_scaling: bool = True,
+    ):
+        """
+        Wraps a PyAutoFit aggregator in order to create generators of fits to imaging data, corresponding to the
+        results of a non-linear search model-fit.
+        """
+        super().__init__(aggregator=aggregator)
+
+        self.settings_imaging = settings_imaging
+        self.settings_pixelization = settings_pixelization
+        self.settings_inversion = settings_inversion
+        self.use_preloaded_grid = use_preloaded_grid
+        self.use_hyper_scaling = use_hyper_scaling
+
+    def make_object_for_gen(self, fit, galaxies) -> FitImaging:
+        """
+        Creates a `FitImaging` object from a `ModelInstance` that contains the galaxies of a sample from a non-linear
+        search.
+
+        Parameters
+        ----------
+        fit
+            A PyAutoFit database Fit object containing the generators of the results of PyAutoGalaxy model-fits.
+        galaxies
+            A list of galaxies corresponding to a sample of a non-linear search and model-fit.
+
+        Returns
+        -------
+        FitImaging
+            A fit to imaging data whose galaxies are a sample of a PyAutoFit non-linear search.
+        """
+        #
+        # mass = ag.mp.EllPowerLaw(
+        #     centre=(-0.057, 0.009),
+        #     elliptical_comps=(0.076, -0.032),
+        #     einstein_radius=1.9,
+        #     slope=1.595,
+        # )
+        #
+        # shear = ag.mp.ExternalShear((-0.067, 0.119))
+
+        # mass = ag.mp.EllPowerLaw(
+        #     centre=(-0.097, -0.034),
+        #     elliptical_comps=(0.102, -0.026),
+        #     einstein_radius=1.923,
+        #     slope=1.619,
+        # )
+        #
+        # shear = ag.mp.ExternalShear((-0.057, 0.128))
+        # #
+        # galaxies.lens.mass = mass
+        # galaxies.lens.shear = shear
+
+        # samples = fit.value("samples")
+        #
+        # # print(samples[0].model.parameter_labels)
+        #
+        # print(samples.model.parameter_labels)
+        #
+        # samples_within = samples.samples_within_parameter_range(parameter_index=7, parameter_range=[1.59, 1.61])
+        #
+        # galaxies = samples_within.max_log_likelihood_instance.galaxies
+        # print(galaxies)
+
+        return _fit_imaging_from(
+            fit=fit,
+            galaxies=galaxies,
+            settings_imaging=self.settings_imaging,
+            settings_pixelization=self.settings_pixelization,
+            settings_inversion=self.settings_inversion,
+            use_preloaded_grid=self.use_preloaded_grid,
+            use_hyper_scaling=self.use_hyper_scaling,
+        )

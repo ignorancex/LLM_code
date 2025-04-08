@@ -1,0 +1,16 @@
+datasets/manually_annotated/imgs/download_script.py: 2022-04-29T19:33:25Z
+eval.py: 2023-07-20T20:30:08Z
+model/BarValueExtractor.py: 2022-04-29T18:22:18Z
+model/Datasets.py: 2023-07-20T20:30:08Z
+model/dataloaders.py: 2022-09-28T00:51:58Z
+model/nms.py: 2022-09-28T00:51:58Z
+model/plots/epoch_performance.py: 2022-04-29T18:22:18Z
+model/plots/plot_metrics.py: 2022-04-29T18:22:18Z
+model/plots/plot_predictions.py: 2022-09-28T00:51:58Z
+model/plots/visualize_cls_maps.py: 2022-09-28T00:51:58Z
+model/utils/map_conversions.py: 2022-09-28T00:51:58Z
+model/utils/metrics.py: 2022-09-28T00:51:58Z
+tools/synthetic_data_generators/augment_annotations.py: 2022-04-29T19:41:33Z
+tools/synthetic_data_generators/convert_to_yolo.py: 2022-04-29T19:41:33Z
+tools/synthetic_data_generators/generate_plots.py: 2022-04-29T19:41:33Z
+train.py: 2023-07-20T20:30:08Z

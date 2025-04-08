@@ -1,0 +1,37 @@
+LSVQ Synthetic/h264_1.py: 2024-02-07T10:21:22Z
+LSVQ Synthetic/h264_2.py: 2024-02-07T10:21:22Z
+LSVQ Synthetic/h264_3.py: 2024-02-07T10:21:22Z
+LSVQ Synthetic/inter1.py: 2024-02-07T10:21:22Z
+LSVQ Synthetic/inter2.py: 2024-02-07T10:21:22Z
+LSVQ Synthetic/inter3.py: 2024-02-07T10:21:22Z
+LSVQ Synthetic/mpeg1.py: 2024-02-07T10:21:22Z
+LSVQ Synthetic/mpeg2.py: 2024-02-07T10:21:22Z
+LSVQ Synthetic/mpeg3.py: 2024-02-07T10:21:22Z
+LSVQ Synthetic/original.py: 2024-02-07T10:21:22Z
+LSVQ Synthetic/resize1.py: 2024-02-07T10:21:22Z
+LSVQ Synthetic/resize2.py: 2024-02-07T10:21:22Z
+LSVQ Synthetic/resize3.py: 2024-02-07T10:21:22Z
+LSVQ Synthetic/script.py: 2024-02-07T10:21:22Z
+STVQRL/niqe_loss.py: 2024-02-08T06:27:58Z
+STVQRL/self_supervised_train.py: 2024-02-08T06:26:36Z
+STVQRL/swin_backbone.py: 2024-02-07T10:13:20Z
+STVQRL/synthetic_lsvd_datasets.py: 2024-02-07T07:24:36Z
+SemiSupervised Learning Module/Test/single_video_test.py: 2024-02-22T12:40:09Z
+SemiSupervised Learning Module/Test/test_dual_measure.py: 2024-02-22T12:39:54Z
+SemiSupervised Learning Module/fastvqa/__init__.py: 2024-02-07T10:27:12Z
+SemiSupervised Learning Module/fastvqa/datasets/__init__.py: 2024-02-07T10:29:14Z
+SemiSupervised Learning Module/fastvqa/datasets/basic_datasets.py: 2024-02-07T10:29:14Z
+SemiSupervised Learning Module/fastvqa/datasets/fusion_datasets.py: 2024-02-07T10:29:14Z
+SemiSupervised Learning Module/fastvqa/datasets/inference_dataset.py: 2024-02-07T10:29:14Z
+SemiSupervised Learning Module/fastvqa/models/__init__.py: 2024-02-07T10:30:23Z
+SemiSupervised Learning Module/fastvqa/models/backbone.py: 2024-02-07T10:30:23Z
+SemiSupervised Learning Module/fastvqa/models/backbone_get_attention.py: 2024-02-07T10:30:23Z
+SemiSupervised Learning Module/fastvqa/models/backbone_v0_1.py: 2024-02-07T10:30:23Z
+SemiSupervised Learning Module/fastvqa/models/conv_backbone.py: 2024-02-07T10:30:23Z
+SemiSupervised Learning Module/fastvqa/models/evaluator.py: 2024-02-07T10:30:23Z
+SemiSupervised Learning Module/fastvqa/models/head.py: 2024-02-07T10:30:23Z
+SemiSupervised Learning Module/fastvqa/models/swin_backbone.py: 2024-02-07T10:30:23Z
+SemiSupervised Learning Module/fastvqa/version.py: 2024-02-07T10:27:12Z
+SemiSupervised Learning Module/semisupervised_datasets.py: 2024-02-07T10:50:47Z
+SemiSupervised Learning Module/semisupervised_training.py: 2024-02-07T10:55:16Z
+pristine_clip_generator.py: 2024-02-22T11:12:31Z

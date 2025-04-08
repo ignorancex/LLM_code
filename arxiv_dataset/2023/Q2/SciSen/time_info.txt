@@ -1,0 +1,15 @@
+nonSciSen/NonSciSen.py: 2023-04-27T14:01:25Z
+nonSciSen/abbreviate.py: 2023-04-27T14:01:25Z
+nonSciSen/scifiSen.py: 2023-04-27T14:01:25Z
+nonSciSen/twitterSen.py: 2023-04-27T14:01:25Z
+sciSen/ParagraphsToSentences.py: 2023-04-27T14:01:25Z
+sciSen/TexToParagraphs.py: 2023-04-27T14:01:25Z
+sciSen/arXiv-crawler-master/counter.py: 2023-04-27T14:01:25Z
+sciSen/arXiv-crawler-master/dataCrawler.py: 2023-04-27T14:01:25Z
+sciSen/arXiv-crawler-master/database.py: 2023-04-27T14:01:25Z
+sciSen/arXiv-crawler-master/expander.py: 2023-04-27T14:01:25Z
+sciSen/arXiv-crawler-master/generate.py: 2023-04-27T14:01:25Z
+sciSen/arXiv-crawler-master/jsonExporter.py: 2023-04-27T14:01:25Z
+sciSen/arXiv-crawler-master/main.py: 2023-04-27T14:01:25Z
+sciSen/arXiv-crawler-master/metaCrawler.py: 2023-04-27T14:01:25Z
+sciSen/arXiv-crawler-master/statstics.py: 2023-04-27T14:01:25Z

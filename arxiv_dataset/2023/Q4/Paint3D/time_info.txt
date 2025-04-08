@@ -1,0 +1,16 @@
+controlnet/diffusers_cnet_img2img.py: 2024-05-20T09:02:46Z
+controlnet/diffusers_cnet_inpaint.py: 2024-05-20T09:02:46Z
+controlnet/diffusers_cnet_txt2img.py: 2024-05-20T09:02:46Z
+paint3d/__init__.py: 2024-04-26T12:12:43Z
+paint3d/config/train_config_paint3d.py: 2024-04-26T12:12:43Z
+paint3d/dataset.py: 2024-04-26T12:12:43Z
+paint3d/models/mesh.py: 2024-04-26T12:12:43Z
+paint3d/models/render.py: 2024-04-26T12:12:43Z
+paint3d/models/textured_mesh.py: 2024-04-26T12:12:43Z
+paint3d/post_process.py: 2024-04-26T12:12:43Z
+paint3d/trainer.py: 2024-04-26T12:12:43Z
+paint3d/utils.py: 2024-04-26T12:12:43Z
+pipeline_UV_only.py: 2024-04-26T12:12:43Z
+pipeline_paint3d_stage1.py: 2024-05-20T09:02:46Z
+pipeline_paint3d_stage2.py: 2024-05-20T09:02:46Z
+tools/convert_original_stable_diffusion_to_diffusers.py: 2024-04-26T12:12:43Z

@@ -1,0 +1,13 @@
+examples/classification.py: 2024-02-13T12:51:41Z
+examples/diacratization.py: 2024-02-13T12:51:41Z
+examples/mcq.py: 2024-02-13T12:56:07Z
+examples/pos_tagging.py: 2024-02-13T12:51:41Z
+examples/rating.py: 2024-02-13T12:51:41Z
+examples/summarization.py: 2024-02-13T12:51:41Z
+examples/translation.py: 2024-02-13T12:51:41Z
+scripts/prompt_engineering.py: 2024-02-13T12:51:41Z
+scripts/temerature_tuning.py: 2024-02-13T12:51:41Z
+scripts/tokens_calc.py: 2023-06-16T05:29:17Z
+setup.py: 2023-06-08T17:04:22Z
+taqyim/__init__.py: 2023-06-08T20:13:57Z
+taqyim/main.py: 2024-02-13T12:51:41Z

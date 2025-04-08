@@ -1,0 +1,8 @@
+Algorithm.py: 2023-08-17T14:42:01Z
+classes/__init__.py: 2021-08-30T20:53:45Z
+classes/atr.py: 2023-08-17T14:42:01Z
+classes/base.py: 2021-08-30T20:53:45Z
+classes/utils.py: 2021-08-30T20:53:45Z
+data/__init__.py: 2021-08-30T20:53:45Z
+data/utils.py: 2023-08-17T14:42:01Z
+main.py: 2023-08-17T14:42:01Z

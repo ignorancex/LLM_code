@@ -1,7 +1,7 @@
 import os
 
 # 定义年份和季度范围
-years = [str(y) for y in range(2025, 2026)]
+years = [str(y) for y in range(2020, 2026)]
 seasons = ["Q1", "Q2", "Q3", "Q4"]
 
 # 记录所有缺失或为空的文件夹
@@ -9,7 +9,7 @@ all_missing_or_empty = []
 
 for year in years:
     for season in seasons:
-        repo_base_path = f"github_code/{year}/{season}"
+        repo_base_path = f"LLM_code/arxiv_dataset/{year}/{season}"
 
         # 检查路径是否存在
         if not os.path.exists(repo_base_path):

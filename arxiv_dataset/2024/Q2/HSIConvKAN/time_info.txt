@@ -1,0 +1,10 @@
+ConvKAN.py: 2024-06-25T01:58:34Z
+ConvKAN3D.py: 2024-06-25T01:58:34Z
+LBFGS.py: 2024-06-25T01:58:34Z
+Symbolic_KANLayer.py: 2024-06-25T01:58:34Z
+efficient_kan.py: 2024-06-25T01:58:34Z
+fast_kan.py: 2024-06-25T01:58:34Z
+kan_linear.py: 2024-06-25T01:58:34Z
+original_kan.py: 2024-06-25T01:58:34Z
+spline.py: 2024-06-25T01:58:34Z
+utils.py: 2024-06-25T01:58:34Z

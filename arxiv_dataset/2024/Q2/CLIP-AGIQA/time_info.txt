@@ -1,0 +1,11 @@
+autoRun.py: 2024-07-13T08:38:43Z
+clip/__init__.py: 2024-07-13T08:30:10Z
+clip/clip.py: 2024-07-13T08:30:10Z
+clip/maple.py: 2024-07-13T08:30:10Z
+clip/model.py: 2024-07-13T08:30:10Z
+clip/simple_tokenizer.py: 2024-07-13T08:30:10Z
+datasets/dataloader.py: 2024-07-13T08:30:10Z
+datasets/datasets.py: 2024-07-13T08:30:10Z
+models/AGIQA.py: 2024-07-13T08:30:10Z
+models/__init__.py: 2024-07-13T08:30:10Z
+train_test_clip_auxiliary.py: 2024-07-24T14:11:59Z

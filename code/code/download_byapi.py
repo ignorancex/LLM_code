@@ -6,12 +6,9 @@ from tqdm import tqdm
 # GitHub Token（建议用环境变量）
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "")
 
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "")
+SEASONS = ["Q1"]
 
-SEASONS = ["Q1", "Q2", "Q3", "Q4"]
-
-YEARS = ["2021", "2022", "2023", "2024", "2025"]
-YEARS = ["2024"]
+YEARS = ["2021"]
 
 def download_file(url, save_path):
     """下载单个 .py 文件"""
@@ -108,7 +105,7 @@ def process_github_links(json_file, base_dir):
 # 主循环处理 2021~2024 年的每个季度
 for year in YEARS:
     for season in SEASONS:
-        BASE_DIR = f"github_code/{year}/{season}"
+        BASE_DIR = f"LLM_code/arxiv_dataset/{year}/{season}"
         json_path = f"target/target_{year}{season}.json"
 
         if os.path.exists(json_path):

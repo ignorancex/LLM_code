@@ -1,0 +1,16 @@
+docs/conf.py: 2020-08-10T22:21:43Z
+examples/__init__.py: 2019-06-28T17:26:36Z
+examples/features.py: 2020-06-17T21:36:24Z
+examples/gen_anomalous_traj.py: 2020-01-05T11:34:31Z
+examples/gen_confined_traj.py: 2020-01-05T11:34:31Z
+examples/gen_normaldiff_traj.py: 2020-01-05T11:34:31Z
+examples/gen_superdiff_traj.py: 2020-01-05T11:34:31Z
+setup.py: 2023-08-18T12:59:22Z
+tests/computing_features.py: 2023-03-10T16:01:21Z
+tests/computing_trajectories.py: 2020-01-03T16:23:22Z
+tests/general.py: 2023-03-09T10:47:06Z
+trajpy/__init__.py: 2019-10-16T14:28:59Z
+trajpy/auxiliar_functions.py: 2023-07-21T09:26:33Z
+trajpy/gui.py: 2023-08-18T13:20:39Z
+trajpy/traj_generator.py: 2023-07-19T21:39:20Z
+trajpy/trajpy.py: 2023-07-19T21:39:09Z

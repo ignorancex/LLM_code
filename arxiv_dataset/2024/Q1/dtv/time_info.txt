@@ -1,0 +1,6 @@
+formalize_proof.py: 2024-03-11T00:02:59Z
+formalize_statement.py: 2024-03-11T00:02:59Z
+informal_prove.py: 2024-03-11T00:02:59Z
+proof_checking_local.py: 2024-03-11T00:02:59Z
+proof_checking_processing.py: 2024-03-11T00:02:59Z
+utils.py: 2024-03-11T00:02:59Z
