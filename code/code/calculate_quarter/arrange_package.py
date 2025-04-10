@@ -2,7 +2,7 @@ import os
 import json
 
 # 定义文件夹路径和年份列表
-output_dir = 'LLM_code/output_by_quarter/by_project'
+output_dir = 'LLM_code/output_by_quarter/by_file'
 years = [2020, 2021, 2022, 2023, 2024, 2025]
 quarters = ['Q1', 'Q2', 'Q3', 'Q4']
 
@@ -57,7 +57,7 @@ sorted_data = dict(
 )
 
 # 输出合并后的结果
-with open('package_by_project.json', 'w', encoding='utf-8') as out_file:
+with open('package_by_file.json', 'w', encoding='utf-8') as out_file:
     json.dump(sorted_data, out_file, ensure_ascii=False, indent=4)
 
 print("合并并排序完成")

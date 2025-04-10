@@ -1,0 +1,107 @@
+{
+    "2021_Q4": {
+        "total_py_files": 36626,
+        "total_comments": 508165,
+        "avg_comment_density": 0.1026
+    },
+    "2022_Q4": {
+        "total_py_files": 40022,
+        "total_comments": 590324,
+        "avg_comment_density": 0.1045
+    },
+    "2022_Q2": {
+        "total_py_files": 36102,
+        "total_comments": 449096,
+        "avg_comment_density": 0.0934
+    },
+    "2023_Q2": {
+        "total_py_files": 41003,
+        "total_comments": 539399,
+        "avg_comment_density": 0.0947
+    },
+    "2024_Q1": {
+        "total_py_files": 45070,
+        "total_comments": 738569,
+        "avg_comment_density": 0.1003
+    },
+    "2023_Q4": {
+        "total_py_files": 37863,
+        "total_comments": 543240,
+        "avg_comment_density": 0.0979
+    },
+    "2022_Q3": {
+        "total_py_files": 37278,
+        "total_comments": 592636,
+        "avg_comment_density": 0.0876
+    },
+    "2022_Q1": {
+        "total_py_files": 35887,
+        "total_comments": 411041,
+        "avg_comment_density": 0.0927
+    },
+    "2023_Q1": {
+        "total_py_files": 45341,
+        "total_comments": 660499,
+        "avg_comment_density": 0.1081
+    },
+    "2023_Q3": {
+        "total_py_files": 37010,
+        "total_comments": 498926,
+        "avg_comment_density": 0.1002
+    },
+    "2024_Q3": {
+        "total_py_files": 43918,
+        "total_comments": 760910,
+        "avg_comment_density": 0.1013
+    },
+    "2024_Q2": {
+        "total_py_files": 52265,
+        "total_comments": 791219,
+        "avg_comment_density": 0.1039
+    },
+    "2021_Q3": {
+        "total_py_files": 31044,
+        "total_comments": 357406,
+        "avg_comment_density": 0.0886
+    },
+    "2024_Q4": {
+        "total_py_files": 42607,
+        "total_comments": 705369,
+        "avg_comment_density": 0.0923
+    },
+    "2025_Q1": {
+        "total_py_files": 37151,
+        "total_comments": 614704,
+        "avg_comment_density": 0.104
+    },
+    "2020_Q3": {
+        "total_py_files": 30345,
+        "total_comments": 432752,
+        "avg_comment_density": 0.0953
+    },
+    "2021_Q1": {
+        "total_py_files": 25672,
+        "total_comments": 321273,
+        "avg_comment_density": 0.0887
+    },
+    "2020_Q4": {
+        "total_py_files": 31926,
+        "total_comments": 463989,
+        "avg_comment_density": 0.1086
+    },
+    "2021_Q2": {
+        "total_py_files": 38969,
+        "total_comments": 532103,
+        "avg_comment_density": 0.1001
+    },
+    "2020_Q2": {
+        "total_py_files": 29134,
+        "total_comments": 379814,
+        "avg_comment_density": 0.0991
+    },
+    "2020_Q1": {
+        "total_py_files": 44287,
+        "total_comments": 653767,
+        "avg_comment_density": 0.1091
+    }
+}

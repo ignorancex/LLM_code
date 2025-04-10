@@ -2,7 +2,7 @@ import os
 import pandas as pd
 from tqdm import tqdm
 
-time_method = "by_project"
+time_method = "by_file_as_one"
 
 def process_file(base_name):
     base_path = f"LLM_code/output_by_quarter/{time_method}"
@@ -19,7 +19,7 @@ def process_file(base_name):
             if not os.path.isdir(quarter_path):
                 continue
 
-            file_path = os.path.join(quarter_path, f"{base_name}.csv")
+            file_path = os.path.join(quarter_path, f"{base_name}_{time_method}.csv")
             if os.path.exists(file_path):
                 df = pd.read_csv(file_path)
                 quarter_label = f"{year}Q{quarter[-1]}"  # 假设子文件夹命名为 Q1、Q2、Q3、Q4
@@ -44,7 +44,8 @@ def process_file(base_name):
     return merged_df
 
 # 处理多个 base_name
-for file in tqdm(["functions", "variables", "comments_words", "file_name_frequency"], desc="Merging files"):
+# for file in tqdm(["functions", "variables", "comments_words", "file_name_frequency"], desc="Merging files"):
+for file in tqdm(["functions", "variables"], desc="Merging files"):
     result_df = process_file(file)
     output_path = f"LLM_code/output_by_quarter/{time_method}/{file}_{time_method}.csv"
     result_df.to_csv(output_path, index=False)

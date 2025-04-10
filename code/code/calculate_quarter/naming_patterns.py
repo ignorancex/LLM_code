@@ -24,11 +24,11 @@ def get_naming_pattern(name):
     return "Other"
 
 # 通用配置
-method = "by_project"
+method = "by_mod"
 targets = ["functions", "variables", "file_name"]
 
 for target in tqdm(targets, desc="处理多个命名文件"):
-    input_file = f'LLM_code/output_by_quarter/{method}/normalized_{target}_{method}.csv'
+    input_file = f'LLM_code/output_by_quarter/{method}/normalization/normalized_{target}_{method}.csv'
     output_file = f'LLM_code/output_by_quarter/{method}/naming_patterns_{target}.csv'
 
     if not os.path.exists(input_file):

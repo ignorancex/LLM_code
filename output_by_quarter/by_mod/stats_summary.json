@@ -1,0 +1,86 @@
+{
+    "2020_Q1": {
+        "total_py_files": 44287,
+        "total_comments": 563015
+    },
+    "2020_Q2": {
+        "total_py_files": 29134,
+        "total_comments": 332382
+    },
+    "2020_Q3": {
+        "total_py_files": 30347,
+        "total_comments": 370744
+    },
+    "2020_Q4": {
+        "total_py_files": 31928,
+        "total_comments": 413531
+    },
+    "2021_Q1": {
+        "total_py_files": 25672,
+        "total_comments": 284181
+    },
+    "2021_Q2": {
+        "total_py_files": 38974,
+        "total_comments": 466682
+    },
+    "2021_Q3": {
+        "total_py_files": 31047,
+        "total_comments": 315459
+    },
+    "2021_Q4": {
+        "total_py_files": 36628,
+        "total_comments": 452735
+    },
+    "2022_Q1": {
+        "total_py_files": 35887,
+        "total_comments": 359624
+    },
+    "2022_Q2": {
+        "total_py_files": 36121,
+        "total_comments": 387477
+    },
+    "2022_Q3": {
+        "total_py_files": 37280,
+        "total_comments": 527234
+    },
+    "2022_Q4": {
+        "total_py_files": 40027,
+        "total_comments": 524387
+    },
+    "2023_Q1": {
+        "total_py_files": 45342,
+        "total_comments": 586294
+    },
+    "2023_Q2": {
+        "total_py_files": 41011,
+        "total_comments": 470393
+    },
+    "2023_Q3": {
+        "total_py_files": 37040,
+        "total_comments": 427163
+    },
+    "2023_Q4": {
+        "total_py_files": 37876,
+        "total_comments": 442758
+    },
+    "2024_Q1": {
+        "total_py_files": 45131,
+        "total_comments": 648918
+    },
+    "2024_Q2": {
+        "total_py_files": 52420,
+        "total_comments": 698266
+    },
+    "2024_Q3": {
+        "total_py_files": 44094,
+        "total_comments": 675616
+    },
+    "2024_Q4": {
+        "total_py_files": 42631,
+        "total_comments": 624749
+    },
+    "2025_Q1": {
+        "total_py_files": 37162,
+        "total_comments": 544829
+    }
+}
