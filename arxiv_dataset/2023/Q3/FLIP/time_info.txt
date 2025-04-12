@@ -143,7 +143,7 @@ third_party/version.py: 2023-09-28T18:15:24Z
 train_flip.py: 2023-09-28T18:15:24Z
 train_flip_mcl.py: 2023-09-28T18:15:24Z
 train_vit.py: 2023-09-28T18:15:24Z
-train_vitaf*.py: 2023-09-28T18:15:24Z
+train_vitaf.py: 2023-09-28T18:15:24Z
 utils/dataset.py: 2023-09-28T18:15:24Z
 utils/evaluate.py: 2023-09-28T18:15:24Z
 utils/statistic.py: 2023-09-28T18:15:24Z

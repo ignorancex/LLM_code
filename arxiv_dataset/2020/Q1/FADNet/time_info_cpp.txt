@@ -1,0 +1,8 @@
+layers_package/correlation-pytorch-master/correlation-pytorch/correlation_package/src/corr.c: 2019-08-28T01:21:15Z
+layers_package/correlation-pytorch-master/correlation-pytorch/correlation_package/src/corr1d.c: 2019-08-28T01:21:15Z
+layers_package/correlation-pytorch-master/correlation-pytorch/correlation_package/src/corr1d_cuda.c: 2019-08-28T01:21:15Z
+layers_package/correlation-pytorch-master/correlation-pytorch/correlation_package/src/corr_cuda.c: 2019-08-28T01:21:15Z
+libs/GANet/src/GANet_cuda.cpp: 2019-08-28T01:21:15Z
+libs/sync_bn/src/cpu/operator.cpp: 2019-08-28T01:21:15Z
+libs/sync_bn/src/cpu/sync_bn.cpp: 2019-08-28T01:21:15Z
+libs/sync_bn/src/gpu/operator.cpp: 2019-08-28T01:21:15Z

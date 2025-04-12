@@ -1,15 +1,15 @@
 import json
 
 # 输入输出文件路径
-input_file = 'LLM_code/codeforces/source_code.json'
-output_file = 'LLM_code/codeforces/cf_source_code.json'
+input_file = 'LLM_code/codeforces/cf_code.json'
+output_file = 'LLM_code/codeforces/cf_code_clean.json'
 
 # 要搜索的敏感关键词
 sensitive_token = '353388068:AAE-N_3Ic7rD8EMTv-wgofoBscJT_ofwbG4'
 
 # 读取 JSON 数据
 with open(input_file, 'r', encoding='utf-8') as f:
-    data = json.load(f)
+    data = json.load(f, strict=False)
 
 # 过滤掉包含敏感内容的项
 filtered_data = [
