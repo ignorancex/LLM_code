@@ -7,7 +7,6 @@ import os
 
 # ===== 填写你的 GitHub Token =====
 GITHUB_TOKEN = ""
-# =================================
 
 HEADERS = {
     'Accept': 'application/vnd.github.v3+json',
