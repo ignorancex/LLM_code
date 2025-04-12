@@ -1,0 +1,6 @@
+fairseq/clib/libbleu/libbleu.cpp: 2017-10-19T15:12:41Z
+fairseq/clib/libbleu/module.cpp: 2017-09-15T00:22:43Z
+fairseq/clib/libnat/edit_dist.cpp: 2019-09-27T20:58:45Z
+fairseq/modules/dynamicconv_layer/dynamicconv_cuda.cpp: 2019-08-19T22:08:25Z
+fairseq/modules/dynamicconv_layer/dynamiconv_cpu.cpp: 2019-08-14T17:49:45Z
+fairseq/modules/lightconv_layer/lightconv_cuda.cpp: 2019-08-19T22:08:25Z

@@ -1,0 +1,7 @@
+R/nuclear_ard/src/Ji_Ye_eqs.cpp: 2025-02-22T03:56:12Z
+R/nuclear_ard/src/RcppExports.cpp: 2025-02-23T22:58:01Z
+R/nuclear_ard/src/accelerated_descent.cpp: 2025-02-22T23:26:40Z
+R/nuclear_ard/src/error_handling.cpp: 2025-02-03T18:49:19Z
+R/nuclear_ard/src/loop_wrappers.cpp: 2025-02-22T03:56:12Z
+R/nuclear_ard/src/matrix_functions.cpp: 2023-08-15T18:11:55Z
+R/nuclear_ard/src/matrix_regression.cpp: 2025-02-11T23:43:47Z
