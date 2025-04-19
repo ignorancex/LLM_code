@@ -1,0 +1,2 @@
+operators/src/segment_reduction.cpp: 2018-12-12T22:28:25Z
+operators/src/segment_reduction_cuda.cpp: 2018-12-12T22:28:25Z

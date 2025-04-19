@@ -1,0 +1,4 @@
+stylegan_code_finder/networks/stylegan2/op/fused_bias_act.cpp: 2022-01-21T14:48:20Z
+stylegan_code_finder/networks/stylegan2/op/upfirdn2d.cpp: 2022-01-21T14:48:20Z
+stylegan_code_finder/networks/swagan/op/fused_bias_act.cpp: 2022-01-21T14:48:20Z
+stylegan_code_finder/networks/swagan/op/upfirdn2d.cpp: 2022-01-21T14:48:20Z

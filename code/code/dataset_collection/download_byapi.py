@@ -2,9 +2,11 @@ import os
 import requests
 import json
 from tqdm import tqdm
+import time
 
 # === 推荐通过环境变量设置 GitHub Token ===
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "")
+
 
 # 年份和季度（可自由调整）
 YEARS = ["2020", "2021", "2022", "2023", "2024", "2025"]
@@ -108,31 +110,44 @@ def process_github_links(links, base_dir, language="python"):
 
         tqdm.write(f"Processing {repo_name} ({language})...")
         fetch_files_from_github(repo_owner, repo_name, base_dir, language=language, branch=None)
+        time.sleep(1)
 
-# === 主循环 ===
+def main():
+    # 处理 Python
+    for year in YEARS:
+        for season in SEASONS:
+            BASE_DIR = f"LLM_code/arxiv_dataset/simulation/{year}/{season}"
+            json_path_py = f"target/target_{year}{season}.json"
 
-# 处理 Python
-# for year in YEARS:
-#     for season in SEASONS:
-#         BASE_DIR = f"LLM_code/arxiv_dataset/{year}/{season}"
-#         json_path_py = f"target/target_{year}{season}.json"
+            if os.path.exists(json_path_py):
+                print(f"\n=== Processing {year} {season} (Python) ===")
+                with open(json_path_py, 'r') as f:
+                    links = json.load(f)
+                process_github_links(links, BASE_DIR, language="python")
 
-#         if os.path.exists(json_path_py):
-#             print(f"\n=== Processing {year} {season} (Python) ===")
-#             with open(json_path_py, 'r') as f:
-#                 links = json.load(f)
-#             process_github_links(links, BASE_DIR, language="python")
+    # cpp_json_path = "LLM_code/code/github_links/cpp_repos.json"
+    # if os.path.exists(cpp_json_path):
+    #     with open(cpp_json_path, "r") as f:
+    #         cpp_data = json.load(f)
 
-# 处理 C/C++
-cpp_json_path = "LLM_code/code/github_links/cpp_repos.json"
-if os.path.exists(cpp_json_path):
-    with open(cpp_json_path, "r") as f:
-        cpp_data = json.load(f)
+    #     for quarter, links in cpp_data.items():
+    #         year, season = quarter[:4], quarter[4:]
+    #         BASE_DIR = f"LLM_code/arxiv_dataset/{year}/{season}"
+    #         print(f"\n=== Processing {quarter} (C/C++) ===")
+    #         process_github_links(links, BASE_DIR, language="cpp")
+    # else:
+    #     print("cpp_repos.json not found.")
 
-    for quarter, links in cpp_data.items():
-        year, season = quarter[:4], quarter[4:]
-        BASE_DIR = f"LLM_code/arxiv_dataset/{year}/{season}"
-        print(f"\n=== Processing {quarter} (C/C++) ===")
-        process_github_links(links, BASE_DIR, language="cpp")
-else:
-    print("cpp_repos.json not found.")
+
+# ✅ 加上自动重启保护机制
+if __name__ == "__main__":
+    while True:
+        try:
+            main()
+            print("✅ Finished without error.")
+            break  # 正常完成就退出
+        except Exception as e:
+            print(f"[⚠️ ERROR] Unexpected crash: {e}")
+            print("🔁 Restarting in 5 seconds...")
+            time.sleep(5)
+            continue

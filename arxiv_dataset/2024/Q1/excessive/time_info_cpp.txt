@@ -1,0 +1,16 @@
+src/plane/curves.c: 2022-07-27T13:50:45Z
+src/plane/fields.c: 2022-07-27T13:50:45Z
+src/plane/genus7_plane_search.c: 2022-07-27T13:50:45Z
+src/plane/next_vec.c: 2022-07-27T13:50:45Z
+src/plane/plane_search.c: 2022-07-27T13:50:45Z
+src/plane/points.c: 2022-07-27T13:50:45Z
+src/plane/queue.c: 2022-07-27T13:50:45Z
+src/plane/utilities.c: 2022-07-27T13:50:45Z
+src/quartic/curves.c: 2022-07-27T13:50:45Z
+src/quartic/fields.c: 2022-07-27T13:50:45Z
+src/quartic/find_points.c: 2022-07-27T13:50:45Z
+src/quartic/matrix_entries.c: 2022-07-27T13:50:45Z
+src/quartic/pgl_action.c: 2022-07-27T13:50:45Z
+src/quartic/points.c: 2022-07-27T13:50:45Z
+src/quartic/quartic_search.c: 2022-07-27T13:50:45Z
+src/quartic/utilities.c: 2022-07-27T13:50:45Z

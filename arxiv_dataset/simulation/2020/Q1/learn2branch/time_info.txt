@@ -1,0 +1,13 @@
+01_generate_instances.py: 2021-12-21T18:46:07Z
+02_generate_dataset.py: 2019-10-29T20:53:24Z
+03_train_competitor.py: 2019-10-29T20:53:24Z
+03_train_gcnn.py: 2019-10-29T20:53:24Z
+04_test.py: 2019-10-29T20:53:24Z
+05_evaluate.py: 2019-10-29T20:53:24Z
+__init__.py: 2021-01-06T10:24:25Z
+models/baseline/model.py: 2019-10-29T20:53:24Z
+models/mean_convolution/model.py: 2019-10-29T20:53:24Z
+models/no_prenorm/model.py: 2019-10-29T20:53:24Z
+setup.py: 2021-01-06T10:24:25Z
+utilities.py: 2020-01-23T16:15:24Z
+utilities_tf.py: 2019-10-29T20:53:24Z

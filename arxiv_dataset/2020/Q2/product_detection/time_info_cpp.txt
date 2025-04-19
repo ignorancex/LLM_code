@@ -1,0 +1,15 @@
+mmdet/ops/affine_grid/src/affine_grid_cuda.cpp: 2020-03-02T02:42:11Z
+mmdet/ops/carafe/src/carafe_cuda.cpp: 2020-02-21T12:57:33Z
+mmdet/ops/carafe/src/carafe_naive_cuda.cpp: 2020-02-21T12:57:33Z
+mmdet/ops/dcn/src/deform_conv_cuda.cpp: 2020-03-01T07:52:55Z
+mmdet/ops/dcn/src/deform_pool_cuda.cpp: 2019-09-05T03:20:09Z
+mmdet/ops/grid_sampler/src/cpu/grid_sampler_cpu.cpp: 2020-02-29T15:43:35Z
+mmdet/ops/grid_sampler/src/cudnn/grid_sampler_cudnn.cpp: 2020-02-29T15:43:35Z
+mmdet/ops/grid_sampler/src/grid_sampler.cpp: 2020-02-29T15:43:35Z
+mmdet/ops/masked_conv/src/masked_conv2d_cuda.cpp: 2020-03-01T07:52:55Z
+mmdet/ops/nms/src/nms_cpu.cpp: 2020-02-12T15:57:06Z
+mmdet/ops/nms/src/nms_cuda.cpp: 2020-03-01T07:52:55Z
+mmdet/ops/roi_align/src/roi_align_cuda.cpp: 2020-03-14T02:59:56Z
+mmdet/ops/roi_pool/src/roi_pool_cuda.cpp: 2020-02-16T11:49:01Z
+mmdet/ops/sigmoid_focal_loss/src/sigmoid_focal_loss.cpp: 2020-02-16T11:49:01Z
+mmdet/ops/utils/src/compiling_info.cpp: 2019-12-14T13:38:19Z

@@ -1,0 +1,4 @@
+models/e4e/models/stylegan2/op/fused_bias_act.cpp: 2021-08-01T16:19:07Z
+models/e4e/models/stylegan2/op/upfirdn2d.cpp: 2021-08-01T16:19:07Z
+models/stylegan2/op/fused_bias_act.cpp: 2021-05-26T15:46:49Z
+models/stylegan2/op/upfirdn2d.cpp: 2021-05-26T15:46:49Z

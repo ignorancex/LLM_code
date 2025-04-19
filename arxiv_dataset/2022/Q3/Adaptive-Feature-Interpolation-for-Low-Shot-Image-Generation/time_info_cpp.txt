@@ -1,0 +1,2 @@
+StyleGAN2/torch_utils/ops/bias_act.cpp: 2022-07-13T18:37:09Z
+StyleGAN2/torch_utils/ops/upfirdn2d.cpp: 2022-07-13T18:37:09Z

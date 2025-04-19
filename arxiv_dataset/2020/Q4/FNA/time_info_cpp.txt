@@ -1,0 +1,3 @@
+fna_seg/furnace/legacy/sync_bn/src/cpu/operator.cpp: 2020-01-08T11:46:52Z
+fna_seg/furnace/legacy/sync_bn/src/cpu/syncbn_cpu.cpp: 2020-01-08T11:46:52Z
+fna_seg/furnace/legacy/sync_bn/src/gpu/operator.cpp: 2020-01-08T11:46:52Z

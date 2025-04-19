@@ -1,0 +1,4 @@
+lear_gist-1.2/compute_gist.c: 2021-06-18T16:27:29Z
+lear_gist-1.2/compute_gist_stream.c: 2021-06-18T16:27:29Z
+lear_gist-1.2/gist.c: 2021-06-18T16:27:29Z
+lear_gist-1.2/standalone_image.c: 2021-06-18T16:27:29Z

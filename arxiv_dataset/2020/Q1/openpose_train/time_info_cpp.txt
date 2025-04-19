@@ -1,0 +1,8 @@
+detectron_to_masks/clipper2/private/clipper.cpp: 2019-08-31T20:32:25Z
+detectron_to_masks/clipper2/private/clipper_ver6.4.2/cpp/clipper.cpp: 2019-08-31T20:32:25Z
+detectron_to_masks/clipper2/private/clipper_ver6.4.2/cpp/cpp_agg/clipper_test.cpp: 2019-08-31T20:32:25Z
+detectron_to_masks/clipper2/private/clipper_ver6.4.2/cpp/cpp_cairo/cairo_clipper.cpp: 2019-08-31T20:32:25Z
+detectron_to_masks/clipper2/private/clipper_ver6.4.2/cpp/cpp_cairo/main.cpp: 2019-08-31T20:32:25Z
+detectron_to_masks/clipper2/private/clipper_ver6.4.2/cpp/cpp_console/clipper_console_demo.cpp: 2019-08-31T20:32:25Z
+detectron_to_masks/clipper2/private/clipper_ver6.4.2/cpp/cpp_opengl/main.cpp: 2019-08-31T20:32:25Z
+detectron_to_masks/clipper2/private/mexclipper.cpp: 2019-08-31T20:32:25Z

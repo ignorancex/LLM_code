@@ -1,0 +1,8 @@
+mmdet/ops/dcn/src/deform_conv_cuda.cpp: 2019-04-14T11:28:21Z
+mmdet/ops/dcn/src/deform_pool_cuda.cpp: 2019-02-06T15:40:58Z
+mmdet/ops/masked_conv/src/masked_conv2d_cuda.cpp: 2019-05-23T12:57:11Z
+mmdet/ops/nms/src/nms_cpu.cpp: 2019-07-28T14:15:52Z
+mmdet/ops/nms/src/nms_cuda.cpp: 2019-04-07T01:18:34Z
+mmdet/ops/roi_align/src/roi_align_cuda.cpp: 2018-12-09T09:20:01Z
+mmdet/ops/roi_pool/src/roi_pool_cuda.cpp: 2018-12-09T09:20:01Z
+mmdet/ops/sigmoid_focal_loss/src/sigmoid_focal_loss.cpp: 2019-07-28T14:15:52Z

@@ -1,0 +1,11 @@
+mmdet/ops/carafe/src/carafe_cuda.cpp: 2020-11-26T15:34:25Z
+mmdet/ops/carafe/src/carafe_naive_cuda.cpp: 2020-11-26T15:34:25Z
+mmdet/ops/dcn/src/deform_conv_cuda.cpp: 2020-11-26T15:34:25Z
+mmdet/ops/dcn/src/deform_pool_cuda.cpp: 2020-11-26T15:34:25Z
+mmdet/ops/masked_conv/src/masked_conv2d_cuda.cpp: 2020-11-26T15:34:25Z
+mmdet/ops/nms/src/nms_cpu.cpp: 2020-11-26T15:34:25Z
+mmdet/ops/nms/src/nms_cuda.cpp: 2020-11-26T15:34:25Z
+mmdet/ops/roi_align/src/roi_align_cuda.cpp: 2020-11-26T15:34:25Z
+mmdet/ops/roi_pool/src/roi_pool_cuda.cpp: 2020-11-26T15:34:25Z
+mmdet/ops/sigmoid_focal_loss/src/sigmoid_focal_loss.cpp: 2020-11-26T15:34:25Z
+mmdet/ops/utils/src/compiling_info.cpp: 2020-11-26T15:34:25Z

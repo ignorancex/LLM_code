@@ -1,0 +1,3 @@
+stylegan_xl/torch_utils/ops/bias_act.cpp: 2024-03-11T06:34:49Z
+stylegan_xl/torch_utils/ops/filtered_lrelu.cpp: 2024-03-11T06:34:49Z
+stylegan_xl/torch_utils/ops/upfirdn2d.cpp: 2024-03-11T06:34:49Z

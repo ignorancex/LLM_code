@@ -1,0 +1,3 @@
+furnace/seg_opr/sync_bn/src/cpu/operator.cpp: 2021-04-08T08:51:55Z
+furnace/seg_opr/sync_bn/src/cpu/syncbn_cpu.cpp: 2021-04-08T08:51:55Z
+furnace/seg_opr/sync_bn/src/gpu/operator.cpp: 2021-04-08T08:51:55Z

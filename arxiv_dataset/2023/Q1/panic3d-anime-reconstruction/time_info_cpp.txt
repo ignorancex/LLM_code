@@ -1,0 +1,3 @@
+_train/eg3dc/src/torch_utils/ops/bias_act.cpp: 2023-03-25T00:14:43Z
+_train/eg3dc/src/torch_utils/ops/filtered_lrelu.cpp: 2023-03-25T00:14:43Z
+_train/eg3dc/src/torch_utils/ops/upfirdn2d.cpp: 2023-03-25T00:14:43Z

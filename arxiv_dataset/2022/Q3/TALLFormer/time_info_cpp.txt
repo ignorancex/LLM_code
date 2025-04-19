@@ -1,0 +1,9 @@
+AFSD/prop_pooling/boundary_max_pooling_cuda.cpp: 2023-01-03T21:24:53Z
+vedacore/ops/dcn/src/cuda/deform_conv_cuda.cpp: 2022-07-20T18:08:15Z
+vedacore/ops/dcn/src/cuda/deform_pool_cuda.cpp: 2022-07-20T18:08:15Z
+vedacore/ops/dcn/src/deform_conv_ext.cpp: 2022-07-20T18:08:15Z
+vedacore/ops/dcn/src/deform_pool_ext.cpp: 2022-07-20T18:08:15Z
+vedacore/ops/nms/src/cpu/nms_cpu.cpp: 2022-07-20T18:08:15Z
+vedacore/ops/nms/src/cuda/nms_cuda.cpp: 2022-07-20T18:08:15Z
+vedacore/ops/nms/src/nms_ext.cpp: 2022-07-20T18:08:15Z
+vedacore/ops/sigmoid_focal_loss/src/sigmoid_focal_loss_ext.cpp: 2022-07-20T18:08:15Z

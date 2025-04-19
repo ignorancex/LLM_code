@@ -1,0 +1,15 @@
+ChowCentaur/ChowCentaurPlugin.cpp: 2021-05-11T06:44:40Z
+ChowCentaur/CommonProcessors/InputBufferProcessor.cpp: 2021-05-01T17:27:39Z
+ChowCentaur/CommonProcessors/OutputStageProcessor.cpp: 2021-05-01T17:27:39Z
+ChowCentaur/CommonProcessors/ToneFilterProcessor.cpp: 2021-05-01T17:27:39Z
+ChowCentaur/GainStageML/GainStageMLProc.cpp: 2021-05-07T17:29:43Z
+ChowCentaur/GainStageML/RNNModel.cpp: 2021-05-18T19:28:32Z
+ChowCentaur/GainStageProcessors/ClippingStage.cpp: 2021-06-17T23:42:02Z
+ChowCentaur/GainStageProcessors/FeedForward2.cpp: 2021-06-17T23:42:02Z
+ChowCentaur/GainStageProcessors/GainStageProc.cpp: 2021-05-04T06:36:26Z
+ChowCentaur/GainStageProcessors/PreAmpStage.cpp: 2021-06-17T23:42:02Z
+ChowCentaur/gui/TipJar.cpp: 2021-05-11T06:44:40Z
+ChowCentaur/headless/main.cpp: 2021-03-04T04:15:28Z
+TeensyCentaur/src/GainStageML/gru.cpp: 2020-05-29T07:41:15Z
+TeensyCentaur/src/main.cpp: 2020-05-30T06:59:34Z
+modules/toms917/toms917.cpp: 2021-03-11T06:50:50Z

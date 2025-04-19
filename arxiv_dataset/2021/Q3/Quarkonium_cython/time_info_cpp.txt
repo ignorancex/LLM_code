@@ -1,0 +1,11 @@
+HQ-Evo/src/Langevin.cpp: 2017-10-10T21:31:32Z
+HQ-Evo/src/TLorentz.cpp: 2017-10-10T21:31:32Z
+HQ-Evo/src/Xsection.cpp: 2018-03-26T18:34:48Z
+HQ-Evo/src/main.cpp: 2017-10-10T21:31:32Z
+HQ-Evo/src/matrix_elements.cpp: 2018-04-16T17:18:25Z
+HQ-Evo/src/qhat.cpp: 2017-10-10T21:31:32Z
+HQ-Evo/src/qhat_Xsection.cpp: 2017-10-10T21:31:32Z
+HQ-Evo/src/qhat_matrix_elements.cpp: 2017-10-10T21:31:32Z
+HQ-Evo/src/rates.cpp: 2018-02-26T22:10:06Z
+HQ-Evo/src/sample_methods.cpp: 2018-10-16T19:58:46Z
+HQ-Evo/src/utility.cpp: 2017-10-10T21:31:32Z

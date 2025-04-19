@@ -1,0 +1,3 @@
+layers/batchnorm/src/batchnorm.c: 2020-06-25T00:11:38Z
+layers/batchnorm/src/blas.c: 2020-06-25T00:11:38Z
+layers/batchnorm/src/cuda.c: 2020-06-25T00:11:38Z

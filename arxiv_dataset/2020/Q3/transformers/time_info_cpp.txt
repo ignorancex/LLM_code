@@ -1,0 +1,5 @@
+src/transformers/kernels/deta/cpu/ms_deform_attn_cpu.cpp: 2024-02-15T12:09:39Z
+src/transformers/kernels/deta/vision.cpp: 2024-02-15T12:09:39Z
+src/transformers/kernels/mra/torch_extension.cpp: 2023-07-10T09:50:43Z
+src/transformers/kernels/rwkv/wkv_op.cpp: 2023-05-09T17:04:10Z
+src/transformers/kernels/yoso/fast_lsh_cumulation_torch.cpp: 2023-05-18T18:14:43Z

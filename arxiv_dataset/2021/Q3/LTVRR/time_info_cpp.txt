@@ -1,0 +1,8 @@
+lib/model/nms/src/nms_cuda.c: 2019-04-24T15:06:58Z
+lib/model/roi_align/src/roi_align_cuda.c: 2019-03-29T19:06:19Z
+lib/model/roi_align/src/roi_align_rel_cuda.c: 2019-03-29T19:06:19Z
+lib/model/roi_crop/src/roi_crop.c: 2019-04-24T15:11:47Z
+lib/model/roi_crop/src/roi_crop_cuda.c: 2019-04-24T15:12:42Z
+lib/model/roi_pooling/src/roi_pooling.c: 2019-03-29T19:06:19Z
+lib/model/roi_pooling/src/roi_pooling_cuda.c: 2019-03-29T19:06:19Z
+lib/modeling/roi_xfrom/roi_align/src/roi_align_cuda.c: 2019-03-29T19:06:19Z

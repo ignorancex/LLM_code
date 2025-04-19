@@ -1,0 +1,47 @@
+Action Recognition & Anticipation/Backbone Supported model/HMDB_test.py: Unknown
+Action Recognition & Anticipation/Backbone Supported model/HMDB_train.py: Unknown
+Action Recognition & Anticipation/Backbone Supported model/UCF101_test.py: Unknown
+Action Recognition & Anticipation/Backbone Supported model/UCF101_train.py: Unknown
+Action Recognition & Anticipation/Backbone Supported model/functional.py: Unknown
+Action Recognition & Anticipation/Backbone Supported model/network.py: Unknown
+Action Recognition & Anticipation/Backbone Supported model/sync_batchnorm/__init__.py: Unknown
+Action Recognition & Anticipation/Backbone Supported model/sync_batchnorm/batchnorm.py: Unknown
+Action Recognition & Anticipation/Backbone Supported model/sync_batchnorm/comm.py: Unknown
+Action Recognition & Anticipation/Backbone Supported model/sync_batchnorm/replicate.py: Unknown
+Action Recognition & Anticipation/Backbone Supported model/sync_batchnorm/unittest.py: Unknown
+Action Recognition & Anticipation/Backbone Supported model/test.py: Unknown
+Action Recognition & Anticipation/Backbone Supported model/train.py: Unknown
+Action Recognition & Anticipation/Backbone Supported model/transform.py: Unknown
+Action Recognition & Anticipation/Backbone Supported model/utils.py: Unknown
+Action Recognition & Anticipation/Standalone model/Kinetic_train_dataset.py: Unknown
+Action Recognition & Anticipation/Standalone model/Kinetics_test_dataset.py: Unknown
+Action Recognition & Anticipation/Standalone model/functional.py: Unknown
+Action Recognition & Anticipation/Standalone model/main.py: Unknown
+Action Recognition & Anticipation/Standalone model/network.py: Unknown
+Action Recognition & Anticipation/Standalone model/sync_batchnorm/__init__.py: Unknown
+Action Recognition & Anticipation/Standalone model/sync_batchnorm/batchnorm.py: Unknown
+Action Recognition & Anticipation/Standalone model/sync_batchnorm/comm.py: Unknown
+Action Recognition & Anticipation/Standalone model/sync_batchnorm/replicate.py: Unknown
+Action Recognition & Anticipation/Standalone model/sync_batchnorm/unittest.py: Unknown
+Action Recognition & Anticipation/Standalone model/transform.py: Unknown
+Action Recognition & Anticipation/Standalone model/utils.py: Unknown
+Annotation Software/main.py: 2019-12-21T16:20:29Z
+Annotation Software/model.py: 2019-12-21T16:20:29Z
+Annotation Software/run.py: 2019-12-21T16:20:29Z
+Annotation Software/utils/convlstm.py: 2019-12-21T16:20:29Z
+Annotation Software/utils/rbm.py: 2019-12-21T16:20:29Z
+Auxiliary Annotation/data.py: 2019-12-21T16:20:29Z
+Auxiliary Annotation/generate_data.py: 2019-12-21T16:20:29Z
+Auxiliary Annotation/model.py: 2019-12-21T16:20:29Z
+Auxiliary Annotation/test.py: 2019-12-21T16:20:29Z
+Auxiliary Annotation/train.py: 2019-12-21T16:20:29Z
+Auxiliary Annotation/utils/__init__.py: 2019-12-21T16:20:29Z
+Auxiliary Annotation/utils/convlstm.py: 2019-12-21T16:20:29Z
+Auxiliary Annotation/utils/rbm.py: 2019-12-21T16:20:29Z
+Video Future Prediction/src/RBMCell.py: 2019-12-21T16:20:29Z
+Video Future Prediction/src/mcnet.py: 2019-12-21T16:20:29Z
+Video Future Prediction/src/mcnet_raw.py: 2019-12-21T16:20:29Z
+Video Future Prediction/src/ops.py: 2019-12-21T16:20:29Z
+Video Future Prediction/src/test_kth.py: 2019-12-21T16:20:29Z
+Video Future Prediction/src/train_kth_multigpu.py: 2019-12-21T16:20:29Z
+Video Future Prediction/src/utils.py: 2019-12-21T16:20:29Z

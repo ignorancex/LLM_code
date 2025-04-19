@@ -1,0 +1,124 @@
+src/GSound/gsound/gsDebugCache.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/gsFrequencyBandResponse.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/gsFrequencyBands.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/gsFrequencyResponse.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/gsImpulseResponse.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/gsMeshRequest.cpp: 2022-02-03T00:48:13Z
+src/GSound/gsound/gsPropagationRequest.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/gsRenderRequest.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/gsSampledIR.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/gsSoundDetector.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/gsSoundDirectivity.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/gsSoundListener.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/gsSoundListenerIR.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/gsSoundListenerRenderer.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/gsSoundMaterial.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/gsSoundMedium.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/gsSoundMesh.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/gsSoundMeshPreprocessor.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/gsSoundObject.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/gsSoundPropagationSystem.cpp: 2020-03-01T00:02:02Z
+src/GSound/gsound/gsSoundPropagator.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/gsSoundScene.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/gsSoundSceneIR.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/gsSoundSource.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/gsSoundSourceIR.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/gsSoundStatistics.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/gsSourceSoundBuffer.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/gsoundC.cpp: 2020-03-01T21:14:44Z
+src/GSound/gsound/internal/gsDiffusePathCache.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/internal/gsHRTFFilter.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/internal/gsIRCache.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/internal/gsPropagationData.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/internal/gsSoundBandDirectivity.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/internal/gsSoundPathCache.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/internal/gsSoundSourceClusterer.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/internal/gsUTDFrequencyResponse.cpp: 2020-02-21T22:10:24Z
+src/GSound/gsound/internal/gsVisibilityCache.cpp: 2020-02-21T22:10:24Z
+src/Om/Om BVH/om/bvh/omAABBTree4.cpp: 2020-02-21T22:10:24Z
+src/Om/Om BVH/om/bvh/omBVHBVH.cpp: 2020-02-21T22:10:24Z
+src/Om/Om BVH/om/bvh/omBVHGeometry.cpp: 2020-02-21T22:10:24Z
+src/Om/Om BVH/om/bvh/omBVHInstance.cpp: 2020-02-21T22:10:24Z
+src/Om/Om BVH/om/bvh/omBVHScene.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/data/omData.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/data/omDataBuffer.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/data/omDataStore.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/data/omHashCode.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/data/omString.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/data/omStringBuffer.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/data/omStringIterator.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/fs/omDirectory.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/fs/omFile.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/fs/omPath.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/io/omBinaryDecoder.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/io/omBinaryEncoder.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/io/omDataInputStream.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/io/omFileReader.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/io/omFileWriter.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/io/omLog.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/io/omPrintStream.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/io/omStringInputStream.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/math/omArrayMath.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/math/omFFT.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/math/omInterpolation.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/math/omPrimes.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/math/omSIMDFlags.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/math/omScalarType.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/system/omCPU.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/threads/omAtomics.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/threads/omMutex.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/threads/omSemaphore.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/threads/omSignal.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/threads/omThreadBase_POSIX.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/threads/omThreadBase_Win32.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/threads/omThreadPool.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/threads/omThreadPriority.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/time/omTime.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Framework/om/time/omTimer.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Resources/om/resources/omResourceFormat.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Resources/om/resources/omResourceManager.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Resources/om/resources/omResourceMode.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Resources/om/resources/omResourceModule.cpp: 2020-03-01T00:02:02Z
+src/Om/Om Resources/om/resources/omResourceSet.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Resources/om/resources/omResourceType.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/base/omSound.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/base/omSoundBuffer.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/base/omSoundCallbackStream.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/base/omSoundChannelLayout.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/base/omSoundChannelLayoutType.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/base/omSoundChannelMixMatrix.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/base/omSoundChannelType.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/base/omSoundDataInputStream.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/base/omSoundDirectionalIR.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/base/omSoundFormat.cpp: 2020-03-01T21:14:44Z
+src/Om/Om Sound/om/sound/base/omSoundFrame.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/base/omSoundFrequencyBands.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/base/omSoundFrequencyData.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/base/omSoundInputStream.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/base/omSoundMIDIBuffer.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/base/omSoundMIDIMessage.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/base/omSoundOutputStream.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/base/omSoundSampleType.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/base/omSoundSharedBufferPool.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/filters/omSoundCompressor.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/filters/omSoundCutofffilter.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/filters/omSoundFilter.cpp: 2020-03-01T00:02:02Z
+src/Om/Om Sound/om/sound/filters/omSoundFilterCategory.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/filters/omSoundFilterParameter.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/filters/omSoundFilterParameterCurve.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/filters/omSoundFilterParameterType.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/filters/omSoundFilterParameterUnits.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/filters/omSoundFilterParameterValue.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/filters/omSoundFilterVersion.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/filters/omSoundHDRFilter.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/filters/omSoundLimiter.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/filters/omSoundPlayer.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/filters/omSoundResampler.cpp: 2020-02-21T22:10:24Z
+src/Om/Om Sound/om/sound/filters/omSoundReverbFilter.cpp: 2020-02-21T22:10:24Z
+src/pygsound/src/Context.cpp: 2022-01-31T23:09:40Z
+src/pygsound/src/Listener.cpp: 2021-12-01T19:19:35Z
+src/pygsound/src/MicrophoneArrays.cpp: 2020-02-21T22:10:24Z
+src/pygsound/src/Scene.cpp: 2022-02-03T21:42:52Z
+src/pygsound/src/SoundMesh.cpp: 2022-02-03T00:48:13Z
+src/pygsound/src/SoundSource.cpp: 2020-02-21T22:10:24Z
+src/pygsound/src/module.cpp: 2022-02-03T21:42:52Z

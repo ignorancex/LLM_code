@@ -1,0 +1,12 @@
+mmcv_custom/mmcv/ops/csrc/pytorch/cpu/nms.cpp: 2022-12-25T12:32:51Z
+mmcv_custom/mmcv/ops/csrc/pytorch/nms.cpp: 2022-12-25T12:32:51Z
+mmcv_custom/mmcv/ops/csrc/pytorch/pybind.cpp: 2022-12-25T12:32:51Z
+mmdet/ops/dcn/src/deform_conv_cuda.cpp: 2020-07-30T19:18:16Z
+mmdet/ops/dcn/src/deform_pool_cuda.cpp: 2020-07-30T19:18:16Z
+mmdet/ops/masked_conv/src/masked_conv2d_cuda.cpp: 2020-07-30T19:18:16Z
+mmdet/ops/nms/src/nms_cpu.cpp: 2020-07-30T19:18:16Z
+mmdet/ops/nms/src/nms_cuda.cpp: 2020-07-30T19:18:16Z
+mmdet/ops/roi_align/src/roi_align_cuda.cpp: 2020-07-30T19:18:16Z
+mmdet/ops/roi_pool/src/roi_pool_cuda.cpp: 2020-07-30T19:18:16Z
+mmdet/ops/sigmoid_focal_loss/src/sigmoid_focal_loss.cpp: 2020-07-30T19:18:16Z
+mmdet/ops/utils/src/compiling_info.cpp: 2020-07-30T19:18:16Z

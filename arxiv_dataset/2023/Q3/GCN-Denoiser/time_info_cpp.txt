@@ -1,0 +1,9 @@
+src/GCNDenoiser/GCNDenoiser/DataManager.cpp: 2020-05-24T16:19:32Z
+src/GCNDenoiser/GCNDenoiser/GCNDenoiser.cpp: 2020-05-25T12:13:53Z
+src/GCNDenoiser/GCNDenoiser/MeshDenoisingBase.cpp: 2020-05-25T12:30:19Z
+src/GCNDenoiser/GCNDenoiser/MeshNormalFiltering.cpp: 2020-05-25T12:13:53Z
+src/GCNDenoiser/GCNDenoiser/MeshViewer.cpp: 2020-05-26T08:28:02Z
+src/GCNDenoiser/GCNDenoiser/Noise.cpp: 2020-05-24T16:19:32Z
+src/GCNDenoiser/GCNDenoiser/PatchData.cpp: 2020-05-24T16:19:32Z
+src/GCNDenoiser/GCNDenoiser/Shader.cpp: 2020-05-24T16:19:32Z
+src/GCNDenoiser/GCNDenoiser/main.cpp: 2020-05-23T07:34:22Z

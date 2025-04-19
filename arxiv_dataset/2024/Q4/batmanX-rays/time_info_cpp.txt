@@ -1,0 +1,10 @@
+batman-edited/c_src/_custom_ld.c: 2024-09-10T21:15:38Z
+batman-edited/c_src/_eclipse.c: 2024-09-10T21:15:38Z
+batman-edited/c_src/_exponential_ld.c: 2024-09-10T21:15:38Z
+batman-edited/c_src/_logarithmic_ld.c: 2024-09-10T21:15:38Z
+batman-edited/c_src/_mandelagol_nonlinear_ld.c: 2024-09-10T21:15:38Z
+batman-edited/c_src/_nonlinear_ld.c: 2024-09-10T21:15:38Z
+batman-edited/c_src/_power2_ld.c: 2024-09-10T21:15:38Z
+batman-edited/c_src/_quadratic_ld.c: 2024-09-10T21:15:38Z
+batman-edited/c_src/_rsky.c: 2024-09-10T21:15:38Z
+batman-edited/c_src/_uniform_ld.c: 2024-09-10T21:15:38Z
