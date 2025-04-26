@@ -1,0 +1,8 @@
+src/exe/bam-readcount/bamreadcount.cpp: 2022-01-18T15:39:29Z
+src/lib/bamrc/BasicStat.cpp: 2016-09-03T04:44:03Z
+src/lib/bamrc/IndelQueue.cpp: 2015-12-17T22:18:41Z
+src/lib/bamrc/IndelQueueEntry.cpp: 2015-12-17T22:18:41Z
+test/lib/bamrc/TestAuxFields.cpp: 2013-04-19T21:33:02Z
+test/lib/bamrc/TestIndelQueue.cpp: 2015-12-20T05:40:05Z
+test/lib/bamrc/TestIndelQueueEntry.cpp: 2015-12-20T05:40:05Z
+test/lib/bamrc/TestReadWarnings.cpp: 2013-05-14T21:37:56Z

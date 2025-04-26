@@ -1,0 +1,4 @@
+e4e/models/stylegan2/op/upfirdn2d.cpp: 2021-12-17T17:46:39Z
+e4e/models/stylegan2/op/fused_bias_act.cpp: 2021-12-17T17:46:39Z
+op/upfirdn2d.cpp: 2021-12-17T17:41:09Z
+op/fused_bias_act.cpp: Unknown

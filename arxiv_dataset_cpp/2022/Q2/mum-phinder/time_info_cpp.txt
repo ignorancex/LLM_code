@@ -1,0 +1,14 @@
+src/compress_dictionary.cpp: 2022-04-29T14:44:42Z
+src/build_mum-phinder.cpp: 2022-04-29T15:11:19Z
+test/src/matching_statistics.cpp: 2020-11-02T07:35:23Z
+test/src/bwt2rlbwt.cpp: 2020-11-03T02:18:42Z
+test/src/patternstats.cpp: 2020-11-08T01:43:02Z
+src/mum-phinder.cpp: 2022-04-29T15:11:19Z
+test/src/align.cpp: 2020-11-02T08:00:59Z
+src/rlbwt.cpp: 2022-04-29T14:44:42Z
+test/src/rle_matching_statistics.cpp: 2020-11-08T01:43:02Z
+test/src/patternstats_binary.cpp: 2020-11-08T01:43:02Z
+test/src/rlebwt_ms_build.cpp: 2020-11-02T08:00:44Z
+test/src/phoni.cpp: 2022-02-12T17:03:37Z
+test/src/shapedslp_test.cpp: 2020-09-18T20:38:07Z
+test/src/sample_lcp.cpp: 2022-02-13T14:50:22Z

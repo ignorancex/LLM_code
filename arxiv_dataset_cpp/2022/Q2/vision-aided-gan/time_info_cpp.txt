@@ -1,0 +1,5 @@
+stylegan3/torch_utils/ops/upfirdn2d.cpp: 2022-05-04T21:13:28Z
+stylegan3/torch_utils/ops/filtered_lrelu.cpp: 2022-05-04T21:13:28Z
+stylegan3/torch_utils/ops/bias_act.cpp: 2022-05-04T21:13:28Z
+stylegan2/torch_utils/ops/bias_act.cpp: 2022-05-04T21:13:28Z
+stylegan2/torch_utils/ops/upfirdn2d.cpp: 2022-05-04T21:13:28Z

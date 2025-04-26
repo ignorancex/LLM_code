@@ -1,0 +1,14 @@
+test/DeviceParameters.py: 2021-11-22T01:34:14Z
+test/Functions.py: 2021-11-22T01:34:14Z
+test/LFDataset.py: 2021-11-22T01:34:14Z
+test/MainNet.py: 2021-11-22T01:34:14Z
+test/MlpNet.py: 2021-11-22T01:34:14Z
+test/RefNet.py: 2021-11-22T01:34:14Z
+test/lfr_test.py: 2021-11-22T01:34:14Z
+train/DeviceParameters.py: 2021-11-22T01:34:14Z
+train/Functions.py: 2021-11-22T01:34:14Z
+train/LFDataset.py: 2021-11-22T01:34:14Z
+train/MainNet.py: 2021-11-22T01:34:14Z
+train/MlpNet.py: 2021-11-22T02:50:01Z
+train/RefNet.py: 2021-11-22T02:50:01Z
+train/lfr_train.py: 2021-11-22T01:34:14Z

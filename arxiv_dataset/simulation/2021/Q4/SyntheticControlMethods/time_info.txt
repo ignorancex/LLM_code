@@ -1,0 +1,15 @@
+SyntheticControlMethods/__init__.py: 2020-12-07T17:48:37Z
+SyntheticControlMethods/__version__.py: 2021-10-07T09:41:38Z
+SyntheticControlMethods/main.py: 2021-10-07T09:19:46Z
+SyntheticControlMethods/optimize.py: 2021-03-18T00:19:36Z
+SyntheticControlMethods/plot.py: 2021-04-05T06:34:22Z
+SyntheticControlMethods/tables.py: 2021-04-05T06:34:22Z
+SyntheticControlMethods/validity_tests.py: 2021-04-05T06:34:22Z
+examples/basque.py: 2021-02-16T01:04:20Z
+examples/german_reunification.py: 2021-10-07T09:41:38Z
+examples/proposal_99.py: 2021-04-05T06:34:22Z
+examples/test_dataset.py: 2021-02-16T01:04:20Z
+setup.py: 2021-10-07T09:19:46Z
+tests/test_inferences.py: 2021-10-07T09:19:46Z
+tests/test_main.py: 2020-09-26T13:32:32Z
+tests/test_plot.py: 2020-09-26T13:32:32Z

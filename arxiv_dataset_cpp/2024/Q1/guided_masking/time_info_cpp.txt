@@ -1,0 +1,11 @@
+apex/csrc/flatten_unflatten.cpp: 2024-01-05T18:14:40Z
+apex/csrc/megatron/scaled_masked_softmax.cpp: 2024-01-05T18:14:40Z
+apex/csrc/megatron/fused_weight_gradient_dense.cpp: 2024-01-05T18:14:40Z
+apex/csrc/megatron/scaled_softmax.cpp: 2024-01-05T18:14:40Z
+apex/csrc/layer_norm_cuda.cpp: 2024-01-05T18:14:40Z
+apex/csrc/fused_dense.cpp: 2024-01-05T18:14:40Z
+apex/csrc/syncbn.cpp: 2024-01-05T18:14:40Z
+apex/csrc/mlp.cpp: 2024-01-05T18:14:40Z
+apex/csrc/megatron/generic_scaled_masked_softmax.cpp: 2024-01-05T18:14:40Z
+apex/csrc/amp_C_frontend.cpp: 2024-01-05T18:14:40Z
+apex/csrc/megatron/scaled_upper_triang_masked_softmax.cpp: 2024-01-05T18:14:40Z

@@ -1,0 +1,8 @@
+Training_model/output/pascal_ctx/seg_hrnet_w48_cls59_480x480_sgd_lr4e-3_wd1e-4_bs_16_epoch200/models/sync_bn/inplace_abn/src/inplace_abn.cpp: 2022-07-05T08:11:55Z
+Training_model/output/cityscapes/seg_hrnet_w48_train_512x1024_sgd_lr1e-2_wd5e-4_bs_12_epoch484/models/sync_bn/inplace_abn/src/inplace_abn.cpp: 2022-07-05T08:11:55Z
+demo/lib/models/sync_bn/inplace_abn/src/inplace_abn.cpp: 2021-10-21T13:21:06Z
+Training_model/output/pascal_ctx/seg_hrnet_w48_cls59_480x480_sgd_lr4e-3_wd1e-4_bs_16_epoch200/models/sync_bn/inplace_abn/src/inplace_abn_cpu.cpp: 2022-07-05T08:11:55Z
+demo/lib/models/sync_bn/inplace_abn/src/inplace_abn_cpu.cpp: 2021-10-21T13:21:06Z
+Training_model/lib/models/sync_bn/inplace_abn/src/inplace_abn.cpp: 2022-07-05T08:10:19Z
+Training_model/output/cityscapes/seg_hrnet_w48_train_512x1024_sgd_lr1e-2_wd5e-4_bs_12_epoch484/models/sync_bn/inplace_abn/src/inplace_abn_cpu.cpp: 2022-07-05T08:11:55Z
+Training_model/lib/models/sync_bn/inplace_abn/src/inplace_abn_cpu.cpp: 2022-07-05T08:10:19Z
