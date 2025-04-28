@@ -1,0 +1,14 @@
+experiments/ParameterizedAA/config.py: 2022-01-28T13:39:42Z
+setup.py: 2022-01-20T07:44:49Z
+experiments/PrintMSE.py: 2022-01-28T13:39:42Z
+experiments/Adam.py: 2022-01-28T13:39:42Z
+experiments/FindParams.py: 2022-01-28T13:39:42Z
+src/pqwhile/QsharpGradient.py: 2022-01-28T13:39:42Z
+src/pqwhile/OriginalParser.py: 2022-01-28T13:39:42Z
+experiments/RUSUnitary/config.py: 2022-01-30T03:30:15Z
+src/pqwhile/DifferentialParser.py: 2022-01-28T13:39:42Z
+src/pqwhile/QwhileLexer.py: 2022-01-20T07:44:49Z
+src/pqwhile/script.py: 2022-01-28T13:39:42Z
+experiments/ParameterizedAA/PrintResult.py: 2022-01-28T13:39:42Z
+experiments/QuantumWalk/config.py: 2022-01-30T03:30:15Z
+src/pqwhile/__init__.py: 2022-01-20T07:44:49Z

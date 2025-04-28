@@ -1,0 +1,13 @@
+Helpers/gammapy_ogip/__init__.py: 2024-09-23T16:25:30Z
+Helpers/dustextinction.py: 2024-09-23T16:25:30Z
+Helpers/eblabsorption.py: 2024-09-23T16:25:30Z
+Helpers/__init__.py: 2024-09-23T16:25:30Z
+Helpers/gammapy_ogip/tests/__init__.py: 2024-09-23T16:25:30Z
+Helpers/gammapy_ogip/io_ogip.py: 2024-09-23T16:25:30Z
+Helpers/gammapy_ogip/models.py: 2024-09-23T16:25:30Z
+Helpers/gammapy_ogip/ogip_spectrum_dataset.py: 2024-09-23T16:25:30Z
+Helpers/gammapy_ogip/tests/test_models.py: 2024-09-23T16:25:30Z
+Helpers/gammapy_ogip/tests/test_ogip_spectrum_dataset.py: 2024-09-23T16:25:30Z
+Helpers/utils.py: 2024-09-23T16:25:30Z
+Helpers/starcatalogs.py: 2024-09-23T16:25:30Z
+Helpers/hydrogen.py: 2024-09-23T16:25:30Z

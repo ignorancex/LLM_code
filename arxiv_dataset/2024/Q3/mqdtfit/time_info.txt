@@ -1,0 +1,14 @@
+mqdtfit_cpc/strontium.py: 2024-07-01T08:36:40Z
+strontium/driver1S0.py: 2024-09-19T14:42:06Z
+mqdtfit_cpc/mqdtfit.py: 2024-07-01T08:36:40Z
+mqdtfit_cpc/ytterbium.py: 2024-07-01T08:36:40Z
+strontium/driver1P1.py: 2024-09-19T14:42:06Z
+strontium/driver3D1.py: 2024-09-19T14:42:06Z
+strontium/driver1and3D2.py: 2024-09-19T14:42:06Z
+strontium/driver1F3.py: 2024-09-19T14:42:06Z
+strontium/driver3D3.py: 2024-09-19T14:42:06Z
+strontium/driver3P2.py: 2024-09-19T14:42:06Z
+strontium/driver3S1.py: 2024-09-19T14:42:06Z
+strontium/driver3P1.py: 2024-09-19T14:42:06Z
+strontium/driver3S1_C.py: 2024-09-19T14:42:06Z
+strontium/driver3P0.py: 2024-09-19T14:42:06Z

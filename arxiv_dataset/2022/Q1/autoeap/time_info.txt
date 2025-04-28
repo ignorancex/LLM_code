@@ -1,0 +1,10 @@
+src/k2sc_stable.py: 2021-10-05T17:07:54Z
+src/__init__.py: 2021-02-28T17:37:02Z
+setup.py: 2021-10-11T17:44:45Z
+src/version.py: 2023-06-05T10:11:19Z
+src/aperture_to_fits.py: 2021-11-07T16:16:38Z
+src/detrender.py: 2023-06-05T10:11:19Z
+src/photutils_stable.py: 2020-11-25T13:31:06Z
+src/autoeapcore.py: 2021-12-14T17:31:22Z
+tests/test_detrender.py: 2021-10-04T15:46:35Z
+tests/test_raw_lightcurve.py: 2021-10-04T15:46:35Z

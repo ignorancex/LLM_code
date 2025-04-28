@@ -1,0 +1,2 @@
+workshops/2023_09_ORNL/Mantid/example_reduce_data.py: 2024-08-22T18:41:08Z
+workshops/2023_09_ORNL/Archives/SQ_inverse/example_reduce_data.py: 2024-08-22T18:41:08Z

@@ -1,0 +1,17 @@
+democratic_detrender/cofi_AM.py: 2024-09-19T17:21:01Z
+democratic_detrender/find_flux_jumps.py: 2024-09-19T17:21:01Z
+democratic_detrender/detrend_only.py: 2024-09-19T16:40:24Z
+democratic_detrender/__init__.py: 2024-09-19T16:40:24Z
+democratic_detrender/get_lc.py: 2024-09-19T17:21:01Z
+democratic_detrender/detrend.py: 2024-09-19T17:21:01Z
+democratic_detrender/democratic_detrend.py: 2024-11-18T17:39:41Z
+democratic_detrender/gp.py: 2024-09-19T17:21:01Z
+democratic_detrender/outlier_rejection.py: 2024-09-19T16:17:17Z
+democratic_detrender/manipulate_data.py: 2024-09-19T17:21:01Z
+democratic_detrender/poly_AM.py: 2024-09-19T17:21:01Z
+democratic_detrender/helper_functions.py: 2024-09-19T16:17:17Z
+democratic_detrender/plot.py: 2024-09-19T17:21:01Z
+democratic_detrender/poly_local.py: 2024-09-19T17:21:01Z
+democratic_detrender/problem_times_only.py: 2024-09-19T16:40:24Z
+docs/conf.py: 2024-09-19T17:23:28Z
+setup.py: 2024-09-19T16:17:17Z

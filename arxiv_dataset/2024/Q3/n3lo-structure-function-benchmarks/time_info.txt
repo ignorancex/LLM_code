@@ -1,0 +1,7 @@
+plots/StructureFunctions_N1LO.py: 2024-04-22T10:42:28Z
+plots/ScaleVariations.py: 2024-04-20T16:17:53Z
+plots/StructureFunctions_N0LO.py: 2024-04-22T10:42:28Z
+plots/MatplotlibSettings.py: 2024-04-20T16:17:53Z
+plots/StructureFunctions_N2LO.py: 2024-04-22T10:42:28Z
+plots/StructureFunctions_N3LO.py: 2024-04-22T10:42:28Z
+plots/PerturbativeConvergence.py: 2024-04-22T10:42:28Z

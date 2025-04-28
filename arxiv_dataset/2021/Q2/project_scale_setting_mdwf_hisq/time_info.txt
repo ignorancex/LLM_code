@@ -1,0 +1,7 @@
+fitter/fitter.py: 2023-04-21T14:09:28Z
+scale-setting.py: 2025-03-01T21:01:14Z
+fitter/model_average.py: 2025-03-01T21:01:14Z
+fitter/special_functions.py: 2020-11-25T01:23:08Z
+fitter/fit_manager.py: 2023-06-20T19:39:47Z
+fitter/__init__.py: 2023-04-11T16:14:25Z
+fitter/data_loader.py: 2025-03-01T21:01:14Z

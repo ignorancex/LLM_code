@@ -1,0 +1,139 @@
+main article_individual experiments/src/archive/calc_regression_by_model_skl.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/archive/calc_regression_by_model.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/analysis_regressions.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/archive/Team_old.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/archive/calc_regression_slice_time.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/archive/calc_stats_vs_complete.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/analysis_random_forests.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/archive/calc_regression_by_model_stm.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/archive/calc_stats_vs_empty.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/archive/data_slice_time.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/archive/plot_collective_intelligence.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/archive/plot_joint_grids_vs_complete.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/archive/measures.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/archive/plot_graph_metrics.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/archive/plot_joint_grids_vs_empty.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/archive/plot_outcome_means.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/archive/plot_performance_means.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/archive/plot_outcome_means_model1ni.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/archive/plot_stats_all.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/archive/plot_regression_coefficients.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/archive/regressions_by_subfns.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/archive/regressions_by_subfns_all.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/archive/regressions_by_subfns_team_is_nbhd.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/archive/regressions_by_team_is_nbhd.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/archive/run_test01.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/archive/run_test03.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/archive/run_test04.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/archive/run_test02.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/calc_stats_all.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/build_tables.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/archive/run_test05.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/calc_stats_by_graph.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/classes/FnOptions.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/calc_stats_vs_baseline.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/classes/Parameters.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/classes/Points.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/classes/Objective.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/classes/Time.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/classes/Variables.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/count_confidence_intervals.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/data_slice_functions.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/classes/Team.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/explore_outcome_means.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/explore_outcome_vs_empty.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/fig_settings.py: 2023-07-10T21:47:06Z
+main article_individual experiments/src/merge_baseline.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/merge_by_graph.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/plot_conf_ints.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/plot_correlation.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/data_slice_models.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/plot_example_runs.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/plot_example_tasks_networks.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/plot_difficulties.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/plot_importances_networks.py: 2023-07-10T21:47:06Z
+main article_individual experiments/src/plot_importances_tasks.py: 2023-07-10T21:47:06Z
+main article_individual experiments/src/plot_networks_all.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/plot_importances.py: 2023-07-10T21:47:06Z
+main article_individual experiments/src/plot_objectives.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/plot_joint_grids_vs_baseline.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/plot_outcome_means_joint.py: 2023-07-10T21:47:06Z
+main article_individual experiments/src/plot_outcome_means_scatter.py: 2023-07-10T21:47:06Z
+main article_individual experiments/src/plot_random_forest_importances.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/plot_networks_decentralized.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/plot_regression_coefficients.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/plot_outcome_means_networks.py: 2023-07-10T21:47:06Z
+main article_individual experiments/src/plot_tasks_networks_difficulties.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/plot_tasks_networks_performance.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/run_Team.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/run_analysis.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/run_plots.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/run_reduction.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/run_simulation.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/test_Parameters.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/test_Objective.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/test_Team.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/util/__init__.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/util/analysis.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/util/functions.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/util/graphs.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/util/plots.py: 2023-07-10T21:47:06Z
+main article_individual experiments/src/util/variables.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/util/writing.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/util/params.py: 2023-03-01T18:40:41Z
+main article_individual experiments/src/util/data.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/analysis_random_forests.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/analysis_regressions.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/build_tables.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/calc_stats_all.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/calc_stats_by_graph.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/calc_stats_vs_baseline.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/classes/FnOptions.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/classes/Objective.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/classes/Team.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/classes/Time.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/classes/Variables.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/count_confidence_intervals.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/data_slice_functions.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/data_slice_models.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/explore_outcome_means.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/fig_settings.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/explore_outcome_vs_empty.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/classes/Parameters.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/merge_baseline.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/merge_by_graph.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/plot_conf_ints.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/plot_correlation.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/plot_example_runs.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/plot_difficulties.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/plot_importances.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/plot_importances_networks.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/plot_importances_tasks.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/plot_joint_grids_vs_baseline.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/plot_networks_all.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/plot_example_tasks_networks.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/plot_networks_decentralized.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/plot_outcome_means.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/plot_random_forest_importances.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/plot_objectives.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/plot_regression_coefficients.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/plot_tasks_networks_performance.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/plot_tasks_networks_difficulties.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/run_Team.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/run_analysis.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/run_plots.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/run_reduction.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/run_simulation.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/test_Parameters.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/test_Objective.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/test_Team.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/util/__init__.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/util/analysis.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/classes/Points.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/util/data.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/util/functions.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/util/params.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/util/plots.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/util/variables.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/util/writing.py: 2023-03-01T18:40:41Z
+supplement_team experiments/src/util/graphs.py: 2023-03-01T18:40:41Z

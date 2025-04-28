@@ -1,0 +1,9 @@
+EPGP/1Dheat/1Dheat.py: 2022-12-08T12:06:42Z
+S-EPGP/maxwell/maxwell.py: 2023-01-03T10:25:05Z
+EPGP/2Dheat/2Dheat.py: 2022-12-27T14:18:47Z
+S-EPGP/2Dwave_solve/2Dwave.py: 2023-01-03T10:25:05Z
+S-EPGP/2Dwave_learn/learn.py: 2023-01-03T13:43:45Z
+EPGP/2Dwave_comparison/compare.py: 2023-01-16T10:13:11Z
+EPGP/1Dheat/1Dheat_plots.py: 2022-12-28T13:21:59Z
+EPGP/maxwell_generate/generate.py: 2023-01-04T10:00:06Z
+S-EPGP/maxwell/maxwell_table.py: 2022-12-27T14:20:08Z

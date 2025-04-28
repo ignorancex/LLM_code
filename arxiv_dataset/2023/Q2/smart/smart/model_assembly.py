@@ -1,0 +1,2032 @@
+"""Classes for parameters, species, compartments, reactions, fluxes, and forms.
+Model class contains functions to efficiently solve a system.
+"""
+import dataclasses
+import logging
+import numbers
+from collections import OrderedDict as odict
+from dataclasses import dataclass
+from enum import Enum
+from pprint import pformat
+from textwrap import wrap
+from typing import Any, List, Optional, Union, get_origin
+import warnings
+
+import dolfin as d
+import numpy as np
+import pandas
+import pint
+import sympy as sym
+
+try:
+    import ufl_legacy as ufl
+except ImportError:
+    import ufl
+from cached_property import cached_property
+from sympy import Symbol, integrate
+from sympy.parsing.sympy_parser import parse_expr
+from tabulate import tabulate
+from pathlib import Path
+
+from . import common
+from .config import global_settings as gset
+from .config import base_format
+from .units import quantity_to_unit, unit, unit_to_quantity
+
+__all__ = [
+    "empty_sbmodel",
+    "sbmodel_from_locals",
+    "Compartment",
+    "Parameter",
+    "Reaction",
+    "Species",
+    "sbmodel_from_locals",
+    "ParameterType",
+]
+
+comm = d.MPI.comm_world
+rank = comm.rank
+size = comm.size
+root = 0
+
+logger = logging.getLogger(__name__)
+
+
+# ====================================================
+# ====================================================
+# Base Classes
+# ====================================================
+# ====================================================
+
+
+class ParameterType(str, Enum):
+    from_file = "from_file"
+    constant = "constant"
+    expression = "expression"
+    from_xdmf = "from_xdmf"
+
+
+class InvalidObjectException(Exception):
+    pass
+
+
+class ObjectContainer:
+    """Parent class containing general methods used by all "containers" """
+
+    def __init__(self, ObjectClass):  # df=None, Dict=None):
+        self.Dict = odict()
+        self._ObjectClass = ObjectClass
+        self.properties_to_print = []  # properties to print
+
+    # =====================================================================
+    # ObjectContainer - General methods
+    # ---------------------------------------------------------------------
+    # General properties/methods to emulate some dictionary-like structure
+    # + add some misc useful structure
+    # =====================================================================
+
+    @property
+    def size(self):
+        """Size of ObjectContainer"""
+        return len(self.Dict)
+
+    @property
+    def items(self):
+        """Return all items in container"""
+        return self.Dict.items()
+
+    @property
+    def values(self):
+        """Return all Dict values"""
+        return self.Dict.values()
+
+    def __iter__(self):
+        """Iteratively return Dict values"""
+        return iter(self.Dict.values())
+
+    @property
+    def keys(self):
+        """Return all Dict keys"""
+        return self.Dict.keys()
+
+    @property
+    def indices(self):
+        return enumerate(self.keys)
+
+    def to_dicts(self):
+        """Returns a list of dicts that can be used to recreate the ObjectContainer"""
+        return [obj.to_dict() for obj in self.values]
+
+    def __getitem__(self, key):
+        """syntactic sugar to allow: :code:`objcontainer[key] = objcontainer[key]`"""
+        return self.Dict[key]
+
+    def __setitem__(self, key, newvalue):
+        """syntactic sugar to allow: :code:`objcontainer[key] = objcontainer[key]`"""
+        self.Dict[key] = newvalue
+
+    def add(self, *data):
+        """Add data to object container"""
+        if len(data) == 1:
+            data = data[0]
+            # Adding in the ObjectInstance directly
+            if isinstance(data, self._ObjectClass):
+                self[data.name] = data
+            # Adding in an iterable of ObjectInstances
+            else:
+                # check if input is an iterable and if so add it item by item
+                try:
+                    iter(data)
+                except Exception:
+                    raise TypeError(
+                        "Data being added to ObjectContainer must be either the "
+                        "ObjectClass or an iterator."
+                    )
+                else:
+                    if isinstance(data, dict):
+                        for obj_name, obj in data.items():
+                            self[obj_name] = obj
+                    elif all([isinstance(obj, self._ObjectClass) for obj in data]):
+                        for obj in data:
+                            self[obj.name] = obj
+                    else:
+                        raise InvalidObjectException("Could not add data to ObjectContainer")
+        # Adding via ObjectInstance arguments
+        else:
+            obj = self._ObjectClass(*data)
+            self[obj.name] = obj
+
+    def remove(self, name):
+        """Remove data from object container"""
+        if type(name) != str:
+            raise TypeError("Argument must be the name of an object [str] to remove.")
+        self.Dict.pop(name)
+
+    def get_index(self, idx):
+        """Get an element of the object container ordered dict by referencing its index"""
+        return list(self.values)[idx]
+
+    # ==============================================================================
+    # ObjectContainer - Printing/data-formatting related methods
+    # ==============================================================================
+
+    def get_pandas_dataframe(
+        self, properties_to_print: Optional[List[str]] = None, include_idx: bool = True
+    ) -> pandas.DataFrame:
+        """
+        Create a `pandas.DataFrame` of all items in the class (defined through `self.items`)
+
+        Args:
+            properties_to_print: If set only the listed properties (by attribute name)
+              is added to the series
+            include_index: If true, add index as the first column in the data-frame.
+        """
+
+        df = pandas.DataFrame()
+        if include_idx:
+            if properties_to_print is not None and "idx" not in properties_to_print:
+                properties_to_print.insert(0, "idx")
+            for idx, (_, instance) in enumerate(self.items):
+                with warnings.catch_warnings():
+                    warnings.simplefilter("ignore")
+                    # See https://github.com/hgrecco/pint-pandas/issues/128
+                    df = pandas.concat(
+                        [
+                            df,
+                            instance.get_pandas_series(
+                                properties_to_print=properties_to_print, idx=idx
+                            )
+                            .to_frame()
+                            .T,
+                        ]
+                    )
+        else:
+            for idx, (_, instance) in enumerate(self.items):
+                with warnings.catch_warnings():
+                    warnings.simplefilter("ignore")
+                    # See https://github.com/hgrecco/pint-pandas/issues/128
+                    df = pandas.concat(
+                        [
+                            df,
+                            instance.get_pandas_series(properties_to_print=properties_to_print)
+                            .to_frame()
+                            .T,
+                        ]
+                    )
+
+        return df
+
+    def print_to_latex(
+        self,
+        properties_to_print=None,
+        max_col_width=None,
+        sig_figs=3,
+        return_df=False,
+    ):
+        """
+        Print object properties in latex format.
+        Requires latex packages :code:`\siunitx` and :code:`\longtable`
+        """
+
+        df = self.get_pandas_dataframe_formatted(
+            properties_to_print=properties_to_print,
+            max_col_width=max_col_width,
+            sig_figs=sig_figs,
+        )
+        df = df.copy(deep=True)
+
+        # Change certain df entries to best format for display
+        for name in df.index:
+            if "_" in name:
+                new_name = name.replace("_", "\_")
+                df = df.rename(index={name: new_name})
+
+        for row in range(df.shape[0]):
+            for col in range(df.shape[1]):
+                if df.columns[col] == "eqn_str":
+                    cur_str = df.iat[row, col]
+                    cur_str = "$" + cur_str + "$"
+                    cur_str = cur_str.replace("**", "^")
+                    idx = 0
+                    while idx < len(cur_str):
+                        if cur_str[idx] == "_":
+                            cur_str = cur_str[0 : idx + 1] + "{" + cur_str[idx + 1 :]
+                            isMath = False
+                            testIdx = idx + 2
+                            while not isMath:
+                                if not (cur_str[testIdx].isalnum() or cur_str[testIdx] == "_"):
+                                    if cur_str[testIdx] == "*":
+                                        cur_str = cur_str[0:testIdx] + "} " + cur_str[testIdx + 1 :]
+                                    else:
+                                        cur_str = cur_str[0:testIdx] + "}" + cur_str[testIdx:]
+                                    isMath = True
+                                else:
+                                    testIdx += 1
+                            idx = testIdx + 2
+                        elif cur_str[idx] == "*":
+                            cur_str = cur_str[0:idx] + " " + cur_str[idx + 1 :]
+                            idx += 1
+                        else:
+                            idx += 1
+                    df.iloc[row, col] = cur_str
+                elif isinstance(df.iat[row, col], str):
+                    cur_str = df.iat[row, col]
+                    if "_" in cur_str:
+                        df.iloc[row, col] = cur_str.replace("_", "\_")
+                elif isinstance(df.iat[row, col], list):
+                    cur_str = str(df.iat[row, col])
+                    cur_str = cur_str.replace("_", "\_")
+                    new_list = list(cur_str)
+                    quoteCount = 0
+                    # switch every other quote to an opening quote `
+                    for i in range(len(new_list)):
+                        if new_list[i] == "'":
+                            quoteCount += 1
+                            if np.mod(quoteCount, 2):
+                                new_list[i] = "`"
+                    cur_str = "".join(new_list)
+                    df.iloc[row, col] = cur_str
+                # Convert quantity objects to unit
+                elif isinstance(df.iat[row, col], pint.Quantity):
+                    x = df.iat[row, col]
+                    if isinstance(x.magnitude, str):
+                        df.iloc[row, col] = f"{x:s~P}"
+                    else:
+                        df.iloc[row, col] = f"${x:0.{sig_figs}e~Lx}$"
+
+        for i, col in enumerate(df.columns):
+            if hasattr(self, "print_names"):
+                df = df.rename(columns={col: self.print_names[i]})
+            else:
+                if "_" in col:
+                    df = df.rename(columns={col: col.replace("_", "\_")})
+
+        if return_df:
+            return df
+        else:
+            with pandas.option_context("max_colwidth", 1000):
+                logger.info(df.to_latex(escape=False, longtable=True, index=True))
+
+    def get_pandas_dataframe_formatted(
+        self,
+        properties_to_print: Optional[Union[str, List[str]]] = None,
+        max_col_width=50,
+        sig_figs=2,
+    ):
+        """Get formatted pandas dataframe for printing object properties."""
+        # Get the pandas dataframe with the properties we want to print
+        if properties_to_print is not None:
+            if not isinstance(properties_to_print, list):
+                properties_to_print = [properties_to_print]
+        elif hasattr(self, "properties_to_print"):
+            properties_to_print = self.properties_to_print
+        df = self.get_pandas_dataframe(properties_to_print=properties_to_print, include_idx=False)
+
+        if properties_to_print:
+            df = df[properties_to_print]
+
+        # add new lines to df entries (type str) that exceed max col width
+        if max_col_width:
+            for col in df.columns:
+                if isinstance(df[col].iloc[0], str):
+                    df[col] = df[col].apply(lambda x: "\n".join(wrap(x, max_col_width)))
+
+        # remove leading underscores from df column names (used for cached properties)
+        for col in df.columns:
+            # if isinstance(df[col][0], str) and col[0] == '_':
+            if col[0] == "_":
+                df.rename(columns={col: col[1:]}, inplace=True)
+
+        return df
+
+    def print(
+        self,
+        tablefmt="fancy_grid",
+        properties_to_print=None,
+        filename=None,
+        max_col_width=50,
+        sig_figs=2,
+    ):
+        """Print object properties to file and/or terminal."""
+
+        df = self.get_pandas_dataframe_formatted(
+            properties_to_print=properties_to_print,
+            max_col_width=max_col_width,
+            sig_figs=sig_figs,
+        )
+
+        # # Change certain df entries to best format for printing
+        for row in range(df.shape[0]):
+            for col in range(df.shape[1]):
+                if isinstance(df.iat[row, col], pint.Quantity):
+                    x = df.iat[row, col]
+                    if isinstance(x.magnitude, str):
+                        df.iloc[row, col] = f"{x:s~P}"
+                    else:
+                        df.iloc[row, col] = f"{x:0.{sig_figs}e~P}"
+
+        # print to file
+        if filename is None:
+            if hasattr(self, "print_names"):
+                logger.info(
+                    tabulate(df, headers=self.print_names, tablefmt=tablefmt),
+                    extra=dict(format_type="table"),
+                )
+            else:
+                logger.info(
+                    tabulate(df, headers="keys", tablefmt=tablefmt),
+                    extra=dict(format_type="table"),
+                )
+        else:
+            file_handler = logging.FileHandler(filename)
+            file_handler.setFormatter(logging.Formatter(base_format))
+            logger.addHandler(file_handler)
+            logger.info(tabulate(df, headers="keys", tablefmt=tablefmt))  # ,
+            logger.removeHandler(file_handler)
+
+    def __str__(self):
+        df = self.get_pandas_dataframe(properties_to_print=self.properties_to_print)
+        df = df[self.properties_to_print]
+
+        return tabulate(df, headers="keys", tablefmt="fancy_grid")
+
+
+class ObjectInstance:
+    """Parent class containing general methods used by all smart
+    "objects": i.e. parameters, species, compartments, reactions, fluxes, forms
+    """
+
+    def _check_input_type_validity(self):
+        "Check that the inputs have the same type (or are convertible) to the type hint."
+        for field in dataclasses.fields(self):
+            value = getattr(self, field.name)
+            if field.type == Any or get_origin(field.type) == Union:
+                continue
+            elif not isinstance(value, field.type):
+                try:
+                    setattr(self, field.name, field.type(value))
+                except Exception:
+                    raise TypeError(
+                        f"Object {self.name!r} type error: the attribute {field.name!r} "
+                        f"is expected to be {field.type}, got {type(value)} instead. "
+                        "Conversion to the expected type was attempted but unsuccessful."
+                    )
+
+    def _convert_pint_quantity_to_unit(self):
+        """Convert all attributes of the class that is a :code:`pint.Quantity`
+        into a :code:`pint.Unit`."""
+        # strip the magnitude and keep the units. Warn if magnitude!=1
+        for name, attr in vars(self).items():
+            if isinstance(attr, pint.Quantity):
+                setattr(self, name, quantity_to_unit(attr))
+
+    def _convert_pint_unit_to_quantity(self):
+        """Convert all attributes of the class that is a :code:`pint.Unit`
+        into a :code:`pint.Quantity`."""
+        for name, attr in vars(self).items():
+            if isinstance(attr, pint.Unit):
+                setattr(self, name, unit_to_quantity(attr))
+
+    def get_pandas_series(
+        self, properties_to_print: Optional[List[str]] = None, idx: Optional[int] = None
+    ):
+        """
+        Convert attributes of the class into a :code:`pandas.Series`.
+
+        Args:
+            properties_to_print: If set only the listed properties (by attribute name)
+                is added to the series
+            index: If set add to series
+        """
+        if properties_to_print is not None:
+            dict_to_convert = odict({"idx": idx})
+            dict_to_convert.update(
+                odict(
+                    [
+                        (key, val)
+                        for (key, val) in self.__dict__.items()
+                        if key in properties_to_print
+                    ]
+                )
+            )
+        else:
+            dict_to_convert = self.__dict__
+        return pandas.Series(dict_to_convert, name=self.name)
+
+    def print(self, properties_to_print=None):
+        """Print properties in current object instance."""
+        if rank == root:
+            logger.info("Name: " + self.name)
+            # if a custom list of properties to print is provided, only use those
+            if properties_to_print:
+                dict_to_print = dict(
+                    [
+                        (key, val)
+                        for (key, val) in self.__dict__.items()
+                        if key in properties_to_print
+                    ]
+                )
+            else:
+                dict_to_print = self.__dict__
+                logger.info(pformat(dict_to_print, width=240))
+
+
+# ==============================================================================
+# ==============================================================================
+# Classes for parameters, species, compartments, reactions, and fluxes
+# ==============================================================================
+# ==============================================================================
+
+
+class ParameterContainer(ObjectContainer):
+    def __init__(self):
+        super().__init__(Parameter)
+
+        self.properties_to_print = [
+            "_print_val",
+            "notes",
+        ]
+        self.print_names = [
+            "Value/Equation",
+            "Description",
+        ]
+
+    def print(
+        self,
+        tablefmt="fancy_grid",
+        properties_to_print=None,
+        filename=None,
+        max_col_width=50,
+    ):
+        for s in self:
+            s.print_val
+        super().print(tablefmt, self.properties_to_print, filename, max_col_width)
+
+
+@dataclass
+class Parameter(ObjectInstance):
+    """
+    Parameter objects contain information for the various parameters involved in reactions,
+    such as binding rates and dissociation constants.
+    A Parameter object that is constant over time and space is initialized by calling
+
+    .. code:: python
+
+        param_var = Parameter(
+            name, value, unit, group (opt), notes (opt),
+            use_preintegration (opt)
+            )
+
+    Args:
+        name: string naming the parameter
+        value: value of the given parameter
+        unit: units associated with given value
+        group (optional): string placing this parameter in a designated group;
+             for organizational purposes when there are multiple reaction modules
+        notes (optional): string related to this parameter
+        use_preintegration (optional): not applicable for constant parameter
+
+    To initialize a parameter object that varies over time, you can either
+    specify a string that gives the parameter as a function of time (t)
+    or load data from a .txt file.
+
+    To load from a string expression, call:
+
+    .. code:: python
+
+        param_var = Parameter.from_expression(
+            name, sym_expr, unit, preint_sym_expr (opt), group (opt),
+            notes (opt), use_preintegration (opt)
+        )
+
+    Inputs are the same as described above, except:
+
+    Args:
+        sym_expr: string specifying an expression, "t" should be the only free variable
+        preint_sym_expr (optional): string giving the integral of the expression; if not given
+                                  and use_preintegration is true, then sympy tries to integrate
+                                  using sympy.integrate()
+        use_preintegration (optional):  use preintegration in solution process if
+                                     "use_preintegration" is true (defaults to false)
+
+    To load parameter over time from a .txt file, call:
+
+    .. code:: python
+
+        param_var = Parameter.from_file(
+            name, sampling_file, unit, group (opt),
+            notes (opt), use_preintegration (opt)
+        )
+
+    Inputs are the same as described above, except:
+
+    Args:
+        sampling_file: name of text file giving parameter data in two columns (comma-separated) -
+                     first column is time (starting with t=0.0) and second is parameter values
+        use_preintegration (optional):  use preintegration in solution process if
+                                     "use_preintegration" is true (defaults to false),
+                                     uses sci.integrate.cumtrapz for numerical integration
+
+    To load a space-dependent parameter over time from an .xdmf file, call:
+
+    .. code:: python
+
+        param_var = Parameter.from_file(
+            name, xdmf_file, unit, compartment, group (opt),
+            notes (opt), use_preintegration (opt)
+        )
+        from_xdmf(
+        cls, name, xdmf_file, unit, compartment, group="", notes="", use_preintegration=False
+    ):
+
+    Inputs are the same as described above, except:
+
+    Args:
+        xdmf_file: name of the xdmf file with parameters saved at multiple time points
+                    (linked to an hdf5 file), saved using dolfin.XDMFFile.write()
+        compartment: string matching the compartment associated with the saved xdmf.
+                     In the current implementation, dimensions must match exactly.
+        use_preintegration: will always be set to false, not implemented for this case yet
+
+    """
+
+    name: str
+    value: float
+    unit: pint.Unit
+    group: str = ""
+    notes: str = ""
+    use_preintegration: bool = False
+    sym_expr: Union[str, sym.core.Expr] = ""
+    xdmf_file: Union[str, Path] = ""
+    h5_file: Union[str, Path] = ""
+    is_time_dependent: bool = False
+    is_space_dependent: bool = False
+    compartment: str = ""
+
+    def to_dict(self):
+        """Convert to a dict that can be used to recreate the object."""
+        keys_to_keep = [
+            "name",
+            "value",
+            "unit",
+            "group",
+            "notes",
+            "use_preintegration",
+            "is_time_dependent",
+            "is_space_dependent",
+            "sym_expr",
+            "preint_sym_expr",
+            "sampling_data",
+            "preint_sampling_data",
+            "type",
+            "free_symbols",
+        ]
+        return {key: self.__dict__[key] for key in keys_to_keep}
+
+    @classmethod
+    def from_dict(cls, input_dict):
+        """Read parameter object from Dict"""
+        parameter = cls(input_dict["name"], input_dict["value"], input_dict["unit"])
+        for key, val in input_dict.items():
+            setattr(parameter, key, val)
+        parameter.__post_init__()
+        return parameter
+
+    @classmethod
+    def from_file(cls, name, sampling_file, unit, group="", notes="", use_preintegration=False):
+        """ "
+        Load in a purely time-dependent scalar function from data
+        Data needs to be read in from a text file with two columns
+        where the first column is time (first entry must be 0.0)
+        and the second column is the parameter values.
+        Columns should be comma-separated.
+        """
+        # load in sampling data file
+        sampling_data = np.genfromtxt(sampling_file, dtype="float", delimiter=",")
+        logger.info(f"Loading in data for parameter {name}", extra=dict(format_type="log"))
+        if sampling_data[0, 0] != 0.0 or sampling_data.shape[1] != 2:
+            raise NotImplementedError
+        value = sampling_data[0, 1]  # initial value
+
+        parameter = cls(
+            name,
+            value,
+            unit,
+            group=group,
+            notes=notes,
+            use_preintegration=use_preintegration,
+        )
+
+        if use_preintegration:
+            # preintegrate sampling data using cumtrapz
+            from scipy.integrate import cumtrapz
+
+            int_data = cumtrapz(sampling_data[:, 1], x=sampling_data[:, 0], initial=0)
+            # concatenate time vector
+            preint_sampling_data = np.hstack(
+                sampling_data[:, 0].reshape(-1, 1), int_data.reshape(-1, 1)
+            )
+            parameter.preint_sampling_data = preint_sampling_data
+
+        # initialize instance
+        parameter.sampling_file = sampling_file
+        parameter.sampling_data = sampling_data
+        parameter.is_time_dependent = True
+        parameter.is_space_dependent = False
+        parameter.type = ParameterType.from_file
+        parameter.__post_init__()
+        logger.info(
+            f"Time-dependent parameter {name} loaded from file.",
+            extra=dict(format_type="log"),
+        )
+
+        return parameter
+
+    @classmethod
+    def from_xdmf(
+        cls, name, xdmf_file, unit, compartment, group="", notes="", use_preintegration=False
+    ):
+        """ "
+        Data read in from an xdmf/h5 file pairing
+        """
+        xdmf_file = Path(xdmf_file)
+        assert xdmf_file.is_file(), f"{str(xdmf_file)} could not be found to load parameter"
+
+        logger.debug(f"Loading initial condition for {name} from file")
+        if xdmf_file.suffix == ".xdmf" and xdmf_file.with_suffix(".h5").exists():
+            xdmfCur = str(xdmf_file)
+            h5Cur = xdmfCur[0:-4] + "h5"
+        else:
+            raise TypeError(f"{str(xdmf_file)} cannot be used for loading parameter, must be xdmf")
+
+        # load in xdmf file
+        logger.info(f"Loading in data for parameter {name}", extra=dict(format_type="log"))
+
+        if use_preintegration:
+            logger.warning(
+                f"Setting use_preintegration to False for parameter {name}."
+                "Not currently implemented for parameters loaded from xdmf"
+            )
+            use_preintegration = False
+        parameter = cls(
+            name,
+            0.0,
+            unit,
+            group=group,
+            notes=notes,
+            use_preintegration=use_preintegration,
+        )
+        parameter.compartment = compartment
+        # initialize instance
+        parameter.xdmf_file = xdmfCur
+        parameter.h5_file = h5Cur
+        parameter.is_time_dependent = True
+        parameter.is_space_dependent = True
+        parameter.type = ParameterType.from_xdmf
+        parameter.__post_init__()
+        logger.info(
+            f"Parameter {name} linked to xdmf file.",
+            extra=dict(format_type="log"),
+        )
+
+        return parameter
+
+    @classmethod
+    def from_expression(
+        cls,
+        name,
+        sym_expr,
+        unit,
+        preint_sym_expr=None,
+        group="",
+        notes="",
+        use_preintegration=False,
+        numerical_int=False,
+    ):
+        """
+        Use sympy to parse time-dependent expression for parameter
+        Note that the user can provide a symbolic expression for preintegration
+        There was previously a concern that the preintegration expression would no longer be valid
+        if the parameter appears in another time-dependent expression.
+        However, in the current version of SMART, there is no way to include a time-dependent
+        parameter in the definition of another time-dependent parameter, so this is not applicable.
+        This should be kept in mind for future versions of SMART. The associated warning was:
+        #     logger.warning(
+        #         f"Warning! Pre-integrating parameter {self.name}. Make sure that "
+        #         f"expressions {self.name} appears in have no other time-dependent variables,"
+        #         "else this preintegration expression may be invalid",
+        #         extra=dict(format_type="warning"),
+        #     )
+        """
+        # Parse the given string to create a sympy expression
+        if isinstance(sym_expr, str):
+            sym_expr = parse_expr(sym_expr)
+        x, y, z = (Symbol(f"x[{i}]") for i in range(3))
+        sym_expr = sym_expr.subs({"x": x, "y": y, "z": z})
+
+        # Check if expression is time/space dependent
+        free_symbols = [str(x) for x in sym_expr.free_symbols]
+        is_time_dependent = "t" in free_symbols
+        is_space_dependent = not {"x[0]", "x[1]", "x[2]"}.isdisjoint(set(free_symbols))
+        # For now, parameters can only be defined in terms of time/space
+        if not {"x[0]", "x[1]", "x[2]", "t"}.issuperset(free_symbols):
+            raise NotImplementedError
+
+        if is_time_dependent and not is_space_dependent:
+            value = float(sym_expr.subs({"t": 0.0}))
+        else:
+            dolfin_expression = d.Expression(sym.printing.ccode(sym_expr), t=0.0, degree=3)
+            value = float(sym_expr.subs({"t": 0.0, "x[0]": 0.0, "x[1]": 0.0, "x[2]": 0.0}))
+
+        parameter = cls(
+            name,
+            value,
+            unit,
+            group=group,
+            notes=notes,
+            use_preintegration=use_preintegration,
+        )
+
+        if use_preintegration:
+            if preint_sym_expr:
+                if isinstance(preint_sym_expr, str):
+                    preint_sym_expr = parse_expr(preint_sym_expr)
+                preint_sym_expr = preint_sym_expr.subs({"x": x, "y": y, "z": z})
+            elif numerical_int:
+                preint_sym_expr = None
+                parameter.int_vec = [0.0]
+            else:
+                # try to integrate
+                t = Symbol("t")
+                preint_sym_expr = integrate(sym_expr, t)
+            parameter.preint_sym_expr = preint_sym_expr
+
+        parameter.free_symbols = free_symbols
+        parameter.sym_expr = sym_expr
+        parameter.is_time_dependent = is_time_dependent
+        parameter.is_space_dependent = is_space_dependent
+        if is_space_dependent:
+            parameter.dolfin_expression = dolfin_expression
+
+        parameter.type = ParameterType.expression
+        parameter.__post_init__()
+        logger.debug(
+            f"Time-dependent parameter {name} evaluated from expression.",
+            extra=dict(format_type="log"),
+        )
+
+        return parameter
+
+    def __post_init__(self):
+        if not hasattr(self, "is_time_dependent"):
+            self.is_time_dependent = False
+        if not hasattr(self, "is_space_dependent"):
+            self.is_space_dependent = False
+
+        attributes = [
+            "sym_expr",
+            "preint_sym_expr",
+            "sampling_file",
+            "sampling_data",
+            "preint_sampling_data",
+            "free_symbols",
+        ]
+        for attribute in attributes:
+            if not hasattr(self, attribute):
+                setattr(self, attribute, None)
+
+        if not hasattr(self, "type"):
+            self.type = ParameterType.constant
+
+        self._convert_pint_quantity_to_unit()
+        self._check_input_type_validity()
+        self._convert_pint_unit_to_quantity()
+        self.check_validity()
+        self.value_vector = np.array([0, self.value])
+
+    @property
+    def dolfin_quantity(self):
+        if self.type == ParameterType.from_xdmf:
+            return self.dolfin_function * self.unit
+        elif hasattr(self, "dolfin_expression"):
+            return self.dolfin_expression * self.unit
+        else:
+            return self.dolfin_constant * self.unit
+
+    @property
+    def quantity(self):
+        self._quantity = self.value * self.unit
+        return self._quantity
+
+    @property
+    def print_val(self):
+        if self.type == ParameterType.from_xdmf:
+            return str(self.xdmf_file) * self.unit
+        elif self.sym_expr == "":
+            self._print_val = self.value * self.unit
+        else:
+            self._print_val = str(self.sym_expr) * self.unit
+        return self._print_val
+
+    def check_validity(self):
+        """Confirm that time-dependent parameter is defined in terms of time"""
+        if self.is_time_dependent:
+            if all(
+                [
+                    x in ("", None)
+                    for x in [
+                        self.sampling_file,
+                        self.sym_expr,
+                        self.preint_sym_expr,
+                        self.xdmf_file,
+                    ]
+                ]
+            ):
+                raise ValueError(
+                    f"Parameter {self.name} is marked as time dependent "
+                    "but is not defined in terms of time."
+                )
+
+
+class SpeciesContainer(ObjectContainer):
+    def __init__(self):
+        super().__init__(Species)
+        self.properties_to_print = [
+            "compartment_name",
+            "_Diffusion",
+            "_Initial_Concentration",
+        ]
+        self.print_names = [
+            "Compartment",
+            "D",
+            "Initial condition",
+        ]
+
+    def print(
+        self,
+        tablefmt="fancy_grid",
+        properties_to_print=None,
+        filename=None,
+        max_col_width=50,
+    ):
+        for s in self:
+            s.D_quantity
+            s.latex_name
+            s.initial_condition_quantity
+        super().print(tablefmt, self.properties_to_print, filename, max_col_width)
+
+
+@dataclass
+class Species(ObjectInstance):
+    """
+    Each Species object contains information for one state variable in the model
+    (can be a molecule, receptor open probability, membrane voltage, etc.)
+
+    Args:
+        name: string naming the species
+        conc_init: initial concentration for this species
+            (can be an expression given by a string to be parsed by sympy
+            - the only unknowns in the expression should be x, y, and z)
+        conc_units: concentration units for this species
+        D: diffusion coefficient value
+        diffusion_units: units for diffusion coefficient
+        compartment_name: each species should be assigned to a single compartment
+        group (optional): for larger models, specifies a group of species this belongs to;
+            for organizational purposes when there are multiple reaction modules
+
+    Species object is initialized by calling:
+
+    .. code:: python
+
+        species_var = Species(
+            name, initial_condition, concentration_units,
+            D, diffusion_units, compartment_name, group (opt)
+        )
+    """
+
+    name: str
+    initial_condition: Any
+    concentration_units: pint.Unit
+    D: float
+    diffusion_units: pint.Unit
+    compartment_name: str
+    group: str = ""
+
+    def to_dict(self):
+        "Convert to a dict that can be used to recreate the object."
+        keys_to_keep = [
+            "initial_condition",
+            "concentration_units",
+            "D",
+            "diffusion_units",
+            "compartment_name",
+            "group",
+        ]
+        return {key: self.__dict__[key] for key in keys_to_keep}
+
+    @classmethod
+    def from_dict(cls, input_dict):
+        """Load Species object from Dict"""
+        return cls(**input_dict)
+
+    def __post_init__(self):
+        # self.sub_species = {} # additional compartments this species
+        # may live in in addition to its primary one
+        self.is_in_a_reaction = False
+        self.is_an_added_species = False
+        self.dof_map = None
+        self.u = dict()
+        self._usplit = dict()
+        self.ut = None
+        self.v = None
+        self.has_subdomain = False
+
+        if isinstance(self.initial_condition, float):
+            pass
+        elif isinstance(self.initial_condition, int):
+            self.initial_condition = float(self.initial_condition)
+        elif isinstance(self.initial_condition, str):
+            x, y, z = (Symbol(f"x[{i}]") for i in range(3))
+            # Parse the given string to create a sympy expression
+            sym_expr = parse_expr(self.initial_condition).subs({"x": x, "y": y, "z": z})
+
+            # Check if expression is space dependent
+            free_symbols = [str(x) for x in sym_expr.free_symbols]
+            if "curv" in free_symbols:
+                # then keep as string to put in curvature dependence later after loading mesh
+                self.initial_condition_expression = self.initial_condition
+            elif not {"x[0]", "x[1]", "x[2]"}.issuperset(free_symbols):
+                raise NotImplementedError
+            else:
+                logger.debug(
+                    f"Creating dolfin object for space-dependent initial condition {self.name}",
+                    extra=dict(format_type="log"),
+                )
+                self.initial_condition_expression = d.Expression(
+                    sym.printing.ccode(sym_expr), degree=1
+                )
+        elif isinstance(self.initial_condition, Path):
+            pass  # keep as path
+        else:
+            raise TypeError("initial_condition must be a float or string or path.")
+
+        self._convert_pint_quantity_to_unit()
+        self._check_input_type_validity()
+        self._convert_pint_unit_to_quantity()
+        self.check_validity()
+
+    def check_validity(self):
+        """Species validity checks:
+
+        * Initial condition is greater than or equal to 0
+        * Diffusion coefficient is greater than or equal to 0
+        * Diffusion coefficient has units of length^2/time
+        """
+        # checking values
+        if isinstance(self.initial_condition, float) and self.initial_condition < 0.0:
+            raise ValueError(
+                f"Initial condition for species {self.name} must be greater or equal to 0."
+            )
+        if self.D < 0.0:
+            raise ValueError(
+                f"Diffusion coefficient for species {self.name} must be greater or equal to 0."
+            )
+        # checking units
+        if not self.diffusion_units.check("[length]^2/[time]"):
+            raise ValueError(
+                f"Units of diffusion coefficient for species {self.name} must "
+                "be dimensionally equivalent to [length]^2/[time]."
+            )
+
+    def restrict_to_subdomain(self, mf, mfval):
+        self.has_subdomain = True
+        self.subdomain_data = mf
+        self.subdomain_val = mfval
+
+    @cached_property
+    def vscalar(self):
+        return d.TestFunction(common.sub(self.compartment.V, 0, True))
+
+    @property
+    def dolfin_quantity(self):
+        return self._usplit["u"] * self.concentration_units
+
+    @property
+    def initial_condition_quantity(self):
+        if isinstance(self.initial_condition, Path):
+            self._Initial_Concentration = "from file"
+        else:
+            self._Initial_Concentration = self.initial_condition * self.concentration_units
+        return self._Initial_Concentration
+
+    @property
+    def D_quantity(self):
+        self._Diffusion = self.D * self.diffusion_units
+        return self._Diffusion
+
+    @property
+    def sym(self):
+        self._sym = Symbol(self.name)
+        return self._sym
+
+    @property
+    def latex_name(self):
+        # Change _ to - in name
+        name = self.name.replace("_", "-")
+        self._latex_name = sym.latex(Symbol(name))
+        return self._latex_name
+
+    @property
+    def sol(self):
+        if not hasattr(self, "u") or "u" not in self.u:
+            raise RuntimeError("Solution does not exist. Please run a simulation first")
+        return self.u["u"]
+
+
+class CompartmentContainer(ObjectContainer):
+    def __init__(self):
+        super().__init__(Compartment)
+
+        self.properties_to_print = [
+            "dimensionality",
+            "num_species",
+            "_num_vertices",
+            "_num_cells",
+            "cell_marker",
+            "_nvolume",
+        ]
+        self.print_names = [
+            "Dimensionality",
+            "Species",
+            "Vertices",
+            "Cells",
+            "Marker value",
+            "Size",
+        ]
+
+    def print(
+        self,
+        tablefmt="fancy_grid",
+        properties_to_print=None,
+        filename=None,
+        max_col_width=50,
+    ):
+        for c in self:
+            c.mesh_id
+            c.nvolume
+            c.num_vertices
+            c.num_dofs
+            c.num_dofs_local
+            c.num_cells
+        super().print(tablefmt, self.properties_to_print, filename, max_col_width)
+
+
+@dataclass
+class Compartment(ObjectInstance):
+    """Each Compartment object contains information describing a surface, volume, or edge
+    within the geometry of interest. The object is initialized by calling:
+
+        .. code:: python
+
+            compartment_var = Compartment(name, dimensionality, compartment_units, cell_marker)
+
+    Args:
+        name: string naming the compartment
+        dimensionality: topological dimensionality (e.g. 3 for volume, 2 for surface)
+        compartment_units: length units for the compartment
+        cell_marker: marker value identifying the compartment in the parent mesh
+    """
+
+    name: str
+    dimensionality: int
+    compartment_units: pint.Unit
+    cell_marker: Any
+
+    def to_dict(self):
+        "Convert to a dict that can be used to recreate the object."
+        keys_to_keep = ["name", "dimensionality", "compartment_units", "cell_marker"]
+        return {key: self.__dict__[key] for key in keys_to_keep}
+
+    @classmethod
+    def from_dict(cls, input_dict):
+        return cls(**input_dict)
+
+    def __post_init__(self):
+        if (
+            isinstance(self.cell_marker, list)
+            and not all([isinstance(m, int) for m in self.cell_marker])
+            or not isinstance(self.cell_marker, (int, list))
+        ):
+            raise TypeError("cell_marker must be an int or list of ints.")
+
+        self._convert_pint_quantity_to_unit()
+        self._check_input_type_validity()
+        self._convert_pint_unit_to_quantity()
+        self.check_validity()
+
+        # Initialize
+        self.species = odict()
+        self.u = dict()
+        self._usplit = dict()
+        self.V = None
+        self.v = None
+
+    def check_validity(self):
+        """
+        Compartment validity checks:
+
+        * Compartment dimensionality is 1,2, or 3
+        * Compartment units are of type "length"
+        """
+        if self.dimensionality not in [1, 2, 3]:
+            raise ValueError(
+                f"Compartment {self.name} has dimensionality {self.dimensionality}. "
+                "Dimensionality must be in [1,2,3]."
+            )
+        # checking units
+        if not self.compartment_units.check("[length]"):
+            raise ValueError(
+                f"Compartment {self.name} has units of {self.compartment_units} "
+                "- units must be dimensionally equivalent to [length]."
+            )
+
+    def specify_nonadjacency(self, nonadjacent_compartment_list=None):
+        """Specify if this compartment is NOT adjacent to another compartment.
+        Not necessary, but will speed-up initialization of very large problems.
+        Only needs to be specified for surface meshes as those are the
+        ones that MeshViews are built on.
+        """
+        if nonadjacent_compartment_list is None:
+            self.nonadjacent_compartment_list = []
+        self.nonadjacent_compartment_list = nonadjacent_compartment_list
+
+    @property
+    def measure_units(self):
+        return self.compartment_units**self.dimensionality
+
+    @property
+    def mesh_id(self):
+        self._mesh_id = self.mesh.id
+        return self._mesh_id
+
+    @property
+    def dolfin_mesh(self):
+        return self.mesh.dolfin_mesh
+
+    @property
+    def nvolume(self):
+        """nvolume with proper units"""
+        self._nvolume = self.mesh.nvolume * self.compartment_units**self.dimensionality
+        return self._nvolume
+
+    @property
+    def num_cells(self):
+        self._num_cells = self.mesh.num_cells
+        return self._num_cells
+
+    @property
+    def num_facets(self):
+        self._num_facets = self.mesh.num_facets
+        return self._num_facets
+
+    @property
+    def num_vertices(self):
+        self._num_vertices = self.mesh.num_vertices
+        return self._num_vertices
+
+    @property
+    def num_dofs(self):
+        """Number of degrees of freedom for this compartment"""
+        # self._num_dofs = self.num_species * self.num_vertices
+        # return self._num_dofs
+        if self.V is None:
+            self._num_dofs = 0
+        else:
+            self._num_dofs = self.V.dim()
+        return self._num_dofs
+
+    @property
+    def num_dofs_local(self):
+        """Number of degrees of freedom for this compartment, local to this process"""
+        if self.V is None:
+            self._num_dofs_local = 0
+        else:
+            self._ownership_range = self.V.dofmap().ownership_range()
+            self._num_dofs_local = self._ownership_range[1] - self._ownership_range[0]
+        return self._num_dofs_local
+
+
+class ReactionContainer(ObjectContainer):
+    def __init__(self):
+        super().__init__(Reaction)
+
+        self.properties_to_print = ["lhs", "rhs", "eqn_str", "topology"]
+        self.print_names = [
+            "Reactants",
+            "Products",
+            "Equation",
+            "Type",
+        ]
+
+    def print(
+        self,
+        tablefmt="fancy_grid",
+        properties_to_print=None,
+        filename=None,
+        max_col_width=50,
+    ):
+        super().print(tablefmt, self.properties_to_print, filename, max_col_width)
+
+
+@dataclass
+class Reaction(ObjectInstance):
+    """
+    A Reaction object contains information on a single biochemical interaction
+    between species in a single compartment or across multiple compartments.
+
+    Args:
+        name: string naming the reaction
+        lhs: list of strings specifying the reactants for this reaction
+        rhs: list of strings specifying the products for this reaction
+            NOTE: the lists "lhs" and "rhs" determine the stoichiometry of the reaction;
+            for instance, if two A's react to give one B, the reactants list would be
+            :code:`["A","A"]`, and the products list would be :code:`["B"]`
+        param_map: relationship between the parameters specified in the reaction string
+            and those given in the parameter container. By default, the reaction parameters are
+            "on" and "off" when a system obeys simple mass action.
+            If the forward rate is given by a parameter :code:`k1` and the reverse
+            rate is given by :code:`k2`, then :code:`param_map = {"on":"k1", "off":"k2"}`
+        eqn_f_str: For systems not obeying simple mass action,
+            this string specifies the forward reaction rate By default,
+            this string is "on*{all reactants multiplied together}"
+        eqn_r_str: For systems not obeying simple mass action,
+            this string specifies the reverse reaction rate
+            By default, this string is :code:`off*{all products multiplied together}`
+            reaction_type: either "custom" or "mass_action" (default is "mass_action")
+            [never a required argument]
+        species_map: same format as param_map;
+            required if the species does not appear in the lhs or rhs lists
+        explicit_restriction_to_domain: string specifying where the reaction occurs;
+            required if the reaction is not constrained by the reaction string
+            (e.g., if production occurs only at the boundary,
+            but the species being produced exists through the entire volume)
+        group: string placing this reaction in a reaction group;
+            for organizational purposes when there are multiple reaction modules
+            flux_scaling: in certain cases, a given reactant or product
+            may experience a scaled flux (for instance, if we assume that
+            some of the molecules are immediately sequestered after the reaction);
+            in this case, to signify that this flux should be rescaled, we specify
+            :code:`flux_scaling = {scaled_species: scale_factor}`,
+            where scaled_species is a string specifying the species to be scaled and
+            scale_factor is a number specifying the rescaling factor
+
+    .. note::
+
+        The Reaction object is initialized by calling:
+
+        .. code:: python
+
+            reaction_name = Reaction(
+                name, lhs, rhs, param_map,
+                eqn_f_str (opt), eqn_r_str (opt), reaction_type (opt), species_map,
+                explicit_restriction_to_domain (opt), group (opt), flux_scaling (opt)
+            )
+    """
+
+    name: str
+    lhs: list
+    rhs: list
+    param_map: dict
+    species_map: dict = dataclasses.field(default_factory=dict)
+    flux_scaling: dict = dataclasses.field(default_factory=dict)
+    reaction_type: str = "mass_action"
+    explicit_restriction_to_domain: str = ""
+    track_value: bool = False
+    eqn_f_str: str = ""
+    eqn_r_str: str = ""
+    eqn_str: str = ""
+    topology: str = ""
+    group: str = ""
+    axisymm: bool = False
+    has_subdomain: bool = False
+
+    def to_dict(self):
+        "Convert to a dict that can be used to recreate the object."
+        keys_to_keep = [
+            "name",
+            "lhs",
+            "rhs",
+            "param_map",
+            "species_map",
+            "flux_scaling",
+            "reaction_type",
+            "explicit_restriction_to_domain",
+            "track_value",
+            "eqn_f_str",
+            "eqn_r_str",
+            "eqn_str",
+            "group",
+            "axisymm",
+        ]
+        return {key: self.__dict__[key] for key in keys_to_keep}
+
+    @classmethod
+    def from_dict(cls, input_dict):
+        return cls(**input_dict)
+
+    def __post_init__(self):
+        self._check_input_type_validity()
+        self.check_validity()
+        self.fluxes = dict()
+
+        if self.eqn_f_str != "" or self.eqn_r_str != "" and self.reaction_type == "mass_action":
+            self.reaction_type = "custom"
+
+        # Finish initializing the species map
+        for species_name in set(self.lhs + self.rhs):
+            if species_name not in self.species_map:
+                self.species_map[species_name] = species_name
+
+        # Finish initializing the species flux scaling
+        for species_name in set(self.lhs + self.rhs):
+            if species_name not in self.flux_scaling:
+                self.flux_scaling[species_name] = None
+
+    def check_validity(self):
+        """
+        Reaction validity checks:
+
+        * LHS (reactants) and RHS (products) are specified as lists of strings
+        * param_map must be specified as a dict of "str:str"
+        * Species_map must be specified as a dict of "str:str"
+        * If given, flux scaling must be specified as a dict of "species:scale_factor"
+        """
+        # Type checking
+        if not all([isinstance(x, str) for x in self.lhs]):
+            raise TypeError(f"Reaction {self.name} requires a list of strings as input for lhs.")
+        if not all([isinstance(x, str) for x in self.rhs]):
+            raise TypeError(f"Reaction {self.name} requires a list of strings as input for rhs.")
+        if not all([type(k) == str and type(v) == str for (k, v) in self.param_map.items()]):
+            raise TypeError(
+                f"Reaction {self.name} requires a dict of str:str as input for param_map."
+            )
+        if self.species_map:
+            if not all(
+                [isinstance(k, str) and isinstance(v, str) for (k, v) in self.species_map.items()]
+            ):
+                raise TypeError(
+                    f"Reaction {self.name} requires a dict of str:str as input for species_map."
+                )
+        if self.flux_scaling:
+            if not all(
+                [
+                    isinstance(k, str) and isinstance(v, (numbers.Number, None))
+                    for (k, v) in self.flux_scaling.items()
+                ]
+            ):
+                raise TypeError(
+                    f"Reaction {self.name} requires a dict of "
+                    "str:number as input for flux_scaling."
+                )
+
+    def _parse_custom_reaction(self, reaction_eqn_str):
+        "Substitute parameters and species into reaction expression"
+        reaction_expr = parse_expr(reaction_eqn_str)
+        reaction_expr = reaction_expr.subs(self.param_map)
+        reaction_expr = reaction_expr.subs(self.species_map)
+        return str(reaction_expr)
+
+    def reaction_to_fluxes(self):
+        """
+        Convert reactions to fluxes -
+        in general, for each product and each reactant there are two fluxes,
+        one forward flux (dictated by :code:`self.eqn_f_str`)
+        and one reverse flux (dictated by :code:`self.eqn_r_str`),
+        stoichiometry is dictated by the number of times a given species occurs on the lhs or rhs
+        """
+        logger.debug(f"Getting fluxes for reaction {self.name}", extra=dict(format_type="log"))
+        # set of 2-tuples. (species_name, signed stoichiometry)
+        self.species_stoich = {
+            (species_name, -1 * self.lhs.count(species_name)) for species_name in self.lhs
+        }
+        self.species_stoich.update(
+            {(species_name, 1 * self.rhs.count(species_name)) for species_name in self.rhs}
+        )
+        # convert to dict
+        self.species_stoich = dict(self.species_stoich)
+        # combine with user-defined flux scaling
+        for species_name in self.species_stoich.keys():
+            if self.flux_scaling[species_name] is not None:
+                logger.debug(
+                    f"Flux {self.name}: stoichiometry/flux for species {species_name} "
+                    f"scaled by {self.flux_scaling[species_name]}",
+                    extra=dict(format_type="log"),
+                )
+                self.species_stoich[species_name] *= self.flux_scaling[species_name]
+
+        for species_name, stoich in self.species_stoich.items():
+            species = self.species[species_name]
+            if self.eqn_f_str:
+                flux_name = self.name + f" [{species_name} (f)]"
+                eqn = stoich * parse_expr(self.eqn_f_str)
+                self.fluxes.update({flux_name: Flux(flux_name, species, eqn, self, self.axisymm)})
+                self.fluxes[flux_name].has_subdomain = self.has_subdomain
+                if self.has_subdomain:  # then copy over subdomain data to flux
+                    self.fluxes[flux_name].subdomain_data = self.subdomain_data
+                    self.fluxes[flux_name].subdomain_val = self.subdomain_val
+            if self.eqn_r_str:
+                flux_name = self.name + f" [{species_name} (r)]"
+                eqn = -stoich * parse_expr(self.eqn_r_str)
+                self.fluxes.update({flux_name: Flux(flux_name, species, eqn, self, self.axisymm)})
+                if self.has_subdomain:  # then copy over subdomain data to flux
+                    self.fluxes[flux_name].subdomain_data = self.subdomain_data
+                    self.fluxes[flux_name].subdomain_val = self.subdomain_val
+
+    def restrict_to_subdomain(self, mf, mfval):
+        self.has_subdomain = True
+        self.subdomain_data = mf
+        self.subdomain_val = mfval
+
+
+class FluxContainer(ObjectContainer):
+    def __init__(self):
+        super().__init__(Flux)
+
+        self.properties_to_print = [
+            "_species_name",
+            "equation",
+            "topology",
+            "_assembled_flux",
+        ]
+
+    def print(
+        self,
+        tablefmt="fancy_grid",
+        properties_to_print=None,
+        filename=None,
+        max_col_width=50,
+    ):
+        for f in self:
+            f.assembled_flux
+            f.equation_lambda_eval("quantity")
+        super().print(tablefmt, self.properties_to_print, filename, max_col_width)
+
+
+@dataclass
+class Flux(ObjectInstance):
+    """Flux objects are created from reaction objects and should not be
+    explicitly initialized by the user.
+    Each flux object contains:
+
+    * name: string (created as reaction name + species name + (f) or (r))
+    * destination_species: flux increases or decreases this species
+    * equation: directionality * stoichiometry * reaction string
+    * reaction: reaction object this flux comes from
+    * axisymm: True if axisymmetric shape is being represented
+    """
+
+    name: str
+    destination_species: Species
+    equation: sym.Expr
+    reaction: Reaction
+    axisymm: bool = False
+    has_subdomain: bool = False
+
+    def check_validity(self):
+        "No validity checks for flux objects currently"
+        pass
+
+    def __post_init__(self):
+        # for nice printing
+        self._species_name = self.destination_species.name
+
+        self._check_input_type_validity()
+        self.check_validity()
+
+        # Add in an uninitialized unit_scale_factor
+        self.unit_scale_factor = 1.0 * unit.dimensionless
+        self.equation = self.equation * Symbol("unit_scale_factor")
+
+        # Getting additional flux properties
+        self._post_init_get_involved_species_parameters_compartments()
+        self._post_init_get_flux_topology()
+
+        # Get equation lambda expression
+        self.equation_lambda = sym.lambdify(
+            list(self.equation_variables.keys()),
+            self.equation,
+            modules=common.smart_expressions(gset["dolfin_expressions"]),
+        )
+
+        # Update equation with correct unit scale factor
+        self._post_init_get_flux_units()
+        self._post_init_get_integration_measure()
+
+        # Check if flux is linear with respect to different components
+        self.is_linear_wrt_comp = dict()
+        self._post_init_get_is_linear_comp()
+
+    def _post_init_get_involved_species_parameters_compartments(self):
+        "Find species, parameters, and compartments involved in this flux"
+        self.destination_compartment = self.destination_species.compartment
+
+        # Get the subset of species/parameters/compartments that are relevant
+        variables = {str(x) for x in self.equation.free_symbols}
+        all_params = self.reaction.parameters
+        all_species = self.reaction.species
+        self.parameters = {x: all_params[x] for x in variables.intersection(all_params.keys())}
+        self.species = {x: all_species[x] for x in variables.intersection(all_species.keys())}
+        self.compartments = self.reaction.compartments
+
+    def _post_init_get_flux_topology(self):
+        """
+        "Flux topology" refers to what types of compartments the flux occurs over
+        For instance, if a reaction occurs only in a volume, its topology is type "volume"
+        or if it involves species moving from one volume to another (across a surface),
+        it is of type "volume-surface_to_volume". Depending on the flux topology,
+        the flux will contribute to the system either as a term in the PDE or as
+        a boundary condition.
+
+        The dimensionality indicated in the left brackets below refers to how many
+        compartments are involved in the given flux (e.g. 3d = 3 compartments)
+
+        Flux topology types:
+        [1d] volume:                    PDE of u
+        [1d] surface:                   PDE of v
+        [2d] volume_to_surface:         PDE of v
+        [2d] surface_to_volume:         BC of u
+        [3d] volume-surface_to_volume:  BC of u ()
+        [3d] volume-volume_to_surface:  PDE of v ()
+        """
+        # 1 compartment flux
+        if self.reaction.topology in ["surface", "volume"]:
+            self.topology = self.reaction.topology
+            source_compartments = {self.destination_compartment.name}
+        # 2 or 3 compartment flux
+        elif self.reaction.topology in ["volume_surface", "volume_surface_volume"]:
+            source_compartments = set(self.compartments.keys()).difference(
+                {self.destination_compartment.name}
+            )
+
+            if self.reaction.topology == "volume_surface":
+                assert len(source_compartments) == 1
+                if self.destination_compartment.is_volume:
+                    self.topology = "surface_to_volume"
+                else:
+                    self.topology = "volume_to_surface"
+
+            elif self.reaction.topology == "volume_surface_volume":
+                assert len(source_compartments) == 2
+                if self.destination_compartment.is_volume:
+                    self.topology = "volume-surface_to_volume"
+                else:
+                    self.topology = "volume-volume_to_surface"
+
+        else:
+            raise AssertionError()
+
+        self.source_compartments = {
+            name: self.reaction.compartments[name] for name in source_compartments
+        }
+        self.surface = [c for c in self.compartments.values() if c.mesh.is_surface]
+        if len(self.surface) == 1:
+            self.surface = self.surface[0]
+        else:
+            self.surface = None
+
+        # Based on topology we know if it is a boundary condition or RHS term
+        if self.topology in [
+            "volume",
+            "surface",
+            "volume_to_surface",
+            "volume-volume_to_surface",
+        ]:
+            self.is_boundary_condition = False
+        elif self.topology in ["surface_to_volume", "volume-surface_to_volume"]:
+            self.is_boundary_condition = True
+        else:
+            raise AssertionError()
+
+    def _post_init_get_flux_units(self):
+        """
+        Check that flux units match expected type of units.
+        For boundary conditions, the flux units should be
+        (concentration_units / compartment_units) * diffusion_units
+        For fluxes that contribute to the PDE terms, units should be
+        (concentration_units / time)
+        If the units dimensionality does not match the expected form, an error is thrown;
+        if the dimensionality matches, but the units scaling is not 1.0
+        (e.g. if we have a flux specified as nM/s, but concentration_units are defined as uM),
+        then self.unit_scale_factor is set to the appropriate factor
+        (1000 in the example where we need to convert nM -> uM)
+        """
+        concentration_units = self.destination_species.concentration_units
+        compartment_units = self.destination_compartment.compartment_units
+        diffusion_units = self.destination_species.diffusion_units
+
+        # The expected units
+        if self.is_boundary_condition:
+            self._expected_flux_units = (
+                1.0 * (concentration_units / compartment_units) * diffusion_units
+            )  # ~D*du/dn
+        else:
+            self._expected_flux_units = 1.0 * concentration_units / unit.s  # rhs term. ~du/dt
+
+        # Use the uninitialized unit_scale_factor to get the actual units
+        # this is redundant if called by __post_init__
+        self.unit_scale_factor = 1.0 * unit.dimensionless
+        initial_equation_units = self.equation_lambda_eval("units")
+
+        # If unit dimensionality is not correct a parameter likely needs to be adjusted
+        if self._expected_flux_units.dimensionality != initial_equation_units.dimensionality:
+            logger.info(self.unit_scale_factor)
+            raise ValueError(
+                f"Flux {self.name} has wrong units (cannot be converted) "
+                f"- expected {self._expected_flux_units}, got {initial_equation_units}."
+            )
+        # Fix scaling
+        else:
+            # Define new unit_scale_factor, and update equation_units
+            # by re-evaluating the lambda expression
+            self.unit_scale_factor = (
+                initial_equation_units.to(self._expected_flux_units) / initial_equation_units
+            )
+            self.equation_units = self.equation_lambda_eval(
+                "units"
+            )  # these should now be the proper units
+
+            # should be redundant with previous checks, but just in case
+            assert self.unit_scale_factor.dimensionless
+            assert (
+                initial_equation_units * self.unit_scale_factor
+            ).units == self._expected_flux_units
+            assert self.equation_units == self._expected_flux_units
+
+            # If we already have the correct units, there is no need to update the equation
+            if self.unit_scale_factor.magnitude == 1.0:
+                return
+
+            logger.debug(
+                f"Flux {self.name} scaled by {self.unit_scale_factor}",
+                extra=dict(new_lines=[1, 0], format_type="log"),
+            )
+            logger.debug(f"Old flux units: {self.equation_units}", extra=dict(format_type="log"))
+            logger.debug(
+                f"New flux units: {self._expected_flux_units}",
+                extra=dict(new_lines=[0, 1], format_type="log"),
+            )
+            print("")
+
+    def _post_init_get_integration_measure(self):
+        """
+        Flux topologies (cf. definitions in _post_init_get_flux_topology above):
+        [1d] volume:                    PDE of u
+        [1d] surface:                   PDE of v
+        [2d] volume_to_surface:         PDE of v
+        [2d] surface_to_volume:         BC of u
+        [3d] volume-surface_to_volume:  BC of u ()
+        [3d] volume-volume_to_surface:  PDE of v ()
+
+        1d means no other compartment are involved, so the integration
+        measure is the volume of the compartment
+        2d/3d means two/three compartments are involved, so the
+        integration measure is the intersection between all compartments
+        """
+
+        if self.topology in ["volume", "surface"]:
+            self.measure = self.destination_compartment.mesh.dx
+            self.measure_units = self.destination_compartment.measure_units
+        elif self.topology in [
+            "volume_to_surface",
+            "surface_to_volume",
+            "volume-volume_to_surface",
+            "volume-surface_to_volume",
+        ]:
+            # intersection of this surface with boundary of source volume(s)
+            logger.debug(
+                "DEBUGGING INTEGRATION MEASURE (only fully defined domains are enabled for now)"
+            )
+            self.measure = self.surface.mesh.dx
+            self.measure_units = self.surface.compartment_units**self.surface.dimensionality
+
+    # We define this as a property so that it is automatically updated
+
+    @property
+    def equation_variables(self):
+        variables = {
+            variable.name: variable.dolfin_quantity
+            for variable in {**self.parameters, **self.species}.values()
+        }
+        variables.update({"unit_scale_factor": self.unit_scale_factor})
+        free_symbols = [str(x) for x in self.equation.free_symbols]
+        if "curv" in free_symbols:
+            self.curv = self.surface.curv_func / self.surface.compartment_units
+            variables.update({"curv": self.curv})
+        return variables
+
+    def equation_lambda_eval(self, input_type="quantity"):
+        """Evaluates the equation lambda function using either the quantity
+        (value * units), the value, or the units.
+        The values and units are evaluated separately and then combined
+        because some expressions don't work well
+        with pint quantity types.
+        """
+        # This is an attempt to make the equation lambda work with pint quantities
+        # note - for this eval to work, all variables in the expression must be defined
+        # dolfin quantities and all functions must match one in the list in the config module.
+        self._equation_quantity = self.equation_lambda(**self.equation_variables)
+        if input_type == "quantity":
+            return self._equation_quantity
+        elif input_type == "value":
+            return self._equation_quantity.magnitude
+        elif input_type == "units":
+            return unit_to_quantity(self._equation_quantity.units)
+
+    # Seems like setting this as a @property doesn't cause fenics to recompile
+
+    @property
+    def form(self):
+        """-1 factor because terms are defined as if they were on the
+        lhs of the equation :math:`F(u;v)=0`"""
+        x = d.SpatialCoordinate(self.destination_compartment.dolfin_mesh)
+        if self.has_subdomain:
+            if hasattr(self, "surface"):
+                funcSpace = d.FunctionSpace(self.surface.dolfin_mesh, "P", 1)
+            else:  # then should be volume reaction, assertion to be sure
+                assert self.destination_compartment == list(self.source_compartments.values())[0]
+                funcSpace = d.FunctionSpace(self.destination_compartment.dolfin_mesh, "P", 1)
+            # check that subdomain mesh fcn dim matches function space topological dim
+            assert self.subdomain_data.dim() == funcSpace.mesh().topology().dim()
+            u_mask = d.interpolate(d.Constant(-1.0, name="-1"), funcSpace)
+            u_mask_new = create_restriction(u_mask, self.subdomain_data, self.subdomain_val)
+            mult = u_mask_new
+        else:
+            mult = d.Constant(-1.0, name="-1")
+        if self.axisymm:
+            return (
+                mult
+                * x[0]
+                * self.equation_lambda_eval(input_type="value")
+                * self.destination_species.v
+                * self.measure
+            )
+        else:
+            return (
+                mult
+                * self.equation_lambda_eval(input_type="value")
+                * self.destination_species.v
+                * self.measure
+            )
+
+    @property
+    def scalar_form(self):
+        """
+        Defines scalar form for given flux.
+        If the destination species is a vector function,
+        the assembled form will be a vector of size NDOF.
+        """
+        x = d.SpatialCoordinate(self.destination_compartment.dolfin_mesh)
+        if self.has_subdomain:
+            if hasattr(self, "surface"):
+                funcSpace = d.FunctionSpace(self.surface.dolfin_mesh, "P", 1)
+            else:  # then should be volume reaction, assertion to be sure
+                assert self.destination_compartment == list(self.source_compartments.values())[0]
+                funcSpace = d.FunctionSpace(self.destination_compartment.dolfin_mesh, "P", 1)
+            # check that subdomain mesh fcn dim matches function space topological dim
+            assert self.subdomain_data.dim() == funcSpace.mesh().topology().dim()
+            u_mask = d.interpolate(d.Constant(-1.0, name="-1"), funcSpace)
+            u_mask.rename(self.name + "_subdomain_mask", self.name + "_subdomain_mask")
+            u_mask_new = create_restriction(u_mask, self.subdomain_data, self.subdomain_val)
+            mult = u_mask_new
+        else:
+            mult = d.Constant(-1.0, name="-1")
+        if self.axisymm:
+            return (
+                mult
+                * x[0]
+                * self.equation_lambda_eval(input_type="value")
+                * self.destination_species.vscalar
+                * self.measure
+            )
+        else:
+            return (
+                mult
+                * self.equation_lambda_eval(input_type="value")
+                * self.destination_species.vscalar
+                * self.measure
+            )
+
+    @property
+    def assembled_flux(self):
+        """Attempt to convert flux units to molecules_per_second for printing."""
+        try:
+            self._assembled_flux = -1 * (
+                d.assemble(self.scalar_form).sum() * self.equation_units * self.measure_units
+            ).to(unit.molecule / unit.s)
+        except Exception:
+            self._assembled_flux = -1 * (
+                d.assemble(self.scalar_form).sum() * self.equation_units * self.measure_units
+            )
+        return self._assembled_flux
+
+    def _post_init_get_is_linear_comp(self):
+        """
+        If the flux is linear in terms of a compartment vector (e.g.
+        :code:`dj/du['pm']`),
+        then sets :code:`self.is_lienar_wrt_comp[comp_name]` to True
+        """
+        umap = {}
+
+        for species_name, species in self.species.items():
+            comp_name = species.compartment_name
+            umap.update({species_name: "u" + comp_name})
+
+        uset = set(umap.values())
+        new_eqn = self.equation.subs(umap)
+
+        for comp_name in self.compartments.keys():
+            d_new_eqn = sym.diff(new_eqn, "u" + comp_name, 1)
+            d_new_eqn_species = {str(x) for x in d_new_eqn.free_symbols}
+            self.is_linear_wrt_comp[comp_name] = uset.isdisjoint(d_new_eqn_species)
+
+
+class FormContainer(ObjectContainer):
+    def __init__(self):
+        super().__init__(Form)
+
+        self.properties_to_print = ["form", "form_type", "_compartment_name"]
+
+    def print(self, tablefmt="fancy_grid", properties_to_print=None):
+        for f in self:
+            f.integrals
+        super().print(tablefmt, self.properties_to_print)
+
+
+@dataclass
+class Form(ObjectInstance):
+    """
+    form_type:
+    'mass': transient/mass form (holds time derivative)
+    'diffusion'
+    'domain_reaction'
+    'boundary_reaction'
+
+    Differentiating using ufl doesn't seem to get it right when
+    using vector functions. Luckily we have all fluxes as sympy objects
+    and mass/diffusive forms are always linear w.r.t components.
+    """
+
+    name: str
+    form_: ufl.Form
+    species: Species
+    form_type: str
+    units: pint.Unit
+    is_lhs: bool
+    linear_wrt_comp: dict = dataclasses.field(default_factory=dict)
+    form_scaling: float = 1.0
+
+    def set_scaling(self, form_scaling=1.0, print_scaling=True):
+        self.form_scaling = form_scaling
+        self.form_scaling_dolfin_constant.assign(self.form_scaling)
+        if print_scaling:
+            logger.info(
+                f"Form scaling for form {self.name} set to {self.form_scaling}",
+                extra=dict(format_type="log"),
+            )
+
+    @property
+    def form(self):
+        return self.form_scaling_dolfin_constant * self.form_
+
+    @property
+    def lhs(self):
+        if self.is_lhs:
+            return self.form
+        else:
+            return d.Constant(-1, name="-1") * self.form
+
+    @property
+    def rhs(self):
+        if self.is_lhs:
+            return d.Constant(-1, name="-1") * self.form
+        else:
+            return self.form
+
+    def __post_init__(self):
+        self.compartment = self.species.compartment
+        self._compartment_name = self.compartment.name
+
+        self.form_scaling_dolfin_constant = d.Constant(self.form_scaling, name=f"scale_{self.name}")
+
+        self._convert_pint_quantity_to_unit()
+        self._check_input_type_validity()
+        self._convert_pint_unit_to_quantity()
+
+    @property
+    def integrals(self):
+        self._integrals = self.form.integrals()
+        return self._integrals
+
+
+def empty_sbmodel():
+    """Initialize empty containers (pc, sc, cc, and rc)"""
+    pc = ParameterContainer()
+    sc = SpeciesContainer()
+    cc = CompartmentContainer()
+    rc = ReactionContainer()
+    return pc, sc, cc, rc
+
+
+def sbmodel_from_locals(local_values):
+    """Assemble containers from local variables"""
+    # FIXME: Add typing
+    # Initialize containers
+    pc, sc, cc, rc = empty_sbmodel()
+    parameters = [x for x in local_values if isinstance(x, Parameter)]
+    species = [x for x in local_values if isinstance(x, Species)]
+    compartments = [x for x in local_values if isinstance(x, Compartment)]
+    reactions = [x for x in local_values if isinstance(x, Reaction)]
+    pc.add(parameters)
+    sc.add(species)
+    cc.add(compartments)
+    rc.add(reactions)
+    return pc, sc, cc, rc
+
+
+def create_restriction(u: d.Function, mesh_function: d.MeshFunction, value: np.integer):
+    """
+    Restrict a function on a submesh to a subset of parent entities
+    (same dimension as the submesh)
+
+    :param u: Function on submesh
+    :param mesh_function: MeshFunction marking the subset of parent entities
+    (same dimension as the cells of the submesh)
+    :param value: Value in MeshFunction marking the subset of parent entities
+    :return: New restricted function
+    """
+    submesh = u.function_space().mesh()
+
+    # Compute local cells in submesh marked by parent meshtag
+    # using first map to run without specifying parent mesh id
+    sub_to_parent_map = submesh.topology().mapping()[mesh_function.mesh().id()].cell_map()
+    marked_sub_entities = mesh_function.array()[sub_to_parent_map] == value
+    local_indices = np.flatnonzero(marked_sub_entities)
+
+    # Find all degrees of freedom to transfer data from
+    V = u.function_space()
+    u_new = d.Function(u.function_space())
+    vector = u_new.vector()
+    dof_list = [V.dofmap().cell_dofs(cell) for cell in local_indices]
+    if len(dof_list) == 0:
+        transfer_dofs = np.array([])
+    else:
+        transfer_dofs = np.unique(np.hstack(dof_list))
+    im = V.dofmap().index_map()
+    num_local = im.local_range()[1] - im.local_range()[0]
+
+    # Filter out dofs that are not local
+    transfer_dofs = np.array([dof for dof in transfer_dofs if dof < num_local])
+    vector[transfer_dofs] = u.vector()[transfer_dofs]
+    vector.apply("insert")
+
+    return u_new

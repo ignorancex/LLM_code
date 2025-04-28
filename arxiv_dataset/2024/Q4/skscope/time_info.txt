@@ -1,0 +1,17 @@
+pytest/test_args.py: 2024-06-22T08:47:39Z
+pytest/test_layer.py: 2023-11-27T09:54:35Z
+docs/source/userguide/quickstart.py: 2023-08-17T16:08:37Z
+pytest/test_skmodel.py: 2024-05-25T16:21:14Z
+pytest/test_except.py: 2024-04-18T15:25:29Z
+pytest/test_util.py: 2024-01-26T16:32:35Z
+docs/source/conf.py: 2023-12-08T22:01:45Z
+pytest/create_test_model.py: 2024-04-18T15:25:29Z
+pytest/test_workflow.py: 2024-05-25T16:18:51Z
+skscope/__init__.py: 2024-06-22T08:46:23Z
+setup.py: 2024-05-12T04:45:22Z
+skscope/numeric_solver.py: 2024-05-25T06:41:41Z
+skscope/layer.py: 2024-05-12T04:45:22Z
+skscope/utilities.py: 2024-08-05T18:05:10Z
+skscope/skmodel.py: 2024-04-25T17:52:07Z
+skscope/solver.py: 2024-06-22T08:46:23Z
+skscope/base_solver.py: 2024-05-25T16:21:14Z

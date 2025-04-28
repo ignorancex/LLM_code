@@ -1,0 +1,11 @@
+src/surprisememore/cp_functions.py: 2021-06-08T11:57:30Z
+src/surprisememore/solver.py: 2021-06-08T11:57:30Z
+src/surprisememore/auxiliary_function.py: 2021-12-01T00:10:36Z
+setup.py: 2021-11-30T23:59:11Z
+src/surprisememore/Undirected_Graph_Class.py: 2022-01-24T22:46:45Z
+src/surprisememore/Directed_Graph_Class.py: 2022-01-24T23:03:11Z
+src/surprisememore/__init__.py: 2021-06-03T14:51:11Z
+src/surprisememore/comdet_functions.py: 2021-06-08T11:57:30Z
+tests/test_Undirected_Graph_Class.py: 2021-04-07T20:47:27Z
+tests/test_Directed_Graph_Class.py: 2021-03-04T16:25:14Z
+tests/test_initialise_problem.py: 2022-01-24T22:08:27Z

@@ -1,0 +1,15 @@
+imports.py: 2024-11-08T12:25:58Z
+data_generation.py: 2024-11-08T15:47:28Z
+concurrent_identification.py: 2024-11-08T12:42:17Z
+LTI_identification.py: 2024-11-12T13:33:32Z
+main.py: 2024-11-12T13:33:32Z
+plant_models/ethylene_reactor.py: 2024-11-06T09:52:39Z
+controller_synthesis/qLPV_model.py: 2024-11-08T15:47:28Z
+controller_synthesis/integral_tracking_filter.py: 2024-11-08T15:47:28Z
+plant_models/nonlinear_MSD.py: 2024-11-06T09:52:39Z
+plant_models/trigonometric.py: 2024-11-06T09:52:39Z
+qLPV_identification.py: 2024-11-08T16:24:13Z
+utils/qLPV_BFR.py: 2024-11-12T13:33:32Z
+utils/generate_file_path.py: 2024-11-06T09:52:39Z
+utils/multisine_inputs.py: 2024-11-12T13:33:32Z
+plant_models/plant_model.py: 2024-11-06T09:52:39Z

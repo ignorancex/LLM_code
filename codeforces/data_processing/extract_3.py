@@ -3,13 +3,13 @@ import re
 
 def extract_cpp_block(text):
     """提取```cpp```包裹的内容"""
-    cpp_match = re.search(r"```python\s*(.*?)\s*```", text, re.DOTALL)
+    cpp_match = re.search(r"```cpp\s*(.*?)\s*```", text, re.DOTALL)
     if cpp_match:
         return cpp_match.group(1).strip()
     return ""
 
 # 读取原始 JSON 文件
-with open("LLM_code/codeforces/simulation/gemma_27b_python_2.json", "r", encoding="utf-8") as f:
+with open("simulation/deepseek_32b_cpp_2.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
 # 处理每条记录
@@ -29,5 +29,5 @@ for item in data:
             item["generate_ref_code_block"] = ref_cpp_code
 
 # 保存到新的 JSON 文件
-with open("LLM_code/codeforces/simulation/gemma_27b_python_extract.json.json", "w", encoding="utf-8") as f:
+with open("simulation/deepseek_32b_cpp_extract.json", "w", encoding="utf-8") as f:
     json.dump(data, f, indent=4, ensure_ascii=False)

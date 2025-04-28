@@ -1,0 +1,4 @@
+"""
+Satellite galaxies in EAGLE
+"""
+

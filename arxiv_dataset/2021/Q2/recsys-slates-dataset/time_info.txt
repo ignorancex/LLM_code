@@ -1,0 +1,16 @@
+code_eide_et_al21/agents.py: 2021-07-04T14:05:09Z
+code_eide_et_al21/dataset.py: 2021-07-04T14:05:09Z
+code_eide_et_al21/hypertune.py: 2021-07-04T14:05:09Z
+code_eide_et_al21/pyrotrainer.py: 2021-07-04T14:05:09Z
+code_eide_et_al21/models.py: 2021-07-04T14:05:09Z
+code_eide_et_al21/utils.py: 2021-07-04T14:05:09Z
+code_eide_et_al21/train.py: 2021-07-04T14:05:09Z
+recsys_slates_dataset/__init__.py: 2022-09-22T21:52:23Z
+recsys_slates_dataset/dataset_torch.py: 2022-09-22T20:59:38Z
+recsys_slates_dataset/_modidx.py: 2022-09-22T20:59:38Z
+recsys_slates_dataset/data_helper.py: 2022-09-22T20:59:38Z
+recsys_slates_dataset/core.py: 2021-07-01T09:51:08Z
+recsys_slates_dataset/_nbdev.py: 2021-08-14T16:38:23Z
+recsys_slates_dataset/lightning_helper.py: 2022-09-22T20:59:38Z
+setup.py: 2022-09-22T20:59:38Z
+code_eide_et_al21/analysis.py: 2021-07-04T14:05:09Z

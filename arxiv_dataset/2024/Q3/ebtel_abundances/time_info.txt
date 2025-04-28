@@ -1,0 +1,12 @@
+src/scripts/render_all.py: 2024-05-12T16:03:38Z
+src/scripts/configure.py: 2024-05-12T15:35:29Z
+src/scripts/render_figure2.py: 2024-07-09T00:29:51Z
+src/scripts/paths.py: 2024-07-06T01:05:04Z
+src/scripts/render_figure3.py: 2024-07-09T00:29:51Z
+src/scripts/plot.py: 2024-07-09T00:30:52Z
+src/scripts/render_figure1.py: 2024-07-09T00:29:51Z
+src/scripts/read.py: 2024-05-09T01:35:33Z
+src/scripts/run_all_ebtel.py: 2024-05-12T15:35:29Z
+src/scripts/run_ebtel_figure1.py: 2024-07-06T01:25:18Z
+src/scripts/run_ebtel_figure3.py: 2024-07-06T01:25:18Z
+src/scripts/run_ebtel_figure2.py: 2024-07-06T01:25:18Z

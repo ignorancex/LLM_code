@@ -13,7 +13,7 @@ def extract_reasoning_and_code(text):
     return reasoning, code
 
 # 读取原始 JSON 文件
-with open("LLM_code/codeforces/simulation/deepseek_32b_cpp.json", "r", encoding="utf-8") as f:
+with open("simulation/deepseek_32b_cpp.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
 # 处理每条记录
@@ -30,5 +30,5 @@ for item in data:
     item["generate_ref_code_block"] = ref_code
 
 # 保存到新的 JSON 文件
-with open("LLM_code/codeforces/simulation/deepseek_32b_cpp_1.json", "w", encoding="utf-8") as f:
+with open("simulation/deepseek_32b_cpp_1.json", "w", encoding="utf-8") as f:
     json.dump(data, f, indent=4, ensure_ascii=False)

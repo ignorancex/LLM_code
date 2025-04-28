@@ -1,0 +1,10 @@
+fields/3d-conv-stax.py: 2021-05-31T20:45:39Z
+scratch/fields/.ipynb_checkpoints/gaussFields-checkpoint.py: 2021-06-01T01:45:00Z
+fields/.ipynb_checkpoints/gaussFields-checkpoint.py: 2021-03-30T13:42:42Z
+scratch/fields/.ipynb_checkpoints/libLNjax-checkpoint.py: 2021-06-01T01:45:00Z
+fields/libLNjax.py: 2021-03-30T13:42:42Z
+fields/.ipynb_checkpoints/libLNjax-checkpoint.py: 2021-03-30T13:42:42Z
+fields/gaussFields.py: 2021-03-30T13:42:42Z
+scratch/fields/libLNjax.py: 2021-06-01T01:45:00Z
+scratch/fields/gaussFields.py: 2021-06-01T01:45:00Z
+scratch/fields/3d-conv-stax.py: 2021-06-01T01:45:00Z

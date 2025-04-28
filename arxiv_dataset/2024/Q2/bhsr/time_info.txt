@@ -1,0 +1,8 @@
+python/bhsr/constants.py: 2024-05-01T10:13:12Z
+python/bhsr/bhsr.py: 2024-06-11T12:11:08Z
+python/bhsr/cfm.py: 2024-05-01T10:13:12Z
+python/bhsr/kerr_bh.py: 2024-04-12T11:42:55Z
+python/bhsr/__init__.py: 2024-04-12T11:42:55Z
+python/bhsr/companion.py: 2025-04-11T10:39:30Z
+python/bhsr/self_interactions.py: 2024-05-24T10:24:29Z
+python/bhsr/stats.py: 2024-06-11T12:11:08Z

@@ -1,0 +1,11 @@
+fastlens/fftlog.py: 2023-12-30T01:18:48Z
+fastlens/mag_fft.py: 2023-12-30T01:18:48Z
+python/mag_wb.py: 2023-12-29T23:19:25Z
+fastlens/timeave.py: 2023-12-30T01:18:48Z
+python/__init__.py: 2023-12-29T23:19:25Z
+python/mag_wm.py: 2023-12-29T23:19:25Z
+python/mag_yoo.py: 2023-12-29T23:19:25Z
+ipynb/testdata.py: 2023-12-29T23:19:25Z
+python/mag_lee.py: 2023-12-29T23:19:25Z
+setup.py: 2023-12-30T03:25:19Z
+fastlens/__init__.py: 2023-12-30T03:25:19Z

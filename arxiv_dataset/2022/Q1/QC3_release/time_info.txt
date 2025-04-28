@@ -1,0 +1,17 @@
+base_code/F3/G_mat.py: 2021-11-19T07:06:44Z
+base_code/F3/K2i_mat.py: 2021-11-19T07:06:44Z
+base_code/F3/F_mat.py: 2024-02-26T21:16:38Z
+base_code/Kdf3/K3E.py: 2021-11-19T07:06:44Z
+base_code/F3/qcot_fits.py: 2021-11-08T23:26:54Z
+base_code/F3/F3_mat.py: 2021-11-19T07:06:44Z
+base_code/defns.py: 2022-02-19T07:07:51Z
+base_code/group_theory_defns.py: 2022-01-31T12:11:32Z
+base_code/constants.py: 2021-11-08T23:26:54Z
+base_code/Kdf3/K3B.py: 2021-11-19T07:06:44Z
+base_code/projections.py: 2022-01-20T08:16:01Z
+base_code/Kdf3/K3main.py: 2021-11-19T07:06:44Z
+solution_2pt.py: 2021-11-19T14:01:16Z
+solution_ID.py: 2021-11-19T07:06:44Z
+test.py: 2022-01-20T08:16:01Z
+solution_ND.py: 2021-11-19T07:06:44Z
+solution.py: 2021-11-19T07:06:44Z

@@ -1,0 +1,6 @@
+Main/exp_pinn_darcy.py: 2024-08-25T13:57:26Z
+Main/models.py: 2024-08-25T13:57:26Z
+Main/darcy_utils.py: 2024-08-25T04:34:17Z
+Main/data.py: 2024-08-25T04:34:17Z
+Main/plate_utils.py: 2024-08-25T04:34:17Z
+Main/exp_pinn_plate.py: 2024-08-25T13:57:26Z

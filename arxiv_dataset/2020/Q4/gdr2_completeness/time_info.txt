@@ -1,0 +1,4 @@
+gdr2_completeness/_init__.py: 2020-08-20T13:01:38Z
+gdr2_completeness/data_manipulation.py: 2020-08-20T13:01:38Z
+gdr2_completeness/tap_queries.py: 2020-12-15T20:36:14Z
+setup.py: 2020-12-24T17:08:01Z

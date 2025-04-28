@@ -1,0 +1,275 @@
+# Script for analysis functions for test data for deep21 predictions
+# by TLM
+
+
+## Import the required Libraries
+from __future__ import absolute_import, division, print_function
+import numpy as np
+import tensorflow as tf
+import tensorflow_addons as tfa
+from tensorflow import keras
+import healpy as hp
+import h5py
+from scipy import fftpack
+from scipy.signal import kaiser
+import sys,os
+###############################################################################
+
+###############################################################################
+
+def weighted_std(values, weights, axis=0):
+    """
+    Return the weighted average and standard deviation.
+    values, weights -- Numpy ndarrays with the same shape.
+    """
+    average = np.average(values, weights=weights, axis=axis)
+    # Fast and numerically precise:
+    variance = np.average((values-average)**2, weights=weights, axis=axis)
+    return np.sqrt(variance)
+
+
+###############################################################################
+
+###############################################################################
+# custom loss object for loading model
+import tensorflow.keras.backend as K
+def custom_loss(y_true, y_pred):
+    sig = K.mean(K.std(y_true - y_pred))
+    return K.log(sig)  + (keras.metrics.mse(y_true, y_pred) / (2*K.square(sig))) + 10
+
+###############################################################################
+
+###############################################################################
+# This routine loads the trained UNet ensemble and makes each ensemble member's
+# predictions on the input map
+
+def ensemble_prediction(model_path, num_nets, in_map, outfname, batch_size=16, do_pred=True):
+
+    if not os.path.exists(outfname):
+        os.mkdir(outfname)
+
+    if do_pred:
+        nn_preds = []
+        for i in range(num_nets):
+            print("now I'm making predictions with net %d"%(i+1)) 
+            net = keras.models.load_model(model_path + 'best_model_%d.h5'%(i+1), compile=False, custom_objects={'custom_loss': custom_loss, 'optimizer': tfa.optimizers.AdamW})
+            prediction = net.predict(np.expand_dims(in_map, axis=-1), batch_size=batch_size)
+            np.save(outfname + 'nn_preds_model_%d'%(i+1), prediction)
+            #nn_preds.append(prediction)
+            del net; del prediction
+        
+        # load all predictions once nn deleted
+        nn_preds = np.array([np.load(outfname + 'nn_preds_model_%d.npy'%(i+1)) for i in range(num_nets)])
+        np.save(outfname + 'nn_preds', np.squeeze(nn_preds))
+        
+        return np.squeeze(nn_preds)
+
+    # if predictions already made, just return the predicted maps
+    else:
+        return np.load(outfname + 'nn_preds.npy')
+
+
+
+###############################################################################
+
+###############################################################################
+# Define performance metric functions
+
+def compute_logp(y_true, y_pred):
+    return np.array([np.mean(((y_true[i] - y_pred[i])**2)/(np.mean(np.std(y_true[i] - y_pred[i])**2)) + np.log(np.std(y_true[i] - y_pred[i]))) for i in range((y_true.shape[0]))])
+
+def compute_mse(y_true, y_pred):
+    return np.array([np.mean((y_true[i] - y_pred[i])**2) for i in range(y_true.shape[0])])
+
+
+###############################################################################
+
+###############################################################################
+# This routine computes the angular power spectra statistics for a cleaning 
+# method and corresponding true map
+def angularPowerSpec(y_true, prediction, bin_min, bin_max, nu_arr, rearr, nu_range=161, nwinds=192, nsims=1, N_NU=64, 
+                        NU_AVG=3,out_dir='', name='', save_spec=False):
+    
+    rearr = np.load(rearr)
+    nwinds = nwinds
+    N_NU = N_NU
+    NU_START = bin_min
+    NU_STOP = N_NU*NU_AVG  
+    assert(N_NU == (NU_STOP - NU_START) // NU_AVG)
+
+    #N_SKIP = (N_STOP - N_START) // N_NU
+    # get the spetrum of frequenies covered in units of MHz
+    (bn,nu_bot,nu_top,z_bot,z_top) = np.loadtxt(nu_arr).T
+    nu_arr = ((nu_bot + nu_top)/2.)[:-1]
+    nu_arr = nu_arr[NU_START:NU_STOP]#[::N_SKIP]
+    nu_arr = np.array([np.mean(i,axis=0) for i in np.split(nu_arr,N_NU)])
+
+    # true map
+    cosmo_test = (np.array_split(y_true, y_true.shape[0] / nwinds))
+
+    # cleaned map
+    y_pred = (np.array_split(prediction, prediction.shape[0] / nwinds))
+
+    # residual map
+    y_res = (np.array_split((prediction - y_true), y_true.shape[0] / nwinds))
+    cosmo_Cl = []   # Cls for cosmo spectra
+    pred_Cl  = []   # Cls for predicted spectra
+    res_Cl   = []   # Cls for residual spectra
+    cross_Cl = []
+  
+    for i in range(len(nu_arr)):
+        
+        
+        # Get Cls for COSMO spectrum
+        # loops over nsims test set skies
+        cos = []
+        for cosmo in cosmo_test:
+            cosmo0 = (cosmo.T[i].T).flatten()
+            cosmo0 = cosmo0[rearr]
+            alm_cosmo = hp.map2alm(cosmo0)
+            Cl_cosmo = hp.alm2cl(alm_cosmo)
+            cos.append(Cl_cosmo)
+        
+        # save average of Cl over nsims
+        cosmo_Cl.append(np.mean(cos, axis=0))
+
+
+        # Get Cls for the predicted maps
+        predicted_cl = []
+        for y in y_pred:
+            y0 = (y.T[i].T).flatten()
+            y0 = y0[rearr]
+            alm_y = hp.map2alm(y0); del y0
+            Cl_y = hp.alm2cl(alm_y)
+            predicted_cl.append(Cl_y); del Cl_y
+
+        # save average of Cl over nsims
+        pred_Cl.append(np.mean(predicted_cl, axis=0)); del predicted_cl
+
+
+        # Get Cls for the residual maps
+        residual_cl = []
+        for y in y_res:
+            y0 = (y.T[i].T).flatten()
+            y0 = y0[rearr]
+            alm_y = hp.map2alm(y0); del y0
+            Cl_y = hp.alm2cl(alm_y)
+            residual_cl.append(Cl_y); del Cl_y
+
+        # save average of Cl over nsims
+        res_Cl.append(np.mean(residual_cl, axis=0))
+        
+        # Get cross-Cls for PRED x COSMO
+        this_cross_cl = []
+        # Get Cls for the PRED x COSMO maps
+        for m,cosmo in enumerate(cosmo_test):
+            
+            cosmo0 = (cosmo.T[i].T).flatten()[rearr]
+            pred0 = y_pred[m].T[i].T.flatten()[rearr]
+            alm_cosmo = hp.map2alm(cosmo0)
+            alm_pred = hp.map2alm(pred0)
+            Cls = hp.alm2cl(alms1=alm_cosmo, alms2=alm_pred)
+            this_cross_cl.append(Cls)
+        
+        # save average of cross Cl over nsims
+        cross_Cl.append(np.mean(this_cross_cl, axis=0))
+
+        # save outputs 
+        if save_spec:
+            
+            if not os.path.exists(out_dir):
+                os.mkdir(out_dir)
+
+            np.save(out_dir + name + '_cl_res_nu_%03d'%(nu_arr[i]), np.array(res_Cl[-1]))
+            np.save(out_dir + name + '_cl_cross_nu_%03d'%(nu_arr[i]), np.array(cross_Cl[-1]))
+            np.save(out_dir + name + '_cl_pred_nu_%03d'%(nu_arr[i]), np.array(pred_Cl[-1]))
+            np.save(out_dir + 'cl_cosmo_nu_%03d'%(nu_arr[i]), np.array(cosmo_Cl[-1]))
+ 
+        
+    return np.array(cosmo_Cl), np.array(pred_Cl), np.array(res_Cl), np.array(cross_Cl)
+ 
+
+###############################################################################
+
+###############################################################################
+# This routine computes the radial power spectra statistics for a cleaning 
+# method and corresponding true map
+
+
+
+
+def radialPka(in_map, n_nu=64, k_min=0.01, 
+              k_max=0.2, WINDOW_NSIDE=4, cross_spec=None,
+              remove_mean=False):
+    # global params
+    MAP_NSIDE = 256
+    SIM_NSIDE = MAP_NSIDE
+    WINDOW_NSIDE = WINDOW_NSIDE
+    NUM_SIMS = 1
+    # resolution of the outgoing window
+    NPIX_WINDOW = int((MAP_NSIDE/WINDOW_NSIDE)**2)
+    # actual side length of window
+    WINDOW_LENGTH = int(np.sqrt(NPIX_WINDOW))
+    nwinds = int(hp.nside2npix(WINDOW_NSIDE))
+    
+    # survey volume
+    V = (nwinds*WINDOW_LENGTH*WINDOW_LENGTH)
+
+    num_sims = len(in_map) // nwinds 
+    out = []
+    
+    if cross_spec is not None:
+        
+        for sim in range(num_sims):
+            map_s1 = np.array_split(in_map, len(in_map) // nwinds)[sim]
+            
+            map_s2 = np.array_split(cross_spec, len(cross_spec) // nwinds)[sim]
+
+            # window function
+            #w = kaiser(n_nu, beta=14)
+
+            # subtract mean of signals
+            if remove_mean:
+                map_s1 = np.array([m - np.mean(m) for m in map_s1.T]).T
+                map_s2 = np.array([m - np.mean(m) for m in map_s2.T]).T
+
+            map_s1= np.reshape(map_s1, (V, n_nu))
+            map_s2= np.reshape(map_s2, (V, n_nu))
+            
+            # fft first map
+            delta1 = np.array([(fftpack.fft(j)) for j in map_s1])
+            # ifft second map -- note that we divide by N^2 here
+            # so we correct it by multiplying by len(map)
+            delta2 = np.array([(fftpack.ifft(j)*len(j)) for j in map_s2])
+            
+            cross_spec = np.mean(np.abs(np.real(delta1*delta2)), axis=0)
+                
+            mid = (len(cross_spec) // 2)+1
+            out.append(cross_spec[1:mid])  # ignore first mode
+
+        k_para = np.linspace(k_min, k_max, len(out[0]))
+        return k_para, np.squeeze(np.array(out))
+        
+        
+    else:
+        
+        for sim in range(num_sims):
+            map_s = np.array_split(in_map, len(in_map) // nwinds)[sim]
+
+            # window function
+            #w = kaiser(n_nu, beta=14)
+
+            # subtract mean of signal
+            if remove_mean:
+                map_s = np.array([m - np.mean(m) for m in map_s.T]).T
+
+            map_s= np.reshape(map_s, (V, n_nu))
+
+            power_spec = np.mean(np.array([np.abs(fftpack.fft(j))**2 for j in map_s]),axis=0) #/ V
+
+            mid = (len(power_spec) // 2)+1
+            out.append(power_spec[1:mid])  # ignore first mode
+
+        k_para = np.linspace(k_min, k_max, len(out[0]))
+
+        return k_para, np.squeeze(np.array(out))

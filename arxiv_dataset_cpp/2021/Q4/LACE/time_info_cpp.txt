@@ -1,0 +1,8 @@
+MetFaces/torch_utils/ops/bias_act.cpp: 2021-12-01T22:45:07Z
+AFHQ/torch_utils/ops/upfirdn2d.cpp: 2021-12-01T22:45:07Z
+MetFaces/torch_utils/ops/upfirdn2d.cpp: 2021-12-01T22:45:07Z
+CIFAR10/torch_utils/ops/upfirdn2d.cpp: 2021-12-01T22:45:07Z
+FFHQ/stylegan2/op/fused_bias_act.cpp: 2021-12-01T22:45:07Z
+FFHQ/stylegan2/op/upfirdn2d.cpp: 2021-12-01T22:45:07Z
+AFHQ/torch_utils/ops/bias_act.cpp: 2021-12-01T22:45:07Z
+CIFAR10/torch_utils/ops/bias_act.cpp: 2021-12-01T22:45:07Z

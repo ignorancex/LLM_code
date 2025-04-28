@@ -15,7 +15,7 @@ for item in metadata:
             link_to_category[link] = first_category
 
 # 读取季度链接文件
-with open("LLM_code/code/github_links/dataset_links.json", "r") as f:
+with open("LLM_code/code/github_links/python_dataset_links_new.json", "r") as f:
     quarter_data = json.load(f)
 
 # 创建输出结构

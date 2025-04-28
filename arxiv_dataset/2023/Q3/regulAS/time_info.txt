@@ -1,0 +1,16 @@
+regulAS/persistence/dao.py: 2023-06-05T19:23:32Z
+regulAS/__init__.py: 2023-07-24T20:45:53Z
+regulAS/core/__init__.py: 2021-07-05T07:12:37Z
+regulAS/persistence/__init__.py: 2021-07-16T21:38:31Z
+regulAS/app.py: 2021-11-08T21:55:44Z
+regulAS/reports/base.py: 2021-07-16T21:37:38Z
+regulAS/reports/__init__.py: 2021-07-30T11:44:34Z
+regulAS/reports/export_textual.py: 2021-11-04T10:51:40Z
+regulAS/reports/performance.py: 2023-06-18T15:09:45Z
+regulAS/reports/export_visual.py: 2023-06-18T15:09:45Z
+regulAS/utils/loader.py: 2023-07-23T21:41:41Z
+regulAS/reports/ranking.py: 2023-08-08T21:27:03Z
+regulAS/utils/base.py: 2021-10-29T19:44:24Z
+regulAS/utils/__init__.py: 2021-10-29T19:44:24Z
+setup.py: 2023-07-24T20:45:53Z
+regulAS/core/regulas.py: 2023-06-16T11:32:54Z

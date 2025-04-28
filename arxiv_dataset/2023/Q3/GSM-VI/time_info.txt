@@ -1,0 +1,12 @@
+examples/example_gsm.py: 2023-12-08T16:26:04Z
+gsmvi/bam.py: 2024-08-15T16:41:34Z
+examples/example_initializers.py: 2023-12-08T14:59:58Z
+gsmvi/__init__.py: 2023-12-08T14:59:58Z
+gsmvi/advi.py: 2023-12-08T14:59:58Z
+examples/example_advi.py: 2023-12-08T16:26:04Z
+examples/example_bam.py: 2024-08-15T18:28:04Z
+examples/example_gsm_numpy.py: 2023-12-12T21:00:12Z
+gsmvi/gsm_numpy.py: 2023-12-12T20:54:48Z
+gsmvi/initializers.py: 2023-12-08T14:59:58Z
+gsmvi/monitors.py: 2023-12-08T14:59:58Z
+gsmvi/gsm.py: 2023-12-08T14:59:58Z

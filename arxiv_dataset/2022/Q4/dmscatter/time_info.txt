@@ -1,0 +1,12 @@
+examples/exampleC12.py: 2022-11-02T20:52:53Z
+examples/exampleHe4.py: 2022-09-18T00:20:47Z
+examples/exampleMassCompare.py: 2022-09-18T00:20:47Z
+examples/exampleXe.py: 2022-09-18T00:20:47Z
+examples/exampleWeightbyAbundance.py: 2022-09-18T00:20:47Z
+examples/exampleMassHeatPlot.py: 2022-11-02T21:19:42Z
+examples/exampleHOFrequency.py: 2022-09-18T00:20:47Z
+examples/exampleXeFF.py: 2022-09-18T00:20:47Z
+python/dmscatter.py: 2022-11-02T18:42:28Z
+python/__init__.py: 2021-09-20T16:56:22Z
+test/plots.py: 2022-09-18T00:20:47Z
+test/validation.py: 2022-09-18T00:20:47Z

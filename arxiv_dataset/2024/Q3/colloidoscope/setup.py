@@ -1,0 +1,35 @@
+from setuptools import setup, find_packages
+
+setup(
+        name="colloidoscope", 
+        version='0.2.1',
+        author="Abdelwahab Kawafi",
+        author_email="<akawafi3@gmail.com>",
+        description='My PhD project to track colloids using confocal and deep learning.',
+        packages=find_packages(),
+        include_package_data=True,
+        package_dir={'colloidoscope': 'colloidoscope'},
+        package_data={'colloidoscope': ['attention_unet_202302.pt', 'attention_unet_202206.pt']},
+        install_requires=[
+                'numpy',
+                'torch',
+                'matplotlib',
+                'pathlib2',
+                'pandas',
+                'seaborn',
+                'lxml',
+                'h5py',
+                'scipy',
+                'scikit-learn',
+                'scikit-image',
+                'tqdm',
+                'torchio',
+                'napari[PySide2]',
+                'trackpy',
+                'neptune-client',
+                'ray[tune]',
+                'perlin-numpy @ git+https://github.com/pvigier/perlin-numpy',
+                'monai @ git+https://github.com/wahabk/MONAI'
+        ],
+        keywords=['python', 'colloidoscope'],
+)

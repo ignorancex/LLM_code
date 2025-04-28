@@ -1,0 +1,13 @@
+Scripts/colour_coded_fullspec.py: 2023-09-21T09:13:57Z
+Scripts/fig10_StepPar.py: 2023-09-21T09:39:14Z
+Scripts/fig2_heuristic.py: 2023-09-21T09:39:14Z
+Scripts/appendix/wind_structure_alpha1.5_9.py: 2023-09-20T08:14:47Z
+Scripts/fig12_SedPlot.py: 2023-09-21T09:39:14Z
+Scripts/appendix/grid_panel_fig_alpha1.5.py: 2023-09-20T08:14:47Z
+Scripts/fig11_LineFormation.py: 2023-09-21T09:39:14Z
+Scripts/blueshift_util.py: 2023-09-21T13:06:52Z
+Scripts/fig5_Impacts.py: 2023-09-21T09:49:07Z
+Scripts/fig7_WindStructure.py: 2023-09-21T12:08:04Z
+Scripts/fig6_BlueshiftSkew.py: 2023-09-21T09:39:14Z
+Scripts/fig4_Inclination.py: 2023-09-21T12:09:49Z
+Scripts/make_all_figures.py: 2023-09-21T12:08:04Z

@@ -1,0 +1,7 @@
+coherent_single_slit.py: 2024-10-09T21:17:52Z
+psprop/__init__.py: 2024-10-03T06:16:21Z
+partially_coherent_single_slit.py: 2024-10-09T21:17:52Z
+build/lib/psprop/propagation.py: 2024-10-09T21:17:52Z
+build/lib/psprop/__init__.py: 2024-10-09T21:17:52Z
+setup.py: 2024-10-09T21:17:52Z
+psprop/propagation.py: 2024-10-09T21:17:52Z

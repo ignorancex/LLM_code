@@ -1,0 +1,11 @@
+docs/figs_and_codes/Tutotial_3.py: 2024-09-02T09:34:31Z
+docs/conf.py: 2024-09-02T09:52:13Z
+docs/figs_and_codes/Tutotial_2.py: 2024-09-02T09:34:31Z
+docs/figs_and_codes/LOGO_1.py: 2024-09-02T09:34:31Z
+docs/figs_and_codes/Tutotial_4.py: 2024-09-02T09:34:31Z
+docs/figs_and_codes/Tutotial_1.py: 2024-09-02T09:34:31Z
+Lya_zelda_II/funcs.py: 2024-10-08T08:28:38Z
+Lya_zelda_II/__init__.py: 2024-08-30T09:58:35Z
+docs/figs_and_codes/Tutotial_6.py: 2024-09-02T09:34:31Z
+setup.py: 2024-09-05T11:53:34Z
+docs/figs_and_codes/Tutotial_5.py: 2024-09-02T09:34:31Z

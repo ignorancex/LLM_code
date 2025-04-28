@@ -1,0 +1,8 @@
+b_har/baseline.py: 2021-01-22T10:13:46Z
+b_har/__init__.py: 2020-12-30T10:51:00Z
+tests/features_test.py: 2021-01-22T10:16:59Z
+b_har/models.py: 2021-01-22T10:16:59Z
+b_har/utility/configurator.py: 2020-12-30T11:22:57Z
+setup.py: 2020-12-30T11:22:57Z
+tests/segmentation_test.py: 2021-01-22T10:16:59Z
+b_har/utility/__init__.py: 2020-12-30T10:51:00Z

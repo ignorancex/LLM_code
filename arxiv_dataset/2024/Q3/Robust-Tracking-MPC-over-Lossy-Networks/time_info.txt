@@ -1,0 +1,26 @@
+Examples of Model Predictive Controllers/Example_of_Tube_Tracking_MPC_Over_Lossy_Network.py: 2025-02-27T16:39:38Z
+Examples of Set Operations/Example of Approximation of mRPI_Darup.py: 2023-11-21T10:58:26Z
+Examples of Model Predictive Controllers/Example_of_Tracking_MPC.py: 2023-11-21T10:58:26Z
+Examples of Set Operations/Example of Approximation of mRPI_Rakovic.py: 2023-11-21T10:58:26Z
+Examples of Model Predictive Controllers/Example_of_Tube_Tracking_MPC.py: 2023-11-21T10:58:26Z
+Results/Cartpole/__init__.py: 2024-05-25T12:41:03Z
+Results/Cartpole/cartpole.py: 2024-05-25T12:41:03Z
+Results/results_linear_system.py: 2025-02-27T16:39:38Z
+Examples of Model Predictive Controllers/Example_of_Regulator_MPC.py: 2023-11-21T10:58:26Z
+Results/results_linear_system_with_extendedMPC.py: 2025-02-27T16:39:38Z
+Examples of Set Operations/Example of Several Set Operations.py: 2023-11-21T10:58:26Z
+Examples of Set Operations/Example of Output Admissible Set Calculation.py: 2023-11-21T10:58:26Z
+Results/estimate_W_for_Cartpole.py: 2024-05-25T12:41:03Z
+Examples of Model Predictive Controllers/Example_of_Tube_Regulator_MPC.py: 2023-11-21T10:58:26Z
+src/LinearMPCOverNetworks/RegulatorMPC.py: 2025-02-27T16:39:38Z
+Examples of Model Predictive Controllers/Example_of_Tracking_MPC_Over_Lossy_Network.py: 2023-11-21T10:58:26Z
+src/LinearMPCOverNetworks/Estimator.py: 2025-02-27T16:39:38Z
+src/LinearMPCOverNetworks/TubeRegulatorMPC.py: 2025-02-27T16:39:38Z
+src/LinearMPCOverNetworks/__init__.py: 2023-11-21T10:58:26Z
+Results/results_nonlinear_system.py: 2025-02-27T16:39:38Z
+src/LinearMPCOverNetworks/TrackingMPC.py: 2025-02-27T16:39:38Z
+Results/create_animations.py: 2024-05-25T13:29:50Z
+Results/results_nonlinear_system_with_extendedMPC.py: 2025-02-27T16:39:38Z
+src/LinearMPCOverNetworks/SmartActuator.py: 2025-02-27T16:39:38Z
+src/LinearMPCOverNetworks/utils_polytope.py: 2025-02-27T16:39:38Z
+src/LinearMPCOverNetworks/TubeTrackingMPC.py: 2025-02-27T16:39:38Z

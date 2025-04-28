@@ -1,0 +1,13 @@
+plotting/plot_3d_slices_horiz.py: 2022-01-13T21:58:44Z
+plotting/merge_directories.py: 2022-01-20T19:55:25Z
+plotting/plot_3d_slices.py: 2022-01-13T21:58:44Z
+plotting/plot_rolled_structure.py: 2021-12-13T23:51:37Z
+plotting/fig2_profiles.py: 2022-02-25T18:03:56Z
+mixedICs_triLayer_model.py: 2022-01-12T20:59:35Z
+plotting/find_top_cz.py: 2022-02-25T18:03:56Z
+publication_figures/profile_to_scalar.py: 2022-02-25T18:15:59Z
+publication_figures/publication_kippenhahn.py: 2022-02-22T22:16:59Z
+plotting/plot_slices.py: 2021-10-22T22:21:20Z
+publication_figures/publication_profiles.py: 2022-02-22T22:16:59Z
+triLayer_model.py: 2022-01-20T17:59:19Z
+plotting/movie_plotly.py: 2022-03-09T19:07:17Z

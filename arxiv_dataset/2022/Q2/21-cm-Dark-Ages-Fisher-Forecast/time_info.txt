@@ -1,0 +1,10 @@
+Bispectrum/Secondary Forecasts/secondaryBispectrum.py: 2022-06-21T13:17:21Z
+Bispectrum/Secondary Forecasts/powerspectrum.py: 2022-06-21T13:17:21Z
+Trispectrum/Primordial Forecasts/powerspectrum.py: 2022-06-21T13:17:21Z
+Trispectrum/Secondary Forecasts/powerspectrum.py: 2022-06-21T13:17:21Z
+Trispectrum/Primordial Forecasts/trispectra.py: 2022-06-21T13:17:21Z
+Bispectrum/Primordial Forecasts/powerspectrum.py: 2022-06-21T13:17:21Z
+Bispectrum/Secondary Forecasts/bispectra.py: 2022-06-21T13:17:21Z
+Trispectrum/Secondary Forecasts/secondaryTrispectrum.py: 2022-06-21T13:17:21Z
+Bispectrum/Primordial Forecasts/bispectra.py: 2022-06-21T13:17:21Z
+Trispectrum/Secondary Forecasts/trispectra.py: 2022-06-21T13:17:21Z

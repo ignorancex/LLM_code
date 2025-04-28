@@ -1,0 +1,12 @@
+monet/lm_ops/lrbn.cpp: 2020-10-27T15:27:12Z
+monet/lm_ops/lrfuncs.cpp: 2021-05-04T21:13:29Z
+monet/lm_ops/lrln.cpp: 2021-05-04T21:13:29Z
+monet/lm_ops/lrrelu.cpp: 2020-10-27T15:27:12Z
+monet/lm_ops/pack.cpp: 2020-10-27T15:27:12Z
+monet/lm_ops/lrconv.cpp: 2020-10-27T15:27:12Z
+monet/lm_ops/conv.cpp: 2021-05-04T21:13:29Z
+monet/lm_ops/softmax.cpp: 2021-05-04T21:13:29Z
+monet/lm_ops/compress.cpp: 2021-05-04T21:13:29Z
+monet/lm_ops/lrhardtanh.cpp: 2020-10-27T15:27:12Z
+monet/lm_ops/lravg.cpp: 2020-10-27T15:27:12Z
+monet/lm_ops/maxpool.cpp: 2020-10-27T15:27:12Z

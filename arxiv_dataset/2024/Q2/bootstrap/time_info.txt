@@ -1,0 +1,14 @@
+pycl/02-rule30/rule30.py: 2024-05-30T04:10:22Z
+pycl/03-improved-rule30/float_rule30.py: 2024-05-30T04:10:22Z
+plotting.py: 2024-04-08T17:18:45Z
+fitting.py: 2024-10-02T13:39:48Z
+pycl/01-demos/test.py: 2024-05-30T04:10:22Z
+pycl/01-demos/mandelbrot.py: 2024-05-30T04:10:22Z
+4fit.py: 2024-04-10T13:09:00Z
+pycl/04-float_rule30/float_rule30.py: 2024-05-30T04:10:22Z
+pycl/06-2d/float_rule30.py: 2024-06-19T14:57:24Z
+taichi/frobose.py: 2024-04-08T16:45:34Z
+taichi/modified.py: 2024-06-19T23:34:31Z
+rust_mc/confience.py: 2024-08-09T17:43:23Z
+pycl/07-modified/modified.py: 2024-06-19T23:34:31Z
+pycl/05-game-of-life/life.py: 2024-06-19T14:57:24Z

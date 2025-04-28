@@ -1,0 +1,7 @@
+tests/test_fourier_vqa.py: 2024-01-29T13:27:14Z
+__init__.py: 2023-07-24T07:01:21Z
+jax_utils.py: 2023-02-28T07:58:58Z
+fourier_vqa.py: 2024-01-29T13:54:04Z
+tests/test_jax.py: 2023-02-25T11:31:56Z
+experiments_utils.py: 2023-03-15T13:19:51Z
+tests/test_experiments.py: 2023-03-15T13:19:51Z

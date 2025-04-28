@@ -1,0 +1,10 @@
+src/scripts/figure1.py: 2023-01-29T20:53:43Z
+src/scripts/figure1_prep.py: 2023-01-29T20:53:43Z
+src/scripts/utils/constants.py: 2023-01-28T22:39:39Z
+src/scripts/finchmoore2.py: 2023-01-29T04:17:46Z
+src/scripts/paths.py: 2023-01-28T01:57:59Z
+src/scripts/utils/__init__.py: 2023-01-28T16:40:43Z
+src/scripts/figure2.py: 2023-01-29T00:21:28Z
+src/scripts/finchmoore1.py: 2023-01-29T04:17:46Z
+src/scripts/utils/stats.py: 2023-01-28T22:39:39Z
+src/scripts/utils/plots.py: 2023-01-28T22:39:39Z

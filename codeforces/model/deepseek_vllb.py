@@ -114,7 +114,7 @@ def process_file(input_file, output_file):
 
     for idx, problem in enumerate(tqdm(data, desc="Processing Problems")):
         if problem["submission_id"] in processed_submission_ids:
-            # print(f"Skipping submission {problem["submission_id"]} as it has already been processed.")
+            print(f"Skipping submission {problem["submission_id"]} as it has already been processed.")
         else:
             updated_problem, processed_submission_ids = process_problem(problem, processed_submission_ids)
             existing_data.append(updated_problem)

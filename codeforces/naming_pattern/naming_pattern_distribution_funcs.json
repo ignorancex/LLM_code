@@ -1,0 +1,207 @@
+{
+    "python": {
+        "qwen_32b": {
+            "ac": {
+                "lowercase": 0.669735327963176,
+                "single_letter": 0.05293440736478711,
+                "Other": 0.04257767548906789,
+                "snake_case": 0.1611047180667434,
+                "camelCase": 0.047180667433831994,
+                "endsWithDigits": 0.009205983889528193,
+                "PascalCase": 0.012658227848101266,
+                "UPPERCASE": 0.004602991944764097
+            },
+            "ans": {
+                "lowercase": 0.1504043126684636,
+                "single_letter": 0.0,
+                "Other": 0.011859838274932614,
+                "snake_case": 0.8339622641509434,
+                "camelCase": 0.0,
+                "endsWithDigits": 0.0037735849056603774,
+                "PascalCase": 0.0,
+                "UPPERCASE": 0.0
+            },
+            "ref": {
+                "lowercase": 0.4573643410852713,
+                "single_letter": 0.019933554817275746,
+                "Other": 0.028792912513842746,
+                "snake_case": 0.4717607973421927,
+                "camelCase": 0.017718715393133997,
+                "endsWithDigits": 0.0022148394241417496,
+                "PascalCase": 0.0,
+                "UPPERCASE": 0.0022148394241417496
+            }
+        },
+        "deepseek_32b": {
+            "ac": {
+                "lowercase": 0.669735327963176,
+                "single_letter": 0.05293440736478711,
+                "Other": 0.04257767548906789,
+                "snake_case": 0.1611047180667434,
+                "camelCase": 0.047180667433831994,
+                "PascalCase": 0.012658227848101266,
+                "endsWithDigits": 0.009205983889528193,
+                "UPPERCASE": 0.004602991944764097
+            },
+            "ans": {
+                "lowercase": 0.4065040650406504,
+                "single_letter": 0.0040650406504065045,
+                "Other": 0.044715447154471545,
+                "snake_case": 0.532520325203252,
+                "camelCase": 0.0,
+                "PascalCase": 0.0,
+                "endsWithDigits": 0.012195121951219513,
+                "UPPERCASE": 0.0
+            },
+            "ref": {
+                "lowercase": 0.5701863354037268,
+                "single_letter": 0.017391304347826087,
+                "Other": 0.034782608695652174,
+                "snake_case": 0.3515527950310559,
+                "camelCase": 0.016149068322981366,
+                "PascalCase": 0.004968944099378882,
+                "endsWithDigits": 0.0037267080745341614,
+                "UPPERCASE": 0.0012422360248447205
+            }
+        },
+        "gemma_27b": {
+            "ac": {
+                "lowercase": 0.669735327963176,
+                "single_letter": 0.05293440736478711,
+                "Other": 0.04257767548906789,
+                "snake_case": 0.1611047180667434,
+                "camelCase": 0.047180667433831994,
+                "PascalCase": 0.012658227848101266,
+                "endsWithDigits": 0.009205983889528193,
+                "UPPERCASE": 0.004602991944764097
+            },
+            "ans": {
+                "lowercase": 0.855595667870036,
+                "single_letter": 0.0006016847172081829,
+                "Other": 0.0012033694344163659,
+                "snake_case": 0.13477737665463296,
+                "camelCase": 0.0036101083032490976,
+                "PascalCase": 0.0,
+                "endsWithDigits": 0.00421179302045728,
+                "UPPERCASE": 0.0
+            },
+            "ref": {
+                "lowercase": 0.6993006993006993,
+                "single_letter": 0.030303030303030304,
+                "Other": 0.03263403263403263,
+                "snake_case": 0.1993006993006993,
+                "camelCase": 0.02564102564102564,
+                "PascalCase": 0.005827505827505828,
+                "endsWithDigits": 0.002331002331002331,
+                "UPPERCASE": 0.004662004662004662
+            }
+        }
+    },
+    "cpp": {
+        "qwen_32b": {
+            "ac": {
+                "lowercase": 0.7905413237510143,
+                "single_letter": 0.016228121015416715,
+                "endsWithDigits": 0.01935783006838994,
+                "snake_case": 0.048684363046250144,
+                "camelCase": 0.05749391445461922,
+                "UPPERCASE": 0.015416714964645879,
+                "PascalCase": 0.043004520690854295,
+                "Other": 0.008809551408369073,
+                "UPPER_SNAKE_CASE": 0.0004636606004404776
+            },
+            "ans": {
+                "lowercase": 0.801354401805869,
+                "single_letter": 0.0006772009029345372,
+                "endsWithDigits": 0.0020316027088036117,
+                "snake_case": 0.10112866817155756,
+                "camelCase": 0.09322799097065462,
+                "UPPERCASE": 0.0,
+                "PascalCase": 0.0009029345372460496,
+                "Other": 0.0006772009029345372,
+                "UPPER_SNAKE_CASE": 0.0
+            },
+            "ref": {
+                "lowercase": 0.758844874508618,
+                "single_letter": 0.009525249470819473,
+                "endsWithDigits": 0.01451466586029634,
+                "snake_case": 0.06954944058058664,
+                "camelCase": 0.11037193831267009,
+                "UPPERCASE": 0.0060477774417901425,
+                "PascalCase": 0.025400665255518595,
+                "Other": 0.005140610825521621,
+                "UPPER_SNAKE_CASE": 0.0006047777441790142
+            }
+        },
+        "deepseek_32b": {
+            "ac": {
+                "lowercase": 0.7942782834850455,
+                "single_letter": 0.01612483745123537,
+                "snake_case": 0.0459037711313394,
+                "endsWithDigits": 0.019375812743823148,
+                "camelCase": 0.0576072821846554,
+                "UPPERCASE": 0.014694408322496749,
+                "PascalCase": 0.04226267880364109,
+                "Other": 0.009232769830949285,
+                "UPPER_SNAKE_CASE": 0.0005201560468140442
+            },
+            "ans": {
+                "lowercase": 0.7654867256637168,
+                "single_letter": 0.001327433628318584,
+                "snake_case": 0.1738938053097345,
+                "endsWithDigits": 0.0022123893805309734,
+                "camelCase": 0.04115044247787611,
+                "UPPERCASE": 0.0017699115044247787,
+                "PascalCase": 0.007079646017699115,
+                "Other": 0.007079646017699115,
+                "UPPER_SNAKE_CASE": 0.0
+            },
+            "ref": {
+                "lowercase": 0.7721801925722146,
+                "single_letter": 0.012035763411279229,
+                "snake_case": 0.09267537826685007,
+                "endsWithDigits": 0.013411279229711142,
+                "camelCase": 0.0703232462173315,
+                "UPPERCASE": 0.008253094910591471,
+                "PascalCase": 0.025275103163686384,
+                "Other": 0.005674002751031637,
+                "UPPER_SNAKE_CASE": 0.000171939477303989
+            }
+        },
+        "gemma_27b": {
+            "ac": {
+                "lowercase": 0.7913376683697166,
+                "single_letter": 0.016256386437529028,
+                "endsWithDigits": 0.019391546679052483,
+                "snake_case": 0.047607988852763586,
+                "UPPERCASE": 0.015443567115652578,
+                "PascalCase": 0.04307942405945193,
+                "camelCase": 0.057594054807245706,
+                "Other": 0.008824895494658615,
+                "UPPER_SNAKE_CASE": 0.00046446818392940084
+            },
+            "ans": {
+                "lowercase": 0.9170506912442397,
+                "single_letter": 0.0018433179723502304,
+                "endsWithDigits": 0.002457757296466974,
+                "snake_case": 0.04608294930875576,
+                "UPPERCASE": 0.0,
+                "PascalCase": 0.0,
+                "camelCase": 0.03195084485407066,
+                "Other": 0.0006144393241167435,
+                "UPPER_SNAKE_CASE": 0.0
+            },
+            "ref": {
+                "lowercase": 0.8032318032318032,
+                "single_letter": 0.013013013013013013,
+                "endsWithDigits": 0.018733018733018733,
+                "snake_case": 0.05276705276705277,
+                "UPPERCASE": 0.013299013299013299,
+                "PascalCase": 0.0378950378950379,
+                "camelCase": 0.054626054626054625,
+                "Other": 0.005863005863005863,
+                "UPPER_SNAKE_CASE": 0.000572000572000572
+            }
+        }
+    }
+}

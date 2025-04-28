@@ -1,0 +1,15 @@
+examples/examples/run_USuRPER_tests.py: 2022-09-02T13:53:27Z
+setup.py: 2020-07-15T07:12:02Z
+examples/run_USuRPER_tests.py: 2022-04-03T13:47:19Z
+sparta/Auxil/ReadSpec.py: 2022-04-13T05:43:01Z
+examples/examples/Partial Distance Correlation Periodogram/run_PPDC_tests.py: 2022-09-02T13:53:27Z
+sparta/Auxil/PeriodicityDetector.py: 2023-07-04T06:52:30Z
+sparta/Observations.py: 2022-09-02T13:53:27Z
+sparta/UNICOR/CCF1d.py: 2021-10-11T15:17:00Z
+sparta/UNICOR/Template.py: 2022-09-05T06:58:48Z
+sparta/UNICOR/__init__.py: 2020-07-15T07:12:02Z
+sparta/UNICOR/Spectrum.py: 2020-07-15T07:12:02Z
+sparta/Auxil/TimeSeries.py: 2023-06-13T10:14:09Z
+sparta/USURPER/USURPER_functions.py: 2024-02-02T12:06:01Z
+sparta/__init__.py: 2020-07-15T07:12:02Z
+examples/Partial Distance Correlation Periodogram/run_PPDC_tests.py: 2022-04-03T13:47:19Z

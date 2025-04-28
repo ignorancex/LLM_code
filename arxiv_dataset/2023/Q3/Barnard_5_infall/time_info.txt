@@ -1,0 +1,15 @@
+B5_IRS1_ALMA/non_thermal_emission_code.py: 2022-11-03T16:45:25Z
+B5_IRS1_ALMA/streamline_model_interactive.py: 2022-11-03T16:45:25Z
+B5_IRS1_ALMA/kep_rotation_upperedge.py: 2022-11-03T16:45:25Z
+B5_IRS1_ALMA/data/moments.py: 2023-04-05T09:51:44Z
+B5_IRS1_ALMA/transform_to_K.py: 2022-11-03T16:45:25Z
+B5_IRS1_ALMA/view_gauss_interactive_channelfiltered.py: 2022-11-03T16:45:25Z
+B5_IRS1_ALMA/gaussfit_H2CO/AICfunc.py: 2022-11-03T16:45:25Z
+B5_IRS1_ALMA/kep_rotation_maxvel_dom.py: 2022-11-03T16:45:25Z
+B5_IRS1_ALMA/view_gaussfit_interactive_total.py: 2023-02-06T14:58:26Z
+B5_NOEMA_30m/check_fit_HC3N_interactive.py: 2022-11-03T16:28:03Z
+B5_NOEMA_30m/prepare_data.py: 2023-07-21T13:15:55Z
+B5_NOEMA_30m/calculate_gradient_lic.py: 2023-02-22T10:32:48Z
+B5setup.py: 2023-02-27T13:15:28Z
+B5_IRS1_ALMA/view_gaussfit_interactive.py: 2022-11-03T16:45:25Z
+B5_NOEMA_30m/quick_moments_CASA.py: 2022-11-03T16:28:03Z

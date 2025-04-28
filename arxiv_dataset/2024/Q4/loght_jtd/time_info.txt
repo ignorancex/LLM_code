@@ -1,0 +1,4 @@
+lpl1chiD/figlpl.py: 2019-10-11T17:25:13Z
+lpl1chiD/listlpl.py: 2019-10-11T17:25:13Z
+generators/listgen.py: 2019-11-19T06:42:46Z
+generators/figure_1.py: 2019-11-19T06:42:46Z

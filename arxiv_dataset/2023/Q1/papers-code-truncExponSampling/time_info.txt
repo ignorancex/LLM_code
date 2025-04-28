@@ -1,0 +1,5 @@
+src/tau_vs_size_MC_emcee_uniform.py: 2022-12-12T13:29:05Z
+src/tau_vs_size_MC_emcee_truncated_versus_beta.py: 2022-12-12T13:29:05Z
+src/tau_vs_size_MC_emcee_truncated.py: 2022-12-12T13:29:05Z
+src/colors.py: 2022-12-12T13:29:05Z
+src/tau_vs_size_MC_emcee_uniform_versus_beta.py: 2022-12-12T13:29:05Z

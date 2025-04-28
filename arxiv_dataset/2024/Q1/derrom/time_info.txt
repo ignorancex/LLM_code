@@ -1,0 +1,14 @@
+derrom/__init__.py: 2023-02-28T20:03:55Z
+docs/conf.py: 2024-02-28T13:58:54Z
+derrom/scalers.py: 2023-03-04T15:27:13Z
+derrom/transformers.py: 2023-03-04T20:07:08Z
+derrom/optimizers.py: 2023-03-04T15:27:13Z
+derrom/estimator.py: 2024-03-25T09:38:43Z
+derrom/utils.py: 2023-03-10T19:49:34Z
+examples/ELPH/ELPH_utils.py: 2023-02-24T12:21:22Z
+examples/PHELPH/PHELPH.py: 2024-02-26T13:47:46Z
+examples/ELPH/ELPH.py: 2023-07-13T18:05:31Z
+examples/ELPH/fermi_fit.py: 2023-03-04T20:14:51Z
+misc/experimental_modules/dim_reducers.py: 2023-02-24T12:23:57Z
+misc/experimental_modules/optimizers.py: 2023-02-24T12:23:57Z
+derrom/dim_reducers.py: 2023-03-04T15:27:13Z

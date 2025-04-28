@@ -1,0 +1,13 @@
+spinosaurus/Utils/spherical_bessel_transform_fftw.py: 2023-09-24T03:32:33Z
+spinosaurus/Utils/__init__.py: 2023-09-24T03:32:33Z
+spinosaurus/Utils/spherical_bessel_transform.py: 2023-09-24T03:32:33Z
+spinosaurus/__init__.py: 2023-09-24T03:32:33Z
+spinosaurus/cleft_fftw.py: 2023-09-24T03:32:33Z
+setup.py: 2024-04-18T16:36:08Z
+spinosaurus/Utils/loginterp.py: 2023-09-24T03:32:33Z
+spinosaurus/Utils/qfuncfft.py: 2023-09-24T03:32:33Z
+spinosaurus/cleft_kexpanded_fftw.py: 2023-09-24T03:32:33Z
+spinosaurus/shape_shape_correlators_kexpanded_fftw.py: 2023-09-25T21:21:16Z
+spinosaurus/shape_shape_correlators_fftw.py: 2023-09-25T21:21:16Z
+spinosaurus/density_shape_correlators_fftw.py: 2023-09-25T21:21:16Z
+spinosaurus/density_shape_correlators_kexpanded_fftw.py: 2023-09-25T21:21:16Z

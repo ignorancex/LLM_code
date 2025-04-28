@@ -1,0 +1,8 @@
+disco/grid_sweep.py: 2023-10-11T21:21:51Z
+setup.py: 2023-10-12T01:24:48Z
+disco/walk.py: 2023-10-12T04:02:05Z
+scripts/nca_exp.py: 2023-10-12T04:02:47Z
+scripts/smoothlife_exp.py: 2023-10-12T04:02:47Z
+scripts/lenia_exp.py: 2023-10-12T04:02:47Z
+scripts/uskate_exp_NOT_USED.py: 2023-10-12T01:23:18Z
+scripts/glaberish_exp.py: 2023-10-12T04:02:47Z

@@ -1,0 +1,13 @@
+src/boundary.c: 2021-10-08T01:06:07Z
+examples/shear_hex_brittle.c: 2021-10-20T18:47:14Z
+examples/FCC_Al_R0.3_001_tension.c: 2021-10-20T18:47:14Z
+examples/3_point_bending_sq_brittle.c: 2021-10-20T18:47:14Z
+src/constitutive.c: 2021-10-08T01:06:07Z
+examples/CT_sc_ductile_nonlocal.c: 2021-10-20T18:47:14Z
+src/neighbor.c: 2021-10-08T01:06:07Z
+src/data_handler.c: 2021-10-08T01:06:07Z
+src/initialization.c: 2021-10-08T01:06:07Z
+src/lpm_basic.c: 2021-10-08T01:06:07Z
+src/lpmc_project.c: 2021-10-20T18:47:14Z
+src/solver.c: 2021-10-08T01:06:07Z
+src/stiffness.c: 2021-10-08T01:06:07Z

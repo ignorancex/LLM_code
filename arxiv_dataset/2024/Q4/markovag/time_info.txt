@@ -1,0 +1,4 @@
+markovag/cad.py: 2024-10-07T22:49:31Z
+markovag/__init__.py: 2024-10-07T22:49:31Z
+setup.py: 2024-10-07T22:49:31Z
+markovag/markov.py: 2024-10-07T22:49:31Z

@@ -1,0 +1,7 @@
+bisector.py: 2022-04-27T06:48:19Z
+pattern_basics.py: 2022-06-13T07:56:29Z
+verify_agars.py: 2022-04-27T06:48:19Z
+gol_agars.py: 2022-06-13T07:56:29Z
+totalizer.py: 2022-06-14T06:23:56Z
+sort_network.py: 2022-06-13T07:56:29Z
+rle_forced.py: 2022-02-14T09:55:54Z

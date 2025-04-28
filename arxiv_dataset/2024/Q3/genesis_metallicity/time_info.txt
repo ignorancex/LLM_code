@@ -1,0 +1,13 @@
+genesis_metallicity/metallicity/__init__.py: 2024-09-10T16:02:04Z
+genesis_metallicity/dust/extinction_correction.py: 2024-09-11T13:26:17Z
+genesis_metallicity/dust/__init__.py: 2024-09-10T16:02:04Z
+genesis_metallicity/__init__.py: 2024-09-10T16:02:04Z
+genesis_metallicity/data/lines.py: 2024-09-10T16:02:04Z
+genesis_metallicity/data/__init__.py: 2024-09-10T16:02:04Z
+genesis_metallicity/genesis_metallicity.py: 2024-09-11T13:26:17Z
+genesis_metallicity/dust/attenuation.py: 2024-09-10T16:02:04Z
+genesis_metallicity/metallicity/strong_method.py: 2024-09-11T13:26:17Z
+setup.py: 2024-09-12T18:22:17Z
+genesis_metallicity/metallicity/direct_method.py: 2024-09-11T13:26:17Z
+genesis_metallicity/temperature/__init__.py: 2024-09-10T16:02:04Z
+genesis_metallicity/temperature/temperature_estimator.py: 2024-09-11T13:26:17Z

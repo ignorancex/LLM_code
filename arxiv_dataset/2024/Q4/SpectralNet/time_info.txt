@@ -1,0 +1,13 @@
+src/applications/__init__.py: 2018-01-04T22:13:47Z
+src/applications/plot_2d.py: 2018-02-13T01:24:04Z
+src/core/layer.py: 2018-01-04T22:13:47Z
+src/core/data.py: 2018-09-25T20:18:55Z
+src/applications/run.py: 2018-01-04T22:13:47Z
+data/reuters/make_reuters.py: 2018-01-04T22:13:47Z
+src/core/pairs.py: 2018-01-04T22:13:47Z
+src/core/__init__.py: 2018-01-04T22:13:47Z
+src/core/train.py: 2018-07-08T21:00:31Z
+src/core/util.py: 2018-07-08T21:00:31Z
+src/core/networks.py: 2018-04-16T21:39:09Z
+src/core/costs.py: 2018-04-16T21:39:09Z
+src/applications/spectralnet.py: 2018-04-16T21:39:09Z

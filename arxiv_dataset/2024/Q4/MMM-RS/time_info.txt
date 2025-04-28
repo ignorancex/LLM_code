@@ -1,0 +1,9 @@
+Standardized_processing/NaSC-TG.py: 2024-11-25T11:37:59Z
+Standardized_processing/TGRS-HRRSD.py: 2024-11-25T11:39:54Z
+Standardized_processing/GID.py: 2024-09-08T14:15:57Z
+Standardized_processing/SEN1-2.py: 2024-11-25T11:38:53Z
+Standardized_processing/HRSC2016.py: 2024-12-26T04:04:29Z
+Standardized_processing/WHU_OPT_SAR.py: 2024-12-26T03:06:14Z
+Standardized_processing/Inria.py: 2024-11-25T11:32:09Z
+Standardized_processing/MRSSC2.0.py: 2025-01-02T07:45:54Z
+Standardized_processing/fMoW.py: 2024-12-18T09:38:39Z

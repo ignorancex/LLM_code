@@ -1,0 +1,2 @@
+stylegan2/op/upfirdn2d.cpp: 2021-08-17T20:31:45Z
+stylegan2/op/fused_bias_act.cpp: 2021-08-17T20:31:45Z

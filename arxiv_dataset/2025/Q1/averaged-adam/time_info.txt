@@ -1,0 +1,15 @@
+Scripts/BurgersPINN_Testing.py: 2025-01-09T17:52:46Z
+Scripts/DeepBSDE_Testing.py: 2025-01-09T17:52:46Z
+Scripts/KolmogorovHeat_Testing.py: 2025-01-09T17:52:46Z
+Scripts/Control_Testing.py: 2025-01-09T17:52:46Z
+Scripts/Cifar10_Testing.py: 2025-01-09T17:52:46Z
+Scripts/BlackScholes_Testing.py: 2025-01-09T17:52:46Z
+Scripts/PINN_Testing.py: 2025-01-09T17:52:46Z
+Scripts/ANN_Testing.py: 2025-01-09T17:52:46Z
+Utils/ANN_Models.py: 2025-01-09T17:52:46Z
+Scripts/PolyReg_Testing.py: 2025-01-09T17:52:46Z
+Utils/Algorithms.py: 2025-01-09T17:52:46Z
+Utils/PDEs_ScikitFEM.py: 2025-01-09T17:52:46Z
+Utils/ImageNets.py: 2025-01-09T17:52:46Z
+Utils/__init__.py: 2025-01-09T17:52:46Z
+Utils/Initializers.py: 2025-01-09T17:52:46Z

@@ -1,0 +1,11 @@
+adagrad/sgd.py: 2024-11-08T18:36:23Z
+adagrad/with_numba.py: 2024-11-08T18:36:23Z
+adagrad/percentile_plot.py: 2024-11-08T18:36:23Z
+cifar/real_data.py: 2024-11-08T18:36:23Z
+adagrad/mcmc.py: 2024-11-08T18:36:23Z
+adagrad/utils.py: 2024-11-08T18:36:23Z
+cifar/sgd.py: 2024-11-08T18:36:23Z
+adagrad/ode.py: 2024-11-08T18:36:23Z
+line_search/line_search.py: 2024-11-08T18:36:23Z
+line_search/line_search_trace.py: 2024-11-08T18:36:23Z
+cifar/volterra.py: 2024-11-08T18:36:23Z

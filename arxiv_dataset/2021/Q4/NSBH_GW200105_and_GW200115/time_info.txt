@@ -1,0 +1,11 @@
+Scripts/ClassCOMPAS.py: 2021-08-11T14:34:50Z
+plottingCode/Fig_1/review_scripts.py: 2021-08-11T14:34:50Z
+Scripts/PostProcessingScripts.py: 2021-08-11T14:34:50Z
+Scripts/ClassCosmicIntegrator.py: 2021-08-11T14:34:50Z
+Scripts/ClassFormationChannels.py: 2021-08-11T14:34:50Z
+Scripts/FormationChannel.py: 2021-08-11T14:34:50Z
+plottingCode/Fig_2/seaborn_utility.py: 2021-08-11T14:34:50Z
+Scripts/totalMassEvolvedPerZ.py: 2021-08-11T14:34:50Z
+produceDataCode/produce_summary_data_figure_1.py: 2021-08-11T14:34:50Z
+plottingCode/Fig_3_and_4/seaborn_utility.py: 2021-08-11T14:34:50Z
+Scripts/ClassMSSFR.py: 2021-08-11T14:34:50Z

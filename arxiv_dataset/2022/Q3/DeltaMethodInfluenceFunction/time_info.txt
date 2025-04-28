@@ -1,0 +1,5 @@
+Articleplots/Derivative_1.py: 2021-12-09T17:43:44Z
+Articleplots/Derivative_4.py: 2021-12-09T17:43:44Z
+Articleplots/ECDF.py: 2022-02-11T00:25:30Z
+Articleplots/derivative_2.py: 2021-12-09T17:43:44Z
+Articleplots/Derivative_3.py: 2021-12-09T17:43:44Z

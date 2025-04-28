@@ -1,0 +1,12 @@
+eclaire/io.py: 2024-04-18T05:03:52Z
+eclaire/reproject/reproject.py: 2024-04-18T05:03:52Z
+eclaire/__init__.py: 2024-04-18T05:03:52Z
+eclaire/fix.py: 2024-04-18T05:03:52Z
+eclaire/common.py: 2020-08-01T12:37:22Z
+eclaire/reproject/__init__.py: 2024-04-18T05:03:52Z
+eclaire/la_cosmic/__init__.py: 2024-07-18T03:04:05Z
+eclaire/align.py: 2024-04-18T05:03:52Z
+eclaire/reproject/wcslib.py: 2024-04-18T05:03:52Z
+setup.py: 2024-07-18T03:04:05Z
+eclaire/stats.py: 2024-07-18T03:04:05Z
+eclaire/util.py: 2024-04-18T05:03:52Z

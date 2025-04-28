@@ -1,0 +1,11 @@
+swdf/benchmark.py: 2023-05-10T00:07:44Z
+swdf/models.py: 2024-04-23T10:26:00Z
+swdf/_modidx.py: 2024-09-02T10:55:00Z
+setup.py: 2023-02-28T18:22:43Z
+swdf/losses.py: 2024-08-16T11:17:00Z
+to_run/training.py: 2023-03-22T14:40:42Z
+swdf/preprocessing.py: 2024-08-14T12:46:00Z
+swdf/utils.py: 2024-08-16T14:09:00Z
+swdf/metrics.py: 2024-08-16T11:17:00Z
+swdf/__init__.py: 2023-03-14T16:14:18Z
+swdf/plots.py: 2024-08-12T14:03:00Z

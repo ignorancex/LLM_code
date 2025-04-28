@@ -1,0 +1,17 @@
+SIP_BNN/prior_BNN.py: 2021-10-14T17:06:44Z
+SIP_BNN/aux_functions.py: 2021-10-14T17:06:44Z
+SIP_BNN/old_prior.py: 2021-10-14T17:06:44Z
+SIP_BNN/data_precision_type.py: 2021-10-14T17:06:44Z
+SIP_BNN/posterior_neural_sampler.py: 2021-10-14T17:06:44Z
+SIP_BNN/SIP_bnn.py: 2021-10-14T17:06:44Z
+SIP_BNN/orig_AIP.py: 2021-10-14T17:06:44Z
+SIP_NS/SIP_ns.py: 2021-10-14T17:06:44Z
+SIP_BNN/random_seed.py: 2021-10-14T17:06:44Z
+SIP_NS/aux_functions.py: 2021-10-14T17:06:44Z
+SIP_NS/BNN_prior.py: 2021-10-14T17:06:44Z
+SIP_NS/data_precision_type.py: 2021-10-14T17:06:44Z
+SIP_NS/posterior_neural_sampler.py: 2021-10-14T17:06:44Z
+SIP_NS/prior_neural_sampler.py: 2021-10-14T17:06:44Z
+SIP_NS/random_seed.py: 2021-10-14T17:06:44Z
+SIP_NS/discriminators.py: 2021-10-14T17:06:44Z
+SIP_BNN/discriminators.py: 2021-10-14T17:06:44Z

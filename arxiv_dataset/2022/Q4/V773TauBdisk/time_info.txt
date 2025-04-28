@@ -1,0 +1,12 @@
+src/scripts/analyze_and_plot_C_orbit_bundle.py: 2022-06-18T12:24:58Z
+src/scripts/make_astrometry_ABC_plot.py: 2022-06-24T05:13:45Z
+src/scripts/fig2_complete_lightcurve.py: 2022-07-07T03:31:17Z
+src/scripts/fig8_tess_mcmc.py: 2022-07-12T23:45:23Z
+src/scripts/fig9_periodograms.py: 2022-07-07T03:31:17Z
+src/scripts/make_astrom_ABC_chain.py: 2022-06-24T05:13:45Z
+src/scripts/analyze_and_plot_AB_orbit_bundle.py: 2022-06-24T05:13:45Z
+src/scripts/fig10_long_periods.py: 2022-07-07T03:31:17Z
+src/scripts/make_v773_tau_AB_bundle.py: 2022-07-13T22:47:25Z
+src/scripts/paths.py: 2022-07-14T14:54:38Z
+src/scripts/v773tau_functions.py: 2022-07-07T03:31:17Z
+src/scripts/make_fig3_v773tau.py: 2022-07-14T14:03:16Z

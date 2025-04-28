@@ -1,0 +1,11 @@
+notebooks/style-swin-gan/model/SwinTransformer.py: 2023-04-07T07:40:14Z
+notebooks/style-swin-gan/model/diffaug.py: 2023-04-07T07:40:14Z
+notebooks/style-swin-gan/model/generator.py: 2023-04-07T07:40:14Z
+notebooks/style-swin-gan/model/discriminator.py: 2023-04-07T07:40:14Z
+notebooks/style-swin-gan/model/dataset.py: 2023-04-07T07:40:14Z
+notebooks/style-swin-gan/model/128/generator.py: 2023-04-07T07:40:14Z
+notebooks/style-swin-gan/model/128/discriminator.py: 2023-04-07T07:40:14Z
+dependencies/packages_versions.py: 2023-04-07T07:40:14Z
+notebooks/style-swin-gan/utils_nvidia/upfirdn2d.py: 2023-04-07T07:40:14Z
+notebooks/style-swin-gan/utils_nvidia/fused_act.py: 2023-04-07T07:40:14Z
+notebooks/style-swin-gan/model/utils.py: 2023-04-07T07:40:14Z

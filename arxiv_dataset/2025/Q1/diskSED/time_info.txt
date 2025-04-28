@@ -1,0 +1,8 @@
+diskSED/reddenCCM.py: 2024-12-26T20:43:00Z
+setup.py: 2024-12-26T20:43:00Z
+diskSED/get_properties.py: 2024-12-26T20:43:00Z
+diskSED/diskSED.py: 2024-12-26T20:43:00Z
+examples/.ipynb_checkpoints/fitting-checkpoint.py: 2024-12-26T18:43:22Z
+diskSED/reddenSF.py: 2024-12-26T20:43:00Z
+examples/fitting.py: 2024-12-26T18:43:22Z
+diskSED/__init__.py: 2024-12-26T20:43:00Z

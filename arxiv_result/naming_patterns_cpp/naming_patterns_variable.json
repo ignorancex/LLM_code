@@ -1,0 +1,233 @@
+{
+  "2020Q1": {
+    "single_letter": 0.101972,
+    "lowercase": 0.299954,
+    "UPPERCASE": 0.004419,
+    "camelCase": 0.119982,
+    "snake_case": 0.231125,
+    "PascalCase": 0.004753,
+    "UPPER_SNAKE_CASE": 0.015092,
+    "endsWithDigits": 0.064076,
+    "Other": 0.158628
+  },
+  "2020Q2": {
+    "single_letter": 0.094062,
+    "lowercase": 0.279793,
+    "UPPERCASE": 0.002206,
+    "camelCase": 0.03755,
+    "snake_case": 0.248017,
+    "PascalCase": 0.004271,
+    "UPPER_SNAKE_CASE": 0.007932,
+    "endsWithDigits": 0.088101,
+    "Other": 0.238066
+  },
+  "2020Q3": {
+    "single_letter": 0.103613,
+    "lowercase": 0.290461,
+    "UPPERCASE": 0.002906,
+    "camelCase": 0.060677,
+    "snake_case": 0.226152,
+    "PascalCase": 0.054751,
+    "UPPER_SNAKE_CASE": 0.002944,
+    "endsWithDigits": 0.080444,
+    "Other": 0.178054
+  },
+  "2020Q4": {
+    "single_letter": 0.092776,
+    "lowercase": 0.332335,
+    "UPPERCASE": 0.003651,
+    "camelCase": 0.051484,
+    "snake_case": 0.20218,
+    "PascalCase": 0.015682,
+    "UPPER_SNAKE_CASE": 0.001077,
+    "endsWithDigits": 0.074757,
+    "Other": 0.226057
+  },
+  "2021Q1": {
+    "single_letter": 0.096211,
+    "lowercase": 0.247834,
+    "UPPERCASE": 0.002904,
+    "camelCase": 0.064124,
+    "snake_case": 0.221071,
+    "PascalCase": 0.008179,
+    "UPPER_SNAKE_CASE": 0.007163,
+    "endsWithDigits": 0.109616,
+    "Other": 0.242898
+  },
+  "2021Q2": {
+    "single_letter": 0.068307,
+    "lowercase": 0.193626,
+    "UPPERCASE": 0.001841,
+    "camelCase": 0.078267,
+    "snake_case": 0.191583,
+    "PascalCase": 0.009481,
+    "UPPER_SNAKE_CASE": 0.007716,
+    "endsWithDigits": 0.075443,
+    "Other": 0.373736
+  },
+  "2021Q3": {
+    "single_letter": 0.085209,
+    "lowercase": 0.240651,
+    "UPPERCASE": 0.004811,
+    "camelCase": 0.122563,
+    "snake_case": 0.179076,
+    "PascalCase": 0.005898,
+    "UPPER_SNAKE_CASE": 0.004392,
+    "endsWithDigits": 0.08136,
+    "Other": 0.276039
+  },
+  "2021Q4": {
+    "single_letter": 0.096214,
+    "lowercase": 0.324176,
+    "UPPERCASE": 0.002458,
+    "camelCase": 0.072149,
+    "snake_case": 0.196783,
+    "PascalCase": 0.006943,
+    "UPPER_SNAKE_CASE": 0.001811,
+    "endsWithDigits": 0.064128,
+    "Other": 0.235337
+  },
+  "2022Q1": {
+    "single_letter": 0.091642,
+    "lowercase": 0.280468,
+    "UPPERCASE": 0.003415,
+    "camelCase": 0.065107,
+    "snake_case": 0.260371,
+    "PascalCase": 0.025248,
+    "UPPER_SNAKE_CASE": 0.003191,
+    "endsWithDigits": 0.065834,
+    "Other": 0.204725
+  },
+  "2022Q2": {
+    "single_letter": 0.10993,
+    "lowercase": 0.277658,
+    "UPPERCASE": 0.002185,
+    "camelCase": 0.035989,
+    "snake_case": 0.267884,
+    "PascalCase": 0.014699,
+    "UPPER_SNAKE_CASE": 0.002777,
+    "endsWithDigits": 0.092232,
+    "Other": 0.196645
+  },
+  "2022Q3": {
+    "single_letter": 0.0992,
+    "lowercase": 0.296098,
+    "UPPERCASE": 0.002436,
+    "camelCase": 0.074471,
+    "snake_case": 0.237057,
+    "PascalCase": 0.005928,
+    "UPPER_SNAKE_CASE": 0.015755,
+    "endsWithDigits": 0.100378,
+    "Other": 0.168677
+  },
+  "2022Q4": {
+    "single_letter": 0.09938,
+    "lowercase": 0.298326,
+    "UPPERCASE": 0.001896,
+    "camelCase": 0.044811,
+    "snake_case": 0.274464,
+    "PascalCase": 0.005226,
+    "UPPER_SNAKE_CASE": 0.003237,
+    "endsWithDigits": 0.071541,
+    "Other": 0.201119
+  },
+  "2023Q1": {
+    "single_letter": 0.086466,
+    "lowercase": 0.248756,
+    "UPPERCASE": 0.003086,
+    "camelCase": 0.039709,
+    "snake_case": 0.235121,
+    "PascalCase": 0.005113,
+    "UPPER_SNAKE_CASE": 0.005067,
+    "endsWithDigits": 0.071402,
+    "Other": 0.305279
+  },
+  "2023Q2": {
+    "single_letter": 0.104593,
+    "lowercase": 0.309852,
+    "UPPERCASE": 0.001487,
+    "camelCase": 0.063184,
+    "snake_case": 0.246787,
+    "PascalCase": 0.007853,
+    "UPPER_SNAKE_CASE": 0.001785,
+    "endsWithDigits": 0.086268,
+    "Other": 0.178189
+  },
+  "2023Q3": {
+    "single_letter": 0.098595,
+    "lowercase": 0.257708,
+    "UPPERCASE": 0.002295,
+    "camelCase": 0.037358,
+    "snake_case": 0.334361,
+    "PascalCase": 0.009393,
+    "UPPER_SNAKE_CASE": 0.006238,
+    "endsWithDigits": 0.085329,
+    "Other": 0.168722
+  },
+  "2023Q4": {
+    "single_letter": 0.086912,
+    "lowercase": 0.251343,
+    "UPPERCASE": 0.004139,
+    "camelCase": 0.033308,
+    "snake_case": 0.245732,
+    "PascalCase": 0.004258,
+    "UPPER_SNAKE_CASE": 0.011023,
+    "endsWithDigits": 0.090135,
+    "Other": 0.273151
+  },
+  "2024Q1": {
+    "single_letter": 0.120822,
+    "lowercase": 0.308058,
+    "UPPERCASE": 0.002488,
+    "camelCase": 0.048891,
+    "snake_case": 0.257112,
+    "PascalCase": 0.028177,
+    "UPPER_SNAKE_CASE": 0.00411,
+    "endsWithDigits": 0.07377,
+    "Other": 0.156571
+  },
+  "2024Q2": {
+    "single_letter": 0.152828,
+    "lowercase": 0.276154,
+    "UPPERCASE": 0.003905,
+    "camelCase": 0.045068,
+    "snake_case": 0.281794,
+    "PascalCase": 0.027171,
+    "UPPER_SNAKE_CASE": 0.006399,
+    "endsWithDigits": 0.091654,
+    "Other": 0.115028
+  },
+  "2024Q3": {
+    "single_letter": 0.032266,
+    "lowercase": 0.068298,
+    "UPPERCASE": 0.000509,
+    "camelCase": 0.011897,
+    "snake_case": 0.054693,
+    "PascalCase": 0.00778,
+    "UPPER_SNAKE_CASE": 0.001057,
+    "endsWithDigits": 0.79272,
+    "Other": 0.03078
+  },
+  "2024Q4": {
+    "single_letter": 0.079534,
+    "lowercase": 0.169023,
+    "UPPERCASE": 0.003374,
+    "camelCase": 0.023704,
+    "snake_case": 0.228116,
+    "PascalCase": 0.021836,
+    "UPPER_SNAKE_CASE": 0.003346,
+    "endsWithDigits": 0.271201,
+    "Other": 0.199866
+  },
+  "2025Q1": {
+    "single_letter": 0.10646,
+    "lowercase": 0.248319,
+    "UPPERCASE": 0.003087,
+    "camelCase": 0.07406,
+    "snake_case": 0.273622,
+    "PascalCase": 0.020657,
+    "UPPER_SNAKE_CASE": 0.008049,
+    "endsWithDigits": 0.087909,
+    "Other": 0.177837
+  }
+}

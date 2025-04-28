@@ -1,0 +1,13 @@
+kilopop/mappings.py: 2023-02-24T13:13:25Z
+kilopop/population_priors.py: 2023-02-24T13:13:25Z
+kilopop/kilonovae.py: 2023-02-24T13:13:25Z
+kilopop/equation_of_state.py: 2023-02-24T13:13:25Z
+setup.py: 2023-02-24T13:13:25Z
+kilopop/__init__.py: 2023-02-24T13:13:25Z
+kilopop/macronovae_wrapper.py: 2023-02-24T13:13:25Z
+docs/conf.py: 2023-02-24T13:13:25Z
+tests/test_macronova_wrapper.py: 2023-02-24T13:13:25Z
+tests/test_mappings.py: 2023-02-24T13:13:25Z
+tests/test_kilonovae.py: 2023-02-24T14:39:01Z
+tests/test_equation_of_state.py: 2023-02-24T13:13:25Z
+tests/test_population_priors.py: 2023-02-24T13:13:25Z

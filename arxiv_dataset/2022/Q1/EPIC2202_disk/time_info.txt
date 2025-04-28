@@ -1,0 +1,14 @@
+Code/__init__.py: 2021-10-12T14:02:12Z
+Code/eclipse.py: 2021-10-12T14:02:12Z
+Code/orbital_analysis.py: 2021-10-12T14:02:12Z
+create_master_photometry.py: 2021-10-12T13:56:19Z
+Code/ground_variation.py: 2021-10-12T14:02:12Z
+Code/stellar_variation.py: 2021-10-12T14:02:12Z
+pyPplusS/__init__.py: 2021-10-12T14:04:15Z
+pyPplusS/error_order_fin.py: 2021-10-12T14:04:15Z
+pyPplusS/base_functions.py: 2021-10-12T14:04:15Z
+Code/mcmc.py: 2021-10-12T14:02:12Z
+pyPplusS/polygon_plus_segments.py: 2021-10-12T14:04:15Z
+pyPplusS/fastqs.py: 2021-10-12T14:04:15Z
+Code/period_analysis.py: 2021-10-12T14:02:12Z
+pyPplusS/segment_models.py: 2021-10-12T14:04:15Z

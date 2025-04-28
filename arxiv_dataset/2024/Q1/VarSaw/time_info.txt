@@ -1,0 +1,13 @@
+scaled_nm_files/vqe_with_jigsaw_spsa_scaled_nm_ro_errors.py: 2023-03-02T14:11:23Z
+Reconstruction_Functions.py: 2023-03-02T14:11:23Z
+scaled_nm_files/vqe_spsa_scaled_nm_ro_errors.py: 2023-03-02T14:11:23Z
+helper_functions.py: 2023-03-02T14:11:23Z
+scaled_nm_files/vqe_with_jigsaw_spsa_scaled_nm.py: 2023-03-02T14:11:23Z
+scaled_nm_files/vqe_with_jigsaw_spsa_no_noise.py: 2023-03-02T14:11:23Z
+term_grouping.py: 2023-03-02T14:11:23Z
+scaled_nm_files/vqe_spsa_scaled_nm.py: 2023-03-02T14:11:23Z
+vqe_on_device_lagos.py: 2023-03-02T14:29:36Z
+vqe_with_jigsaw_and_varsaw_spsa.py: 2023-03-02T14:28:44Z
+vqe_spsa.py: 2023-03-02T14:27:46Z
+vqe_with_jigsaw_spsa_diff_p.py: 2023-03-02T14:32:22Z
+vqe_with_jigsaw_spsa_diff_ansatz.py: 2023-03-02T14:11:23Z

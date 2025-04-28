@@ -8,7 +8,8 @@ import os
 
 # === 配置路径 ===
 only_links_path = 'LLM_code/code/github_links/Only_links.json'
-valid_links_path = 'LLM_code/code/github_links/cpp_repos.json'
+dataset_links_path = 'LLM_code/code/github_links/cpp_dataset_links.json'
+simulation_links_path = 'LLM_code/code/github_links/cpp_simulation_links.json'
 
 # === GitHub Token ===
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "")  # ✅ 建议用环境变量
@@ -18,14 +19,17 @@ HEADERS = {
 }
 
 # === 要处理的季度列表 ===
-quarters = ["2021Q1", "2021Q2", "2021Q3", "2021Q4"]
+quarters = [f"{year}Q{q}" for year in range(2023, 2026) for q in range(1, 5)]
 
 # === 加载链接数据 ===
 with open(only_links_path, 'r', encoding='utf-8') as f:
     all_only_links = json.load(f)
 
-with open(valid_links_path, 'r', encoding='utf-8') as f:
-    all_valid_links = json.load(f)
+with open(dataset_links_path, 'r', encoding='utf-8') as f:
+    dataset_links = json.load(f)
+
+with open(simulation_links_path, 'r', encoding='utf-8') as f:
+    simulation_links = json.load(f)
 
 # === 获取默认分支 ===
 def get_default_branch(user, repo):
@@ -62,18 +66,19 @@ def has_c_cpp_file_fast(user, repo):
 for quarter in quarters:
     print(f"\n📦 处理季度：{quarter}")
 
-    # def center_sorted(lst):
-    #     n = len(lst)
-    #     mid = (n - 1) / 2
-    #     return [x for _, x in sorted(enumerate(lst), key=lambda t: abs(t[0] - mid))]
-
     only_links = all_only_links.get(quarter, [])
-    existing_links = set(all_valid_links.get(quarter, []))
+    
+    # ✅ 修改 existing_links 合并逻辑
+    dataset = dataset_links.get(quarter, [])
+    simulation = simulation_links.get(quarter, [])
+    existing_links = set(dataset + simulation)
+
     to_check_links = [link for link in reversed(only_links) if link not in existing_links]
 
-    needed_count = 103 - len(existing_links)
-    if quarter in ["2021Q1", "2021Q2", "2021Q3", "2021Q4"]:
-        needed_count = 128 - len(existing_links)
+    # 计算需要补充的数量
+    needed_count = 605 - len(existing_links)
+    if quarter.startswith("2021"):
+        needed_count = 630 - len(existing_links)
 
     if needed_count <= 0:
         print(f"✅ {quarter} 已有 {len(existing_links)} 个有效链接，无需补充。")
@@ -102,14 +107,6 @@ for quarter in quarters:
     with open(output_target_path, 'w', encoding='utf-8') as f:
         json.dump(results, f, indent=4)
 
-    # === 更新 valid_links 数据并保存 ===
-    all_valid_links.setdefault(quarter, [])
-    all_valid_links[quarter].extend(results)
+    print(f"✅ {quarter} 筛选完成，保存 {len(results)} 个链接到 {output_target_path}")
 
-    print(f"✅ {quarter} 筛选完成，添加 {len(results)} 个链接，保存至 {output_target_path}")
-
-# === 保存更新后的 valid_links_by_quarter.json ===
-with open(valid_links_path, 'w', encoding='utf-8') as f:
-    json.dump(all_valid_links, f, indent=4)
-
-print("\n📝 所有季度处理完成，valid_links_by_quarter.json 已更新。")
+print("\n📝 所有季度处理完成。")

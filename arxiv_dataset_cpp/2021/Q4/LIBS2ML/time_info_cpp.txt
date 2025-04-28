@@ -1,0 +1,12 @@
+methods/stron_pcg.cpp: 2019-04-20T11:18:09Z
+methods/stron_pcg_prog.cpp: 2019-04-20T11:18:09Z
+methods/stron.cpp: 2019-04-20T11:18:09Z
+methods/lbfgs.cpp: 2019-04-20T11:18:09Z
+methods/stron_svrg.cpp: 2019-04-20T11:18:09Z
+methods/tron.cpp: 2019-04-20T11:18:09Z
+others/helpers.cpp: 2019-04-20T11:18:09Z
+mexfiles/interface.cpp: 2019-04-25T14:33:33Z
+problems/linear_svm.cpp: 2019-04-20T11:18:09Z
+problems/logistic_regression.cpp: 2019-04-20T11:18:09Z
+methods/NewtonCG.cpp: 2019-04-20T11:18:09Z
+methods/sqn.cpp: 2019-04-20T11:18:09Z

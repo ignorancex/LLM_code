@@ -1,0 +1,16 @@
+lyman_alpha_reconstruction/comparison/experimental_values.py: 2020-09-20T05:25:32Z
+lyman_alpha_reconstruction/comparison/.ipynb_checkpoints/__init__-checkpoint.py: 2020-09-20T05:25:32Z
+lyman_alpha_reconstruction/.ipynb_checkpoints/__init__-checkpoint.py: 2020-09-20T05:25:32Z
+lyman_alpha_reconstruction/data_preprocessing/__init__.py: 2020-09-20T05:25:32Z
+lyman_alpha_reconstruction/comparison/__init__.py: 2020-09-20T05:25:32Z
+lyman_alpha_reconstruction/comparison/.ipynb_checkpoints/experimental_values-checkpoint.py: 2020-09-20T05:25:32Z
+lyman_alpha_reconstruction/data_preprocessing/.ipynb_checkpoints/__init__-checkpoint.py: 2020-09-20T05:25:32Z
+lyman_alpha_reconstruction/reconstruction_methods/.ipynb_checkpoints/__init__-checkpoint.py: 2020-09-20T05:25:32Z
+lyman_alpha_reconstruction/reconstruction_methods/.ipynb_checkpoints/log_predictor-checkpoint.py: 2020-09-20T05:25:32Z
+lyman_alpha_reconstruction/reconstruction_methods/.ipynb_checkpoints/conv_net-checkpoint.py: 2020-09-20T05:25:32Z
+lyman_alpha_reconstruction/reconstruction_methods/conv_net.py: 2020-09-20T05:25:32Z
+lyman_alpha_reconstruction/__init__.py: 2020-09-20T05:25:32Z
+lyman_alpha_reconstruction/reconstruction_methods/log_predictor.py: 2020-09-20T05:25:32Z
+lyman_alpha_reconstruction/reconstruction_methods/netfactory.py: 2020-09-20T05:25:32Z
+lyman_alpha_reconstruction/reconstruction_methods/.ipynb_checkpoints/netfactory-checkpoint.py: 2020-09-20T05:25:32Z
+lyman_alpha_reconstruction/reconstruction_methods/__init__.py: 2020-09-20T05:25:32Z

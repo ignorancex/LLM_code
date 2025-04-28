@@ -1,0 +1,12 @@
+alpro/fourier_core.py: 2022-02-17T15:16:50Z
+alpro/__init__.py: 2024-10-30T12:23:21Z
+alpro/pure.py: 2022-02-17T10:20:02Z
+alpro/alpro_numba.py: 2024-10-30T13:29:40Z
+alpro/main.py: 2024-08-02T15:38:12Z
+alpro/parallel.py: 2022-02-17T10:20:02Z
+alpro/models.py: 2024-10-30T12:23:21Z
+alpro/test.py: 2022-02-17T15:16:50Z
+docs/source/conf.py: 2022-02-18T09:46:06Z
+setup.py: 2022-02-18T10:32:40Z
+alpro/util.py: 2022-02-17T10:20:02Z
+alpro/fourier.py: 2024-10-30T12:06:56Z

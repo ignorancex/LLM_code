@@ -1,0 +1,12 @@
+src/BCemu/download.py: 2024-12-26T14:57:34Z
+setup.py: 2024-12-26T14:39:58Z
+examples/test_cosmo.py: 2021-08-30T09:42:20Z
+src/BCemu/__init__.py: 2024-12-26T14:39:58Z
+src/BCemu/BaryonEffectsEmulator.py: 2024-12-30T14:21:56Z
+src/BCemu/datasets.py: 2024-12-26T14:57:34Z
+examples/test.py: 2023-04-04T13:29:07Z
+examples/xray_gas_data.py: 2024-09-30T09:46:04Z
+src/BCemu/functions.py: 2024-12-26T14:39:58Z
+src/BCemu/kpls.py: 2024-12-26T14:39:58Z
+tests/sample_BCparam.py: 2023-04-04T13:29:07Z
+tests/test_Sk.py: 2024-12-30T14:13:59Z

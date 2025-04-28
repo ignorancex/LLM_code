@@ -1,0 +1,8 @@
+autoscatter/architecture_optimizer.py: 2025-02-21T10:46:34Z
+autoscatter/__init__.py: 2025-02-21T10:46:34Z
+setup.py: 2025-02-21T10:48:19Z
+autoscatter/architecture.py: 2025-02-21T10:46:34Z
+autoscatter/jax_functions.py: 2025-02-21T10:46:34Z
+autoscatter/constraints.py: 2025-02-21T10:46:34Z
+autoscatter/scattering.py: 2025-02-21T10:46:34Z
+autoscatter/symbolic.py: 2025-02-21T10:46:34Z

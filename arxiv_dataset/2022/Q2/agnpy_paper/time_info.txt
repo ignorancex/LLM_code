@@ -1,0 +1,16 @@
+figure_3_u_targets_example.py: 2022-01-14T11:53:32Z
+figure_2_synchrotron_example.py: 2022-01-12T14:26:14Z
+figure_11_ec_cmb_validation.py: 2022-01-12T16:48:58Z
+figure_12_tau_blr_validation.py: 2022-01-14T11:53:32Z
+figure_13_tau_dt_validation.py: 2022-01-12T16:50:58Z
+figure_4_absorption_example.py: 2022-01-12T14:30:36Z
+figure_5_Mrk421_fit_gammapy.py: 2022-01-12T15:00:02Z
+figure_6_PKS1510-089_fit_gammapy.py: 2022-01-14T11:53:32Z
+figure_5_Mrk421_fit_sherpa.py: 2022-01-12T15:00:02Z
+figure_9_ec_blr_validation.py: 2022-01-12T16:48:02Z
+figure_appendix_C_sed_resolution.py: 2022-01-12T16:52:01Z
+figure_7_ssc_validation.py: 2022-01-12T16:48:02Z
+figure_6_PKS1510-089_fit_sherpa.py: 2022-01-14T11:53:32Z
+figure_8_ec_disk_validation.py: 2022-01-14T11:53:32Z
+figure_10_ec_dt_validation.py: 2022-01-12T16:48:02Z
+utils.py: 2021-12-01T15:09:04Z

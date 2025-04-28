@@ -1,0 +1,9 @@
+beam_corrected_lcdm_spectra.py: 2022-05-26T12:08:25Z
+parameter_files/hfi_eb.py: 2022-05-26T11:50:08Z
+cb.py: 2022-05-27T14:02:14Z
+run_cosmic_birefringence_analysis.py: 2022-05-29T20:02:38Z
+parameter_files/hfi_lfi_wmap_eb.py: 2022-05-26T12:28:57Z
+generate_observed_power_spectra/make_cl_files_polspice.py: 2022-05-26T12:08:25Z
+generate_observed_power_spectra/calculate_psi_ell.py: 2022-05-27T14:02:14Z
+correct_format_observed_cl.py: 2022-05-26T12:08:25Z
+tools_fast.py: 2022-05-26T11:50:08Z

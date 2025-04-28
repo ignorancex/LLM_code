@@ -1,0 +1,15 @@
+jason_patch_timeseries.py: 2022-01-20T04:43:14Z
+hist_phase_wrt_noise.py: 2022-01-22T04:09:44Z
+jason_reduction_4deg.py: 2022-01-20T21:12:37Z
+jason_map_dmtrack_4deg.py: 2022-01-20T21:12:37Z
+hist_4deg_ll_ECCO.py: 2022-01-22T04:09:44Z
+jason_patch_annspectrum.py: 2022-01-22T04:09:44Z
+MLD_phase_hist.py: 2022-01-20T21:12:37Z
+jason_patch_spectrum_all.py: 2022-01-20T04:43:14Z
+monthly_spectrum.py: 2022-01-20T04:43:14Z
+patch_binned_spectrum.py: 2022-01-22T04:09:44Z
+monthly_speed_4deg.py: 2022-01-20T21:12:37Z
+ring_path_spectra.py: 2022-01-22T04:09:44Z
+slope_hist_all.py: 2022-01-20T21:23:40Z
+seasonality_maps_fittedKE.py: 2022-01-20T21:23:40Z
+monthly_speed.py: 2022-01-22T04:09:44Z

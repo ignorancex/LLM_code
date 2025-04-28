@@ -1,0 +1,11 @@
+bfbrain/AL_Metrics.py: 2023-09-19T21:14:09Z
+bfbrain/False_Proximity_Test.py: 2023-09-19T21:14:09Z
+bfbrain/BFB_Learner.py: 2023-09-19T21:14:09Z
+bfbrain/Custom_Layers.py: 2023-09-19T21:14:09Z
+bfbrain/Jax_Oracle.py: 2023-09-19T21:14:09Z
+bfbrain/Data_Manager.py: 2023-09-19T21:14:09Z
+bfbrain/Hypersphere_Formulas.py: 2023-09-19T21:14:09Z
+bfbrain/Potential_Functions.py: 2023-09-19T21:14:09Z
+bfbrain/__init__.py: 2023-09-19T21:14:09Z
+bfbrain/Score_Functions.py: 2023-09-19T21:14:09Z
+docs/source/conf.py: 2023-09-19T22:35:20Z

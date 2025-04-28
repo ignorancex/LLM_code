@@ -1,0 +1,648 @@
+"""Bootstrap substra strategy in an efficient fashion."""
+import copy
+import inspect
+import os
+import re
+import tempfile
+import types
+import zipfile
+from collections.abc import Callable
+from functools import partial
+from pathlib import Path
+from typing import Union
+
+import numpy as np
+import pandas as pd
+import torch
+from substrafl.algorithms.pytorch.torch_base_algo import TorchAlgo
+from substrafl.remote import remote, remote_data
+from substrafl.strategies.strategy import Strategy
+
+from fedeca.utils.survival_utils import BootstrapMixin
+
+
+def make_bootstrap_strategy(
+    strategy: Strategy,
+    n_bootstrap: Union[int, None] = None,
+    bootstrap_seeds: Union[list[int], None] = None,
+    bootstrap_function: Union[Callable, None] = None,
+    client_specific_kwargs: Union[None, list[dict]] = None,
+):
+    """Bootstrap a substrafl strategy wo impacting the number of compute tasks.
+
+    In order to reduce the bottleneck of substra when bootstraping a strategy
+    we need to go over the strategy compute plan and modifies each local atomic
+    task to execute n_bootstrap times on bootstraped data. Each modified task
+    returns a list of n_bootstraps original outputs obtained on each bootstrap.
+    Each aggregation task is then modified to aggregate the n_bootstrap outputs
+    independently.
+    This code heavily uses some code patterns invented by Arthur Pignet.
+
+    Parameters
+    ----------
+    strategy : Strategy
+        The strategy to bootstrap.
+    n_bootstrap : Union[int, None]
+        Number of bootstrap to be performed. If None will use
+        len(bootstrap_seeds) instead. If bootstrap_seeds is given
+        seeds those seeds will be used for the generation
+        otherwise seeds are generated randomly.
+    bootstrap_seeds : Union[list[int], None]
+        The list of seeds used for bootstrapping random states.
+        If None will generate n_bootstrap randomly, in the presence
+        of both allways use bootstrap_seeds.
+    bootstrap_function : Union[Callable, None]
+        A function with signature f(data, seed) that returns a bootstrapped
+        version of the data.
+        If None, use the BootstrapMixin function.
+        Note that this can be used to provide splits/cross-validation capabilities
+        as well where seed would be the fold number in a flattened list of folds.
+    client_specific_kwargs: Union[None, list[dict]]
+        A list of dictionaries containing the kwargs to be passed to the algos
+        if they are different for each bootstrap. It is useful to chain bootstrapped
+        compute plans for instance.
+
+    Returns
+    -------
+    Strategy
+        The resulting efficiently bootstrapped strategy
+    """
+    # We dynamically get all methods from strategy and algo except 'magic'
+    # methods that have dunderscores
+    orig_strat_methods_names = [
+        method_name
+        for method_name in dir(strategy)
+        if callable(getattr(strategy, method_name))
+        and not re.match(r"__.+__", method_name)
+    ]
+    orig_algo_methods_names = [
+        method_name
+        for method_name in dir(strategy.algo)
+        if callable(getattr(strategy.algo, method_name))
+        and not re.match(r"__.+__", method_name)
+    ]
+
+    # We need to do two things 1. filter-out inner methods, that is to say
+    # methods that don't get diretly decorated and called by substrafl with
+    # remote/remote_data but are called themselves by functions that do.
+    # Since substrafl is clean, methods decorated by substrafl have a __wrapped__
+    # attribute.
+    # 2. differentiate between aggregations and local computations
+    # We'll use the signature of the methods to accomplish 2.
+    # Note that there is no way to know the order in which they will be applied
+    # in the compute plan.
+    # We are just identifying aggregations and local computations here.
+
+    local_functions_names = {"algo": [], "strategy": []}
+    aggregations_names = {"algo": [], "strategy": []}
+    for idx, method_name in enumerate(
+        orig_strat_methods_names + orig_algo_methods_names
+    ):
+        if idx < len(orig_strat_methods_names):
+            obj = strategy
+            key = "strategy"
+        else:
+            obj = strategy.algo
+            key = "algo"
+
+        # The second condition is used as we deal separately with save_local_state
+        # and load_local_state
+        method_args_dict = inspect.signature(getattr(obj, method_name)).parameters
+        if not (
+            ("shared_states" in method_args_dict)
+            or ("shared_state" in method_args_dict)
+        ) or (method_name in ["save_local_state", "load_local_state", "evaluate"]):
+            continue
+        if not hasattr(getattr(obj, method_name), "__wrapped__"):
+            continue
+
+        if ("shared_state" in method_args_dict) and (
+            "data_from_opener" in method_args_dict
+        ):
+            local_functions_names[key].append(method_name)
+
+        # f(shared_states) looks like an aggregation !
+        elif "shared_states" in method_args_dict:
+            assert (
+                "data_from_opener" not in method_args_dict
+            ), "This method's signature is not valid"
+            aggregations_names[key].append(method_name)
+        else:
+            raise ValueError(
+                "Method {} has a shared_state.s argument but isn't \
+                respecting conventions".format(
+                    method_name
+                )
+            )
+
+    # Now we have the list of local computations and aggregations names for both
+    # strategy and algo.
+    # first let's seed the bootstrappping
+    assert (
+        n_bootstrap is not None or bootstrap_seeds is not None
+    ), "You should provide either n_bootstrap or bootstrap_seeds"
+    if bootstrap_seeds is None:
+        bootstrap_seeds_list = np.random.randint(0, 2**32, n_bootstrap).tolist()
+    else:
+        if n_bootstrap is not None:
+            if isinstance(bootstrap_seeds, list):
+                if len(bootstrap_seeds) != n_bootstrap:
+                    print(
+                        "Careful len(bootstrap_seeds) and n_bootstrap are different"
+                        "therefore bootstrap seeds will take precedence and "
+                        "n_bootstrap will be ignored."
+                    )
+                bootstrap_seeds_list = bootstrap_seeds
+            else:
+                np.random.seed(bootstrap_seeds)
+                bootstrap_seeds_list = np.random.randint(
+                    0, 2**32, n_bootstrap
+                ).tolist()
+        else:
+            bootstrap_seeds_list = bootstrap_seeds
+
+    # Below is where the magic happens.
+    # As a reminder we are trying to hook all caught methods above to make them
+    # execute n_bootstrap times on bootstrapped data and then aggregate the
+    # n_bootstrap results independently.
+    # There are two major difficulties here: first of all we have to tie new
+    # methods to the proper object which is the new bootstrapped strategy and
+    # algo. To deal with this first issue, we will use the versatility of
+    # MethodType.
+    # Second in substrafl objects reinstantiate themselves using their class
+    # and their kwargs attributes:
+    # new_my_object = my_object.__class__(**my_object.kwargs).
+    # This is mainly legacy and was done for serialization issues.
+    # So we will need to overwrite the original class and not the instance.
+
+    # We have to overwrite the original methods at the class level
+    class BtstAlgo(strategy.algo.__class__):
+        def __init__(self, *args, client_specific_kwargs=None, **kwargs):
+            super().__init__(*args, **kwargs)
+            if client_specific_kwargs is not None:
+                assert (len(bootstrap_seeds_list) + 1) == len(client_specific_kwargs), (
+                    "client_specific_kwargs must have the same length as"
+                    " bootstrap_seeds_list + 1"
+                )
+                self.client_specific_kwargs = client_specific_kwargs
+                self.kwargs.update({"client_specific_kwargs": client_specific_kwargs})
+            else:
+                self.client_specific_kwargs = None
+
+            self.seeds = bootstrap_seeds_list
+            self.individual_algos = []
+            # We add the first run wo bootstrapping
+            for idx in range(len(self.seeds) + 1):
+                current_kwargs = copy.deepcopy(strategy.algo.kwargs)
+                if self.client_specific_kwargs is not None:
+                    current_kwargs.update(**self.client_specific_kwargs[idx])
+                self.individual_algos.append(
+                    copy.deepcopy(strategy.algo.__class__(**current_kwargs))
+                )
+            # Now we have to overwrite the original methods
+            # to be calling their local version on each individual algo
+            for local_name in local_functions_names["algo"]:
+                f = types.MethodType(
+                    _bootstrap_local_function(
+                        local_name, bootstrap_function=bootstrap_function
+                    ),
+                    self,
+                )
+                setattr(self, local_name, f)
+
+            for agg_name in aggregations_names["algo"]:
+                f = types.MethodType(_aggregate_all_bootstraps(agg_name), self)
+                setattr(self, agg_name, f)
+
+        def save_local_state(self, path: Path) -> "TorchAlgo":
+            # We save all bootstrapped states in different subfolders
+
+            with tempfile.TemporaryDirectory() as tmpdirname:
+                paths_to_checkpoints = []
+                for idx, algo in enumerate(self.individual_algos):
+                    if idx == 0:
+                        path_to_checkpoint = Path(tmpdirname) / "full_data"
+                    else:
+                        path_to_checkpoint = Path(tmpdirname) / f"bootstrap_{idx}"
+                    algo.save_local_state(path_to_checkpoint)
+                    paths_to_checkpoints.append(path_to_checkpoint)
+
+                with zipfile.ZipFile(path, "w") as f:
+                    for chkpt in paths_to_checkpoints:
+                        f.write(chkpt, compress_type=zipfile.ZIP_DEFLATED)
+            return self
+
+        def load_local_state(self, path: Path) -> "TorchAlgo":
+            """Load the stateful arguments of this class.
+
+            Child classes do not need to
+            override that function.
+
+            Parameters
+            ----------
+                path : pathlib.Path
+                    The path where the class has been saved.
+
+            Returns
+            -------
+                TorchAlgo
+                    The class with the loaded elements.
+            """
+            # Note that at the end of this loop the main state is the one of the last
+            # bootstrap
+            archive = zipfile.ZipFile(path, "r")
+            with tempfile.TemporaryDirectory() as tmpdirname:
+                archive.extractall(tmpdirname)
+                full_data_checkpoints = [
+                    p for p in Path(tmpdirname).glob("**/full_data")
+                ]
+                assert len(full_data_checkpoints) == 1
+                full_data_checkpoint = full_data_checkpoints[0]
+
+                checkpoints_found = sorted(
+                    [p for p in Path(tmpdirname).glob("**/bootstrap_*")],
+                    key=lambda x: int(x.stem.split("_")[-1]),
+                )
+                checkpoints_found = [full_data_checkpoint] + checkpoints_found
+                for idx, file in enumerate(checkpoints_found):
+                    self.individual_algos[idx].load_local_state(file)
+
+            return self
+
+        def predict(self, data_from_opener, shared_state=None):
+            predictions = []
+            for algo in self.individual_algos:
+                prediction = algo.predict(
+                    data_from_opener=data_from_opener,
+                    shared_state=shared_state,
+                )
+                predictions.append(prediction)
+            return predictions
+
+    btst_kwargs = copy.deepcopy(strategy.algo.kwargs)
+    if client_specific_kwargs is not None:
+        btst_kwargs.update({"client_specific_kwargs": client_specific_kwargs})
+    btst_algo = BtstAlgo(**btst_kwargs)
+
+    class BtstStrategy(strategy.__class__):
+        def __init__(self, **kwargs):
+            super().__init__(**kwargs)
+            self.seeds = bootstrap_seeds_list
+            self.individual_strategies = []
+            for _ in [None] + self.seeds:
+                # We have to make sure they are independent and new
+                self.individual_strategies.append(copy.deepcopy(strategy))
+            for local_name in local_functions_names["strategy"]:
+                f = types.MethodType(
+                    _bootstrap_local_function(
+                        local_name,
+                        task_type="strategy",
+                        bootstrap_function=bootstrap_function,
+                    ),
+                    self,
+                )
+                setattr(self, local_name, f)
+            for agg_name in aggregations_names["strategy"]:
+                f = types.MethodType(
+                    _aggregate_all_bootstraps(agg_name, task_type="strategy"),
+                    self,
+                )
+                setattr(self, agg_name, f)
+
+    metric_bootstrap = make_bootstrap_metric_function(strategy.metric_functions)
+
+    strategy_kwargs_wo_algo = copy.deepcopy(strategy.kwargs)
+    strategy_kwargs_wo_algo.pop("algo")
+    strategy_kwargs_wo_algo.pop("metric_functions")
+    return (
+        BtstStrategy(
+            algo=btst_algo, metric_functions=metric_bootstrap, **strategy_kwargs_wo_algo
+        ),
+        bootstrap_seeds_list,
+    )
+
+
+def _bootstrap_local_function(
+    local_name: str,
+    task_type: str = "algo",
+    bootstrap_function: Union[None, Callable] = None,
+):
+    """Bootstrap the local functiion given.
+
+    Create a new function that bootstrap the given local function given as parameter.
+    The idea is to create a method decorated by @remote.
+
+    Parameters
+    ----------
+    local_name : str
+        The atomic task name to be bootstrapped.
+
+    task_type : str
+        The type of task to be bootstrapped, either 'algo' or 'strategy'.
+
+    bootstrap_function : Union[None, Callable]
+        A function with signature f(data, seed) that returns a bootstrapped
+        version of the data.
+        If None, use the BootstrapMixin function.
+        Note that this can be used to provide splits/cross-validation capabilities
+        as well where seed would be the fold number in a flattened list of folds.
+
+    Returns
+    -------
+    Callable
+        The @remote_data function, that has been renamed,
+        and will be used as method.
+    """
+    assert task_type in set(
+        ["algo", "strategy"]
+    ), "task_type must be either 'algo' or 'strategy'"
+    individual_task_type = (
+        "individual_algos" if task_type == "algo" else "individual_strategies"
+    )
+    if bootstrap_function is None:
+        # TODO make it cleaner by making bootstrap_sample a function in utils and
+        # not a method of BootstrapMixin
+        bootstrap_function = partial(BootstrapMixin.bootstrap_sample, self=None)
+
+    def local_computation(self, data_from_opener, shared_state=None) -> list:
+        """Execute all the parallel local computations of merged strategies.
+
+        This method is transformed by the decorator to meet Substra API,
+        and is executed in the training nodes. See build_graph.
+
+        Parameters
+        ----------
+        self : MergedStrategy
+            The mergedStrategy instance.
+        data_from_opener : pd.DataFrame
+            Dataframe returned by the opener.
+        shared_state : None, optional
+            Given by the aggregation node, so here it is a list of
+            the shared_states that have been returned by the individual
+            aggregation functions ran at previous step.
+            None for the first step, by default None.
+
+        Returns
+        -------
+        dict
+            Local results to be shared via shared_state to the aggregation node.
+        """
+        results = []
+
+        for idx, seed in enumerate([None] + self.seeds):
+            # On first run we don't bootstrap
+            if idx == 0:
+                data = data_from_opener
+            else:
+                # Useful for remote debugging if logs are enabled
+                # print(f"Bootstrapping: seed seeds[{idx}]={seed}")
+                data = bootstrap_function(data=data_from_opener, seed=seed)
+
+            if shared_state is None:
+                res = getattr(getattr(self, individual_task_type)[idx], local_name)(
+                    data_from_opener=data, _skip=True
+                )
+            else:
+                res = getattr(getattr(self, individual_task_type)[idx], local_name)(
+                    data_from_opener=data,
+                    shared_state=shared_state[idx],
+                    _skip=True,
+                )
+
+            results.append(res)
+        return results
+
+    # We need to change its name before decorating it,
+    # as substrafl use this name to call the method via getattr afterward.
+    local_computation.__name__ = local_name
+
+    return remote_data(local_computation)
+
+
+def _aggregate_all_bootstraps(aggregation_function_name, task_type: str = "algo"):
+    """Aggregate results of bootstraps.
+
+    Create a new function that aggregates each element of a list independently
+    using the provided aggregation function and then return the list of results.
+
+    Parameters
+    ----------
+    aggregation_function_name : str
+        The aggregation function to use.
+
+    task_type : str
+        The type of task to be bootstrapped, either 'algo' or 'strategy'.
+
+    Returns
+    -------
+    Callable
+        The @remote function, that has been renamed,
+        and will be used as method.
+    """
+    assert task_type in set(
+        ["algo", "strategy"]
+    ), "task_type must be either 'algo' or 'strategy'"
+    individual_task_type = (
+        "individual_algos" if task_type == "algo" else "individual_strategies"
+    )
+
+    def aggregation(self, shared_states=None) -> list:
+        """Execute all the parallel aggregations of independent bootstrap runs.
+
+        Parameters
+        ----------
+        self : MergedStrategy
+            The mergedStrategy instance.
+
+        shared_states : List
+            List of lists of results returned by local_computation ran at
+            previous step.
+            The first axis is the local_computations ran by the different
+            strategies merged,
+            and the second one is for partners.results  from training nodes.
+            So shared_states[0][1] corresponds to the output of the
+            local_computation of the first (idx 0) merged strategy,
+            computed on the second (idx 1) client.
+
+        Returns
+        -------
+        dict
+            Global results to be shared with train nodes via shared_state.
+        """
+        results = []
+        if shared_states is not None:
+            # loop over the aggregation steps provided using _skip=True
+            for idx, shared_state in enumerate(zip(*shared_states)):
+                res = getattr(
+                    getattr(self, individual_task_type)[idx], aggregation_function_name
+                )(shared_states=shared_state, _skip=True)
+                results.append(res)
+        else:
+            # This is the case in initialize
+            results = []
+            for task in getattr(self, individual_task_type):
+                res = getattr(task, aggregation_function_name)(
+                    shared_states=None, _skip=True
+                )
+                results.append(res)
+
+            if all([res is None for res in results]):
+                results = None
+
+        return results
+
+    aggregation.__name__ = aggregation_function_name
+    return remote(aggregation)
+
+
+def make_bootstrap_metric_function(metric_functions: dict) -> dict:
+    """Take the metric_functions dict, and bootstrap each metric.
+
+    Parameters
+    ----------
+    metric_functions : dict
+        The metric functions to hook.
+    """
+    btsp_metric_functions = {}
+    for metric_name in metric_functions:
+        btsp_metric_functions[
+            "bootstrapped-" + metric_name
+        ] = lambda data_from_opener, predictions: np.array(
+            [
+                metric_functions[metric_name](data_from_opener, individual_pred)
+                for individual_pred in predictions
+            ]
+        ).mean()
+
+    return btsp_metric_functions
+
+
+if __name__ == "__main__":
+    from substrafl.algorithms.pytorch import TorchFedAvgAlgo
+
+    # from substrafl.algorithms.pytorch import TorchNewtonRaphsonAlgo
+    from substrafl.dependency import Dependency
+    from substrafl.evaluation_strategy import EvaluationStrategy
+    from substrafl.experiment import execute_experiment
+    from substrafl.index_generator import NpIndexGenerator
+    from substrafl.nodes import AggregationNode
+    from substrafl.strategies import FedAvg  # , NewtonRaphson
+
+    from fedeca import LogisticRegressionTorch
+    from fedeca.utils import make_accuracy_function, make_substrafl_torch_dataset_class
+    from fedeca.utils.data_utils import split_dataframe_across_clients
+    from fedeca.utils.survival_utils import CoxData
+
+    seed = 42
+    torch.manual_seed(seed)
+    # Number of model updates between each FL strategy aggregation.
+    NUM_UPDATES = 100
+
+    # Number of samples per update.
+    BATCH_SIZE = 32
+
+    index_generator = NpIndexGenerator(
+        batch_size=BATCH_SIZE,
+        num_updates=NUM_UPDATES,
+    )
+
+    # Let's generate 1000 data samples with 10 covariates
+    data = CoxData(seed=42, n_samples=1000, ndim=50, overlap=10.0, propensity="linear")
+    df = data.generate_dataframe()
+
+    # We remove the true propensity score
+    df = df.drop(columns=["propensity_scores"], axis=1)
+
+    class UnifLogReg(LogisticRegressionTorch):
+        """Spawns FedECA logreg model with uniform weights."""
+
+        def __init__(self, *args, **kwargs):
+            super().__init__(*args, **kwargs)
+            self.fc1.weight.data.uniform_(-1, 1)
+
+    logreg_model = UnifLogReg(ndim=50)
+    optimizer = torch.optim.Adam(logreg_model.parameters(), lr=0.01)
+    criterion = torch.nn.BCELoss()
+
+    logreg_dataset_class = make_substrafl_torch_dataset_class(
+        ["treatment"],
+        event_col="event",
+        duration_col="time",
+        return_torch_tensors=True,
+    )
+    accuracy = make_accuracy_function("treatment")
+
+    class TorchLogReg(TorchFedAvgAlgo):
+        """Spawns FedAvg algo with logreg model with uniform weights."""
+
+        def __init__(self):
+            super().__init__(
+                model=logreg_model,
+                criterion=criterion,
+                optimizer=optimizer,
+                index_generator=index_generator,
+                dataset=logreg_dataset_class,
+                seed=seed,
+                use_gpu=False,
+            )
+
+    # class TorchLogReg(TorchNewtonRaphsonAlgo):
+    #     def __init__(self):
+    #         super().__init__(
+    #             model=logreg_model,
+    #             criterion=criterion,
+    #             batch_size=32,
+    #             dataset=logreg_dataset_class,
+    #             seed=seed,
+    #             use_gpu=False,
+    #         )
+
+    strategy = FedAvg(
+        algo=TorchLogReg(), metric_functions={accuracy.__name__: accuracy}
+    )
+
+    btst_strategy, _ = make_bootstrap_strategy(strategy, n_bootstrap=10)
+
+    clients, train_data_nodes, test_data_nodes, _, _ = split_dataframe_across_clients(
+        df,
+        n_clients=2,
+        split_method="uniform",
+        split_method_kwargs=None,
+        data_path="./data",
+        backend_type="subprocess",
+    )
+
+    first_key = list(clients.keys())[0]
+
+    aggregation_node = AggregationNode(
+        clients[first_key].organization_info().organization_id
+    )
+
+    dependencies = Dependency(
+        pypi_dependencies=[
+            "numpy==1.24.3",
+            "scikit-learn==1.3.1",
+            "torch==2.0.1",
+            "--extra-index-url https://download.pytorch.org/whl/cpu",
+        ]
+    )
+    # Test at the end of every round
+    my_eval_strategy = EvaluationStrategy(
+        test_data_nodes=test_data_nodes, eval_frequency=1
+    )
+    xp_dir = str(Path.cwd() / "tmp" / "experiment_summaries")
+    os.makedirs(xp_dir, exist_ok=True)
+
+    compute_plan = execute_experiment(
+        client=clients[first_key],
+        strategy=btst_strategy,
+        train_data_nodes=train_data_nodes,
+        evaluation_strategy=my_eval_strategy,
+        aggregation_node=aggregation_node,
+        num_rounds=10,
+        experiment_folder=xp_dir,
+        dependencies=dependencies,
+        clean_models=False,
+        name="FedECA",
+    )
+    print(pd.DataFrame(clients[first_key].get_performances(compute_plan.key).dict()))

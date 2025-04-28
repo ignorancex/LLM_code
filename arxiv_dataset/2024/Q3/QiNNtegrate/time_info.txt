@@ -1,0 +1,7 @@
+qinntegrate/optimization.py: 2023-06-01T10:22:49Z
+qinntegrate/__init__.py: 2023-03-15T10:38:30Z
+main.py: 2023-08-10T08:43:05Z
+plotscripts/plot_uquark2d.py: 2023-08-10T08:43:05Z
+plotscripts/plot_toy.py: 2023-08-10T08:43:05Z
+qinntegrate/target.py: 2023-08-10T08:43:05Z
+qinntegrate/quanting.py: 2023-08-10T08:52:09Z

@@ -1,0 +1,12 @@
+Test/DeviceParameters.py: 2020-09-03T07:45:37Z
+Test/LFDataset.py: 2020-09-03T07:45:37Z
+Test/RefNet.py: 2020-09-03T07:45:37Z
+Test/lfca_test.py: 2020-09-03T07:45:37Z
+Train/Functions.py: 2020-09-03T08:33:48Z
+Test/MainNet.py: 2020-09-03T07:45:37Z
+Train/LFDataset.py: 2020-09-03T08:33:48Z
+Train/RefNet.py: 2020-09-03T08:33:48Z
+Test/Functions.py: 2020-09-03T07:45:37Z
+Train/lfca_train.py: 2020-09-03T08:55:01Z
+Train/MainNet.py: 2020-09-03T08:33:48Z
+Train/DeviceParameters.py: 2020-09-03T08:33:48Z

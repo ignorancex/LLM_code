@@ -1,0 +1,13 @@
+popclass/uq.py: 2024-09-24T11:22:20Z
+popclass/visualization.py: 2024-09-24T11:22:20Z
+tests/test_model.py: 2025-02-25T02:41:18Z
+popclass/__init__.py: 2024-07-23T21:59:21Z
+popclass/classify.py: 2024-09-17T18:43:13Z
+popclass/posterior.py: 2024-09-30T18:12:50Z
+tests/test_posterior.py: 2024-09-30T18:15:24Z
+popclass/model.py: 2025-02-25T01:31:25Z
+tests/test_uq.py: 2024-09-24T11:22:20Z
+docs/source/conf.py: 2024-10-01T20:10:44Z
+tests/test_visualize.py: 2024-09-24T11:22:20Z
+tests/test_classify.py: 2025-02-24T04:09:12Z
+tests/__init__.py: 2024-07-23T21:59:21Z

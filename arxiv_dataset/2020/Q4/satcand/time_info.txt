@@ -1,0 +1,7 @@
+SBO_tidal_tree.py: 2020-09-12T14:22:25Z
+KOI_stab.py: 2020-09-12T13:56:51Z
+tidal_migration.py: 2020-09-12T13:56:51Z
+Calc_tidal_limit.py: 2020-09-12T14:37:15Z
+plot_Qcrit.py: 2020-09-12T14:37:15Z
+plot_time_evol.py: 2020-09-12T15:15:13Z
+plot_combined_constraints.py: 2020-09-12T15:12:42Z

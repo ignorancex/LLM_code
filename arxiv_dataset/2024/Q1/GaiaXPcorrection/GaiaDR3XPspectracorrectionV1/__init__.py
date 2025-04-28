@@ -1,0 +1,1 @@
+__all__ = ['Gaia_Correction_V1']from GaiaDR3XPspectracorrectionV1 import *__version__ = '1.0'

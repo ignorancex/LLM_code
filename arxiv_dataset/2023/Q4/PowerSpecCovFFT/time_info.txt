@@ -1,0 +1,7 @@
+src/powercovfft/utils_mt.py: 2024-01-11T18:43:52Z
+src/powercovfft/power_law_decomp.py: 2024-04-14T00:41:47Z
+src/powercovfft/__init__.py: 2024-01-11T05:06:21Z
+src/powercovfft/cov.py: 2024-04-14T00:41:47Z
+src/powercovfft/cov_mt.py: 2024-01-11T05:03:48Z
+src/powercovfft/utils.py: 2024-01-11T18:43:52Z
+src/powercovfft/master_integral.py: Unknown

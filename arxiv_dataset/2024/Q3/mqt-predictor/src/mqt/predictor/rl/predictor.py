@@ -1,0 +1,103 @@
+"""This module contains the Predictor class, which is used to predict the most suitable compilation pass sequence for a given quantum circuit."""
+
+from __future__ import annotations
+
+import logging
+from typing import TYPE_CHECKING
+
+from sb3_contrib import MaskablePPO
+from sb3_contrib.common.maskable.policies import MaskableMultiInputActorCriticPolicy
+from sb3_contrib.common.maskable.utils import get_action_masks
+
+from mqt.predictor import reward, rl
+
+if TYPE_CHECKING:
+    from qiskit import QuantumCircuit
+
+logger = logging.getLogger("mqt-predictor")
+PATH_LENGTH = 260
+
+
+class Predictor:
+    """The Predictor class is used to train a reinforcement learning model for a given figure of merit and device such that it acts as a compiler."""
+
+    def __init__(
+        self, figure_of_merit: reward.figure_of_merit, device_name: str, logger_level: int = logging.INFO
+    ) -> None:
+        """Initializes the Predictor object."""
+        logger.setLevel(logger_level)
+
+        self.env = rl.PredictorEnv(reward_function=figure_of_merit, device_name=device_name)
+        self.device_name = device_name
+        self.figure_of_merit = figure_of_merit
+
+    def compile_as_predicted(
+        self,
+        qc: QuantumCircuit,
+    ) -> tuple[QuantumCircuit, list[str]]:
+        """Compiles a given quantum circuit such that the given figure of merit is maximized by using the respectively trained optimized compiler.
+
+        Arguments:
+            qc: The quantum circuit to be compiled or the path to a qasm file containing the quantum circuit.
+
+        Returns:
+            A tuple containing the compiled quantum circuit and the compilation information. If compilation fails, False is returned.
+        """
+        trained_rl_model = rl.helper.load_model("model_" + self.figure_of_merit + "_" + self.device_name)
+
+        obs, _ = self.env.reset(qc, seed=0)
+
+        used_compilation_passes = []
+        terminated = False
+        truncated = False
+        while not (terminated or truncated):
+            action_masks = get_action_masks(self.env)
+            action, _ = trained_rl_model.predict(obs, action_masks=action_masks)
+            action = int(action)
+            action_item = self.env.action_set[action]
+            used_compilation_passes.append(action_item["name"])
+            obs, _reward_val, terminated, truncated, _info = self.env.step(action)
+
+        if not self.env.error_occurred:
+            return self.env.state, used_compilation_passes
+
+        msg = "Error occurred during compilation."
+        raise RuntimeError(msg)
+
+    def train_model(
+        self,
+        timesteps: int = 1000,
+        model_name: str = "model",
+        verbose: int = 2,
+        test: bool = False,
+    ) -> None:
+        """Trains all models for the given reward functions and device.
+
+        Arguments:
+            timesteps: The number of timesteps to train the model. Defaults to 1000.
+            model_name: The name of the model. Defaults to "model".
+            verbose: The verbosity level. Defaults to 2.
+            test: Whether to train the model for testing purposes. Defaults to False.
+        """
+        if test:
+            n_steps = 10
+            progress_bar = False
+        else:
+            n_steps = 2048
+            progress_bar = True
+
+        logger.debug("Start training for: " + self.figure_of_merit + " on " + self.device_name)
+        model = MaskablePPO(
+            MaskableMultiInputActorCriticPolicy,
+            self.env,
+            verbose=verbose,
+            tensorboard_log="./" + model_name + "_" + self.figure_of_merit + "_" + self.device_name,
+            gamma=0.98,
+            n_steps=n_steps,
+        )
+        # Training Loop: In each iteration, the agent collects n_steps steps (rollout),
+        # updates the policy for n_epochs, and then repeats the process until total_timesteps steps have been taken.
+        model.learn(total_timesteps=timesteps, progress_bar=progress_bar)
+        model.save(
+            rl.helper.get_path_trained_model() / (model_name + "_" + self.figure_of_merit + "_" + self.device_name)
+        )

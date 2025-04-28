@@ -1,0 +1,558 @@
+# Code in support of ePrint:2021/1384
+# Copyright 2021, Olivier Bernard
+# GPL-3.0-only (see LICENSE file)
+
+from sage.all import *
+
+from characters import * # For relative class number (Dirichlet characters)
+from pideal     import * 
+
+
+# --------------------------------------------------------------------------------------------------
+# Cyclotomic fields of conductor m, degree n=phi(m) [notations]
+#
+#  /!\   Hypothesis m \ne 2[4] in [Was97, §8.1].
+#        This is always satisfied, but the code might not be resilient if given a wrong m'=2m (m odd).
+# [Note] We try to produce valid code for *all* conductors, not only prime powers.
+# --------------------------------------------------------------------------------------------------
+
+
+# ?? Built-in 'K.conductor()' is too general and takes forever, even with 'check_abelian=False'.
+def cf_get_conductor(K):
+    z = K.gen();
+    m = z.multiplicative_order();
+
+    assert (m > 1 and m != +Infinity and 2 != mod(m,4));
+    assert (cyclotomic_polynomial(m) == K.defining_polynomial()); # Seems reasonable to test
+    return m;
+
+
+
+# --------------------------------------------------------------------------------------------------
+# Galois group of cyclotomic fields
+# Represented as i: \zeta --> \zeta^i for i \in [[1,m]] and gcd(i,m)=1
+# Rk: \conj(tab[a]) = tab[-a]
+def cf_galois_exponents(K):
+    m     = cf_get_conductor(K);
+    G_exp = [ _a for _a in range(1,m) if gcd(_a,m)==1 ];
+
+    assert (len(G_exp) == K.degree());
+    return G_exp;
+
+
+def cf_galois_homs(K):
+    G_exp  = cf_galois_exponents(K);
+    G_homs = [ K.hom(K.gen()**_k, K) for _k in G_exp ];
+
+    return G_homs;
+
+
+
+# --------------------------------------------------------------------------------------------------
+# Ideal orbits under Galois group
+
+# Compute orbit above p
+# ----------------------------------------------------
+# For big m (or big degrees), the problem is that K.primes_above() is especially slow
+# because (?) it checks that each component is prime (there is even pbs to *print* the ideal).
+# Here we factor K.equation() mod p and create each ideals above p by hand.
+# __idx_start control the first prime of the orbit. Not sure it is useful.
+
+# This version is (finally!) very fast
+# <-- compute the gcd of g(x^i) and K.def() mod p to find the 2-element representation directly.
+def cf_orbit_p(K, p, __idx_start=0):
+    assert(is_prime(p));
+
+    Fp_y   = PolynomialRing(GF(p), name='y');      y = Fp_y.gen();
+    Z_x    = PolynomialRing(Integers(), name='x'); x = Z_x.gen();
+
+    # Choose a starting point (prime ideal above p) of the orbit 
+    f      = Fp_y(K.defining_polynomial());
+    f_fact = f.factor();
+    assert(all(_fact[1] == f_fact[0][1] for _fact in f_fact)); # Galois.
+    assert(__idx_start < len(f_fact));
+    pid_p0x = f_fact[__idx_start][0]; # Arbitrary starting factor
+
+    # Compute successive images of pid_p0x under the Galois group of K
+    G_exp   = cf_galois_exponents(K);
+    orb_g1  = [ Z_x( pid_p0x(y**_a).gcd(f) ) for _a in G_exp ];
+    orb_g1  = [ _g1 if _g1[0] < p/2 else _g1-p for _g1 in orb_g1 ];
+    orb_p0  = [ K.ideal(p, _g) for _g in orb_g1 ];
+    
+    # [ OLD VERSION]
+    # Actually, computing the gcd of pid_p0x(y^a) with f mod p is much faster than this loop
+    # m     = cf_get_conductor(K);
+    # orb_p0 = [];
+    # for a in [ _a for _a in range(1, m) if gcd(_a,m) == 1]: # Looping on Galois automorphisms
+    #     _pid_px  = pid_p0x(y^a); # Apply s_a to the chosen factor
+    #     # Find which factor f_i correspond to (divides) s_a(f0)
+    #     _pid_idx = [ _i for _i in range(len(f_fact)) if _pid_px.mod(f_fact[_i][0]) == 0 ];
+    #     assert(len(_pid_idx) == 1); 
+    #     _pid_idx = _pid_idx[0];
+    #     _pid     = K.ideal(p, Z_x(f_fact[_pid_idx][0])(K.gen()));
+    #     orb_p0.append(_pid);
+
+    return orb_p0;
+
+
+# Orbit from any ideal
+# ----------------------------------------------------
+# Version where the input is directly the ideal for which to compute the orbit
+# A priori, we don't demand a to be prime
+# Be careful, I didn't find yet how to make it practical for high degrees
+# If we ask a to be prime, we can apply the above strategy.
+def cf_orbit_ideal(K, a):
+    K_homs  = cf_galois_homs(K);
+    a_orbit = [ _phi(a) for _phi in K_homs ];
+ 
+    return a_orbit;
+
+
+# First d Orbits
+# ----------------------------------------------------
+def cf_d_first_split_primes(K, d=1):
+    fb_p = reduce(lambda _l, _:(_l[0]+[_l[1]], K.next_split_prime(_l[1])),
+                  range(d), ([], K.next_split_prime(2)))[0];
+    return fb_p;
+
+
+def cf_d_orbits(K, d=1):
+    n = K.degree();
+    k = d*n;
+    fb_p = cf_d_first_split_primes(K,d);
+    # Concatenate orbits
+    fb   = sum((cf_orbit_p(K, _p) for _p in fb_p), []);
+    assert (len(fb) == k);
+    
+    return fb;
+    
+
+
+# --------------------------------------------------------------------------------------------------
+# Maximal Real subfield
+# For a cyclotomic field K, the maximal real subfield K+ is generated by
+#         z + z^{-1}, ie. K+ = Q[x] / prod_{(a,m)=1, a < m/2} [x-(z^{a}+z^{-a})]
+# Say, K = Q(z), and K+ = Q(h), h = z+z^{-1}
+
+# Going from K+ to K is: g(z) = g+(z+z^{-1}) in K
+# Going from K to K+ is: g+(h) = g(z) mod z^2-h*z+1.
+# g is real iff it is equal to its complex conjugate
+
+
+# Applying SageMaths K.comlpex_conjugation() is way too long (it tries to evaluate at 1/z mod phi)
+# We simply use conj(g) = reverse(g, degree=m) mod phi_m which is much much faster
+def cf_complex_conjugate(cf_elt):
+    K     = cf_elt.parent();
+    m     = cf_get_conductor(K);
+    phi_m = K.defining_polynomial();
+
+    conj_elt = K(cf_elt.polynomial().reverse(degree=m).mod(phi_m));
+
+    return conj_elt;
+
+
+def cf_is_real(cf_elt):
+    conj_elt = cf_complex_conjugate(cf_elt);
+    return (cf_elt == conj_elt);
+
+
+# Construct max real / cyclotomic field from one another
+# ------------------------------------------------------
+# Could be costly (does not converge for 
+def real_maximal_subfield(K):
+    chi_h = (K.gen()+1/K.gen()).minpoly();
+    M     = NumberField(chi_h, name='h');
+    return M;
+
+
+# Could be "costly" ( ~ 7s for K+ of conductor 211 )
+def real_to_cyclotomic_field(M):
+    Zx   = PolynomialRing(ZZ, name='x'); x = Zx.gen();
+    Z_uv = PolynomialRing(ZZ, 2, names=['u','v']); (u, v) = Z_uv.gens();
+
+    # Construct the absolute field extension Q(z) of M = Q(z+1/z)
+    f    = Zx( (Z_uv(M.defining_polynomial()(u)).resultant(v**2-u*v+1))(0,x) );
+    N    = NumberField(f, name='z');
+    m    = cf_get_conductor(N);
+
+    # Construct cyclotomic field (as CyclotomicField, not NumberField only)
+    K    = CyclotomicField(m);
+    return K;
+
+
+# Coercion / lift of number field elements / ideals from / to cyclo / max real fields
+# ------------------------------------------------------
+def real_lift_elt(K, rf_elt):
+    cf_elt = rf_elt.polynomial()(K.gen()+1/K.gen());
+    return cf_elt;
+
+
+def cf_coerce_to_real(M, cf_elt):
+    assert(cf_is_real(cf_elt));
+    h  = M.gen();
+    My = PolynomialRing(M, name='y'); y = My.gen();
+
+    rf_pol = My(cf_elt.polynomial()).mod(y**2-h*y+1); assert(rf_pol.degree() < 1); # Constant or 0.
+    rf_elt = rf_pol[0];
+    
+    return rf_elt;
+
+
+# Works for prime norm ideals only
+# Returns the Norm_{K/K+} (pid) = pid*conj(pid) as an ideal of K+, avoiding the product computation
+def real_relative_norm_pid(M, pid):
+    assert(pid.number_field().degree() == 2*M.degree());
+
+    # Get norm, generators
+    (p, g) = pid_fast_gens_two(pid); assert(g.degree() == 1);
+    Fp = GF(p);
+    # Compute <p, z+a>.<p,1/z+a> = <p,(z+1/z) + ((a^2+1)/a mod p) >
+    a  = Fp(g[0]);
+    b  = (a**2+1)/a;
+    b  = ZZ(b) if ZZ(b) < p/2 else ZZ(b)-p; # Some futile refinement, decrease the t2_norm() a tiny bit
+    # b = b.lift_centered() # Use the built-in ?
+    norm_pid = M.ideal(p, M.gen()+b);
+
+    return norm_pid;
+
+
+def real_lift_ideal(K, r_pid):
+    assert(K.degree() == 2*r_pid.number_field().degree());
+    l_gens = [ real_lift_elt(K, _g) for _g in r_pid.gens()[:2] ]; # /!\ Hopefully !
+    cf_pid = K.ideal(l_gens);
+    return cf_pid;
+    
+
+# /!\ Return results in the same **order** as cf_orbit_p() ! 
+def real_orbit_p(K, p, M=QQ, __idx_start=0):
+    M      = real_maximal_subfield(K) if M == QQ else M;
+    assert(2*M.degree() == K.degree());
+
+    # Compute orbit of p in K, the orbit in M is the relative norm of the orbit in K
+    orb_p0 = cf_orbit_p(K, p, __idx_start=__idx_start); # Really costless
+    k      = ZZ(len(orb_p0)/2);
+    # Compute ideals of M corresponding to pi*conj(pi), pi in first half of orb_p0
+    real_orb_p0 = [ real_relative_norm_pid(M, _pid) for _pid in orb_p0[:k] ];
+    
+    return real_orb_p0;
+
+
+# Generators for all the orbit above (split) p in K+
+# Option M allows to use a precomputed real field M (e.g. when using several orbits)
+def real_gens(K, p, M=QQ, __idx_start=0): 
+    t = cputime(); real_orb_p0 = real_orbit_p(K, p, M=M, __idx_start=__idx_start); t = cputime(t);
+    # print("\tReal orbit [Time:{:.2f}s]".format(t));
+    M = real_orb_p0[0].number_field(); # Get K+ (typically if it was not given in the first place)
+    assert(len(real_orb_p0) == M.degree());
+    
+    # Compute Class Group of M
+    t = cputime(); ClM = M.class_group(); t = cputime(t);
+    # print("\tComputing Class Group of K+ [Time:{:.2f}s]".format(t), flush=True);
+    assert(real_orb_p0[0].is_principal()); # If the first is principal, they all are.
+    
+    # Generators
+    t = cputime(); r_gens = [ _r_pid.gens_reduced()[0] for _r_pid in real_orb_p0 ]; t = cputime(t);
+    # print("\tAll gens [Time:{:.2f}s] ({:.2f}s/g)".format(t, float(t/len(real_orb_p0))), flush=True);
+
+    # Lift
+    t = cputime(); c_gens = [ real_lift_elt(K, _g0) for _g0 in r_gens ]; t = cputime(t);
+    # print("\tLift gens [Time:{:.2f}s] ({:.2f}s/g)".format(t, float(t/len(c_gens))), flush=True);
+    
+    return c_gens;
+
+
+# Returns the valuations over one orbit of the real generators for this orbit
+# This returns the matrix :
+# 1 0 0 ... 0 0 1
+# 0 1 0 ... 0 1 0
+# 0 0 1 ... 1 0 0
+#       ...
+# ... 0 1 1 0 ...
+# Minor remark: if __idx_start is not trivial, this scrambles the FB, but not the valuation matrix
+def real_gens_valp_orbit(m):
+    n     = euler_phi(m);
+    assert (is_even(n));
+
+    val_R = matrix(ZZ, [[0]*_i+[1]+[0]*(n-2-2*_i)+[1]+[0]*_i for _i in range(n//2)]);
+    return val_R;
+
+
+# --------------------------------------------------------------------------------------------------
+# Class numbers
+
+# Relative class number
+# ----------------------------------------------
+# Using [Was97, Th.4.17]:
+# With Q = 1 if prime_power, 2 otherwise, w = torsion (ie = 2m if m is odd): [Was97, Th.4.17]
+#         hminus = Q w prod_{chi odd} -1/2. B_{1,chi}
+#                            where chi runs through character group associated to K
+#
+# [Was97,p.32,before Th.4.2]:
+#         B_{1,chi} = 1/f. \sum_{a=1}^{f} chi(a).a    for chi != 1 of conductor f,
+#         B_{1,1}   = 1/2.
+def cf_hminus(m):
+    assert(mod(m,4) != 2); # If 2 = m[4], p_B1 = 0.
+    Q   = 1 if is_prime_power(m) else 2;
+    w_K = m if mod(m,2) == 0 else 2*m;
+
+    # Testing "odd" is loooooooong
+    # D    = [ chi.primitive_character() for chi in DirichletGroup(m) if chi.is_odd() ];
+    D     = [ dirichlet_log_primitive(chi)
+              for chi in dirichlet_log_group(m) if dirichlet_log_is_odd(chi)];
+    # Compute the product of all B_{1,\chi}
+    phi_e = cyclotomic_polynomial(D[0].e);
+    # Use a For-loop to apply the modulo each time
+    # p_B1  = prod(B1_chi(_chi).mod(phi_e) for _chi in D).mod(phi_e);
+    p_B1  = 1;
+    for _chi in D:
+        p_B1 = (p_B1*B1_chi(_chi).mod(phi_e)).mod(phi_e); # Applying mod everywhere seems 20% faster
+    assert(p_B1.degree() == 0);
+
+    # Multiply all * (-1/2)^{len(B1)}
+    hminus = Q*w_K*p_B1 * (-1)**ZZ(mod(len(D),2));
+    hminus = ZZ(hminus / 2**(len(D)));
+
+    return hminus;
+
+
+
+# Real part h+
+# ----------------------------------------------
+__HPLUS_DEFAULT = None;
+
+# See [Was97, p.421] citing van der Linden "Class number computations of real abelian number fields"(82)
+# And Miller's phd thesis (2015), from which I hope I did take everything
+# [Lin82] Class number computations of real abelian number fields
+# [Mil14] Real cyclotomic fields of prime conductor and their class numbers
+# [Mil15] Class numbers of real cyclotomic fields of composite conductor
+def __create_dic_hplus():
+    hp = {};
+
+    for m in [ _m for _m in range(3, 3000) if euler_phi(_m) < 513 ]:
+        if mod(m,4) == 2:
+            continue;
+        if is_prime(m): # [Mil15,Th.1.2]]
+            hp[m] = 1 if m < 242 else __HPLUS_DEFAULT;
+        elif is_prime_power(m): # [Lin82], GRH for phi \in [67,161]
+            hp[m] = 1 if euler_phi(m) < 162 else __HPLUS_DEFAULT;
+        else: # [Lin82] for m < 201 (GRH), [Mil15] for phi < 117 
+            hp[m] = 1 if euler_phi(m) < 117 or m < 201 else __HPLUS_DEFAULT;
+
+
+    # [Lin82] Prime exceptions
+    hp[163]  = 4;
+    # [Lin82] Composite exceptions
+    hp[136]  = 2; 
+    hp[145]  = 2;
+    hp[183]  = 4;
+    # [Mil15,Th.1.2] from [Mil14] (Prime) exceptions
+    hp[191]  = 11;
+    hp[229]  = 3;
+    # [Mil15, Th.1.1] (Composite) exceptions
+    hp[212]  = 5; # GRH
+    hp[256]  = 1;
+    hp[512]  = 1; # GRH
+    # [BFHP20,Tab.1], seems these are unconditional (?)
+    #  --> [255,272,320,340,408,480,273,315,364,456,468,504,520,560,624,720,780,840,
+    #       455,585,728,936,1008,1092,1260,1560,1680,2520]
+    hp[255]  = 1;   # n=128
+    hp[272]  = 2;   # n=128
+    hp[320]  = 1;   # n=128
+    hp[340]  = 1;   # n=128
+    hp[408]  = 2;   # n=128
+    hp[480]  = 1;   # n=128
+    hp[273]  = 1;   # n=144
+    hp[315]  = 1;   # n=144
+    hp[364]  = 1;   # n=144
+    hp[456]  = 1;   # n=144
+    hp[468]  = 1;   # n=144
+    hp[504]  = 4;   # n=144
+    hp[520]  = 4;   # n=192
+    hp[560]  = 1;   # n=192
+    hp[624]  = 1;   # n=192
+    hp[720]  = 1;   # n=192
+    hp[780]  = 1;   # n=192
+    hp[840]  = 1;   # n=192
+    hp[455]  = 1;   # n=288
+    hp[585]  = 1;   # n=288
+    hp[728]  = 20;  # n=288
+    hp[936]  = 16;  # n=288
+    hp[1008] = 16;  # n=288
+    hp[1092] = 1;   # n=288
+    hp[1260] = 1;   # n=288
+    hp[1560] = 8;   # n=384
+    hp[1680] = 1;   # n=384
+    hp[2520] = 208; # n=576
+    # [Computed with 'SageMath version 9.0, Release Date: 2020-01-01']
+    # [  --> Those != 1]
+    hp[248]  = 4;   # n=120
+    hp[205]  = 2;   # n=160
+    hp[440]  = 5;   # n=160
+    # [  --> Those == 1, all composite except 243=3^5]
+    hp[225]  = 1;   # n=120
+    hp[231]  = 1;   # n=120
+    hp[244]  = 1;   # n=120
+    hp[308]  = 1;   # n=120
+    hp[372]  = 1;   # n=120
+    hp[396]  = 1;   # n=120
+    hp[384]  = 1;   # n=128
+    hp[201]  = 1;   # n=132
+    hp[207]  = 1;   # n=132
+    hp[213]  = 1;   # n=140
+    hp[219]  = 1;   # n=144
+    hp[285]  = 1;   # n=144
+    hp[296]  = 1;   # n=144
+    hp[304]  = 1;   # n=144
+    hp[380]  = 1;   # n=144
+    hp[432]  = 1;   # n=144
+    hp[444]  = 1;   # n=144
+    hp[540]  = 1;   # n=144
+    hp[237]  = 1;   # n=156
+    hp[352]  = 1;   # n=160
+    hp[400]  = 1;   # n=160
+    hp[492]  = 1;   # n=160
+    hp[528]  = 1;   # n=160
+    hp[600]  = 1;   # n=160
+    hp[660]  = 1;   # n=160
+    hp[243]  = 1;   # n=162
+    hp[249]  = 1;   # n=164
+    hp[203]  = 1;   # n=168
+    hp[215]  = 1;   # n=168
+    hp[245]  = 1;   # n=168
+    hp[261]  = 1;   # n=168
+    hp[392]  = 1;   # n=168
+    hp[516]  = 1;   # n=168
+    hp[588]  = 1;   # n=168
+    hp[267]  = 1;   # n=176
+    hp[345]  = 1;   # n=176
+    hp[368]  = 1;   # n=176
+    hp[460]  = 1;   # n=176
+    hp[552]  = 1;   # n=176
+    hp[209]  = 1;   # n=180
+    hp[217]  = 1;   # n=180
+    hp[279]  = 1;   # n=180
+    hp[297]  = 1;   # n=180
+    hp[235]  = 1;   # n=184
+    hp[564]  = 1;   # n=184
+    # hp[221]  = 1;   # n=192 # Falsely tagged as known
+    hp[291]  = 1;   # n=192
+    hp[357]  = 1;   # n=192
+    hp[416]  = 1;   # n=192
+    hp[448]  = 1;   # n=192
+    hp[576]  = 1;   # n=192
+    hp[612]  = 1;   # n=192
+    hp[672]  = 1;   # n=192
+    hp[275]  = 1;   # n=200
+    hp[375]  = 1;   # n=200
+    hp[500]  = 1;   # n=200
+
+
+    
+    return hp;
+
+
+def __create_dic_known_hplus_by_degrees(hp):
+    dic_cf = {};
+    phis   = [ euler_phi(m) for m in hp.keys() ];
+    phis.sort();
+    
+    for _phi in phis:
+        dic_cf[_phi] = [ (_m, hp[_m]) for _m in hp.keys() if euler_phi(_m) == _phi ];
+        
+    return dic_cf;
+
+
+__DIC_HPLUS        = __create_dic_hplus();
+__DIC_HPLUS_DEGREE = __create_dic_known_hplus_by_degrees(__DIC_HPLUS);
+
+def cf_hplus(m):
+    return __DIC_HPLUS.get(m, __HPLUS_DEFAULT);
+
+def cf_hK(m):
+    hm = cf_hminus(m);
+    hp = __DIC_HPLUS.get(m, __HPLUS_DEFAULT);
+
+    return (hm, hp);
+
+
+
+# ---------------------------------------------------------------------------------------------------
+# KNOWN CLASS GROUPS TABLE (GRH)
+# See also ../data/list_ms
+
+# [ [deg[_k][_i][0] for _i in range (len(deg[_k])) if deg[_k][_i] != 'undef'] for _k in deg.keys() if any(_d[1] != 'undef' for _d in deg[_k]) ]
+# Gives ... (conductors for which h+ is known under GRH, sorted by degrees)
+# [[3, 4],
+#  [5, 8, 12],
+#  [7, 9],
+#  [15, 16, 20, 24],
+#  [11],
+#  [13, 21, 28, 36],
+#  [17, 32, 40, 48, 60],
+#  [19, 27],
+#  [25, 33, 44],
+#  [23],
+#  [35, 39, 45, 52, 56, 72, 84],
+#  [29],
+#  [31],
+#  [51, 64, 68, 80, 96, 120],
+#  [37, 57, 63, 76, 108],
+#  [41, 55, 75, 88, 100, 132],
+#  [43, 49],
+#  [69, 92],
+#  [47],
+#  [65, 104, 105, 112, 140, 144, 156, 168, 180],
+#  [53],
+#  [81],
+#  [87, 116],
+#  [59],
+#  [61, 77, 93, 99, 124],
+#  [85, 128, 136, 160, 192, 204, 240],
+#  [67],
+#  [71],
+#  [73, 91, 95, 111, 117, 135, 148, 152, 216, 228, 252],
+#  [79],
+#  [123, 164, 165, 176, 200, 220, 264, 300],
+#  [83],
+#  [129, 147, 172, 196],
+#  [89, 115, 184, 276],
+#  [141, 188],
+#  [97, 119, 153, 195, 208, 224, 260, 280, 288, 312, 336, 360, 420],
+#  [101, 125],
+#  [103],
+#  [159, 212],
+#  [107],
+#  [109, 133, 171, 189, 324],
+#  [121],
+#  [113, 145, 232, 348],
+#  [177, 236],
+#  [143, 155, 175, 183, 225, 231, 244, 248, 308, 372, 396],
+#  [127],
+#  [255, 256, 272, 320, 340, 384, 408, 480],
+#  [131],
+#  [161, 201, 207, 268],
+#  [137],
+#  [139],
+#  [185, 219, 273, 285, 292, 296, 304, 315, 364, 380, 432, 444, 456, 468, 504],
+#  [149],
+#  [151],
+#  [157, 169, 237, 316],
+#  [187, 205, 328, 352, 400, 440, 492],
+#  [163, 243],
+#  [167],
+#  [173],
+#  [179],
+#  [181, 209, 217, 279, 297],
+#  [191],
+#  [193, 221, 291, 357, 388, 416, 448, 476],
+#  [197],
+#  [199],
+#  [211],
+#  [223],
+#  [227],
+#  [229],
+#  [233, 295, 472],
+#  [239],
+#  [241, 287, 305, 325, 369, 385, 429, 465, 488, 495, 496],
+#  [257, 512]]
+

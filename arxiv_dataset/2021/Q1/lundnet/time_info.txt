@@ -1,0 +1,9 @@
+src/lundnet/EdgeConv.py: 2021-01-10T16:32:43Z
+src/lundnet/ParticleNet.py: 2021-10-05T17:48:11Z
+src/lundnet/read_data.py: 2021-01-10T16:32:43Z
+setup.py: 2021-01-15T16:55:40Z
+src/lundnet/dgl_utils.py: 2021-01-10T16:32:43Z
+src/lundnet/dgl_dataset.py: 2021-10-05T17:49:05Z
+src/lundnet/LundNet.py: 2021-01-10T16:32:43Z
+src/lundnet/JetTree.py: 2021-10-05T17:49:05Z
+src/lundnet/scripts/lundnet.py: 2021-01-10T16:32:43Z

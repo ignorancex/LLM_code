@@ -1,0 +1,15 @@
+fpca.py: 2021-08-18T19:00:42Z
+delfiSpec/specproc.py: 2021-08-18T19:00:42Z
+apogee_snl.py: 2021-08-18T19:00:42Z
+delfiSpec/util.py: 2021-08-18T19:00:42Z
+apogee_fpca.py: 2021-08-18T19:00:42Z
+delfiSpec/psm.py: 2021-08-18T19:00:42Z
+gen_plots_tables/gen_tables.py: 2022-03-25T05:19:51Z
+gen_plots_tables/plot_figure15.py: 2022-03-25T05:19:51Z
+gen_plots_tables/plot_figure16.py: 2022-03-25T05:19:51Z
+gen_plots_tables/plot_figure14.py: 2022-03-25T05:19:51Z
+delfiSpec/specsim.py: 2021-08-18T19:00:42Z
+gen_plots_tables/plot_figures9-12.py: 2022-03-25T05:19:51Z
+gen_plots_tables/plot_figure1-6.py: 2022-03-25T05:19:51Z
+hierarch_t_distribution.py: 2021-08-18T19:00:42Z
+gen_plots_tables/plot_figures7-8.py: 2022-03-25T05:19:51Z

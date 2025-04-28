@@ -1,0 +1,12 @@
+helpers.py: 2023-06-13T19:47:56Z
+Archive/function_archive.py: 2023-06-21T14:59:58Z
+Archive/cython_lapack/cy_dgbequ_setup.py: 2023-06-01T18:12:23Z
+legendre.py: 2023-06-01T18:12:23Z
+RUBIS.py: 2024-09-17T12:55:36Z
+model_deform_radial.py: 2024-09-17T12:55:36Z
+numerical.py: 2023-06-01T18:12:23Z
+model_deform_spheroidal.py: 2023-06-22T10:25:22Z
+plot.py: 2023-06-22T08:32:22Z
+rotation_profiles.py: 2023-06-01T18:12:23Z
+polytrope.py: 2023-06-21T13:26:37Z
+setup.py: 2023-01-28T18:06:39Z

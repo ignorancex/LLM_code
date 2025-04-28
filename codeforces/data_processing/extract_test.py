@@ -1,7 +1,7 @@
 import json
 
 # 读取你的 JSON 文件
-with open('LLM_code/codeforces/simulation/deepseek_32b_cpp_2.json', 'r', encoding='utf-8') as f:
+with open('simulation/deepseek_32b_cpp_2.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
 
 # 计数

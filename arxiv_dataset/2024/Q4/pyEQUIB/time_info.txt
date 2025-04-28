@@ -1,0 +1,14 @@
+examples/cel_diagnostics_example.py: 2021-03-03T03:55:02Z
+pyequib/__init__.py: 2021-04-26T03:23:58Z
+pyequib/version.py: 2023-12-22T18:58:00Z
+pyequibtests/__init__.py: 2016-11-25T08:18:22Z
+examples/orl_abundance_example.py: 2021-03-03T03:55:02Z
+pyequibtests/orl_abundance_test.py: 2021-03-03T03:55:02Z
+examples/cel_abundance_example.py: 2021-03-03T03:55:02Z
+pyequib/pyequib.py: 2023-06-28T02:40:55Z
+pyequibtests/cel_abundance_test.py: 2021-03-03T03:55:02Z
+pyequibtests/cel_diagnostics_test.py: 2021-03-03T03:55:02Z
+examples/redlaw_deredden_example.py: 2020-10-03T07:58:02Z
+docs/src/conf.py: 2021-03-05T20:05:16Z
+pyequibtests/redlaw_deredden_test.py: 2020-10-16T18:13:44Z
+setup.py: 2023-12-22T18:58:14Z

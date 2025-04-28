@@ -1,0 +1,6 @@
+demos/spherical.py: 2024-12-17T18:32:26Z
+src/greenlantern/__init__.py: 2024-12-17T18:32:26Z
+demos/barnes_fortney.py: 2024-11-11T15:45:35Z
+setup.py: 2024-12-17T18:32:26Z
+demos/gradients.py: 2024-12-17T18:32:26Z
+demos/versus_batman.py: 2024-11-18T20:21:29Z

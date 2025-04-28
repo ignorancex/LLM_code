@@ -1,0 +1,17 @@
+airfoil_diffusion/flowmatching/odesolve/__init__.py: 2024-09-02T13:24:08Z
+airfoil_diffusion/network_modules/attentions.py: 2023-12-08T11:53:27Z
+airfoil_diffusion/network_modules/base_net.py: 2023-12-08T11:53:27Z
+airfoil_diffusion/flowmatching/__init__.py: 2024-09-24T09:46:05Z
+airfoil_diffusion/drag_lift.py: 2023-12-04T09:21:27Z
+airfoil_diffusion/network_modules/unets.py: 2023-12-08T11:53:27Z
+airfoil_diffusion/trainer.py: 2024-08-29T13:52:32Z
+airfoil_diffusion/trainer_base.py: 2023-12-08T11:53:27Z
+airfoil_diffusion/networks.py: 2023-12-08T11:53:27Z
+data_generation/sim_funcs.py: 2023-12-04T09:21:27Z
+airfoil_diffusion/plotter.py: 2024-04-05T07:24:30Z
+airfoil_diffusion/diffuser.py: 2024-08-29T11:32:53Z
+airfoil_diffusion/flowmatching/odesolve/solver.py: 2024-09-02T13:24:08Z
+data_generation/generator.py: 2023-12-04T09:21:27Z
+airfoil_diffusion/airfoil_datasets.py: 2023-12-08T11:53:27Z
+airfoil_diffusion/helpers.py: 2024-11-04T03:49:11Z
+airfoil_diffusion/network_modules/convs.py: 2023-12-08T11:53:27Z

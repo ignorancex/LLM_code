@@ -1,0 +1,14 @@
+lighthubert/functional/sliding_attn.py: 2022-03-30T12:58:29Z
+lighthubert/modules/fairseq_modules.py: 2022-03-30T12:58:29Z
+lighthubert/functional/fairseq_utils.py: 2022-04-18T01:52:47Z
+lighthubert/lighthubert.py: 2022-06-13T06:27:58Z
+lighthubert/__init__.py: 2022-03-26T08:11:59Z
+lighthubert/modules/__init__.py: 2022-03-26T08:11:59Z
+lighthubert/modules/scaling_conv.py: 2022-03-30T12:58:29Z
+lighthubert/functional/__init__.py: 2022-03-26T08:11:59Z
+lighthubert/modules/scaling_layernorm.py: 2022-03-30T12:58:29Z
+lighthubert/modules/scaling_linear.py: 2022-03-30T12:58:29Z
+lighthubert/modules/scaling_transformer.py: 2022-03-30T12:58:29Z
+lighthubert/modules/scaling_multihead.py: 2022-03-30T12:58:29Z
+lighthubert/modules/w2v2_modules.py: 2022-03-30T12:58:29Z
+setup.py: 2022-04-18T03:04:14Z

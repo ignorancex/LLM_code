@@ -1,0 +1,9 @@
+pypvroof/main.py: 2025-04-23T13:44:29Z
+examples/basic_usage.py: 2025-04-23T13:44:29Z
+pypvroof/setup.py: 2025-04-23T14:01:37Z
+examples/advanced_usage.py: 2025-04-23T13:44:29Z
+setup.py: 2025-04-24T10:40:24Z
+pypvroof/methods.py: 2025-04-23T13:44:29Z
+pypvroof/utils.py: 2025-04-23T13:44:29Z
+pypvroof/__init__.py: 2025-04-24T10:40:24Z
+tests/test_basic.py: 2025-04-23T13:44:29Z

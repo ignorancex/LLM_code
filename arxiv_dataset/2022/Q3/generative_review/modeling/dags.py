@@ -1,0 +1,55 @@
+import daft
+
+# linear regression
+pgm = daft.PGM()
+pgm.add_node("beta", r"$\beta$", 0.5, 1.4)
+pgm.add_node("xi", r"$x_{i}$", .5, .6, observed=True)
+pgm.add_node("yi", r"$y_{i}$", 1.5, .6, observed=True)
+pgm.add_plate([0, 0, 2, 1], label=r"$i = 1, \cdots, N$", shift=-0.1)
+pgm.add_edge("xi", "yi")
+pgm.add_edge("beta", "yi")
+pgm.render()
+pgm.savefig("lr.svg", dpi=800)
+
+
+# hierarchical model
+pgm = daft.PGM()
+pgm.add_node("beta", r"$\beta$", 0, .6)
+pgm.add_node("betai", r"$\beta_{i}$", 1, .6)
+pgm.add_node("yi", r"$y_{i}$", 2, .6, observed=True)
+pgm.add_edge("beta", "betai")
+pgm.add_edge("betai", "yi")
+pgm.add_plate([.5, 0, 2, 1], label=r"$i = 1, \cdots, N$", shift=-0.1)
+pgm.render()
+pgm.savefig("hierarchical.svg", dpi=800)
+
+# linear regression
+pgm = daft.PGM()
+pgm.add_node("beta", r"$\beta$", 1, 1.4)
+pgm.add_node("alpha", r"$\alpha$", 0, .6)
+pgm.add_node("zi", r"$z_{i}$", 1, .6)
+pgm.add_node("yi", r"$y_{i}$", 2, .6, observed=True)
+pgm.add_plate([0.5, 0, 2, 1], label=r"$i = 1, \cdots, N$", shift=-0.1)
+pgm.add_edge("alpha", "zi")
+pgm.add_edge("zi", "yi")
+pgm.add_edge("beta", "yi")
+pgm.render()
+pgm.savefig("latent.svg", dpi=800)
+
+# latent markov
+pgm = daft.PGM()
+pgm.add_node("x1", r"$x_{1}$", 0, 0.6, observed=True)
+pgm.add_node("x2", r"$x_{2}$", 1, 0.6, observed=True)
+pgm.add_node("xT", r"$x_{T}$", 2.5, 0.6, observed=True)
+pgm.add_node("z1", r"$z_{1}$", 0, 1.4)
+pgm.add_node("z2", r"$z_{2}$", 1, 1.4)
+pgm.add_node("zdots", r"$\dots$", 1.75, 1.4, plot_params = {"edgecolor": (1, 1, 1, 0), "alpha": 0})
+pgm.add_node("zT", r"$z_{T}$", 2.5, 1.4)
+pgm.add_edge("z1", "x1")
+pgm.add_edge("z2", "x2")
+pgm.add_edge("zT", "xT")
+pgm.add_edge("z1", "z2")
+pgm.add_edge("z2", "zdots")
+pgm.add_edge("zdots", "zT")
+pgm.render()
+pgm.savefig("latent_markov.svg", dpi=800)

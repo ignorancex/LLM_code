@@ -1,0 +1,17 @@
+iNNterpol_PCA12/innterpol_pca12.py: 2021-10-07T09:53:48Z
+iNNterpol_PHOENIX/model.py: 2023-02-20T13:02:34Z
+iNNterpol_PHOENIX/innterpol.py: 2023-02-20T13:02:34Z
+iNNterpol_MARCS/model_encoder.py: 2023-02-20T11:16:09Z
+iNNterpol_MARCS/model.py: 2023-02-20T11:16:09Z
+iNNterpol_MARCS/innterpol.py: 2023-02-20T11:16:09Z
+iNNterpol_PHOENIX/model_encoder.py: 2023-02-20T13:02:34Z
+iNNterpol_PCA12/model.py: 2021-10-07T09:53:48Z
+train_data_ATLAS9/check_cae_nn_atlas9.py: 2023-03-13T12:36:09Z
+training_MARCS/model.py: 2023-03-14T14:33:08Z
+model.py: 2021-10-07T09:53:48Z
+training_MARCS/train_cae_MARCS/model_cuatro.py: 2023-03-14T14:33:08Z
+training_MARCS/model_encoder.py: 2023-03-14T14:33:08Z
+model_encoder.py: 2021-10-07T09:53:48Z
+training_MARCS/train_marcs_cae_nn.py: 2023-03-14T14:33:08Z
+training_MARCS/train_cae_MARCS/train_marcs_cae.py: 2023-05-27T11:23:57Z
+innterpol.py: 2021-10-07T09:53:48Z

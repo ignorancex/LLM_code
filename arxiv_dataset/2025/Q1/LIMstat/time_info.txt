@@ -1,0 +1,15 @@
+src/limstat/simulations.py: 2025-04-03T13:15:19Z
+src/limstat/fast_interferometer.py: 2024-07-25T08:08:00Z
+src/limstat/instruments.py: 2024-07-25T08:08:00Z
+src/limstat/cosmo_units.py: 2025-04-11T13:58:48Z
+src/limstat/power_spectrum.py: 2025-04-11T08:51:54Z
+src/limstat/plotting.py: 2025-04-22T15:02:02Z
+setup.py: 2024-07-25T08:08:00Z
+src/limstat/__init__.py: 2024-07-25T08:08:00Z
+src/limstat/utils.py: 2025-04-22T15:02:02Z
+src/limstat/window_function.py: 2025-04-22T15:00:55Z
+tests/test_cosmological_signal.py: 2024-07-25T07:13:11Z
+tests/test_power_spectrum.py: 2024-07-25T07:13:11Z
+tests/__init__.py: 2024-07-25T07:13:11Z
+tests/test_foregrounds.py: 2024-07-25T07:13:11Z
+tests/test_noise.py: 2024-07-25T07:13:11Z

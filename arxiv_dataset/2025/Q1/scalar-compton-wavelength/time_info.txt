@@ -1,0 +1,11 @@
+Packages/compt_functions.py: 2024-09-11T11:55:18Z
+Packages/__init__.py: 2024-09-11T11:55:18Z
+Solvers/__init__.py: 2024-09-11T11:55:18Z
+Packages/utils.py: 2024-09-11T11:55:18Z
+Solvers/utils.py: 2024-09-11T11:55:18Z
+Solvers/fR2D.py: 2024-09-11T11:55:18Z
+constants.py: 2024-09-11T16:08:10Z
+Packages/fR_functions.py: 2024-09-11T11:55:18Z
+plot_figures.py: 2024-09-16T17:08:34Z
+run_solutions.py: 2024-09-11T11:55:18Z
+Packages/galaxy_relations.py: 2024-09-11T15:58:45Z

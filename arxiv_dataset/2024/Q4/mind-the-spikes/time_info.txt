@@ -1,0 +1,9 @@
+figure3.py: 2023-05-16T08:30:15Z
+kernel_regression_spikysmooth.py: 2023-05-16T08:30:15Z
+plot_helper.py: 2023-05-16T08:30:15Z
+activation_functions_spikysmooth.py: 2023-05-16T08:30:15Z
+myutils.py: 2023-05-16T08:30:15Z
+train_spikysmooth_nns.py: 2023-05-16T08:30:15Z
+sinfit.py: 2023-05-16T08:30:15Z
+kernelplot.py: 2023-05-16T08:30:15Z
+plot_activations.py: 2023-05-16T08:30:15Z

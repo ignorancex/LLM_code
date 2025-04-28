@@ -1,0 +1,8 @@
+Boundary Control/main_PixelwiseControl.py: 2025-01-07T00:42:05Z
+Boundary Control/training/Burgers_CNN.py: 2025-01-07T00:42:05Z
+TwoDim_BurgersPDE/main/128by128/main.py: 2025-01-07T00:42:05Z
+TwoDim_BurgersPDE/main/200by200/main.py: 2025-01-07T00:42:05Z
+TwoDim_BurgersPDE/main/128by128/training/Burger2dUnet.py: 2025-01-07T00:42:05Z
+MPPI Comparison/mppi_burgers.py: 2025-03-13T23:17:04Z
+TwoDim_BurgersPDE/main/200by200/training_dt=0.001/Burger2dUnet.py: 2025-01-07T00:42:05Z
+Boundary Control/main_BoundaryControl.py: 2025-01-07T00:42:05Z

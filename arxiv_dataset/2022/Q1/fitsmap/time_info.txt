@@ -1,0 +1,17 @@
+fitsmap/output_manager.py: 2023-02-07T15:58:06Z
+fitsmap/kdbush.py: 2023-02-07T03:27:52Z
+fitsmap/cartographer.py: 2024-07-24T16:53:59Z
+fitsmap/__main__.py: 2023-02-07T15:58:06Z
+fitsmap/__version__.py: 2024-09-09T16:17:18Z
+fitsmap/convert.py: 2024-07-24T16:53:59Z
+docs/conf.py: 2022-08-06T03:36:02Z
+fitsmap/__init__.py: 2019-01-11T00:52:20Z
+fitsmap/tests/__init__.py: 2019-12-27T00:12:30Z
+fitsmap/padded_array.py: 2023-02-07T15:58:06Z
+fitsmap/supercluster.py: 2023-02-07T03:27:52Z
+fitsmap/tests/test_cartographer.py: 2024-07-24T16:53:59Z
+fitsmap/tests/test_utils.py: 2023-02-07T15:58:06Z
+fitsmap/tests/test_convert.py: 2024-07-24T14:04:32Z
+fitsmap/utils.py: 2024-07-24T14:04:32Z
+fitsmap/tests/helpers.py: 2023-02-07T15:58:06Z
+setup.py: 2023-02-07T16:19:17Z

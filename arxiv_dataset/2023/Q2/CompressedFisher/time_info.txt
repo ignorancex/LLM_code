@@ -1,0 +1,10 @@
+setup.py: 2023-02-02T19:57:10Z
+CompressedFisher/distributions/gaussian.py: 2023-02-05T00:26:49Z
+tests/test_gaussianMeanAndCov.py: 2023-02-05T00:26:49Z
+docs/source/conf.py: 2022-12-12T15:29:49Z
+CompressedFisher/__init__.py: 2022-11-24T16:59:37Z
+CompressedFisher/distributions/__init__.py: 2022-11-24T16:59:37Z
+CompressedFisher/distributions/poisson.py: 2023-02-05T00:26:49Z
+tests/test_gaussianMeanOnly.py: 2023-02-05T00:26:49Z
+tests/test_poisson.py: 2023-02-05T00:26:49Z
+CompressedFisher/fisher.py: Unknown

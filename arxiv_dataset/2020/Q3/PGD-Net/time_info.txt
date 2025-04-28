@@ -1,0 +1,6 @@
+network_arch.py: 2020-08-13T15:00:54Z
+bloch.py: 2020-08-13T14:46:38Z
+main.py: 2020-08-13T14:59:46Z
+data.py: 2020-08-13T14:46:38Z
+utils.py: 2020-08-13T15:01:36Z
+operators.py: 2020-08-13T15:01:16Z

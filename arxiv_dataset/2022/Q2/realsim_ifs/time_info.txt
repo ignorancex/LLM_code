@@ -1,0 +1,5 @@
+Old/Generate_TNG100-1_Diagnostic_Stellar-Ideal.py: 2022-01-06T10:19:11Z
+Old/generate_manga-tng_observations.py: 2022-01-06T10:19:11Z
+ifs.py: 2022-03-31T05:37:51Z
+Old/generate_idealized-tng_observations.py: 2022-01-06T10:19:11Z
+Old/idealized_map_functions.py: 2022-01-06T10:19:11Z

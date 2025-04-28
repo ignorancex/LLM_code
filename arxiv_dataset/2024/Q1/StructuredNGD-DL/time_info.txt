@@ -1,0 +1,17 @@
+models/cifar/regnet.py: 2023-06-09T20:37:54Z
+models/cifar/__init__.py: 2023-06-09T20:37:54Z
+main.py: 2023-07-24T16:14:08Z
+models/cifar/reglayers.py: 2023-06-09T20:37:54Z
+models/cifar/pyramidnet.py: 2023-06-09T20:37:54Z
+models/__init__.py: 2023-06-09T20:37:54Z
+models/cifar/se_block.py: 2023-06-09T20:37:54Z
+models/cifar/convmixer.py: 2023-06-09T20:37:54Z
+models/imagenet/__init__.py: 2023-07-23T18:09:00Z
+optimizers/__init__.py: 2023-06-09T20:37:54Z
+optimizers/local_cov.py: 2023-07-24T16:13:19Z
+models/imagenet/convmixernew.py: 2023-07-23T18:09:00Z
+optimizers/kfac.py: 2023-07-24T16:13:19Z
+utils/kfac_utils.py: 2023-07-23T17:56:00Z
+models/cifar/vgg.py: 2023-06-09T20:37:54Z
+utils/data_utils.py: 2023-06-09T20:37:54Z
+utils/network_utils.py: 2023-07-23T18:09:00Z

@@ -1,0 +1,6 @@
+solver_interface/src/perch_recovery_planner.cpp: 2022-01-17T18:21:40Z
+solver_interface/src/parameters/lines.cpp: 2022-01-17T18:21:40Z
+solver_interface/src/parameters/reference.cpp: 2022-01-17T18:21:40Z
+solver_interface/src/parameters/costs.cpp: 2022-01-17T18:21:40Z
+solver_interface/src/parameters/xinit.cpp: 2022-01-17T18:21:40Z
+solver_interface/src/parameters/quad.cpp: 2022-01-17T18:21:40Z

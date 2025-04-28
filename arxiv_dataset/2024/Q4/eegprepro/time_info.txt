@@ -1,0 +1,17 @@
+AllFnc/training.py: 2024-06-20T16:19:27Z
+AllFnc/split.py: 2024-06-20T16:19:27Z
+AllFnc/visualization.py: 2024-06-20T16:19:27Z
+AllFnc/models.py: 2024-06-20T16:19:27Z
+CreateResultsTable.py: 2024-06-20T16:19:27Z
+RunKfold.py: 2024-06-20T16:19:27Z
+AllFnc/utilities.py: 2024-06-20T16:19:27Z
+AllFnc/__init__.py: 2024-06-20T16:19:27Z
+RunKfoldAll.py: 2024-06-20T16:19:27Z
+RunKfoldComboB01.py: 2024-06-20T16:19:27Z
+RunKfoldComboB02.py: 2024-06-20T16:19:27Z
+Supplementary/RunKfoldComboLR.py: 2024-06-20T16:19:27Z
+Supplementary/RunKfoldComboSample.py: 2024-06-20T16:19:27Z
+Supplementary/CreateResultsTableLR.py: 2024-06-20T16:19:27Z
+Supplementary/RunKfoldLR.py: 2024-06-20T16:19:27Z
+Supplementary/RunKfoldSample.py: 2024-06-20T16:19:27Z
+Supplementary/RunTimeEvaluation.py: 2024-06-20T16:19:27Z

@@ -1,0 +1,11 @@
+farmer/__init__.py: 2025-01-31T17:18:42Z
+bin/example_script.py: 2024-05-28T17:18:29Z
+bin/tractor_test.py: 2024-05-28T17:18:29Z
+bin/prep_psf.py: 2023-12-12T22:05:20Z
+farmer/image.py: 2025-03-19T15:42:13Z
+farmer/brick.py: 2025-02-17T15:36:22Z
+farmer/group.py: 2024-08-26T17:37:03Z
+config/config.py: 2024-07-09T17:35:17Z
+farmer/utils.py: 2025-03-19T15:42:13Z
+farmer/version.py: 2023-08-14T21:28:55Z
+farmer/mosaic.py: 2024-08-08T21:33:46Z

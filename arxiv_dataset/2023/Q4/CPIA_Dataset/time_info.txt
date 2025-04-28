@@ -1,0 +1,11 @@
+data_process/ROI/CPIA_ROI_1_Crop&Resize.py: Unknown
+data_process/ROI/CPIA_ROI_1_Microscope_P_uninfected.py: 2024-03-15T09:27:03Z
+data_process/ROI/CPIA_ROI_0_GasHisSDB.py: 2024-03-15T09:27:03Z
+data_process/ROI/CPIA_ROI_0_SIPaKMeD.py: 2024-03-15T09:27:03Z
+data_process/ROI/CPIA_ROI_1_Microscope_DataBiox.py: 2024-03-15T09:27:03Z
+data_process/ROI/CPIA_ROI_1_Microscope_P_falciparum.py: 2024-03-15T09:27:03Z
+data_process/ROI/CPIA_ROI_0_BreakHis.py: 2024-03-15T09:27:03Z
+data_process/ROI/CPIA_ROI_0_Warwick.py: 2024-03-15T09:27:03Z
+data_process/ROI/CPIA_ROI_1_Microscope_P_vivax.py: 2024-03-15T09:27:03Z
+data_process/ROI/MicroscopeCrop.py: 2024-03-15T09:27:03Z
+data_process/WSI/CPIA_WSI.py: 2024-03-15T09:27:03Z

@@ -1,0 +1,13 @@
+pyPplusS/__init__.py: 2020-09-24T19:40:51Z
+Code/period_analysis.py: 2020-10-01T17:29:47Z
+Code/eclipse.py: 2020-10-10T22:44:11Z
+Code/__init__.py: 2020-09-24T19:39:23Z
+Code/mcmc.py: 2020-10-08T14:20:22Z
+Code/orbital_analysis.py: 2020-10-01T16:17:36Z
+pyPplusS/base_functions.py: 2020-09-24T19:40:51Z
+pyPplusS/segment_models.py: 2020-09-24T19:40:51Z
+Code/ground_variation.py: 2020-10-10T19:38:13Z
+pyPplusS/polygon_plus_segments.py: 2020-09-24T19:40:51Z
+pyPplusS/error_order_fin.py: 2020-09-24T19:40:51Z
+pyPplusS/fastqs.py: 2020-09-24T19:40:51Z
+Code/stellar_variation.py: 2020-10-27T15:38:54Z

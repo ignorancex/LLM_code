@@ -1,0 +1,13 @@
+imports/fibernn/__init__.py: 2024-06-24T06:52:36Z
+imports/fibernn/derivatives.py: 2024-06-24T06:52:36Z
+imports/nn_functionals.py: 2024-06-24T06:52:36Z
+imports/kuhl_functionals.py: 2024-06-24T06:52:36Z
+imports/fibernn/io.py: 2024-06-24T06:52:36Z
+imports/loss_functions.py: 2024-06-24T06:52:36Z
+imports/drivers.py: 2024-06-24T06:52:36Z
+imports/fibernn/mechanics.py: 2024-06-24T06:52:36Z
+imports/plotter.py: 2024-06-24T06:52:36Z
+src/fcnn.py: 2024-06-24T06:52:36Z
+src/icnn.py: 2024-06-24T06:52:36Z
+src/kuhl.py: 2024-06-24T06:52:36Z
+src/execs.py: 2024-09-12T16:43:40Z

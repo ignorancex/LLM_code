@@ -1,0 +1,15 @@
+gefera/animate.py: 2022-05-31T00:55:25Z
+docs/conf.py: 2022-05-31T02:30:52Z
+gefera/__init__.py: 2022-05-31T02:30:52Z
+gefera/phot.py: 2022-05-24T16:18:21Z
+gefera/systems.py: 2022-05-31T00:55:25Z
+.ipynb_checkpoints/setup-checkpoint.py: 2022-05-27T20:41:07Z
+gefera/kep.py: 2022-05-24T16:22:15Z
+gefera/orbits.py: 2022-05-30T22:32:15Z
+tests/test_flux.py: 2022-05-25T22:25:30Z
+setup.py: 2022-05-25T23:38:16Z
+tests/utils.py: 2022-05-26T19:02:10Z
+tests/test_kepler.py: 2022-05-30T23:02:32Z
+tests/.ipynb_checkpoints/utils-checkpoint.py: 2022-05-26T19:02:10Z
+tests/.ipynb_checkpoints/test_flux-checkpoint.py: 2022-05-25T22:25:30Z
+tests/.ipynb_checkpoints/test_kepler-checkpoint.py: 2022-05-30T23:02:32Z

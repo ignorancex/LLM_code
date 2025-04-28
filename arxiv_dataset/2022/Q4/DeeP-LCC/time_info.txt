@@ -1,0 +1,17 @@
+Python Implementations/_fcn/HDV_dynamics.py: 2023-07-13T23:20:48Z
+Python Implementations/data_generation/data_trajectoryDataCollection.py: 2023-07-13T23:23:19Z
+Python Implementations/_fcn/qp_DeeP_LCC.py: 2023-07-13T23:20:48Z
+Python Implementations/data_generation/data_hdvParameter.py: 2023-07-13T23:23:00Z
+Python Implementations/_fcn/measure_mixed_traffic.py: 2023-07-13T23:20:48Z
+Python Implementations/data_generation/nedc_modified_trajectory.py: 2023-07-13T23:23:19Z
+Python Implementations/main_nedc_simulation.py: 2023-07-13T23:17:52Z
+Python Implementations/_fcn/hankel_matrix.py: 2023-07-13T23:20:48Z
+Python Implementations/_fcn/traffic_linear_model.py: 2023-07-13T23:20:32Z
+Python Implementations/data_generation/nedc_trajectory.py: 2023-07-13T23:23:19Z
+Python Implementations/data_generation/nedc_trajectory_modified.py: 2023-07-13T23:23:19Z
+Python Implementations/plot_figure/Figure_NEDC_Statistics.py: 2023-07-13T23:24:47Z
+Python Implementations/_fcn/qp_MPC.py: 2023-07-13T23:20:48Z
+Python Implementations/main_brake_simulation.py: 2023-07-13T23:17:52Z
+Python Implementations/plot_figure/Figure_BrakePerturbation_Trajectory.py: 2023-07-13T23:24:36Z
+Python Implementations/plot_figure/Figure_OVMSpacingPolicy.py: 2023-07-13T23:24:47Z
+Python Implementations/plot_figure/Figure_NEDC_Trajectory.py: 2023-07-13T23:24:47Z

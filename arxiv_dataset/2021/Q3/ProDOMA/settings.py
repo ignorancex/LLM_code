@@ -1,0 +1,5 @@
+DATA_DIR = "/mnt/home/dunan/Job/2018/DNA_classification/GPCR_small_simulated/"
+default_train_file = "pbsim_train_add_gds.txt"
+default_valid_file = "pbsim_test_first10k.txt"
+default_test_file = "simlord_test_5000_e10.txt"
+experiment_log = "/mnt/home/dunan/Job/2018/DeepXXX/Experiment/Architecture/results.out"

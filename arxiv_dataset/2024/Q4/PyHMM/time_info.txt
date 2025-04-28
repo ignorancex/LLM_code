@@ -1,0 +1,10 @@
+codebook_creator.py: 2023-07-06T06:47:07Z
+accuracy.py: 2023-07-06T14:54:56Z
+recoding/voice_recording.py: 2023-07-06T15:10:02Z
+myhmm_scaled.py: 2023-07-05T18:12:34Z
+recognize.py: 2023-07-06T14:40:51Z
+detect_word.py: 2023-07-06T06:47:07Z
+myhmm.py: 2023-07-05T18:12:34Z
+test_hmm.py: 2023-07-05T18:12:34Z
+__init__.py: 2023-07-05T18:12:34Z
+test_hmm_scaled.py: 2023-07-05T18:12:34Z

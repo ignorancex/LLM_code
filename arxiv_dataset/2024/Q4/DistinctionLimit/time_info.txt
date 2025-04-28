@@ -1,0 +1,12 @@
+src/NeutrinoFuncs.py: 2024-02-27T09:35:46Z
+src/.ipynb_checkpoints/U1Funcs-checkpoint.py: 2024-02-27T09:35:46Z
+src/StatisticFuncs.py: 2024-06-08T10:47:03Z
+src/LabFuncs.py: 2024-02-27T09:35:46Z
+src/.ipynb_checkpoints/U1PlotFuncs-checkpoint.py: 2024-03-06T09:04:54Z
+src/.ipynb_checkpoints/StatisticFuncs-checkpoint.py: 2024-03-02T04:29:56Z
+src/U1PlotFuncs.py: 2024-06-08T10:47:03Z
+src/U1Funcs.py: 2024-04-18T10:52:44Z
+src/.ipynb_checkpoints/propagation-checkpoint.py: 2024-04-18T14:01:09Z
+src/Params.py: 2024-04-18T10:52:44Z
+src/propagation.py: 2024-04-18T14:01:09Z
+src/WIMPFuncs.py: 2024-02-27T09:35:46Z

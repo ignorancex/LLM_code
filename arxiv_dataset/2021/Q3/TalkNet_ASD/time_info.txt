@@ -1,0 +1,16 @@
+dataLoader.py: 2021-07-29T07:04:06Z
+model/faceDetector/s3fd/__init__.py: 2021-07-15T08:46:56Z
+model/audioEncoder.py: 2021-07-15T08:46:56Z
+loss.py: 2021-07-15T08:46:56Z
+demoTalkNet.py: 2023-05-16T08:36:31Z
+model/faceDetector/__init__.py: 2021-07-15T08:46:56Z
+model/faceDetector/s3fd/box_utils.py: 2021-07-15T08:46:56Z
+model/attentionLayer.py: 2021-07-15T08:46:56Z
+model/visualEncoder.py: 2021-07-15T08:46:56Z
+talkNet.py: 2021-07-22T05:32:51Z
+model/faceDetector/s3fd/nets.py: 2021-07-15T08:46:56Z
+utils/tools.py: 2021-07-22T02:34:27Z
+model/talkNetModel.py: 2021-07-15T08:46:56Z
+TalkSet/generate_TalkSet.py: 2021-07-15T08:46:56Z
+trainTalkNet.py: 2021-07-19T03:36:39Z
+utils/get_ava_active_speaker_performance.py: 2021-07-15T08:46:56Z

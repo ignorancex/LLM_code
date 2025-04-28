@@ -1,0 +1,11 @@
+ipynb/eclipse_data/create_eclipse_video.py: 2022-09-15T13:48:53Z
+ipynb/eclipse_data/create_eclipse_video_slit.py: 2022-09-28T21:49:32Z
+ipynb/eclipse_data/off_limb_intensity_map_ext_fit_all.py: 2023-04-05T14:58:26Z
+ipynb/eclipse_calib/track_limb_slit.py: 2022-09-28T21:49:32Z
+ipynb/eclipse_data/off_limb_intensity_map_ext_interactive.py: 2023-09-22T18:58:16Z
+ipynb/eclipse_data/create_eclipse_video_slit_correct_spectra.py: 2022-10-05T15:14:43Z
+ipynb/eclipse_calib/eclipse_lvl1.py: 2023-04-05T14:58:26Z
+ipynb/eclipse_data/off_limb_intensity_map_ext_fit_combine_3orders.py: 2023-06-07T21:54:44Z
+ipynb/eis/eispac_NPCHDB_tiltcorr.py: 2023-04-18T14:19:59Z
+ipynb/eis/eispac_EQSPY_fit.py: 2023-04-05T14:58:26Z
+ipynb/eis/eispac_NPCHDB.py: 2023-04-05T14:58:26Z

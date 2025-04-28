@@ -1,0 +1,12 @@
+docs/source/figures/intro_example_data.py: 2020-06-20T01:15:02Z
+docs/source/conf.py: 2020-07-08T19:04:28Z
+tests/maintest.py: 2020-07-08T19:00:34Z
+docs/source/examples/intro/intro.py: 2020-07-06T20:59:20Z
+docs/source/examples/singlevalue/singlevalue.py: 2020-06-23T03:16:28Z
+setup.py: 2020-07-08T19:04:28Z
+docs/source/examples/functional/functional.py: 2020-07-08T19:51:37Z
+src/functional_calc_test.py: 2020-07-24T21:29:11Z
+tests/test.py: 2020-07-06T00:08:01Z
+webcalculator/page_functional/bokeh/RCRplotgenerator_functional.py: 2020-07-09T18:23:13Z
+webcalculator/page_functional/bokeh/RCRinputplot_functional.py: 2020-03-14T00:37:32Z
+webcalculator/page_singlevalue/bokeh/RCRhistogramgenerator_value.py: 2020-07-16T00:03:22Z

@@ -1,0 +1,12 @@
+lightning_version/main.py: 2024-12-25T08:45:17Z
+lightning_version/model.py: 2024-12-25T08:45:17Z
+src/models/fcn4flare/configuration_fcn4flare.py: 2024-12-24T07:17:54Z
+src/models/__init__.py: 2024-12-24T07:17:54Z
+src/data/data_collator.py: 2024-12-24T07:17:54Z
+src/data/kepler_flare/kepler_flare.py: 2024-12-24T07:17:54Z
+lightning_version/data.py: 2024-12-25T08:45:17Z
+src/upload_dataset.py: 2024-12-24T07:17:54Z
+src/models/fcn4flare/modeling_fcn4flare.py: 2024-12-24T07:17:54Z
+examples/pipeline.py: 2024-12-24T12:03:21Z
+src/train.py: 2025-01-21T04:30:36Z
+src/pipelines/flare_detection.py: 2024-12-24T12:03:21Z

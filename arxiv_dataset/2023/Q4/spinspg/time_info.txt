@@ -1,0 +1,16 @@
+src/spinspg/group.py: 2025-04-13T12:04:56Z
+scripts/generate_automorphisms.py: 2023-02-20T02:09:57Z
+docs/conf.py: 2023-07-26T11:37:51Z
+src/spinspg/core.py: 2025-04-13T12:08:25Z
+src/spinspg/permutation.py: 2025-04-13T12:08:25Z
+examples/symmetry_search.py: 2023-01-18T03:46:43Z
+scripts/generate_spin_point_group_table.py: 2024-10-29T22:29:32Z
+src/spinspg/__init__.py: 2025-04-13T12:04:26Z
+tests/test_group.py: 2025-04-13T12:04:56Z
+src/spinspg/pointgroup.py: 2025-04-13T12:08:25Z
+tests/conftest.py: 2024-10-30T12:00:33Z
+src/spinspg/utils.py: 2025-04-13T12:04:56Z
+tests/test_permutation.py: 2025-04-13T12:08:25Z
+src/spinspg/spin.py: 2025-04-13T12:08:25Z
+tests/test_pointgroup.py: 2024-10-30T12:00:33Z
+tests/test_spin.py: 2024-10-30T12:00:33Z

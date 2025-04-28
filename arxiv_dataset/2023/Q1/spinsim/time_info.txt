@@ -1,0 +1,7 @@
+spinsim/__init__.py: 2022-04-08T05:44:21Z
+full_algebra_example.py: 2022-04-12T07:10:34Z
+gaussian_example.py: 2022-04-08T05:44:21Z
+example.py: 2022-04-08T05:44:21Z
+docs/source/_ext/numbadoc.py: 2020-11-18T05:36:04Z
+interpolator_example.py: 2022-04-08T05:44:21Z
+docs/source/conf.py: 2022-04-11T06:10:57Z

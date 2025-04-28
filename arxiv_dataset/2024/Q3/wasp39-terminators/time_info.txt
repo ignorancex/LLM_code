@@ -1,0 +1,14 @@
+extended-figure2/plot_eccentric.py: 2024-06-07T18:05:46Z
+extended-figure3/panel_c_d_e.py: 2024-06-07T18:05:46Z
+extended-figure4/plot_limb_darkening_prior.py: 2024-06-07T18:05:46Z
+extended-figure1/plot_data.py: 2024-06-07T16:05:04Z
+figure1/utils.py: 2024-06-07T05:49:45Z
+figure3/__MACOSX/GCMfigure_NatureArchive/._generateGCMfigure .py: 2024-06-07T16:04:55Z
+extended-figure1/utils.py: 2024-06-07T16:05:04Z
+extended-figure3/panel_a_b.py: 2024-06-07T18:05:46Z
+extended-figure2/plot_circular.py: 2024-06-07T18:05:46Z
+figure3/generateGCMfigure.py: 2024-06-07T16:04:55Z
+figure2/plot_model.py: 2024-06-13T20:42:46Z
+figure2/utils.py: 2024-06-07T05:54:33Z
+extended-figure5/corner_plot_paper.py: 2024-06-07T18:13:58Z
+figure1/plot_lightcurves.py: 2024-06-07T05:49:45Z

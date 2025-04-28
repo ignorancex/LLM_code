@@ -1,0 +1,10 @@
+Examples/H2_minimal.py: 2023-02-25T06:14:34Z
+Examples/C6H6_example.py: 2023-02-26T08:59:40Z
+Examples/O2_CASSCF_example.py: 2023-07-18T15:37:05Z
+Examples/CO_example.py: 2023-02-28T02:42:16Z
+Examples/H2_example.py: 2023-02-28T02:42:16Z
+Examples/CO_convtest.py: 2023-02-26T08:59:40Z
+Examples/C2H2_example.py: 2023-02-28T02:42:16Z
+Examples/N2_convtest.py: 2023-02-26T08:59:40Z
+Examples/O2_example.py: 2023-02-28T02:42:16Z
+PyStructureFactor.py: 2023-07-19T02:03:55Z

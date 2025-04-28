@@ -1,0 +1,4 @@
+mafin/__init__.py: 2024-10-15T06:14:09Z
+mafin/mafin.py: 2025-03-19T09:13:40Z
+mafin/test/mafin_testing.py: 2024-10-15T06:14:09Z
+setup.py: 2024-11-28T07:06:31Z

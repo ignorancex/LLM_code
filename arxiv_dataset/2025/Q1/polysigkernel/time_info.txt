@@ -1,0 +1,12 @@
+polysigkernel/monomial_interpolation_solver.py: 2025-02-17T01:25:17Z
+polysigkernel/__init__.py: 2025-02-17T01:25:17Z
+polysigkernel/monomial_approximation_solver.py: 2025-02-17T01:25:17Z
+experiments/quicktest.py: 2025-02-16T19:04:39Z
+polysigkernel/static_kernels.py: 2025-02-17T01:25:17Z
+setup.py: 2025-03-03T22:23:08Z
+polysigkernel/utils.py: 2025-02-17T01:25:17Z
+polysigkernel/sigkernel.py: 2025-02-17T01:25:17Z
+polysigkernel/_hyp0f1.py: 2025-02-17T01:25:17Z
+experiments/time_analysis.py: 2025-02-16T19:04:39Z
+polysigkernel/config.py: 2025-02-17T01:25:17Z
+experiments/error_analysis.py: 2025-02-16T19:04:39Z

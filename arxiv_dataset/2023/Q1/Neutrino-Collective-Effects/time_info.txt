@@ -1,0 +1,5 @@
+Auxiliar_Functions.py: 2022-12-06T14:03:57Z
+ODE_Isotropic_Monoenergetic.py: 2022-02-22T20:54:59Z
+Plots.py: 2022-12-06T14:03:57Z
+ODE_Isotropic_Spectrum.py: 2022-02-22T20:54:59Z
+ODE_Solar.py: 2022-02-09T21:32:26Z

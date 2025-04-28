@@ -1,0 +1,84 @@
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_10s/main.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_10s/model_2D.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_10s/AADdataset.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_10s/I3D_try.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_10s/model_3D.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_10s/train_valid_and_test.py: 2023-09-14T12:50:17Z
+1_download_data/download_data.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_10s/config.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_1s/AADdataset.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_1s/I3D_try.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_1s/config.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_1s/model_2D.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_1s/model_3D.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_2s/AADdataset.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_1s/train_valid_and_test.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_1s/main.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_2s/config.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_2s/I3D_try.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_2s/model_2D.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_2s/main.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_2s/model_3D.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_2s/train_valid_and_test.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_5s/AADdataset.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_5s/I3D_try.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_5s/config.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_5s/model_3D.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_5s/model_2D.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_5s/main.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_independent (10s)/AADdataset.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_5s/train_valid_and_test.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_independent (10s)/I3D_try.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_independent (10s)/config.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_independent (10s)/main.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_independent (10s)/model_2D.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_independent (10s)/model_3D.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_independent (10s)/train_valid_and_test.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_independent (1s)/AADdataset.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_independent (1s)/I3D_try.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_independent (1s)/main.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_independent (1s)/config.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_independent (1s)/model_2D.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_independent (1s)/model_3D.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_independent (2s)/I3D_try.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_independent (1s)/train_valid_and_test.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_independent (2s)/AADdataset.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_independent (2s)/config.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_independent (2s)/main.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_independent (2s)/model_2D.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_independent (2s)/train_valid_and_test.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_independent (2s)/model_3D.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_independent (5s)/I3D_try.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_independent (5s)/config.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_independent (5s)/main.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_independent (5s)/model_3D.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_independent (5s)/model_2D.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_independent (5s)/AADdataset.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_1_Decoding_Accuracy/Densenet-37-I3D_independent (5s)/train_valid_and_test.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_2_Ablation Analysis/CNN-3D/AADdataset.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_2_Ablation Analysis/CNN-3D/I3D_try.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_2_Ablation Analysis/CNN-3D/config.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_2_Ablation Analysis/CNN-3D/main.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_2_Ablation Analysis/CNN-3D/model_3D.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_2_Ablation Analysis/CNN-3D/model_2D.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_2_Ablation Analysis/CNN-3D/train_valid_and_test.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_2_Ablation Analysis/CNN-baseline/AADdataset.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_2_Ablation Analysis/CNN-baseline/main.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_2_Ablation Analysis/CNN-baseline/config.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_2_Ablation Analysis/CNN-baseline/train_valid_and_test.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_2_Ablation Analysis/Densenet-37-3D-with-bootstrapping/I3D_try.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_2_Ablation Analysis/CNN-baseline/model.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_2_Ablation Analysis/Densenet-37-3D-with-bootstrapping/config.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_2_Ablation Analysis/Densenet-37-3D-with-bootstrapping/AADdataset.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_2_Ablation Analysis/Densenet-37-3D-with-bootstrapping/main.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_2_Ablation Analysis/Densenet-37-3D-with-bootstrapping/model_2D.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_2_Ablation Analysis/Densenet-37-3D-without-bootstrapping/config.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_2_Ablation Analysis/Densenet-37-3D-without-bootstrapping/AADdataset.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_2_Ablation Analysis/Densenet-37-3D-without-bootstrapping/I3D_try.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_2_Ablation Analysis/Densenet-37-3D-with-bootstrapping/model_3D.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_2_Ablation Analysis/Densenet-37-3D-with-bootstrapping/train_valid_and_test.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_2_Ablation Analysis/Densenet-37-3D-without-bootstrapping/main.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_2_Ablation Analysis/Densenet-37-3D-without-bootstrapping/model_2D.py: 2023-09-14T12:50:17Z
+quick_model.py: 2025-03-24T06:42:20Z
+5_train_and_test_model/4_2_Ablation Analysis/Densenet-37-3D-without-bootstrapping/train_valid_and_test.py: 2023-09-14T12:50:17Z
+5_train_and_test_model/4_2_Ablation Analysis/Densenet-37-3D-without-bootstrapping/model_3D.py: 2023-09-14T12:50:17Z

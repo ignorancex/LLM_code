@@ -1,0 +1,12 @@
+deep/mappings.py: 2020-11-18T17:57:32Z
+deep/submit_angle.py: 2020-11-18T17:57:32Z
+deep/config.py: 2020-11-18T17:57:32Z
+deep/models.py: 2020-11-18T17:57:32Z
+deep/main.py: 2020-11-18T17:57:32Z
+deep/submit_alphabeta.py: 2020-11-18T17:57:32Z
+deep/tinydfa/alignment.py: 2021-05-18T14:08:38Z
+deep/tinydfa/__init__.py: 2020-11-18T17:57:32Z
+deep/tinydfa/light_dfa.py: 2020-11-18T17:57:32Z
+deep/tinydfa/utils.py: 2020-11-18T17:57:32Z
+deep/tinydfa/dfa.py: 2020-11-18T17:57:32Z
+deep/utils.py: 2020-11-18T17:57:32Z

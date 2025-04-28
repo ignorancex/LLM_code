@@ -1,0 +1,16 @@
+DaMAT/tests/test.py: 2024-10-21T19:51:39Z
+DaMAT/ttObject.py: 2023-11-09T18:24:00Z
+DaMAT/utils.py: 2023-05-11T05:36:30Z
+DaMAT/__init__.py: 2023-05-11T05:36:30Z
+docs/make.py: 2022-11-26T19:11:58Z
+examples/atariTestsTTICE.py: 2023-05-11T05:36:30Z
+examples/atariTestsITTD.py: 2023-05-11T05:36:30Z
+examples/atariTestsTTICEstar.py: 2023-05-11T05:36:30Z
+examples/randTensorTTFOATest.py: 2023-05-11T05:36:30Z
+examples/randTensorTTICETest.py: 2023-05-11T05:36:30Z
+test.py: 2022-12-06T15:11:31Z
+examples/catgelTestsTTICEstar.py: 2023-05-11T05:36:30Z
+examples/createRandomTensor.py: 2023-05-11T05:36:30Z
+setup.py: 2022-11-26T20:30:38Z
+examples/catgelTestsTTICE.py: 2023-05-11T05:36:30Z
+examples/catgelTestsITTD.py: 2023-05-11T05:36:30Z

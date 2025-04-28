@@ -1,0 +1,10 @@
+arfpy/__init__.py: 2023-03-09T11:49:39Z
+arfpy/utils.py: 2023-04-14T14:18:29Z
+arfpy/arf.py: 2023-09-14T16:12:58Z
+docs/tutorials/twomoons.py: 2023-09-06T13:10:02Z
+docs/tutorials/iris.py: 2023-09-21T13:06:01Z
+tests/test.py: 2023-09-14T14:41:02Z
+setup.py: 2023-09-22T06:41:48Z
+docs/conf.py: 2023-04-17T17:11:11Z
+tests/test_diabetes.py: 2023-09-07T09:58:51Z
+tests/test_iris.py: 2023-09-07T09:58:51Z

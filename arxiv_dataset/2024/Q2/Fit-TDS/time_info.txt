@@ -1,0 +1,11 @@
+fit_TDS/epsillonlayers8.py: 2024-05-21T10:45:42Z
+fit_TDS/fit_TDSf.py: 2024-05-21T10:45:42Z
+fit_TDS/epsillon3-28-8.py: 2024-05-21T10:45:42Z
+fit_TDS/csts.py: 2024-05-21T10:45:42Z
+fit_TDS/epsillon3-original.py: 2024-05-21T10:45:42Z
+fit_TDS/fit_TDSg.py: 2024-05-21T10:45:42Z
+fit_TDS/fit_TDSc.py: 2024-05-21T10:45:42Z
+fit_TDS/epsillon3.py: 2024-05-21T10:45:42Z
+fit_TDS/fit_TDSm.py: 2024-05-21T10:45:42Z
+fit_TDS/launch_optimization.py: 2024-05-21T10:45:42Z
+fit_TDS/optimization.py: 2024-05-21T10:45:42Z
