@@ -1,0 +1,9 @@
+cuaoa/internal/src/wrapper/brute_force.cpp: 2024-07-17T14:42:12Z
+cuaoa/internal/src/wrapper/device_info.cpp: 2024-07-17T14:42:12Z
+cuaoa/internal/src/polynomial.cpp: 2024-07-17T14:42:12Z
+cuaoa/internal/src/wrapper/handle.cpp: 2024-07-17T14:42:12Z
+cuaoa/internal/src/wrapper/optimize.cpp: 2024-07-17T14:42:12Z
+cuaoa/internal/src/wrapper/core.cpp: 2024-07-17T14:42:12Z
+cuaoa/internal/src/cuaoa/optimize.cpp: 2024-07-17T14:42:12Z
+cuaoa/internal/src/wrapper/cuaoa.cpp: 2024-07-17T14:42:12Z
+cuaoa/internal/src/wrapper/polynomial.cpp: 2024-07-17T14:42:12Z

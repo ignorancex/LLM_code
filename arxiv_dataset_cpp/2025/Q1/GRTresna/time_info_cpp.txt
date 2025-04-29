@@ -1,0 +1,14 @@
+Examples/ScalarFieldBH/MyMatterFunctions.cpp: 2024-12-06T18:39:51Z
+Source/Core/BoundaryConditions.cpp: 2025-01-10T13:05:23Z
+Source/Core/PsiAndAijFunctions.cpp: 2025-04-16T15:57:19Z
+Examples/ScalarFieldCosmo/MyMatterFunctions.cpp: 2024-12-06T18:39:51Z
+Examples/ScalarFieldBH/Main_ScalarFieldBH.cpp: 2024-12-06T18:39:51Z
+Source/Core/Grids.cpp: 2024-12-06T18:39:51Z
+Source/Matter/ScalarField.cpp: 2024-12-06T18:39:51Z
+Examples/ScalarFieldCosmo/Main_ScalarFieldCosmo.cpp: 2024-12-06T18:39:51Z
+Source/Operator/SolverOperator/VariableCoeffPoissonOperator.cpp: 2024-12-06T18:39:51Z
+Tests/PeriodicScalarFieldTest/MyMatterFunctions.cpp: 2024-12-06T18:39:51Z
+Source/Operator/SolverOperator/VariableCoeffPoissonOperatorFactory.cpp: 2024-12-05T17:49:41Z
+Source/Operator/SetBCs.cpp: 2024-12-08T12:30:16Z
+Source/Operator/DerivativeOperators.cpp: 2024-12-06T18:39:51Z
+Tests/PeriodicScalarFieldTest/PeriodicScalarTest.cpp: 2024-12-06T18:39:51Z

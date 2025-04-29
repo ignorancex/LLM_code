@@ -1,0 +1,7 @@
+pkg/mod/golang.org/x/sys@v0.0.0-20190801041406-cbf593c0f2f3/windows/svc/go12.c: 2022-09-23T04:20:08Z
+pkg/mod/golang.org/x/crypto@v0.0.0-20190701094942-4def268fd1a4/ssh/test/sshd_test_pw.c: 2022-09-23T04:20:08Z
+pkg/mod/golang.org/x/sys@v0.0.0-20220209214540-3681064d5158/unix/gccgo_c.c: 2022-09-23T04:20:08Z
+pkg/mod/golang.org/x/sys@v0.0.0-20220209214540-3681064d5158/cpu/cpu_gccgo_x86.c: 2022-09-23T04:20:08Z
+pkg/mod/golang.org/x/crypto@v0.0.0-20190701094942-4def268fd1a4/otr/libotr_test_helper.c: 2022-09-23T04:20:08Z
+pkg/mod/golang.org/x/sys@v0.0.0-20190801041406-cbf593c0f2f3/unix/gccgo_c.c: 2022-09-23T04:20:08Z
+pkg/mod/golang.org/x/sys@v0.0.0-20190801041406-cbf593c0f2f3/cpu/cpu_gccgo.c: 2022-09-23T04:20:08Z

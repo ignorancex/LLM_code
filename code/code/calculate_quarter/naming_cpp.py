@@ -1,322 +1,227 @@
+"""
+统计 C / C++ 仓库中函数名与变量名的命名方式比例
+=================================================
+
+依赖:
+  pip install tree_sitter tqdm
+  # 然后在本目录执行一次:
+  python build_lang_so.py
+  (见下方 build_lang_so.py 说明)
+
+数据目录结构与原 Python 版本脚本完全一致, 只是结果保存在
+LLM_code/arxiv_result/naming_patterns_c_cpp 目录下。
+"""
+
 import os
 import re
 import json
-from collections import defaultdict
-from tqdm import tqdm
-import pandas as pd
-import concurrent.futures
 import warnings
+from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# Import tree-sitter components
-from tree_sitter import Parser, Language
-from tree_sitter_languages import get_language, get_parser # Helper to load languages
+from tqdm import tqdm
+from tree_sitter import Language, Parser   # ★★★ 关键新增
 
-warnings.filterwarnings("ignore", category=SyntaxWarning) # Keep this if needed elsewhere
+warnings.filterwarnings("ignore", category=SyntaxWarning)
 
-# === Define naming ways regular expressions ===
-# (Keep the same patterns as before, they apply to identifiers generally)
+# -------- 1. Tree-sitter 语言库加载 -----------------------------------------
+# 你只需要在第一次运行前, 跑一遍 build_lang_so.py, 会得到 build/my-languages.so
+# 之后这里直接加载 .so 即可.
+TS_LIB_PATH = "new/my-languages.so"
+if not os.path.exists(TS_LIB_PATH):
+    raise RuntimeError(
+        f"找不到 {TS_LIB_PATH}\n"
+        "请先运行 build_lang_so.py (脚本见本文末尾) 编译 tree-sitter-c & tree-sitter-cpp"
+    )
+
+C_LANGUAGE   = Language(TS_LIB_PATH, "c")
+CPP_LANGUAGE = Language(TS_LIB_PATH, "cpp")
+
+PARSER_C   = Parser(); PARSER_C.set_language(C_LANGUAGE)
+PARSER_CPP = Parser(); PARSER_CPP.set_language(CPP_LANGUAGE)
+
+# -------- 2. 命名方式正则保持不变 -------------------------------------------
 naming_patterns = {
-    "single_letter": r'^[a-zA-Z]$',
-    "lowercase": r'^[a-z]+$',
-    "UPPERCASE": r'^[A-Z]+$',
-    "camelCase": r'^[a-z]+(?:[A-Z][a-z0-9]*)*$', # Adjusted for C/C++ common style
-    "snake_case": r'^[a-z]+(?:_[a-z0-9]+)+$', # Adjusted for C/C++ common style
-    "PascalCase": r'^[A-Z][a-z0-9]+(?:[A-Z][a-z0-9]*)*$', # Adjusted for C/C++ common style
-    "UPPER_SNAKE_CASE": r'^[A-Z]+(?:_[A-Z0-9]+)+$', # Adjusted for C/C++ common style
-    "endsWithDigits": r'^[A-Za-z_]+[0-9]+$',
-    "startsWithUnderscore": r'^_[A-Za-z0-9_]*$', # Common C/C++ pattern
-    "Other": r'.*' # Catch-all
+    "single_letter":   r'^[a-zA-Z]$',
+    "lowercase":       r'^[a-z]+$',
+    "UPPERCASE":       r'^[A-Z]+$',
+    "camelCase":       r'^[a-z]+(?:[A-Z][a-z]*)*$',
+    "snake_case":      r'^[a-z]+(?:_[a-z]+)+$',
+    "PascalCase":      r'^[A-Z][a-z]+(?:[A-Z][a-z]*)*$',
+    "UPPER_SNAKE_CASE":r'^[A-Z]+(?:_[A-Z]+)+$',
+    "endsWithDigits":  r'^[A-Za-z_]+[0-9]+$',
+    "Other":           r'.*'
 }
-
-def get_naming_pattern(name):
-    """Classifies the naming convention of an identifier."""
-    name = str(name)
-    # Check specific patterns first
-    if re.match(naming_patterns["startsWithUnderscore"], name):
-        return "startsWithUnderscore"
-    if re.match(naming_patterns["single_letter"], name):
-        return "single_letter"
-    if re.match(naming_patterns["lowercase"], name):
-        return "lowercase"
-    if re.match(naming_patterns["UPPERCASE"], name):
-        return "UPPERCASE"
-    if re.match(naming_patterns["camelCase"], name):
-        return "camelCase"
-    if re.match(naming_patterns["snake_case"], name):
-        return "snake_case"
-    if re.match(naming_patterns["PascalCase"], name):
-        return "PascalCase"
-    if re.match(naming_patterns["UPPER_SNAKE_CASE"], name):
-        return "UPPER_SNAKE_CASE"
-    if re.match(naming_patterns["endsWithDigits"], name):
-        return "endsWithDigits"
-    # Default to Other if no specific pattern matches
+def get_naming_pattern(name:str)->str:
+    for pattern, regex in naming_patterns.items():
+        if re.match(regex, name):
+            return pattern
     return "Other"
 
+# -------- 3. ⬇️⬇️ 核心变化: 用 tree-sitter 拿到函数名/变量名 -------------- --
+def extract_code_info(file_path:str, skipped_files_log:str):
+    """
+    解析 *单个* C / C++ 源文件, 返回:
+        (set(function_names), set(variable_names))
+    若解析失败, 记录到 skipped_files_log, 并返回空集合
+    """
+    # --- 读文件 --------------------------------------------------------------
+    try:
+        with open(file_path, "rb") as f:   # 注意以二进制读取便于 tree-sitter 的 byte 索引
+            code_bytes = f.read()
+        if b"\x00" in code_bytes:
+            raise ValueError("Contains null bytes")
+    except Exception as e:
+        with open(skipped_files_log, "a", encoding="utf-8") as log:
+            log.write(f"Skipped {file_path}: {e}\n")
+        return set(), set()
 
-# --- Tree-sitter Queries for C/C++ ---
-# These queries target common function definitions and variable/parameter declarations.
-# They might need refinement for very complex C++ code (templates, namespaces, etc.)
-
-# Query for Function Definitions/Declarations (captures the function name)
-# Captures identifiers within function declarators
-C_CPP_FUNC_QUERY = """
-(function_definition declarator: (function_declarator declarator: identifier) @function_name)
-(function_definition declarator: (pointer_declarator declarator: (function_declarator declarator: identifier)) @function_name)
-(declaration type: (_) declarator: (function_declarator declarator: identifier) @function_name) ;; Function prototype
-"""
-
-# Query for Variable/Parameter Declarations (captures the variable name)
-# Captures identifiers in declaration specifiers (variables) and parameter declarations
-C_CPP_VAR_QUERY = """
-(declaration declarator: [
-    (identifier) @variable_name
-    (init_declarator declarator: (identifier) @variable_name)
-    (pointer_declarator declarator: (identifier) @variable_name)
-    (array_declarator declarator: (identifier) @variable_name)
-])
-
-(parameter_declaration declarator: [
-    (identifier) @variable_name
-    (pointer_declarator declarator: (identifier) @variable_name)
-    (array_declarator declarator: (identifier) @variable_name)
-])
-
-; Capture field identifiers (struct/class members)
-(field_declaration declarator: [
-    (field_identifier) @variable_name
-    (pointer_declarator declarator: (field_identifier) @variable_name)
-    (array_declarator declarator: (field_identifier) @variable_name)
-])
-"""
-# --- End Tree-sitter Queries ---
-
-
-# Pre-compile queries for efficiency
-C_LANG = get_language('c')
-CPP_LANG = get_language('cpp')
-FUNC_QUERY_C = C_LANG.query(C_CPP_FUNC_QUERY)
-VAR_QUERY_C = C_LANG.query(C_CPP_VAR_QUERY)
-FUNC_QUERY_CPP = CPP_LANG.query(C_CPP_FUNC_QUERY)
-VAR_QUERY_CPP = CPP_LANG.query(C_CPP_VAR_QUERY)
-
-# Initialize parsers once
-parser_c = Parser()
-parser_c.set_language(C_LANG)
-
-parser_cpp = Parser()
-parser_cpp.set_language(CPP_LANG)
-
-
-def extract_code_info_ts(file_path, skipped_files_log):
-    """Parses C/C++ code using tree-sitter, extracts function and variable names."""
-    function_names = set()
-    variable_names = set()
-    parser = None
-    func_query = None
-    var_query = None
-
-    # Determine language and select parser/queries
-    if file_path.endswith(".c") or file_path.endswith(".h"):
-        parser = parser_c
-        func_query = FUNC_QUERY_C
-        var_query = VAR_QUERY_C
-        lang_name = "C"
-    elif file_path.endswith(".cpp") or file_path.endswith(".hpp") or file_path.endswith(".cc") or file_path.endswith(".hh") or file_path.endswith(".cxx"):
-        parser = parser_cpp
-        func_query = FUNC_QUERY_CPP
-        var_query = VAR_QUERY_CPP
-        lang_name = "C++"
-    else:
-        return function_names, variable_names # Skip unsupported files silently
+    # --- 选择 C 还是 C++ 解析器 ---------------------------------------------
+    ext = os.path.splitext(file_path)[1].lower()
+    parser = PARSER_CPP if ext in {".cpp", ".c"} else PARSER_C
 
     try:
-        with open(file_path, "rb") as f: # Read as bytes for tree-sitter
-            code_bytes = f.read()
-
-        # Basic check for null bytes which can cause issues
-        if b"\x00" in code_bytes:
-             with open(skipped_files_log, "a", encoding="utf-8") as log:
-                 log.write(f"Skipped {file_path}: Contains null bytes\n")
-             return set(), set()
-
-        # Attempt to decode for name extraction later (best effort)
-        try:
-            code_str = code_bytes.decode('utf-8')
-        except UnicodeDecodeError:
-            try:
-                code_str = code_bytes.decode('latin-1') # Try another common encoding
-            except UnicodeDecodeError as e:
-                 with open(skipped_files_log, "a", encoding="utf-8") as log:
-                     log.write(f"Skipped {file_path}: Unicode decode error after trying utf-8 and latin-1 - {str(e)}\n")
-                 return set(), set()
-
-
         tree = parser.parse(code_bytes)
-
-        # --- Extract names using queries ---
-        func_captures = func_query.captures(tree.root_node)
-        var_captures = var_query.captures(tree.root_node)
-
-        for node, capture_name in func_captures:
-             # Get identifier text using node byte range and decoded string
-            identifier = code_str[node.start_byte:node.end_byte]
-            if identifier: # Ensure it's not empty
-                function_names.add(identifier)
-
-        # Add variable/parameter names
-        # Note: This might capture some duplicates if a name is used as both func and var,
-        # but sets handle uniqueness. It might also capture type names in some contexts
-        # depending on query specifics, but should be reasonably accurate for variable names.
-        for node, capture_name in var_captures:
-            identifier = code_str[node.start_byte:node.end_byte]
-            if identifier: # Ensure it's not empty
-                 # Avoid adding names already identified as functions to the variable list
-                 # (Helps distinguish, though C/C++ allows same name for var and func in different scopes)
-                 # if identifier not in function_names: # Optional: keep them separate if needed
-                 variable_names.add(identifier)
-
-
-    except FileNotFoundError:
-         with open(skipped_files_log, "a", encoding="utf-8") as log:
-            log.write(f"Skipped {file_path}: File not found\n")
-    except Exception as e: # Catch other potential errors (e.g., tree-sitter issues)
+    except Exception as e:
         with open(skipped_files_log, "a", encoding="utf-8") as log:
-            log.write(f"Skipped {file_path}: Error during {lang_name} parsing - {str(e)}\n")
-        return set(), set() # Return empty sets on error
+            log.write(f"Skipped {file_path}: parser error {e}\n")
+        return set(), set()
 
-    return function_names, variable_names
+    func_names, var_names = set(), set()
+    root_node = tree.root_node
 
+    # --- DFS 遍历 parse tree -------------------------------------------------
+    def traverse(node, parent_type=None, grandparent_type=None):
+        cur_type = node.type
+        # 捕获标识符节点
+        if cur_type == "identifier":
+            name = code_bytes[node.start_byte: node.end_byte].decode("utf-8", errors="ignore")
+            # 根据父节点类型粗判是函数名还是变量名
+            if parent_type in {"function_declarator"} or grandparent_type in {"function_definition"}:
+                func_names.add(name)
+            elif parent_type in {
+                  "init_declarator", "field_declarator", "pointer_declarator",
+                  "array_declarator", "parameter_declaration", "reference_declarator"
+                 } or grandparent_type in {"declaration"}:
+                var_names.add(name)
 
-def process_project_ts(project_name, quarter_path, skipped_files_log):
-    """Processes a single project for C/C++ files, returning local counts."""
+        # 递归
+        for child in node.children:
+            traverse(child, cur_type, parent_type)
+
+    try:
+        traverse(root_node)
+    except RecursionError:
+        with open(skipped_files_log, "a", encoding="utf-8") as log:
+            log.write(f"Skipped {file_path}: recursion depth exceeded\n")
+        return set(), set()
+        
+    return func_names, var_names
+
+# -------- 4. 其余辅助函数 & 主流程 (保持原来逻辑) -----------------------------
+def classify_category(cat:str)->str:
+    return "cs" if cat.startswith("cs.") else "non_cs"
+
+def process_project(project_name, quarter_path, quarter_key,
+                    quarter_repo_category, skipped_files_log):
+
     project_path = os.path.join(quarter_path, project_name)
+    project_category = quarter_repo_category.get(quarter_key, {}).get(project_name)
+    if project_category is None:         # 跳过没有类别的仓库
+        return None
 
-    # No categories needed, just count patterns directly
-    local_func_counts = defaultdict(int)
-    local_var_counts = defaultdict(int)
-
-    # Define C/C++ file extensions
-    c_cpp_extensions = (".c", ".cpp", ".h", ".hpp", ".cc", ".hh", ".cxx")
+    func_counts = defaultdict(int); var_counts = defaultdict(int)
 
     for root, _, files in os.walk(project_path):
         for file in files:
-            if file.lower().endswith(c_cpp_extensions):
-                file_path = os.path.join(root, file)
-                functions, variables = extract_code_info_ts(file_path, skipped_files_log)
+            if file.endswith((".c", ".cpp")):
+                fpath = os.path.join(root, file)
+                funcs, vars_ = extract_code_info(fpath, skipped_files_log)
+                for name in funcs:
+                    func_counts[get_naming_pattern(name)] += 1
+                for name in vars_:
+                    var_counts[get_naming_pattern(name)] += 1
 
-                for name in functions:
-                    pattern = get_naming_pattern(name)
-                    local_func_counts[pattern] += 1
-                for name in variables:
-                    pattern = get_naming_pattern(name)
-                    local_var_counts[pattern] += 1
+    func_total = sum(func_counts.values())
+    var_total = sum(var_counts.values())
+    func_ratios = {p: (func_counts[p]/func_total) if func_total else 0.0 for p in naming_patterns}
+    var_ratios = {p: (var_counts[p]/var_total) if var_total else 0.0 for p in naming_patterns}
+    return project_category, func_ratios, var_ratios
 
-    return local_func_counts, local_var_counts
+# -------- 5. 主程序入口 ------------------------------------------------------
+BASE_DIR      = "LLM_code/arxiv_dataset_cpp"
+OUTPUT_DIR    = "LLM_code/arxiv_result/naming_patterns_c_cpp"
+CATEGORIES_JS = "LLM_code/code/github_links/cpp_dataset_links_new.json"  # ★仍沿用原 JSON
 
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+SKIPPED_LOG = os.path.join(OUTPUT_DIR, "skipped_files.txt")
+if os.path.exists(SKIPPED_LOG):
+    os.remove(SKIPPED_LOG)
 
-# === Main Program ===
-base_dir = "LLM_code/arxiv_dataset_cpp" # Keep your dataset path
-output_dir = "LLM_code/naming_patterns_c_cpp" # New output directory
-os.makedirs(output_dir, exist_ok=True)
-skipped_files_log = os.path.join(output_dir, "skipped_files_c_cpp.txt")
-if os.path.exists(skipped_files_log):
-    os.remove(skipped_files_log) # Clear log on new run
+# -- 加载类别文件 ------------------------------------------------------------
+with open(CATEGORIES_JS, "r", encoding="utf-8") as f:
+    all_categories = json.load(f)
 
-# No need to load categories.json
+quarter_repo_category = defaultdict(dict)
+for quarter, items in all_categories.items():
+    for item in items:
+        repo_name = item["link"].rstrip("/").split("/")[-1]
+        quarter_repo_category[quarter][repo_name] = classify_category(item["categories"])
 
-# Final count structure: {quarter: {pattern: count}}
-quarter_func_counts = defaultdict(lambda: defaultdict(int))
-quarter_var_counts = defaultdict(lambda: defaultdict(int))
+quarter_func_ratios = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
+quarter_var_ratios = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
 
-# Define relevant years and quarters
-# Assuming the same year/quarter structure as before
-start_year = 2020
-end_year = 2025 # Process up to end of 2024 + Q1 2025
-current_year = 2025 # Update if needed
-current_quarter = 2 # Update if needed (e.g., 1 for Q1, 2 for Q2...)
-
-for year in range(start_year, end_year + 1):
-    # Determine the last quarter to process for the current year
-    max_quarter = 4
-    if year == current_year:
-         max_quarter = current_quarter -1 # Process completed quarters
-    if year > current_year:
-        continue # Don't process future years
-
-
-    for q in range(1, max_quarter + 1):
-        quarter_name = f"Q{q}"
-        year_str = str(year)
-        quarter_key = f"{year_str}Q{q}"
-        quarter_path = os.path.join(base_dir, year_str, quarter_name)
-
+for year in range(2020, 2026):
+    max_q = 1 if year == 2025 else 4
+    for q in range(1, max_q+1):
+        quarter_key  = f"{year}Q{q}"
+        quarter_path = os.path.join(BASE_DIR, str(year), f"Q{q}")
         if not os.path.isdir(quarter_path):
-            print(f"⏭️ Skipping {quarter_key}: Directory not found at {quarter_path}")
             continue
 
-        print(f"\n🔍 Processing {quarter_key}...")
+        print(f"\n🔍 Processing {quarter_key} ...")
+        projects = [d for d in os.listdir(quarter_path) if os.path.isdir(os.path.join(quarter_path, d))]
 
-        # List projects in the quarter directory
-        try:
-            project_list = [d for d in os.listdir(quarter_path) if os.path.isdir(os.path.join(quarter_path, d))]
-        except FileNotFoundError:
-             print(f"⏭️ Skipping {quarter_key}: Directory disappeared?")
-             continue
-
-
-        if not project_list:
-            print(f"  -> No projects found in {quarter_key}.")
-            continue
-
-        # Use ThreadPoolExecutor for parallel processing of projects
-        # Adjust max_workers based on your system's capabilities
-        with concurrent.futures.ThreadPoolExecutor(max_workers=os.cpu_count() or 4) as executor:
-            # Submit tasks: process_project_ts doesn't need quarter_key or category info anymore
-            futures = [executor.submit(process_project_ts, project_name, quarter_path, skipped_files_log)
-                       for project_name in project_list]
-
-            # Process results as they complete
-            for future in tqdm(concurrent.futures.as_completed(futures), total=len(futures), desc=f"Scanning {quarter_key}"):
-                try:
-                    result = future.result()
-                    if result: # Ensure result is not None (though shouldn't be in this version)
-                        local_func_counts, local_var_counts = result
-                        # Aggregate counts directly by pattern for the quarter
-                        for pattern, count in local_func_counts.items():
-                            quarter_func_counts[quarter_key][pattern] += count
-                        for pattern, count in local_var_counts.items():
-                            quarter_var_counts[quarter_key][pattern] += count
-                except Exception as exc:
-                    print(f'\n❗️ Project processing generated an exception: {exc}') # Log exceptions from threads
+        with ThreadPoolExecutor(max_workers=8) as ex:
+            futures = [ex.submit(process_project,
+                                 p, quarter_path, quarter_key,
+                                 quarter_repo_category, SKIPPED_LOG)
+                       for p in projects]
+            for fut in tqdm(as_completed(futures), total=len(futures),
+                            desc=f"Scanning {quarter_key}"):
+                result = fut.result()
+                if result is None:
+                    continue
+                cat, f_ratios, v_ratios = result
+                for pat, r in f_ratios.items():
+                    quarter_func_ratios[quarter_key][cat][pat].append(r)
+                for pat, r in v_ratios.items():
+                    quarter_var_ratios[quarter_key][cat][pat].append(r)
 
         print(f"✅ Finished {quarter_key}")
 
-# --- Output Generation ---
-# Output the raw counts per quarter per naming pattern.
+# -- 聚合 --------------------------------------------------------------------
+def aggregate(qcv):
+    res = {}
+    for q in sorted(qcv):
+        res[q] = {}
+        for cat in ("cs", "non_cs"):
+            res[q][cat] = {}
+            for pat in naming_patterns:
+                ratios = qcv[q][cat][pat]
+                res[q][cat][pat] = round(sum(ratios)/len(ratios), 6) if ratios else 0.0
+    return res
 
-# Ensure all defined patterns are present in the output, even if count is 0
-all_patterns = list(naming_patterns.keys())
+final_func = aggregate(quarter_func_ratios)
+final_var  = aggregate(quarter_var_ratios)
 
-final_func_output = {}
-for quarter, pattern_counts in sorted(quarter_func_counts.items()):
-    final_func_output[quarter] = {pattern: pattern_counts.get(pattern, 0) for pattern in all_patterns}
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+FUNC_JSON = os.path.join(OUTPUT_DIR, "naming_patterns_function.json")
+VAR_JSON  = os.path.join(OUTPUT_DIR, "naming_patterns_variable.json")
 
-final_var_output = {}
-for quarter, pattern_counts in sorted(quarter_var_counts.items()):
-    final_var_output[quarter] = {pattern: pattern_counts.get(pattern, 0) for pattern in all_patterns}
+with open(FUNC_JSON, "w", encoding="utf-8") as f:
+    json.dump(final_func, f, ensure_ascii=False, indent=2)
+with open(VAR_JSON, "w", encoding="utf-8") as f:
+    json.dump(final_var, f, ensure_ascii=False, indent=2)
 
-
-# Save the results as JSON files
-func_output_path = os.path.join(output_dir, "naming_patterns_c_cpp_function_counts.json")
-var_output_path = os.path.join(output_dir, "naming_patterns_c_cpp_variable_counts.json")
-
-print(f"\n💾 Saving function name pattern counts to {func_output_path}")
-with open(func_output_path, "w", encoding="utf-8") as f:
-    json.dump(final_func_output, f, ensure_ascii=False, indent=2)
-
-print(f"💾 Saving variable name pattern counts to {var_output_path}")
-with open(var_output_path, "w", encoding="utf-8") as f:
-    json.dump(final_var_output, f, ensure_ascii=False, indent=2)
-
-print(f"\n🎉 All C/C++ processing completed. Results saved in {output_dir}")
+print(f"\n🎉 All done! Results saved to:\n  {FUNC_JSON}\n  {VAR_JSON}")

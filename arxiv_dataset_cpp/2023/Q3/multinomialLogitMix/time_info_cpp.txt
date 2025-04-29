@@ -1,0 +1,4 @@
+version_1.0/multinomialLogitMix/src/multinomialLogitMix.cpp: 2022-07-27T17:02:45Z
+version_1.0/multinomialLogitMix.Rcheck/00_pkg_src/multinomialLogitMix/src/RcppExports.cpp: 2022-07-27T17:02:45Z
+version_1.0/multinomialLogitMix.Rcheck/00_pkg_src/multinomialLogitMix/src/multinomialLogitMix.cpp: 2022-07-27T17:02:45Z
+version_1.0/multinomialLogitMix/src/RcppExports.cpp: 2022-07-27T17:02:45Z

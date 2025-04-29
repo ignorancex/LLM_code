@@ -1,0 +1,13 @@
+colat2/generators/stylegan2-pytorch/op/fused_bias_act.cpp: 2021-12-02T21:44:51Z
+colat3/generators/stylegan2-pytorch/op/fused_bias_act.cpp: 2024-02-01T22:46:11Z
+colat3/generators/stylegan2-pytorch/op/upfirdn2d.cpp: 2024-02-01T22:46:11Z
+torch_utils/ops/upfirdn2d.cpp: 2021-12-02T21:44:51Z
+torch_utils3/ops/bias_act.cpp: 2024-02-01T22:46:11Z
+colat/generators/stylegan2-pytorch/op/upfirdn2d.cpp: 2021-04-23T14:12:43Z
+colat/generators/stylegan2-pytorch/op/fused_bias_act.cpp: 2021-04-23T14:12:43Z
+colat2/generators/stylegan2-pytorch/op/upfirdn2d.cpp: 2021-12-02T21:44:51Z
+colat/generators/gansformer/torch_utils/ops/upfirdn2d.cpp: 2024-02-01T22:46:11Z
+colat/generators/gansformer/torch_utils/ops/bias_act.cpp: 2024-02-01T22:46:11Z
+torch_utils/ops/bias_act.cpp: 2021-12-02T21:44:51Z
+torch_utils3/ops/upfirdn2d.cpp: 2024-02-01T22:46:11Z
+torch_utils3/ops/filtered_lrelu.cpp: 2024-02-01T22:46:11Z

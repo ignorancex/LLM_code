@@ -1,0 +1,15 @@
+source/der_info.c: 2024-11-18T15:13:50Z
+source/Rescue.c: 2023-10-31T05:01:21Z
+interface/C/P78_example.c: 2023-10-31T05:01:21Z
+interface/C/rosenbrock_example.c: 2023-10-31T05:01:21Z
+interface/C/demo.c: 2023-10-31T05:01:21Z
+interface/C/P93_example.c: 2023-10-31T05:01:21Z
+source/qp_solver.c: 2023-10-31T05:01:21Z
+source/solnp.c: 2024-07-13T14:40:17Z
+source/linsys.c: 2024-07-21T13:38:13Z
+source/solnp_util.c: 2023-10-31T05:01:21Z
+source/linalg.c: 2025-03-21T10:14:55Z
+source/solnp_py.c: 2024-07-13T14:40:17Z
+source/solnp_mex.c: 2024-07-13T14:40:17Z
+source/solnp_c_interface.c: 2023-10-31T05:01:21Z
+source/subnp_qp.c: 2024-05-05T23:23:10Z

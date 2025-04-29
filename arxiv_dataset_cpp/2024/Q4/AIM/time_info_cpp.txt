@@ -1,0 +1,7 @@
+other_packages/transformers/src/transformers/kernels/deformable_detr/vision.cpp: 2025-03-23T13:48:46Z
+other_packages/transformers/src/transformers/kernels/deta/cpu/ms_deform_attn_cpu.cpp: 2025-03-23T13:48:46Z
+other_packages/transformers/src/transformers/kernels/deformable_detr/cpu/ms_deform_attn_cpu.cpp: 2025-03-23T13:48:46Z
+other_packages/transformers/src/transformers/kernels/deta/vision.cpp: 2025-03-23T13:48:46Z
+other_packages/transformers/src/transformers/kernels/yoso/fast_lsh_cumulation_torch.cpp: 2025-03-23T13:48:46Z
+other_packages/transformers/src/transformers/kernels/rwkv/wkv_op.cpp: 2025-03-23T13:48:46Z
+other_packages/transformers/src/transformers/kernels/mra/torch_extension.cpp: 2025-03-23T13:48:46Z

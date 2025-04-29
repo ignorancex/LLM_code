@@ -1,0 +1,13 @@
+50spins-allZ-many-t-homogeneous/XXZ.cpp: 2023-04-15T01:03:16Z
+50spins-allZ-many-t-homogeneous/XXZ-more-general.cpp: 2023-04-15T01:03:16Z
+50spins-oneZ-allt-disorder/XXZ.cpp: 2023-04-15T01:03:16Z
+50spins-oneZ-allt-disorder-Ising/XXZ.cpp: 2023-04-15T01:03:16Z
+50spins-allZ-many-t-disordered/XXZ-more-general.cpp: 2023-04-15T01:03:16Z
+50spins-allZ-many-t-disordered/XXZ.cpp: 2023-04-15T01:03:16Z
+50spins-oneZ-allt-homogeneous/XXZ.cpp: 2023-04-15T01:03:16Z
+50spins-oneZ-allt-homogeneous-Ising/XXZ.cpp: 2023-04-15T01:03:16Z
+Sys-40spins-oneZ-allt-homogeneous/XXZ.cpp: 2023-04-15T01:03:16Z
+Sys-50spins-oneZ-allt-homogeneous/XXZ.cpp: 2023-04-15T01:03:16Z
+Sys-20spins-oneZ-allt-homogeneous/XXZ.cpp: 2023-04-15T01:03:16Z
+Sys-30spins-oneZ-allt-homogeneous/XXZ.cpp: 2023-04-15T01:03:16Z
+Sys-10spins-oneZ-allt-homogeneous/XXZ.cpp: 2023-04-15T01:03:16Z

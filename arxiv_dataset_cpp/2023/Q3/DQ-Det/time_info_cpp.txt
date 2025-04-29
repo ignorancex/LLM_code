@@ -1,0 +1,10 @@
+Deform-DETR/models/ops/src/vision.cpp: 2023-07-21T18:28:56Z
+DAB-DETR/models/dab_deformable_detr/ops/src/vision.cpp: 2023-07-21T18:28:56Z
+DAB-DETR/models/dab_deformable_detr/ops/src/cpu/ms_deform_attn_cpu.cpp: 2023-07-21T18:28:56Z
+DAB-DETR-DQ/models/dab_deformable_detr/ops/src/cpu/ms_deform_attn_cpu.cpp: 2023-07-21T18:28:56Z
+Deform-DETR-DQ/models/ops/src/cpu/ms_deform_attn_cpu.cpp: 2023-07-21T18:28:56Z
+Deform-DETR/models/ops/src/cpu/ms_deform_attn_cpu.cpp: 2023-07-21T18:28:56Z
+DAB-DETR-DQ/models/dab_deformable_detr/ops/src/vision.cpp: 2023-07-21T18:28:56Z
+Deform-DETR-DQ/models/ops/src/vision.cpp: 2023-07-21T18:28:56Z
+Mask2Former-DQ/mask2former/modeling/pixel_decoder/ops/src/vision.cpp: 2023-09-12T03:44:14Z
+Mask2Former-DQ/mask2former/modeling/pixel_decoder/ops/src/cpu/ms_deform_attn_cpu.cpp: 2023-09-12T03:44:14Z

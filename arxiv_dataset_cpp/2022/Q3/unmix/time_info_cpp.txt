@@ -1,0 +1,5 @@
+apex/csrc/fused_adam_cuda.cpp: 2021-10-07T10:01:38Z
+apex/csrc/layer_norm_cuda.cpp: 2021-10-07T10:01:38Z
+apex/csrc/flatten_unflatten.cpp: 2021-10-07T10:01:38Z
+apex/csrc/amp_C_frontend.cpp: 2021-10-07T10:01:38Z
+apex/csrc/syncbn.cpp: 2021-10-07T10:01:38Z

@@ -1,0 +1,16 @@
+GUI/about_dialog.cpp: 2021-09-19T21:22:36Z
+GUI/worker_handler.cpp: 2021-09-19T21:22:36Z
+GUI/virtual_calibrate_sensors_dialog.cpp: 2021-09-19T21:22:36Z
+GUI/main.cpp: 2021-09-19T21:22:36Z
+GUI/worker.cpp: 2021-09-19T21:22:36Z
+GUI/calibrate_sensors_dialog.cpp: 2021-09-19T21:22:36Z
+GUI/device_calibrate_sensors_dialog.cpp: 2021-09-19T21:22:36Z
+GUI/mainwindow.cpp: 2021-09-19T21:22:36Z
+USB_driver/HIDAPI/mac/hid.c: 2021-09-19T21:22:36Z
+USB_driver/HIDAPI/windows/hid.c: 2021-09-19T21:22:36Z
+USB_driver/multiple_sensor_USB_driver/multiple_sensor_usb_driver.c: 2021-09-19T21:22:36Z
+USB_driver/HIDAPI/linux/hid-libusb.c: 2021-09-19T21:22:36Z
+USB_driver/HIDAPI/linux/hid.c: 2021-09-19T21:22:36Z
+firmware/usb_descriptors.c: 2021-09-19T21:22:36Z
+firmware/main.c: 2021-09-19T21:22:36Z
+serial_driver/multiple_sensor_modbus_driver/multiple_sensor_modbus_driver.cpp: 2021-09-19T21:22:36Z

@@ -1,0 +1,4 @@
+vendor/openfold/openfold/utils/kernel/csrc/softmax_cuda.cpp: 2024-07-22T20:01:43Z
+vendor/openfold/openfold/utils/kernel/csrc/softmax_cuda_stub.cpp: 2024-07-22T20:01:43Z
+analysis/TMalign.cpp: 2024-07-22T20:01:43Z
+analysis/TMscore.cpp: 2024-07-22T20:01:43Z

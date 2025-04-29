@@ -51,6 +51,7 @@ def process_project(project_name, quarter_path, quarter_key, quarter_repo_catego
 
     for root, _, files in os.walk(project_path):
         for file in files:
+            # if file.endswith(".c") or file.endswith(".cpp"):
             if file.endswith(".py"):
                 filename_without_ext = os.path.splitext(file)[0]
                 pattern = get_naming_pattern(filename_without_ext)
@@ -60,9 +61,9 @@ def process_project(project_name, quarter_path, quarter_key, quarter_repo_catego
 
 
 # === 主程序 ===
-base_dir = "LLM_code/arxiv_dataset_cpp"
-output_dir = "LLM_code/naming_patterns_cpp"
-categories_file = "LLM_code/code/github_links/categories.json"
+base_dir = "LLM_code/arxiv_dataset"
+output_dir = "LLM_code/arxiv_result/naming_patterns_python"
+categories_file = "LLM_code/code/github_links/python_dataset_links_1.json"
 os.makedirs(output_dir, exist_ok=True)
 
 # 加载类别信息
@@ -134,7 +135,7 @@ def compute_ratios(quarter_category_counts):
 final_filename_output = compute_ratios(quarter_filename_counts)
 
 # 保存
-filename_output_path = os.path.join(output_dir, "naming_patterns_filename_by_category.json")
+filename_output_path = os.path.join(output_dir, "naming_patterns_filename.json")
 
 with open(filename_output_path, "w", encoding="utf-8") as f:
     json.dump(final_filename_output, f, ensure_ascii=False, indent=2)

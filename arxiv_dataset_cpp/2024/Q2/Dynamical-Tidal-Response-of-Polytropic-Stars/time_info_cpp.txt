@@ -1,0 +1,12 @@
+Polytropic-EoS/src/alpha-beta-funcs.cpp: 2023-12-04T03:26:11Z
+Polytropic-EoS/src/main.cpp: 2024-02-25T01:09:10Z
+Polytropic-EoS/src/conservative_tides.cpp: 2023-12-04T03:26:11Z
+Polytropic-EoS/src/local_expansions.cpp: 2024-02-28T23:39:39Z
+Polytropic-EoS/src/Li3.cpp: 2023-12-03T00:27:11Z
+Polytropic-EoS/src/dissipative_tides_bulk.cpp: 2023-12-04T03:26:11Z
+Polytropic-EoS/src/Li2.cpp: 2023-12-03T00:27:11Z
+Polytropic-EoS/src/lane-emden-solver.cpp: 2024-01-18T17:18:36Z
+Polytropic-EoS/src/sim_params.cpp: 2024-01-18T17:18:36Z
+Polytropic-EoS/src/shear_funcs.cpp: 2023-12-07T04:23:07Z
+Polytropic-EoS/src/ode_steppers.cpp: 2024-11-11T04:01:15Z
+Polytropic-EoS/src/outputfiles.cpp: 2023-12-09T21:37:39Z

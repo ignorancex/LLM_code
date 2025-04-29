@@ -1,11 +1,9 @@
 import os
 import ast
 import re
-import csv
 import json
 from collections import defaultdict
 from tqdm import tqdm
-import pandas as pd
 import concurrent.futures
 import warnings
 
@@ -73,15 +71,15 @@ def classify_category(cat):
 
 
 def process_project(project_name, quarter_path, quarter_key, quarter_repo_category, skipped_files_log):
-    """处理单个项目，返回局部统计"""
+    """处理单个项目，返回仓库内部归一化后的比例"""
     project_path = os.path.join(quarter_path, project_name)
     project_category = quarter_repo_category.get(quarter_key, {}).get(project_name)
 
     if project_category is None:
         return None  # 跳过没有类别的项目
 
-    local_func_counts = defaultdict(int)
-    local_var_counts = defaultdict(int)
+    func_counts = defaultdict(int)
+    var_counts = defaultdict(int)
 
     for root, _, files in os.walk(project_path):
         for file in files:
@@ -91,20 +89,27 @@ def process_project(project_name, quarter_path, quarter_key, quarter_repo_catego
 
                 for name in functions:
                     pattern = get_naming_pattern(name)
-                    local_func_counts[(project_category, pattern)] += 1
+                    func_counts[pattern] += 1
                 for name in variables:
                     pattern = get_naming_pattern(name)
-                    local_var_counts[(project_category, pattern)] += 1
+                    var_counts[pattern] += 1
 
-    return local_func_counts, local_var_counts
+    # 仓库内归一化
+    func_total = sum(func_counts.values())
+    var_total = sum(var_counts.values())
+
+    func_ratios = {pattern: (func_counts.get(pattern, 0) / func_total) if func_total > 0 else 0.0 for pattern in naming_patterns}
+    var_ratios = {pattern: (var_counts.get(pattern, 0) / var_total) if var_total > 0 else 0.0 for pattern in naming_patterns}
+
+    return project_category, func_ratios, var_ratios
 
 
 # === 主程序 ===
 base_dir = "LLM_code/arxiv_dataset"
-output_dir = "LLM_code/naming_patterns_combined"
-categories_file = "LLM_code/code/github_links/categories.json"
+output_dir = "LLM_code/arxiv_result/naming_patterns_python"
+categories_file = "LLM_code/code/github_links/python_dataset_links_1.json"
 os.makedirs(output_dir, exist_ok=True)
-skipped_files_log = os.path.join(output_dir, "skipped_files.txt")
+skipped_files_log = os.path.join(output_dir, "skipped_files_new.txt")
 if os.path.exists(skipped_files_log):
     os.remove(skipped_files_log)
 
@@ -121,9 +126,9 @@ for quarter, items in all_categories.items():
         repo_name = link.rstrip("/").split("/")[-1]
         quarter_repo_category[quarter][repo_name] = classify_category(categories)
 
-# 最终统计表：{quarter: {category: {pattern: count}}}
-quarter_func_counts = defaultdict(lambda: defaultdict(lambda: defaultdict(int)))
-quarter_var_counts = defaultdict(lambda: defaultdict(lambda: defaultdict(int)))
+# 最终统计表：{quarter: {category: {pattern: [比例列表]}}}
+quarter_func_ratios = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
+quarter_var_ratios = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
 
 for year in range(2020, 2026):
     max_quarter = 1 if year == 2025 else 4
@@ -151,39 +156,38 @@ for year in range(2020, 2026):
                 result = future.result()
                 if result is None:
                     continue
-                local_func_counts, local_var_counts = result
-                for (project_category, pattern), count in local_func_counts.items():
-                    quarter_func_counts[quarter_key][project_category][pattern] += count
-                for (project_category, pattern), count in local_var_counts.items():
-                    quarter_var_counts[quarter_key][project_category][pattern] += count
+                project_category, func_ratios, var_ratios = result
+                for pattern, ratio in func_ratios.items():
+                    quarter_func_ratios[quarter_key][project_category][pattern].append(ratio)
+                for pattern, ratio in var_ratios.items():
+                    quarter_var_ratios[quarter_key][project_category][pattern].append(ratio)
 
         print(f"✅ Finished {quarter_key}")
 
-# 构造输出 JSON，确保所有类别和所有命名方式都存在（即使为0）
-all_categories_list = ["cs.LG", "cs.CV", "cs.CL", "other_cs", "non_cs"]
 
-def compute_ratios(quarter_category_counts):
+# === 聚合，求每种命名方式的平均比例 ===
+def aggregate_ratios(quarter_category_ratios):
     result = {}
-    for quarter in sorted(quarter_category_counts.keys()):
+    for quarter in sorted(quarter_category_ratios.keys()):
         result[quarter] = {}
-        for cat in all_categories_list:
-            pattern_counts = quarter_category_counts[quarter][cat]
-            total = sum(pattern_counts.values())
+        for cat in ["cs", "non_cs"]:
             result[quarter][cat] = {}
             for pattern in naming_patterns.keys():
-                if total > 0:
-                    proportion = pattern_counts.get(pattern, 0) / total
+                ratios = quarter_category_ratios[quarter][cat][pattern]
+                if ratios:
+                    avg_ratio = sum(ratios) / len(ratios)
                 else:
-                    proportion = 0.0
-                result[quarter][cat][pattern] = round(proportion, 6)
+                    avg_ratio = 0.0
+                result[quarter][cat][pattern] = round(avg_ratio, 6)
     return result
 
-final_func_output = compute_ratios(quarter_func_counts)
-final_var_output = compute_ratios(quarter_var_counts)
+
+final_func_output = aggregate_ratios(quarter_func_ratios)
+final_var_output = aggregate_ratios(quarter_var_ratios)
 
 # 保存
-func_output_path = os.path.join(output_dir, "naming_patterns_function_by_category.json")
-var_output_path = os.path.join(output_dir, "naming_patterns_variable_by_category.json")
+func_output_path = os.path.join(output_dir, "naming_patterns_function_new.json")
+var_output_path = os.path.join(output_dir, "naming_patterns_variable_new.json")
 
 with open(func_output_path, "w", encoding="utf-8") as f:
     json.dump(final_func_output, f, ensure_ascii=False, indent=2)

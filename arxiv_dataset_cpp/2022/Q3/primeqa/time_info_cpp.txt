@@ -1,0 +1,12 @@
+extensions/ir_benchmarking/colbert/indexing/codecs/packbits.cpp: 2023-02-21T09:14:02Z
+extensions/ir_benchmarking/colbert/search/filter_pids.cpp: 2023-02-21T09:14:02Z
+extensions/ir_benchmarking/colbert/indexing/codecs/decompress_residuals.cpp: 2023-02-21T09:14:02Z
+extensions/ir_benchmarking/colbert/search/decompress_residuals.cpp: 2023-02-21T09:14:02Z
+primeqa/ir/dense/colbert_top/colbert/indexing/codecs/packbits.cpp: 2022-08-02T00:04:00Z
+extensions/ir_benchmarking/colbert/modeling/segmented_maxsim.cpp: 2023-02-21T09:14:02Z
+primeqa/ir/dense/colbert_top/colbert/indexing/codecs/decompress_residuals.cpp: 2022-08-02T00:04:00Z
+primeqa/ir/dense/colbert_top/colbert/modeling/segmented_maxsim.cpp: 2022-08-02T00:04:00Z
+primeqa/ir/dense/colbert_top/colbert/search/filter_pids.cpp: 2022-08-02T00:04:00Z
+extensions/ir_benchmarking/colbert/search/segmented_lookup.cpp: 2023-02-21T09:14:02Z
+primeqa/ir/dense/colbert_top/colbert/search/decompress_residuals.cpp: 2022-08-02T00:04:00Z
+primeqa/ir/dense/colbert_top/colbert/search/segmented_lookup.cpp: 2022-08-02T00:04:00Z

@@ -1,0 +1,6 @@
+tr0n/modules/StyleGAN_utils/torch_utils/ops/upfirdn2d.cpp: 2023-04-28T19:13:54Z
+tr0n/modules/StyleGAN_utils/torch_utils/ops/filtered_lrelu.cpp: 2023-04-28T19:13:54Z
+tr0n/modules/StyleGAN_utils/torch_utils/ops/bias_act.cpp: 2023-04-28T19:13:54Z
+tr0n/modules/sgxl_utils/torch_utils/ops/bias_act.cpp: 2023-04-28T19:13:54Z
+tr0n/modules/sgxl_utils/torch_utils/ops/upfirdn2d.cpp: 2023-04-28T19:13:54Z
+tr0n/modules/sgxl_utils/torch_utils/ops/filtered_lrelu.cpp: 2023-04-28T19:13:54Z

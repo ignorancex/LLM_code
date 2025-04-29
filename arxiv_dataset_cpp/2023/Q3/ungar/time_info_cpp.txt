@@ -1,0 +1,13 @@
+example/autodiff/function.example.cpp: 2024-02-08T09:32:42Z
+example/variable_map.example.cpp: 2023-10-10T14:08:32Z
+example/mpc/quadruped.example.cpp: 2023-10-20T15:17:24Z
+example/rbd/robot.example.cpp: 2024-07-15T13:58:41Z
+example/mpc/rc_car.example.cpp: 2023-08-01T21:38:04Z
+example/mpc/quadrotor.example.cpp: 2023-10-17T09:14:43Z
+example/variable.example.cpp: 2023-10-10T14:08:32Z
+example/rbd/quantity.example.cpp: 2024-07-16T13:51:00Z
+test/utils/utils.test.cpp: 2024-01-17T10:37:32Z
+test/optimization/soft_sqp.test.cpp: 2023-05-03T08:59:19Z
+test/autodiff/function.test.cpp: 2023-03-16T13:21:46Z
+test/rbd/robot.test.cpp: 2024-07-07T17:25:12Z
+test/variable.test.cpp: 2023-08-02T18:07:07Z

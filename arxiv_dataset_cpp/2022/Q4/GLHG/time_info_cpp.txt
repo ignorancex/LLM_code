@@ -1,0 +1,13 @@
+apex/contrib/csrc/multihead_attn/encdec_multihead_attn_norm_add.cpp: 2023-08-09T14:02:20Z
+apex/contrib/csrc/multihead_attn/masked_softmax_dropout.cpp: 2023-08-09T14:02:20Z
+apex/contrib/csrc/groupbn/interface.cpp: 2023-08-09T14:02:20Z
+apex/contrib/csrc/multihead_attn/additive_masked_softmax_dropout.cpp: 2023-08-09T14:02:20Z
+apex/contrib/csrc/multihead_attn/self_multihead_attn.cpp: 2023-08-09T14:02:20Z
+apex/contrib/csrc/multihead_attn/self_multihead_attn_bias_additive_mask.cpp: 2023-08-09T14:02:20Z
+apex/contrib/csrc/multihead_attn/encdec_multihead_attn.cpp: 2023-08-09T14:02:20Z
+apex/contrib/csrc/xentropy/interface.cpp: 2023-08-09T14:02:20Z
+apex/contrib/csrc/optimizers/fused_adam_cuda.cpp: 2023-08-09T14:02:20Z
+apex/contrib/csrc/multihead_attn/self_multihead_attn_bias.cpp: 2023-08-09T14:02:20Z
+apex/contrib/csrc/multihead_attn/self_multihead_attn_norm_add.cpp: 2023-08-09T14:02:20Z
+apex/contrib/csrc/optimizers/fused_lamb_cuda.cpp: 2023-08-09T14:02:20Z
+apex/contrib/csrc/optimizers/multi_tensor_distopt_lamb.cpp: 2023-08-09T14:02:20Z

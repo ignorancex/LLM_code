@@ -1,0 +1,10 @@
+5.2. Evaluation on Bit Allocation/HSTEM/src/cpp/ops/ops.cpp: 2023-04-24T23:29:24Z
+5.2. Evaluation on Bit Allocation/HSTEM/src/ryg_rans/main_alias.cpp: 2023-04-24T23:29:24Z
+5.2. Evaluation on Bit Allocation/HSTEM/src/cpp/rans/rans_interface.cpp: 2023-04-24T23:29:24Z
+5.2. Evaluation on Bit Allocation/DCVC/src/cpp/ops/ops.cpp: 2023-04-24T23:29:24Z
+5.2. Evaluation on Bit Allocation/HSTEM/src/ryg_rans/main64.cpp: 2023-04-24T23:29:24Z
+5.2. Evaluation on Bit Allocation/HSTEM/src/ryg_rans/main_simd.cpp: 2023-04-24T23:29:24Z
+5.2. Evaluation on Bit Allocation/HSTEM/src/ryg_rans/main.cpp: 2023-04-24T23:29:24Z
+5.2. Evaluation on Bit Allocation/DCVC/src/cpp/rans/rans_interface.cpp: 2023-04-24T23:29:24Z
+5.2. Evaluation on Bit Allocation/I_model/cpp/rans/rans_interface.cpp: 2023-04-24T23:29:24Z
+5.2. Evaluation on Bit Allocation/I_model/cpp/ops/ops.cpp: 2023-04-24T23:29:24Z

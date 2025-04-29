@@ -1,0 +1,17 @@
+dense_model/Megatron-LM-231007/megatron/data/helpers.cpp: 2024-11-06T13:16:45Z
+dense_model/Megatron-LM-MegaBlocks/megatron/fused_kernels/scaled_masked_softmax.cpp: 2024-11-06T13:16:45Z
+dense_model/Megatron-LM-MegaBlocks/megatron/fused_kernels/layer_norm_cuda.cpp: 2024-11-06T13:16:45Z
+dense_model/Megatron-LM-MegaBlocks/megatron/fused_kernels/fused_weight_gradient_dense.cpp: 2024-11-06T13:16:45Z
+dense_model/Megatron-LM-MegaBlocks/megatron/data/helpers.cpp: 2024-11-06T13:16:45Z
+dense_model/Megatron-LM-MegaBlocks/megatron/fused_kernels/scaled_softmax.cpp: 2024-11-06T13:16:45Z
+dense_model/Megatron-LM-MegaBlocks/megatron/fused_kernels/scaled_upper_triang_masked_softmax.cpp: 2024-11-06T13:16:45Z
+dense_model/Megatron-LM-240126/megatron/core/datasets/helpers.cpp: 2024-11-06T13:16:45Z
+dense_model/PAI-Megatron-LM-240718/megatron/core/optimizer/hybrid_adam/csrc/cpu_adam_arm.cpp: 2024-11-06T13:16:45Z
+dense_model/Megatron-LM-240612/megatron/core/datasets/helpers.cpp: 2024-11-06T13:16:45Z
+moe_model/inference/compression/dependencies/AutoGPTQ/autogptq_extension/cuda_64/autogptq_cuda_64.cpp: 2024-11-06T13:16:45Z
+moe_model/inference/compression/dependencies/AutoGPTQ/autogptq_extension/exllama/exllama_ext.cpp: 2024-11-06T13:16:45Z
+dense_model/PAI-Megatron-LM-240718/megatron/core/optimizer/hybrid_adam/csrc/cpu_adam.cpp: 2024-11-06T13:16:45Z
+moe_model/inference/compression/dependencies/AutoGPTQ/autogptq_extension/qigen/mmm.cpp: 2024-11-06T13:16:45Z
+moe_model/inference/compression/dependencies/AutoGPTQ/autogptq_extension/cuda_256/autogptq_cuda_256.cpp: 2024-11-06T13:16:45Z
+dense_model/Megatron-LM-240405/megatron/core/datasets/helpers.cpp: 2024-11-06T13:16:45Z
+dense_model/PAI-Megatron-LM-240718/megatron/core/datasets/helpers.cpp: 2024-11-06T13:16:45Z

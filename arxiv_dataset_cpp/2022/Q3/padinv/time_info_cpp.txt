@@ -1,0 +1,5 @@
+third_party/stylegan3_official_ops/upfirdn2d.cpp: 2022-07-20T13:22:53Z
+third_party/stylegan3_official_ops/bias_act.cpp: 2022-07-20T13:22:53Z
+third_party/stylegan2_official_ops/upfirdn2d.cpp: 2022-07-20T13:22:53Z
+third_party/stylegan3_official_ops/filtered_lrelu.cpp: 2022-07-20T13:22:53Z
+third_party/stylegan2_official_ops/bias_act.cpp: 2022-07-20T13:22:53Z

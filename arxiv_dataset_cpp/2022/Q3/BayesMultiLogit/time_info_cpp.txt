@@ -1,0 +1,12 @@
+src/RNG.cpp: 2021-07-16T19:45:11Z
+src/RRNG.cpp: 2021-07-16T19:45:11Z
+src/multilogit_C.cpp: 2024-10-16T23:26:20Z
+src/multilogit_C_ESS.cpp: 2021-07-21T18:30:31Z
+src/dmvnrm_arma.cpp: 2021-07-21T18:30:31Z
+src/RcppExports.cpp: 2021-07-21T00:37:39Z
+src/helloPG.cpp: 2021-07-20T00:17:49Z
+src/lambda_sampler.cpp: 2021-07-20T00:17:49Z
+src/multilogit_PG.cpp: 2024-11-26T00:26:49Z
+src/multilogit_hh_inv_C.cpp: 2021-07-21T00:37:39Z
+src/multilogit_HolmesHeld.cpp: 2021-07-21T00:37:39Z
+src/trunc_logis.cpp: 2021-07-20T00:17:49Z

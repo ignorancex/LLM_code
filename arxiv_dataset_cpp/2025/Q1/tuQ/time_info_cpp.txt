@@ -1,0 +1,15 @@
+src/gui/mode_modeller/graphvertex.cpp: 2024-11-21T06:19:24Z
+src/gui/gui_helpers.cpp: 2024-08-26T02:05:49Z
+src/gui/mode_compiler/compilerview.cpp: 2024-06-14T07:05:21Z
+src/gui/mode_modeller/modeller_helpers.cpp: 2024-11-23T00:45:23Z
+src/gui/mode_simulator/algorithmlattice.cpp: 2024-10-07T01:48:11Z
+src/gui/mainwindow.cpp: 2025-01-13T00:25:48Z
+src/gui/mode_modeller/graphedge.cpp: 2024-06-14T07:05:21Z
+src/gui/mode_modeller/graphview.cpp: 2025-01-12T23:32:52Z
+src/gui/mode_simulator/simulator_helpers.cpp: 2024-11-09T04:36:25Z
+src/gui/mode_simulator/operatorpalette.cpp: 2024-09-11T04:07:50Z
+src/gui/mode_simulator/signmeasure.cpp: 2024-10-17T01:32:45Z
+src/layout/gates_lattice_set.cpp: 2024-09-11T05:55:25Z
+src/gui/mode_simulator/simulatorview.cpp: 2024-12-09T03:09:06Z
+src/layout/io_circuit.cpp: 2024-09-18T03:15:26Z
+src/main.cpp: 2023-10-10T04:13:13Z

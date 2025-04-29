@@ -1,0 +1,10 @@
+data_files/Phase_Diagram_Analysis/Magnetic_Phase_Identification.cpp: 2023-10-26T03:30:06Z
+Codes/ED-code/src/Parameters_BHZ.cpp: 2023-10-31T02:53:23Z
+inputs_files/long_range_connections.cpp: 2023-10-19T18:01:59Z
+Codes/ED-code/src/main.cpp: 2023-10-31T02:53:23Z
+plots_and_scripts/Lattice_Plots/lattice_create_2D_square.cpp: 2023-10-19T18:01:59Z
+Codes/ED-code/src/Hamiltonian_BHZ.cpp: 2023-10-31T02:53:23Z
+Codes/ED-code/src/Observables_BHZ.cpp: 2023-10-31T02:53:23Z
+Codes/ED-code/src/Connection_BHZ.cpp: 2023-10-31T02:53:23Z
+scripts/Two_point_corr_reading.cpp: 2023-10-26T03:30:06Z
+plots_and_scripts/Lattice_Plots/lattice_create_2D_square_shaded_bulk.cpp: 2023-10-19T18:01:59Z

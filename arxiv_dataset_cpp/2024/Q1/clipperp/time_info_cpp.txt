@@ -1,0 +1,12 @@
+src/clipperplus_clique.cpp: 2024-05-22T19:35:37Z
+src/clipperplus_heuristic.cpp: 2024-04-29T14:54:23Z
+bindings/matlab/clipperplus_clique_mex.cpp: 2024-04-20T23:17:01Z
+bindings/matlab/clique_optimization_mex.cpp: 2024-04-29T14:54:23Z
+bindings/python/py_clipperplus.cpp: 2024-04-20T23:17:01Z
+bindings/matlab/pmc_heuristic_mex.cpp: 2024-03-11T15:41:46Z
+src/clipperplus_graph.cpp: 2024-04-20T23:17:01Z
+bindings/matlab/clique_corenumber_mex.cpp: 2024-03-29T16:50:21Z
+test/clipperplus_test.cpp: 2024-04-20T23:17:01Z
+src/utils.cpp: 2024-04-29T14:54:23Z
+test/main.cpp: 2024-03-11T15:41:46Z
+src/clique_optimization.cpp: 2024-04-29T14:54:23Z

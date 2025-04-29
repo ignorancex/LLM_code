@@ -10,7 +10,7 @@ all_missing_or_empty = []
 
 for year in years:
     for season in seasons:
-        repo_base_path = f"LLM_code/arxiv_dataset/{year}/{season}"
+        repo_base_path = f"LLM_code/arxiv_dataset_cpp/{year}/{season}"
 
         # 检查路径是否存在
         if not os.path.exists(repo_base_path):
@@ -22,7 +22,7 @@ for year in years:
 
         # 检查每个文件夹是否包含 time_info.txt 且文件不为空
         for folder in subfolders:
-            time_info_path = os.path.join(repo_base_path, folder, "time_info.txt")
+            time_info_path = os.path.join(repo_base_path, folder, "time_info_cpp.txt")
             if not os.path.exists(time_info_path) or os.path.getsize(time_info_path) == 0:
                 all_missing_or_empty.append(os.path.join(repo_base_path, folder))
 

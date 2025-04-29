@@ -20,6 +20,7 @@ HEADERS = {
 
 # === 要处理的季度列表 ===
 quarters = [f"{year}Q{q}" for year in range(2023, 2026) for q in range(1, 5)]
+quarters = ["2022Q4"]
 
 # === 加载链接数据 ===
 with open(only_links_path, 'r', encoding='utf-8') as f:

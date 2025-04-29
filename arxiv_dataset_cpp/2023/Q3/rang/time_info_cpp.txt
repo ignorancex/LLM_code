@@ -1,0 +1,2 @@
+tests/testdata/askpass/src/askpass.c: 2023-02-28T17:49:53Z
+tests/testdata/askpass/src/win32/win-askpass.c: 2023-02-28T17:49:53Z

@@ -1,0 +1,13 @@
+s-box/SelectionDAG-Testing/LXR.c: 2023-03-17T08:14:11Z
+s-box/custom_c++/xor_loads.cpp: Unknown
+s-box/s-box.c: 2023-04-20T10:26:51Z
+s-box/s-box64.c: 2023-04-17T21:48:44Z
+s-box/keccakSbox.c: 2023-04-17T21:48:44Z
+s-box/custom_c++/iseldagtodagPlace.cpp: Unknown
+test/madd.c: 2023-03-06T11:22:43Z
+s-box/ascon_lib/aead.c: 2023-04-17T21:48:44Z
+thesis/s-box/custom_c++/iseldagtodagPlace.cpp: Unknown
+thesis/s-box/s-box.c: 2023-07-02T12:56:08Z
+test/shlxor.c: 2022-12-09T15:22:38Z
+test/rori.c: 2023-02-21T14:56:00Z
+thesis/s-box/custom_c++/xor_loads.cpp: Unknown

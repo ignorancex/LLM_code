@@ -9,8 +9,8 @@ import concurrent.futures
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "")
 
 # === 配置 ===
-YEARS = ["2020", "2021", "2022", "2023", "2024", "2025"]
-SEASONS = ["Q1", "Q2", "Q3", "Q4"]
+YEARS = ["2025"]
+SEASONS = ["Q1"]
 LANGUAGE = "cpp"
 USE_TARGET_MODE = True  # ✅ 选择使用 target 还是 cpp_repos 方式
 
@@ -143,7 +143,7 @@ def main():
         for season in SEASONS:
             BASE_DIR = f"LLM_code/arxiv_dataset_cpp/{year}/{season}"
             if USE_TARGET_MODE:
-                json_path = f"target/target_{year}{season}.json"
+                json_path = f"LLM_code/code/github_links/target/target_{year}{season}.json"
                 if not os.path.exists(json_path):
                     print(f"⚠️ File not found: {json_path}")
                     continue

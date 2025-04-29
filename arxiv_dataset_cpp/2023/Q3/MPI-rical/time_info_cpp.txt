@@ -1,0 +1,11 @@
+BENCHMARK/global_sum_reduce.c: 2023-07-26T09:22:55Z
+BENCHMARK/array_sort.c: 2023-07-26T09:22:55Z
+BENCHMARK/function_integration.c: 2023-07-26T09:22:55Z
+BENCHMARK/matrix_vector_mult.c: 2023-07-26T09:22:55Z
+BENCHMARK/average_arr.c: 2023-07-26T09:22:55Z
+BENCHMARK/min_max_value.c: 2023-07-26T09:22:55Z
+BENCHMARK/dot_product.c: 2023-07-26T09:22:55Z
+BENCHMARK/parallel_factorial.c: 2023-07-26T09:22:55Z
+BENCHMARK/parallel_fibonaci.c: 2023-07-26T09:22:55Z
+BENCHMARK/pi_calc_integration.c: 2023-07-26T09:22:55Z
+BENCHMARK/pi_monte_carlo.c: 2023-07-26T09:22:55Z

@@ -1,0 +1,7 @@
+transformers/src/transformers/kernels/deformable_detr/vision.cpp: 2024-11-10T13:12:01Z
+transformers/src/transformers/kernels/yoso/fast_lsh_cumulation_torch.cpp: 2024-11-10T13:12:01Z
+transformers/src/transformers/kernels/rwkv/wkv_op.cpp: 2024-11-10T13:12:01Z
+transformers/src/transformers/kernels/mra/torch_extension.cpp: 2024-11-10T13:12:01Z
+transformers/src/transformers/kernels/deta/cpu/ms_deform_attn_cpu.cpp: 2024-11-10T13:12:01Z
+transformers/src/transformers/kernels/deta/vision.cpp: 2024-11-10T13:12:01Z
+transformers/src/transformers/kernels/deformable_detr/cpu/ms_deform_attn_cpu.cpp: 2024-11-10T13:12:01Z

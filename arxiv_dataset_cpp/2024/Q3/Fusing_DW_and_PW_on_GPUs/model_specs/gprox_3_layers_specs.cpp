@@ -1,0 +1,1527 @@
+#include "layers_specs.h"
+
+#if MODEL_ID == GPROX_3 
+
+void layer_specs_init(layer_specs *layer_specs_seq)
+{
+
+
+
+    layer_specs_seq[3].layer_index = 3;
+    layer_specs_seq[3].conv_layer_type = S_CONV; 
+    layer_specs_seq[3].layer_num_fils = 32;
+    layer_specs_seq[3].strides = 2;
+    layer_specs_seq[3].filter_size = 3;
+    layer_specs_seq[3].padding_left = 0;
+    layer_specs_seq[3].padding_right = 1;
+    layer_specs_seq[3].padding_top = 0;
+    layer_specs_seq[3].padding_bottom = 1;
+    layer_specs_seq[3].layer_depth = 3;
+    layer_specs_seq[3].layer_ifm_height = 224;
+    layer_specs_seq[3].layer_ifm_width = 224;
+    layer_specs_seq[3].layer_ofm_height = 112;
+    layer_specs_seq[3].layer_ofm_width = 112;
+    layer_specs_seq[3].layer_activation = RELU;
+    layer_specs_seq[3].layer_num_of_ifm_tiles_h = (224 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[3].layer_num_of_ifm_tiles_w = (224 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[3].layer_num_of_ofm_tiles_h = (112 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(112 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 3;
+    layer_specs_seq[3].layer_weights_offset = 0;
+    layer_specs_seq[3].write_to_result_or_channels = 1;
+    layer_specs_seq[3].write_to_tmp = 0;
+    layer_specs_seq[3].followed_by = 0;
+    layer_specs_seq[3].layer_ifms_zero_point = 100;
+    layer_specs_seq[3].layer_ofms_scale = 0.016496960073709488;
+    layer_specs_seq[3].relu_threshold = 0 ;
+    layer_specs_seq[3].layer_ofms_zero_point = -128;
+    layer_specs_seq[3].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[3].add_layer_zero_point = 0;
+    layer_specs_seq[3].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[3].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[3].data_layout = HWC;
+
+
+    layer_specs_seq[4].layer_index = 4;
+    layer_specs_seq[4].conv_layer_type = DW_CONV; 
+    layer_specs_seq[4].layer_num_fils = 32;
+    layer_specs_seq[4].strides = 1;
+    layer_specs_seq[4].filter_size = 3;
+    layer_specs_seq[4].padding_left = 1;
+    layer_specs_seq[4].padding_right = 1;
+    layer_specs_seq[4].padding_top = 1;
+    layer_specs_seq[4].padding_bottom = 1;
+    layer_specs_seq[4].layer_depth = 32;
+    layer_specs_seq[4].layer_ifm_height = 112;
+    layer_specs_seq[4].layer_ifm_width = 112;
+    layer_specs_seq[4].layer_ofm_height = 112;
+    layer_specs_seq[4].layer_ofm_width = 112;
+    layer_specs_seq[4].layer_activation = RELU;
+    layer_specs_seq[4].layer_num_of_ifm_tiles_h = (112 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[4].layer_num_of_ifm_tiles_w = (112 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[4].layer_num_of_ofm_tiles_h = (112 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(112 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 4;
+    layer_specs_seq[4].layer_weights_offset = 0;
+    layer_specs_seq[4].write_to_result_or_channels = 1;
+    layer_specs_seq[4].write_to_tmp = 0;
+    layer_specs_seq[4].followed_by = 0;
+    layer_specs_seq[4].layer_ifms_zero_point = -128;
+    layer_specs_seq[4].layer_ofms_scale = 0.028073621913790703;
+    layer_specs_seq[4].relu_threshold = 0 ;
+    layer_specs_seq[4].layer_ofms_zero_point = -128;
+    layer_specs_seq[4].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[4].add_layer_zero_point = 0;
+    layer_specs_seq[4].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[4].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[4].data_layout = HWC;
+
+
+    layer_specs_seq[5].layer_index = 5;
+    layer_specs_seq[5].conv_layer_type = PW_CONV; 
+    layer_specs_seq[5].layer_num_fils = 24;
+    layer_specs_seq[5].strides = 1;
+    layer_specs_seq[5].filter_size = 1;
+    layer_specs_seq[5].padding_left = 0;
+    layer_specs_seq[5].padding_right = 0;
+    layer_specs_seq[5].padding_top = 0;
+    layer_specs_seq[5].padding_bottom = 0;
+    layer_specs_seq[5].layer_depth = 32;
+    layer_specs_seq[5].layer_ifm_height = 112;
+    layer_specs_seq[5].layer_ifm_width = 112;
+    layer_specs_seq[5].layer_ofm_height = 112;
+    layer_specs_seq[5].layer_ofm_width = 112;
+    layer_specs_seq[5].layer_activation = 0;
+    layer_specs_seq[5].layer_num_of_ifm_tiles_h = (112 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[5].layer_num_of_ifm_tiles_w = (112 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[5].layer_num_of_ofm_tiles_h = (112 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(112 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 5;
+    layer_specs_seq[5].layer_weights_offset = 0;
+    layer_specs_seq[5].write_to_result_or_channels = 1;
+    layer_specs_seq[5].write_to_tmp = 0;
+    layer_specs_seq[5].followed_by = 0;
+    layer_specs_seq[5].layer_ifms_zero_point = -128;
+    layer_specs_seq[5].layer_ofms_scale = 0.04052095487713814;
+    layer_specs_seq[5].relu_threshold = 0 ;
+    layer_specs_seq[5].layer_ofms_zero_point = -20;
+    layer_specs_seq[5].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[5].add_layer_zero_point = 0;
+    layer_specs_seq[5].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[5].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[5].data_layout = CHW;
+
+
+    layer_specs_seq[6].layer_index = 6;
+    layer_specs_seq[6].conv_layer_type = PW_CONV; 
+    layer_specs_seq[6].layer_num_fils = 72;
+    layer_specs_seq[6].strides = 1;
+    layer_specs_seq[6].filter_size = 1;
+    layer_specs_seq[6].padding_left = 0;
+    layer_specs_seq[6].padding_right = 0;
+    layer_specs_seq[6].padding_top = 0;
+    layer_specs_seq[6].padding_bottom = 0;
+    layer_specs_seq[6].layer_depth = 24;
+    layer_specs_seq[6].layer_ifm_height = 112;
+    layer_specs_seq[6].layer_ifm_width = 112;
+    layer_specs_seq[6].layer_ofm_height = 112;
+    layer_specs_seq[6].layer_ofm_width = 112;
+    layer_specs_seq[6].layer_activation = RELU;
+    layer_specs_seq[6].layer_num_of_ifm_tiles_h = (112 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[6].layer_num_of_ifm_tiles_w = (112 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[6].layer_num_of_ofm_tiles_h = (112 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(112 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 6;
+    layer_specs_seq[6].layer_weights_offset = 768;
+    layer_specs_seq[6].write_to_result_or_channels = 1;
+    layer_specs_seq[6].write_to_tmp = 0;
+    layer_specs_seq[6].followed_by = 0;
+    layer_specs_seq[6].layer_ifms_zero_point = -20;
+    layer_specs_seq[6].layer_ofms_scale = 0.019213344901800156;
+    layer_specs_seq[6].relu_threshold = 0 ;
+    layer_specs_seq[6].layer_ofms_zero_point = -128;
+    layer_specs_seq[6].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[6].add_layer_zero_point = 0;
+    layer_specs_seq[6].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[6].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[6].data_layout = CHW;
+
+
+    layer_specs_seq[7].layer_index = 7;
+    layer_specs_seq[7].conv_layer_type = DW_CONV; 
+    layer_specs_seq[7].layer_num_fils = 72;
+    layer_specs_seq[7].strides = 2;
+    layer_specs_seq[7].filter_size = 3;
+    layer_specs_seq[7].padding_left = 0;
+    layer_specs_seq[7].padding_right = 1;
+    layer_specs_seq[7].padding_top = 0;
+    layer_specs_seq[7].padding_bottom = 1;
+    layer_specs_seq[7].layer_depth = 72;
+    layer_specs_seq[7].layer_ifm_height = 112;
+    layer_specs_seq[7].layer_ifm_width = 112;
+    layer_specs_seq[7].layer_ofm_height = 56;
+    layer_specs_seq[7].layer_ofm_width = 56;
+    layer_specs_seq[7].layer_activation = RELU;
+    layer_specs_seq[7].layer_num_of_ifm_tiles_h = (112 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[7].layer_num_of_ifm_tiles_w = (112 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[7].layer_num_of_ofm_tiles_h = (56 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(56 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 7;
+    layer_specs_seq[7].layer_weights_offset = 288;
+    layer_specs_seq[7].write_to_result_or_channels = 1;
+    layer_specs_seq[7].write_to_tmp = 0;
+    layer_specs_seq[7].followed_by = 0;
+    layer_specs_seq[7].layer_ifms_zero_point = -128;
+    layer_specs_seq[7].layer_ofms_scale = 0.031962644308805466;
+    layer_specs_seq[7].relu_threshold = 0 ;
+    layer_specs_seq[7].layer_ofms_zero_point = -128;
+    layer_specs_seq[7].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[7].add_layer_zero_point = 0;
+    layer_specs_seq[7].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[7].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[7].data_layout = CHW;
+
+
+    layer_specs_seq[8].layer_index = 8;
+    layer_specs_seq[8].conv_layer_type = PW_CONV; 
+    layer_specs_seq[8].layer_num_fils = 32;
+    layer_specs_seq[8].strides = 1;
+    layer_specs_seq[8].filter_size = 1;
+    layer_specs_seq[8].padding_left = 0;
+    layer_specs_seq[8].padding_right = 0;
+    layer_specs_seq[8].padding_top = 0;
+    layer_specs_seq[8].padding_bottom = 0;
+    layer_specs_seq[8].layer_depth = 72;
+    layer_specs_seq[8].layer_ifm_height = 56;
+    layer_specs_seq[8].layer_ifm_width = 56;
+    layer_specs_seq[8].layer_ofm_height = 56;
+    layer_specs_seq[8].layer_ofm_width = 56;
+    layer_specs_seq[8].layer_activation = 0;
+    layer_specs_seq[8].layer_num_of_ifm_tiles_h = (56 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[8].layer_num_of_ifm_tiles_w = (56 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[8].layer_num_of_ofm_tiles_h = (56 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(56 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 8;
+    layer_specs_seq[8].layer_weights_offset = 2496;
+    layer_specs_seq[8].write_to_result_or_channels = 1;
+    layer_specs_seq[8].write_to_tmp = 0;
+    layer_specs_seq[8].followed_by = 0;
+    layer_specs_seq[8].layer_ifms_zero_point = -128;
+    layer_specs_seq[8].layer_ofms_scale = 0.04057005047798157;
+    layer_specs_seq[8].relu_threshold = 0 ;
+    layer_specs_seq[8].layer_ofms_zero_point = 9;
+    layer_specs_seq[8].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[8].add_layer_zero_point = 0;
+    layer_specs_seq[8].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[8].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[8].data_layout = CHW;
+
+
+    layer_specs_seq[9].layer_index = 9;
+    layer_specs_seq[9].conv_layer_type = PW_CONV; 
+    layer_specs_seq[9].layer_num_fils = 96;
+    layer_specs_seq[9].strides = 1;
+    layer_specs_seq[9].filter_size = 1;
+    layer_specs_seq[9].padding_left = 0;
+    layer_specs_seq[9].padding_right = 0;
+    layer_specs_seq[9].padding_top = 0;
+    layer_specs_seq[9].padding_bottom = 0;
+    layer_specs_seq[9].layer_depth = 32;
+    layer_specs_seq[9].layer_ifm_height = 56;
+    layer_specs_seq[9].layer_ifm_width = 56;
+    layer_specs_seq[9].layer_ofm_height = 56;
+    layer_specs_seq[9].layer_ofm_width = 56;
+    layer_specs_seq[9].layer_activation = RELU;
+    layer_specs_seq[9].layer_num_of_ifm_tiles_h = (56 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[9].layer_num_of_ifm_tiles_w = (56 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[9].layer_num_of_ofm_tiles_h = (56 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(56 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 9;
+    layer_specs_seq[9].layer_weights_offset = 4800;
+    layer_specs_seq[9].write_to_result_or_channels = 1;
+    layer_specs_seq[9].write_to_tmp = 0;
+    layer_specs_seq[9].followed_by = 0;
+    layer_specs_seq[9].layer_ifms_zero_point = 9;
+    layer_specs_seq[9].layer_ofms_scale = 0.023241911083459854;
+    layer_specs_seq[9].relu_threshold = 0 ;
+    layer_specs_seq[9].layer_ofms_zero_point = -128;
+    layer_specs_seq[9].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[9].add_layer_zero_point = 0;
+    layer_specs_seq[9].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[9].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[9].data_layout = CHW;
+
+
+    layer_specs_seq[10].layer_index = 10;
+    layer_specs_seq[10].conv_layer_type = DW_CONV; 
+    layer_specs_seq[10].layer_num_fils = 96;
+    layer_specs_seq[10].strides = 2;
+    layer_specs_seq[10].filter_size = 3;
+    layer_specs_seq[10].padding_left = 0;
+    layer_specs_seq[10].padding_right = 1;
+    layer_specs_seq[10].padding_top = 0;
+    layer_specs_seq[10].padding_bottom = 1;
+    layer_specs_seq[10].layer_depth = 96;
+    layer_specs_seq[10].layer_ifm_height = 56;
+    layer_specs_seq[10].layer_ifm_width = 56;
+    layer_specs_seq[10].layer_ofm_height = 28;
+    layer_specs_seq[10].layer_ofm_width = 28;
+    layer_specs_seq[10].layer_activation = RELU;
+    layer_specs_seq[10].layer_num_of_ifm_tiles_h = (56 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[10].layer_num_of_ifm_tiles_w = (56 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[10].layer_num_of_ofm_tiles_h = (28 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(28 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 10;
+    layer_specs_seq[10].layer_weights_offset = 936;
+    layer_specs_seq[10].write_to_result_or_channels = 1;
+    layer_specs_seq[10].write_to_tmp = 0;
+    layer_specs_seq[10].followed_by = 0;
+    layer_specs_seq[10].layer_ifms_zero_point = -128;
+    layer_specs_seq[10].layer_ofms_scale = 0.040598057210445404;
+    layer_specs_seq[10].relu_threshold = 0 ;
+    layer_specs_seq[10].layer_ofms_zero_point = -128;
+    layer_specs_seq[10].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[10].add_layer_zero_point = 0;
+    layer_specs_seq[10].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[10].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[10].data_layout = CHW;
+
+
+    layer_specs_seq[11].layer_index = 11;
+    layer_specs_seq[11].conv_layer_type = PW_CONV; 
+    layer_specs_seq[11].layer_num_fils = 56;
+    layer_specs_seq[11].strides = 1;
+    layer_specs_seq[11].filter_size = 1;
+    layer_specs_seq[11].padding_left = 0;
+    layer_specs_seq[11].padding_right = 0;
+    layer_specs_seq[11].padding_top = 0;
+    layer_specs_seq[11].padding_bottom = 0;
+    layer_specs_seq[11].layer_depth = 96;
+    layer_specs_seq[11].layer_ifm_height = 28;
+    layer_specs_seq[11].layer_ifm_width = 28;
+    layer_specs_seq[11].layer_ofm_height = 28;
+    layer_specs_seq[11].layer_ofm_width = 28;
+    layer_specs_seq[11].layer_activation = 0;
+    layer_specs_seq[11].layer_num_of_ifm_tiles_h = (28 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[11].layer_num_of_ifm_tiles_w = (28 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[11].layer_num_of_ofm_tiles_h = (28 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(28 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 11;
+    layer_specs_seq[11].layer_weights_offset = 7872;
+    layer_specs_seq[11].write_to_result_or_channels = 1;
+    layer_specs_seq[11].write_to_tmp = 1;
+    layer_specs_seq[11].followed_by = 0;
+    layer_specs_seq[11].layer_ifms_zero_point = -128;
+    layer_specs_seq[11].layer_ofms_scale = 0.04467487707734108;
+    layer_specs_seq[11].relu_threshold = 0 ;
+    layer_specs_seq[11].layer_ofms_zero_point = 14;
+    layer_specs_seq[11].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[11].add_layer_zero_point = 0;
+    layer_specs_seq[11].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[11].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[11].data_layout = CHW;
+
+
+    layer_specs_seq[12].layer_index = 12;
+    layer_specs_seq[12].conv_layer_type = PW_CONV; 
+    layer_specs_seq[12].layer_num_fils = 168;
+    layer_specs_seq[12].strides = 1;
+    layer_specs_seq[12].filter_size = 1;
+    layer_specs_seq[12].padding_left = 0;
+    layer_specs_seq[12].padding_right = 0;
+    layer_specs_seq[12].padding_top = 0;
+    layer_specs_seq[12].padding_bottom = 0;
+    layer_specs_seq[12].layer_depth = 56;
+    layer_specs_seq[12].layer_ifm_height = 28;
+    layer_specs_seq[12].layer_ifm_width = 28;
+    layer_specs_seq[12].layer_ofm_height = 28;
+    layer_specs_seq[12].layer_ofm_width = 28;
+    layer_specs_seq[12].layer_activation = RELU;
+    layer_specs_seq[12].layer_num_of_ifm_tiles_h = (28 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[12].layer_num_of_ifm_tiles_w = (28 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[12].layer_num_of_ofm_tiles_h = (28 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(28 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 12;
+    layer_specs_seq[12].layer_weights_offset = 13248;
+    layer_specs_seq[12].write_to_result_or_channels = 1;
+    layer_specs_seq[12].write_to_tmp = 0;
+    layer_specs_seq[12].followed_by = 0;
+    layer_specs_seq[12].layer_ifms_zero_point = 14;
+    layer_specs_seq[12].layer_ofms_scale = 0.020384108647704124;
+    layer_specs_seq[12].relu_threshold = 0 ;
+    layer_specs_seq[12].layer_ofms_zero_point = -128;
+    layer_specs_seq[12].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[12].add_layer_zero_point = 0;
+    layer_specs_seq[12].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[12].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[12].data_layout = CHW;
+
+
+    layer_specs_seq[13].layer_index = 13;
+    layer_specs_seq[13].conv_layer_type = DW_CONV; 
+    layer_specs_seq[13].layer_num_fils = 168;
+    layer_specs_seq[13].strides = 1;
+    layer_specs_seq[13].filter_size = 3;
+    layer_specs_seq[13].padding_left = 1;
+    layer_specs_seq[13].padding_right = 1;
+    layer_specs_seq[13].padding_top = 1;
+    layer_specs_seq[13].padding_bottom = 1;
+    layer_specs_seq[13].layer_depth = 168;
+    layer_specs_seq[13].layer_ifm_height = 28;
+    layer_specs_seq[13].layer_ifm_width = 28;
+    layer_specs_seq[13].layer_ofm_height = 28;
+    layer_specs_seq[13].layer_ofm_width = 28;
+    layer_specs_seq[13].layer_activation = RELU;
+    layer_specs_seq[13].layer_num_of_ifm_tiles_h = (28 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[13].layer_num_of_ifm_tiles_w = (28 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[13].layer_num_of_ofm_tiles_h = (28 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(28 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 13;
+    layer_specs_seq[13].layer_weights_offset = 1800;
+    layer_specs_seq[13].write_to_result_or_channels = 1;
+    layer_specs_seq[13].write_to_tmp = 0;
+    layer_specs_seq[13].followed_by = 0;
+    layer_specs_seq[13].layer_ifms_zero_point = -128;
+    layer_specs_seq[13].layer_ofms_scale = 0.04026644676923752;
+    layer_specs_seq[13].relu_threshold = 0 ;
+    layer_specs_seq[13].layer_ofms_zero_point = -128;
+    layer_specs_seq[13].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[13].add_layer_zero_point = 0;
+    layer_specs_seq[13].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[13].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[13].data_layout = CHW;
+
+
+    layer_specs_seq[14].layer_index = 14;
+    layer_specs_seq[14].conv_layer_type = PW_CONV; 
+    layer_specs_seq[14].layer_num_fils = 56;
+    layer_specs_seq[14].strides = 1;
+    layer_specs_seq[14].filter_size = 1;
+    layer_specs_seq[14].padding_left = 0;
+    layer_specs_seq[14].padding_right = 0;
+    layer_specs_seq[14].padding_top = 0;
+    layer_specs_seq[14].padding_bottom = 0;
+    layer_specs_seq[14].layer_depth = 168;
+    layer_specs_seq[14].layer_ifm_height = 28;
+    layer_specs_seq[14].layer_ifm_width = 28;
+    layer_specs_seq[14].layer_ofm_height = 28;
+    layer_specs_seq[14].layer_ofm_width = 28;
+    layer_specs_seq[14].layer_activation = 0;
+    layer_specs_seq[14].layer_num_of_ifm_tiles_h = (28 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[14].layer_num_of_ifm_tiles_w = (28 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[14].layer_num_of_ofm_tiles_h = (28 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(28 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 14;
+    layer_specs_seq[14].layer_weights_offset = 22656;
+    layer_specs_seq[14].write_to_result_or_channels = 1;
+    layer_specs_seq[14].write_to_tmp = 0;
+    layer_specs_seq[14].followed_by = 1;
+    layer_specs_seq[14].layer_ifms_zero_point = -128;
+    layer_specs_seq[14].layer_ofms_scale = 0.062398746609687805;
+    layer_specs_seq[14].relu_threshold = 0 ;
+    layer_specs_seq[14].layer_ofms_zero_point = -4;
+    layer_specs_seq[14].add_layer_scale_reciprocal = 11.863553216432368;
+    layer_specs_seq[14].add_layer_zero_point = -6;
+    layer_specs_seq[14].skip_connection_other_layer_scale = 0.04467487707734108;
+    layer_specs_seq[14].skip_connection_other_layer_zero_point = 14;
+
+    layer_specs_seq[14].data_layout = CHW;
+
+
+
+    layer_specs_seq[16].layer_index = 16;
+    layer_specs_seq[16].conv_layer_type = PW_CONV; 
+    layer_specs_seq[16].layer_num_fils = 336;
+    layer_specs_seq[16].strides = 1;
+    layer_specs_seq[16].filter_size = 1;
+    layer_specs_seq[16].padding_left = 0;
+    layer_specs_seq[16].padding_right = 0;
+    layer_specs_seq[16].padding_top = 0;
+    layer_specs_seq[16].padding_bottom = 0;
+    layer_specs_seq[16].layer_depth = 56;
+    layer_specs_seq[16].layer_ifm_height = 28;
+    layer_specs_seq[16].layer_ifm_width = 28;
+    layer_specs_seq[16].layer_ofm_height = 28;
+    layer_specs_seq[16].layer_ofm_width = 28;
+    layer_specs_seq[16].layer_activation = RELU;
+    layer_specs_seq[16].layer_num_of_ifm_tiles_h = (28 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[16].layer_num_of_ifm_tiles_w = (28 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[16].layer_num_of_ofm_tiles_h = (28 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(28 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 16;
+    layer_specs_seq[16].layer_weights_offset = 32064;
+    layer_specs_seq[16].write_to_result_or_channels = 1;
+    layer_specs_seq[16].write_to_tmp = 0;
+    layer_specs_seq[16].followed_by = 0;
+    layer_specs_seq[16].layer_ifms_zero_point = -6;
+    layer_specs_seq[16].layer_ofms_scale = 0.026810968294739723;
+    layer_specs_seq[16].relu_threshold = 0 ;
+    layer_specs_seq[16].layer_ofms_zero_point = -128;
+    layer_specs_seq[16].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[16].add_layer_zero_point = 0;
+    layer_specs_seq[16].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[16].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[16].data_layout = CHW;
+
+
+    layer_specs_seq[17].layer_index = 17;
+    layer_specs_seq[17].conv_layer_type = DW_CONV; 
+    layer_specs_seq[17].layer_num_fils = 336;
+    layer_specs_seq[17].strides = 2;
+    layer_specs_seq[17].filter_size = 3;
+    layer_specs_seq[17].padding_left = 0;
+    layer_specs_seq[17].padding_right = 1;
+    layer_specs_seq[17].padding_top = 0;
+    layer_specs_seq[17].padding_bottom = 1;
+    layer_specs_seq[17].layer_depth = 336;
+    layer_specs_seq[17].layer_ifm_height = 28;
+    layer_specs_seq[17].layer_ifm_width = 28;
+    layer_specs_seq[17].layer_ofm_height = 14;
+    layer_specs_seq[17].layer_ofm_width = 14;
+    layer_specs_seq[17].layer_activation = RELU;
+    layer_specs_seq[17].layer_num_of_ifm_tiles_h = (28 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[17].layer_num_of_ifm_tiles_w = (28 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[17].layer_num_of_ofm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(14 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 17;
+    layer_specs_seq[17].layer_weights_offset = 3312;
+    layer_specs_seq[17].write_to_result_or_channels = 1;
+    layer_specs_seq[17].write_to_tmp = 0;
+    layer_specs_seq[17].followed_by = 0;
+    layer_specs_seq[17].layer_ifms_zero_point = -128;
+    layer_specs_seq[17].layer_ofms_scale = 0.05190153792500496;
+    layer_specs_seq[17].relu_threshold = 0 ;
+    layer_specs_seq[17].layer_ofms_zero_point = -128;
+    layer_specs_seq[17].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[17].add_layer_zero_point = 0;
+    layer_specs_seq[17].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[17].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[17].data_layout = CHW;
+
+
+    layer_specs_seq[18].layer_index = 18;
+    layer_specs_seq[18].conv_layer_type = PW_CONV; 
+    layer_specs_seq[18].layer_num_fils = 112;
+    layer_specs_seq[18].strides = 1;
+    layer_specs_seq[18].filter_size = 1;
+    layer_specs_seq[18].padding_left = 0;
+    layer_specs_seq[18].padding_right = 0;
+    layer_specs_seq[18].padding_top = 0;
+    layer_specs_seq[18].padding_bottom = 0;
+    layer_specs_seq[18].layer_depth = 336;
+    layer_specs_seq[18].layer_ifm_height = 14;
+    layer_specs_seq[18].layer_ifm_width = 14;
+    layer_specs_seq[18].layer_ofm_height = 14;
+    layer_specs_seq[18].layer_ofm_width = 14;
+    layer_specs_seq[18].layer_activation = 0;
+    layer_specs_seq[18].layer_num_of_ifm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[18].layer_num_of_ifm_tiles_w = (14 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[18].layer_num_of_ofm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(14 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 18;
+    layer_specs_seq[18].layer_weights_offset = 50880;
+    layer_specs_seq[18].write_to_result_or_channels = 1;
+    layer_specs_seq[18].write_to_tmp = 1;
+    layer_specs_seq[18].followed_by = 0;
+    layer_specs_seq[18].layer_ifms_zero_point = -128;
+    layer_specs_seq[18].layer_ofms_scale = 0.07582080364227295;
+    layer_specs_seq[18].relu_threshold = 0 ;
+    layer_specs_seq[18].layer_ofms_zero_point = -1;
+    layer_specs_seq[18].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[18].add_layer_zero_point = 0;
+    layer_specs_seq[18].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[18].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[18].data_layout = CHW;
+
+
+    layer_specs_seq[19].layer_index = 19;
+    layer_specs_seq[19].conv_layer_type = PW_CONV; 
+    layer_specs_seq[19].layer_num_fils = 336;
+    layer_specs_seq[19].strides = 1;
+    layer_specs_seq[19].filter_size = 1;
+    layer_specs_seq[19].padding_left = 0;
+    layer_specs_seq[19].padding_right = 0;
+    layer_specs_seq[19].padding_top = 0;
+    layer_specs_seq[19].padding_bottom = 0;
+    layer_specs_seq[19].layer_depth = 112;
+    layer_specs_seq[19].layer_ifm_height = 14;
+    layer_specs_seq[19].layer_ifm_width = 14;
+    layer_specs_seq[19].layer_ofm_height = 14;
+    layer_specs_seq[19].layer_ofm_width = 14;
+    layer_specs_seq[19].layer_activation = RELU;
+    layer_specs_seq[19].layer_num_of_ifm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[19].layer_num_of_ifm_tiles_w = (14 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[19].layer_num_of_ofm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(14 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 19;
+    layer_specs_seq[19].layer_weights_offset = 88512;
+    layer_specs_seq[19].write_to_result_or_channels = 1;
+    layer_specs_seq[19].write_to_tmp = 0;
+    layer_specs_seq[19].followed_by = 0;
+    layer_specs_seq[19].layer_ifms_zero_point = -1;
+    layer_specs_seq[19].layer_ofms_scale = 0.03478240221738815;
+    layer_specs_seq[19].relu_threshold = 0 ;
+    layer_specs_seq[19].layer_ofms_zero_point = -128;
+    layer_specs_seq[19].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[19].add_layer_zero_point = 0;
+    layer_specs_seq[19].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[19].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[19].data_layout = CHW;
+
+
+    layer_specs_seq[20].layer_index = 20;
+    layer_specs_seq[20].conv_layer_type = DW_CONV; 
+    layer_specs_seq[20].layer_num_fils = 336;
+    layer_specs_seq[20].strides = 1;
+    layer_specs_seq[20].filter_size = 3;
+    layer_specs_seq[20].padding_left = 1;
+    layer_specs_seq[20].padding_right = 1;
+    layer_specs_seq[20].padding_top = 1;
+    layer_specs_seq[20].padding_bottom = 1;
+    layer_specs_seq[20].layer_depth = 336;
+    layer_specs_seq[20].layer_ifm_height = 14;
+    layer_specs_seq[20].layer_ifm_width = 14;
+    layer_specs_seq[20].layer_ofm_height = 14;
+    layer_specs_seq[20].layer_ofm_width = 14;
+    layer_specs_seq[20].layer_activation = RELU;
+    layer_specs_seq[20].layer_num_of_ifm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[20].layer_num_of_ifm_tiles_w = (14 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[20].layer_num_of_ofm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(14 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 20;
+    layer_specs_seq[20].layer_weights_offset = 6336;
+    layer_specs_seq[20].write_to_result_or_channels = 1;
+    layer_specs_seq[20].write_to_tmp = 0;
+    layer_specs_seq[20].followed_by = 0;
+    layer_specs_seq[20].layer_ifms_zero_point = -128;
+    layer_specs_seq[20].layer_ofms_scale = 0.05948203429579735;
+    layer_specs_seq[20].relu_threshold = 0 ;
+    layer_specs_seq[20].layer_ofms_zero_point = -128;
+    layer_specs_seq[20].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[20].add_layer_zero_point = 0;
+    layer_specs_seq[20].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[20].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[20].data_layout = CHW;
+
+
+    layer_specs_seq[21].layer_index = 21;
+    layer_specs_seq[21].conv_layer_type = PW_CONV; 
+    layer_specs_seq[21].layer_num_fils = 112;
+    layer_specs_seq[21].strides = 1;
+    layer_specs_seq[21].filter_size = 1;
+    layer_specs_seq[21].padding_left = 0;
+    layer_specs_seq[21].padding_right = 0;
+    layer_specs_seq[21].padding_top = 0;
+    layer_specs_seq[21].padding_bottom = 0;
+    layer_specs_seq[21].layer_depth = 336;
+    layer_specs_seq[21].layer_ifm_height = 14;
+    layer_specs_seq[21].layer_ifm_width = 14;
+    layer_specs_seq[21].layer_ofm_height = 14;
+    layer_specs_seq[21].layer_ofm_width = 14;
+    layer_specs_seq[21].layer_activation = 0;
+    layer_specs_seq[21].layer_num_of_ifm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[21].layer_num_of_ifm_tiles_w = (14 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[21].layer_num_of_ofm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(14 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 21;
+    layer_specs_seq[21].layer_weights_offset = 126144;
+    layer_specs_seq[21].write_to_result_or_channels = 1;
+    layer_specs_seq[21].write_to_tmp = 0;
+    layer_specs_seq[21].followed_by = 1;
+    layer_specs_seq[21].layer_ifms_zero_point = -128;
+    layer_specs_seq[21].layer_ofms_scale = 0.09415879845619202;
+    layer_specs_seq[21].relu_threshold = 0 ;
+    layer_specs_seq[21].layer_ofms_zero_point = -2;
+    layer_specs_seq[21].add_layer_scale_reciprocal = 7.749804230695633;
+    layer_specs_seq[21].add_layer_zero_point = -4;
+    layer_specs_seq[21].skip_connection_other_layer_scale = 0.07582080364227295;
+    layer_specs_seq[21].skip_connection_other_layer_zero_point = -1;
+
+    layer_specs_seq[21].data_layout = CHW;
+
+
+
+    layer_specs_seq[23].layer_index = 23;
+    layer_specs_seq[23].conv_layer_type = PW_CONV; 
+    layer_specs_seq[23].layer_num_fils = 672;
+    layer_specs_seq[23].strides = 1;
+    layer_specs_seq[23].filter_size = 1;
+    layer_specs_seq[23].padding_left = 0;
+    layer_specs_seq[23].padding_right = 0;
+    layer_specs_seq[23].padding_top = 0;
+    layer_specs_seq[23].padding_bottom = 0;
+    layer_specs_seq[23].layer_depth = 112;
+    layer_specs_seq[23].layer_ifm_height = 14;
+    layer_specs_seq[23].layer_ifm_width = 14;
+    layer_specs_seq[23].layer_ofm_height = 14;
+    layer_specs_seq[23].layer_ofm_width = 14;
+    layer_specs_seq[23].layer_activation = RELU;
+    layer_specs_seq[23].layer_num_of_ifm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[23].layer_num_of_ifm_tiles_w = (14 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[23].layer_num_of_ofm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(14 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 23;
+    layer_specs_seq[23].layer_weights_offset = 163776;
+    layer_specs_seq[23].write_to_result_or_channels = 1;
+    layer_specs_seq[23].write_to_tmp = 0;
+    layer_specs_seq[23].followed_by = 0;
+    layer_specs_seq[23].layer_ifms_zero_point = -4;
+    layer_specs_seq[23].layer_ofms_scale = 0.0417172834277153;
+    layer_specs_seq[23].relu_threshold = 0 ;
+    layer_specs_seq[23].layer_ofms_zero_point = -128;
+    layer_specs_seq[23].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[23].add_layer_zero_point = 0;
+    layer_specs_seq[23].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[23].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[23].data_layout = CHW;
+
+
+    layer_specs_seq[24].layer_index = 24;
+    layer_specs_seq[24].conv_layer_type = DW_CONV; 
+    layer_specs_seq[24].layer_num_fils = 672;
+    layer_specs_seq[24].strides = 1;
+    layer_specs_seq[24].filter_size = 3;
+    layer_specs_seq[24].padding_left = 1;
+    layer_specs_seq[24].padding_right = 1;
+    layer_specs_seq[24].padding_top = 1;
+    layer_specs_seq[24].padding_bottom = 1;
+    layer_specs_seq[24].layer_depth = 672;
+    layer_specs_seq[24].layer_ifm_height = 14;
+    layer_specs_seq[24].layer_ifm_width = 14;
+    layer_specs_seq[24].layer_ofm_height = 14;
+    layer_specs_seq[24].layer_ofm_width = 14;
+    layer_specs_seq[24].layer_activation = RELU;
+    layer_specs_seq[24].layer_num_of_ifm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[24].layer_num_of_ifm_tiles_w = (14 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[24].layer_num_of_ofm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(14 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 24;
+    layer_specs_seq[24].layer_weights_offset = 9360;
+    layer_specs_seq[24].write_to_result_or_channels = 1;
+    layer_specs_seq[24].write_to_tmp = 0;
+    layer_specs_seq[24].followed_by = 0;
+    layer_specs_seq[24].layer_ifms_zero_point = -128;
+    layer_specs_seq[24].layer_ofms_scale = 0.06922589242458344;
+    layer_specs_seq[24].relu_threshold = 0 ;
+    layer_specs_seq[24].layer_ofms_zero_point = -128;
+    layer_specs_seq[24].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[24].add_layer_zero_point = 0;
+    layer_specs_seq[24].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[24].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[24].data_layout = CHW;
+
+
+    layer_specs_seq[25].layer_index = 25;
+    layer_specs_seq[25].conv_layer_type = PW_CONV; 
+    layer_specs_seq[25].layer_num_fils = 128;
+    layer_specs_seq[25].strides = 1;
+    layer_specs_seq[25].filter_size = 1;
+    layer_specs_seq[25].padding_left = 0;
+    layer_specs_seq[25].padding_right = 0;
+    layer_specs_seq[25].padding_top = 0;
+    layer_specs_seq[25].padding_bottom = 0;
+    layer_specs_seq[25].layer_depth = 672;
+    layer_specs_seq[25].layer_ifm_height = 14;
+    layer_specs_seq[25].layer_ifm_width = 14;
+    layer_specs_seq[25].layer_ofm_height = 14;
+    layer_specs_seq[25].layer_ofm_width = 14;
+    layer_specs_seq[25].layer_activation = 0;
+    layer_specs_seq[25].layer_num_of_ifm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[25].layer_num_of_ifm_tiles_w = (14 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[25].layer_num_of_ofm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(14 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 25;
+    layer_specs_seq[25].layer_weights_offset = 239040;
+    layer_specs_seq[25].write_to_result_or_channels = 1;
+    layer_specs_seq[25].write_to_tmp = 1;
+    layer_specs_seq[25].followed_by = 0;
+    layer_specs_seq[25].layer_ifms_zero_point = -128;
+    layer_specs_seq[25].layer_ofms_scale = 0.1285926103591919;
+    layer_specs_seq[25].relu_threshold = 0 ;
+    layer_specs_seq[25].layer_ofms_zero_point = -6;
+    layer_specs_seq[25].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[25].add_layer_zero_point = 0;
+    layer_specs_seq[25].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[25].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[25].data_layout = CHW;
+
+
+    layer_specs_seq[26].layer_index = 26;
+    layer_specs_seq[26].conv_layer_type = PW_CONV; 
+    layer_specs_seq[26].layer_num_fils = 384;
+    layer_specs_seq[26].strides = 1;
+    layer_specs_seq[26].filter_size = 1;
+    layer_specs_seq[26].padding_left = 0;
+    layer_specs_seq[26].padding_right = 0;
+    layer_specs_seq[26].padding_top = 0;
+    layer_specs_seq[26].padding_bottom = 0;
+    layer_specs_seq[26].layer_depth = 128;
+    layer_specs_seq[26].layer_ifm_height = 14;
+    layer_specs_seq[26].layer_ifm_width = 14;
+    layer_specs_seq[26].layer_ofm_height = 14;
+    layer_specs_seq[26].layer_ofm_width = 14;
+    layer_specs_seq[26].layer_activation = RELU;
+    layer_specs_seq[26].layer_num_of_ifm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[26].layer_num_of_ifm_tiles_w = (14 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[26].layer_num_of_ofm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(14 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 26;
+    layer_specs_seq[26].layer_weights_offset = 325056;
+    layer_specs_seq[26].write_to_result_or_channels = 1;
+    layer_specs_seq[26].write_to_tmp = 0;
+    layer_specs_seq[26].followed_by = 0;
+    layer_specs_seq[26].layer_ifms_zero_point = -6;
+    layer_specs_seq[26].layer_ofms_scale = 0.06619248539209366;
+    layer_specs_seq[26].relu_threshold = 0 ;
+    layer_specs_seq[26].layer_ofms_zero_point = -128;
+    layer_specs_seq[26].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[26].add_layer_zero_point = 0;
+    layer_specs_seq[26].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[26].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[26].data_layout = CHW;
+
+
+    layer_specs_seq[27].layer_index = 27;
+    layer_specs_seq[27].conv_layer_type = DW_CONV; 
+    layer_specs_seq[27].layer_num_fils = 384;
+    layer_specs_seq[27].strides = 1;
+    layer_specs_seq[27].filter_size = 3;
+    layer_specs_seq[27].padding_left = 1;
+    layer_specs_seq[27].padding_right = 1;
+    layer_specs_seq[27].padding_top = 1;
+    layer_specs_seq[27].padding_bottom = 1;
+    layer_specs_seq[27].layer_depth = 384;
+    layer_specs_seq[27].layer_ifm_height = 14;
+    layer_specs_seq[27].layer_ifm_width = 14;
+    layer_specs_seq[27].layer_ofm_height = 14;
+    layer_specs_seq[27].layer_ofm_width = 14;
+    layer_specs_seq[27].layer_activation = RELU;
+    layer_specs_seq[27].layer_num_of_ifm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[27].layer_num_of_ifm_tiles_w = (14 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[27].layer_num_of_ofm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(14 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 27;
+    layer_specs_seq[27].layer_weights_offset = 15408;
+    layer_specs_seq[27].write_to_result_or_channels = 1;
+    layer_specs_seq[27].write_to_tmp = 0;
+    layer_specs_seq[27].followed_by = 0;
+    layer_specs_seq[27].layer_ifms_zero_point = -128;
+    layer_specs_seq[27].layer_ofms_scale = 0.1175612136721611;
+    layer_specs_seq[27].relu_threshold = 0 ;
+    layer_specs_seq[27].layer_ofms_zero_point = -128;
+    layer_specs_seq[27].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[27].add_layer_zero_point = 0;
+    layer_specs_seq[27].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[27].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[27].data_layout = CHW;
+
+
+    layer_specs_seq[28].layer_index = 28;
+    layer_specs_seq[28].conv_layer_type = PW_CONV; 
+    layer_specs_seq[28].layer_num_fils = 128;
+    layer_specs_seq[28].strides = 1;
+    layer_specs_seq[28].filter_size = 1;
+    layer_specs_seq[28].padding_left = 0;
+    layer_specs_seq[28].padding_right = 0;
+    layer_specs_seq[28].padding_top = 0;
+    layer_specs_seq[28].padding_bottom = 0;
+    layer_specs_seq[28].layer_depth = 384;
+    layer_specs_seq[28].layer_ifm_height = 14;
+    layer_specs_seq[28].layer_ifm_width = 14;
+    layer_specs_seq[28].layer_ofm_height = 14;
+    layer_specs_seq[28].layer_ofm_width = 14;
+    layer_specs_seq[28].layer_activation = 0;
+    layer_specs_seq[28].layer_num_of_ifm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[28].layer_num_of_ifm_tiles_w = (14 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[28].layer_num_of_ofm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(14 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 28;
+    layer_specs_seq[28].layer_weights_offset = 374208;
+    layer_specs_seq[28].write_to_result_or_channels = 1;
+    layer_specs_seq[28].write_to_tmp = 1;
+    layer_specs_seq[28].followed_by = 1;
+    layer_specs_seq[28].layer_ifms_zero_point = -128;
+    layer_specs_seq[28].layer_ofms_scale = 0.18654195964336395;
+    layer_specs_seq[28].relu_threshold = 0 ;
+    layer_specs_seq[28].layer_ofms_zero_point = 5;
+    layer_specs_seq[28].add_layer_scale_reciprocal = 4.425392170833712;
+    layer_specs_seq[28].add_layer_zero_point = -15;
+    layer_specs_seq[28].skip_connection_other_layer_scale = 0.1285926103591919;
+    layer_specs_seq[28].skip_connection_other_layer_zero_point = -6;
+
+    layer_specs_seq[28].data_layout = CHW;
+
+
+
+    layer_specs_seq[30].layer_index = 30;
+    layer_specs_seq[30].conv_layer_type = PW_CONV; 
+    layer_specs_seq[30].layer_num_fils = 384;
+    layer_specs_seq[30].strides = 1;
+    layer_specs_seq[30].filter_size = 1;
+    layer_specs_seq[30].padding_left = 0;
+    layer_specs_seq[30].padding_right = 0;
+    layer_specs_seq[30].padding_top = 0;
+    layer_specs_seq[30].padding_bottom = 0;
+    layer_specs_seq[30].layer_depth = 128;
+    layer_specs_seq[30].layer_ifm_height = 14;
+    layer_specs_seq[30].layer_ifm_width = 14;
+    layer_specs_seq[30].layer_ofm_height = 14;
+    layer_specs_seq[30].layer_ofm_width = 14;
+    layer_specs_seq[30].layer_activation = RELU;
+    layer_specs_seq[30].layer_num_of_ifm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[30].layer_num_of_ifm_tiles_w = (14 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[30].layer_num_of_ofm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(14 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 30;
+    layer_specs_seq[30].layer_weights_offset = 423360;
+    layer_specs_seq[30].write_to_result_or_channels = 1;
+    layer_specs_seq[30].write_to_tmp = 0;
+    layer_specs_seq[30].followed_by = 0;
+    layer_specs_seq[30].layer_ifms_zero_point = -15;
+    layer_specs_seq[30].layer_ofms_scale = 0.10835278034210205;
+    layer_specs_seq[30].relu_threshold = 0 ;
+    layer_specs_seq[30].layer_ofms_zero_point = -128;
+    layer_specs_seq[30].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[30].add_layer_zero_point = 0;
+    layer_specs_seq[30].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[30].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[30].data_layout = CHW;
+
+
+    layer_specs_seq[31].layer_index = 31;
+    layer_specs_seq[31].conv_layer_type = DW_CONV; 
+    layer_specs_seq[31].layer_num_fils = 384;
+    layer_specs_seq[31].strides = 1;
+    layer_specs_seq[31].filter_size = 3;
+    layer_specs_seq[31].padding_left = 1;
+    layer_specs_seq[31].padding_right = 1;
+    layer_specs_seq[31].padding_top = 1;
+    layer_specs_seq[31].padding_bottom = 1;
+    layer_specs_seq[31].layer_depth = 384;
+    layer_specs_seq[31].layer_ifm_height = 14;
+    layer_specs_seq[31].layer_ifm_width = 14;
+    layer_specs_seq[31].layer_ofm_height = 14;
+    layer_specs_seq[31].layer_ofm_width = 14;
+    layer_specs_seq[31].layer_activation = RELU;
+    layer_specs_seq[31].layer_num_of_ifm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[31].layer_num_of_ifm_tiles_w = (14 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[31].layer_num_of_ofm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(14 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 31;
+    layer_specs_seq[31].layer_weights_offset = 18864;
+    layer_specs_seq[31].write_to_result_or_channels = 1;
+    layer_specs_seq[31].write_to_tmp = 0;
+    layer_specs_seq[31].followed_by = 0;
+    layer_specs_seq[31].layer_ifms_zero_point = -128;
+    layer_specs_seq[31].layer_ofms_scale = 0.22529444098472595;
+    layer_specs_seq[31].relu_threshold = 0 ;
+    layer_specs_seq[31].layer_ofms_zero_point = -128;
+    layer_specs_seq[31].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[31].add_layer_zero_point = 0;
+    layer_specs_seq[31].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[31].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[31].data_layout = CHW;
+
+
+    layer_specs_seq[32].layer_index = 32;
+    layer_specs_seq[32].conv_layer_type = PW_CONV; 
+    layer_specs_seq[32].layer_num_fils = 128;
+    layer_specs_seq[32].strides = 1;
+    layer_specs_seq[32].filter_size = 1;
+    layer_specs_seq[32].padding_left = 0;
+    layer_specs_seq[32].padding_right = 0;
+    layer_specs_seq[32].padding_top = 0;
+    layer_specs_seq[32].padding_bottom = 0;
+    layer_specs_seq[32].layer_depth = 384;
+    layer_specs_seq[32].layer_ifm_height = 14;
+    layer_specs_seq[32].layer_ifm_width = 14;
+    layer_specs_seq[32].layer_ofm_height = 14;
+    layer_specs_seq[32].layer_ofm_width = 14;
+    layer_specs_seq[32].layer_activation = 0;
+    layer_specs_seq[32].layer_num_of_ifm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[32].layer_num_of_ifm_tiles_w = (14 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[32].layer_num_of_ofm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(14 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 32;
+    layer_specs_seq[32].layer_weights_offset = 472512;
+    layer_specs_seq[32].write_to_result_or_channels = 1;
+    layer_specs_seq[32].write_to_tmp = 0;
+    layer_specs_seq[32].followed_by = 1;
+    layer_specs_seq[32].layer_ifms_zero_point = -128;
+    layer_specs_seq[32].layer_ofms_scale = 0.2795660197734833;
+    layer_specs_seq[32].relu_threshold = 0 ;
+    layer_specs_seq[32].layer_ofms_zero_point = 8;
+    layer_specs_seq[32].add_layer_scale_reciprocal = 2.959037775704226;
+    layer_specs_seq[32].add_layer_zero_point = 4;
+    layer_specs_seq[32].skip_connection_other_layer_scale = 0.22596867382526398;
+    layer_specs_seq[32].skip_connection_other_layer_zero_point = -15;
+
+    layer_specs_seq[32].data_layout = CHW;
+
+
+
+    layer_specs_seq[34].layer_index = 34;
+    layer_specs_seq[34].conv_layer_type = PW_CONV; 
+    layer_specs_seq[34].layer_num_fils = 768;
+    layer_specs_seq[34].strides = 1;
+    layer_specs_seq[34].filter_size = 1;
+    layer_specs_seq[34].padding_left = 0;
+    layer_specs_seq[34].padding_right = 0;
+    layer_specs_seq[34].padding_top = 0;
+    layer_specs_seq[34].padding_bottom = 0;
+    layer_specs_seq[34].layer_depth = 128;
+    layer_specs_seq[34].layer_ifm_height = 14;
+    layer_specs_seq[34].layer_ifm_width = 14;
+    layer_specs_seq[34].layer_ofm_height = 14;
+    layer_specs_seq[34].layer_ofm_width = 14;
+    layer_specs_seq[34].layer_activation = RELU;
+    layer_specs_seq[34].layer_num_of_ifm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[34].layer_num_of_ifm_tiles_w = (14 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[34].layer_num_of_ofm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(14 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 34;
+    layer_specs_seq[34].layer_weights_offset = 521664;
+    layer_specs_seq[34].write_to_result_or_channels = 1;
+    layer_specs_seq[34].write_to_tmp = 0;
+    layer_specs_seq[34].followed_by = 0;
+    layer_specs_seq[34].layer_ifms_zero_point = 4;
+    layer_specs_seq[34].layer_ofms_scale = 0.13074076175689697;
+    layer_specs_seq[34].relu_threshold = 0 ;
+    layer_specs_seq[34].layer_ofms_zero_point = -128;
+    layer_specs_seq[34].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[34].add_layer_zero_point = 0;
+    layer_specs_seq[34].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[34].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[34].data_layout = CHW;
+
+
+    layer_specs_seq[35].layer_index = 35;
+    layer_specs_seq[35].conv_layer_type = DW_CONV; 
+    layer_specs_seq[35].layer_num_fils = 768;
+    layer_specs_seq[35].strides = 2;
+    layer_specs_seq[35].filter_size = 3;
+    layer_specs_seq[35].padding_left = 0;
+    layer_specs_seq[35].padding_right = 1;
+    layer_specs_seq[35].padding_top = 0;
+    layer_specs_seq[35].padding_bottom = 1;
+    layer_specs_seq[35].layer_depth = 768;
+    layer_specs_seq[35].layer_ifm_height = 14;
+    layer_specs_seq[35].layer_ifm_width = 14;
+    layer_specs_seq[35].layer_ofm_height = 7;
+    layer_specs_seq[35].layer_ofm_width = 7;
+    layer_specs_seq[35].layer_activation = RELU;
+    layer_specs_seq[35].layer_num_of_ifm_tiles_h = (14 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[35].layer_num_of_ifm_tiles_w = (14 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[35].layer_num_of_ofm_tiles_h = (7 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(7 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 35;
+    layer_specs_seq[35].layer_weights_offset = 22320;
+    layer_specs_seq[35].write_to_result_or_channels = 1;
+    layer_specs_seq[35].write_to_tmp = 0;
+    layer_specs_seq[35].followed_by = 0;
+    layer_specs_seq[35].layer_ifms_zero_point = -128;
+    layer_specs_seq[35].layer_ofms_scale = 0.2632376253604889;
+    layer_specs_seq[35].relu_threshold = 0 ;
+    layer_specs_seq[35].layer_ofms_zero_point = -128;
+    layer_specs_seq[35].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[35].add_layer_zero_point = 0;
+    layer_specs_seq[35].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[35].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[35].data_layout = CHW;
+
+
+    layer_specs_seq[36].layer_index = 36;
+    layer_specs_seq[36].conv_layer_type = PW_CONV; 
+    layer_specs_seq[36].layer_num_fils = 256;
+    layer_specs_seq[36].strides = 1;
+    layer_specs_seq[36].filter_size = 1;
+    layer_specs_seq[36].padding_left = 0;
+    layer_specs_seq[36].padding_right = 0;
+    layer_specs_seq[36].padding_top = 0;
+    layer_specs_seq[36].padding_bottom = 0;
+    layer_specs_seq[36].layer_depth = 768;
+    layer_specs_seq[36].layer_ifm_height = 7;
+    layer_specs_seq[36].layer_ifm_width = 7;
+    layer_specs_seq[36].layer_ofm_height = 7;
+    layer_specs_seq[36].layer_ofm_width = 7;
+    layer_specs_seq[36].layer_activation = 0;
+    layer_specs_seq[36].layer_num_of_ifm_tiles_h = (7 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[36].layer_num_of_ifm_tiles_w = (7 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[36].layer_num_of_ofm_tiles_h = (7 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(7 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 36;
+    layer_specs_seq[36].layer_weights_offset = 619968;
+    layer_specs_seq[36].write_to_result_or_channels = 1;
+    layer_specs_seq[36].write_to_tmp = 1;
+    layer_specs_seq[36].followed_by = 0;
+    layer_specs_seq[36].layer_ifms_zero_point = -128;
+    layer_specs_seq[36].layer_ofms_scale = 0.3316303789615631;
+    layer_specs_seq[36].relu_threshold = 0 ;
+    layer_specs_seq[36].layer_ofms_zero_point = -5;
+    layer_specs_seq[36].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[36].add_layer_zero_point = 0;
+    layer_specs_seq[36].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[36].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[36].data_layout = CHW;
+
+
+    layer_specs_seq[37].layer_index = 37;
+    layer_specs_seq[37].conv_layer_type = PW_CONV; 
+    layer_specs_seq[37].layer_num_fils = 1536;
+    layer_specs_seq[37].strides = 1;
+    layer_specs_seq[37].filter_size = 1;
+    layer_specs_seq[37].padding_left = 0;
+    layer_specs_seq[37].padding_right = 0;
+    layer_specs_seq[37].padding_top = 0;
+    layer_specs_seq[37].padding_bottom = 0;
+    layer_specs_seq[37].layer_depth = 256;
+    layer_specs_seq[37].layer_ifm_height = 7;
+    layer_specs_seq[37].layer_ifm_width = 7;
+    layer_specs_seq[37].layer_ofm_height = 7;
+    layer_specs_seq[37].layer_ofm_width = 7;
+    layer_specs_seq[37].layer_activation = RELU;
+    layer_specs_seq[37].layer_num_of_ifm_tiles_h = (7 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[37].layer_num_of_ifm_tiles_w = (7 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[37].layer_num_of_ofm_tiles_h = (7 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(7 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 37;
+    layer_specs_seq[37].layer_weights_offset = 816576;
+    layer_specs_seq[37].write_to_result_or_channels = 1;
+    layer_specs_seq[37].write_to_tmp = 0;
+    layer_specs_seq[37].followed_by = 0;
+    layer_specs_seq[37].layer_ifms_zero_point = -5;
+    layer_specs_seq[37].layer_ofms_scale = 0.10712134093046188;
+    layer_specs_seq[37].relu_threshold = 0 ;
+    layer_specs_seq[37].layer_ofms_zero_point = -128;
+    layer_specs_seq[37].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[37].add_layer_zero_point = 0;
+    layer_specs_seq[37].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[37].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[37].data_layout = CHW;
+
+
+    layer_specs_seq[38].layer_index = 38;
+    layer_specs_seq[38].conv_layer_type = DW_CONV; 
+    layer_specs_seq[38].layer_num_fils = 1536;
+    layer_specs_seq[38].strides = 1;
+    layer_specs_seq[38].filter_size = 3;
+    layer_specs_seq[38].padding_left = 1;
+    layer_specs_seq[38].padding_right = 1;
+    layer_specs_seq[38].padding_top = 1;
+    layer_specs_seq[38].padding_bottom = 1;
+    layer_specs_seq[38].layer_depth = 1536;
+    layer_specs_seq[38].layer_ifm_height = 7;
+    layer_specs_seq[38].layer_ifm_width = 7;
+    layer_specs_seq[38].layer_ofm_height = 7;
+    layer_specs_seq[38].layer_ofm_width = 7;
+    layer_specs_seq[38].layer_activation = RELU;
+    layer_specs_seq[38].layer_num_of_ifm_tiles_h = (7 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[38].layer_num_of_ifm_tiles_w = (7 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[38].layer_num_of_ofm_tiles_h = (7 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(7 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 38;
+    layer_specs_seq[38].layer_weights_offset = 29232;
+    layer_specs_seq[38].write_to_result_or_channels = 1;
+    layer_specs_seq[38].write_to_tmp = 0;
+    layer_specs_seq[38].followed_by = 0;
+    layer_specs_seq[38].layer_ifms_zero_point = -128;
+    layer_specs_seq[38].layer_ofms_scale = 0.23548580706119537;
+    layer_specs_seq[38].relu_threshold = 0 ;
+    layer_specs_seq[38].layer_ofms_zero_point = -128;
+    layer_specs_seq[38].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[38].add_layer_zero_point = 0;
+    layer_specs_seq[38].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[38].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[38].data_layout = CHW;
+
+
+    layer_specs_seq[39].layer_index = 39;
+    layer_specs_seq[39].conv_layer_type = PW_CONV; 
+    layer_specs_seq[39].layer_num_fils = 256;
+    layer_specs_seq[39].strides = 1;
+    layer_specs_seq[39].filter_size = 1;
+    layer_specs_seq[39].padding_left = 0;
+    layer_specs_seq[39].padding_right = 0;
+    layer_specs_seq[39].padding_top = 0;
+    layer_specs_seq[39].padding_bottom = 0;
+    layer_specs_seq[39].layer_depth = 1536;
+    layer_specs_seq[39].layer_ifm_height = 7;
+    layer_specs_seq[39].layer_ifm_width = 7;
+    layer_specs_seq[39].layer_ofm_height = 7;
+    layer_specs_seq[39].layer_ofm_width = 7;
+    layer_specs_seq[39].layer_activation = 0;
+    layer_specs_seq[39].layer_num_of_ifm_tiles_h = (7 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[39].layer_num_of_ifm_tiles_w = (7 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[39].layer_num_of_ofm_tiles_h = (7 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(7 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 39;
+    layer_specs_seq[39].layer_weights_offset = 1209792;
+    layer_specs_seq[39].write_to_result_or_channels = 1;
+    layer_specs_seq[39].write_to_tmp = 1;
+    layer_specs_seq[39].followed_by = 1;
+    layer_specs_seq[39].layer_ifms_zero_point = -128;
+    layer_specs_seq[39].layer_ofms_scale = 0.44512706995010376;
+    layer_specs_seq[39].relu_threshold = 0 ;
+    layer_specs_seq[39].layer_ofms_zero_point = 3;
+    layer_specs_seq[39].add_layer_scale_reciprocal = 1.7486151806859982;
+    layer_specs_seq[39].add_layer_zero_point = 11;
+    layer_specs_seq[39].skip_connection_other_layer_scale = 0.3316303789615631;
+    layer_specs_seq[39].skip_connection_other_layer_zero_point = -5;
+
+    layer_specs_seq[39].data_layout = CHW;
+
+
+
+    layer_specs_seq[41].layer_index = 41;
+    layer_specs_seq[41].conv_layer_type = PW_CONV; 
+    layer_specs_seq[41].layer_num_fils = 1536;
+    layer_specs_seq[41].strides = 1;
+    layer_specs_seq[41].filter_size = 1;
+    layer_specs_seq[41].padding_left = 0;
+    layer_specs_seq[41].padding_right = 0;
+    layer_specs_seq[41].padding_top = 0;
+    layer_specs_seq[41].padding_bottom = 0;
+    layer_specs_seq[41].layer_depth = 256;
+    layer_specs_seq[41].layer_ifm_height = 7;
+    layer_specs_seq[41].layer_ifm_width = 7;
+    layer_specs_seq[41].layer_ofm_height = 7;
+    layer_specs_seq[41].layer_ofm_width = 7;
+    layer_specs_seq[41].layer_activation = RELU;
+    layer_specs_seq[41].layer_num_of_ifm_tiles_h = (7 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[41].layer_num_of_ifm_tiles_w = (7 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[41].layer_num_of_ofm_tiles_h = (7 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(7 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 41;
+    layer_specs_seq[41].layer_weights_offset = 1603008;
+    layer_specs_seq[41].write_to_result_or_channels = 1;
+    layer_specs_seq[41].write_to_tmp = 0;
+    layer_specs_seq[41].followed_by = 0;
+    layer_specs_seq[41].layer_ifms_zero_point = 11;
+    layer_specs_seq[41].layer_ofms_scale = 0.1910945326089859;
+    layer_specs_seq[41].relu_threshold = 0 ;
+    layer_specs_seq[41].layer_ofms_zero_point = -128;
+    layer_specs_seq[41].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[41].add_layer_zero_point = 0;
+    layer_specs_seq[41].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[41].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[41].data_layout = CHW;
+
+
+    layer_specs_seq[42].layer_index = 42;
+    layer_specs_seq[42].conv_layer_type = DW_CONV; 
+    layer_specs_seq[42].layer_num_fils = 1536;
+    layer_specs_seq[42].strides = 1;
+    layer_specs_seq[42].filter_size = 3;
+    layer_specs_seq[42].padding_left = 1;
+    layer_specs_seq[42].padding_right = 1;
+    layer_specs_seq[42].padding_top = 1;
+    layer_specs_seq[42].padding_bottom = 1;
+    layer_specs_seq[42].layer_depth = 1536;
+    layer_specs_seq[42].layer_ifm_height = 7;
+    layer_specs_seq[42].layer_ifm_width = 7;
+    layer_specs_seq[42].layer_ofm_height = 7;
+    layer_specs_seq[42].layer_ofm_width = 7;
+    layer_specs_seq[42].layer_activation = RELU;
+    layer_specs_seq[42].layer_num_of_ifm_tiles_h = (7 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[42].layer_num_of_ifm_tiles_w = (7 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[42].layer_num_of_ofm_tiles_h = (7 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(7 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 42;
+    layer_specs_seq[42].layer_weights_offset = 43056;
+    layer_specs_seq[42].write_to_result_or_channels = 1;
+    layer_specs_seq[42].write_to_tmp = 0;
+    layer_specs_seq[42].followed_by = 0;
+    layer_specs_seq[42].layer_ifms_zero_point = -128;
+    layer_specs_seq[42].layer_ofms_scale = 0.47788897156715393;
+    layer_specs_seq[42].relu_threshold = 0 ;
+    layer_specs_seq[42].layer_ofms_zero_point = -128;
+    layer_specs_seq[42].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[42].add_layer_zero_point = 0;
+    layer_specs_seq[42].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[42].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[42].data_layout = CHW;
+
+
+    layer_specs_seq[43].layer_index = 43;
+    layer_specs_seq[43].conv_layer_type = PW_CONV; 
+    layer_specs_seq[43].layer_num_fils = 256;
+    layer_specs_seq[43].strides = 1;
+    layer_specs_seq[43].filter_size = 1;
+    layer_specs_seq[43].padding_left = 0;
+    layer_specs_seq[43].padding_right = 0;
+    layer_specs_seq[43].padding_top = 0;
+    layer_specs_seq[43].padding_bottom = 0;
+    layer_specs_seq[43].layer_depth = 1536;
+    layer_specs_seq[43].layer_ifm_height = 7;
+    layer_specs_seq[43].layer_ifm_width = 7;
+    layer_specs_seq[43].layer_ofm_height = 7;
+    layer_specs_seq[43].layer_ofm_width = 7;
+    layer_specs_seq[43].layer_activation = 0;
+    layer_specs_seq[43].layer_num_of_ifm_tiles_h = (7 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[43].layer_num_of_ifm_tiles_w = (7 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[43].layer_num_of_ofm_tiles_h = (7 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(7 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 43;
+    layer_specs_seq[43].layer_weights_offset = 1996224;
+    layer_specs_seq[43].write_to_result_or_channels = 1;
+    layer_specs_seq[43].write_to_tmp = 1;
+    layer_specs_seq[43].followed_by = 1;
+    layer_specs_seq[43].layer_ifms_zero_point = -128;
+    layer_specs_seq[43].layer_ofms_scale = 0.8412908315658569;
+    layer_specs_seq[43].relu_threshold = 0 ;
+    layer_specs_seq[43].layer_ofms_zero_point = -1;
+    layer_specs_seq[43].add_layer_scale_reciprocal = 0.9700367333732514;
+    layer_specs_seq[43].add_layer_zero_point = 8;
+    layer_specs_seq[43].skip_connection_other_layer_scale = 0.571881115436554;
+    layer_specs_seq[43].skip_connection_other_layer_zero_point = 11;
+
+    layer_specs_seq[43].data_layout = CHW;
+
+
+
+    layer_specs_seq[45].layer_index = 45;
+    layer_specs_seq[45].conv_layer_type = PW_CONV; 
+    layer_specs_seq[45].layer_num_fils = 1536;
+    layer_specs_seq[45].strides = 1;
+    layer_specs_seq[45].filter_size = 1;
+    layer_specs_seq[45].padding_left = 0;
+    layer_specs_seq[45].padding_right = 0;
+    layer_specs_seq[45].padding_top = 0;
+    layer_specs_seq[45].padding_bottom = 0;
+    layer_specs_seq[45].layer_depth = 256;
+    layer_specs_seq[45].layer_ifm_height = 7;
+    layer_specs_seq[45].layer_ifm_width = 7;
+    layer_specs_seq[45].layer_ofm_height = 7;
+    layer_specs_seq[45].layer_ofm_width = 7;
+    layer_specs_seq[45].layer_activation = RELU;
+    layer_specs_seq[45].layer_num_of_ifm_tiles_h = (7 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[45].layer_num_of_ifm_tiles_w = (7 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[45].layer_num_of_ofm_tiles_h = (7 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(7 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 45;
+    layer_specs_seq[45].layer_weights_offset = 2389440;
+    layer_specs_seq[45].write_to_result_or_channels = 1;
+    layer_specs_seq[45].write_to_tmp = 0;
+    layer_specs_seq[45].followed_by = 0;
+    layer_specs_seq[45].layer_ifms_zero_point = 8;
+    layer_specs_seq[45].layer_ofms_scale = 0.41201502084732056;
+    layer_specs_seq[45].relu_threshold = 0 ;
+    layer_specs_seq[45].layer_ofms_zero_point = -128;
+    layer_specs_seq[45].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[45].add_layer_zero_point = 0;
+    layer_specs_seq[45].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[45].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[45].data_layout = CHW;
+
+
+    layer_specs_seq[46].layer_index = 46;
+    layer_specs_seq[46].conv_layer_type = DW_CONV; 
+    layer_specs_seq[46].layer_num_fils = 1536;
+    layer_specs_seq[46].strides = 1;
+    layer_specs_seq[46].filter_size = 3;
+    layer_specs_seq[46].padding_left = 1;
+    layer_specs_seq[46].padding_right = 1;
+    layer_specs_seq[46].padding_top = 1;
+    layer_specs_seq[46].padding_bottom = 1;
+    layer_specs_seq[46].layer_depth = 1536;
+    layer_specs_seq[46].layer_ifm_height = 7;
+    layer_specs_seq[46].layer_ifm_width = 7;
+    layer_specs_seq[46].layer_ofm_height = 7;
+    layer_specs_seq[46].layer_ofm_width = 7;
+    layer_specs_seq[46].layer_activation = RELU;
+    layer_specs_seq[46].layer_num_of_ifm_tiles_h = (7 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[46].layer_num_of_ifm_tiles_w = (7 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[46].layer_num_of_ofm_tiles_h = (7 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(7 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 46;
+    layer_specs_seq[46].layer_weights_offset = 56880;
+    layer_specs_seq[46].write_to_result_or_channels = 1;
+    layer_specs_seq[46].write_to_tmp = 0;
+    layer_specs_seq[46].followed_by = 0;
+    layer_specs_seq[46].layer_ifms_zero_point = -128;
+    layer_specs_seq[46].layer_ofms_scale = 0.708950936794281;
+    layer_specs_seq[46].relu_threshold = 0 ;
+    layer_specs_seq[46].layer_ofms_zero_point = -128;
+    layer_specs_seq[46].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[46].add_layer_zero_point = 0;
+    layer_specs_seq[46].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[46].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[46].data_layout = CHW;
+
+
+    layer_specs_seq[47].layer_index = 47;
+    layer_specs_seq[47].conv_layer_type = PW_CONV; 
+    layer_specs_seq[47].layer_num_fils = 256;
+    layer_specs_seq[47].strides = 1;
+    layer_specs_seq[47].filter_size = 1;
+    layer_specs_seq[47].padding_left = 0;
+    layer_specs_seq[47].padding_right = 0;
+    layer_specs_seq[47].padding_top = 0;
+    layer_specs_seq[47].padding_bottom = 0;
+    layer_specs_seq[47].layer_depth = 1536;
+    layer_specs_seq[47].layer_ifm_height = 7;
+    layer_specs_seq[47].layer_ifm_width = 7;
+    layer_specs_seq[47].layer_ofm_height = 7;
+    layer_specs_seq[47].layer_ofm_width = 7;
+    layer_specs_seq[47].layer_activation = 0;
+    layer_specs_seq[47].layer_num_of_ifm_tiles_h = (7 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[47].layer_num_of_ifm_tiles_w = (7 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[47].layer_num_of_ofm_tiles_h = (7 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(7 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 47;
+    layer_specs_seq[47].layer_weights_offset = 2782656;
+    layer_specs_seq[47].write_to_result_or_channels = 1;
+    layer_specs_seq[47].write_to_tmp = 0;
+    layer_specs_seq[47].followed_by = 1;
+    layer_specs_seq[47].layer_ifms_zero_point = -128;
+    layer_specs_seq[47].layer_ofms_scale = 1.4865593910217285;
+    layer_specs_seq[47].relu_threshold = 0 ;
+    layer_specs_seq[47].layer_ofms_zero_point = -4;
+    layer_specs_seq[47].add_layer_scale_reciprocal = 0.6092579727807509;
+    layer_specs_seq[47].add_layer_zero_point = 2;
+    layer_specs_seq[47].skip_connection_other_layer_scale = 1.0308887958526611;
+    layer_specs_seq[47].skip_connection_other_layer_zero_point = 8;
+
+    layer_specs_seq[47].data_layout = CHW;
+
+
+
+    layer_specs_seq[49].layer_index = 49;
+    layer_specs_seq[49].conv_layer_type = PW_CONV; 
+    layer_specs_seq[49].layer_num_fils = 1536;
+    layer_specs_seq[49].strides = 1;
+    layer_specs_seq[49].filter_size = 1;
+    layer_specs_seq[49].padding_left = 0;
+    layer_specs_seq[49].padding_right = 0;
+    layer_specs_seq[49].padding_top = 0;
+    layer_specs_seq[49].padding_bottom = 0;
+    layer_specs_seq[49].layer_depth = 256;
+    layer_specs_seq[49].layer_ifm_height = 7;
+    layer_specs_seq[49].layer_ifm_width = 7;
+    layer_specs_seq[49].layer_ofm_height = 7;
+    layer_specs_seq[49].layer_ofm_width = 7;
+    layer_specs_seq[49].layer_activation = RELU;
+    layer_specs_seq[49].layer_num_of_ifm_tiles_h = (7 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[49].layer_num_of_ifm_tiles_w = (7 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[49].layer_num_of_ofm_tiles_h = (7 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(7 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 49;
+    layer_specs_seq[49].layer_weights_offset = 3175872;
+    layer_specs_seq[49].write_to_result_or_channels = 1;
+    layer_specs_seq[49].write_to_tmp = 0;
+    layer_specs_seq[49].followed_by = 0;
+    layer_specs_seq[49].layer_ifms_zero_point = 2;
+    layer_specs_seq[49].layer_ofms_scale = 0.5182359218597412;
+    layer_specs_seq[49].relu_threshold = 0 ;
+    layer_specs_seq[49].layer_ofms_zero_point = -128;
+    layer_specs_seq[49].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[49].add_layer_zero_point = 0;
+    layer_specs_seq[49].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[49].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[49].data_layout = CHW;
+
+
+    layer_specs_seq[50].layer_index = 50;
+    layer_specs_seq[50].conv_layer_type = DW_CONV; 
+    layer_specs_seq[50].layer_num_fils = 1536;
+    layer_specs_seq[50].strides = 1;
+    layer_specs_seq[50].filter_size = 3;
+    layer_specs_seq[50].padding_left = 1;
+    layer_specs_seq[50].padding_right = 1;
+    layer_specs_seq[50].padding_top = 1;
+    layer_specs_seq[50].padding_bottom = 1;
+    layer_specs_seq[50].layer_depth = 1536;
+    layer_specs_seq[50].layer_ifm_height = 7;
+    layer_specs_seq[50].layer_ifm_width = 7;
+    layer_specs_seq[50].layer_ofm_height = 7;
+    layer_specs_seq[50].layer_ofm_width = 7;
+    layer_specs_seq[50].layer_activation = RELU;
+    layer_specs_seq[50].layer_num_of_ifm_tiles_h = (7 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[50].layer_num_of_ifm_tiles_w = (7 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[50].layer_num_of_ofm_tiles_h = (7 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(7 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 50;
+    layer_specs_seq[50].layer_weights_offset = 70704;
+    layer_specs_seq[50].write_to_result_or_channels = 1;
+    layer_specs_seq[50].write_to_tmp = 0;
+    layer_specs_seq[50].followed_by = 0;
+    layer_specs_seq[50].layer_ifms_zero_point = -128;
+    layer_specs_seq[50].layer_ofms_scale = 1.120374321937561;
+    layer_specs_seq[50].relu_threshold = 0 ;
+    layer_specs_seq[50].layer_ofms_zero_point = -128;
+    layer_specs_seq[50].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[50].add_layer_zero_point = 0;
+    layer_specs_seq[50].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[50].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[50].data_layout = CHW;
+
+
+    layer_specs_seq[51].layer_index = 51;
+    layer_specs_seq[51].conv_layer_type = PW_CONV; 
+    layer_specs_seq[51].layer_num_fils = 432;
+    layer_specs_seq[51].strides = 1;
+    layer_specs_seq[51].filter_size = 1;
+    layer_specs_seq[51].padding_left = 0;
+    layer_specs_seq[51].padding_right = 0;
+    layer_specs_seq[51].padding_top = 0;
+    layer_specs_seq[51].padding_bottom = 0;
+    layer_specs_seq[51].layer_depth = 1536;
+    layer_specs_seq[51].layer_ifm_height = 7;
+    layer_specs_seq[51].layer_ifm_width = 7;
+    layer_specs_seq[51].layer_ofm_height = 7;
+    layer_specs_seq[51].layer_ofm_width = 7;
+    layer_specs_seq[51].layer_activation = 0;
+    layer_specs_seq[51].layer_num_of_ifm_tiles_h = (7 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[51].layer_num_of_ifm_tiles_w = (7 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[51].layer_num_of_ofm_tiles_h = (7 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(7 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 51;
+    layer_specs_seq[51].layer_weights_offset = 3569088;
+    layer_specs_seq[51].write_to_result_or_channels = 1;
+    layer_specs_seq[51].write_to_tmp = 0;
+    layer_specs_seq[51].followed_by = 0;
+    layer_specs_seq[51].layer_ifms_zero_point = -128;
+    layer_specs_seq[51].layer_ofms_scale = 1.848515510559082;
+    layer_specs_seq[51].relu_threshold = 0 ;
+    layer_specs_seq[51].layer_ofms_zero_point = 6;
+    layer_specs_seq[51].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[51].add_layer_zero_point = 0;
+    layer_specs_seq[51].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[51].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[51].data_layout = CHW;
+
+
+    layer_specs_seq[52].layer_index = 52;
+    layer_specs_seq[52].conv_layer_type = PW_CONV; 
+    layer_specs_seq[52].layer_num_fils = 1280;
+    layer_specs_seq[52].strides = 1;
+    layer_specs_seq[52].filter_size = 1;
+    layer_specs_seq[52].padding_left = 0;
+    layer_specs_seq[52].padding_right = 0;
+    layer_specs_seq[52].padding_top = 0;
+    layer_specs_seq[52].padding_bottom = 0;
+    layer_specs_seq[52].layer_depth = 432;
+    layer_specs_seq[52].layer_ifm_height = 7;
+    layer_specs_seq[52].layer_ifm_width = 7;
+    layer_specs_seq[52].layer_ofm_height = 7;
+    layer_specs_seq[52].layer_ofm_width = 7;
+    layer_specs_seq[52].layer_activation = RELU;
+    layer_specs_seq[52].layer_num_of_ifm_tiles_h = (7 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[52].layer_num_of_ifm_tiles_w = (7 + TILE_W - 1) / TILE_W;
+    layer_specs_seq[52].layer_num_of_ofm_tiles_h = (7 + TILE_H - 1) / TILE_H;
+    layer_specs_seq[(7 + TILE_W - 1) / TILE_W].layer_num_of_ofm_tiles_w = 52;
+    layer_specs_seq[52].layer_weights_offset = 4232640;
+    layer_specs_seq[52].write_to_result_or_channels = 1;
+    layer_specs_seq[52].write_to_tmp = 0;
+    layer_specs_seq[52].followed_by = 0;
+    layer_specs_seq[52].layer_ifms_zero_point = 6;
+    layer_specs_seq[52].layer_ofms_scale = 0.8281633257865906;
+    layer_specs_seq[52].relu_threshold = 0 ;
+    layer_specs_seq[52].layer_ofms_zero_point = -128;
+    layer_specs_seq[52].add_layer_scale_reciprocal = 1;
+    layer_specs_seq[52].add_layer_zero_point = 0;
+    layer_specs_seq[52].skip_connection_other_layer_scale = 1;
+    layer_specs_seq[52].skip_connection_other_layer_zero_point = 0;
+
+    layer_specs_seq[52].data_layout = CHW;
+
+
+
+
+
+
+}
+#endif

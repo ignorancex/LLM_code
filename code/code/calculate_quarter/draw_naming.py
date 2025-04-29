@@ -72,7 +72,7 @@ def plot_naming_trends(function_file, variable_file, filename_file, output_dir):
         plt.legend(fontsize=7, ncol=2)
         plt.tight_layout()
 
-        save_path = os.path.join(func_plot_dir, f"function_{pattern}.pdf")
+        save_path = os.path.join(func_plot_dir, f"{lang} function_{pattern}.pdf")
         plt.savefig(save_path, dpi=300)
         plt.close()
 
@@ -98,7 +98,7 @@ def plot_naming_trends(function_file, variable_file, filename_file, output_dir):
             min(1, y_max + margin) if y_max + margin > 0 else 0.05
         )
 
-        plt.title(f"Variable Names - {pattern}", fontsize=10)
+        plt.title(f"{lang} Variable Names - {pattern}", fontsize=10)
         plt.ylabel("Proportion", fontsize=9)
         plt.xticks(custom_xticks, custom_xtick_labels, fontsize=8)
         plt.yticks(fontsize=8)
@@ -132,7 +132,7 @@ def plot_naming_trends(function_file, variable_file, filename_file, output_dir):
             min(1, y_max + margin) if y_max + margin > 0 else 0.05
         )
 
-        plt.title(f"File Names - {pattern}", fontsize=10)
+        plt.title(f"{lang} File Names - {pattern}", fontsize=10)
         plt.ylabel("Proportion", fontsize=9)
         plt.xticks(custom_xticks, custom_xtick_labels, fontsize=8)
         plt.yticks(fontsize=8)
@@ -146,11 +146,13 @@ def plot_naming_trends(function_file, variable_file, filename_file, output_dir):
 
     print(f"\n🎨 All plots saved in {func_plot_dir}, {var_plot_dir}, and {file_plot_dir}")
 
+lang = "cpp"
+
 # === 主程序 ===
 if __name__ == "__main__":
-    function_json = "LLM_code/naming_patterns_python/naming_patterns_function.json"
-    variable_json = "LLM_code/naming_patterns_python/naming_patterns_variable.json"
-    filename_json = "LLM_code/naming_patterns_python/naming_patterns_filename.json"
-    output_plot_dir = "LLM_code/naming_patterns_python/plots"
+    function_json = f"LLM_code/arxiv_result/naming_patterns_{lang}/naming_patterns_function.json"
+    variable_json = f"LLM_code/arxiv_result/naming_patterns_{lang}/naming_patterns_variable.json"
+    filename_json = f"LLM_code/arxiv_result/naming_patterns_{lang}/naming_patterns_filename.json"
+    output_plot_dir = f"LLM_code/arxiv_result/naming_patterns_{lang}/plots"
 
     plot_naming_trends(function_json, variable_json, filename_json, output_plot_dir)

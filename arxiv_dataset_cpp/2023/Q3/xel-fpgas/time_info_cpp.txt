@@ -1,0 +1,14 @@
+gauss-fixed/lib/add9.c: 2023-10-26T12:41:32Z
+sobel/eval/axsobel.cpp: 2023-10-12T09:17:32Z
+gauss-fixed/eval/axgauss.cpp: 2023-10-26T12:41:32Z
+gauss-fixed/lib/add16.c: 2023-10-26T12:41:32Z
+sobel/eval/lib.cpp: 2023-10-12T09:17:32Z
+sobel/lib/add9.c: 2023-10-12T09:17:32Z
+gauss-fixed/lib/sub16.c: 2023-10-26T12:41:32Z
+sobel/lib/sub10.c: 2023-10-12T09:17:32Z
+gauss-fixed/eval/similarity.cpp: 2023-10-26T12:41:32Z
+gauss-fixed/eval/lib.cpp: 2023-10-26T12:41:32Z
+sobel/lib/add8.c: 2023-10-12T09:17:32Z
+gauss-fixed/lib/add8.c: 2023-10-26T12:41:32Z
+sobel/eval/similarity.cpp: 2023-10-12T09:17:32Z
+sobel/eval/sobel.cpp: 2023-10-12T09:17:32Z
