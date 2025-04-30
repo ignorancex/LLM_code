@@ -77,7 +77,7 @@ def process_problem(problem, processed_submission_ids):
     # 函数：调用Qwen模型生成代码
     def generate_code(prompt0):
         completion = client.completions.create(model="/mnt/nvme0/QwQ-32B",
-                                      prompt=prompt0,max_tokens=25000)
+                                      prompt=prompt0,max_tokens=20000)
         return completion.choices[0].text
 
 

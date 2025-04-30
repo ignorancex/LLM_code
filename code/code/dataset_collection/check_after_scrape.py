@@ -3,8 +3,8 @@ import json
 from collections import defaultdict
 
 # 原始 JSON 文件路径
-input_json_path = "LLM_code/code/github_links/python_dataset_links_new.json"
-output_json_path = "LLM_code/code/github_links/python_dataset_links_1.json"
+input_json_path = "LLM_code/code/github_links/cpp_dataset_links_new.json"
+output_json_path = "LLM_code/code/github_links/cpp_dataset_links_1.json"
 
 # 加载原始 JSON 数据
 with open(input_json_path, "r", encoding="utf-8") as f:
@@ -21,7 +21,7 @@ for key, url_dicts in data.items():
     year = key[:4]
     season = key[4:]
 
-    base_path = os.path.join("LLM_code/arxiv_dataset", year, season)
+    base_path = os.path.join("LLM_code/arxiv_dataset_cpp", year, season)
     seen = set()
     cleaned_url_dicts = []
 

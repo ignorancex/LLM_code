@@ -10,6 +10,6 @@ src/exp_animal/models.py: 2021-05-19T23:45:14Z
 src/exp_gmm/eval.py: 2021-05-19T23:45:14Z
 src/exp_mnist/eval.py: 2021-05-19T23:45:14Z
 src/exp_animal/train_irm.py: 2021-05-19T23:45:14Z
-src/exp_mnist/aux.py: 2021-02-10T04:46:32Z
+src/exp_mnist/aux_file.py: 2021-02-10T04:46:32Z
 src/exp_dags/dag.py: 2021-05-19T23:45:14Z
 src/exp_mnist/mnist.py: 2021-05-19T23:45:14Z
