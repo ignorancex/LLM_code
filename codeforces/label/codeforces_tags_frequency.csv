@@ -1,0 +1,37 @@
+Tag,Frequency
+2-sat,7
+binary search,260
+bitmasks,81
+brute force,404
+chinese remainder theorem,3
+combinatorics,154
+constructive algorithms,350
+data structures,395
+dfs and similar,260
+divide and conquer,57
+dp,565
+dsu,91
+expression parsing,26
+fft,9
+flows,34
+games,62
+geometry,157
+graph matchings,18
+graphs,312
+greedy,513
+hashing,55
+implementation,849
+interactive,20
+math,631
+matrices,39
+meet-in-the-middle,10
+number theory,184
+probabilities,78
+schedules,2
+shortest paths,80
+sortings,248
+string suffix structures,25
+strings,221
+ternary search,15
+trees,189
+two pointers,113
