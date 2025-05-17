@@ -1,0 +1,296 @@
+{
+  "2020Q1": {
+    "cs": {
+      "avg_identifiers_per_line": 3.4638,
+      "avg_line_length": 44.4862,
+      "avg_indent": 6.421,
+      "avg_blank_lines": 0.1783
+    },
+    "non_cs": {
+      "avg_identifiers_per_line": 3.3183,
+      "avg_line_length": 43.2519,
+      "avg_indent": 5.2892,
+      "avg_blank_lines": 0.1829
+    }
+  },
+  "2020Q2": {
+    "cs": {
+      "avg_identifiers_per_line": 3.4316,
+      "avg_line_length": 47.2305,
+      "avg_indent": 6.5831,
+      "avg_blank_lines": 0.1754
+    },
+    "non_cs": {
+      "avg_identifiers_per_line": 3.606,
+      "avg_line_length": 43.7486,
+      "avg_indent": 5.5203,
+      "avg_blank_lines": 0.1781
+    }
+  },
+  "2020Q3": {
+    "cs": {
+      "avg_identifiers_per_line": 3.4304,
+      "avg_line_length": 44.2954,
+      "avg_indent": 6.5064,
+      "avg_blank_lines": 0.1757
+    },
+    "non_cs": {
+      "avg_identifiers_per_line": 3.659,
+      "avg_line_length": 96.5845,
+      "avg_indent": 5.3177,
+      "avg_blank_lines": 0.1802
+    }
+  },
+  "2020Q4": {
+    "cs": {
+      "avg_identifiers_per_line": 3.5758,
+      "avg_line_length": 44.5207,
+      "avg_indent": 6.6074,
+      "avg_blank_lines": 0.1752
+    },
+    "non_cs": {
+      "avg_identifiers_per_line": 3.4119,
+      "avg_line_length": 46.6818,
+      "avg_indent": 5.847,
+      "avg_blank_lines": 0.1801
+    }
+  },
+  "2021Q1": {
+    "cs": {
+      "avg_identifiers_per_line": 3.4394,
+      "avg_line_length": 45.4923,
+      "avg_indent": 6.6093,
+      "avg_blank_lines": 0.1742
+    },
+    "non_cs": {
+      "avg_identifiers_per_line": 3.6373,
+      "avg_line_length": 44.2478,
+      "avg_indent": 6.0066,
+      "avg_blank_lines": 0.1818
+    }
+  },
+  "2021Q2": {
+    "cs": {
+      "avg_identifiers_per_line": 3.5,
+      "avg_line_length": 45.3496,
+      "avg_indent": 6.7268,
+      "avg_blank_lines": 0.1746
+    },
+    "non_cs": {
+      "avg_identifiers_per_line": 3.6124,
+      "avg_line_length": 44.981,
+      "avg_indent": 5.9401,
+      "avg_blank_lines": 0.1819
+    }
+  },
+  "2021Q3": {
+    "cs": {
+      "avg_identifiers_per_line": 3.5583,
+      "avg_line_length": 44.8093,
+      "avg_indent": 6.7362,
+      "avg_blank_lines": 0.172
+    },
+    "non_cs": {
+      "avg_identifiers_per_line": 3.4045,
+      "avg_line_length": 44.7409,
+      "avg_indent": 6.045,
+      "avg_blank_lines": 0.1808
+    }
+  },
+  "2021Q4": {
+    "cs": {
+      "avg_identifiers_per_line": 3.512,
+      "avg_line_length": 45.7968,
+      "avg_indent": 6.6267,
+      "avg_blank_lines": 0.1749
+    },
+    "non_cs": {
+      "avg_identifiers_per_line": 3.4497,
+      "avg_line_length": 44.0606,
+      "avg_indent": 5.7494,
+      "avg_blank_lines": 0.1832
+    }
+  },
+  "2022Q1": {
+    "cs": {
+      "avg_identifiers_per_line": 3.4991,
+      "avg_line_length": 46.3982,
+      "avg_indent": 6.7122,
+      "avg_blank_lines": 0.1725
+    },
+    "non_cs": {
+      "avg_identifiers_per_line": 3.5879,
+      "avg_line_length": 43.9345,
+      "avg_indent": 5.9067,
+      "avg_blank_lines": 0.1795
+    }
+  },
+  "2022Q2": {
+    "cs": {
+      "avg_identifiers_per_line": 3.5188,
+      "avg_line_length": 44.9002,
+      "avg_indent": 6.7949,
+      "avg_blank_lines": 0.172
+    },
+    "non_cs": {
+      "avg_identifiers_per_line": 3.4579,
+      "avg_line_length": 44.2468,
+      "avg_indent": 5.9969,
+      "avg_blank_lines": 0.1811
+    }
+  },
+  "2022Q3": {
+    "cs": {
+      "avg_identifiers_per_line": 3.5367,
+      "avg_line_length": 102.3199,
+      "avg_indent": 6.7998,
+      "avg_blank_lines": 0.1734
+    },
+    "non_cs": {
+      "avg_identifiers_per_line": 3.6118,
+      "avg_line_length": 44.5474,
+      "avg_indent": 5.9839,
+      "avg_blank_lines": 0.1878
+    }
+  },
+  "2022Q4": {
+    "cs": {
+      "avg_identifiers_per_line": 3.4967,
+      "avg_line_length": 45.6444,
+      "avg_indent": 6.8125,
+      "avg_blank_lines": 0.1716
+    },
+    "non_cs": {
+      "avg_identifiers_per_line": 3.4729,
+      "avg_line_length": 43.621,
+      "avg_indent": 6.0947,
+      "avg_blank_lines": 0.1838
+    }
+  },
+  "2023Q1": {
+    "cs": {
+      "avg_identifiers_per_line": 3.4566,
+      "avg_line_length": 71.3289,
+      "avg_indent": 6.7686,
+      "avg_blank_lines": 0.1666
+    },
+    "non_cs": {
+      "avg_identifiers_per_line": 3.472,
+      "avg_line_length": 43.0937,
+      "avg_indent": 5.9335,
+      "avg_blank_lines": 0.1812
+    }
+  },
+  "2023Q2": {
+    "cs": {
+      "avg_identifiers_per_line": 3.4234,
+      "avg_line_length": 46.3694,
+      "avg_indent": 6.6981,
+      "avg_blank_lines": 0.1706
+    },
+    "non_cs": {
+      "avg_identifiers_per_line": 3.706,
+      "avg_line_length": 44.3811,
+      "avg_indent": 6.3043,
+      "avg_blank_lines": 0.1792
+    }
+  },
+  "2023Q3": {
+    "cs": {
+      "avg_identifiers_per_line": 3.4421,
+      "avg_line_length": 87.1817,
+      "avg_indent": 6.7639,
+      "avg_blank_lines": 0.1749
+    },
+    "non_cs": {
+      "avg_identifiers_per_line": 3.6424,
+      "avg_line_length": 62.5405,
+      "avg_indent": 6.2465,
+      "avg_blank_lines": 0.1817
+    }
+  },
+  "2023Q4": {
+    "cs": {
+      "avg_identifiers_per_line": 3.4801,
+      "avg_line_length": 68.9172,
+      "avg_indent": 6.8579,
+      "avg_blank_lines": 0.1714
+    },
+    "non_cs": {
+      "avg_identifiers_per_line": 3.6393,
+      "avg_line_length": 43.5583,
+      "avg_indent": 6.2937,
+      "avg_blank_lines": 0.1796
+    }
+  },
+  "2024Q1": {
+    "cs": {
+      "avg_identifiers_per_line": 3.4498,
+      "avg_line_length": 46.4564,
+      "avg_indent": 6.6783,
+      "avg_blank_lines": 0.1677
+    },
+    "non_cs": {
+      "avg_identifiers_per_line": 3.5238,
+      "avg_line_length": 44.4357,
+      "avg_indent": 6.3342,
+      "avg_blank_lines": 0.1731
+    }
+  },
+  "2024Q2": {
+    "cs": {
+      "avg_identifiers_per_line": 3.481,
+      "avg_line_length": 877.0013,
+      "avg_indent": 6.8698,
+      "avg_blank_lines": 0.1701
+    },
+    "non_cs": {
+      "avg_identifiers_per_line": 3.7052,
+      "avg_line_length": 44.5768,
+      "avg_indent": 6.4156,
+      "avg_blank_lines": 0.1803
+    }
+  },
+  "2024Q3": {
+    "cs": {
+      "avg_identifiers_per_line": 3.4199,
+      "avg_line_length": 48.1717,
+      "avg_indent": 6.8435,
+      "avg_blank_lines": 0.1698
+    },
+    "non_cs": {
+      "avg_identifiers_per_line": 3.6189,
+      "avg_line_length": 45.5787,
+      "avg_indent": 6.4979,
+      "avg_blank_lines": 0.182
+    }
+  },
+  "2024Q4": {
+    "cs": {
+      "avg_identifiers_per_line": 3.3856,
+      "avg_line_length": 47.0585,
+      "avg_indent": 6.8994,
+      "avg_blank_lines": 0.168
+    },
+    "non_cs": {
+      "avg_identifiers_per_line": 3.62,
+      "avg_line_length": 44.3614,
+      "avg_indent": 6.4409,
+      "avg_blank_lines": 0.173
+    }
+  },
+  "2025Q1": {
+    "cs": {
+      "avg_identifiers_per_line": 3.4182,
+      "avg_line_length": 45.0457,
+      "avg_indent": 6.7802,
+      "avg_blank_lines": 0.1681
+    },
+    "non_cs": {
+      "avg_identifiers_per_line": 3.6119,
+      "avg_line_length": 471.956,
+      "avg_indent": 6.23,
+      "avg_blank_lines": 0.1782
+    }
+  }
+}

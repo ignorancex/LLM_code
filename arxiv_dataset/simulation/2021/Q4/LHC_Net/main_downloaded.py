@@ -1,5 +1,0 @@
-exec(open("Download_Data.py").read())
-exec(open("ETL.py").read())
-exec(open("Download_Models.py").read())
-exec(open("LHC_Downloaded_Eval.py").read())
-exec(open("Controller_Downloaded_Eval.py").read())

@@ -1,2 +1,0 @@
-from .relation_embedder import RelationEmbedder
-from .multi_embedder import MultiEmbedder

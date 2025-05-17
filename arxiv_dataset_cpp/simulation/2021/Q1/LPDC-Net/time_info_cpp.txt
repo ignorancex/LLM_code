@@ -1,6 +1,0 @@
-im2mesh/utils/libkdtree/pykdtree/_kdtree_core.c: 2021-05-30T13:17:18Z
-im2mesh/utils/libkdtree/pykdtree/kdtree.c: 2021-05-30T13:17:18Z
-im2mesh/utils/libmcubes/marchingcubes.cpp: 2021-05-30T13:17:18Z
-im2mesh/utils/libmcubes/mcubes.cpp: 2021-05-30T13:17:18Z
-im2mesh/utils/libmcubes/pywrapper.cpp: 2021-05-30T13:17:18Z
-im2mesh/utils/libsimplify/simplify_mesh.cpp: 2021-05-30T13:17:18Z

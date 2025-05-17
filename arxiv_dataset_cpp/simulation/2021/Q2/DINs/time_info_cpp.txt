@@ -1,6 +1,0 @@
-third_party/GeodisTK/cpp/geodesic_distance.cpp: 2022-10-07T09:37:55Z
-third_party/GeodisTK/cpp/geodesic_distance_2d.cpp: 2022-10-07T09:37:55Z
-third_party/GeodisTK/cpp/geodesic_distance_3d.cpp: 2022-10-07T09:37:55Z
-third_party/GeodisTK/cpp/util.cpp: 2022-10-07T09:37:55Z
-third_party/GeodisTK/cpp/wrap_py2.cpp: 2022-10-07T09:37:55Z
-third_party/GeodisTK/cpp/wrap_py3.cpp: 2022-10-07T09:37:55Z

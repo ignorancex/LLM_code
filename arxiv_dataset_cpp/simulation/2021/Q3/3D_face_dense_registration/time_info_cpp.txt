@@ -1,6 +1,0 @@
-VC++(from scratch)/faceDenseRegistration.cpp: Unknown
-VC++(from scratch)/meshdata.cpp: Unknown
-VC++(from scratch)/mkl_solve_eq.cpp: Unknown
-VC++(with initializations by NICP)/faceDenseRegistration.cpp: Unknown
-VC++(with initializations by NICP)/meshdata.cpp: Unknown
-VC++(with initializations by NICP)/mkl_solve_eq.cpp: Unknown

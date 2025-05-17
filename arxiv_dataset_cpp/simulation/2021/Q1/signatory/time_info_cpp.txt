@@ -1,6 +1,0 @@
-src/logsignature.cpp: 2020-04-15T21:39:20Z
-src/lyndon.cpp: 2020-04-15T22:32:10Z
-src/misc.cpp: 2020-03-23T00:53:21Z
-src/pytorchbind.cpp: 2019-11-27T00:13:58Z
-src/signature.cpp: 2020-04-15T21:39:20Z
-src/tensor_algebra_ops.cpp: 2020-03-23T00:53:21Z
