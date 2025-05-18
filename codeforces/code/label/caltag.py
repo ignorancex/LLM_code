@@ -1,27 +1,10 @@
 import json
 import csv
 import re
-
-# 目标词语/词组集合
-target_terms = {
-    'meet-in-the-middle', 'games', 'schedules', 'number theory', 'ternary search', '2-sat', 'greedy',
-    'brute force', 'interactive', 'math', 'chinese remainder theorem', 'sort', 'two pointers',
-    'flows', 'dfs', 'shortest paths', 'geometry', 'hashing', 'matrices', 'string', 'suffix',
-    'dp', 'fft', 'probabilities', 'implementation', 'strings', 'graphs', 'data structures', 'combinatorics',
-    'constructive algorithms', 'binary search', 'trees', 'expression parsing', 'dsu', 'divide and conquer',
-    'graph matchings', 'bitmasks', 'bfs', 'similar'
-}
-
-# 存储每个文件的词频
-file_names = [
-    'qwen_32b_python_extract.json', 'qwen_32b_cpp_extract.json', 'gemma_27b_python_extract.json',
-    'gemma_27b_cpp_extract.json', 'deepseek_32b_python_extract.json', 'deepseek_32b_cpp_extract.json'
-]
-
-# 初始化统计结构
+target_terms = {'meet-in-the-middle', 'games', 'schedules', 'number theory', 'ternary search', '2-sat', 'greedy', 'brute force', 'interactive', 'math', 'chinese remainder theorem', 'sort', 'two pointers', 'flows', 'dfs', 'shortest paths', 'geometry', 'hashing', 'matrices', 'string', 'suffix', 'dp', 'fft', 'probabilities', 'implementation', 'strings', 'graphs', 'data structures', 'combinatorics', 'constructive algorithms', 'binary search', 'trees', 'expression parsing', 'dsu', 'divide and conquer', 'graph matchings', 'bitmasks', 'bfs', 'similar'}
+file_names = ['qwen_32b_python_extract.json', 'qwen_32b_cpp_extract.json', 'gemma_27b_python_extract.json', 'gemma_27b_cpp_extract.json', 'deepseek_32b_python_extract.json', 'deepseek_32b_cpp_extract.json']
 word_freq = {term: {} for term in target_terms}
 columns = []
-
 for file in file_names:
     model = file.split('_')[0]
     lang = 'py' if 'python' in file else 'cpp'
@@ -32,11 +15,8 @@ for file in file_names:
         word_freq[term][col_reason] = 0
         word_freq[term][col_ref] = 0
 
-# 正则匹配函数
 def count_matches(text, term):
-    return len(re.findall(r'\b' + re.escape(term) + r'\b', text.lower()))
-
-# 遍历文件统计词频
+    return len(re.findall('\\b' + re.escape(term) + '\\b', text.lower()))
 for file in file_names:
     model = file.split('_')[0]
     lang = 'py' if 'python' in file else 'cpp'
@@ -48,13 +28,9 @@ for file in file_names:
         for term in target_terms:
             word_freq[term][col_reason] += count_matches(item.get('generate_reasoning', ''), term)
             word_freq[term][col_ref] += count_matches(item.get('generate_ref_reasoning', ''), term)
-
-# 写入 CSV
 with open('tags_frequencies.csv', 'w', newline='', encoding='utf-8') as f:
     writer = csv.writer(f)
     writer.writerow(['Word'] + columns)
     for word in sorted(target_terms):
         row = [word] + [word_freq[word][col] for col in columns]
         writer.writerow(row)
-
-print("✅ 完成写入 word_frequencies_count.csv")
