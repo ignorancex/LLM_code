@@ -31,7 +31,6 @@ def get_default_branch(user, repo):
         return 'main'
 
 def has_c_cpp_file_fast(user, repo):
-    """一次性获取repo的所有文件列表，检查是否包含.c或.cpp"""
     branch = get_default_branch(user, repo)
     url = f'https://api.github.com/repos/{user}/{repo}/git/trees/{branch}?recursive=1'
     try:

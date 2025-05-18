@@ -2,7 +2,6 @@ import os
 import re
 import json
 from collections import defaultdict, Counter
-'\n该脚本按年份遍历指定目录下的所有Python文件,\n分析每个文件的导入和函数调用情况，\n并将结果保存为JSON格式\n'
 
 def extract_imports_and_calls(file_path):
     imports = Counter()

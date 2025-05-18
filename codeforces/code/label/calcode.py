@@ -5,10 +5,6 @@ from collections import defaultdict
 import argparse
 
 def extract_identifiers_python(data):
-    """
-    Extract function and variable names from Python code blocks.
-    Returns two dicts: funcs_stats and vars_stats, each: {'AC': {...}, 'ANS': {...}, 'REF': {...}}
-    """
     py_func = re.compile('def\\s+(\\w+)\\s*\\(')
     assign_var = re.compile('(?<!def\\s)(?<!class\\s)\\b(\\w+)\\b\\s*=')
     funcs = {k: defaultdict(lambda : {'total': 0, 'count': 0}) for k in ('AC', 'ANS', 'REF')}
@@ -33,10 +29,6 @@ def extract_identifiers_python(data):
     return (funcs, vars_)
 
 def extract_identifiers_cpp(data):
-    """
-    Extract function and variable names from C/C++ code blocks.
-    Returns two dicts: funcs_stats and vars_stats.
-    """
     cpp_func = re.compile('\\b(?:[\\w:<>]+)\\s+(\\w+)\\s*\\([^)]*\\)\\s*\\{')
     cpp_var = re.compile('\\b(?:int|float|double|char|bool|string|auto|long|short|void)\\s+\\*?(\\w+)')
     cpp_types = {'int', 'float', 'double', 'char', 'bool', 'string', 'auto', 'long', 'short', 'void'}
@@ -67,9 +59,6 @@ def extract_identifiers_cpp(data):
     return (funcs, vars_)
 
 def consolidate_stats(stats):
-    """
-    Consolidate a stats dict into a pandas DataFrame with ratio columns.
-    """
     rows = []
     keys = ('AC', 'ANS', 'REF')
     names = set(stats['AC']) | set(stats['ANS']) | set(stats['REF'])

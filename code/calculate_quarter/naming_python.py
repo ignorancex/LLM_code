@@ -18,7 +18,6 @@ def get_naming_pattern(name):
     return 'Other'
 
 def extract_code_info(file_path, skipped_files_log):
-    """解析 Python 代码，提取函数名、变量名"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             code = f.read()
@@ -50,7 +49,6 @@ def classify_category(cat):
         return 'non_cs'
 
 def process_project(project_name, quarter_path, quarter_key, quarter_repo_category, skipped_files_log):
-    """处理单个项目，返回项目类别和命名模式比例"""
     project_path = os.path.join(quarter_path, project_name)
     if classify_enabled:
         project_category = quarter_repo_category.get(quarter_key, {}).get(project_name)

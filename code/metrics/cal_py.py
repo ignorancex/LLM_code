@@ -10,7 +10,6 @@ warnings.filterwarnings('ignore', category=SyntaxWarning)
 MAX_FILE_SIZE = int(0.02 * 1024 * 1024)
 
 def analyze_py(path: str):
-    """分析单个 Python 文件，返回复杂度指标。"""
     try:
         code = open(path, encoding='utf-8', errors='ignore').read()
         hal = h_visit(code)

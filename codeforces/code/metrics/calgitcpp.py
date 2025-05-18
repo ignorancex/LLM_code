@@ -7,11 +7,6 @@ import traceback
 import lizard
 
 def count_comment_lines(code: str) -> int:
-    """
-    统计 C++ 源码中的注释行数，包括：
-     - 单行注释 // 开头
-     - 多行注释 /* ... */ 中的所有行
-    """
     lines = code.splitlines()
     comment_lines = 0
     in_block = False
@@ -31,9 +26,6 @@ def count_comment_lines(code: str) -> int:
     return comment_lines
 
 def scan_halstead(code: str):
-    """
-    扫描 C++ 代码，统计 Halstead 操作符/操作数。
-    """
     op_re = re.compile('\\+\\+|--|->|==|!=|<=|>=|\\+=|-=|\\*=|/=|&&|\\|\\||[+\\-*/%<>&|^~!=]=?|::|\\.|\\?|:|!')
     tokens = re.split('(\\W)', code)
     ops = {}
@@ -65,25 +57,16 @@ def scan_halstead(code: str):
     return {'h1': h1, 'h2': h2, 'N1': N1, 'N2': N2, 'vocabulary': vocabulary, 'length': length, 'calculated_length': calc_len, 'volume': V, 'difficulty': D, 'effort': E, 'time_sec': T, 'bugs': B}
 
 def compute_mi_std(V, G, L, comment_rate):
-    """
-    标准 Visual Studio MI（含注释项），归一化到 0–100
-    """
     Cdeg = comment_rate * 100.0
     C = math.radians(Cdeg)
     raw = 171.0 - 5.2 * math.log(V or 1) - 0.23 * G - 16.2 * math.log(L or 1) + 50.0 * math.sin(math.sqrt(2.4 * C))
     return max(0.0, raw * 100.0 / 171.0)
 
 def compute_mi_custom(V, G, L):
-    """
-    简化版 MI（不含注释项），归一化到 0–100
-    """
     raw = 171.0 - 5.2 * math.log(V or 1) - 0.23 * G - 16.2 * math.log(L or 1)
     return max(0.0, raw * 100.0 / 171.0)
 
 def analyze_cpp_file(path: str):
-    """
-    分析单个 C++ 文件，返回指标或抛出异常。
-    """
     code = open(path, encoding='utf-8', errors='ignore').read()
     lines = code.splitlines()
     sloc = sum((1 for ln in lines if ln.strip()))

@@ -1,16 +1,3 @@
-"""
-统计 C / C++ 仓库中函数名与变量名的命名方式比例
-=================================================
-
-依赖:
-  pip install tree_sitter tqdm
-  # 然后在本目录执行一次:
-  python build_lang_so.py
-  (见下方 build_lang_so.py 说明)
-
-数据目录结构与原 Python 版本脚本完全一致, 只是结果保存在
-LLM_code/arxiv_result/naming_patterns_c_cpp 目录下。
-"""
 import os
 import re
 import json
@@ -38,11 +25,6 @@ def get_naming_pattern(name: str) -> str:
     return 'Other'
 
 def extract_code_info(file_path: str, skipped_files_log: str):
-    """
-    解析 *单个* C / C++ 源文件, 返回:
-        (set(function_names), set(variable_names))
-    若解析失败, 记录到 skipped_files_log, 并返回空集合
-    """
     try:
         with open(file_path, 'rb') as f:
             code_bytes = f.read()

@@ -2,7 +2,6 @@ import json
 import re
 
 def extract_cpp_block(text):
-    """提取```cpp```包裹的内容"""
     cpp_match = re.search('```cpp\\s*(.*?)\\s*```', text, re.DOTALL)
     if cpp_match:
         return cpp_match.group(1).strip()

@@ -8,7 +8,6 @@ GITHUB_TOKEN = ''
 HEADERS = {'Accept': 'application/vnd.github.v3+json', 'Authorization': f'token {GITHUB_TOKEN}'}
 
 def has_cpp_files(repo_url):
-    """判断一个GitHub仓库是否含有至少一个.c/.cpp文件"""
     try:
         if repo_url.endswith('/'):
             repo_url = repo_url[:-1]

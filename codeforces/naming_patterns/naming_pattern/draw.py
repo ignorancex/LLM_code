@@ -8,7 +8,6 @@ categories = ['ac', 'ref', 'ans']
 legend_labels = {'ac': 'Human-Written', 'ref': 'LLM-Revised', 'ans': 'LLM-Generated'}
 
 def plot_naming_patterns(json_path, output_dir_base, plot_type):
-    """plot_type = 'funcs' or 'vars'"""
     colors = {'ac': '#c8c8c8', 'ref': '#ffde7b', 'ans': '#6ad1a3'}
     if plot_type == 'vars':
         type_label = 'Variables'

@@ -9,7 +9,6 @@ warnings.filterwarnings('ignore', category=SyntaxWarning)
 naming_patterns = {'single_letter': '^[a-zA-Z]$', 'lowercase': '^[a-z]+$', 'UPPERCASE': '^[A-Z]+$', 'camelCase': '^[a-z]+(?:[A-Z][a-z]*)*$', 'snake_case': '^[a-z]+(?:_[a-z]+)+$', 'PascalCase': '^[A-Z][a-z]+(?:[A-Z][a-z]*)*$', 'UPPER_SNAKE_CASE': '^[A-Z]+(?:_[A-Z]+)+$', 'endsWithDigits': '^[A-Za-z_]+[0-9]+$', 'Other': '.*'}
 
 def get_naming_pattern(name):
-    """判断命名规则"""
     name = str(name)
     for (pattern, regex) in naming_patterns.items():
         if re.match(regex, name):
@@ -17,14 +16,12 @@ def get_naming_pattern(name):
     return 'Other'
 
 def classify_category(cat):
-    """归类为 cs 或 non_cs"""
     if cat.startswith('cs.'):
         return 'cs'
     else:
         return 'non_cs'
 
 def process_project(project_name, quarter_path, quarter_key, quarter_repo_category):
-    """处理单个项目，统计文件名命名规则"""
     project_path = os.path.join(quarter_path, project_name)
     project_category = quarter_repo_category.get(quarter_key, {}).get(project_name)
     if project_category is None:

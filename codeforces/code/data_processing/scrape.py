@@ -16,9 +16,6 @@ data_dict['Time Limit'] = mainContent.find_all(name='div', attrs={'class': 'time
 data_dict['Memory Limit'] = mainContent.find_all(name='div', attrs={'class': 'memory-limit'})[0].contents[-1]
 
 def divTextProcess(div):
-    """
-    处理<div>标签中<p>的文本内容
-    """
     strBuffer = ''
     for each in div.find_all('p'):
         for content in each.contents:

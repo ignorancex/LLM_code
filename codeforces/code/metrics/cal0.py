@@ -7,14 +7,6 @@ from radon.visitors import ComplexityVisitor
 from statistics import mean
 
 def analyze_code(code: str):
-    """
-    返回一个 dict，包括：
-      - Halstead Overall: h1, h2, N1, N2, vocabulary, length, calculated_length, volume, difficulty, effort, time, bugs
-      - Cyclomatic Complexity (总和)
-      - SLOC, LLOC, comment_rate
-      - MI Score (标准版)
-      - MI Custom (重算版)
-    """
     hal = h_visit(code)
     total = hal.total
     visitor = ComplexityVisitor.from_code(code)

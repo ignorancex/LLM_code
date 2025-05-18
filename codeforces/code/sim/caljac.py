@@ -6,11 +6,6 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 def compute_cosine_similarities(data, csv_path):
-    """
-    计算 TF-IDF + 余弦相似度
-    :param data: JSON 数据列表
-    :param csv_path: 输出 CSV 文件路径
-    """
     with open(csv_path, 'w', newline='', encoding='utf-8') as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow(['submission_id', 'sim_AC_ANS', 'sim_AC_REF', 'sim_ANS_REF'])
@@ -31,11 +26,6 @@ def compute_cosine_similarities(data, csv_path):
         writer.writerow(['average', f'{sum(sims_ac_ans) / len(sims_ac_ans):.4f}', f'{sum(sims_ac_ref) / len(sims_ac_ref):.4f}', f'{sum(sims_ans_ref) / len(sims_ans_ref):.4f}'])
 
 def compute_jaccard_similarities(data, csv_path):
-    """
-    计算基于词元集的 Jaccard 相似度
-    :param data: JSON 数据列表
-    :param csv_path: 输出 CSV 文件路径
-    """
 
     def jaccard(str1, str2):
         tokens1 = set(re.findall('\\w+', str1))

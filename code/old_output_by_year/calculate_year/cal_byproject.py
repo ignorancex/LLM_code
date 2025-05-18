@@ -5,7 +5,6 @@ import csv
 from collections import Counter
 
 def extract_code_info(file_path, skipped_files_log):
-    """解析 Python 代码，提取函数名、变量名、注释"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             code = f.read()
@@ -37,7 +36,6 @@ def extract_code_info(file_path, skipped_files_log):
     return (function_names, variable_names, comments)
 
 def process_comments(comments):
-    """处理注释文本，分词并统计词频"""
     word_freq = Counter()
     for comment in comments:
         words = re.findall('\\b[a-zA-Z]+\\b', comment.lower())
@@ -45,7 +43,6 @@ def process_comments(comments):
     return word_freq
 
 def scan_directory(directory, output_dir):
-    """扫描目录下所有 .py 文件，并统计函数名、变量名和注释"""
     total_functions = Counter()
     total_variables = Counter()
     total_comments = []
@@ -67,7 +64,6 @@ def scan_directory(directory, output_dir):
     return (total_functions, total_variables, comment_words_freq)
 
 def save_to_csv(sorted_data, file_path, header):
-    """将统计结果保存到 CSV 文件"""
     with open(file_path, 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
         writer.writerow(header)

@@ -8,9 +8,6 @@ legend_labels = {'ac': 'Human-Written', 'ref': 'LLM-Revised', 'ans': 'LLM-Genera
 colors = {'ac': '#c8c8c8', 'ref': '#ffde7b', 'ans': '#6ad1a3'}
 
 def plot_avg_name_length(json_path, output_dir_base, plot_type):
-    """
-    plot_type: 'funcs' or 'vars'
-    """
     with open(json_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
     if plot_type == 'funcs':

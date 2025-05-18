@@ -3,7 +3,6 @@ import requests
 from collections import defaultdict
 
 def is_link_accessible(url):
-    """检查链接是否可访问"""
     try:
         response = requests.head(url, allow_redirects=True, timeout=5)
         return response.status_code == 200
@@ -11,7 +10,6 @@ def is_link_accessible(url):
         return False
 
 def load_existing_links(prefix):
-    """加载已有的链接（来自旧文件）"""
     try:
         with open(f'LLM_code/dataset/github_links/link_20{prefix}.json', 'r', encoding='utf-8') as f:
             data = json.load(f)
@@ -20,7 +18,6 @@ def load_existing_links(prefix):
         return set()
 
 def extract_github_links(input_file):
-    """提取 GitHub 链接并写入新文件"""
     with open(input_file, 'r', encoding='utf-8') as f:
         data = json.load(f)
     prefixes = [f'2{x:01d}' for x in range(5)]

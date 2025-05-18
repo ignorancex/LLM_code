@@ -3,10 +3,8 @@ import ast
 import re
 import csv
 from collections import Counter, defaultdict
-'\n该脚本提取并统计每年项目中的函数、变量、注释等信息,\n并将结果按年份存储为CSV文件,\n对于无法解析的文件，它会将错误记录到日志中\n'
 
 def parse_time_info(file_path):
-    """解析 time_info.txt，返回 {python_file_path: 年份}"""
     year_mapping = {}
     with open(file_path, 'r', encoding='utf-8') as f:
         for line in f:
@@ -18,7 +16,6 @@ def parse_time_info(file_path):
     return year_mapping
 
 def extract_code_info(file_path):
-    """解析 Python 代码，提取函数名、变量名、注释"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             code = f.read()
@@ -46,7 +43,6 @@ def extract_code_info(file_path):
     return ((function_names, variable_names, comments), None)
 
 def process_comments(comments):
-    """处理注释文本，分词并统计词频"""
     word_freq = Counter()
     for comment in comments:
         words = re.findall('\\b[a-zA-Z]+\\b', comment.lower())
@@ -54,7 +50,6 @@ def process_comments(comments):
     return word_freq
 
 def scan_directory(base_directory, output_base):
-    """扫描所有年份文件夹，并按更新时间归类统计"""
     year_data = defaultdict(lambda : {'functions': Counter(), 'variables': Counter(), 'comments': []})
     skipped_files = defaultdict(list)
     for year_folder in os.listdir(base_directory):
@@ -95,7 +90,6 @@ def scan_directory(base_directory, output_base):
     return year_data
 
 def save_to_csv(sorted_data, file_path, header):
-    """将统计结果保存到 CSV 文件"""
     with open(file_path, 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
         writer.writerow(header)

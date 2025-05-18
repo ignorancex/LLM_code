@@ -4,7 +4,6 @@ from radon.metrics import h_visit, mi_visit, mi_parameters, mi_compute
 from radon.visitors import ComplexityVisitor
 
 def analyze_py(path: str):
-    """对单个 .py 文件计算各项指标，出错则返回 None。"""
     try:
         code = open(path, encoding='utf-8').read()
         hal = h_visit(code)
@@ -17,7 +16,6 @@ def analyze_py(path: str):
         return None
 
 def average_dicts(dicts):
-    """将一组同结构字典求平均。"""
     if not dicts:
         return None
     keys = dicts[0].keys()

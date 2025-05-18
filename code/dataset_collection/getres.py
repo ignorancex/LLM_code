@@ -4,7 +4,6 @@ import re
 from collections import Counter
 
 def extract_code_info(file_path):
-    """解析 Python 代码，提取函数名、变量名、注释"""
     with open(file_path, 'r', encoding='utf-8') as f:
         code = f.read()
     tree = ast.parse(code)
@@ -19,7 +18,6 @@ def extract_code_info(file_path):
     return (function_names, variable_names, comments)
 
 def scan_directory(directory):
-    """扫描目录下所有 .py 文件，并统计函数名、变量名和注释"""
     total_functions = Counter()
     total_variables = Counter()
     total_comments = []

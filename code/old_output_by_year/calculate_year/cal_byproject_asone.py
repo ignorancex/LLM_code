@@ -2,10 +2,8 @@ import os
 import ast
 import csv
 from collections import Counter
-'\n统计函数名和变量名在多少个repo中出现过,而不是一共出现了多少次\n'
 
 def extract_code_info(file_path, skipped_files_log):
-    """解析 Python 代码，提取函数名、变量名"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             code = f.read()
@@ -31,7 +29,6 @@ def extract_code_info(file_path, skipped_files_log):
     return (function_names, variable_names)
 
 def scan_directory(directory, output_dir):
-    """扫描目录下所有项目文件夹，并统计函数名、变量名出现在多少个项目中"""
     function_project_count = Counter()
     variable_project_count = Counter()
     skipped_files_log = os.path.join(output_dir, 'skipped_files.txt')
@@ -57,7 +54,6 @@ def scan_directory(directory, output_dir):
     return (function_project_count, variable_project_count)
 
 def save_to_csv(sorted_data, file_path, header):
-    """将统计结果保存到 CSV 文件"""
     with open(file_path, 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
         writer.writerow(header)
