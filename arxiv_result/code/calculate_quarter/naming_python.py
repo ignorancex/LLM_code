@@ -74,12 +74,11 @@ def process_project(project_name, quarter_path, quarter_key, quarter_repo_catego
     func_ratios = {pat: func_counts.get(pat, 0) / func_total if func_total else 0.0 for pat in naming_patterns}
     var_ratios = {pat: var_counts.get(pat, 0) / var_total if var_total else 0.0 for pat in naming_patterns}
     return (project_category, func_ratios, var_ratios)
-method = 'llama_improve'
-base_dir = f'LLM_code/arxiv_dataset/{method}'
+base_dir = f'LLM_code/arxiv_dataset'
 output_dir = 'LLM_code/arxiv_result/naming_patterns_python'
 categories_file = 'LLM_code/code/github_links/python_dataset_links_1.json'
 os.makedirs(output_dir, exist_ok=True)
-skipped_files_log = os.path.join(output_dir, f'skipped_files_{method}.txt')
+skipped_files_log = os.path.join(output_dir, f'skipped_files.txt')
 if os.path.exists(skipped_files_log):
     os.remove(skipped_files_log)
 if classify_enabled:
@@ -133,8 +132,8 @@ def aggregate(ratios):
     return out
 final_func = aggregate(quarter_func_ratios)
 final_var = aggregate(quarter_var_ratios)
-func_out = os.path.join(output_dir, f'{method}_naming_patterns_function.json')
-var_out = os.path.join(output_dir, f'{method}_naming_patterns_variable.json')
+func_out = os.path.join(output_dir, f'naming_patterns_function.json')
+var_out = os.path.join(output_dir, f'naming_patterns_variable.json')
 with open(func_out, 'w', encoding='utf-8') as f:
     json.dump(final_func, f, ensure_ascii=False, indent=2)
 with open(var_out, 'w', encoding='utf-8') as f:

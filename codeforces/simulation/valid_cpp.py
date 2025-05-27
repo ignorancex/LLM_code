@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
-input_path = Path('LLM_code/codeforces/simulation/gemma_27b_cpp_extract.json')
-output_path = Path('LLM_code/codeforces/simulation/valid/gemma_27b_cpp_valid.json')
+input_path = Path('LLM_code/codeforces/simulation/valid/gemma_27b_cpp_valid.json')
+output_path = Path('LLM_code/codeforces/simulation/valid/gemma_cpp.json')
 with open(input_path, 'r', encoding='utf-8') as f:
     data = json.load(f)
 valid_data = []
@@ -12,3 +12,4 @@ for item in data:
         valid_data.append(item)
 with open(output_path, 'w', encoding='utf-8') as f:
     json.dump(valid_data, f, indent=2, ensure_ascii=False)
+print(len(valid_data))
