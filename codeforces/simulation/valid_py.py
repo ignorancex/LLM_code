@@ -1,8 +1,9 @@
 import json
 import ast
 from pathlib import Path
-input_path = Path('LLM_code/codeforces/simulation/valid/gemma_python.json')
-output_path = Path('LLM_code/codeforces/simulation/valid/gemma_python_1.json')
+model = "Qwen"
+input_path = Path(f'LLM_code/codeforces/simulation/temp/{model}_python.json')
+output_path = Path(f'LLM_code/codeforces/simulation/models/{model}_python.json')
 with open(input_path, 'r', encoding='utf-8') as f:
     data = json.load(f)
 

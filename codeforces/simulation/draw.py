@@ -2,7 +2,6 @@ import json
 import matplotlib.pyplot as plt
 import numpy as np
 import os
-from collections import defaultdict
 
 # === 配置参数 ===
 patterns = [
@@ -10,40 +9,16 @@ patterns = [
     'camelCase', 'snake_case', 'PascalCase',
     'endsWithDigits', 'Other', 'avg_length'
 ]
-models = ['DeepSeek', 'GPT', 'Gemini', 'Qwen', 'Gemma', 'Llama']
-categories = ['ac', 'ref', 'ans']
+models = ['GPT', 'Gemini', 'DS', 'Llama', 'Qw', 'Gemma']
 legend_labels = {
-    'ac': 'Human-Written',
     'ref': 'LLM-Revised',
     'ans': 'LLM-Generated'
 }
 colors = {
-    'ac': '#c8c8c8',
+    'ac':  '#c8c8c8',
     'ref': '#ffde7b',
     'ans': '#6ad1a3'
 }
-
-def get_best_top_corner(bar_groups):
-    """
-    在左上或右上选择空白更多的一侧。
-    """
-    left_sum = right_sum = 0.0
-    n = len(models)
-    mid = n / 2
-
-    all_y = [y for group in bar_groups for y in group]
-    y_mid = (max(all_y) + min(all_y)) / 2
-
-    for group in bar_groups:
-        for i, y in enumerate(group):
-            if y >= y_mid:
-                if i < mid:
-                    left_sum += y
-                else:
-                    right_sum += y
-
-    return 'upper right' if left_sum > right_sum else 'upper left'
-
 
 def plot_naming_patterns(json_paths: dict, output_dir_base: str, plot_type: str):
     """
@@ -63,56 +38,64 @@ def plot_naming_patterns(json_paths: dict, output_dir_base: str, plot_type: str)
         with open(path, 'r', encoding='utf-8') as f:
             data[lang] = json.load(f)[lang]
 
-    # 每个语言分别绘制
     for lang in json_paths:
         output_dir = os.path.join(output_dir_base, f'plots_{lang}')
         os.makedirs(output_dir, exist_ok=True)
 
         for pattern in patterns:
             fig, ax = plt.subplots(figsize=(3.5, 2.5))
-            bar_width = 0.22
-            x = np.arange(len(models))
-            max_value = 0
-            bar_groups = []
+            bar_width = 0.5  # human bar width
+            sub_width = 0.3  # each model bar width
 
-            # 收集柱状值
-            for idx, category in enumerate(categories):
-                values = []
-                for model in models:
-                    v = data[lang].get(model, {}).get(category, {}).get(pattern, 0)
-                    values.append(v)
-                    max_value = max(max_value, v)
-                bar_groups.append(values)
-                ax.bar(x + idx * bar_width, values,
-                       width=bar_width,
-                       label=legend_labels[category],
-                       color=colors[category])
+            # 位置：0 是 Human，1-6 是 models
+            x = np.arange(len(models) + 1)
+            human_pos = x[0]
+            model_positions = x[1:]
 
-            # X轴
-            ax.set_xticks(x + bar_width)
-            ax.set_xticklabels(models, fontsize=8)
-            # Y轴标签
+            # —— 人类代码条 —— （不设置 label，以免出现在图例中）
+            first_model = models[0]
+            ac_val = data[lang][first_model]['ac'].get(pattern, 0)
+            ax.bar(human_pos, ac_val,
+                   width=bar_width,
+                   color=colors['ac'])
+
+            # —— 模型 ref/ans 条 —— 
+            for i, model in enumerate(models):
+                pos = model_positions[i]
+                ref_val = data[lang][model]['ref'].get(pattern, 0)
+                ans_val = data[lang][model]['ans'].get(pattern, 0)
+                ax.bar(pos - sub_width/2, ref_val,
+                       width=sub_width,
+                       label=legend_labels['ref'] if i == 0 else "",
+                       color=colors['ref'])
+                ax.bar(pos + sub_width/2, ans_val,
+                       width=sub_width,
+                       label=legend_labels['ans'] if i == 0 else "",
+                       color=colors['ans'])
+
+            # X 轴
+            xticks = x
+            xtick_labels = ['Human'] + models
+            ax.set_xticks(xticks)
+            ax.set_xticklabels(xtick_labels, fontsize=8)
+
+            # Y 轴
+            max_val = max(
+                ac_val,
+                *(data[lang][m]['ref'].get(pattern, 0) for m in models),
+                *(data[lang][m]['ans'].get(pattern, 0) for m in models)
+            )
             if pattern == 'avg_length':
                 ax.set_ylabel('Average Name Length', fontsize=9)
-                ax.set_ylim(0, max_value * 1.25 if max_value > 0 else 1)
+                ax.set_ylim(0, max_val * 1.25 if max_val > 0 else 1)
             else:
                 ax.set_ylabel('Proportion', fontsize=9)
-                ax.set_ylim(0, min(1.0, max_value * 1.25))
+                ax.set_ylim(0, min(1.0, max_val * 1.25))
 
             plt.yticks(fontsize=8)
-            # 移除标题
-            # ax.set_title(f'{lang.capitalize()} {type_label} - {pattern}')
 
-            # 图例位置
-            legend_loc = get_best_top_corner(bar_groups)
-            ax.legend(
-                fontsize=7,
-                loc=legend_loc,
-                frameon=True,
-                facecolor='white',
-                framealpha=1,
-                ncol=1
-            )
+            # 只画一次模型的图例（ref & ans）
+            ax.legend(fontsize=8, loc='upper right', frameon=True, labelspacing=0.2)
 
             plt.tight_layout()
             save_path = os.path.join(output_dir, f'{pattern}.pdf')
@@ -124,19 +107,21 @@ def plot_naming_patterns(json_paths: dict, output_dir_base: str, plot_type: str)
 
 # === 主程序：同时画出 C++ 和 Python 的 函数名和变量名 ===
 json_function = {
-    'cpp': 'LLM_code/codeforces/simulation/result/function_naming_all_models_cpp.json',
+    'cpp':    'LLM_code/codeforces/simulation/result/function_naming_all_models_cpp.json',
     'python': 'LLM_code/codeforces/simulation/result/function_naming_all_models_python.json'
 }
 json_variable = {
-    'cpp': 'LLM_code/codeforces/simulation/result/variable_naming_all_models_cpp.json',
+    'cpp':    'LLM_code/codeforces/simulation/result/variable_naming_all_models_cpp.json',
     'python': 'LLM_code/codeforces/simulation/result/variable_naming_all_models_python.json'
 }
 
-plot_naming_patterns(json_function,
+plot_naming_patterns(
+    json_function,
     output_dir_base='LLM_code/codeforces/simulation/result/funcs',
     plot_type='funcs'
 )
-plot_naming_patterns(json_variable,
+plot_naming_patterns(
+    json_variable,
     output_dir_base='LLM_code/codeforces/simulation/result/vars',
     plot_type='vars'
 )

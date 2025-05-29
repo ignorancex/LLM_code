@@ -54,20 +54,27 @@ def analyze_code(code: str):
 
     return var_counter, func_counter, sum_var_len, count_var, sum_func_len, count_func
 
-# === 3. 主流程：读取 JSON，统计比例 + 平均长度 ===
+# === 3. 预加载人类代码（ac）数据 ===
+unique_path = Path('dataset/unique_problem_python.json')
+with unique_path.open('r', encoding='utf-8') as f:
+    unique_items = json.load(f)
+# 假设 model items 中有 submission_id 字段，用于映射
+ac_map = {item['submission_id']: item['sourceCode'] for item in unique_items}
+
+# === 4. 主流程：读取 JSON，统计比例 + 平均长度 ===
 input_files = {
-    'DeepSeek': 'LLM_code/codeforces/simulation/valid/DeepSeek_python.json',
-    'Gemma':    'LLM_code/codeforces/simulation/valid/Gemma_python.json',
-    'Qwen':     'LLM_code/codeforces/simulation/valid/Qwen_python.json',
-    'Gemini':   'LLM_code/codeforces/simulation/valid/Gemini_python.json',
-    'GPT':      'LLM_code/codeforces/simulation/valid/GPT_python.json',
-    'Llama':    'LLM_code/codeforces/simulation/valid/Llama4_python.json',
+    'DeepSeek': 'LLM_code/codeforces/simulation/output/DeepSeek_python.json',
+    'Gemma':    'LLM_code/codeforces/simulation/output/Gemma_python.json',
+    'Qwen':     'LLM_code/codeforces/simulation/output/Qwen_python.json',
+    'Gemini':   'LLM_code/codeforces/simulation/output/Gemini_python.json',
+    'GPT':      'LLM_code/codeforces/simulation/output/GPT_python.json',
+    'Llama':    'LLM_code/codeforces/simulation/output/Llama4_python.json',
 }
 
 variable_result = {'python': defaultdict(dict)}
 function_result = {'python': defaultdict(dict)}
 field_map = {
-    'sourceCode':            'ac',
+    'sourceCode':            'ac',    # human code, now from unique map
     'generate_code_block':   'ans',
     'generate_ref_code_block':'ref'
 }
@@ -88,7 +95,13 @@ for model_name, file_path in input_files.items():
         count_func = 0
 
         for item in items:
-            code = item.get(field, '')
+            # 如果是 ac（人类代码），从 ac_map 中获取
+            if label == 'ac':
+                sid = item.get('submission_id')
+                code = ac_map.get(sid, '')
+            else:
+                code = item.get(field, '')
+
             v_cnt, f_cnt, svl, cvar, sfl, cfunc = analyze_code(code)
             var_counter.update(v_cnt)
             func_counter.update(f_cnt)
@@ -111,11 +124,11 @@ for model_name, file_path in input_files.items():
             'avg_length': (sum_func_len / count_func if count_func else 0.0)
         }
 
-# === 4. 写入结果 ===
+# === 5. 写入结果 ===
 os.makedirs('LLM_code/codeforces/simulation/result', exist_ok=True)
 with open('LLM_code/codeforces/simulation/result/variable_naming_all_models_python.json', 'w', encoding='utf-8') as f:
     json.dump(variable_result, f, indent=2, ensure_ascii=False)
 with open('LLM_code/codeforces/simulation/result/function_naming_all_models_python.json', 'w', encoding='utf-8') as f:
     json.dump(function_result, f, indent=2, ensure_ascii=False)
 
-print("✅ Completed Python naming & length stats.")
+print("✅ Completed Python naming & length stats with shared AC.")

@@ -2,118 +2,112 @@ import os
 import json
 import matplotlib.pyplot as plt
 from tqdm import tqdm
+from collections import defaultdict
+
+def load_json(path):
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+def get_xticks(quarters):
+    ticks, labels = [], []
+    for q in quarters:
+        if q.endswith("Q1") or q == "2025Q1":
+            ticks.append(q)
+            labels.append(q[:4])
+    return ticks, labels
+
+def get_best_legend_loc(x_vals, y_vals):
+    """
+    自动选择图例放置位置，避免遮挡线条。
+    将图分成4象限，选择点最少的象限。
+    """
+    quadrants = defaultdict(int)
+    x_mid = len(x_vals) // 2
+    y_all = [y for series in y_vals for y in series]
+    y_mid = (max(y_all) + min(y_all)) / 2
+
+    for ys in y_vals:
+        for i, y in enumerate(ys):
+            if i < x_mid and y >= y_mid:
+                quadrants['upper left'] += 1
+            elif i >= x_mid and y >= y_mid:
+                quadrants['upper right'] += 1
+            elif i < x_mid and y < y_mid:
+                quadrants['lower left'] += 1
+            else:
+                quadrants['lower right'] += 1
+
+    return min(quadrants, key=quadrants.get)
+
+def plot_pattern_trend(data, quarters, patterns, output_dir, label_prefix, colors, xticks, xtick_labels):
+    os.makedirs(output_dir, exist_ok=True)
+
+    for pattern in tqdm(patterns, desc=f"Plotting {label_prefix.title()} Names"):
+        plt.figure(figsize=(3.5, 2.5))
+
+        legend_y_vals = []
+        for category in colors:
+            y = [data.get(q, {}).get(category, {}).get(pattern, 0) for q in quarters]
+            legend_y_vals.append(y)
+            plt.plot(quarters, y, marker='x', linestyle='--', label=category,
+                     markersize=4, linewidth=2, color=colors[category])
+
+        all_y = [v for series in legend_y_vals for v in series]
+        y_min, y_max = min(all_y), max(all_y)
+        margin = (y_max - y_min) * 0.1
+        plt.ylim(
+            max(0, y_min - margin),
+            min(1, y_max + margin) if y_max + margin > 0 else 0.05
+        )
+
+        plt.ylabel("Proportion", fontsize=10)
+        plt.xticks(xticks, xtick_labels, fontsize=10)
+        plt.yticks(fontsize=10)
+        plt.grid(False)
+
+        best_loc = get_best_legend_loc(quarters, legend_y_vals)
+        plt.legend(
+            fontsize=10,
+            loc=best_loc,
+            frameon=True,
+            facecolor='white',
+            framealpha=1,
+            labelspacing=0.2,
+        )
+
+        plt.tight_layout()
+        save_path = os.path.join(output_dir, f"{label_prefix}_{pattern}.pdf")
+        plt.savefig(save_path, dpi=300, bbox_inches='tight')
+        plt.close()
 
 def plot_naming_trends(function_file, variable_file, filename_file, output_dir):
-    with open(function_file, 'r', encoding='utf-8') as f:
-        func_data = json.load(f)
-    with open(variable_file, 'r', encoding='utf-8') as f:
-        var_data = json.load(f)
-    with open(filename_file, 'r', encoding='utf-8') as f:
-        file_data = json.load(f)
+    func_data = load_json(function_file)
+    var_data = load_json(variable_file)
+    file_data = load_json(filename_file)
+
     quarters = sorted(func_data.keys())
-    categories = ['cs', 'non_cs']
-    func_plot_dir = os.path.join(output_dir, 'function')
-    var_plot_dir = os.path.join(output_dir, 'variable')
-    file_plot_dir = os.path.join(output_dir, 'filename')
-    os.makedirs(func_plot_dir, exist_ok=True)
-    os.makedirs(var_plot_dir, exist_ok=True)
-    os.makedirs(file_plot_dir, exist_ok=True)
-    example_quarter = next(iter(func_data.values()))
-    example_category = next(iter(example_quarter.values()))
-    patterns = list(example_category.keys())
-    custom_xticks = []
-    custom_xtick_labels = []
-    for q in quarters:
-        if q.endswith('Q1') or q == '2025Q1':
-            if q == '2025Q1':
-                custom_xtick_labels.append('2025Q1')
-            else:
-                custom_xtick_labels.append(q[:4])
-            custom_xticks.append(q)
-    var_colors = {'cs': '#4589c8ff', 'non_cs': '#ee7c7aff'}
-    func_colors = file_colors = var_colors
-    for pattern in tqdm(patterns, desc='Plotting Function Names'):
-        plt.figure(figsize=(3.5, 2.5))
-        for cat in categories:
-            y = []
-            for quarter in quarters:
-                y.append(func_data[quarter].get(cat, {}).get(pattern, 0))
-            plt.plot(quarters, y, marker='x', linestyle='--', label=f'{cat}', markersize=4, linewidth=2, color=func_colors[cat])
-        all_y = []
-        for quarter in quarters:
-            for cat in categories:
-                all_y.append(func_data[quarter].get(cat, {}).get(pattern, 0))
-        y_min = min(all_y)
-        y_max = max(all_y)
-        margin = (y_max - y_min) * 0.1
-        plt.ylim(max(0, y_min - margin), min(1, y_max + margin) if y_max + margin > 0 else 0.05)
-        plt.title(f'{lang.capitalize()} Function - {pattern}', fontsize=10)
-        plt.ylabel('Proportion', fontsize=9)
-        plt.xticks(custom_xticks, custom_xtick_labels, fontsize=8)
-        plt.yticks(fontsize=8)
-        plt.grid(False)
-        plt.subplots_adjust(bottom=0.5)
-        plt.legend(fontsize=9, ncol=2, loc='upper center', bbox_to_anchor=(0.5, -0.12), frameon=False, columnspacing=8)
-        plt.tight_layout()
-        save_path = os.path.join(func_plot_dir, f'function_{pattern}.pdf')
-        plt.savefig(save_path, dpi=300)
-        plt.close()
-    for pattern in tqdm(patterns, desc='Plotting Variable Names'):
-        plt.figure(figsize=(3.5, 2.5))
-        for cat in categories:
-            y = []
-            for quarter in quarters:
-                y.append(var_data[quarter].get(cat, {}).get(pattern, 0))
-            plt.plot(quarters, y, marker='x', linestyle='--', label=f'{cat}', markersize=4, linewidth=2, color=var_colors[cat])
-        all_y = []
-        for quarter in quarters:
-            for cat in categories:
-                all_y.append(var_data[quarter].get(cat, {}).get(pattern, 0))
-        y_min = min(all_y)
-        y_max = max(all_y)
-        margin = (y_max - y_min) * 0.1
-        plt.ylim(max(0, y_min - margin), min(1, y_max + margin) if y_max + margin > 0 else 0.05)
-        plt.title(f'{lang.capitalize()} Variable - {pattern}', fontsize=10)
-        plt.ylabel('Proportion', fontsize=9)
-        plt.xticks(custom_xticks, custom_xtick_labels, fontsize=8)
-        plt.yticks(fontsize=8)
-        plt.grid(False)
-        plt.subplots_adjust(bottom=0.5)
-        plt.legend(fontsize=9, ncol=2, loc='upper center', bbox_to_anchor=(0.5, -0.12), frameon=False, columnspacing=8)
-        plt.tight_layout()
-        save_path = os.path.join(var_plot_dir, f'variable_{pattern}.pdf')
-        plt.savefig(save_path, dpi=300)
-        plt.close()
-    for pattern in tqdm(patterns, desc='Plotting File Names'):
-        plt.figure(figsize=(3.5, 2.5))
-        for cat in categories:
-            y = []
-            for quarter in quarters:
-                y.append(file_data[quarter].get(cat, {}).get(pattern, 0))
-            plt.plot(quarters, y, marker='x', linestyle='--', label=f'{cat}', markersize=4, linewidth=2, color=file_colors[cat])
-        all_y = []
-        for quarter in quarters:
-            for cat in categories:
-                all_y.append(file_data[quarter].get(cat, {}).get(pattern, 0))
-        y_min = min(all_y)
-        y_max = max(all_y)
-        margin = (y_max - y_min) * 0.1
-        plt.ylim(max(0, y_min - margin), min(1, y_max + margin) if y_max + margin > 0 else 0.05)
-        plt.title(f'{lang.capitalize()} File - {pattern}', fontsize=10)
-        plt.ylabel('Proportion', fontsize=9)
-        plt.xticks(custom_xticks, custom_xtick_labels, fontsize=8)
-        plt.yticks(fontsize=8)
-        plt.grid(False)
-        plt.subplots_adjust(bottom=0.5)
-        plt.legend(fontsize=9, ncol=2, loc='upper center', bbox_to_anchor=(0.5, -0.12), frameon=False, columnspacing=8)
-        plt.tight_layout()
-        save_path = os.path.join(file_plot_dir, f'filename_{pattern}.pdf')
-        plt.savefig(save_path, dpi=300)
-        plt.close()
-lang = 'cpp'
-if __name__ == '__main__':
-    function_json = f'LLM_code/arxiv_result/naming_patterns_{lang}/naming_patterns_function.json'
-    variable_json = f'LLM_code/arxiv_result/naming_patterns_{lang}/naming_patterns_variable.json'
-    filename_json = f'LLM_code/arxiv_result/naming_patterns_{lang}/naming_patterns_filename.json'
-    output_plot_dir = f'LLM_code/arxiv_result/naming_patterns_{lang}/plots_{lang}'
-    plot_naming_trends(function_json, variable_json, filename_json, output_plot_dir)
+    categories = ["cs", "non_cs"]
+    colors = {"cs": "#4589c8ff", "non_cs": "#ee7c7aff"}
+    xticks, xtick_labels = get_xticks(quarters)
+
+    example_pattern_set = list(next(iter(next(iter(func_data.values())).values())).keys())
+
+    plot_pattern_trend(func_data, quarters, example_pattern_set,
+                       os.path.join(output_dir, "function"), "function", colors, xticks, xtick_labels)
+    plot_pattern_trend(var_data, quarters, example_pattern_set,
+                       os.path.join(output_dir, "variable"), "variable", colors, xticks, xtick_labels)
+    plot_pattern_trend(file_data, quarters, example_pattern_set,
+                       os.path.join(output_dir, "filename"), "filename", colors, xticks, xtick_labels)
+
+    print(f"\n🎨 All plots saved in subdirectories of {output_dir}")
+
+# === 主程序 ===
+if __name__ == "__main__":
+    lang = "python"
+    base_dir = f"LLM_code/arxiv_result/naming_patterns_{lang}"
+    plot_naming_trends(
+        function_file=os.path.join(base_dir, "naming_patterns_function.json"),
+        variable_file=os.path.join(base_dir, "naming_patterns_variable.json"),
+        filename_file=os.path.join(base_dir, "naming_patterns_filename.json"),
+        output_dir=os.path.join(base_dir, f"plots_{lang}")
+    )

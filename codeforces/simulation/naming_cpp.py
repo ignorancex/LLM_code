@@ -64,12 +64,12 @@ def analyze_cpp_code(code: str):
 
 # === 3. 读取输入 JSON 并统计 ===
 input_files = {
-    'DeepSeek': 'LLM_code/codeforces/simulation/valid/DeepSeek_cpp.json',
-    'Gemma':    'LLM_code/codeforces/simulation/valid/Gemma_cpp.json',
-    'Qwen':     'LLM_code/codeforces/simulation/valid/Qwen_cpp.json',
-    'Gemini':   'LLM_code/codeforces/simulation/valid/Gemini_cpp.json',
-    'GPT':      'LLM_code/codeforces/simulation/valid/GPT_cpp.json',
-    'Llama':    'LLM_code/codeforces/simulation/valid/Llama4_cpp.json',
+    'DeepSeek': 'LLM_code/codeforces/simulation/output/DeepSeek_cpp.json',
+    'Gemma':    'LLM_code/codeforces/simulation/output/Gemma_cpp.json',
+    'Qwen':     'LLM_code/codeforces/simulation/output/Qwen_cpp.json',
+    'Gemini':   'LLM_code/codeforces/simulation/output/Gemini_cpp.json',
+    'GPT':      'LLM_code/codeforces/simulation/output/GPT_cpp.json',
+    'Llama':    'LLM_code/codeforces/simulation/output/Llama4_cpp.json',
 }
 
 variable_result = {'cpp': defaultdict(dict)}
