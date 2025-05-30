@@ -1,0 +1,2282 @@
+submission_id,problem,tags,match_success,matched_tags,error_match,error_tags
+3,581A,implementation;math,False,,True,divide and conquer
+35393,586A,implementation,False,,False,
+16001,583B,greedy;implementation,False,,False,
+11553,582C,number theory,False,,False,
+15926,583A,implementation,False,,True,data structures
+11549,582B,constructive algorithms;dp;matrices,True,dp,False,
+19768,584A,math,False,,False,
+31543,585A,brute force;implementation,False,,False,
+6,581C,implementation;math;sortings,False,,False,
+19821,584B,combinatorics,False,,False,
+17873,583E,number theory,False,,False,
+1,581B,implementation;math,False,,False,
+35394,586B,implementation,False,,False,
+35453,586C,implementation,False,,False,
+31504,585F,dp;implementation;strings,False,,False,
+11501,582A,constructive algorithms;greedy;number theory,False,,False,
+55246,589I,,,,,
+45970,588C,,False,,False,
+20122,584E,constructive algorithms;greedy;math,False,,False,
+55503,589C,,,,,
+87,581D,bitmasks;brute force;constructive algorithms;geometry;implementation;math,False,,False,
+16484,583D,constructive algorithms;dp,False,,False,
+56242,589K,,,,,
+19829,584D,brute force;math;number theory,False,,True,dfs and similar
+43205,587A,greedy,False,,False,
+64088,590D,dp,True,dp,False,
+56363,589E,,,,,
+56371,589M,,,,,
+64065,590A,implementation,False,,False,
+75920,592B,math,False,,False,
+69622,591C,constructive algorithms;implementation,True,implementation,False,
+69337,591B,implementation;strings,False,,False,
+55394,589G,,,,,
+76824,592E,binary search;geometry;two pointers,False,,True,dfs and similar
+55393,589D,,,,,
+69382,591A,implementation;math,False,,False,
+43241,587B,dp,True,dp,False,
+43242,587E,data structures,False,,False,
+96634,595A,constructive algorithms;implementation,False,,False,
+91549,594B,binary search;geometry,False,,False,
+84059,593B,geometry;sortings,False,,False,
+55390,589F,,,,,
+75817,592A,implementation,False,,True,expression parsing
+91551,594C,brute force;greedy;implementation;two pointers,False,,False,
+112112,598A,math,False,,False,
+16181,583C,constructive algorithms;number theory,False,,True,implementation
+112081,598B,implementation;strings,False,,False,
+83937,593E,dp;matrices,True,dp,False,
+108743,597B,dp;greedy;sortings,True,greedy,False,
+69584,591E,dfs and similar;graphs;shortest paths,False,,False,
+83873,593A,brute force;implementation,False,,False,
+101612,596B,greedy;implementation,False,,True,string suffix structures
+84138,593C,constructive algorithms;math,False,,True,implementation;expression parsing;strings
+31644,585E,combinatorics;math;number theory,False,,False,
+118342,599A,implementation,False,,False,
+129419,601B,data structures;math,False,,False,
+109105,597C,data structures;dp,True,dp,False,
+75874,592C,math,False,,False,
+101961,596D,dp;math;probabilities;sortings,True,dp;probabilities,True,trees
+133788,602A,brute force;implementation,False,,False,
+101742,596C,combinatorics;greedy;sortings,False,,False,
+98122,595D,geometry,False,,False,
+133845,602B,dp;implementation;two pointers,False,,False,
+129246,601C,dp;math;probabilities,True,dp;probabilities,False,
+129489,601E,data structures;dp,True,dp,False,
+143071,603A,dp;greedy;math,False,,False,
+46775,588D,,False,,True,dp
+135140,602E,probabilities,False,,False,
+143196,603C,games;math,False,,False,
+96588,595C,games,False,,False,
+161617,606A,implementation,False,,False,
+55395,589H,,,,,
+156010,605A,constructive algorithms;greedy,False,,False,
+147830,604A,implementation,False,,False,
+147951,604C,constructive algorithms;dp;greedy;math,False,,False,
+118364,599C,sortings,False,,True,divide and conquer
+112137,598D,dfs and similar;graphs;shortest paths,True,dfs and similar,False,
+156160,605C,geometry,False,,False,
+101601,596A,geometry;implementation,False,,False,
+156125,605B,constructive algorithms;data structures;graphs,False,,False,
+156003,605E,probabilities;shortest paths,True,probabilities,False,
+118445,599B,implementation,False,,False,
+156144,605D,data structures;dfs and similar,False,,False,
+168425,607B,dp,True,dp,False,
+134367,602D,math,False,,True,dfs and similar;implementation
+174534,608A,implementation;math,False,,False,
+174497,608B,combinatorics;strings,True,strings,True,implementation
+119358,599E,bitmasks;dp;trees,True,trees,True,brute force
+185783,610A,combinatorics;math,False,,True,divide and conquer
+143252,603B,combinatorics;dfs and similar;dsu;math;number theory,False,,False,
+185883,610B,constructive algorithms;implementation,False,,False,
+147780,604B,binary search;greedy,True,binary search,False,
+192311,611B,bitmasks;brute force;implementation,False,,False,
+185877,610C,constructive algorithms,False,,True,matrices
+112424,598C,geometry;sortings,False,,False,
+178590,609A,greedy;implementation;sortings,False,,False,
+148114,604D,combinatorics;dsu;math;number theory,False,,False,
+129325,601A,graphs;shortest paths,True,graphs;shortest paths,False,
+143199,603D,geometry;math,False,,False,
+161613,606D,graphs,False,,False,
+192392,611A,implementation,False,,False,
+168408,607A,binary search;dp,False,,True,implementation
+178390,609B,constructive algorithms;implementation,True,implementation,False,
+200214,612D,greedy;sortings,False,,False,
+200570,612A,brute force;implementation;strings,False,,False,
+164646,606E,,False,,True,implementation
+162199,606B,implementation,False,,False,
+200270,612B,implementation;math,False,,False,
+175836,608E,strings,False,,False,
+178292,609C,implementation;math,False,,False,
+210996,614A,brute force;implementation,False,,False,
+192365,611C,dp;implementation,False,,False,
+201028,612F,dp,False,,False,
+217915,615D,math;number theory,False,,False,
+211002,614B,implementation;math,False,,False,
+208759,613A,binary search;geometry;ternary search,False,,False,
+224339,616A,implementation;strings,True,strings,False,
+218045,615A,implementation,False,,True,dfs and similar
+218458,615E,binary search;implementation;math,False,,False,
+224206,616D,binary search;data structures;two pointers,True,two pointers,False,
+224151,616C,dfs and similar,True,dfs and similar,False,
+194640,611H,constructive algorithms;flows;graphs,False,,True,strings
+218317,615C,dp;greedy;strings;trees,True,dp,True,string suffix structures
+169147,607E,binary search;geometry,False,,True,dfs and similar
+218090,615B,dp;graphs,False,,False,
+239732,618A,implementation,False,,True,dfs and similar
+200168,612C,data structures;expression parsing;math,False,,False,
+213660,614E,constructive algorithms;math,False,,False,
+230367,617A,math,False,,True,divide and conquer
+239736,618B,constructive algorithms,False,,False,
+174673,608C,dp,True,dp,True,binary search
+208764,613C,constructive algorithms;math,False,,False,
+244683,620B,implementation,False,,False,
+186506,610E,data structures;strings,False,,False,
+175068,608D,dp,True,dp,False,
+249813,621A,implementation,False,,False,
+178306,609F,data structures;greedy,False,,False,
+211122,614C,geometry,True,geometry,False,
+230535,617B,combinatorics,False,,False,
+258309,622D,constructive algorithms,False,,False,
+258061,622A,implementation;math,False,,False,
+258060,622B,implementation,False,,False,
+258182,622C,data structures;implementation,False,,False,
+268565,623D,greedy;math;probabilities,True,probabilities,True,implementation
+239747,618C,geometry;implementation,True,implementation,False,
+224382,616E,implementation;math;number theory,False,,False,
+240349,618E,data structures;geometry,False,,False,
+208621,613B,binary search;brute force;dp;greedy;sortings;two pointers,False,,False,
+244637,620C,greedy,True,greedy,True,divide and conquer
+230661,617C,implementation,False,,False,
+276028,625C,constructive algorithms;implementation,False,,False,
+276232,625A,implementation;math,False,,False,
+272361,624A,math,False,,False,
+208643,613D,dfs and similar;divide and conquer;dp;graphs;sortings;trees,True,dfs and similar,False,
+249812,621B,combinatorics;implementation,False,,False,
+239869,618D,dfs and similar;dp;graph matchings;greedy;trees,False,,False,
+272360,624B,greedy;sortings,False,,False,
+193179,611E,data structures;greedy;sortings,True,greedy,False,
+276289,625B,constructive algorithms;greedy;strings,True,strings,False,
+277093,625D,constructive algorithms;implementation;math,False,,False,
+258140,622E,dfs and similar;greedy;sortings;trees,True,dfs and similar,False,
+284580,626B,constructive algorithms;dp;math,False,,False,
+284581,626A,brute force;implementation,False,,False,
+297601,628C,greedy;strings,False,,False,
+258213,622F,math,False,,False,
+279022,625E,data structures;greedy,False,,False,
+268270,623C,binary search;dp,False,,False,
+303113,629A,brute force;combinatorics;constructive algorithms;implementation,False,,False,
+246046,620F,data structures;strings;trees,False,,False,
+224402,616F,data structures;sortings;string suffix structures;strings,True,data structures;string suffix structures;strings,True,dfs and similar;trees
+293603,627A,dp;math,False,,False,
+249797,621E,dp;matrices,True,dp,False,
+284588,626D,brute force;combinatorics;dp;probabilities,False,,False,
+293441,627B,data structures,True,data structures,True,trees
+307917,630D,math,False,,False,
+268633,623E,combinatorics;dp;fft;math,False,,False,
+244645,620E,bitmasks;data structures;trees,True,bitmasks;data structures,True,dfs and similar;implementation
+308145,630G,combinatorics;math,False,,False,
+307903,630C,combinatorics;math,False,,False,
+308143,630E,math,False,,False,
+303112,629B,brute force,False,,False,
+273055,624C,constructive algorithms;dfs and similar;graphs,False,,False,
+285017,626E,binary search;math;ternary search,False,,True,implementation
+297611,628A,implementation;math,False,,False,
+307987,630R,games;math,False,,False,
+272485,624D,dp;greedy;number theory,False,,True,implementation
+297638,628B,dp,False,,False,
+308042,630B,math,False,,False,
+273966,624E,,False,,True,implementation
+293810,627E,two pointers,False,,False,
+308148,630L,implementation;math,False,,False,
+308153,630P,geometry,True,geometry,True,implementation;math
+297839,628D,dp,True,dp,True,implementation
+303119,629D,data structures;dp,True,dp,True,dfs and similar;binary search
+293546,627C,data structures;divide and conquer;greedy,True,greedy,False,
+308156,630N,math,False,,False,
+297766,628E,data structures;implementation,False,,False,
+307992,630J,math;number theory,False,,False,
+327735,633A,brute force;math;number theory,False,,False,
+315075,631D,data structures;hashing;implementation;string suffix structures;strings,True,implementation;strings,False,
+323278,632A,,False,,False,
+307911,630F,combinatorics;math,False,,False,
+308031,630K,math;number theory,False,,False,
+323288,632B,brute force;constructive algorithms,False,,True,string suffix structures
+327795,633B,brute force;constructive algorithms;math;number theory,False,,True,binary search
+303554,629C,dp;strings,True,dp;strings,False,
+293768,627D,binary search;dfs and similar;dp;graphs;greedy;trees,True,binary search;dfs and similar,True,implementation
+284587,626C,brute force;greedy;math;number theory,False,,True,binary search
+308403,630O,geometry,False,,False,
+308151,630M,geometry;math,False,,False,
+323225,632C,sortings;strings,True,strings,False,
+308432,630H,combinatorics;math,False,,False,
+307952,630A,number theory,False,,False,
+308146,630I,combinatorics;math,False,,False,
+308152,630Q,geometry;math,False,,False,
+344389,635C,dp;math,False,,False,
+337884,634C,data structures,True,data structures,True,trees
+337889,634D,data structures;divide and conquer;greedy,True,data structures,False,
+354671,637A,constructive algorithms;implementation,False,,False,
+344361,635B,,False,,False,
+354627,637B,binary search;constructive algorithms;data structures;sortings,False,,True,dfs and similar
+354706,637C,brute force;constructive algorithms;implementation,True,implementation,True,strings
+376048,641A,implementation,False,,True,data structures
+344382,635A,brute force;implementation,False,,False,
+315047,631A,brute force;implementation,True,brute force,False,
+328170,633D,brute force;dp;hashing;implementation;math,False,,False,
+344359,635D,data structures,False,,True,trees
+327914,633C,data structures;dp;hashing;implementation;sortings;string suffix structures;strings,False,,False,
+354720,637D,data structures;dp;greedy,False,,False,
+293824,627F,dfs and similar;dsu;graphs;trees,False,,False,
+315722,631E,data structures;dp;geometry,False,,False,
+376007,641C,brute force;constructive algorithms;implementation,False,,False,
+323287,632D,brute force;math;number theory,False,,False,
+337831,634B,constructive algorithms;dp;implementation;math,False,,False,
+344920,635E,data structures;greedy,True,greedy,False,
+368339,639F,data structures;dfs and similar;graphs;trees,False,,False,
+337818,634A,constructive algorithms;implementation,True,implementation,False,
+376507,641D,dp;implementation;math;probabilities,False,,False,
+368165,639B,constructive algorithms;graphs;trees,False,,False,
+363101,638A,constructive algorithms;math,False,,False,
+376556,641G,,False,,True,trees
+376001,641E,data structures,True,data structures,True,binary search
+337860,634F,two pointers,False,,False,
+368167,639A,implementation,True,implementation,False,
+385739,643A,implementation,False,,False,
+398169,645A,brute force;constructive algorithms;implementation,False,,False,
+411038,650A,data structures;geometry;math,False,,False,
+392629,644A,constructive algorithms,False,,False,
+328217,633G,bitmasks;data structures;dfs and similar;math;number theory,True,data structures;dfs and similar,True,implementation;trees
+376554,641F,,False,,True,dfs and similar;2-sat;implementation;graphs
+368958,639C,hashing;implementation;math,False,,False,
+424735,652A,implementation;math,False,,False,
+399058,645G,binary search;geometry,False,,False,
+414801,651B,greedy;sortings,False,,False,
+337855,634E,binary search;dfs and similar;graphs;greedy,True,binary search;dfs and similar,False,
+328631,633F,dfs and similar;dp;graphs;trees,True,dfs and similar,False,
+398280,645E,dp;greedy;strings,True,dp,False,
+385760,643B,constructive algorithms;graphs,False,,False,
+363119,638C,dfs and similar;graphs;greedy;trees,True,dfs and similar,False,
+430656,653A,brute force;implementation;sortings,False,,False,
+424683,652B,sortings,False,,False,
+398136,645B,greedy;math,False,,False,
+440977,655E,dp;greedy;strings,True,dp,False,
+398172,645C,binary search;two pointers,False,,True,dfs and similar;implementation;data structures
+368962,639D,data structures;greedy;sortings;two pointers,False,,False,
+411182,650B,binary search;brute force;dp;two pointers,False,,True,dfs and similar
+444179,656F,,False,,False,
+430764,653F,data structures;string suffix structures;strings,False,,False,
+444038,656A,,False,,False,
+444190,656G,,False,,False,
+414717,651D,binary search;brute force;dp;two pointers,True,brute force,True,dfs and similar
+440974,655G,geometry,False,,False,
+385815,643F,dp;math;meet-in-the-middle,False,,False,
+444180,656D,,False,,True,dfs and similar
+456940,658A,implementation,False,,False,
+441090,655F,combinatorics;number theory,False,,False,
+392682,644C,binary search;data structures;implementation;sortings;strings,True,data structures,True,expression parsing
+441011,655C,binary search;two pointers,False,,True,expression parsing
+451108,657B,math,False,,False,
+425360,652F,constructive algorithms;math,False,,True,implementation
+451177,657D,binary search;math;sortings,False,,True,implementation
+458200,659E,data structures;dfs and similar;dsu;graphs;greedy,True,dfs and similar,True,implementation;trees
+458271,659B,constructive algorithms;sortings,False,,False,
+424866,652C,combinatorics;sortings;two pointers,False,,False,
+441060,655A,brute force;implementation,False,,True,dfs and similar
+411344,650D,binary search;data structures;dp;hashing,True,binary search,True,trees
+458452,659D,geometry;implementation;math,True,geometry,False,
+451074,657A,constructive algorithms;graphs;trees,False,,False,
+466153,660B,implementation,False,,False,
+441059,655B,greedy;math,False,,False,
+444170,656B,implementation,True,implementation,True,divide and conquer
+465906,660C,binary search;dp;two pointers,False,,False,
+444171,656E,,False,,True,implementation;shortest paths
+444172,656C,,False,,True,strings
+466653,660E,combinatorics;math,False,,False,
+467000,660F,binary search;data structures;divide and conquer;geometry;ternary search,False,,True,dfs and similar
+474500,662C,bitmasks;brute force;divide and conquer;dp;fft;math,False,,False,
+465910,660D,geometry,False,,False,
+457024,658D,,False,,False,
+484650,664A,math;number theory,False,,True,strings
+451178,657C,sortings;two pointers,False,,False,
+489949,665B,brute force,False,,False,
+457018,658C,constructive algorithms;trees,False,,False,
+484553,664C,greedy,False,,True,implementation
+479681,663E,bitmasks;divide and conquer;dp,False,,True,implementation
+489800,665E,data structures;divide and conquer;strings;trees,False,,True,implementation
+457000,658B,implementation,True,implementation,False,
+441039,655D,binary search;dp;graphs,False,,False,
+458326,659A,implementation;math,False,,False,
+466192,660A,greedy;implementation;math;number theory,True,implementation,False,
+511700,668B,implementation,False,,False,
+474537,662A,bitmasks;math;matrices;probabilities,False,,False,
+516298,669A,math,False,,True,dfs and similar
+499121,666B,graphs;shortest paths,True,shortest paths,True,implementation
+489935,665C,dp;greedy;strings,False,,False,
+451233,657E,graphs;trees,False,,True,implementation;data structures
+458299,659C,greedy;implementation,False,,False,
+458297,659F,dfs and similar;dsu;graphs;greedy;sortings,True,dfs and similar,False,
+484915,664B,greedy,False,,False,
+504447,667A,geometry;math,False,,False,
+511794,668F,dp,False,,True,trees;graphs
+511726,668C,math;probabilities,True,probabilities,False,
+516427,669B,,False,,False,
+499068,666A,dp;implementation;strings,True,strings,True,string suffix structures
+490186,665F,data structures;dp;math;number theory;sortings;two pointers,False,,False,
+518938,670A,brute force;constructive algorithms;greedy;math,False,,False,
+504448,667B,constructive algorithms;geometry,False,,False,
+431061,653E,dfs and similar;dsu;graphs;trees,False,,False,
+489953,665A,implementation,False,,False,
+518995,670B,implementation,False,,False,
+504625,667C,dp;strings,True,strings,True,string suffix structures
+474524,662B,dfs and similar;graphs,False,,False,
+504494,667D,brute force;graphs;shortest paths,True,graphs;shortest paths,False,
+511795,668E,graphs,True,graphs,True,dfs and similar;2-sat;implementation
+519089,670E,data structures;dsu;strings,False,,False,
+532024,672B,constructive algorithms;implementation;strings,False,,False,
+540447,673A,implementation,False,,False,
+519127,670F,brute force;constructive algorithms;strings,False,,False,
+479989,663D,brute force;dp;greedy,False,,False,
+516211,669D,data structures;implementation;math,False,,False,
+489958,665D,constructive algorithms;greedy;number theory,False,,True,dfs and similar;implementation
+516556,669E,data structures,True,data structures,False,
+529169,671B,binary search;greedy,False,,False,
+548599,674B,constructive algorithms;graphs,False,,False,
+529167,671C,data structures;number theory,False,,False,
+549069,675A,math,False,,False,
+532048,672C,brute force;geometry;greedy;implementation,False,,False,
+529315,671D,data structures;dp;greedy,True,dp,True,dfs and similar
+540643,673D,constructive algorithms;graphs,False,,False,
+540669,673C,,False,,False,
+541346,673E,divide and conquer;dp,True,divide and conquer;dp,True,probabilities
+555643,676B,implementation;math;math,False,,False,
+568697,678D,math;number theory,False,,False,
+579591,679A,constructive algorithms;interactive;math,False,,False,
+568688,678A,implementation;math,False,,True,divide and conquer
+518909,670D1,,,,,
+499320,666C,combinatorics;strings,True,strings,True,dp
+533663,672E,data structures;number theory,False,,False,
+579593,679B,binary search;dp;greedy,False,,False,
+568648,678C,implementation;math;number theory,False,,False,
+529987,671E,data structures;greedy,False,,True,dfs and similar;binary search
+548611,674A,brute force;data structures;implementation,False,,False,
+555606,676A,constructive algorithms;implementation,False,,False,
+562129,677A,implementation,False,,False,
+568770,678B,implementation,False,,True,dfs and similar
+581970,680B,constructive algorithms;implementation,False,,False,
+588277,681A,implementation,False,,False,
+588303,681B,brute force,False,,False,
+579589,679C,dfs and similar;dsu;implementation,True,dfs and similar,False,
+562133,677B,implementation;math,False,,False,
+594810,682A,constructive algorithms;math;number theory,False,,False,
+518954,670D2,,,,,
+549074,675D,data structures;trees,False,,True,dfs and similar;binary search
+582029,680A,constructive algorithms;implementation,False,,False,
+540549,673B,greedy;implementation,False,,True,dfs and similar
+616577,685A,brute force;combinatorics;dp;math,False,,False,
+549083,675E,data structures;dp;greedy,True,dp,True,implementation
+548556,674C,divide and conquer;dp,True,dp,False,
+619383,686A,constructive algorithms;implementation,False,,False,
+588254,681C,constructive algorithms;data structures;greedy,False,,False,
+594811,682B,sortings,False,,False,
+594828,682C,dfs and similar;dp;graphs;trees,True,dfs and similar,True,implementation
+562261,677C,bitmasks;combinatorics;implementation;strings,False,,False,
+589276,681E,geometry;sortings,False,,False,
+532058,672D,binary search;greedy,False,,False,
+638703,689B,dfs and similar;graphs;greedy;shortest paths,False,,False,
+588403,681D,constructive algorithms;dfs and similar;graphs;trees,False,,False,
+579587,679D,brute force;dfs and similar;graphs;implementation;math;probabilities,False,,False,
+619551,686B,constructive algorithms;implementation;sortings,False,,True,dfs and similar
+627111,687D,brute force;data structures;dsu;graphs;sortings,False,,True,implementation;divide and conquer
+581874,680C,constructive algorithms;interactive;math;number theory,False,,False,
+648677,690A2,,,,,
+621155,686E,binary search;math,False,,False,
+568748,678F,data structures;divide and conquer;geometry,False,,True,dfs and similar;implementation
+649196,690A3,,,,,
+595910,682E,geometry;two pointers,False,,False,
+648891,690F1,,,,,
+648633,690D1,,,,,
+649723,690D3,,,,,
+631804,688A,implementation,False,,False,
+639003,689E,combinatorics;data structures;dp;geometry;implementation,False,,False,
+631965,688D,chinese remainder theorem;math;number theory,False,,True,implementation
+582155,680E,,False,,True,dfs and similar
+626740,687C,dp,True,dp,False,
+562336,677D,data structures;dp;graphs;shortest paths,True,data structures;dp,False,
+580226,679E,data structures,False,,False,
+626577,687A,dfs and similar;graphs,True,graphs,True,implementation
+651529,691A,implementation,False,,False,
+619572,686D,data structures;dfs and similar;dp;trees,True,dfs and similar,False,
+632064,688C,dfs and similar;graphs,True,dfs and similar,True,implementation;divide and conquer
+652665,691C,implementation;strings,False,,False,
+651609,691B,implementation;strings,False,,False,
+568584,678E,bitmasks;dp;math;probabilities,True,dp;probabilities,False,
+649046,690A1,,,,,
+648914,690C1,,,,,
+648792,690C3,,,,,
+665060,697B,brute force;implementation;math;strings,False,,False,
+639065,689A,brute force;constructive algorithms;implementation,False,,False,
+665054,697C,brute force;data structures;implementation;trees,False,,False,
+672372,698A,dp,True,dp,False,
+649718,690B2,,,,,
+672515,698B,constructive algorithms;dfs and similar;dsu;graphs;trees,False,,False,
+616485,685C,binary search;math,False,,False,
+649712,690F2,,,,,
+631978,688E,dp,True,dp,True,implementation
+674507,698E,,False,,False,
+649717,690B1,,,,,
+651704,691F,brute force;dp;number theory,False,,False,
+691399,701C,binary search;strings;two pointers,False,,False,
+649104,690D2,,,,,
+663263,696A,brute force;data structures;implementation;trees,True,implementation,True,divide and conquer
+672446,698C,bitmasks;dp;math;probabilities,True,probabilities,True,implementation
+678029,699A,implementation,False,,False,
+691386,701A,greedy;implementation,False,,False,
+651596,691E,matrices,False,,False,
+704193,703B,implementation;math,False,,False,
+665907,697E,combinatorics;math;number theory,False,,True,probabilities
+704194,703A,implementation,False,,False,
+697892,702E,data structures;graphs,False,,True,dfs and similar;implementation
+665017,697A,implementation;math,False,,True,divide and conquer
+717532,705A,implementation,False,,False,
+689946,700E,string suffix structures;strings,True,string suffix structures,True,dp
+678023,699D,constructive algorithms;dfs and similar;dsu;graphs;trees,False,,False,
+697880,702C,binary search;implementation;two pointers,False,,False,
+679045,699E,bitmasks;dp;math;probabilities,True,probabilities,True,implementation
+663693,696F,binary search;geometry;two pointers,False,,True,implementation
+704690,703C,geometry;implementation,False,,False,
+678061,699B,implementation,False,,False,
+691402,701E,dfs and similar;dp;graphs;trees,True,dfs and similar,False,
+730287,707C,math;number theory,False,,False,
+697850,702A,dp;greedy;implementation,False,,False,
+704755,703D,data structures,False,,False,
+713157,704B,dp;graphs;greedy,True,dp,False,
+717565,705C,brute force;data structures;implementation,False,,False,
+693235,701F,graphs,False,,True,dfs and similar;implementation
+743309,709A,implementation,False,,False,
+672473,698F,combinatorics;number theory,False,,True,dfs and similar;implementation
+724557,706E,data structures;implementation,False,,False,
+723985,706D,binary search;bitmasks;data structures;trees,False,,False,
+697864,702B,brute force;data structures;implementation;math,False,,False,
+678124,699C,brute force;dp,True,dp,False,
+749330,710A,implementation,False,,False,
+749398,710C,constructive algorithms;math,False,,False,
+755841,711D,combinatorics;dfs and similar;graphs;math,True,dfs and similar,False,
+713268,704C,dp;graphs;implementation;math,False,,True,expression parsing
+699166,702F,data structures,False,,True,binary search
+755785,711A,brute force;implementation,False,,False,
+730318,707D,bitmasks;data structures;dfs and similar;implementation,True,data structures,False,
+724050,706C,dp;strings,True,dp;strings,False,
+749310,710E,dfs and similar;dp,True,dfs and similar,False,
+723984,706A,brute force;geometry;implementation,False,,False,
+743253,709C,,,,,
+730283,707B,graphs,False,,True,shortest paths
+762296,712B,implementation;strings,False,,False,
+723983,706B,binary search;dp;implementation,True,binary search,False,
+738228,708A,constructive algorithms;greedy;implementation;strings,False,,False,
+762352,712E,data structures;math;probabilities,True,probabilities,True,implementation
+775527,714A,implementation;math,False,,False,
+738273,708B,constructive algorithms;greedy;implementation;math,False,,False,
+738657,708E,dp;math,True,dp,True,probabilities
+749314,710B,brute force;sortings,False,,False,
+743339,709B,greedy;implementation;sortings,False,,False,
+762213,712A,implementation;math,False,,False,
+788784,716A,implementation,False,,False,
+782353,715D,constructive algorithms,False,,False,
+788962,716C,constructive algorithms;math;number theory,False,,False,
+730443,707E,data structures,False,,False,
+762410,712D,combinatorics;dp;math,False,,True,games
+768785,713C,dp;sortings,True,dp,False,
+762180,712C,greedy;math,False,,False,
+775517,714E,dp;flows;sortings,False,,False,
+755859,711B,constructive algorithms;implementation,False,,False,
+768823,713A,data structures;implementation,False,,True,strings
+749884,710F,brute force;data structures;hashing;interactive;string suffix structures;strings,True,string suffix structures;strings,False,
+782053,715A,constructive algorithms;math,False,,False,
+795255,717H,math;probabilities,False,,True,data structures;divide and conquer
+768810,713D,binary search;data structures,False,,True,dp
+782338,715C,dfs and similar;divide and conquer;dsu;trees,True,dfs and similar,False,
+769820,713E,binary search;dp,False,,False,
+775529,714B,implementation;sortings,False,,False,
+795841,717A,combinatorics;math;number theory,False,,True,dfs and similar
+802917,718E,bitmasks;graphs,False,,True,implementation
+814921,720A,greedy,False,,False,
+818250,721A,implementation,False,,False,
+808600,719C,dp;implementation;math,False,,False,
+801806,718A,dp;implementation;math,False,,False,
+824527,722B,implementation;strings,False,,False,
+831044,723A,implementation;math;sortings,False,,False,
+824502,722A,brute force;implementation,False,,False,
+831069,723C,greedy,False,,False,
+808557,719A,implementation,False,,False,
+808558,719B,greedy,False,,False,
+755807,711C,dp,True,dp,True,trees
+795642,717C,implementation;sortings,True,implementation,False,
+844003,725A,implementation,False,,True,dfs and similar
+837515,724B,brute force;greedy;implementation;math,False,,False,
+815896,720C,constructive algorithms,False,,False,
+831041,723D,dfs and similar;dsu;graphs;greedy;implementation,True,dfs and similar,False,
+795762,717G,flows,False,,True,implementation;dp
+844049,725C,brute force;constructive algorithms;implementation;strings,False,,False,
+850577,727C,constructive algorithms;interactive;math,False,,False,
+818421,721D,constructive algorithms;data structures;greedy;math,False,,False,
+818598,721E,binary search;dp,False,,False,
+816454,720D,data structures;dp;sortings,False,,True,divide and conquer
+831063,723B,expression parsing;implementation;strings,False,,False,
+818273,721B,implementation;math;sortings;strings,False,,False,
+837399,724D,data structures;greedy;strings,False,,False,
+844005,725B,implementation;math,False,,False,
+857101,729F,dp,False,,True,games
+857119,729A,implementation;strings,False,,False,
+824521,722E,combinatorics;dp,True,combinatorics,True,shortest paths
+863659,730H,constructive algorithms;implementation,False,,False,
+802235,718D,dp;hashing;trees,True,trees,True,dfs and similar;implementation
+846979,725G,,False,,False,
+857157,729B,dp;implementation,False,,False,
+831277,723E,constructive algorithms;dfs and similar;flows;graphs;greedy,False,,True,implementation
+837419,724A,implementation,False,,False,
+818291,721C,dp;graphs,False,,False,
+824581,722D,binary search;data structures;dfs and similar;greedy;strings;trees,True,greedy,False,
+837600,724E,dp;flows;greedy,False,,True,dfs and similar
+844016,725E,brute force;greedy,True,greedy,False,
+857114,729D,constructive algorithms;greedy;math,False,,False,
+824532,722F,chinese remainder theorem;data structures;implementation;number theory;two pointers,False,,False,
+850944,727D,constructive algorithms;flows;greedy,False,,True,dfs and similar;implementation
+850793,727F,binary search;dp;greedy,False,,False,
+864344,730F,,False,,True,dp
+844376,725F,games;greedy,False,,False,
+876179,732B,dp;greedy,False,,False,
+876207,732C,binary search;constructive algorithms;greedy;implementation;math,False,,False,
+850717,727E,data structures;hashing;string suffix structures;strings,False,,True,games
+869834,731C,dfs and similar;dsu;graphs;greedy,False,,False,
+882377,733A,implementation,False,,False,
+863732,730D,greedy;implementation;math,False,,False,
+857133,729C,binary search;greedy;sortings,True,binary search,False,
+869825,731E,dp;games,True,dp,False,
+869827,731B,constructive algorithms;greedy,False,,False,
+888504,734A,implementation;strings,False,,True,games
+869823,731A,implementation;strings,False,,False,
+882455,733B,math,False,,False,
+844041,725D,data structures;greedy,False,,False,
+863932,730J,dp,False,,False,
+857259,729E,constructive algorithms;data structures;graphs;greedy;sortings,False,,True,implementation
+900540,736A,combinatorics;constructive algorithms;dfs and similar;dp;math,False,,True,games
+894485,735C,combinatorics;constructive algorithms;greedy;math,False,,True,games
+864284,730E,greedy;implementation,False,,False,
+876175,732A,brute force;constructive algorithms;implementation;math,False,,False,
+894501,735D,math;number theory,False,,False,
+869824,731D,brute force;data structures;greedy;sortings,False,,False,
+912495,738B,brute force;dp;implementation,False,,False,
+882458,733C,constructive algorithms;dp;greedy;two pointers,False,,False,
+864516,730K,graphs,False,,True,dfs and similar
+876246,732F,dfs and similar;graphs,True,dfs and similar,False,
+882652,733D,data structures;hashing,False,,False,
+894506,735A,implementation;strings,False,,False,
+894386,735B,greedy;number theory;sortings,False,,False,
+888497,734B,brute force;greedy;implementation;math,False,,False,
+919056,739A,constructive algorithms;greedy,False,,False,
+869863,731F,brute force;data structures;implementation;math;number theory,False,,False,
+876448,732E,greedy;sortings,False,,False,
+906706,737B,constructive algorithms;greedy;implementation;math,False,,False,
+895322,735E,dp;trees,True,dp,False,
+925648,740B,constructive algorithms,False,,False,
+906718,737A,binary search,False,,False,
+888707,734D,implementation,False,,True,expression parsing
+888568,734C,binary search;dp;greedy;two pointers,False,,False,
+900804,736B,math;number theory,False,,True,divide and conquer
+912499,738D,binary search;constructive algorithms;greedy;math,False,,False,
+925709,740C,constructive algorithms,False,,False,
+902572,736D,math;matrices,False,,False,
+938419,742A,implementation;math;number theory,False,,False,
+882515,733F,data structures;dsu;graphs;trees,False,,True,binary search;implementation
+888711,734F,bitmasks;constructive algorithms;implementation;math,False,,False,
+906715,737C,graphs;greedy,False,,False,
+931844,741A,dfs and similar;math,True,dfs and similar,False,
+919118,739D,graph matchings,False,,True,implementation
+912521,738E,constructive algorithms;graphs;greedy,False,,False,
+910792,737F,constructive algorithms;math,False,,False,
+912502,738C,binary search,True,binary search,False,
+876172,732D,binary search;greedy;sortings,True,binary search,False,
+912503,738A,implementation;strings,False,,False,
+888923,734E,dfs and similar;dp;trees,False,,False,
+919119,739E,brute force;data structures;dp;flows;math;probabilities;sortings,True,dp;probabilities,False,
+932026,741D,data structures;dfs and similar;trees,True,dfs and similar,False,
+925657,740A,brute force;implementation,False,,False,
+957407,745A,implementation;strings,True,strings,False,
+938486,742B,brute force;math;number theory,False,,False,
+944521,743C,brute force;constructive algorithms;math;number theory,False,,False,
+950860,744A,dfs and similar;graphs,True,dfs and similar,False,
+970052,747A,brute force;math,False,,False,
+944518,743A,constructive algorithms;greedy;implementation,False,,False,
+951397,744D,geometry,False,,False,
+919165,739C,data structures,False,,True,implementation
+938477,742C,dfs and similar;math,False,,False,
+944537,743B,binary search;bitmasks;constructive algorithms;implementation,False,,False,
+907957,737D,dp;games,False,,False,
+938495,742D,dfs and similar;dp;dsu,True,dfs and similar,False,
+902164,736C,dp;trees,True,dp;trees,False,
+957405,745B,implementation,False,,False,
+944767,743D,dfs and similar;dp;graphs;trees,True,dfs and similar,False,
+950767,744B,bitmasks;divide and conquer;interactive,False,,False,
+963978,746C,constructive algorithms;implementation;math,False,,False,
+983064,749A,greedy;implementation;math;number theory,False,,True,divide and conquer
+976536,748C,constructive algorithms;math,False,,False,
+976532,748B,implementation;strings,True,strings,False,
+963935,746E,greedy;implementation;math,False,,False,
+963840,746B,implementation;strings,False,,False,
+989628,750C,binary search;greedy;math,False,,False,
+976641,748A,implementation;math,False,,True,divide and conquer
+932644,741E,data structures;string suffix structures,True,data structures,True,dfs and similar;strings
+989531,750A,binary search;brute force;implementation;math,False,,False,
+963846,746D,constructive algorithms;greedy;math,False,,False,
+931859,741C,constructive algorithms;dfs and similar;graphs,False,,True,2-sat
+989627,750D,brute force;data structures;dfs and similar;dp;implementation,True,dfs and similar,False,
+983068,749B,brute force;constructive algorithms;geometry,False,,False,
+1002269,753A,dp;greedy;math,False,,False,
+938701,742E,graphs,False,,True,2-sat
+963814,746A,implementation;math,False,,False,
+964152,746G,constructive algorithms;graphs;trees,False,,False,
+944552,743E,binary search;bitmasks;brute force;dp,True,binary search,False,
+995758,752B,greedy;implementation;strings,True,strings,False,
+995728,752C,greedy;shortest paths,False,,False,
+995745,752A,constructive algorithms;math,False,,True,divide and conquer
+976533,748D,constructive algorithms;data structures;greedy,False,,True,strings
+970067,747B,implementation;strings,False,,False,
+970056,747D,dp;greedy;sortings,False,,False,
+1015420,755E,constructive algorithms;graphs;shortest paths,False,,False,
+958178,745E,dp,True,dp,False,
+1008916,754A,constructive algorithms;greedy;implementation,False,,False,
+970066,747C,implementation,False,,False,
+950799,744C,bitmasks;brute force;dp,True,bitmasks;dp,False,
+989638,750B,geometry;implementation,False,,False,
+992978,750G,bitmasks;brute force;combinatorics;dp,False,,False,
+976605,748E,binary search;data structures;greedy;two pointers,True,binary search,False,
+1015360,755A,brute force;graphs;math;number theory,False,,False,
+1002267,753B,brute force;constructive algorithms;implementation,True,implementation,False,
+983949,749E,data structures;probabilities,False,,False,
+995726,752D,data structures;greedy;hashing;strings,True,strings,False,
+1015564,755C,dfs and similar;dsu;graphs;interactive;trees,True,trees,False,
+1008904,754D,binary search;data structures;greedy;sortings,False,,False,
+1030621,758B,brute force;implementation;number theory,False,,False,
+1030607,758A,implementation;math,False,,False,
+994613,750F,constructive algorithms;implementation;interactive;trees,False,,False,
+976785,748F,constructive algorithms;dfs and similar;graphs;trees,True,dfs and similar,True,games;implementation;shortest paths
+1022045,756D,brute force;combinatorics;dp;string suffix structures,False,,False,
+1036925,759B,binary search;dp;greedy;two pointers,True,dp,False,
+1036793,759A,constructive algorithms;dfs and similar;dsu,False,,False,
+1015402,755B,binary search;data structures;games;greedy;sortings;strings,False,,False,
+964048,746F,data structures;greedy;two pointers,False,,False,
+1024301,757B,greedy;math;number theory,False,,True,implementation
+1040485,760F,,False,,True,dp
+990098,750E,data structures;divide and conquer;dp;matrices,False,,True,dfs and similar
+1046440,761A,brute force;constructive algorithms;implementation;math,False,,False,
+1039874,760B,binary search;greedy,True,binary search,False,
+1024291,757D,bitmasks;dp,False,,False,
+1037726,759D,dp,True,dp,False,
+1008925,754B,brute force;implementation,False,,False,
+1046587,761B,brute force;implementation;math,False,,False,
+1021758,756B,binary search;dp,True,dp,False,
+983379,749D,binary search;data structures,False,,False,
+995776,752E,binary search;data structures;dp;two pointers,True,binary search,True,divide and conquer
+1039892,760A,implementation;math,False,,False,
+1059031,763B,constructive algorithms;geometry,False,,False,
+1065520,764A,brute force;implementation;math,False,,False,
+1030636,758C,binary search;constructive algorithms;implementation;math,False,,False,
+1021680,756A,constructive algorithms;dfs and similar,False,,False,
+1024401,757C,data structures;hashing;sortings;strings,False,,True,implementation
+1052656,762B,greedy;implementation;sortings;two pointers,True,implementation,False,
+1024320,757E,brute force;combinatorics;dp;number theory,False,,False,
+1040278,760E,,False,,True,binary search
+1052641,762A,math;number theory,False,,False,
+1046660,761E,constructive algorithms;dfs and similar;graphs;greedy;trees,True,dfs and similar,False,
+1065517,764D,geometry,False,,False,
+1065514,764C,dfs and similar;graphs;implementation;trees,True,dfs and similar,False,
+1039943,760D,binary search;dp;two pointers,True,dp,False,
+1076709,10C,number theory,False,,False,
+1076570,10A,implementation,False,,False,
+1088093,101C,implementation;math,False,,False,
+1046647,761D,binary search;brute force;constructive algorithms;greedy;sortings,False,,False,
+1076795,10E,constructive algorithms,False,,True,greedy
+1065527,764B,constructive algorithms;implementation,False,,False,
+1039910,760C,constructive algorithms;dfs and similar;graphs,False,,False,
+1095302,102B,implementation,False,,False,
+1102676,103A,greedy;implementation;math,False,,False,
+1108759,104A,implementation,False,,False,
+1070201,1A,math,False,,True,divide and conquer
+1108796,104B,math,False,,False,
+1022337,756E,combinatorics;dp;math,True,dp,False,
+1052679,762C,binary search;hashing;strings;two pointers,True,two pointers,True,string suffix structures
+1095359,102C,greedy,False,,False,
+1070213,1B,implementation;math,False,,False,
+1052683,762D,dp;greedy;implementation,True,dp,False,
+1108665,104C,dsu;trees,True,trees,True,dfs and similar
+1096039,102E,,False,,False,
+1059426,763E,data structures;divide and conquer;dsu,False,,True,dfs and similar;implementation;trees
+1046760,761F,brute force;data structures;dp;implementation,False,,False,
+1108792,104E,,False,,True,divide and conquer
+1059038,763C,brute force;implementation;math;number theory,False,,False,
+1129577,107B,combinatorics;dp;math;probabilities,False,,False,
+1137467,108A,implementation;strings,False,,False,
+1124310,106A,implementation,False,,False,
+1088022,101B,binary search;data structures;dp,True,dp,False,
+1114486,105C,brute force;implementation;sortings,False,,False,
+1088129,101A,greedy,False,,False,
+1102661,103B,dfs and similar;dsu;graphs,True,dfs and similar,True,trees
+1065610,764E,,False,,False,
+1145682,109A,brute force;implementation,False,,False,
+1095374,102D,binary search;data structures;dp,True,dp,False,
+1137667,108D,combinatorics;math;probabilities,True,probabilities,False,
+1088383,101E,divide and conquer;dp,False,,False,
+1146454,109E,brute force;math,False,,False,
+1155494,110B,constructive algorithms;strings,False,,False,
+1153464,11C,implementation,False,,False,
+1103099,103C,constructive algorithms;greedy,False,,False,
+1186269,114A,math,False,,False,
+1164312,111A,greedy,False,,False,
+1168863,112A,implementation;strings,True,strings,False,
+1178975,113E,combinatorics;implementation;math,False,,False,
+1124390,106C,dp,True,dp,False,
+1168891,112C,greedy;math,False,,False,
+1114482,105A,implementation,False,,False,
+1174227,112E,bitmasks;dp,False,,False,
+1124463,106D,brute force;implementation,False,,False,
+1168892,112D,implementation;number theory,False,,True,divide and conquer
+1124454,106E,geometry;ternary search,False,,False,
+1152471,11B,math,False,,False,
+1158514,110E,combinatorics;dfs and similar;trees,False,,False,
+1129654,107C,bitmasks;dp,False,,False,
+1178976,113D,math;matrices;probabilities,True,probabilities,False,
+1152317,11A,constructive algorithms;implementation;math,False,,False,
+1192497,115D,dp;expression parsing,False,,False,
+1156257,110C,implementation;math,False,,False,
+1195935,116A,implementation,False,,False,
+1137604,108B,math;sortings,False,,False,
+1145772,109B,brute force;probabilities,False,,False,
+1153134,11E,binary search;dp;greedy,False,,True,implementation
+1209590,118A,implementation;strings,False,,False,
+1209682,118B,constructive algorithms;implementation,False,,False,
+1164716,111D,combinatorics;dp,False,,False,
+1164260,111B,binary search;data structures;number theory,False,,True,divide and conquer
+1206140,117B,brute force;number theory,False,,True,strings
+1164661,111C,bitmasks;dp;dsu,False,,False,
+1209594,118D,dp,True,dp,False,
+1187690,114E,math;number theory,True,number theory,False,
+1233544,120B,implementation,False,,False,
+1218687,119A,implementation,False,,False,
+1206361,117A,implementation;math,False,,False,
+1226983,12E,constructive algorithms,False,,False,
+1226353,12A,implementation,False,,False,
+1233476,120E,games;math,False,,False,
+1233545,120C,implementation;math,False,,False,
+1178288,113B,brute force;data structures;hashing;strings,False,,False,
+1164715,111E,,False,,True,dfs and similar
+1195942,116B,greedy;implementation,False,,False,
+1191104,115E,data structures;dp,False,,False,
+1205998,117D,divide and conquer;math,False,,False,
+1233565,120G,implementation,False,,True,data structures
+1243460,122A,brute force;number theory,False,,True,divide and conquer
+1243512,122B,brute force;implementation,False,,False,
+1220038,119E,geometry,False,,True,implementation
+1186390,114B,bitmasks;brute force;graphs,False,,False,
+1205890,117E,data structures;divide and conquer;implementation;trees,False,,True,dfs and similar;shortest paths
+1225972,12B,implementation;sortings,False,,True,strings
+1196382,116C,dfs and similar;graphs;trees,True,dfs and similar;trees,True,divide and conquer
+1233491,120A,brute force;implementation;math,False,,False,
+1233985,120J,divide and conquer;geometry;sortings,False,,False,
+1186965,114D,data structures;hashing;string suffix structures;strings,True,string suffix structures,False,
+1258291,124A,math,False,,False,
+1243641,122D,brute force,False,,False,
+1178432,113C,brute force;math;number theory,True,number theory,False,
+1265438,125B,implementation,False,,True,expression parsing
+1226013,12C,greedy;implementation;sortings,False,,False,
+1272868,126A,binary search;brute force;math,False,,False,
+1262831,124E,,False,,True,implementation;dp
+1279422,127B,implementation,False,,True,divide and conquer
+1262753,124D,brute force;constructive algorithms;number theory,False,,False,
+1265442,125E,binary search;graphs,False,,True,implementation
+1218879,119B,constructive algorithms;implementation;sortings,False,,False,
+1239577,121E,data structures,False,,False,
+1279446,127A,geometry,False,,True,divide and conquer
+1281384,127E,implementation,False,,False,
+1233547,120D,brute force,False,,True,divide and conquer
+1225959,12D,data structures;sortings,False,,True,binary search
+1274013,126C,constructive algorithms;greedy,False,,False,
+1251680,123D,string suffix structures,True,string suffix structures,True,dfs and similar;trees
+1286801,128A,dfs and similar,False,,False,
+1309208,131A,implementation;strings,False,,False,
+1301455,13E,data structures;dsu,False,,False,
+1240405,121D,binary search;implementation;two pointers,True,implementation,False,
+1239641,121C,brute force;combinatorics;number theory,False,,False,
+1272668,126B,binary search;dp;hashing;string suffix structures;strings,True,string suffix structures,False,
+1265219,125A,math,False,,True,divide and conquer
+1309272,131B,implementation;math,False,,False,
+1309279,131C,combinatorics;math,False,,False,
+1265269,125C,constructive algorithms;greedy,False,,False,
+1272997,126D,dp;math,False,,False,
+1301328,13C,dp;sortings,False,,True,dfs and similar;binary search
+1309509,131E,sortings,False,,True,data structures
+1286798,128B,brute force;constructive algorithms;hashing;implementation;string suffix structures;strings,True,string suffix structures,True,dfs and similar
+1294495,129A,implementation,False,,False,
+1295202,129E,combinatorics;dp,False,,False,
+1265684,125D,constructive algorithms;greedy,False,,False,
+1258416,124C,constructive algorithms;dfs and similar;dsu;greedy;number theory;sortings;strings,False,,False,
+1294494,129B,brute force;dfs and similar;graphs;implementation,False,,False,
+1317601,132A,implementation,False,,False,
+1331210,134A,brute force;implementation,False,,False,
+1322420,133A,implementation,False,,False,
+1279443,127D,hashing;strings,False,,True,string suffix structures
+1324216,133E,dp;implementation,True,implementation,False,
+1251614,123A,implementation;number theory;strings,False,,False,
+1344037,136A,implementation,False,,False,
+1322679,133B,implementation,False,,False,
+1317619,132C,dp,False,,True,implementation
+1309657,131D,dfs and similar;graphs,True,dfs and similar,True,implementation
+1331518,134C,constructive algorithms;graphs;greedy,False,,True,implementation;data structures
+1301234,13A,implementation;math,False,,True,divide and conquer
+1353623,137A,implementation,False,,False,
+1317761,132B,implementation,False,,True,dp
+1295200,129D,implementation;string suffix structures;strings,True,string suffix structures,True,dfs and similar
+1353626,137B,greedy,False,,False,
+1344033,136D,brute force;geometry;implementation,False,,False,
+1286947,128D,constructive algorithms;implementation,False,,False,
+1302389,13D,dp;geometry,False,,False,
+1353686,137C,sortings,False,,False,
+1374273,14A,implementation,False,,False,
+1366998,139A,implementation,False,,False,
+1311065,131F,binary search;two pointers,False,,False,
+1375148,14E,dp,True,dp,False,
+1344939,136E,constructive algorithms;games;greedy,False,,False,
+1302326,13B,geometry;implementation,False,,False,
+1339126,135A,greedy;implementation;sortings,False,,False,
+1384662,141A,implementation;sortings;strings,False,,False,
+1396506,142B,constructive algorithms;greedy;implementation,False,,False,
+1339320,135C,constructive algorithms;games;greedy,True,games,False,
+1339740,135E,combinatorics,False,,True,strings
+1353963,137E,data structures;implementation;strings,False,,True,dfs and similar;two pointers
+1402481,143A,brute force;math,False,,False,
+1339168,135B,brute force;geometry;math,False,,False,
+1358826,138C,binary search;data structures;probabilities;sortings,True,probabilities,True,trees
+1380901,140A,geometry;math,True,geometry,True,implementation
+1367034,139C,implementation;strings,False,,True,string suffix structures
+1358948,138B,greedy,False,,False,
+1380956,140D,greedy;sortings,False,,False,
+1358953,138D,dp;games,False,,False,
+1367085,139E,binary search;data structures;probabilities;sortings,True,probabilities,True,implementation;trees
+1380699,140B,brute force;greedy;implementation,False,,False,
+1374272,14B,implementation,False,,False,
+1367092,139D,implementation,False,,False,
+1404154,143E,,False,,True,brute force
+1381333,140E,combinatorics;dp,False,,False,
+1405384,144A,implementation,False,,False,
+1384680,141B,geometry;math,False,,True,divide and conquer
+1431111,148D,dp;games;math;probabilities,True,dp;probabilities,False,
+1423915,146B,brute force;implementation,False,,False,
+1423914,146A,implementation,False,,False,
+1415731,145C,combinatorics;dp;math,False,,False,
+1396351,142D,games,True,games,True,implementation
+1431180,148C,constructive algorithms;greedy,False,,False,
+1423933,146D,brute force;constructive algorithms;implementation,False,,False,
+1431174,148B,implementation;math,False,,False,
+1396288,142C,brute force;dp,False,,False,
+1447244,15E,combinatorics;dp,False,,False,
+1416291,145D,combinatorics;data structures;implementation,True,data structures,False,
+1384681,141C,constructive algorithms;greedy;sortings,False,,False,
+1437899,149A,greedy;implementation;sortings,False,,False,
+1405475,144D,data structures;dfs and similar;graphs;shortest paths,False,,False,
+1438108,149C,greedy;math;sortings,False,,True,divide and conquer
+1423883,146C,greedy,False,,True,strings
+1415717,145A,greedy;implementation,False,,True,strings
+1374333,14D,dfs and similar;dp;graphs;shortest paths;trees;two pointers,True,trees,False,
+1402693,143D,graph matchings;greedy;math,False,,False,
+1438420,149B,implementation,False,,False,
+1461690,151A,implementation;math,False,,True,divide and conquer
+1396281,142A,brute force;math,False,,False,
+1461732,151B,implementation;strings,False,,False,
+1405841,144E,data structures;greedy,True,greedy,False,
+1428146,147A,implementation;strings,False,,False,
+1461864,151C,games;greedy;math;number theory,False,,False,
+1415797,145B,constructive algorithms,False,,False,
+1431123,148E,dp,True,dp,False,
+1469264,152A,implementation,False,,False,
+1447336,15D,data structures;implementation;sortings,True,data structures,False,
+1447407,15B,math,False,,False,
+1478228,154A,greedy,False,,False,
+1484072,155C,dp;greedy,False,,False,
+1384686,141E,constructive algorithms;dp;dsu;graphs,False,,True,divide and conquer
+1482347,155A,brute force,False,,False,
+1483210,155D,math;number theory,False,,False,
+1380953,140C,binary search;data structures;greedy,False,,False,
+1502484,158A,implementation,False,,False,
+1502595,158B,greedy;implementation,False,,False,
+1499868,157B,geometry;sortings,False,,False,
+1455409,150A,games;math;number theory,False,,False,
+1502985,158D,brute force;number theory,False,,False,
+1438032,149D,dp,True,dp,False,
+1447246,15A,implementation;sortings,False,,False,
+1478221,154B,math;number theory,False,,True,implementation;data structures
+1469260,152C,combinatorics,False,,False,
+1478239,154C,graphs;hashing;sortings,False,,True,implementation
+1516817,16A,implementation,False,,False,
+1478442,154D,games;math,False,,False,
+1517286,16B,greedy;implementation;sortings,False,,False,
+1516828,16C,binary search;number theory,False,,False,
+1470350,152E,bitmasks;dp;graphs;trees,False,,True,shortest paths
+1531468,161D,dfs and similar;dp;trees,True,dfs and similar;dp;trees,True,graphs
+1503513,158C,data structures;implementation,False,,False,
+1492802,156B,constructive algorithms;data structures;implementation,False,,False,
+1499984,157A,brute force,False,,False,
+1482359,155B,greedy;sortings,False,,True,implementation
+1549675,164E,,False,,False,
+1500613,157D,implementation,False,,False,
+1558063,166E,dp;math;matrices,False,,False,
+1500865,157E,dp;math,True,dp,False,
+1551806,165B,binary search;implementation,True,binary search,False,
+1541292,163A,dp,True,dp,True,strings
+1511264,159A,greedy;implementation,False,,True,expression parsing
+1492984,156E,brute force;dp,False,,False,
+1511106,159C,binary search;brute force;data structures;strings,False,,False,
+1551666,165A,implementation,False,,False,
+1551715,165C,binary search;brute force;dp;math;strings;two pointers,True,strings,False,
+1521823,160B,greedy;sortings,False,,False,
+1522645,160E,binary search;data structures;sortings,True,binary search,True,dfs and similar
+1569671,167A,implementation;math,True,implementation,False,
+1521394,160A,greedy;sortings,False,,False,
+1503137,158E,dp;sortings,False,,False,
+1511107,159B,greedy;sortings,False,,False,
+1574125,168A,implementation;math,False,,False,
+1549701,164B,two pointers,False,,True,implementation;data structures;strings
+1560156,166D,dp;graph matchings;greedy;sortings;two pointers,False,,True,data structures
+1549734,164D,binary search;brute force,False,,False,
+1541144,163C,sortings;two pointers,False,,True,probabilities
+1521412,160D,dfs and similar;dsu;graphs;sortings,False,,False,
+1516842,16E,bitmasks;dp;probabilities,True,dp;probabilities,False,
+1574230,168D,dp;math;probabilities,True,dp;probabilities,False,
+1549388,164A,dfs and similar;graphs,True,dfs and similar,False,
+1558046,166A,binary search;implementation;sortings,False,,False,
+1602238,171C,implementation,False,,False,
+1551854,165D,data structures;dsu;trees,False,,True,shortest paths
+1569536,167C,games;math,False,,False,
+1602534,171H,implementation,False,,True,dfs and similar;divide and conquer
+1531477,161A,binary search;brute force;greedy;two pointers,True,two pointers,False,
+1602130,171B,combinatorics,False,,True,dfs and similar
+1582957,169B,greedy,False,,False,
+1551833,165E,bitmasks;brute force;dfs and similar;dp,True,dfs and similar,False,
+1602291,171A,constructive algorithms,False,,True,dfs and similar
+1618389,173A,implementation;math,False,,False,
+1602388,171D,brute force,False,,False,
+1629728,175A,brute force;implementation,False,,False,
+1617979,173C,brute force;dp,False,,True,implementation
+1558312,166B,geometry;sortings,False,,False,
+1625814,174E,,False,,True,dfs and similar;implementation
+1558141,166C,greedy;math;sortings,False,,False,
+1582981,169A,sortings,False,,True,divide and conquer
+1569435,167B,dp;math;probabilities,True,dp;probabilities,False,
+1588843,17A,brute force;math;number theory,False,,False,
+1625803,174C,data structures;greedy,False,,False,
+1602460,171F,brute force;implementation;number theory,False,,False,
+1629729,175B,implementation,False,,False,
+1618008,173E,data structures;sortings,False,,False,
+1629732,175C,greedy;implementation;sortings;two pointers,False,,False,
+1640466,177A2,implementation,False,,False,
+1569673,167D,data structures;divide and conquer;graph matchings;graphs;greedy,False,,False,
+1611054,172D,number theory,False,,False,
+1640472,177D2,constructive algorithms;math,False,,False,
+1637204,176C,combinatorics;constructive algorithms,False,,False,
+1589107,17D,number theory,False,,False,
+1640878,177F1,binary search;bitmasks;data structures;hashing;probabilities;strings;trees,False,,False,
+1618174,173B,dfs and similar;shortest paths,False,,False,
+1569632,167E,dfs and similar;graphs;math;matrices,False,,False,
+1649129,178E1,binary search;brute force;data structures;greedy;implementation;two pointers,False,,False,
+1640465,177A1,combinatorics;math;sortings,False,,False,
+1640467,177B1,binary search;constructive algorithms;dp;two pointers,False,,True,implementation;greedy
+1637147,176D,dp,True,dp,True,strings
+1649130,178C3,binary search;greedy;sortings,False,,False,
+1611047,172A,brute force;implementation,False,,False,
+1640719,177E1,brute force;dp;implementation;two pointers,False,,True,binary search
+1611050,172C,implementation;sortings,False,,True,data structures
+1649054,178F2,combinatorics;dp;probabilities;trees,False,,True,dfs and similar;brute force;strings
+1640877,177F2,constructive algorithms;dfs and similar;graphs;implementation;sortings,True,dfs and similar,False,
+1640471,177D1,brute force;data structures;dfs and similar;dp;strings;trees,False,,False,
+1649132,178C1,brute force;constructive algorithms;greedy;implementation;sortings;strings,False,,False,
+1637191,176B,dp,False,,False,
+1660828,180C,dp,False,,False,
+1649050,178A3,constructive algorithms;math;sortings,False,,False,
+1649135,178D1,brute force;math;number theory,False,,False,
+1649139,178D3,brute force;dp;implementation,False,,False,
+1669217,181B,binary search;brute force,False,,False,
+1640468,177B2,brute force;implementation,False,,False,
+1649055,178F3,dfs and similar;flows;graph matchings;graphs,False,,True,implementation;strings
+1669215,181A,brute force;geometry;implementation,False,,False,
+1640470,177C2,constructive algorithms;greedy;math,False,,True,dfs and similar
+1648985,178A1,geometry;math,False,,False,
+1655170,18A,brute force;geometry,False,,False,
+1682904,185A,math,False,,True,divide and conquer
+1648986,178A2,geometry;greedy;math,False,,False,
+1682992,185B,math;ternary search,False,,False,
+1674292,182E,dp,False,,False,
+1661052,180E,binary search;dp;two pointers,True,two pointers,False,
+1655770,18D,brute force;dp;greedy,False,,False,
+1669219,181C,games;graph matchings;greedy,False,,False,
+1648980,178B3,constructive algorithms;math,False,,True,dfs and similar;implementation
+1679242,183A,constructive algorithms;math,False,,False,
+1679240,183E,greedy,False,,True,binary search
+1689703,186A,implementation;strings,True,strings,False,
+1696298,187A,greedy,False,,False,
+1679244,183B,brute force;geometry,False,,False,
+1702190,189B,brute force;math,False,,True,implementation
+1696711,187D,data structures,False,,False,
+1674299,182A,geometry;graphs;implementation;shortest paths,False,,False,
+1679217,183D,dp;greedy;probabilities,True,dp;greedy;probabilities,True,implementation
+1702042,189C,greedy;implementation,False,,False,
+1655159,18B,brute force;math,False,,False,
+1679189,183C,dfs and similar,True,dfs and similar,True,implementation;divide and conquer
+1674083,182B,implementation,False,,False,
+1696351,187E,data structures;greedy,False,,True,two pointers
+1689896,186B,greedy;sortings,False,,False,
+1649143,178E2,brute force;data structures;greedy;implementation;sortings,False,,True,dfs and similar;geometry
+1701833,189A,brute force;dp,True,dp,False,
+1683181,185D,math;number theory,False,,False,
+1711217,19B,dp,True,dp,False,
+1655401,18E,dp,False,,True,implementation
+1728972,192B,brute force;implementation,False,,False,
+1716596,190E,data structures;dsu;graphs;hashing;sortings,False,,True,dfs and similar
+1660805,180D,greedy;strings,False,,False,
+1690658,186E,,False,,True,dp
+1728970,192A,binary search;brute force;implementation,True,implementation,False,
+1722261,191E,binary search;data structures;trees,False,,False,
+1735943,193E,brute force;math;matrices,False,,False,
+1711290,19A,implementation,False,,False,
+1690131,186D,math;number theory;probabilities,False,,False,
+1716362,190A,greedy;math,False,,False,
+1735630,193D,data structures,True,data structures,True,implementation
+1729554,192D,brute force;constructive algorithms,False,,False,
+1740421,194B,math,False,,False,
+1716379,190B,geometry,True,geometry,False,
+1746738,195D,geometry;math;sortings,False,,False,
+1746538,195B,data structures;implementation;math,False,,False,
+1689725,186C,dp;math;matrices;number theory,False,,True,divide and conquer
+1740201,194C,constructive algorithms;dfs and similar;graphs;implementation;matrices;strings,True,dfs and similar,False,
+1740435,194D,,False,,False,
+1746556,195E,data structures;dsu;graphs,False,,False,
+1740437,194E,math,False,,True,strings
+1716367,190D,two pointers,True,two pointers,False,
+1771238,199B,geometry,False,,False,
+1729062,192C,dp,True,dp,False,
+1722316,191B,greedy,False,,False,
+1790846,200A,brute force;data structures,True,data structures,True,dfs and similar
+1702487,189E,binary search;shortest paths,True,binary search,False,
+1752277,196B,dfs and similar;graphs,True,dfs and similar,True,implementation
+1696340,187C,dfs and similar;dsu,False,,True,binary search
+1746500,195A,binary search;brute force;math,False,,False,
+1771525,199E,binary search;geometry,True,binary search,True,dfs and similar
+1806992,202A,binary search;bitmasks;brute force;greedy;implementation;strings,True,strings,False,
+1790853,200D,binary search;brute force;expression parsing;implementation,False,,False,
+1799540,201B,math;ternary search,False,,True,geometry
+1764442,198E,binary search;data structures;sortings,False,,True,greedy
+1771226,199A,brute force;constructive algorithms;implementation;number theory,False,,False,
+1696339,187B,dp;shortest paths,True,dp,False,
+1758119,197B,math,False,,True,divide and conquer
+1782310,20A,implementation,False,,False,
+1813547,203D,geometry;implementation;math,False,,False,
+1799244,201A,constructive algorithms;dp;math,False,,True,dfs and similar
+1820670,204B,binary search;data structures,False,,False,
+1827319,205B,brute force;greedy,False,,False,
+1782299,20C,graphs;shortest paths,False,,False,
+1799928,201E,binary search;combinatorics,False,,False,
+1764446,198C,binary search;geometry,True,binary search,False,
+1782878,20B,math,False,,False,
+1735887,193C,constructive algorithms;greedy;math;matrices,False,,True,strings
+1833489,207B1,brute force;constructive algorithms;greedy;math,False,,True,dp
+1833502,207D6,,,,,
+1833490,207B2,combinatorics;constructive algorithms;strings,False,,False,
+1813549,203A,brute force;implementation,False,,False,
+1799684,201C,dp,False,,False,
+1827335,205D,binary search;brute force;sortings,False,,False,
+1807342,202E,data structures;dp,False,,False,
+1833506,207D9,,,,,
+1833508,207D10,,,,,
+1846638,21B,implementation;math,False,,False,
+1853508,212B,bitmasks;hashing;implementation,False,,False,
+1833495,207D1,,,,,
+1833499,207D3,,,,,
+1853509,212D,binary search;data structures;dsu,False,,False,
+1846769,21A,implementation;strings,True,implementation,False,
+1833491,207B3,,,,,
+1833500,207D4,brute force;data structures;geometry;implementation;two pointers,True,implementation,False,
+1842979,209B,constructive algorithms;math,False,,False,
+1853510,212A,flows;graphs,False,,False,
+1813514,203C,greedy;sortings,False,,False,
+1834869,208B,dfs and similar;dp,False,,False,
+1858898,213E,data structures;hashing;strings,False,,False,
+1820627,204C,math;probabilities,True,probabilities,False,
+1858899,213D,constructive algorithms;geometry,True,geometry,False,
+1864555,214A,brute force,False,,False,
+1870448,215A,brute force;implementation,False,,False,
+1813797,203E,greedy;sortings;two pointers,False,,False,
+1853461,212C,combinatorics;dp;math,False,,False,
+1842685,209A,dp;math,False,,False,
+1864545,214B,brute force;constructive algorithms;greedy;math,False,,False,
+1834447,208E,binary search;data structures;dfs and similar;trees,True,data structures;dfs and similar,False,
+1827344,205A,brute force;implementation,False,,False,
+1865037,214C,brute force;greedy,False,,True,dp
+1870476,215D,greedy,False,,False,
+1846635,21C,binary search;dp;sortings,False,,True,divide and conquer
+1858520,213A,dfs and similar;greedy,False,,True,dp
+1897240,219B,implementation,False,,False,
+1878236,216E,math;number theory,False,,True,dfs and similar;implementation
+1886644,217B,brute force;math,False,,True,dfs and similar
+1858382,213C,dp,True,dp,False,
+1887392,217D,bitmasks;brute force;combinatorics;dfs and similar;math,False,,False,
+1870553,215C,brute force;implementation,False,,False,
+1878258,216C,greedy,False,,False,
+1878182,216A,implementation;math,False,,False,
+1907196,22B,brute force;dp,False,,False,
+1878289,216D,binary search;sortings;two pointers,False,,False,
+1878204,216B,dfs and similar;implementation,False,,True,divide and conquer
+1865042,214E,dp,True,dp,False,
+1907125,22C,graphs,False,,True,divide and conquer
+1892201,218A,brute force;constructive algorithms;implementation,False,,False,
+1914068,220A,implementation;sortings,False,,False,
+1853384,212E,dfs and similar;dp;trees,True,dp,False,
+1887385,217C,divide and conquer;dp;expression parsing,False,,False,
+1892219,218C,dfs and similar;dsu;graphs,True,dfs and similar,False,
+1892442,218E,,False,,True,expression parsing
+1915346,220D,geometry;math,False,,False,
+1892162,218B,implementation,False,,False,
+1928347,222A,brute force;implementation,False,,False,
+1870478,215E,combinatorics;dp;number theory,False,,True,divide and conquer;strings
+1907195,22A,brute force,False,,False,
+1921794,221C,sortings,False,,False,
+1907203,22D,greedy;sortings,False,,False,
+1897459,219E,data structures,False,,False,
+1928676,222C,implementation;math;number theory;sortings,False,,False,
+1892440,218D,implementation,False,,False,
+1933538,223A,data structures;expression parsing;implementation,False,,False,
+1928683,222E,dp;matrices,False,,False,
+1897267,219A,implementation;strings,False,,False,
+1950227,225B,binary search;greedy;number theory,True,greedy,False,
+1921766,221D,data structures,False,,False,
+1936374,223D,geometry;graphs,False,,True,dfs and similar
+1955328,226D,constructive algorithms;greedy,False,,False,
+1921773,221A,implementation;math,False,,False,
+1950186,225C,dp;matrices,False,,False,
+1907321,22E,dfs and similar;graphs;trees,False,,True,implementation
+1921755,221B,implementation,False,,True,strings
+1961643,227A,geometry,False,,False,
+1922117,221E,,False,,False,
+1928213,222B,data structures;implementation,False,,False,
+1914465,220C,data structures,False,,False,
+1943356,224C,data structures,False,,False,
+1966678,228A,implementation,False,,False,
+1942802,224A,brute force;geometry;math,False,,False,
+1928682,222D,binary search;greedy;sortings;two pointers,False,,True,implementation
+1955469,226A,math,False,,False,
+1897279,219D,dfs and similar;dp;graphs;trees,True,dfs and similar,False,
+1942903,224B,bitmasks;implementation;two pointers,True,two pointers,False,
+1933535,223B,data structures;dp;strings,False,,False,
+1976214,229A,brute force;two pointers,False,,False,
+1988770,230C,binary search;data structures;dp;implementation,False,,False,
+1933450,223C,combinatorics;math;number theory,True,combinatorics,True,dfs and similar
+1982191,23A,brute force;greedy,False,,False,
+1961729,227C,math,False,,False,
+1950546,225E,math;number theory,False,,False,
+1976254,229E,combinatorics;dp;math;probabilities,False,,True,expression parsing
+1955357,226C,data structures;implementation;math;matrices;number theory,False,,False,
+1955413,226B,greedy,False,,False,
+1961246,227B,implementation,False,,False,
+1961602,227E,matrices;number theory,False,,False,
+2009272,233A,implementation;math,False,,False,
+1986739,230A,greedy;sortings,False,,False,
+1982412,23C,constructive algorithms;sortings,False,,True,implementation
+1966666,228B,brute force;implementation,False,,True,matrices
+2009562,233C,combinatorics;graphs;matrices,False,,False,
+2017015,234A,implementation,False,,False,
+1967267,228C,dp;hashing,False,,True,implementation
+1976310,229C,combinatorics;graphs;math,True,graphs,False,
+1992591,231D,brute force;geometry,False,,False,
+1976377,229D,dp;greedy;two pointers,True,dp,False,
+2027300,236A,brute force;implementation;strings,False,,False,
+1993178,231B,constructive algorithms;greedy,False,,False,
+1986859,230D,binary search;graphs;shortest paths,False,,False,
+2024071,235E,combinatorics;dp;implementation;math;number theory,False,,False,
+1967424,228D,data structures,False,,False,
+1943361,224E,combinatorics;math;number theory,False,,False,
+1982180,23B,constructive algorithms;graphs;math,False,,False,
+1961762,227D,math;sortings,False,,False,
+2009264,233B,binary search;brute force;math,False,,False,
+2017772,234H,constructive algorithms;greedy,True,greedy,False,
+2023396,235D,graphs,True,graphs,True,dfs and similar
+2017770,234G,constructive algorithms;divide and conquer;implementation,True,divide and conquer,False,
+2056916,24A,graphs,False,,False,
+2017166,234D,implementation,False,,False,
+2017058,234B,sortings,False,,True,implementation
+2017766,234E,implementation,False,,True,divide and conquer
+2062988,240C,constructive algorithms;implementation,False,,True,divide and conquer
+2034818,237A,implementation,False,,False,
+2017192,234C,dp;implementation,True,implementation,True,string suffix structures
+2023541,235B,dp;math;probabilities,True,probabilities,False,
+2062987,240A,implementation,False,,False,
+2035921,237D,dfs and similar;graphs;greedy;trees,True,dfs and similar,False,
+2051785,239C,combinatorics;constructive algorithms;math,False,,False,
+2070000,241G,constructive algorithms,False,,False,
+2027310,236B,implementation;number theory,False,,False,
+2041964,238B,constructive algorithms,False,,False,
+2051227,239A,greedy;implementation;math,False,,False,
+2062989,240D,constructive algorithms;greedy,False,,False,
+2057320,24D,dp;math;probabilities,True,probabilities,False,
+2062990,240B,dp,True,dp,False,
+2069997,241C,geometry;implementation,True,implementation,True,data structures
+2069829,241A,greedy,False,,False,
+2051224,239B,brute force;implementation,False,,True,dp
+2077968,242B,implementation;sortings,False,,False,
+2034874,237C,binary search;number theory;two pointers,True,binary search,False,
+2101609,245B,implementation;strings,False,,False,
+1995669,231E,data structures;dfs and similar;dp;graphs;trees,True,dfs and similar;trees,False,
+2092053,244A,implementation,False,,True,divide and conquer
+2017324,234F,dp,True,dp,False,
+2042085,238D,data structures;implementation,False,,False,
+2085081,243E,data structures,False,,True,implementation
+2069951,241D,,False,,False,
+2084759,243C,dfs and similar;implementation,False,,False,
+2101971,245A,implementation,False,,False,
+2101875,245F,binary search;brute force;implementation;strings,False,,False,
+2041987,238E,dp;graphs;shortest paths,True,shortest paths,False,
+2105685,246A,constructive algorithms;greedy;sortings,False,,False,
+2084860,243D,data structures;dp;geometry;two pointers,False,,False,
+2105620,246B,greedy;math,False,,False,
+2077928,242A,brute force;implementation,False,,False,
+2069813,241E,graphs;shortest paths,False,,True,implementation
+2113921,248A,implementation,False,,False,
+2069871,241B,binary search;bitmasks;data structures;math,False,,False,
+2092094,244E,,False,,False,
+2062728,240F,data structures,False,,False,
+2118750,249C,dp;probabilities,True,probabilities,False,
+2084766,243A,bitmasks,False,,True,implementation
+2105710,246C,brute force;constructive algorithms;greedy,False,,False,
+2101712,245G,brute force;graphs,False,,False,
+2078147,242D,dfs and similar;graphs;greedy,True,greedy,False,
+2113930,248C,binary search;geometry,True,geometry,False,
+2092063,244C,bitmasks;divide and conquer;math,False,,False,
+2123328,25B,implementation,False,,True,divide and conquer
+2118831,249A,geometry,True,geometry,True,dfs and similar
+2118727,249E,math,False,,True,implementation
+2077919,242E,bitmasks;data structures,False,,True,implementation
+2131774,250E,brute force,False,,False,
+2101539,245H,dp;hashing;strings,True,dp,False,
+2051786,239D,constructive algorithms;greedy;sortings,False,,False,
+2105670,246D,brute force;dfs and similar;graphs,False,,False,
+2101710,245C,greedy,False,,False,
+2141347,251A,binary search;combinatorics;two pointers,True,binary search,True,dfs and similar
+2131685,250A,greedy,False,,False,
+2153812,253A,greedy,False,,False,
+2141443,251D,bitmasks;math,False,,True,divide and conquer
+2102161,245D,constructive algorithms;greedy,False,,False,
+2113900,248B,math;number theory,False,,False,
+2051789,239E,,False,,True,dfs and similar;implementation
+2147515,252E,dp;number theory,False,,True,greedy
+2131640,250D,geometry;ternary search;two pointers,False,,True,dfs and similar
+2155391,253E,binary search;data structures;implementation;sortings,False,,False,
+2147426,252B,brute force;sortings,False,,False,
+2123387,25A,brute force,False,,False,
+2173679,256B,binary search;brute force;math,True,binary search,False,
+2113929,248D,binary search;greedy;implementation,True,binary search,False,
+2167926,255A,implementation,False,,False,
+2183945,257B,games;greedy;implementation,False,,False,
+2147352,252C,binary search;combinatorics;two pointers,False,,False,
+2154394,253D,brute force;two pointers,False,,False,
+2173667,256A,binary search;dp;two pointers,True,dp,True,implementation
+2123964,25C,graphs;shortest paths,False,,False,
+2141509,251B,implementation;math,False,,False,
+2183834,257A,greedy;implementation;sortings,False,,False,
+2131757,250C,greedy,False,,False,
+2197651,259C,greedy;strings,False,,False,
+2167919,255B,implementation,False,,False,
+2118748,249B,binary search;greedy,True,binary search,False,
+2161786,254A,constructive algorithms;sortings,False,,False,
+2147356,252A,brute force;implementation,False,,False,
+2161869,254B,brute force;implementation,False,,False,
+2153768,253B,binary search;dp;sortings;two pointers,True,binary search,False,
+2197667,259B,brute force;implementation,False,,False,
+2168389,255D,binary search;implementation;math,True,binary search,False,
+2162068,254E,dp;implementation,False,,False,
+2190228,258D,dp;math;probabilities,True,probabilities,False,
+2173748,256C,games,True,games,False,
+2210498,260A,implementation;math,False,,False,
+2142265,251E,dfs and similar;dp;implementation;trees,True,dfs and similar,False,
+2183877,257C,brute force;geometry;math,False,,False,
+2190225,258C,binary search;combinatorics;dp;math,False,,False,
+2161912,254C,greedy;strings,True,strings,False,
+2173681,256D,dp,False,,False,
+2225714,262A,implementation,False,,False,
+2197724,259A,brute force;strings,False,,False,
+2228904,263A,implementation,False,,False,
+2204666,26A,number theory,False,,False,
+2190325,258B,brute force;combinatorics;dp,False,,False,
+2168861,255E,games;implementation;math,True,games,False,
+2190216,258A,greedy;math,False,,False,
+2205126,26D,combinatorics;math;probabilities,False,,False,
+2210492,260B,brute force;implementation;strings,False,,False,
+2225793,262C,greedy;sortings,False,,True,implementation
+2184322,257D,greedy;math,True,greedy,False,
+2210538,260C,constructive algorithms;greedy;implementation,False,,False,
+2237902,264A,constructive algorithms;data structures;implementation;two pointers,True,data structures,False,
+2204692,26B,greedy,False,,False,
+2225735,262B,greedy,False,,False,
+2216575,261D,dp,True,dp,False,
+2249648,266B,constructive algorithms;graph matchings;implementation;shortest paths,False,,False,
+2216572,261C,constructive algorithms;dp;math,False,,False,
+2162075,254D,brute force;dfs and similar;graphs;implementation;shortest paths,False,,False,
+2249661,266A,implementation,False,,False,
+2210527,260E,binary search;brute force;data structures,False,,True,divide and conquer
+2246105,265C,greedy;implementation,False,,False,
+2198099,259E,binary search;combinatorics;math,False,,False,
+2237950,264B,dp;number theory,True,dp,False,
+2257080,267C,math;matrices,False,,True,implementation
+2261656,268E,math;probabilities;sortings,False,,False,
+2237734,264C,dp,False,,False,
+2226404,262D,combinatorics;dp,False,,True,probabilities
+2246028,265B,greedy;implementation,False,,True,trees
+2226051,262E,dp,False,,False,
+2246018,265A,implementation,False,,True,strings
+2283485,270A,geometry;implementation;math,False,,False,
+2289414,271A,brute force,False,,False,
+2256869,267A,math;number theory,False,,True,dfs and similar
+2284699,270E,dfs and similar;sortings,True,dfs and similar,False,
+2256913,267B,dfs and similar;graphs,True,dfs and similar,False,
+2261465,268C,constructive algorithms;implementation,False,,False,
+2229115,263D,dfs and similar;graphs,True,dfs and similar,False,
+2261471,268A,brute force,False,,True,games
+2299626,272A,implementation;math,False,,False,
+2237754,264E,data structures;dp,True,data structures,True,binary search;trees
+2270468,269C,constructive algorithms;flows;graphs;greedy,False,,False,
+2270439,269B,dp,False,,True,divide and conquer
+2229000,263B,greedy;implementation;sortings,False,,False,
+2277845,27C,constructive algorithms;greedy,False,,False,
+2303838,273A,,False,,False,
+2283713,270D,dp,False,,False,
+2303893,273C,graphs;greedy,True,greedy,True,divide and conquer
+2303897,273D,dp,False,,False,
+2283793,270B,data structures;greedy;implementation,False,,False,
+2319980,275A,implementation,False,,False,
+2277789,27A,implementation;sortings,False,,False,
+2254561,266E,data structures;math,False,,True,implementation
+2277837,27B,bitmasks;brute force;dfs and similar;greedy,False,,True,games
+2314881,274E,data structures;implementation,False,,False,
+2303878,273E,dp;games,False,,True,combinatorics
+2270515,269A,greedy;math,False,,False,
+2290514,271C,constructive algorithms;implementation,False,,True,divide and conquer
+2284376,270C,binary search;greedy;implementation;math;sortings,False,,False,
+2246078,265D,dp;number theory,True,dp,True,implementation
+2341320,278D,constructive algorithms;geometry,False,,False,
+2320006,275C,binary search;greedy;sortings,False,,False,
+2277852,27D,2-sat;dfs and similar;dsu;graphs,False,,False,
+2344696,279A,brute force;geometry;implementation,False,,False,
+2334011,277A,dfs and similar;dsu,False,,False,
+2320009,275B,constructive algorithms;implementation,False,,False,
+2345079,279E,dp;games;greedy;number theory,False,,False,
+2314092,274B,dfs and similar;dp;greedy;trees,True,dfs and similar,True,implementation
+2270977,269E,geometry;math;strings,True,strings,False,
+2344697,279B,binary search;brute force;implementation;two pointers,True,implementation;two pointers,False,
+2334112,277B,constructive algorithms;geometry,False,,False,
+2364215,281A,implementation;strings,False,,False,
+2370826,282A,implementation,False,,False,
+2323764,276D,bitmasks;dp;greedy;implementation;math,False,,False,
+2314309,274D,dfs and similar;graphs;greedy;sortings,False,,False,
+2314122,274A,binary search;greedy;sortings,False,,False,
+2334641,277C,games;implementation,False,,False,
+2334824,277D,dp;probabilities,False,,False,
+2370892,282E,bitmasks;data structures;trees,False,,True,string suffix structures
+2299647,272D,combinatorics;math;sortings,False,,False,
+2370962,282C,constructive algorithms;implementation;math,True,implementation,True,strings
+2358848,280B,data structures;implementation;two pointers,False,,False,
+2341332,278E,games,False,,True,divide and conquer
+2323782,276B,games;greedy,False,,False,
+2388419,284B,brute force;implementation,False,,False,
+2374178,282D,dp;games,False,,True,dfs and similar
+2381450,283B,dfs and similar;dp;graphs,False,,True,implementation
+2388319,284A,implementation;math;number theory,False,,False,
+2392723,285B,implementation,True,implementation,False,
+2340715,278A,implementation,False,,False,
+2388539,284D,dfs and similar;dp,False,,False,
+2358753,280A,geometry,False,,False,
+2354771,28D,binary search;data structures;dp;hashing,True,dp,False,
+2409416,287D,,False,,True,implementation
+2392791,285A,greedy;implementation,False,,True,two pointers
+2354696,28C,combinatorics;dp;probabilities,True,probabilities,True,divide and conquer
+2364282,281B,brute force;implementation;two pointers,False,,False,
+2369195,281E,math,False,,True,dfs and similar;probabilities
+2415077,288B,combinatorics,False,,False,
+2370842,282B,greedy;math,False,,False,
+2364239,281C,geometry;implementation,True,geometry;implementation,True,math
+2409415,287E,data structures;greedy,False,,False,
+2358936,280D,data structures;flows;graphs;implementation,False,,True,string suffix structures
+2409393,287B,binary search;math,False,,False,
+2393352,285E,combinatorics;dp;math,True,dp,False,
+2399760,286C,greedy;implementation,True,implementation,False,
+2415332,288E,dp;implementation;math,False,,False,
+2423666,289B,brute force;dp;implementation;sortings;ternary search,False,,False,
+2423701,289E,data structures;greedy;implementation;math,False,,False,
+2409330,287A,brute force;implementation,False,,False,
+2435053,290A,implementation,False,,False,
+2435071,290D,implementation,False,,False,
+2434978,290C,graph matchings;implementation;trees,True,implementation,True,dfs and similar
+2443104,291B,implementation;strings,False,,False,
+2392644,285C,greedy;implementation;sortings,True,implementation,False,
+2415153,288C,implementation;math,False,,False,
+2393500,285D,bitmasks;combinatorics;dp;implementation;meet-in-the-middle,False,,False,
+2443123,291A,implementation;sortings,False,,False,
+2399827,286A,constructive algorithms;math,False,,False,
+2423674,289C,constructive algorithms;implementation,False,,False,
+2423667,289A,brute force;implementation,False,,False,
+2429822,29A,brute force,False,,False,
+2456532,293A,games;greedy,False,,True,strings
+2409344,287C,constructive algorithms;greedy;implementation;math,False,,True,dfs and similar
+2451624,292B,graphs;implementation,False,,False,
+2415291,288D,combinatorics;dfs and similar;trees,True,dfs and similar,True,divide and conquer
+2443192,291C,bitmasks;brute force;implementation,False,,False,
+2464373,294A,implementation;math,False,,False,
+2381504,283E,combinatorics;data structures;math,False,,False,
+2464898,294D,brute force;implementation;number theory,False,,False,
+2423945,289D,brute force;combinatorics;dfs and similar;math,False,,True,graphs
+2434990,290B,implementation,False,,False,
+2435157,290E,constructive algorithms,False,,False,
+2451979,292D,data structures;dfs and similar;dp;dsu,True,data structures;dfs and similar,False,
+2451898,292A,implementation,False,,False,
+2443395,291D,greedy,False,,True,dfs and similar
+2399737,286E,constructive algorithms;fft;math,False,,False,
+2492466,298A,greedy;implementation,False,,False,
+2451638,292E,data structures,False,,False,
+2492493,298B,brute force;greedy;implementation,False,,False,
+2429828,29D,constructive algorithms;dfs and similar;trees,True,dfs and similar,False,
+2464383,294B,dp;greedy,False,,False,
+2456605,293C,brute force;math;number theory,False,,True,divide and conquer
+2497622,299C,games;greedy,False,,True,strings
+2503457,3C,brute force;games;implementation,False,,False,
+2464403,294C,combinatorics;number theory,False,,False,
+2497509,299B,brute force;implementation,False,,False,
+2512311,30A,brute force;math,False,,False,
+2503434,3B,greedy;sortings,True,greedy,False,
+2521833,31A,implementation,False,,True,brute force
+2492655,298C,combinatorics;constructive algorithms;math;number theory,False,,True,string suffix structures
+2483846,297A,constructive algorithms,False,,True,string suffix structures
+2483816,297B,constructive algorithms;greedy,False,,True,implementation
+2527550,32B,expression parsing;implementation,False,,False,
+2521959,31C,implementation,False,,False,
+2512562,30E,binary search;constructive algorithms;data structures;greedy;hashing;strings,False,,True,string suffix structures
+2479646,296B,combinatorics;dp,False,,True,strings
+2521956,31E,dp,True,dp,False,
+2479750,296D,dp;graphs,False,,True,implementation;shortest paths
+2471038,295E,data structures,True,data structures,True,dfs and similar;binary search;trees
+2527570,32A,brute force,False,,False,
+2527688,32C,math,False,,False,
+2521958,31D,dfs and similar;implementation,False,,True,divide and conquer
+2527691,32D,implementation,False,,False,
+2539288,34A,implementation,False,,False,
+2555036,36A,implementation,False,,False,
+2452187,292C,brute force,False,,False,
+2494008,298E,constructive algorithms;sortings,False,,False,
+2539378,34D,dfs and similar;graphs,True,dfs and similar,False,
+2548998,35A,implementation,False,,False,
+2549227,35D,dp;greedy,False,,False,
+2533930,33C,greedy,False,,True,implementation;string suffix structures
+2512374,30B,implementation,False,,False,
+2521864,31B,greedy;implementation;strings,True,implementation;strings,False,
+2483842,297C,constructive algorithms,False,,False,
+2503460,3D,greedy,False,,False,
+2555386,36C,geometry;implementation,False,,False,
+2549218,35E,data structures;sortings,False,,False,
+2555387,36D,games,False,,False,
+2539381,34C,expression parsing;implementation;sortings;strings,False,,False,
+2570774,38B,brute force;implementation;math,False,,False,
+2570651,38A,implementation,False,,False,
+2539526,34E,brute force;implementation;math,False,,False,
+2576102,39A,expression parsing;greedy,False,,True,data structures
+2564673,37E,graphs;greedy;shortest paths,False,,True,dfs and similar
+2576126,39D,math,False,,False,
+2580828,4A,brute force;math,False,,True,divide and conquer
+2497937,299D,,False,,True,dfs and similar
+2533919,33B,shortest paths,False,,True,strings
+2512373,30C,dp;probabilities,True,dp,False,
+2580830,4C,data structures;hashing;implementation,True,implementation,False,
+2588700,40A,constructive algorithms;geometry;implementation;math,False,,False,
+2576124,39H,implementation,False,,False,
+2581045,4B,constructive algorithms;greedy,False,,False,
+2576118,39B,greedy,False,,False,
+2570866,38E,dp;sortings,True,dp,False,
+2539297,34B,greedy;sortings,False,,False,
+2563823,37A,sortings,False,,False,
+2570610,38G,data structures,False,,False,
+2588841,40B,math,False,,False,
+2591716,41B,brute force,False,,False,
+2602676,42D,constructive algorithms;math,False,,False,
+2608137,43D,brute force;constructive algorithms;implementation,False,,True,dfs and similar
+2564672,37D,combinatorics;dp;math,True,combinatorics;dp,True,dfs and similar
+2591920,41D,dp,True,dp,False,
+2576133,39J,hashing;implementation;strings,True,strings,False,
+2615240,44H,dp,True,dp,False,
+2607564,43B,implementation;strings,False,,False,
+2607662,43C,greedy,False,,False,
+2614942,44E,dp,False,,True,divide and conquer
+2622958,45F,greedy,False,,False,
+2570893,38C,brute force,False,,False,
+2615402,44J,constructive algorithms;greedy,False,,False,
+2581752,4D,dp;sortings,False,,False,
+2576129,39F,implementation,False,,False,
+2622562,45B,dp;dsu,False,,False,
+2628366,46A,brute force;implementation,False,,False,
+2615403,44D,math,False,,False,
+2591648,41C,expression parsing;implementation,False,,False,
+2591623,41A,implementation;strings,False,,False,
+2628370,46D,data structures;implementation,True,data structures,False,
+2642711,48H,constructive algorithms,False,,False,
+2615108,44C,implementation,False,,True,schedules
+2628851,46G,geometry,False,,False,
+2642113,48A,implementation;schedules,False,,False,
+2650196,49A,implementation,False,,False,
+2615413,44I,brute force;combinatorics,False,,False,
+2628334,46C,two pointers,False,,False,
+2622354,45A,implementation,False,,False,
+2622943,45E,constructive algorithms;greedy,False,,False,
+2607587,43A,strings,False,,False,
+2614885,44A,implementation,False,,False,
+2642709,48G,dp;trees;two pointers,False,,True,shortest paths
+2591907,41E,constructive algorithms;graphs;greedy,False,,True,divide and conquer
+2636347,47E,data structures;geometry;sortings,False,,False,
+2588845,40D,math,False,,False,
+2628371,46E,data structures;dp,False,,False,
+2656448,5D,implementation;math,False,,False,
+2678385,52A,implementation,False,,False,
+2635949,47D,brute force,False,,False,
+2622259,45G,number theory,False,,True,dfs and similar;divide and conquer
+2602677,42E,dfs and similar;graphs;trees,False,,False,
+2684830,53C,constructive algorithms,False,,True,two pointers
+2642750,48D,greedy,False,,False,
+2684898,53A,implementation,False,,False,
+2669443,51B,expression parsing,True,expression parsing,False,
+2622353,45I,greedy,False,,False,
+2656659,5E,data structures,False,,False,
+2690081,54A,implementation,False,,False,
+2650235,49B,math,False,,False,
+2661260,50B,strings,False,,False,
+2699853,55A,implementation;math,False,,False,
+2650230,49D,brute force;dp;implementation,False,,False,
+2678447,52B,combinatorics,False,,False,
+2642040,48E,dp;games;graphs,False,,True,implementation
+2661184,50A,greedy;math,False,,False,
+2690350,54D,brute force;dp;strings,False,,False,
+2716944,58B,greedy,False,,False,
+2669419,51A,implementation,False,,True,dfs and similar
+2665889,50C,geometry,False,,False,
+2690089,54B,hashing;implementation,False,,False,
+2650229,49C,constructive algorithms;math,False,,False,
+2661304,50E,math,False,,False,
+2706401,56B,implementation,False,,False,
+2678362,52C,data structures,False,,False,
+2716919,58A,greedy;strings,False,,False,
+2711433,57E,math;shortest paths,False,,False,
+2717744,58C,brute force,False,,True,trees
+2684803,53D,sortings,False,,False,
+2706418,56A,implementation,False,,False,
+2723487,59B,implementation;number theory,False,,False,
+2669465,51F,dfs and similar;dp;graphs;trees,False,,False,
+2723408,59A,implementation;strings,False,,False,
+2669608,51E,combinatorics;graphs;matrices,True,graphs,True,dfs and similar;implementation;brute force;divide and conquer
+2706412,56D,dp,True,dp,True,strings
+2730755,6B,implementation,False,,False,
+2699628,55C,games,False,,False,
+2684903,53B,binary search;implementation,False,,False,
+2730805,6C,greedy;two pointers,True,two pointers,False,
+2622634,45H,graphs,False,,True,dfs and similar
+2722921,58E,dp,False,,True,implementation;expression parsing
+2706413,56C,data structures;expression parsing;implementation,True,expression parsing,False,
+2739595,60A,implementation;two pointers,False,,False,
+2699608,55B,brute force,False,,False,
+2730878,6D,brute force;dp,False,,True,dfs and similar
+2699654,55E,geometry;two pointers,False,,False,
+2752932,62A,greedy;math,False,,False,
+2723710,59E,graphs;shortest paths,False,,True,dfs and similar
+2744957,61C,math,False,,False,
+2711417,57C,combinatorics;math,False,,False,
+2723688,59C,expression parsing,False,,False,
+2669369,51C,binary search;greedy,True,binary search,False,
+2730751,6A,brute force;geometry,False,,False,
+2730732,6E,binary search;data structures;dsu;trees;two pointers,False,,False,
+2760411,63D,constructive algorithms,False,,True,divide and conquer
+2744314,61B,strings,True,strings,False,
+2770473,65A,implementation;math,False,,False,
+2770485,65C,binary search;geometry,True,binary search,False,
+2760353,63A,implementation;sortings;strings,True,implementation,True,data structures
+2711415,57A,dfs and similar;greedy;implementation,False,,True,geometry
+2717429,58D,greedy;strings,False,,True,two pointers;divide and conquer
+2760413,63E,bitmasks;dfs and similar;dp;games;implementation,True,games,False,
+2706414,56E,binary search;data structures;sortings,False,,False,
+2796763,69A,implementation;math,False,,False,
+2784694,67A,dp;graphs;greedy;implementation,False,,False,
+2784762,67B,greedy,False,,True,implementation
+2779806,66B,brute force;implementation,False,,False,
+2743924,61D,dfs and similar;graphs;greedy;shortest paths;trees,True,dfs and similar,False,
+2784685,67D,binary search;data structures;dp,True,binary search,False,
+2790979,68C,brute force,False,,True,implementation
+2684929,53E,bitmasks;dp,False,,False,
+2743913,61A,implementation,False,,False,
+2723689,59D,constructive algorithms;greedy;implementation,False,,False,
+2784765,67E,geometry,False,,False,
+2790825,68A,implementation;number theory,False,,False,
+2744264,61E,data structures;trees,False,,False,
+2817667,71A,strings,False,,False,
+2780123,66D,constructive algorithms;math;number theory,False,,False,
+2812808,70A,math,False,,False,
+2790832,68B,binary search,True,binary search,False,
+2770394,65B,brute force;greedy;implementation,False,,False,
+2835556,74A,implementation,False,,False,
+2835869,74B,dp;games;greedy,False,,False,
+2796771,69B,greedy;implementation,False,,False,
+2780125,66E,data structures;dp,False,,False,
+2817727,71C,dp;math;number theory,False,,False,
+2784763,67C,dp,True,dp,True,implementation
+2779745,66A,implementation;strings,True,strings,False,
+2806609,7D,hashing;strings,False,,True,dfs and similar;string suffix structures
+2850088,76E,implementation;math,False,,False,
+2806644,7A,brute force;constructive algorithms,False,,False,
+2828485,73B,binary search;greedy;sortings,False,,False,
+2864511,78A,implementation;strings,False,,False,
+2796998,69C,implementation,True,implementation,True,dfs and similar
+2856312,77E,geometry,True,geometry,False,
+2797008,69E,data structures;implementation,False,,False,
+2864510,78B,constructive algorithms;implementation,False,,False,
+2843106,75D,data structures;dp;greedy;implementation;math;trees,False,,True,string suffix structures
+2872163,79E,math,False,,False,
+2813003,70B,expression parsing;greedy;strings,True,expression parsing,False,
+2872045,79A,greedy,False,,False,
+2871924,79D,bitmasks;dp;shortest paths,False,,False,
+2865062,78D,binary search;geometry;math;two pointers,True,geometry,False,
+2828381,73A,greedy;math,False,,False,
+2880549,8E,dp;graphs,False,,True,strings
+2893637,81B,implementation;strings,False,,False,
+2880510,8C,bitmasks;dp,True,dp,False,
+2880418,8B,constructive algorithms;graphs;implementation,True,implementation,False,
+2864632,78E,flows;graphs;shortest paths,False,,True,dfs and similar
+2850477,76D,dp;greedy;math,False,,False,
+2887845,80E,,False,,True,dfs and similar
+2828649,73E,math;number theory,False,,False,
+2898642,82A,implementation;math,False,,False,
+2913788,84A,math;number theory,False,,False,
+2850481,76F,binary search;data structures;dp,True,dp,False,
+2920191,85D,binary search;brute force;data structures;implementation,True,binary search;data structures,False,
+2907277,83E,bitmasks;dp,False,,True,divide and conquer;strings
+2899430,82B,constructive algorithms;hashing;implementation,False,,False,
+2901098,82E,geometry,True,geometry,True,dfs and similar;implementation
+2850493,76C,bitmasks;dp;math,False,,False,
+2842965,75C,binary search;number theory,True,binary search,False,
+2900234,82C,data structures;dfs and similar;sortings,True,dfs and similar,False,
+2871869,79C,data structures;dp;greedy;hashing;strings;two pointers,True,strings,False,
+2920174,85A,constructive algorithms;implementation,False,,False,
+2914372,84C,binary search;implementation,True,binary search,False,
+2907037,83D,dp;math;number theory,False,,False,
+2893796,81E,dfs and similar;dp;dsu;graphs;implementation;trees,False,,False,
+2926210,86A,math,False,,False,
+2934138,87B,implementation;strings,False,,False,
+2907033,83B,binary search;math;sortings,False,,False,
+2885891,80B,geometry;math,False,,False,
+2913983,84B,combinatorics;implementation,False,,False,
+2934251,87E,geometry,False,,True,implementation
+2906930,83A,math,False,,False,
+2941266,88A,brute force;implementation,False,,False,
+2961363,90E,,False,,False,
+2947536,89D,geometry,False,,True,implementation
+2947531,89A,greedy,False,,False,
+2933876,87A,implementation;math,False,,False,
+2977013,92B,greedy,False,,True,implementation;expression parsing
+2933961,87C,dp;games;math,False,,True,dfs and similar
+2977027,92A,implementation;math,False,,False,
+2952145,9A,math;probabilities,False,,False,
+2952211,9B,brute force;geometry;implementation,False,,False,
+2947537,89E,greedy,False,,False,
+2856334,77A,brute force;implementation,False,,False,
+2925640,86D,data structures;implementation;math;two pointers,False,,True,divide and conquer
+2961060,90B,implementation;strings,False,,True,data structures
+2947518,89C,brute force;data structures;implementation,False,,False,
+2920169,85B,data structures;greedy,True,data structures,True,dfs and similar;implementation
+2914063,84D,binary search;implementation,False,,False,
+2977957,92E,data structures;dsu;graphs,False,,True,trees
+2914769,84E,brute force;shortest paths,True,brute force,False,
+2997588,95B,dp;greedy,False,,True,brute force
+2920382,85C,binary search;dfs and similar;probabilities;sortings;trees,True,binary search,False,
+2953605,9E,dfs and similar;dsu;graphs,True,dfs and similar,False,
+2969501,91C,combinatorics;dsu;graphs,True,graphs,True,trees
+2990418,94B,graphs;implementation;math,False,,False,
+2952242,9D,combinatorics;divide and conquer;dp,True,dp,True,binary search;trees
+2941516,88E,,False,,True,dfs and similar
+2969810,91E,data structures;geometry,False,,True,dfs and similar;implementation
+2961200,90C,greedy;math,False,,False,
+2982367,93E,dp;math;number theory,False,,False,
+3001523,96A,implementation;strings,False,,False,
+2941400,88B,implementation,False,,False,
+2977017,92D,binary search;data structures;dp,False,,False,
+3008868,97C,binary search;graphs;math;shortest paths,False,,True,probabilities
+3017523,99A,strings,False,,False,
+3011979,98E,dp;games;math;probabilities,True,probabilities,False,
+3008756,97B,constructive algorithms;divide and conquer,False,,True,dfs and similar
+2990424,94C,math,False,,False,
+3023759,765B,greedy;implementation;strings,False,,False,
+3023645,765A,implementation;math,False,,False,
+2982333,93A,implementation,False,,False,
+3011955,98C,geometry;ternary search,True,geometry,True,binary search
+3029890,766B,constructive algorithms;geometry;greedy;math;number theory;sortings,False,,False,
+2977350,92C,binary search;data structures;dp;greedy,False,,False,
+3011956,98A,brute force;implementation,False,,False,
+3023611,765C,math,False,,False,
+3029898,766A,constructive algorithms;strings,True,strings,False,
+3011897,98D,constructive algorithms,False,,False,
+3042506,768D,dp;math;probabilities,True,dp;probabilities,False,
+2991214,94D,greedy;math,False,,False,
+3008760,97E,dfs and similar;dsu;graphs;trees,True,dfs and similar;graphs,True,implementation
+3003022,96D,graphs;shortest paths,False,,False,
+2969477,91A,greedy;strings,False,,False,
+3042606,768B,constructive algorithms;dfs and similar;divide and conquer,False,,False,
+3042579,768A,constructive algorithms;sortings,False,,False,
+3001563,96C,implementation;strings,False,,False,
+3023578,765D,constructive algorithms;dsu;math,False,,True,implementation
+2990407,94A,implementation;strings,False,,False,
+3048945,769B,greedy;two pointers,False,,False,
+3036146,767B,brute force;greedy,False,,False,
+3055451,770D,implementation,False,,False,
+3055458,770A,implementation,False,,False,
+3048957,769C,dfs and similar;graphs;greedy;shortest paths,True,dfs and similar,False,
+3048941,769A,implementation;sortings,False,,False,
+3061858,771B,constructive algorithms;greedy,False,,True,strings
+3018345,99C,brute force,False,,True,geometry
+3029904,766D,data structures;dfs and similar;dp;dsu;graphs,True,data structures,False,
+3074198,774C,constructive algorithms;greedy;implementation,False,,False,
+3017566,99B,implementation;sortings,False,,False,
+3055526,770B,implementation;math,False,,False,
+3036125,767A,data structures;implementation,False,,False,
+3068178,772A,binary search;math,True,binary search,False,
+3074989,774J,dp,False,,False,
+3029885,766C,brute force;dp;greedy;strings,True,dp,False,
+3083791,776A,brute force;implementation;strings,False,,False,
+3023717,765E,dfs and similar;dp;greedy;implementation;trees,True,dfs and similar;trees,False,
+3074607,774K,implementation;strings,False,,False,
+3083806,776B,constructive algorithms;number theory,False,,False,
+3036123,767D,binary search;data structures;greedy;sortings;two pointers,False,,False,
+3042610,768E,bitmasks;dp;games,False,,True,dfs and similar
+3075828,774H,constructive algorithms,False,,False,
+3074227,774D,constructive algorithms;implementation;sortings,False,,False,
+3083863,776D,2-sat;dfs and similar;dsu;graphs,True,dfs and similar,True,implementation
+3090086,777A,constructive algorithms;implementation;math,False,,False,
+3061857,771A,dfs and similar;dsu;graphs,False,,False,
+3068192,772B,geometry,False,,False,
+3090092,777C,binary search;data structures;dp;greedy;implementation;two pointers,False,,False,
+3076321,774A,ternary search,False,,True,divide and conquer
+3090115,777D,binary search;greedy;implementation;strings,True,strings,False,
+3084209,776F,constructive algorithms;data structures;divide and conquer;geometry;graphs;implementation;trees,True,graphs,False,
+3075017,774B,binary search;data structures;two pointers,False,,False,
+3103047,779C,constructive algorithms;greedy;sortings,False,,False,
+3024103,765G,brute force;dp;math;meet-in-the-middle;number theory,False,,True,chinese remainder theorem
+3096447,778E,dp;sortings,False,,False,
+3090087,777B,data structures;dp;greedy;sortings,False,,True,implementation
+3069249,772D,bitmasks;dp,False,,False,
+3075083,774L,binary search,True,binary search,False,
+3048935,769D,bitmasks;brute force;meet-in-the-middle,False,,False,
+3109517,780B,binary search,True,binary search,False,
+3103136,779D,binary search;strings,True,binary search,False,
+3036443,767E,greedy,False,,False,
+3072537,773D,dp;graphs;shortest paths,True,shortest paths,True,dfs and similar;implementation
+3109508,780A,implementation,False,,False,
+3072742,773E,data structures;sortings,False,,False,
+3096642,778D,constructive algorithms,False,,False,
+3109337,780D,2-sat;graphs;greedy;implementation;shortest paths;strings,False,,False,
+3122526,782A,implementation,False,,False,
+3072300,773C,binary search;constructive algorithms;greedy;math,False,,False,
+3103051,779B,brute force;greedy,False,,False,
+3064277,771F,geometry;two pointers,False,,False,
+3084199,776E,math;number theory,False,,True,dfs and similar
+3096537,778A,binary search;greedy;strings,True,binary search,False,
+3062508,771E,dp;greedy,True,dp,False,
+3129093,784E,brute force;implementation,False,,False,
+3109385,780E,constructive algorithms;dfs and similar;graphs,True,dfs and similar,True,divide and conquer
+3129123,784F,implementation,False,,False,
+3083815,776C,binary search;brute force;data structures;implementation;math,False,,True,hashing
+3085798,776G,bitmasks;combinatorics;dp,True,dp,True,implementation
+3115911,781D,bitmasks;brute force;dp;graphs;matrices,False,,True,dfs and similar
+3129227,784A,,False,,False,
+3129318,784G,,False,,True,implementation;expression parsing
+3116003,781A,brute force;constructive algorithms;dfs and similar;graphs;greedy;trees,True,dfs and similar,False,
+3130085,784B,,False,,False,
+3147946,787A,brute force;math;number theory,False,,False,
+3122560,782E,constructive algorithms;dfs and similar;graphs;greedy,True,dfs and similar,True,divide and conquer
+3109422,780C,dfs and similar;graphs;greedy;trees,True,dfs and similar;greedy,False,
+3090122,777E,brute force;data structures;dp;greedy;sortings,True,dp,False,
+3103053,779A,constructive algorithms;math,False,,False,
+3141632,786A,dfs and similar;dp;games,False,,True,implementation
+3130091,784C,implementation,False,,False,
+3109370,780F,bitmasks;dp;graphs;matrices,False,,False,
+3147930,787B,greedy;implementation;math,False,,False,
+3160849,789A,implementation;math,True,implementation,True,divide and conquer;greedy
+3160824,789B,brute force;implementation;math,True,implementation,False,
+3135631,785A,implementation;strings,False,,False,
+3122660,782D,graphs;greedy;shortest paths;strings,False,,True,implementation
+3122528,782C,dfs and similar;graphs;greedy;trees,True,dfs and similar,False,
+3170090,791B,dfs and similar;dsu;graphs,True,dfs and similar;graphs,False,
+3170100,791A,implementation,False,,False,
+3112012,780H,binary search;geometry;implementation;two pointers,False,,False,
+3170098,791C,constructive algorithms;greedy,False,,False,
+3154346,788D,constructive algorithms;divide and conquer;interactive,False,,True,binary search
+3135597,785C,binary search;math,True,binary search,False,
+3147990,787E,data structures;trees,False,,True,divide and conquer
+3161157,789E,brute force;dfs and similar;dp;graph matchings;graphs;math;shortest paths,True,dfs and similar,False,
+3135634,785B,greedy;sortings,False,,False,
+3136308,785D,combinatorics;dp;math;number theory,False,,False,
+3188990,794A,brute force;implementation,False,,False,
+3122530,782F,matrices,True,matrices,True,dfs and similar
+3154267,788C,dfs and similar;graphs;shortest paths,False,,False,
+3176392,792C,dp;greedy;math;number theory,False,,False,
+3182847,793G,data structures;divide and conquer;flows;graph matchings,False,,True,dfs and similar;implementation
+3182691,793C,geometry;implementation;math;sortings,False,,True,dfs and similar
+3167032,790A,constructive algorithms;greedy,False,,False,
+3161139,789D,constructive algorithms;graphs,False,,True,dfs and similar
+3195493,795K,implementation;strings,False,,False,
+3136012,785E,brute force;data structures,False,,True,implementation
+3188967,794B,geometry;math,True,geometry,True,dfs and similar;divide and conquer
+3195514,795D,implementation;sortings,False,,False,
+3189057,794E,games;math,False,,False,
+3167624,790C,dp,False,,False,
+3197717,795I,dp;greedy;strings,True,dp;strings,False,
+3182642,793A,implementation;math,False,,False,
+3201951,796B,implementation,False,,True,data structures
+3201948,796A,brute force;implementation,False,,False,
+3176400,792D,bitmasks;trees,False,,False,
+3214407,798A,brute force;constructive algorithms;strings,False,,False,
+3200476,795G,math;number theory,False,,False,
+3189000,794C,games;greedy;sortings,False,,True,two pointers
+3182782,793F,data structures;divide and conquer;dp,False,,True,dfs and similar
+3195486,795A,brute force;ternary search,False,,False,
+3208182,797D,data structures;dfs and similar,False,,True,binary search;implementation
+3182737,793E,constructive algorithms;dfs and similar;dp;trees,True,dfs and similar,False,
+3197740,795H,constructive algorithms;math,False,,False,
+3204812,796F,bitmasks;data structures;greedy,False,,False,
+3195447,795C,constructive algorithms;greedy,False,,False,
+3220468,799A,brute force;implementation,False,,False,
+3189257,794G,combinatorics;dp;math,False,,True,strings
+3214471,798C,dp;greedy;number theory,False,,False,
+3199750,795E,brute force;number theory,False,,False,
+3197619,795L,binary search;greedy,True,binary search,False,
+3199596,795J,dp,False,,False,
+3220499,799C,binary search;data structures;implementation,False,,False,
+3230805,801A,brute force,False,,False,
+3230890,801B,constructive algorithms;greedy;strings,True,strings,False,
+3237179,802G,implementation;strings,False,,False,
+3182721,793D,dp;graphs;shortest paths,False,,True,dfs and similar
+3208181,797A,implementation;math;number theory,False,,True,divide and conquer
+3226676,800A,binary search;greedy,True,binary search,False,
+3220524,799B,data structures;implementation,False,,False,
+3208138,797C,data structures;greedy;strings,True,strings,False,
+3214738,798E,constructive algorithms;data structures;graphs;sortings,False,,True,dfs and similar;binary search
+3237212,802D,math,False,,True,implementation
+3226720,800B,geometry,False,,False,
+3201958,796D,constructive algorithms;dfs and similar;dp;graphs;shortest paths;trees,False,,True,implementation
+3237818,802I,string suffix structures,True,string suffix structures,True,implementation
+3227132,800C,constructive algorithms;math;number theory,False,,False,
+3208151,797E,brute force;data structures;dp,True,dp,False,
+3237204,802M,greedy;sortings,False,,False,
+3243475,803C,constructive algorithms;greedy;math,False,,False,
+3237175,802J,dfs and similar;graphs;trees,True,dfs and similar,False,
+3230778,801C,binary search;math,True,binary search,False,
+3189170,794F,data structures,False,,True,trees
+3189058,794D,dfs and similar;graphs;hashing,True,dfs and similar;graphs,False,
+3237972,802E,math,False,,False,
+3202160,796E,binary search;dp,True,dp,False,
+3256429,805A,greedy;math,False,,True,divide and conquer
+3256430,805B,constructive algorithms,False,,False,
+3243622,803B,constructive algorithms,False,,False,
+3237891,802O,binary search;data structures;flows,False,,False,
+3220480,799D,brute force;dp;meet-in-the-middle,True,dp,False,
+3237177,802A,greedy,True,greedy,True,dfs and similar
+3237202,802H,constructive algorithms;strings,True,strings,False,
+3262436,806A,binary search;math,False,,False,
+3230965,801E,constructive algorithms;math,False,,True,dfs and similar;implementation
+3243526,803A,constructive algorithms,False,,False,
+3237198,802B,data structures;greedy,True,data structures,True,dfs and similar
+3237381,802N,binary search;flows;graphs,False,,True,dp
+3263602,806E,data structures,True,data structures,False,
+3243487,803E,dp;graphs,True,dp,False,
+3237275,802F,math;probabilities,False,,True,implementation
+3262850,806C,binary search;greedy,False,,False,
+3249907,804A,constructive algorithms;greedy;math,False,,False,
+3269737,807F,graphs;shortest paths,True,shortest paths,True,dfs and similar
+3266269,807C,binary search;math,True,binary search,False,
+3256441,805D,combinatorics,False,,False,
+3237348,802C,flows,False,,True,dfs and similar;data structures;greedy
+3272732,808C,constructive algorithms;greedy;sortings,False,,False,
+3272747,808A,implementation,False,,False,
+3250251,804E,constructive algorithms,False,,True,dfs and similar;implementation
+3256443,805C,constructive algorithms,False,,False,
+3243494,803F,bitmasks;combinatorics;number theory,False,,False,
+3291803,811B,implementation;sortings,False,,False,
+3266267,807A,implementation;sortings,False,,False,
+3272740,808D,binary search;data structures;implementation,True,data structures,True,divide and conquer
+3257068,805E,constructive algorithms;dfs and similar;greedy,True,greedy,False,
+3272772,808B,data structures;implementation;math,False,,False,
+3279097,809B,binary search;interactive,False,,False,
+3297889,812A,implementation,False,,False,
+3266537,807E,binary search;greedy,False,,False,
+3285525,810A,implementation;math,False,,False,
+3243762,803G,data structures,True,data structures,False,
+3297871,812C,binary search;sortings,True,binary search,False,
+3272870,808E,binary search;dp;greedy;ternary search,False,,False,
+3316627,815E,binary search;constructive algorithms;implementation,False,,False,
+3249908,804C,constructive algorithms;dfs and similar;greedy,True,greedy,True,implementation
+3310446,814B,constructive algorithms,False,,False,
+3279195,809C,combinatorics;divide and conquer;dp,False,,False,
+3323045,816B,binary search;data structures;implementation,False,,False,
+3297979,812B,bitmasks;brute force;dp,False,,False,
+3285527,810B,greedy;sortings,False,,False,
+3285766,810D,binary search;interactive,True,binary search,True,implementation;divide and conquer
+3291767,811A,brute force;implementation,False,,False,
+3323072,816A,brute force;implementation,False,,True,expression parsing
+3304005,813F,data structures;dsu;graphs,False,,True,dfs and similar
+3304018,813A,implementation,False,,False,
+3304006,813D,dp;flows,True,dp,False,
+3285517,810C,implementation;math;sortings,False,,False,
+3303982,813B,brute force;math,False,,False,
+3263237,806D,graphs;shortest paths,False,,True,dfs and similar;data structures
+3329159,817C,binary search;brute force;dp;math,True,binary search,False,
+3286272,810E,divide and conquer;dp,False,,False,
+3291954,811D,constructive algorithms;dfs and similar;graphs;interactive,False,,False,
+3335342,818A,implementation;math,False,,False,
+3316644,815D,binary search;combinatorics;data structures;geometry,True,binary search,False,
+3298046,812E,games;trees,False,,True,dfs and similar
+3335321,818D,data structures;implementation,False,,False,
+3310422,814A,constructive algorithms;greedy;implementation;sortings,False,,False,
+3329158,817B,combinatorics;implementation;math;sortings,False,,False,
+3316629,815B,brute force;combinatorics;constructive algorithms;math,False,,False,
+3272770,808G,dp;strings,False,,False,
+3345511,820B,constructive algorithms;geometry;math,False,,False,
+3342027,819D,number theory,False,,False,
+3341990,819E,constructive algorithms;graphs,False,,False,
+3310427,814C,brute force;dp;strings;two pointers,True,dp,False,
+3351642,821B,brute force;math,False,,False,
+3357733,822B,brute force;implementation;strings,True,strings,False,
+3310755,814E,combinatorics;dp;graphs;shortest paths,False,,False,
+3358234,822E,binary search;dp;hashing;string suffix structures,True,dp,False,
+3357724,822A,implementation;math;number theory,False,,False,
+3279371,809D,data structures;dp,False,,True,dfs and similar
+3329182,817D,data structures;divide and conquer;dsu;sortings,False,,False,
+3357831,822D,brute force;dp;greedy;math;number theory,False,,False,
+3335333,818F,binary search;math;ternary search,False,,True,divide and conquer
+3329287,817E,bitmasks;data structures;trees,False,,False,
+3291785,811C,dp;implementation,True,dp,False,
+3304008,813C,dfs and similar;graphs,True,dfs and similar,False,
+3362766,823A,,,,,
+3341491,819B,data structures;implementation;math,True,implementation,False,
+3362883,825A,implementation,False,,False,
+3291920,811E,data structures;dsu;graphs,False,,True,dfs and similar
+3362918,825B,brute force;implementation,False,,False,
+3368264,827B,constructive algorithms;greedy;implementation;trees,False,,False,
+3335348,818B,implementation,False,,False,
+3351649,821C,data structures;greedy;trees,False,,False,
+3362944,825C,greedy;implementation,False,,False,
+3335727,818G,flows;graphs,False,,True,dp
+3363301,825E,data structures;dfs and similar;graphs;greedy,False,,True,implementation
+3335318,818E,binary search;data structures;number theory;two pointers,True,two pointers,False,
+3374607,828A,implementation,False,,False,
+3368272,827C,data structures;strings,True,data structures,True,implementation
+3374679,828B,implementation,False,,False,
+3392118,832A,games;math,False,,False,
+3386619,831A,implementation,False,,False,
+3345630,820D,implementation;math,False,,False,
+3357742,822C,binary search;greedy;implementation;sortings,False,,False,
+3362887,825D,binary search;greedy;implementation,False,,False,
+3386528,831B,implementation;strings,True,strings,False,
+3362782,823B,,,,,
+3363407,825G,dfs and similar;graphs;trees,True,dfs and similar,False,
+3362796,823D,,,,,
+3396888,833A,math;number theory,False,,False,
+3374638,828C,data structures;sortings;strings,True,strings,False,
+3368287,827A,data structures;greedy;sortings;strings,True,strings,False,
+3386616,831D,binary search;brute force;dp;greedy,False,,False,
+3368373,827D,data structures;dfs and similar;graphs;trees,True,dfs and similar,False,
+3402891,834E,,False,,True,implementation
+3374733,828F,data structures;graphs,False,,True,trees
+3402562,834C,math,False,,False,
+3362905,825F,dp;hashing;string suffix structures;strings,True,dp;strings,False,
+3386542,831C,brute force;constructive algorithms,False,,False,
+3402649,834D,data structures;divide and conquer;dp,True,dp,True,dfs and similar
+3386717,831E,data structures,False,,False,
+3407108,835C,dp;implementation,False,,False,
+3402614,834A,implementation,False,,False,
+3392738,832E,matrices,False,,True,dp;strings
+3380374,830B,data structures;implementation;sortings,True,data structures;implementation,False,
+3410906,837C,brute force;implementation,False,,False,
+3411035,837B,brute force;implementation,False,,False,
+3402566,834B,data structures;implementation,False,,False,
+3381214,830E,constructive algorithms;dp;graphs;implementation;math;trees,True,graphs,False,
+3396879,833B,binary search;data structures;divide and conquer;dp;two pointers,True,divide and conquer;dp,False,
+161624,606C,,False,,True,implementation
+3362856,823F,,,,,
+3368277,827E,fft;math;strings,False,,False,
+3407095,835B,greedy,False,,False,
+3410913,837A,implementation,False,,False,
+3414829,838E,dp,True,dp,True,dfs and similar
+3392249,832D,dfs and similar;graphs;trees,False,,True,shortest paths
+108733,597A,math,False,,False,
+3410944,837D,dp;math,False,,False,
+224283,616B,games;greedy,False,,False,
+3407113,835D,brute force;dp;hashing;strings,False,,False,
+3407101,835A,math,False,,False,
+414709,651A,dp;greedy;implementation;math,False,,False,
+549126,675B,brute force;constructive algorithms;math,False,,False,
+323346,632E,divide and conquer;dp;fft;math,True,dp,False,
+3415426,838D,math;number theory,False,,False,
+691398,701B,data structures;math,False,,False,
+649682,690E1,,,,,
+3392125,832B,implementation;strings,False,,False,
+3418018,839A,implementation,False,,False,
+3407896,835E,binary search;constructive algorithms;interactive,False,,True,divide and conquer
+697927,702D,math,False,,False,
+3418014,839E,brute force;graphs;math;meet-in-the-middle,False,,True,implementation
+983074,749C,greedy;implementation;two pointers,False,,True,dfs and similar
+1108869,104D,math,False,,False,
+3407639,835F,dfs and similar;dp;graphs;trees,False,,True,shortest paths
+1168887,112B,implementation;math,False,,True,divide and conquer
+1205873,117C,dfs and similar;graphs,False,,True,implementation
+148341,604E,games;math,False,,False,
+1344155,136C,greedy;implementation;sortings,False,,False,
+648958,690C2,,,,,
+582098,680D,binary search;brute force;constructive algorithms;greedy,True,greedy,False,
+663279,696C,combinatorics;dp;implementation;math;matrices,False,,False,
+626564,687B,chinese remainder theorem;math;number theory,False,,False,
+3411684,837F,binary search;brute force;combinatorics;math;matrices,True,binary search,False,
+1155345,110A,implementation,False,,False,
+3418027,839D,combinatorics;dp;math;number theory,False,,False,
+1740200,194A,implementation;math,False,,False,
+1279561,127C,binary search;math,False,,False,
+1758037,197A,constructive algorithms;games;math,False,,False,
+717600,705B,games;math,False,,False,
+1381337,140F,geometry;sortings,False,,False,
+1834417,208A,strings,False,,False,
+1024437,757F,data structures;graphs;shortest paths,True,shortest paths,False,
+837414,724C,greedy;hashing;implementation;math;number theory;sortings,False,,True,chinese remainder theorem
+1992584,231A,brute force;greedy,False,,False,
+788967,716E,dfs and similar;divide and conquer;trees,True,dfs and similar,False,
+1637206,176A,greedy;sortings,False,,False,
+1102901,103D,brute force;data structures;sortings,False,,False,
+689247,700B,dfs and similar;dp;graphs;trees,True,dfs and similar,True,implementation
+2101636,245E,greedy;implementation,False,,False,
+1655162,18C,data structures;implementation,False,,False,
+1317593,132D,constructive algorithms;dp;greedy,False,,True,implementation
+1492734,156C,combinatorics;dp,False,,False,
+1030817,758E,dfs and similar;dp;graphs;greedy;trees,True,dfs and similar,False,
+1521398,160C,implementation;math;sortings,True,implementation,False,
+1244189,122E,,False,,False,
+1549234,164C,flows;graphs,False,,True,dp
+1295117,129C,dfs and similar;graphs;implementation,False,,False,
+1986738,230B,binary search;implementation;math;number theory,False,,False,
+2615040,44B,implementation,False,,False,
+2205682,26E,constructive algorithms,False,,False,
+1660843,180F,constructive algorithms;implementation;math,False,,False,
+1950228,225A,constructive algorithms;greedy,False,,False,
+2118728,249D,data structures;dp;geometry;math;sortings,False,,False,
+1848126,21D,bitmasks;graph matchings;graphs,True,graphs,False,
+1834499,208D,implementation,False,,False,
+2364697,281D,two pointers,False,,True,dfs and similar
+1683290,185E,binary search;data structures,False,,True,implementation
+2635782,47A,brute force;math,False,,False,
+1943359,224D,data structures;strings,False,,False,
+2216383,261A,greedy;sortings,False,,False,
+2399823,286B,implementation,False,,True,divide and conquer
+2246564,265E,schedules;sortings,False,,False,
+2760324,63B,implementation,False,,False,
+2299648,272C,data structures;implementation,False,,False,
+2261464,268B,implementation;math,False,,False,
+1936370,223E,flows;geometry;graphs,False,,False,
+2926232,86E,brute force;math;matrices,False,,False,
+2549323,35B,implementation,False,,True,data structures
+1834895,208C,dp;graphs;shortest paths,True,shortest paths,False,
+2885633,80A,brute force,False,,False,
+2628292,46B,implementation,False,,False,
+2893738,81C,greedy;math;sortings,False,,False,
+2856518,77C,dfs and similar;dp;dsu;greedy;trees,True,dfs and similar,False,
+2656468,5C,constructive algorithms;data structures;dp;greedy;sortings;strings,False,,False,
+2492648,298D,greedy;math;sortings,False,,False,
+3351697,821A,implementation,False,,False,
+3329132,817A,implementation;math;number theory,False,,False,
+2982601,93B,greedy,False,,False,
+3176376,792A,implementation;sortings,False,,False,
+3122556,782B,binary search;ternary search,True,binary search,False,
+3072233,773B,brute force;greedy,False,,False,
+3160830,789C,data structures;dp;two pointers,False,,False,
+2622471,45J,constructive algorithms,False,,False,
+2299643,272B,implementation;math,False,,False,
+2415078,288A,greedy,False,,True,strings
+2941519,88D,implementation,True,implementation,True,expression parsing
+2780060,66C,data structures;implementation,False,,True,expression parsing
+3362806,823C,,,,,
+479666,663B,brute force;constructive algorithms;greedy;strings,False,,True,implementation;string suffix structures
+424904,652D,data structures;sortings,False,,False,
+3323098,816D,combinatorics;math,False,,False,
+2969405,91B,binary search;data structures,False,,False,
+3154280,788A,dp;two pointers,False,,False,
+3001559,96B,binary search;bitmasks;brute force,False,,False,
+3074851,774I,dp,True,dp,True,strings
+3374615,828D,constructive algorithms;greedy;implementation;trees,False,,False,
+47057,588E,data structures;dfs and similar;trees,True,dfs and similar,False,
+631798,688B,constructive algorithms;math,False,,False,
+55387,589A,,,,,
+64080,590C,dfs and similar;graphs;shortest paths,False,,False,
+1251715,123B,math,False,,False,
+1493000,156D,combinatorics;graphs,False,,True,dfs and similar
+3141693,786C,data structures;divide and conquer,True,divide and conquer,False,
+45907,588B,math,False,,True,implementation
+1649145,178E3,brute force;data structures;math;number theory,False,,True,dfs and similar
+1625800,174A,math,False,,False,
+1771281,199C,math,False,,False,
+1470351,152D,brute force,False,,False,
+1791613,200E,implementation;math;number theory;ternary search,False,,False,
+112077,598E,brute force;dp,True,dp,False,
+1405568,144C,implementation;strings,True,implementation,False,
+1790571,200B,implementation;math,False,,True,divide and conquer
+1735599,193A,constructive algorithms;graphs;trees,False,,True,dfs and similar;implementation
+1322547,133C,implementation;math,False,,False,
+1821210,204D,dp,False,,True,dfs and similar;string suffix structures;strings
+1095300,102A,brute force,False,,False,
+2479518,296A,greedy;math,False,,False,
+2216442,261E,brute force;dp;two pointers,False,,False,
+1617987,173D,constructive algorithms;graphs;greedy;implementation,False,,False,
+1870443,215B,greedy;math,False,,False,
+2872157,79B,implementation;sortings,False,,False,
+2023169,235A,number theory,False,,False,
+3055459,770C,dfs and similar;graphs;implementation,False,,False,
+1722265,191C,data structures;dfs and similar;trees,False,,True,implementation
+2041962,238A,constructive algorithms;math,False,,False,
+2009877,233D,bitmasks;combinatorics;dp;math,False,,False,
+2429809,29C,data structures;dfs and similar;graphs;implementation,True,dfs and similar;implementation,False,
+2555262,36E,constructive algorithms;dsu;graphs;implementation,False,,True,dfs and similar;divide and conquer
+414893,651E,dsu;graphs;greedy,False,,True,dfs and similar;implementation
+193180,611F,binary search;implementation,False,,False,
+2997560,95A,implementation;strings,False,,False,
+168932,607C,hashing;strings,True,strings,True,dfs and similar;implementation
+178639,609D,binary search;greedy;two pointers,True,binary search,False,
+3076354,774E,math;number theory,False,,False,
+31790,585C,number theory,False,,True,divide and conquer
+411505,650E,data structures;dfs and similar;dsu;greedy;trees,True,trees,True,graphs
+327797,633H,data structures;implementation,False,,True,dfs and similar
+548573,674F,combinatorics;dp;meet-in-the-middle,False,,False,
+245547,620D,binary search;two pointers,False,,True,dfs and similar
+385745,643C,dp,True,dp,False,
+192461,611D,dp;hashing;strings,True,dp,False,
+776374,714D,binary search;interactive,True,binary search,False,
+529166,671A,dp;geometry;greedy;implementation,False,,False,
+549070,675C,constructive algorithms;data structures;greedy;sortings,False,,False,
+474667,662D,constructive algorithms;greedy;implementation;math,True,implementation,True,string suffix structures
+386080,643D,,False,,False,
+1286966,128C,combinatorics;dp,False,,False,
+1015345,755F,bitmasks;dp;greedy,False,,False,
+638934,689D,binary search;data structures,False,,True,two pointers
+1239877,121B,strings,False,,False,
+913681,738F,dp;games,True,dp,True,dfs and similar
+1465038,151E,math;probabilities,True,probabilities,False,
+594808,682D,dp;strings,True,dp,False,
+1052691,762E,binary search;data structures,False,,False,
+957579,745D,bitmasks;divide and conquer;interactive,True,divide and conquer,False,
+1478935,154E,geometry,True,geometry,True,implementation
+1541502,163B,binary search,True,binary search,False,
+1499992,157C,brute force;dp;strings,False,,False,
+1629739,175D,brute force;dp;math;probabilities,True,probabilities,False,
+1661062,180A,implementation,False,,False,
+1669221,181D,dp,False,,False,
+1758061,197C,greedy;implementation;sortings;strings,False,,False,
+1428140,147B,binary search;graphs;matrices,False,,False,
+2056992,24C,geometry;implementation;math,False,,False,
+1649140,178D2,brute force;dp;math;number theory,False,,True,dfs and similar
+2000436,232A,binary search;constructive algorithms;graphs;greedy,False,,False,
+2320019,275D,dfs and similar;dp;trees,True,dfs and similar,False,
+1511182,159E,data structures;greedy;sortings,False,,False,
+1799930,201D,bitmasks;brute force;dp,False,,True,dfs and similar
+2113941,248E,dp;math;probabilities,True,probabilities,False,
+1722713,191D,graphs;greedy,False,,True,dfs and similar;implementation
+1711271,19D,data structures,True,data structures,True,binary search
+2576542,39I,,False,,True,dfs and similar
+1735661,193B,brute force,False,,True,implementation
+2320981,275E,,False,,True,binary search
+2835819,74C,dfs and similar;dsu;graphs;number theory,True,dfs and similar,False,
+2190262,258E,data structures;dfs and similar;trees,True,dfs and similar,True,implementation
+2042026,238C,dfs and similar;dp;greedy;trees,True,dfs and similar;dp,True,implementation
+2739197,60E,math;matrices,False,,False,
+2570769,38F,dp;games;strings,True,games,True,implementation
+2147430,252D,brute force;combinatorics;implementation,False,,False,
+2926231,86C,dp;string suffix structures;trees,True,dp,False,
+2642623,48C,math,False,,False,
+2483850,297E,data structures,False,,False,
+2479647,296E,combinatorics;dfs and similar;dp,False,,False,
+3008869,97A,brute force;implementation,False,,False,
+2997772,95D,dp;math,False,,False,
+3176436,792B,implementation,False,,False,
+3008761,97D,bitmasks;brute force;implementation,False,,False,
+2997335,95C,shortest paths,True,shortest paths,False,
+2880632,8D,binary search;geometry,True,geometry,True,shortest paths
+3266292,807B,brute force;implementation,False,,False,
+3117999,781F,binary search;geometry;two pointers,False,,False,
+3129316,784D,implementation,False,,True,dfs and similar;strings
+3345512,820A,implementation,False,,False,
+3278951,809A,implementation;math;sortings,False,,False,
+3214435,798B,brute force;dp;strings,True,strings,False,
+3310426,814D,dfs and similar;dp;geometry;greedy;trees,False,,False,
+3103164,779F,strings,False,,True,dfs and similar
+3342276,819A,games;greedy,False,,True,string suffix structures
+2920166,85E,binary search;dsu;geometry;graphs;sortings,False,,False,
+3208219,797F,data structures;dp;greedy;sortings,True,dp,True,dfs and similar
+3410984,837E,binary search;implementation;math,True,implementation,False,
+3345549,820C,games;greedy,False,,True,string suffix structures
+3386546,831F,,False,,True,binary search
+11776,582D,dp;math;number theory,False,,False,
+3303988,813E,binary search;data structures,False,,True,trees
+730284,707A,implementation,False,,False,
+285795,626G,data structures;dp;greedy;math,False,,False,
+3380428,830C,brute force;data structures;implementation;math;number theory;sortings;two pointers,False,,True,binary search
+3250833,804F,combinatorics;dfs and similar;dp;graphs;number theory,False,,True,data structures
+824481,722C,data structures;dsu,False,,False,
+3414841,838B,data structures;dfs and similar;trees,False,,True,shortest paths
+398177,645D,binary search;dp;graphs,False,,True,implementation
+713051,704A,brute force;data structures;implementation,True,data structures,False,
+55271,589B,,,,,
+1076691,10D,dp,True,dp,False,
+838418,724G,bitmasks;graphs;math;number theory;trees,False,,True,dfs and similar
+1124333,106B,brute force;implementation,False,,False,
+616819,685E,bitmasks;brute force;divide and conquer;graphs,False,,True,data structures
+1469300,152B,binary search;implementation,False,,False,
+627166,687E,dfs and similar;graphs,True,dfs and similar,False,
+864013,730G,implementation,False,,False,
+1625802,174B,dp;greedy;implementation,False,,False,
+268145,623B,dp;greedy;number theory,False,,False,
+1239546,121A,implementation,False,,False,
+1752248,196A,greedy;strings,False,,True,implementation
+1233552,120F,dp;greedy;trees,False,,False,
+1059610,763D,data structures;graphs;hashing;shortest paths;trees,False,,True,dfs and similar
+1574181,168B,implementation;strings,False,,False,
+718126,705D,dp;graphs,True,dp,False,
+2078076,242C,dfs and similar;graphs;hashing;shortest paths,False,,False,
+1674115,182D,brute force;hashing;implementation;math;strings,True,strings,False,
+2057037,24B,implementation,False,,True,data structures
+2153837,253C,data structures;dfs and similar;graphs;greedy;shortest paths,False,,False,
+1331247,134B,brute force;dfs and similar;math;number theory,True,dfs and similar,False,
+2622320,45C,data structures,False,,True,dfs and similar
+2753010,62B,binary search;implementation,True,binary search,False,
+1729058,192E,data structures;trees,False,,True,dfs and similar
+2131680,250B,implementation;strings,False,,False,
+1711392,19E,dfs and similar;divide and conquer;dsu,True,dfs and similar,False,
+2770486,65D,brute force;dfs and similar;hashing,False,,False,
+2622541,45D,greedy;meet-in-the-middle;sortings,True,greedy,False,
+2864515,78C,dp;games;number theory,False,,False,
+2167946,255C,brute force;dp,False,,False,
+2602527,42A,greedy;implementation,False,,False,
+3070360,772E,binary search;divide and conquer;interactive;trees,False,,True,implementation
+3196102,795B,binary search;sortings;two pointers,False,,True,dfs and similar
+3042537,768C,brute force;dp;implementation;sortings,False,,False,
+2753025,62D,dfs and similar;graphs,False,,False,
+3176597,792E,greedy;math;number theory,False,,True,binary search;divide and conquer
+3323154,816E,dp;trees,True,dp;trees,True,dfs and similar;implementation
+
+,,match_rate,472/2239,21.08%
+,,error_rate,528/2239,23.58%
