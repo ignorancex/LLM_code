@@ -2,9 +2,9 @@ import os
 import json
 import csv
 from collections import defaultdict
-json_path = 'LLM_code/code/github_links/cpp_dataset_links_1.json'
-root_dir = 'LLM_code/arxiv_dataset_cpp'
-output_csv = 'cpp_repo_file_counts.csv'
+json_path = 'LLM_code/arxiv_result/github_links/python_dataset_links.json'
+root_dir = 'LLM_code/arxiv_dataset'
+output_csv = 'python_repo_file_counts.csv'
 
 def classify_category(cat):
     return 'cs' if cat.startswith('cs.') else 'non_cs'
@@ -33,7 +33,7 @@ for (quarter, cat_repos) in quarter_repo_category.items():
             if not os.path.exists(repo_path):
                 continue
             for (root, _, files) in os.walk(repo_path):
-                num_files += sum((1 for file in files if file.endswith('.c') or file.endswith('.cpp')))
+                num_files += sum((1 for file in files if file.endswith('.py')))
         results.append({'quarter': quarter, 'category': cat, 'num_repos': len(repo_list), 'num_files': num_files})
 with open(output_csv, 'w', newline='', encoding='utf-8') as f:
     writer = csv.DictWriter(f, fieldnames=['quarter', 'category', 'num_repos', 'num_files'])

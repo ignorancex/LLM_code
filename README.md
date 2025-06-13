@@ -1,20 +1,50 @@
-<div align="center">
-<h1>Code Style Transformation in the LLM Era</h1>
+# code_transformed: The Influence of Large Language Models on Code
 
-</p>
-</div>
+<img src="https://img.shields.io/github/last-commit/ignorancex/LLM_code?style=flat-square&color=5D6D7E" alt="git-last-commit" />
+<img src="https://img.shields.io/github/commit-activity/m/ignorancex/LLM_code?style=flat-square&color=5D6D7E" alt="GitHub commit activity" />
+<img src="https://img.shields.io/github/languages/top/ignorancex/LLM_code?style=flat-square&color=5D6D7E" alt="GitHub top language" />
+
+<!-- <img src="figures/overview.png" style="width: 80%; height: auto;"> -->
+<img src="figures/overview.png" alt="">
+<img src="figures/pipeline.png" alt="">
+
+## Naming Patterns
+
+<img src="figures/naming_pattern.png" alt="">
+
+> [!IMPORTANT]
+> The coding style of human-written code may be influenced by LLMs: they may not only mirror existing norms but also subtly reshape them, gradually pushing human developers toward greater stylistic alignment with LLM-preferred conventions.
+
+## Complexity and Maintainability
+
+> [!IMPORTANT]
+> LLM's code writing has lower complexity and higher maintainability than humans in the scenario of IO algorithm problems. At the same time, the output is stable, and its rewritten code indicators are inferior to direct generation.
+
+## Code Similarity
+
+<img src="figures/similarity.png" alt="">
+
+> [!IMPORTANT]
+> LLMs can effectively mimic human coding style when given reference code, but without such guidance, their generated solutions diverge significantly from human-written code—especially in IO algorithm tasks.
+
+## Labels in the Reasoning Process
+
+<img src="figures/match.png" alt="">
+
+> [!IMPORTANT]
+> LLMs have low algorithm analysis capabilities, are more inclined to approach C/C++ code from an algorithmic perspective, and harder problems may better activate their algorithmic reasoning capabilities.
 
 ## arxiv_dataset
 
 The github repository of the arxiv dataset we collected (python files).
 
 <pre>
-├── 2020             						// The year  
-	├── Q1            						// The quarter
+├── 2020                   // The year  
+	├── Q1                 // The quarter
 		├──repo_name
-			├──xxx.py					// Python file of the project
+			├──xxx.py      // Python file of the project
 			... ...
-			├──time_info.txt         // The time information of the file text
+			├──time_info.txt  // The time information of the file text
 	... ...
 ... ...
 </pre>
@@ -101,6 +131,3 @@ The github repository of the arxiv dataset we collected (C/C++ files).
 	 ... ...
 ├── simulation
 </pre>
-
-
-

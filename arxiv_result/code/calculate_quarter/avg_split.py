@@ -1,11 +1,12 @@
 import os
 import json
+import statistics
 from collections import defaultdict
 
 # 1. 设定路径
 input_path  = 'LLM_code/arxiv_result/naming_patterns_split/naming_patterns_split.json'
 output_dir  = 'LLM_code/arxiv_result/naming_patterns_split'
-output_path = os.path.join(output_dir, 'naming_patterns_agg_across_repos.json')
+output_path = os.path.join(output_dir, 'naming_patterns_avg_std.json')
 
 # 2. 读取已经输出的列表
 with open(input_path, 'r', encoding='utf-8') as f:
@@ -24,22 +25,31 @@ for entry in results:
             for pat, val in entry[grp][kind].items():
                 agg[q][grp][kind][pat].append(val)
 
-# 4. 对收集到的列表再求一次平均
+# 4. 对收集到的列表求均值和标准差
 final = {}
 for q, groups in agg.items():
     final[q] = {}
     for grp, kinds in groups.items():
         final[q][grp] = {}
         for kind, pats in kinds.items():
-            # pat: [v1, v2, ...] → 平均
-            final[q][grp][kind] = {
-                pat: round(sum(vs) / len(vs), 6) if vs else 0.0
-                for pat, vs in pats.items()
-            }
+            final[q][grp][kind] = {}
+            for pat, vs in pats.items():
+                if vs:
+                    mean_val = sum(vs) / len(vs)
+                    std_val = statistics.pstdev(vs)
+                    final[q][grp][kind][pat] = {
+                        "mean": round(mean_val, 6),
+                        "std": round(std_val, 6),
+                    }
+                else:
+                    final[q][grp][kind][pat] = {
+                        "mean": 0.0,
+                        "std": 0.0,
+                    }
 
 # 5. 写回 JSON
 os.makedirs(output_dir, exist_ok=True)
 with open(output_path, 'w', encoding='utf-8') as f:
     json.dump(final, f, ensure_ascii=False, indent=2)
 
-print(f"Cross-repo aggregated results saved to {output_path}")
+print(f"Cross-repo aggregated results (mean and std) saved to {output_path}")
