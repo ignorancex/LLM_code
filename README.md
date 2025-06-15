@@ -26,7 +26,7 @@
 
 ### GitHub Data
 
-We collect a total of **19,898 GitHub repositories** and **926,935 source code files**, corresponding to arXiv papers from the first quarter of 2020 to the first quarter of 2025. Our arXiv dataset is organized across two GitHub repositories: Python files are in ```LLM_code/arxiv_dataset```, and C/C++ code is in ```LLM_code/arxiv_dataset_cpp```.
+**We collect a total of 19,898 GitHub repositories and 926,935 source code files, corresponding to arXiv papers from the first quarter of 2020 to the first quarter of 2025.** Our arXiv dataset is organized across two GitHub repositories: Python files are in ```LLM_code/arxiv_dataset```, and C/C++ code is in ```LLM_code/arxiv_dataset_cpp```.
 ```
 ├── 2020                   // Year
     ├── Q1                 // Quarter
@@ -47,9 +47,12 @@ we categorize variable, function, and file names into several distinct formats (
 <img src="naming_patterns/case_study/figures/naming_pattern.png">
 
 > [!IMPORTANT]
-> **The coding style of human-written code may be influenced by LLMs: they may not only mirror existing norms but also subtly reshape them, gradually pushing human developers toward greater stylistic alignment with LLM-preferred conventions.**
+> **_Finding 1_: The coding style of human-written code may be influenced by LLMs: they may not only mirror existing norms but also subtly reshape them, gradually pushing human developers toward greater stylistic alignment with LLM-preferred conventions.**
 
 ## Complexity and Maintainability
+
+Cyclomatic complexity is a metric used to measure the number of linearly independent paths in the code.
+
 <div align="center">
 <img src="naming_patterns/case_study/figures/metrics.png" style="width: 70%; height: auto;">
 <p align="center">
@@ -58,7 +61,7 @@ we categorize variable, function, and file names into several distinct formats (
 </div>
 
 > [!IMPORTANT]
-> **LLM's code writing has lower complexity and higher maintainability than humans in the scenario of IO algorithm problems. At the same time, the output is stable, and its rewritten code indicators are inferior to direct generation.**
+> **_Finding 2_: LLM's code writing has lower complexity and higher maintainability than humans in the scenario of IO algorithm problems. At the same time, the output is stable, and its rewritten code indicators are inferior to direct generation.**
 
 ## Code Similarity
 
@@ -69,14 +72,29 @@ We compare three versions of each problem’s code: the original human-authored 
 <img src="naming_patterns/case_study/figures/similarity.png" alt="">
 
 > [!IMPORTANT]
-> **LLMs can effectively mimic human coding style when given reference code, but without such guidance, their generated solutions diverge significantly from human-written code—especially in IO algorithm tasks.**
+> **_Finding 3_: LLMs can effectively mimic human coding style when given reference code, but without such guidance, their generated solutions diverge significantly from human-written code—especially in IO algorithm tasks.**
 
 ## Labels in the Reasoning Process
+
+To further refine our analysis, we individually examine the matching of reasoning and labels for each question.
+
+Let $T$ denote the set of all labels. For each question $q$, let $A_q \subseteq T$ be the set of true labels in the question description, and let $R_q \subseteq T$ be the set of labels in the reasoning process.
+
+We then define the $\mathrm{match}$ and $\mathrm{error}$ metrics as follows:
+
+$$
+\begin{align}
+\mathrm{match}(q) &= \mathbf{1}\left( A_q \cap R_q \ne \varnothing \right), \\
+\mathrm{error}(q) &= \mathbf{1}\left( \left( T \setminus A_q \right) \cap R_q \ne \varnothing \right),
+\end{align}
+$$
+
+where $\mathbf{1}(\cdot)$ is the indicator function: it returns 1 if the condition is met, and 0 otherwise.
 
 <img src="naming_patterns/case_study/figures/match.png" alt="">
 
 > [!IMPORTANT]
-> **LLMs have low algorithm analysis capabilities, are more inclined to approach C/C++ code from an algorithmic perspective, and harder problems may better activate their algorithmic reasoning capabilities.**
+> **_Finding 4_: LLMs have low algorithm analysis capabilities, are more inclined to approach C/C++ code from an algorithmic perspective, and harder problems may better activate their algorithmic reasoning capabilities.**
 
 
 ## Repository Structure
