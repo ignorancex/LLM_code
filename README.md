@@ -4,7 +4,7 @@
 <img src="https://img.shields.io/github/last-commit/ignorancex/LLM_code?style=flat-square&color=5D6D7E" alt="git-last-commit" />
 <img src="https://img.shields.io/github/commit-activity/m/ignorancex/LLM_code?style=flat-square&color=5D6D7E" alt="GitHub commit activity" />
 
-<img src="case_study/figures/overview_new.png" style="width: 70%; height: auto;">
+<img src="naming_patterns/case_study/figures/overview_new.png" style="width: 70%; height: auto;">
 <p align="center">
 
 </p>
@@ -44,14 +44,14 @@ We utilize _Code4Bench_, a multidimensional benchmark based on Codeforces data. 
 
 we categorize variable, function, and file names into several distinct formats (e.g. _snake\_case_). The length of the names has also been considered.
 
-<img src="case_study/figures/naming_pattern.png">
+<img src="naming_patterns/case_study/figures/naming_pattern.png">
 
 > [!IMPORTANT]
 > **The coding style of human-written code may be influenced by LLMs: they may not only mirror existing norms but also subtly reshape them, gradually pushing human developers toward greater stylistic alignment with LLM-preferred conventions.**
 
 ## Complexity and Maintainability
 <div align="center">
-<img src="case_study/figures/metrics.png" style="width: 70%; height: auto;">
+<img src="naming_patterns/case_study/figures/metrics.png" style="width: 70%; height: auto;">
 <p align="center">
 
 </p>
@@ -66,14 +66,14 @@ We compare three versions of each problem’s code: the original human-authored 
 
 
 
-<img src="case_study/figures/similarity.png" alt="">
+<img src="naming_patterns/case_study/figures/similarity.png" alt="">
 
 > [!IMPORTANT]
 > **LLMs can effectively mimic human coding style when given reference code, but without such guidance, their generated solutions diverge significantly from human-written code—especially in IO algorithm tasks.**
 
 ## Labels in the Reasoning Process
 
-<img src="case_study/figures/match.png" alt="">
+<img src="naming_patterns/case_study/figures/match.png" alt="">
 
 > [!IMPORTANT]
 > **LLMs have low algorithm analysis capabilities, are more inclined to approach C/C++ code from an algorithmic perspective, and harder problems may better activate their algorithmic reasoning capabilities.**
