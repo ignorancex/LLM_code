@@ -4,7 +4,7 @@
 <img src="https://img.shields.io/github/last-commit/ignorancex/LLM_code?style=flat-square&color=5D6D7E" alt="git-last-commit" />
 <img src="https://img.shields.io/github/commit-activity/m/ignorancex/LLM_code?style=flat-square&color=5D6D7E" alt="GitHub commit activity" />
 
-<img src="case_study/figures/overview_new.png" style="width: 60%; height: auto;">
+<img src="case_study/figures/overview_new.png" style="width: 70%; height: auto;">
 <p align="center">
 
 </p>
@@ -51,7 +51,7 @@ we categorize variable, function, and file names into several distinct formats (
 
 ## Complexity and Maintainability
 <div align="center">
-<img src="case_study/figures/metrics.png" style="width: 60%; height: auto;">
+<img src="case_study/figures/metrics.png" style="width: 70%; height: auto;">
 <p align="center">
 
 </p>
