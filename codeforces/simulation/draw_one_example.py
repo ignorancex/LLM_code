@@ -5,8 +5,9 @@ Batch-plot quarterly frequency trends of target variables
   • 每个变量单独成图
   • cs / non-cs 两组仓库对比
   • 画图范式与 plot_pattern_trend 模板保持一致
+  • 仅读取至 2025Q1（含）
 """
-from typing import Dict # 增加这一行导入
+from typing import Dict
 import os
 import re
 from collections import defaultdict
@@ -53,13 +54,12 @@ def plot_variable_trend(
     data,
     quarters,
     variables,
-    output_dir="plots_per_word",
+    output_dir="plots",
     colors=None,
     xticks=None,
     xtick_labels=None,
     plot_non_cs=True,
-    # 新增参数: 变量名到指定图例位置的映射
-    legend_locations: Dict[str, str] = None, 
+    legend_locations: Dict[str, str] = None,
 ):
     """
     为 variables 中的每个变量出一张 cs / non-cs 趋势图
@@ -69,8 +69,7 @@ def plot_variable_trend(
     os.makedirs(output_dir, exist_ok=True)
     if colors is None:
         colors = {"cs": "#4589c8ff", "non_cs": "#ee7c7aff"}
-    
-    # 确保 legend_locations 是一个字典，如果为 None 则初始化为空字典
+
     if legend_locations is None:
         legend_locations = {}
 
@@ -81,9 +80,8 @@ def plot_variable_trend(
 
         # --------- 开始绘图 --------- #
         plt.figure(figsize=(3.5, 2.5))
-        legend_vals = [] # 用于 get_best_legend_loc 的 y 值列表
+        legend_vals = []
 
-        # cs 曲线
         plt.plot(
             quarters,
             cs_y,
@@ -96,7 +94,6 @@ def plot_variable_trend(
         )
         legend_vals.append(cs_y)
 
-        # non-cs 曲线
         if plot_non_cs:
             plt.plot(
                 quarters,
@@ -121,13 +118,10 @@ def plot_variable_trend(
         plt.yticks(fontsize=10)
         plt.grid(False)
 
-        # 根据 legend_locations 字典设置图例位置
-        # 如果变量在字典中有指定位置，则使用指定位置；否则使用智能选择
         chosen_loc = legend_locations.get(var, get_best_legend_loc(quarters, legend_vals))
-
         plt.legend(
             fontsize=10,
-            loc=chosen_loc, # 使用选择的位置
+            loc=chosen_loc,
             frameon=True,
             facecolor="white",
             framealpha=1,
@@ -164,29 +158,37 @@ def build_variable_data(cs_df, noncs_df, quarters):
 # ====================== 主程序 ====================== #
 if __name__ == "__main__":
     # ---------- 输入文件 ----------
-    cs_csv = (
-        "LLM_code/arxiv_result/naming_patterns_python/"
-        "variable_cs.csv"
-    )
-    noncs_csv = (
-        "LLM_code/arxiv_result/naming_patterns_python/"
-        "variable_non_cs.csv"
-    )
+    cs_csv = "cs_freq_all.csv"
+    noncs_csv = "ncs_freq_all.csv"
 
     # ---------- 加载数据 ----------
     cs_df = pd.read_csv(cs_csv)
     noncs_df = pd.read_csv(noncs_csv)
 
     # ---------- 目标变量 ----------
-    targets = ["start_x"]
-    # ---------- 定义特定变量的图例位置 ----------
-    # key: 变量名, value: Matplotlib 的 loc 参数 (e.g., 'lower right', 'upper left')
+    targets = ["max_length"]
+
+    # ---------- 特定变量的图例位置 ----------
     SPECIFIC_LEGEND_LOCATIONS = {
-        "count": "lower right",
-        "current_length": "upper left",
+        "max_length": "upper left",
     }
 
-    quarters = sorted([c for c in cs_df.columns if c != "variable"])
+    # ---------- 仅保留不晚于 2025Q1 的季度列 ----------
+    def quarter_leq_2025Q1(q: str) -> bool:
+        """
+        判断季度字符串是否不晚于 2025Q1  
+        要求格式为 'YYYYQX'
+        """
+        m = re.fullmatch(r"(\d{4})Q([1-4])", q)
+        if not m:
+            return False
+        year, qtr = int(m.group(1)), int(m.group(2))
+        return (year < 2025) or (year == 2025 and qtr <= 1)
+
+    quarters = sorted(
+        [c for c in cs_df.columns if c != "variable" and quarter_leq_2025Q1(c)]
+    )
+
     xticks, xtick_labels = get_xticks(quarters)
 
     # ---------- 构造绘图数据 ----------
@@ -202,6 +204,6 @@ if __name__ == "__main__":
         colors=COLORS,
         xticks=xticks,
         xtick_labels=xtick_labels,
-        plot_non_cs=True,  # 如需仅画 cs 曲线改为 False
-        legend_locations=SPECIFIC_LEGEND_LOCATIONS, # 传入自定义图例位置
+        plot_non_cs=True,
+        legend_locations=SPECIFIC_LEGEND_LOCATIONS,
     )

@@ -65,8 +65,7 @@ else:
 # —————————————— 指定目标变量 ——————————————
 # 在这里手动指定您想要绘制的变量列表
 TARGET_VARS: List[str] = [
-    "max_length",
-    "response"
+    "max_length"
     # 添加您想绘制的其他变量名
 ]
 

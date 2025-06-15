@@ -1,26 +1,67 @@
-# code_transformed: The Influence of Large Language Models on Code
+<div align="center">
+<h1><em>code_transformed</em>: The Influence of Large Language Models on Code</h1>
 
 <img src="https://img.shields.io/github/last-commit/ignorancex/LLM_code?style=flat-square&color=5D6D7E" alt="git-last-commit" />
 <img src="https://img.shields.io/github/commit-activity/m/ignorancex/LLM_code?style=flat-square&color=5D6D7E" alt="GitHub commit activity" />
 <img src="https://img.shields.io/github/languages/top/ignorancex/LLM_code?style=flat-square&color=5D6D7E" alt="GitHub top language" />
 
-<!-- <img src="figures/overview.png" style="width: 80%; height: auto;"> -->
-<img src="figures/overview.png" alt="">
-<img src="figures/pipeline.png" alt="">
+<img src="figures/overview.png" style="width: 80%; height: auto;">
+<p align="center">
+
+</p>
+</div>
+
+## Contents
+- [Contents](#contents)
+- [Data Collection](#data-collection)
+	- [GitHub Data](#github-data)
+	- [Human-Written Code](#human-written-code)
+- [Naming Patterns](#naming-patterns)
+- [Complexity and Maintainability](#complexity-and-maintainability)
+- [Code Similarity](#code-similarity)
+- [Labels in the Reasoning Process](#labels-in-the-reasoning-process)
+- [Repository Structure](#repository-structure)
+
+## Data Collection
+
+### GitHub Data
+
+We collect a total of **19,898 GitHub repositories** and **926,935 source code files**, corresponding to arXiv papers from the first quarter of 2020 to the first quarter of 2025. Our arXiv dataset is organized across two GitHub repositories: Python files are in ```LLM_code/arxiv_dataset```, and C/C++ code is in ```LLM_code/arxiv_dataset_cpp```. Code for dataset collection is located in ```LLM_code/arxiv_result/code/dataset_collection```
+
+```
+├── 2020                   // Year
+    ├── Q1                 // Quarter
+        ├── repo_name      // Repository name
+            ├── xxx.py     // Project Python file
+            ...
+            ├── time_info.txt  // File creation/modification time information
+```
+
+### Human-Written Code
+
+We utilize _Code4Bench_, a multidimensional benchmark based on Codeforces data. This dataset contains user submissions on Codeforces before 2020, which were barely impacted by LLMs. We generate code using LLMs with various prompting strategies. LLM-generated code is located in ```LLM_code/codeforces/simulation/output```.
 
 ## Naming Patterns
 
-<img src="figures/naming_pattern.png" alt="">
+we categorize variable, function, and file names into several distinct formats (e.g. _snake\_case_). The length of the names has also been considered. Code for calculating is located in ```LLM_code/arxiv_result/code/calculate_quarter```
+
+<img src="figures/naming_pattern.png">
 
 > [!IMPORTANT]
 > The coding style of human-written code may be influenced by LLMs: they may not only mirror existing norms but also subtly reshape them, gradually pushing human developers toward greater stylistic alignment with LLM-preferred conventions.
 
 ## Complexity and Maintainability
 
+<img src="figures/metrics.png">
+
 > [!IMPORTANT]
 > LLM's code writing has lower complexity and higher maintainability than humans in the scenario of IO algorithm problems. At the same time, the output is stable, and its rewritten code indicators are inferior to direct generation.
 
 ## Code Similarity
+
+We compare three versions of each problem’s code: the original human-authored solution (**AC**), the LLM’s output given only the problem description (**ANS**), and the LLM’s output when additionally conditioned on the human solution (**REF**). We compute **pairwise cosine and Jaccard similarities** among AC, ANS, and REF.
+
+
 
 <img src="figures/similarity.png" alt="">
 
@@ -34,58 +75,13 @@
 > [!IMPORTANT]
 > LLMs have low algorithm analysis capabilities, are more inclined to approach C/C++ code from an algorithmic perspective, and harder problems may better activate their algorithmic reasoning capabilities.
 
-## arxiv_dataset
 
-The github repository of the arxiv dataset we collected (python files).
+## Repository Structure
 
-<pre>
-├── 2020                   // The year  
-	├── Q1                 // The quarter
-		├──repo_name
-			├──xxx.py      // Python file of the project
-			... ...
-			├──time_info.txt  // The time information of the file text
-	... ...
-... ...
-</pre>
+The file layout in ```LLM_code/codeforces```.
 
-## arxiv_dataset_cpp
 
-The github repository of the arxiv dataset we collected (C/C++ files).
-
-<pre>
-├── 2020             						// The year  
-	├── Q1            						// The quarter
-		├── repo_name
-			├── xxx.cpp					// C/C++ file of the project
-			 ... ...
-			├── time_info.txt         // The time information of the file text
-	 ... ...
- ... ...
-</pre>
-
-## arxiv_result
-
-<div>
-  <p>Here are the results and code of our analysis of the arxiv dataset.</p>
-</div>
-
-<pre>
-├── code                                // Our code for analyze
-├── comments                      // Anayze on comments
-├── github_links                   // Links of our collected dataset
-├── naming_patterns_cpp  // Anayze on naming patterns (c/c++ files)
-├── naming_patterns_py    // Anayze on naming patterns (python files)
-├── old_output_by_year     //  Old results
-</pre>
-
-## codeforces
-
-<div>
-  <p>Here are the results and code of our analysis of the codeforce dataset.</p>
-</div>
-
-<pre>
+```
 ├── code     								// Our code for analyze  
 	├── data_processing
 	├── label
@@ -130,4 +126,4 @@ The github repository of the arxiv dataset we collected (C/C++ files).
 	├── qwen_32b_cpp_sim_cosine.csv  // model_lang_sim_type.csv means the similarity result of the model
 	 ... ...
 ├── simulation
-</pre>
+```
