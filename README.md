@@ -1,11 +1,10 @@
 <div align="center">
-<h1><em>code_transformed</em>: The Influence of Large Language Models on Code</h1>
+<h1><em>code_transformed</em>: <br>The Influence of Large Language Models on Code</h1>
 
 <img src="https://img.shields.io/github/last-commit/ignorancex/LLM_code?style=flat-square&color=5D6D7E" alt="git-last-commit" />
 <img src="https://img.shields.io/github/commit-activity/m/ignorancex/LLM_code?style=flat-square&color=5D6D7E" alt="GitHub commit activity" />
-<img src="https://img.shields.io/github/languages/top/ignorancex/LLM_code?style=flat-square&color=5D6D7E" alt="GitHub top language" />
 
-<img src="figures/overview.png" style="width: 80%; height: auto;">
+<img src="case_study/figures/overview_new.png" style="width: 80%; height: auto;">
 <p align="center">
 
 </p>
@@ -21,13 +20,13 @@
 - [Code Similarity](#code-similarity)
 - [Labels in the Reasoning Process](#labels-in-the-reasoning-process)
 - [Repository Structure](#repository-structure)
+- [Citation](#citation)
 
 ## Data Collection
 
 ### GitHub Data
 
-We collect a total of **19,898 GitHub repositories** and **926,935 source code files**, corresponding to arXiv papers from the first quarter of 2020 to the first quarter of 2025. Our arXiv dataset is organized across two GitHub repositories: Python files are in ```LLM_code/arxiv_dataset```, and C/C++ code is in ```LLM_code/arxiv_dataset_cpp```. Code for dataset collection is located in ```LLM_code/arxiv_result/code/dataset_collection```
-
+We collect a total of **19,898 GitHub repositories** and **926,935 source code files**, corresponding to arXiv papers from the first quarter of 2020 to the first quarter of 2025. Our arXiv dataset is organized across two GitHub repositories: Python files are in ```LLM_code/arxiv_dataset```, and C/C++ code is in ```LLM_code/arxiv_dataset_cpp```.
 ```
 ├── 2020                   // Year
     ├── Q1                 // Quarter
@@ -39,23 +38,27 @@ We collect a total of **19,898 GitHub repositories** and **926,935 source code f
 
 ### Human-Written Code
 
-We utilize _Code4Bench_, a multidimensional benchmark based on Codeforces data. This dataset contains user submissions on Codeforces before 2020, which were barely impacted by LLMs. We generate code using LLMs with various prompting strategies. LLM-generated code is located in ```LLM_code/codeforces/simulation/output```.
+We utilize _Code4Bench_, a multidimensional benchmark based on Codeforces data. This dataset contains user submissions on Codeforces before 2020, which were barely impacted by LLMs. We generate code using LLMs with various prompting strategies.
 
 ## Naming Patterns
 
-we categorize variable, function, and file names into several distinct formats (e.g. _snake\_case_). The length of the names has also been considered. Code for calculating is located in ```LLM_code/arxiv_result/code/calculate_quarter```
+we categorize variable, function, and file names into several distinct formats (e.g. _snake\_case_). The length of the names has also been considered.
 
-<img src="figures/naming_pattern.png">
+<img src="case_study/figures/naming_pattern.png">
 
 > [!IMPORTANT]
-> The coding style of human-written code may be influenced by LLMs: they may not only mirror existing norms but also subtly reshape them, gradually pushing human developers toward greater stylistic alignment with LLM-preferred conventions.
+> **The coding style of human-written code may be influenced by LLMs: they may not only mirror existing norms but also subtly reshape them, gradually pushing human developers toward greater stylistic alignment with LLM-preferred conventions.**
 
 ## Complexity and Maintainability
+<div align="center">
+<img src="case_study/figures/metrics.png" style="width: 80%; height: auto;">
+<p align="center">
 
-<img src="figures/metrics.png">
+</p>
+</div>
 
 > [!IMPORTANT]
-> LLM's code writing has lower complexity and higher maintainability than humans in the scenario of IO algorithm problems. At the same time, the output is stable, and its rewritten code indicators are inferior to direct generation.
+> **LLM's code writing has lower complexity and higher maintainability than humans in the scenario of IO algorithm problems. At the same time, the output is stable, and its rewritten code indicators are inferior to direct generation.**
 
 ## Code Similarity
 
@@ -63,24 +66,27 @@ We compare three versions of each problem’s code: the original human-authored 
 
 
 
-<img src="figures/similarity.png" alt="">
+<img src="case_study/figures/similarity.png" alt="">
 
 > [!IMPORTANT]
-> LLMs can effectively mimic human coding style when given reference code, but without such guidance, their generated solutions diverge significantly from human-written code—especially in IO algorithm tasks.
+> **LLMs can effectively mimic human coding style when given reference code, but without such guidance, their generated solutions diverge significantly from human-written code—especially in IO algorithm tasks.**
 
 ## Labels in the Reasoning Process
 
-<img src="figures/match.png" alt="">
+<img src="case_study/figures/match.png" alt="">
 
 > [!IMPORTANT]
-> LLMs have low algorithm analysis capabilities, are more inclined to approach C/C++ code from an algorithmic perspective, and harder problems may better activate their algorithmic reasoning capabilities.
+> **LLMs have low algorithm analysis capabilities, are more inclined to approach C/C++ code from an algorithmic perspective, and harder problems may better activate their algorithmic reasoning capabilities.**
 
 
 ## Repository Structure
 
-The file layout in ```LLM_code/codeforces```.
+## Citation
 
+```
+```
 
+<!-- 
 ```
 ├── code     								// Our code for analyze  
 	├── data_processing
@@ -126,4 +132,4 @@ The file layout in ```LLM_code/codeforces```.
 	├── qwen_32b_cpp_sim_cosine.csv  // model_lang_sim_type.csv means the similarity result of the model
 	 ... ...
 ├── simulation
-```
+``` -->
