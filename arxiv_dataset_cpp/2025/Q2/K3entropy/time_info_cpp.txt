@@ -1,0 +1,10 @@
+src/derivativesExact.c: 2025-06-03T23:13:31Z
+src/periodic.c: 2025-04-02T19:29:31Z
+src/derivatives.c: 2025-04-03T21:03:38Z
+src/arcs.c: 2025-07-11T20:43:46Z
+src/k3.c: 2025-07-10T20:28:39Z
+src/cx.c: 2025-02-07T20:41:10Z
+src/periodicExact.c: 2025-06-03T23:13:31Z
+src/mclass.c: 2025-06-03T23:13:31Z
+src/ps.c: 2025-07-11T20:43:46Z
+src/scan.c: 2025-02-07T20:41:10Z

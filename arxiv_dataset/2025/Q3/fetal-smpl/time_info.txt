@@ -1,0 +1,14 @@
+fetal_smpl/lbs_unpose.py: 2025-06-26T22:49:26Z
+fetal_smpl/alignment.py: 2025-06-26T22:49:26Z
+fetal_smpl/learn_shape.py: 2025-06-26T22:49:26Z
+fetal_smpl/__init__.py: 2025-06-26T22:49:26Z
+fetal_smpl/evaluation.py: 2025-06-26T22:49:26Z
+fetal_smpl/utils.py: 2025-06-26T22:49:26Z
+fetal_smpl/vertex_keypoint_regressor.py: 2025-06-26T22:49:26Z
+fetal_smpl/smpl.py: 2025-06-27T00:21:18Z
+scripts/fetal_smpl_align.py: 2025-06-26T22:49:26Z
+scripts/visualization/align_subj_spec_shape_optim_his.py: 2025-06-27T00:21:49Z
+scripts/visualization/init_align_smil_to_posed_optim_his.py: 2025-06-27T00:21:49Z
+scripts/visualization/init_align_smil_to_posed_seq.py: 2025-06-27T00:21:49Z
+scripts/visualization/init_smil_beta_from_unposed_history.py: 2025-06-27T00:21:49Z
+scripts/visualization/align_subj_spec_shape_seq.py: 2025-06-27T00:21:49Z

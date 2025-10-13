@@ -1,0 +1,2 @@
+kernels/selective_scan/csrc/selective_scan/cus/selective_scan.cpp: Unknown
+kernels/selective_scan/csrc/selective_scan/cusoflex/selective_scan_oflex.cpp: Unknown

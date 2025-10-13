@@ -1,0 +1,126 @@
+Dataset Parsers/old_parsers/mpmdata3d.py: 2024-08-07T23:20:06Z
+Dataset Parsers/old_parsers/randomtrajs.py: 2024-08-07T23:20:06Z
+Dataset Parsers/old_parsers/reading_utils.py: 2024-08-07T23:20:06Z
+Dataset Parsers/old_parsers/parsetfrollout.py: 2024-08-07T23:20:06Z
+Dataset Parsers/parseData.py: 2025-02-11T14:28:12Z
+Dataset Parsers/old_parsers/parsenclaw.py: 2024-08-07T23:20:06Z
+Dataset Parsers/old_parsers/obj2h5.py: 2024-08-07T23:20:06Z
+Dataset Parsers/old_parsers/parsehuman3d.py: 2024-08-07T23:20:06Z
+Dataset Parsers/parseDiffGeomData.py: 2025-02-11T14:28:12Z
+Dataset Parsers/parseFEMElasticity.py: 2024-08-07T23:20:06Z
+Dataset Parsers/parseNCLAWData.py: 2025-02-11T14:28:12Z
+Rendering/custom_mats.py: 2025-02-08T21:46:27Z
+Rendering/npy_to_obj.py: 2025-02-08T21:46:27Z
+Rendering/rendering.py: 2025-02-08T21:46:27Z
+data/__init__.py: 2025-03-08T19:16:37Z
+Dataset Parsers/parseGNSData.py: 2025-02-11T14:28:12Z
+dataloader_nf.py: 2025-09-28T17:21:10Z
+download_mpm_verse.py: 2025-03-08T19:16:37Z
+eval.py: 2025-04-04T22:48:17Z
+fom_gno.py: 2025-09-28T17:21:10Z
+data/dataloader.py: 2025-04-04T22:48:17Z
+graph_utils.py: 2025-04-04T22:48:17Z
+fom_gno_vox.py: 2025-09-28T17:21:10Z
+infer.py: 2025-03-25T16:40:52Z
+models/config.py: 2025-03-10T18:49:11Z
+infer_fom_demo.py: 2025-02-08T21:18:36Z
+models/giorom3d_T.py: 2025-03-25T16:40:52Z
+models/layers/layer_utils.py: 2025-03-08T19:16:37Z
+models/layers/layers.py: 2025-03-08T19:16:37Z
+models/layers/mlp.py: 2025-03-08T19:16:37Z
+models/giorom2d_T.py: 2025-04-04T22:48:17Z
+models/layers/mmgpt_base.py: 2025-03-10T18:49:11Z
+models/neuralop030/examples/checkpoint_FNO_darcy.py: 2024-09-19T16:16:44Z
+models/neuralop030/examples/plot_SFNO_swe.py: 2024-09-19T16:16:44Z
+models/neuralop030/examples/plot_UNO_darcy.py: 2024-09-19T16:16:44Z
+models/neuralop030/doc/source/conf.py: 2024-09-19T16:16:44Z
+models/neuralop030/examples/plot_darcy_flow.py: 2024-09-19T16:16:44Z
+models/neuralop030/examples/plot_FNO_darcy.py: 2024-09-19T16:16:44Z
+models/neuralop030/examples/plot_darcy_flow_spectrum.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/__init__.py: 2025-03-08T19:16:37Z
+models/neuralop030/neuralop/datasets/__init__.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/datasets/burgers.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/datasets/darcy.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/datasets/data_transforms.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/datasets/hdf5_dataset.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/datasets/navier_stokes.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/datasets/output_encoder.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/datasets/pt_dataset.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/datasets/tests/__init__.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/datasets/spherical_swe.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/datasets/tensor_dataset.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/datasets/tests/test_output_encoder.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/datasets/tests/test_data_processor.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/datasets/transforms.py: 2025-03-08T19:16:37Z
+models/neuralop030/neuralop/datasets/zarr_dataset.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/layers/__init__.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/layers/einsum_utils.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/layers/base_spectral_conv.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/layers/embeddings.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/layers/fno_block.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/layers/legacy_spectral_convolution.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/layers/integral_transform.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/layers/fourier_continuation.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/layers/mlp.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/layers/neighbor_search.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/layers/padding.py: 2025-03-08T19:16:37Z
+models/neuralop030/neuralop/layers/normalization_layers.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/layers/resample.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/layers/segment_csr.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/layers/skip_connections.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/layers/spherical_convolution.py: 2025-03-08T19:16:37Z
+models/neuralop030/neuralop/layers/spectral_convolution.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/layers/tests/__init__.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/layers/simple_neighbor_search.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/layers/tests/test_neighbor_search.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/layers/tests/test_padding.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/layers/tests/test_fno_block.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/layers/tests/test_legacy_spectral_convolution.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/layers/tests/test_resample.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/layers/tests/test_spherical_convolution.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/losses/__init__.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/layers/tests/test_spectral_convolution.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/losses/meta_losses.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/models/__init__.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/losses/data_losses.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/models/base_model.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/models/fno.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/losses/equation_losses.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/models/tests/__init__.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/models/fnogno.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/models/tests/test_fno.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/models/tests/test_fnogno.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/models/tests/test_uno.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/mpu/__init__.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/mpu/comm.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/models/uno.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/mpu/helpers.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/mpu/mappings.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/tests/__init__.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/tests/test_model_from_config.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/training/tests/test_callbacks.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/tests/test_utils.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/training/__init__.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/training/callbacks.py: 2025-03-08T19:16:37Z
+models/neuralop030/neuralop/training/patching.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/training/torch_setup.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/training/trainer.py: 2024-09-19T16:16:44Z
+models/neuralop030/scripts/login_wandb.py: 2024-09-19T16:16:44Z
+models/neuralop030/neuralop/utils.py: 2024-09-19T16:16:44Z
+models/neuralop030/scripts/train_burgers.py: 2024-09-19T16:16:44Z
+models/neuralop030/scripts/test_from_config.py: 2024-09-19T16:16:44Z
+models/neuralop030/scripts/train_darcy.py: 2024-09-19T16:16:44Z
+models/neuralop030/scripts/train_navier_stokes.py: 2024-09-19T16:16:44Z
+models/neuralop030/setup.py: 2024-09-19T16:16:44Z
+run.py: 2025-04-04T22:48:17Z
+train_fom.py: 2025-09-28T17:21:10Z
+training/train.py: 2025-03-08T19:16:37Z
+utils/Viz/blender_rendering.py: 2025-03-08T19:16:37Z
+training/trainer.py: 2025-03-25T16:40:52Z
+utils/Viz/createObj.py: 2025-03-08T19:16:37Z
+training/train_fom.py: 2025-03-08T19:16:37Z
+utils/data_utils.py: 2025-04-04T22:48:17Z
+utils/Viz/viz_poly.py: 2025-03-08T19:16:37Z
+utils/utils.py: 2025-03-10T18:49:11Z
+utils/viz_pc.py: 2025-03-08T19:16:37Z
+utils/viz_poly.py: 2025-03-08T19:16:37Z

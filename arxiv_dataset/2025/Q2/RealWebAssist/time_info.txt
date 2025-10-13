@@ -1,0 +1,13 @@
+evaluate.py: 2025-06-12T16:41:30Z
+model_scripts/aria_ui_baseline.py: 2025-06-12T10:07:08Z
+model_scripts/o1_reasoning.py: 2025-06-12T10:07:08Z
+model_scripts/claude_reasoning.py: 2025-06-12T10:07:08Z
+model_scripts/os_atlas_baseline_gpt.py: 2025-06-12T10:07:08Z
+model_scripts/os_atlas_baseline.py: 2025-06-12T10:07:08Z
+model_scripts/aria_ui_baseline_gpt.py: 2025-06-12T10:07:08Z
+model_scripts/gpt_reasoning.py: 2025-06-12T10:07:08Z
+model_scripts/uground_baseline.py: 2025-06-12T10:07:08Z
+model_scripts/uground_baseline_gpt.py: 2025-06-12T10:07:08Z
+model_scripts/uground_baseline_claude.py: 2025-06-12T10:07:08Z
+model_scripts/uground_baseline_o1.py: 2025-06-12T10:07:08Z
+model_scripts/set_of_mark_baseline.py: 2025-06-12T10:07:08Z

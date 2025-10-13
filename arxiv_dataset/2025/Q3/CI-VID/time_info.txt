@@ -1,0 +1,6 @@
+construction_functions/individual_annotation.py: 2025-08-05T03:56:33Z
+construction_functions/joint_annotation.py: 2025-08-05T03:56:33Z
+construction_functions/entity_based_segment.py: 2025-08-05T03:56:33Z
+evaluation/vlm_evaluation/vlm_evaluation.py: 2025-07-31T10:18:24Z
+evaluation/similarity_evaluation/object_similarity_evaluation.py: 2025-07-31T10:18:24Z
+construction_functions/similarity_based_segment.py: 2025-08-05T03:56:33Z

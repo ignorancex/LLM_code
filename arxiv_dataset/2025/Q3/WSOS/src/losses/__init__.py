@@ -1,0 +1,1 @@
+from src.losses.dswd import DSW, ProjNet

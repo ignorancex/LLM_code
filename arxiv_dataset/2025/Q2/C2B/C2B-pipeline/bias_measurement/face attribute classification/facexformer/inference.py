@@ -1,0 +1,1 @@
+../../../../base_models/celeba_face_attribute_classification/facexformer/inference.py

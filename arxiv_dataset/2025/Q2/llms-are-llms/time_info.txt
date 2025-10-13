@@ -1,0 +1,14 @@
+models/mistral_ministral/modeling_mistral_ministral_locally_linear.py: 2025-05-11T00:07:01Z
+models/llama_3/modeling_llama_locally_linear.py: 2025-05-10T05:02:07Z
+models/gemma_3/modeling_gemma_locally_linear.py: 2025-05-11T00:07:01Z
+models/mistral_ministral/mistral_ministral_forward.py: 2025-05-30T03:39:23Z
+models/gemma_3/gemma_3_forward.py: 2025-05-28T03:54:33Z
+models/phi_4/modeling_phi_locally_linear.py: 2025-05-11T00:07:01Z
+models/olmo_2/modeling_olmo_locally_linear.py: 2025-05-19T19:02:44Z
+models/olmo_2/olmo_2_forward.py: 2025-05-30T03:39:23Z
+models/phi_4/phi_4_forward.py: 2025-05-30T03:39:23Z
+models/qwen_3/modeling_qwen_locally_linear.py: 2025-05-11T00:07:01Z
+models/qwen_3/qwen_3_forward.py: 2025-05-30T03:39:23Z
+run_detached_jacobian.py: 2025-06-28T06:00:55Z
+src/JacobianSingularVectorPowerIteration.py: 2025-07-03T00:16:12Z
+src/JacobianAnalyzer.py: 2025-06-05T12:27:59Z

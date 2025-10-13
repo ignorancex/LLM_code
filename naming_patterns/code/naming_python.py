@@ -7,8 +7,8 @@ from tqdm import tqdm
 import concurrent.futures
 import warnings
 warnings.filterwarnings('ignore', category=SyntaxWarning)
-classify_enabled = False
-naming_patterns = {'single_letter': '^[a-zA-Z]$', 'lowercase': '^[a-z]+$', 'UPPERCASE': '^[A-Z]+$', 'camelCase': '^[a-z]+(?:[A-Z][a-z]*)*$', 'snake_case': '^[a-z]+(?:_[a-z]+)+$', 'PascalCase': '^[A-Z][a-z]+(?:[A-Z][a-z]*)*$', 'UPPER_SNAKE_CASE': '^[A-Z]+(?:_[A-Z]+)+$', 'endsWithDigits': '^[A-Za-z_]+[0-9]+$', 'Other': '.*'}
+classify_enabled = True
+naming_patterns = {'single_letter': '^[a-zA-Z]$', 'lowercase': '^[a-z]+$', 'UPPERCASE': '^[A-Z]+$', 'camelCase': '^[a-z]+(?:[A-Z][a-z]*)*$', 'snake_case': '^[a-z]+(?:_[a-z]+)+$', 'PascalCase': '^[A-Z][a-z]+(?:[A-Z][a-z]*)*$', 'endsWithDigits': '^[A-Za-z_]+[0-9]+$', 'Other': '.*'}
 
 def get_naming_pattern(name):
     name = str(name)
@@ -74,9 +74,9 @@ def process_project(project_name, quarter_path, quarter_key, quarter_repo_catego
     func_ratios = {pat: func_counts.get(pat, 0) / func_total if func_total else 0.0 for pat in naming_patterns}
     var_ratios = {pat: var_counts.get(pat, 0) / var_total if var_total else 0.0 for pat in naming_patterns}
     return (project_category, func_ratios, var_ratios)
-base_dir = f'LLM_code/arxiv_dataset'
-output_dir = 'LLM_code/arxiv_result/naming_patterns_python'
-categories_file = 'LLM_code/code/github_links/python_dataset_links_1.json'
+base_dir = f'arxiv_dataset'
+output_dir = 'naming_patterns/github_result/naming_patterns_python'
+categories_file = 'dataset_collection/github/links/python_dataset_links.json'
 os.makedirs(output_dir, exist_ok=True)
 skipped_files_log = os.path.join(output_dir, f'skipped_files.txt')
 if os.path.exists(skipped_files_log):
@@ -99,9 +99,9 @@ else:
     category_list = ['all']
 quarter_func_ratios = defaultdict(lambda : defaultdict(lambda : defaultdict(list)))
 quarter_var_ratios = defaultdict(lambda : defaultdict(lambda : defaultdict(list)))
-for year in range(2020, 2026):
-    max_q = 1 if year == 2025 else 4
-    for q in range(1, max_q + 1):
+for year in range(2025, 2026):
+    max_q = 3 if year == 2025 else 4
+    for q in range(2, max_q + 1):
         quarter_name = f'Q{q}'
         quarter_key = f'{year}Q{q}'
         quarter_path = os.path.join(base_dir, str(year), quarter_name)
@@ -132,8 +132,8 @@ def aggregate(ratios):
     return out
 final_func = aggregate(quarter_func_ratios)
 final_var = aggregate(quarter_var_ratios)
-func_out = os.path.join(output_dir, f'naming_patterns_function.json')
-var_out = os.path.join(output_dir, f'naming_patterns_variable.json')
+func_out = os.path.join(output_dir, f'naming_patterns_function_1.json')
+var_out = os.path.join(output_dir, f'naming_patterns_variable_1.json')
 with open(func_out, 'w', encoding='utf-8') as f:
     json.dump(final_func, f, ensure_ascii=False, indent=2)
 with open(var_out, 'w', encoding='utf-8') as f:

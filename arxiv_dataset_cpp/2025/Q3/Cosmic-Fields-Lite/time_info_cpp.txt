@@ -1,0 +1,11 @@
+src/fdm3d.cpp: 2024-08-04T08:07:01Z
+src/equations.cpp: 2025-04-30T12:09:58Z
+src/fftw_wrapper.cpp: 2025-05-12T13:00:48Z
+src/io.cpp: 2025-06-22T17:16:40Z
+src/proca.cpp: 2025-06-23T03:42:29Z
+src/field_booster.cpp: 2025-06-29T13:24:15Z
+src/eigen_wrapper.cpp: 2024-07-16T23:42:57Z
+src/main.cpp: 2025-06-29T13:24:15Z
+src/sp.cpp: 2025-06-23T03:42:29Z
+src/wkb.cpp: 2024-07-27T17:35:45Z
+src/random_field.cpp: 2024-07-29T09:04:08Z

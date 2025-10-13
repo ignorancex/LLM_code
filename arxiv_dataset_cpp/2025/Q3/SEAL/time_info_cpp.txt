@@ -1,0 +1,17 @@
+metadrive/render_pipeline/rpcore/native/source/config_rsnative.cpp: 2024-09-22T16:25:40Z
+metadrive/render_pipeline/rpcore/native/source/internal_light_manager.cpp: 2024-09-22T16:25:40Z
+metadrive/render_pipeline/rpcore/native/source/gpu_command_list.cpp: 2024-09-22T16:25:40Z
+metadrive/render_pipeline/rpcore/native/source/pssm_helper.cpp: 2024-09-22T16:25:40Z
+metadrive/render_pipeline/rpcore/native/source/gpu_command.cpp: 2024-09-22T16:25:40Z
+metadrive/render_pipeline/rpcore/native/source/ies_dataset.cpp: 2024-09-22T16:25:40Z
+advgen/utils_cython.c: 2024-09-22T16:25:40Z
+metadrive/render_pipeline/rpcore/native/source/pssm_camera_rig.cpp: 2024-09-22T16:25:40Z
+metadrive/render_pipeline/rpcore/native/source/rp_point_light.cpp: 2024-09-22T16:25:40Z
+metadrive/render_pipeline/rpcore/native/source/rp_spot_light.cpp: 2024-09-22T16:25:40Z
+metadrive/render_pipeline/rpcore/native/source/shadow_atlas.cpp: 2024-09-22T16:25:40Z
+metadrive/render_pipeline/rpcore/native/source/rp_light.cpp: 2024-09-22T16:25:40Z
+metadrive/render_pipeline/rpcore/native/source/shadow_manager.cpp: 2024-09-22T16:25:40Z
+metadrive/render_pipeline/rpcore/native/source/tag_state_manager.cpp: 2024-09-22T16:25:40Z
+metadrive/render_pipeline/rpplugins/scattering/resources/hosek_wilkie_scattering/source/ArHosekSkyModel.cpp: 2024-09-22T16:25:40Z
+metadrive/render_pipeline/rpcore/native/source/shadow_source.cpp: 2024-09-22T16:25:40Z
+metadrive/render_pipeline/rpplugins/scattering/resources/hosek_wilkie_scattering/source/config_module.cpp: 2024-09-22T16:25:40Z

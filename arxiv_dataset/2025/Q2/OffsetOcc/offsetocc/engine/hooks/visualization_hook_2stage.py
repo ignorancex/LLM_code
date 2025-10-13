@@ -1,0 +1,129 @@
+# import os.path as osp
+import warnings
+from typing import Optional, Sequence
+
+import mmcv
+# import mmengine.fileio as fileio
+from mmengine.hooks import Hook
+from mmengine.runner import Runner
+
+from offsetocc.registry import HOOKS
+from offsetocc.structures import OccDataSample
+from offsetocc.visualization import OccLocalVisualizer2Stage
+
+
+@HOOKS.register_module()
+class OccVisualizationHook2Stage(Hook):
+    """Segmentation Visualization Hook. Used to visualize validation and
+    testing process prediction results.
+
+    In the testing phase:
+
+    1. If ``show`` is True, it means that only the prediction results are
+        visualized without storing data, so ``vis_backends`` needs to
+        be excluded.
+
+    Args:
+        draw (bool): whether to draw prediction results. If it is False,
+            it means that no drawing will be done. Defaults to False.
+        interval (int): The interval of visualization. Defaults to 50.
+        show (bool): Whether to display the drawn image. Default to False.
+        wait_time (float): The interval of show (s). Defaults to 0.
+        backend_args (dict, Optional): Arguments to instantiate a file backend.
+            See https://mmengine.readthedocs.io/en/latest/api/fileio.htm
+            for details. Defaults to None.
+            Notes: mmcv>=2.0.0rc4, mmengine>=0.2.0 required.
+    """
+
+    def __init__(self,
+                 draw: bool = False,
+                 interval: int = 50,
+                 show: bool = False,
+                 wait_time: float = 0.,
+                 backend_args: Optional[dict] = None):
+        self._visualizer: OccLocalVisualizer2Stage = \
+            OccLocalVisualizer2Stage.get_current_instance()
+        self.interval = interval
+        self.show = show
+        if self.show:
+            # No need to think about vis backends.
+            self._visualizer._vis_backends = {}
+            warnings.warn('The show is True, it means that only '
+                          'the prediction results are visualized '
+                          'without storing data, so vis_backends '
+                          'needs to be excluded.')
+
+        self.wait_time = wait_time
+        self.backend_args = backend_args.copy() if backend_args else None
+        self.draw = draw
+        if not self.draw:
+            warnings.warn('The draw is False, it means that the '
+                          'hook for visualization will not take '
+                          'effect. The results will NOT be '
+                          'visualized or stored.')
+
+    def _after_iter(self,
+                    runner: Runner,
+                    batch_idx: int,
+                    data_batch: dict,
+                    outputs: Sequence[OccDataSample],
+                    mode: str = 'val') -> None:
+        """Run after every ``self.interval`` validation iterations.
+
+        Args:
+            runner (:obj:`Runner`): The runner of the validation process.
+            batch_idx (int): The index of the current batch in the val loop.
+            data_batch (dict): Data from dataloader.
+            outputs (Sequence[:obj:`OccDataSample`]): Outputs from model.
+            mode (str): mode (str): Current mode of runner. Defaults to 'val'.
+        """
+        if self.draw is False or mode == 'train':
+            return
+
+        if self.every_n_inner_iters(batch_idx, self.interval):
+
+            # always get the first element of the batch
+            pred_occ_map = outputs[0].pred_occ_map.occ_map.squeeze(0).cpu().numpy()
+            pred_panoptic_map = outputs[0].pred_panoptic_map.panoptic_map.cpu().numpy()
+            gt_occ_map = outputs[0].gt_occ_map.occ_map.cpu().numpy()
+            mask_camera = outputs[0].gt_occ_map.occ_map_mask_camera.cpu().numpy()
+
+            camera_images = []
+            imgs_path = outputs[0].img_path
+            if not isinstance(imgs_path, list):     #TODO: ugly hack to support 1 cam (multi-view loader does not create list)
+                imgs_path = [imgs_path]
+            for path in imgs_path:
+                img = mmcv.image.imread(path, channel_order='rgb')
+                camera_images.append(img)
+
+            self._visualizer.add_datasample(
+                'occ_map batch idx' + str(batch_idx),
+                camera_images,
+                gt_occ_map,
+                pred_panoptic_map,
+                pred_occ_map,
+                mask_camera,
+                step=runner.iter,
+            )
+
+            # img_path = output.img_path
+            # img_bytes = fileio.get(
+            #     img_path, backend_args=self.backend_args)
+            # img = mmcv.imfrombytes(img_bytes, channel_order='rgb')
+            # window_name = f'{mode}_{osp.basename(img_path)}'
+            #
+            # self._visualizer.add_datasample(
+            #     window_name,
+            #     img,
+            #     data_sample=output,
+            #     show=self.show,
+            #     wait_time=self.wait_time,
+            #     step=runner.iter)
+
+    def before_train(self, runner) -> None:
+        """Call add_graph method of visualizer.
+
+        Args:
+            runner (Runner): The runner of the training process.
+        """
+        runner.visualizer.add_graph(runner.model, None)

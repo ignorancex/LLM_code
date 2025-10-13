@@ -1,0 +1,404 @@
+import os
+import time
+from typing import Tuple
+import numpy as np
+from sklearn.metrics import f1_score, average_precision_score
+from statistics import mean
+import ivtmetrics
+from datetime import datetime
+import json
+import argparse, sys
+import random
+
+import torch
+from torch.cuda.amp import GradScaler, autocast  # type: ignore
+import torch.nn.functional
+from torch.optim import lr_scheduler
+
+from loss import SPLC, GRLoss, Hill, AsymmetricLossOptimized, WAN, VLPL_Loss, iWAN, G_AN, LL, Weighted_Hill, Modified_VLPL
+from mmlsurgadapt import MMLSurgAdaptTrainer
+from utils import AverageMeter, add_weight_decay, mAP
+import warnings
+
+from config import cfg
+
+def process_cholec80(true,pred,pred_ema,video_ids,test):
+
+    true = true[:,:7]
+    pred = pred[:,:7]
+    pred_ema = pred_ema[:,:7]
+
+    unique_ids = np.unique(video_ids)
+    video_f1s = {}
+    video_f1s_ema = {}
+
+    for vid in unique_ids:
+        indices = np.where(video_ids==vid)[0]
+        y_true_video = true[indices]  
+        y_pred_video = pred[indices]
+        y_pred_video_ema = pred_ema[indices]
+
+        y_pred_video = np.argmax(y_pred_video,axis=1)
+        y_pred_video_ema = np.argmax(y_pred_video_ema,axis=1)
+        y_true_video = np.argmax(y_true_video,axis=1)
+
+        f1 = f1_score(y_true_video, y_pred_video, average="macro",labels=np.unique(y_true_video))*100
+        f1_ema = f1_score(y_true_video, y_pred_video_ema, average="macro",labels=np.unique(y_true_video))*100
+
+        video_f1s[vid] = f1
+        video_f1s_ema[vid] = f1_ema
+
+    f1_score_reg = mean(video_f1s.values())
+    f1_score_ema = mean(video_f1s_ema.values())
+
+    if test == True:
+        return f1_score_reg, None, video_f1s, None
+
+    return f1_score_reg, f1_score_ema, video_f1s, video_f1s_ema
+
+def process_endo(true,pred,pred_ema,video_ids, test):
+
+    true = true[:,7:10]
+    pred = pred[:,7:10]
+    pred_ema = pred_ema[:,7:10]
+
+    num_classes = true.shape[1]
+
+    per_class_map = {}
+    per_class_map_ema = {}
+
+    for label in range(num_classes):
+        avg_precision = average_precision_score(
+            true[:, label], pred[:, label]
+        )
+        avg_precision_ema  = average_precision_score(
+            true[:, label], pred_ema[:, label]
+        )
+        per_class_map[f"C{label}"] = avg_precision * 100.0
+        per_class_map_ema[f"C{label}"] = avg_precision_ema * 100
+    
+    mean_ap = mean(per_class_map.values())
+    mean_ap_ema = mean(per_class_map_ema.values())
+
+    if test == True:
+        return mean_ap, None, per_class_map, None
+
+    return mean_ap, mean_ap_ema, per_class_map, per_class_map_ema
+
+def resolve_nan(classwise):
+        classwise[classwise==-0.0] = np.nan
+        return classwise
+
+def process_cholect50(true,pred,pred_ema,video_ids,test):
+
+    true = true[:,10:]
+    pred = pred[:,10:]
+    pred_ema = pred_ema[:,10:]
+    unique_vids = np.unique(video_ids)
+
+    ap_i_list = []
+    ap_v_list = []
+    ap_t_list = []
+    ap_iv_list = []
+    ap_it_list = []
+    ap_ivt_list = []
+
+    ap_i_list_ema = []
+    ap_v_list_ema = []
+    ap_t_list_ema = []
+    ap_iv_list_ema = []
+    ap_it_list_ema = []
+    ap_ivt_list_ema = []
+
+    for vid in unique_vids:
+            indices = np.where(video_ids == vid)[0]
+            ivt_labels = true[indices]
+            ivt_preds = pred[indices]
+            ivt_preds_ema = pred_ema[indices]
+
+            filter = ivtmetrics.Disentangle()
+
+            i_labels = filter.extract(inputs=ivt_labels, component="i")
+            v_labels = filter.extract(inputs=ivt_labels, component="v")
+            t_labels = filter.extract(inputs=ivt_labels, component="t")
+            iv_labels = filter.extract(inputs=ivt_labels, component="iv")
+            it_labels = filter.extract(inputs=ivt_labels, component="it")
+
+            i_preds = filter.extract(inputs=ivt_preds, component="i")
+            v_preds = filter.extract(inputs=ivt_preds, component="v")
+            t_preds = filter.extract(inputs=ivt_preds, component="t")
+            iv_preds = filter.extract(inputs=ivt_preds, component="iv")
+            it_preds = filter.extract(inputs=ivt_preds, component="it")
+
+            i_preds_ema = filter.extract(inputs=ivt_preds_ema, component="i")
+            v_preds_ema = filter.extract(inputs=ivt_preds_ema, component="v")
+            t_preds_ema = filter.extract(inputs=ivt_preds_ema, component="t")
+            iv_preds_ema = filter.extract(inputs=ivt_preds_ema, component="iv")
+            it_preds_ema = filter.extract(inputs=ivt_preds_ema, component="it")
+
+            ap_i = average_precision_score(i_labels,i_preds,average=None)*100
+            ap_v = average_precision_score(v_labels,v_preds,average=None)*100
+            ap_t = average_precision_score(t_labels,t_preds,average=None)*100
+            ap_iv = average_precision_score(iv_labels,iv_preds,average=None)*100
+            ap_it = average_precision_score(it_labels,it_preds,average=None)*100
+            ap_ivt = average_precision_score(ivt_labels,ivt_preds,average=None)*100
+
+            ap_i_ema = average_precision_score(i_labels,i_preds_ema,average=None)*100
+            ap_v_ema = average_precision_score(v_labels,v_preds_ema,average=None)*100
+            ap_t_ema = average_precision_score(t_labels,t_preds_ema,average=None)*100
+            ap_iv_ema = average_precision_score(iv_labels,iv_preds_ema,average=None)*100
+            ap_it_ema = average_precision_score(it_labels,it_preds_ema,average=None)*100
+            ap_ivt_ema = average_precision_score(ivt_labels,ivt_preds_ema,average=None)*100
+
+            ap_i = resolve_nan(ap_i)
+            ap_v = resolve_nan(ap_v)
+            ap_t = resolve_nan(ap_t)
+            ap_iv = resolve_nan(ap_iv)
+            ap_it = resolve_nan(ap_it)
+            ap_ivt = resolve_nan(ap_ivt)
+
+            ap_i_ema = resolve_nan(ap_i_ema)
+            ap_v_ema = resolve_nan(ap_v_ema)
+            ap_t_ema = resolve_nan(ap_t_ema)
+            ap_iv_ema = resolve_nan(ap_iv_ema)
+            ap_it_ema = resolve_nan(ap_it_ema)
+            ap_ivt_ema = resolve_nan(ap_ivt_ema)
+
+            ap_i_list.append(ap_i.reshape([1,-1]))
+            ap_v_list.append(ap_v.reshape([1,-1]))
+            ap_t_list.append(ap_t.reshape([1,-1]))
+            ap_iv_list.append(ap_iv.reshape([1,-1]))
+            ap_it_list.append(ap_it.reshape([1,-1]))
+            ap_ivt_list.append(ap_ivt.reshape([1,-1]))
+
+            ap_i_list_ema.append(ap_i_ema.reshape([1,-1]))
+            ap_v_list_ema.append(ap_v_ema.reshape([1,-1]))
+            ap_t_list_ema.append(ap_t_ema.reshape([1,-1]))
+            ap_iv_list_ema.append(ap_iv_ema.reshape([1,-1]))
+            ap_it_list_ema.append(ap_it_ema.reshape([1,-1]))
+            ap_ivt_list_ema.append(ap_ivt_ema.reshape([1,-1]))
+    
+    ap_i_list = np.concatenate(ap_i_list,axis=0)
+    ap_i_list = np.nanmean(ap_i_list,axis=0)
+    map_i = np.nanmean(ap_i_list)
+    ap_v_list = np.concatenate(ap_v_list,axis=0)
+    ap_v_list = np.nanmean(ap_v_list,axis=0)
+    map_v = np.nanmean(ap_v_list)
+    ap_t_list = np.concatenate(ap_t_list,axis=0)
+    ap_t_list = np.nanmean(ap_t_list,axis=0)
+    map_t = np.nanmean(ap_t_list)
+    ap_iv_list = np.concatenate(ap_iv_list,axis=0)
+    ap_iv_list = np.nanmean(ap_iv_list,axis=0)
+    map_iv = np.nanmean(ap_iv_list)
+    ap_it_list = np.concatenate(ap_it_list,axis=0)
+    ap_it_list = np.nanmean(ap_it_list,axis=0)
+    map_it = np.nanmean(ap_it_list)
+    ap_ivt_list = np.concatenate(ap_ivt_list,axis=0)
+    ap_ivt_list = np.nanmean(ap_ivt_list,axis=0)
+    map_ivt = np.nanmean(ap_ivt_list)
+
+    ap_i_list_ema = np.concatenate(ap_i_list_ema,axis=0)
+    ap_i_list_ema = np.nanmean(ap_i_list_ema,axis=0)
+    map_i_ema = np.nanmean(ap_i_list_ema)
+    ap_v_list_ema = np.concatenate(ap_v_list_ema,axis=0)
+    ap_v_list_ema = np.nanmean(ap_v_list_ema,axis=0)
+    map_v_ema = np.nanmean(ap_v_list_ema)
+    ap_t_list_ema = np.concatenate(ap_t_list_ema,axis=0)
+    ap_t_list_ema = np.nanmean(ap_t_list_ema,axis=0)
+    map_t_ema = np.nanmean(ap_t_list_ema)
+    ap_iv_list_ema = np.concatenate(ap_iv_list_ema,axis=0)
+    ap_iv_list_ema = np.nanmean(ap_iv_list_ema,axis=0)
+    map_iv_ema = np.nanmean(ap_iv_list_ema)
+    ap_it_list_ema = np.concatenate(ap_it_list_ema,axis=0)
+    ap_it_list_ema = np.nanmean(ap_it_list_ema,axis=0)
+    map_it_ema = np.nanmean(ap_it_list_ema)
+    ap_ivt_list_ema = np.concatenate(ap_ivt_list_ema,axis=0)
+    ap_ivt_list_ema = np.nanmean(ap_ivt_list_ema,axis=0)
+    map_ivt_ema = np.nanmean(ap_ivt_list_ema)
+
+    aps = {
+        "AP_i" : map_i,
+        "AP_v" : map_v,
+        "AP_t" : map_t,
+        "AP_iv" : map_iv,
+        "AP_it" : map_it,
+        "AP_ivt" : map_ivt
+    }
+
+    aps_ema = {
+        "AP_i" : map_i_ema,
+        "AP_v" : map_v_ema,
+        "AP_t" : map_t_ema,
+        "AP_iv" : map_iv_ema,
+        "AP_it" : map_it_ema,
+        "AP_ivt" : map_ivt_ema
+    }
+
+    if test == True:
+        return aps, None
+
+    return aps, aps_ema
+
+def save_results(a,b,c,test,dir):
+
+    cholec80_data = {
+        "F1_score" : a[0],
+        "F1_score_EMA" : a[1],
+        "Per_video_f1" : a[2],
+        "Per_video_f1_EMA" : a[3]
+    }
+
+    endo_data = {
+        "mAP" : b[0],
+        "mAP_EMA" : b[1],
+        "mAP_per_class" : b[2],
+        "mAP_per_class_EMA" : b[3]
+    }
+
+    cholect50_data = {
+        "AP" : c[0],
+        "AP_EMA" : c[1]
+    }
+
+    data = {
+        "Test" : test,
+        "Cholec80" : cholec80_data,
+        "Endoscapes" : endo_data,
+        "CholecT50" : cholect50_data
+    }
+
+    folder_name = f"results/{dir}"
+    os.makedirs(folder_name, exist_ok=True)
+
+    current_time = datetime.now()
+    timestamp = current_time.strftime("%Y%m%d_%H%M%S")
+    if test == True:
+        file_name = f"{folder_name}/result_{timestamp}_test.json"
+    else:
+        file_name = f"{folder_name}/result_{timestamp}.json"
+
+    try:
+        with open(file_name, 'w') as json_file:
+            json.dump(data, json_file, indent=4)
+        print("Results saved successfully")
+    except Exception as e:
+        print(f"Error in saving results : {e}")
+
+
+def calculate_metrics(labels,preds,preds_ema,video_ids,test,dir):
+
+    labels = np.round(labels)
+
+    datasets = ["cholec80","endoscapes","cholect50"]
+
+    for dataset in datasets:
+
+        print(f"Processing dataset: {dataset}")
+
+        mask = np.array([dataset in v for v in video_ids])
+
+        filtered_labels  = labels[mask]
+        filtered_preds = preds[mask]
+        filtered_preds_ema = preds_ema[mask]
+        filtered_video_ids = video_ids[mask]
+
+        if dataset == "cholec80":
+            a = process_cholec80(filtered_labels,filtered_preds,filtered_preds_ema,filtered_video_ids,test)
+        if dataset == "endoscapes":
+            b = process_endo(filtered_labels,filtered_preds,filtered_preds_ema,filtered_video_ids,test)
+        if dataset == 'cholect50':
+            c = process_cholect50(filtered_labels,filtered_preds,filtered_preds_ema,filtered_video_ids,test)
+
+    save_results(a,b,c,test,dir)
+
+    print("Calculating metrics done")
+
+def test(trainer,ckpt,dir,criterion) -> None:
+
+    state_dict = torch.load(ckpt)
+    new_state_dict = {}
+    for key, value in state_dict.items():
+        if 'child_prompt_learner' in key:
+            new_key = key.replace('child_prompt_learner', 'prompt_learner')
+        else:
+            new_key = key
+
+        new_state_dict[new_key] = value
+
+    trainer.model.load_state_dict(
+        new_state_dict, strict=True)
+    trainer.model.eval()
+    criterion = criterion.to('cpu')
+
+    print("Start test...")
+
+    sigmoid = torch.sigmoid
+
+    preds = []
+    targets = []
+    all_vids = []
+    losses = []
+    for i, (input, target, vid) in enumerate(trainer.test_loader):
+        target = target.cuda()
+        # compute output
+        with torch.no_grad():
+            output_logits = trainer.model(input.cuda())
+            output = sigmoid(output_logits)
+
+        loss , _ = criterion(output_logits,target,20)
+        losses.append(loss)
+        # for mAP calculation
+        preds.append(output.cpu().detach().numpy())
+        targets.append(target.cpu().detach().numpy())
+        all_vids.append(vid)
+
+    all_labels = np.concatenate(targets, axis=0)
+    all_predictions_reg = np.concatenate(preds, axis=0)
+    all_predictions_ema = np.zeros_like(all_predictions_reg)
+    all_vids = np.concatenate([np.array(sublist) for sublist in all_vids])
+    calculate_metrics(all_labels,all_predictions_reg,all_predictions_ema,all_vids,True,dir)
+
+    mAP_calc = mAP(all_labels,all_predictions_reg)
+    loss_calc = sum(losses)/len(losses)
+    print(f"Loss: {loss_calc}, mAP: {mAP_calc}")
+
+    print("Testing done...")
+
+def main():
+    os.environ["CUBLAS_WORKSPACE_CONFIG"] = ":4096:8"
+    warnings.filterwarnings("ignore", category=UserWarning) 
+    warnings.filterwarnings("ignore", category=RuntimeWarning) 
+    s = cfg.seed
+    torch.manual_seed(s)
+    torch.cuda.manual_seed(s)
+    random.seed(s)
+    np.random.seed(s)
+    print(f'Seed set to {s}')
+    torch.use_deterministic_algorithms(True)
+    torch.backends.cudnn.benchmark = False
+
+    loss_dict = {
+        'SPLC': SPLC,
+        'GRLoss': GRLoss,
+        'Hill': Hill,
+        'BCE': lambda: AsymmetricLossOptimized(gamma_neg=0, gamma_pos=0, clip=0),
+        'Focal': lambda: AsymmetricLossOptimized(gamma_neg=2, gamma_pos=2, clip=0),
+        'ASL': lambda: AsymmetricLossOptimized(gamma_neg=4, gamma_pos=0, clip=0.05),
+        'WAN': WAN,
+        'VLPL_Loss': VLPL_Loss,
+        'Modified_VLPL': Modified_VLPL,
+        'iWAN': iWAN,
+        'G-AN': G_AN,
+        'LL-R': lambda: LL(scheme='LL-R'),
+        'LL-Ct': LL,
+        'Weighted_Hill': Weighted_Hill
+    }
+    criterion = loss_dict.get(cfg.loss, lambda: None)()
+    print(f'Checkpoint: {cfg.ckpt}')
+    print(f'Directory: {cfg.test_dir}')
+    print(f'Loss: {cfg.test_loss}')
+    trainer = MMLSurgAdaptTrainer()
+    test(trainer,cfg.ckpt,cfg.test_dir,criterion)
+
+if __name__ == '__main__':
+    main()

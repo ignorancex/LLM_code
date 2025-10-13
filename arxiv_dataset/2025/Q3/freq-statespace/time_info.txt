@@ -1,0 +1,16 @@
+examples/nonlinear_benchmarks/silverbox_neural_network.py: 2025-07-07T11:07:44Z
+src/freq_statespace/_data_manager.py: 2025-07-07T11:07:44Z
+examples/nonlinear_benchmarks/silverbox_inference_and_learning.py: 2025-07-08T13:11:00Z
+src/freq_statespace/_config.py: 2025-07-07T11:07:44Z
+src/freq_statespace/_frequency_response.py: 2025-07-07T11:07:44Z
+src/freq_statespace/_misc.py: 2025-07-07T11:07:44Z
+src/freq_statespace/_best_linear_approximation.py: 2025-07-07T13:35:55Z
+src/freq_statespace/__init__.py: 2025-07-07T11:34:14Z
+src/freq_statespace/_nonlin_lfr.py: 2025-07-07T11:07:44Z
+src/freq_statespace/_solve.py: 2025-07-07T11:07:44Z
+src/freq_statespace/dep/__init__.py: 2025-07-07T13:35:55Z
+src/freq_statespace/dep/fsid.py: 2025-07-07T13:35:55Z
+src/freq_statespace/f_static/__init__.py: 2025-07-07T11:07:44Z
+src/freq_statespace/_model_structures.py: Unknown
+src/freq_statespace/f_static/_feature_maps.py: Unknown
+src/freq_statespace/f_static/_nonlin_funcs.py: Unknown

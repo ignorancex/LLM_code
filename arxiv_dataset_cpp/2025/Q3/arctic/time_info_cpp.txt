@@ -1,0 +1,17 @@
+src/ccd.cpp: 2023-02-16T21:48:19Z
+python/arcticpy/src/interface.cpp: 2023-02-16T21:48:19Z
+src/traps.cpp: 2023-01-08T21:22:21Z
+src/read_noise.cpp: 2024-02-13T18:04:56Z
+src/main.cpp: 2023-02-16T21:09:50Z
+src/cti.cpp: 2023-02-16T21:09:50Z
+src/roe.cpp: 2022-11-08T14:23:52Z
+src/trap_managers.cpp: 2023-02-16T21:09:50Z
+src/util.cpp: 2022-09-20T08:21:35Z
+test/test_lib.cpp: 2022-06-29T10:57:42Z
+test/test_main.cpp: 2020-12-14T19:12:58Z
+test/test_ccd.cpp: 2023-02-16T23:36:17Z
+test/test_roe.cpp: 2022-04-09T21:50:25Z
+test/test_cti.cpp: 2023-01-25T17:49:25Z
+test/test_trap_managers.cpp: 2021-07-19T19:48:58Z
+test/test_traps.cpp: 2021-07-18T16:18:45Z
+test/test_util.cpp: 2022-06-29T10:57:42Z

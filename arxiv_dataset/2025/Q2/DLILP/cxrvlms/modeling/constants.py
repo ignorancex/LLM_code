@@ -1,0 +1,45 @@
+PATH_PRETRAINED_WEIGHTS = "./cxrvlms/modeling/pretrained_weights/"
+
+CATEGORIES = ['adenopathy', 'air trapping', 'alveolar pattern', 'aortic atheromatosis', 'aortic elongation',
+              'apical pleural thickening', 'atelectasis', 'bronchiectasis', 'bronchovascular markings', 'bullas',
+              'calcified adenopathy', 'calcified densities', 'calcified granuloma', 'calcified pleural thickening',
+              'callus rib fracture', 'cardiomegaly', 'cavitation', 'chronic changes', 'consolidation', 'copd signs',
+              'costophrenic angle blunting', 'descendent aortic elongation', 'diaphragmatic eventration', 'edema',
+              'emphysema', 'enlarged cardiomediastinum', 'fibrotic band', 'flattened diaphragm', 'fracture', 'goiter',
+              'granuloma', 'gynecomastia', 'heart insufficiency', 'heart valve', 'hemidiaphragm elevation',
+              'hiatal hernia', 'hilar congestion', 'hilar enlargement', 'hyperinflated lung', 'hypoexpansion',
+              'increased density', 'infiltrates', 'interstitial pattern', 'kyphosis', 'laminar atelectasis',
+              'lobar atelectasis', 'lung lesion', 'lung opacities', 'lung opacity', 'mammary prosthesis', 'mastectomy',
+              'metal', 'minor fissure thickening', 'nipple shadow', 'no finding', 'nodule', 'osteopenia',
+              'osteosynthesis material', 'pacemaker', 'pleural effusion', 'pleural other', 'pleural thickening',
+              'pneumonia', 'pneumothorax', 'pseudonodule', 'pulmonary edema', 'pulmonary fibrosis', 'pulmonary mass',
+              'reticular interstitial pattern', 'rib fracture', 'sclerotic bone lesion', 'scoliosis', 'sternotomy',
+              'suboptimal study', 'superior mediastinal enlargement', 'support devices', 'supra aortic elongation',
+              'suture material', 'tracheal shift', 'tuberculosis', 'tuberculosis sequelae', 'volume loss',
+              'vascular hilar enlargement', 'vertebral anterior compression', 'vertebral degenerative changes']
+
+CATEGORIES_DATASETS = {
+    "MIMIC": ['no finding', 'enlarged cardiomediastinum', 'cardiomegaly', 'lung lesion', 'lung opacity', 'edema',
+              'consolidation', 'pneumonia', 'atelectasis', 'pneumothorax', 'pleural effusion', 'pleural other',
+              'fracture', 'support devices'],
+    "CHEXPERT": ['no finding', 'enlarged cardiomediastinum', 'cardiomegaly', 'lung lesion', 'lung opacity', 'edema',
+                 'consolidation', 'pneumonia', 'atelectasis', 'pneumothorax', 'pleural effusion', 'pleural other',
+                 'fracture', 'support devices'],
+    "PADCHEST": ['copd signs', 'adenopathy', 'air trapping', 'alveolar pattern', 'aortic atheromatosis',
+                 'aortic elongation', 'apical pleural thickening', 'atelectasis', 'bronchiectasis',
+                 'bronchovascular markings', 'bullas', 'calcified adenopathy', 'calcified densities',
+                 'calcified granuloma', 'calcified pleural thickening', 'callus rib fracture', 'cardiomegaly',
+                 'cavitation', 'chronic changes', 'consolidation', 'costophrenic angle blunting',
+                 'descendent aortic elongation', 'diaphragmatic eventration', 'emphysema', 'fibrotic band',
+                 'flattened diaphragm', 'fracture', 'goiter', 'granuloma', 'gynecomastia', 'heart insufficiency',
+                 'heart valve', 'hemidiaphragm elevation', 'hiatal hernia', 'hilar congestion', 'hilar enlargement',
+                 'hyperinflated lung', 'hypoexpansion', 'increased density', 'infiltrates', 'interstitial pattern',
+                 'kyphosis', 'laminar atelectasis', 'lobar atelectasis', 'lung opacities', 'mammary prosthesis',
+                 'mastectomy', 'metal', 'minor fissure thickening', 'nipple shadow', 'no finding', 'nodule',
+                 'osteopenia', 'osteosynthesis material', 'pacemaker', 'pleural effusion', 'pleural thickening',
+                 'pneumonia', 'pneumothorax', 'pseudonodule', 'pulmonary edema', 'pulmonary fibrosis', 'pulmonary mass',
+                 'reticular interstitial pattern', 'rib fracture', 'sclerotic bone lesion', 'scoliosis', 'sternotomy',
+                 'suboptimal study', 'superior mediastinal enlargement', 'support devices', 'supra aortic elongation',
+                 'suture material', 'tracheal shift', 'tuberculosis', 'tuberculosis sequelae', 'volume loss'
+                 'vascular hilar enlargement', 'vertebral anterior compression', 'vertebral degenerative changes']
+}

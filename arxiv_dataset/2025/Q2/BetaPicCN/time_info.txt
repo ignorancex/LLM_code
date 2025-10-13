@@ -1,0 +1,12 @@
+src/scripts/plot_ccf.py: 2023-02-07T11:02:35Z
+src/scripts/plot_CN_ACF.py: 2025-02-06T22:46:17Z
+src/scripts/analyse_HARPS_spectra.py: 2025-04-18T15:37:28Z
+src/scripts/paths.py: 2022-09-02T13:37:15Z
+src/scripts/plot_HARPS_CN_exocomet_frame.py: 2025-02-06T22:29:24Z
+src/scripts/plot_ccf_mean.py: 2024-09-06T09:17:44Z
+src/scripts/plot_HARPS_CN_stellar_frame.py: 2025-02-06T22:23:00Z
+src/scripts/plot_FEB_velocity_depth.py: 2025-02-06T22:46:17Z
+src/scripts/plot_exocomet_CCFs.py: 2025-04-10T19:13:39Z
+src/scripts/plot_spec_mean.py: 2024-10-03T09:07:56Z
+src/scripts/read_e2ds_data_HARPS.py: 2023-01-04T14:28:50Z
+src/scripts/plot_two_CN_temps.py: 2024-09-06T08:45:43Z

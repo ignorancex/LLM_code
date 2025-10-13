@@ -1,0 +1,11 @@
+polynomial_embeddings/__init__.py: 2025-05-04T20:54:17Z
+src/__init__.py: 2024-11-02T18:27:46Z
+src/data.py: 2025-02-01T23:49:32Z
+main.py: 2025-05-04T20:54:17Z
+src/pete.py: 2025-05-04T20:54:17Z
+src/embedder.py: 2025-01-26T19:25:06Z
+setup.py: 2025-05-04T20:54:17Z
+src/benchmark.py: 2025-02-01T23:49:32Z
+src/trainer.py: 2025-01-26T19:25:06Z
+src/transformer.py: 2025-02-01T23:49:32Z
+src/utils.py: 2024-11-02T18:27:46Z

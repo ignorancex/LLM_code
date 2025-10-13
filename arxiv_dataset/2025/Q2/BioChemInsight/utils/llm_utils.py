@@ -1,0 +1,569 @@
+import os
+import warnings
+warnings.filterwarnings("ignore")
+
+import time
+import requests
+from functools import wraps
+import json
+import base64
+import sys
+import signal
+import threading
+
+try:
+    import google.generativeai as genai
+except ImportError:
+    print("Error: google.generativeai package not found. Please install it: pip install google-generativeai")
+    sys.exit(1)
+
+try:
+    from openai import OpenAI
+except ImportError:
+    print("Error: openai package not found. Please install it: pip install openai")
+    sys.exit(1)
+
+try:
+    import PIL.Image
+    import PIL.ImageDraw
+    import PIL.ImageFont
+except ImportError:
+    print("Error: Pillow (PIL) package not found. Please install it: pip install Pillow")
+    print("Testing of structure_to_id with dummy image creation will be skipped.")
+    PIL = None
+
+try:
+    SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+    if os.path.basename(SCRIPT_DIR) != '' and os.path.exists(os.path.join(SCRIPT_DIR, '..', 'constants.py')):
+         sys.path.insert(0, os.path.join(SCRIPT_DIR, '..'))
+         import constants
+         sys.path.pop(0)
+    else:
+        import constants
+except ImportError:
+    print("Error: constants.py not found. Please ensure it's in the same directory, parent directory, or your PYTHONPATH.")
+    sys.exit(1)
+
+
+GEMINI_API_KEY_FOR_GEMINI_MODELS = getattr(constants, 'GEMINI_API_KEY', None)
+GEMINI_MODEL_NAME = getattr(constants, 'GEMINI_MODEL_NAME', 'gemma-3-27b-it')
+DEFAULT_GEMINI_TEXT_MODEL_FOR_CONTENT_DICT = GEMINI_MODEL_NAME
+
+# For get_compound_id_from_description (OpenAI-compatible text model)
+LLM_TEXT_MODEL_NAME = getattr(constants, 'LLM_OPENAI_COMPATIBLE_MODEL_NAME', None)
+LLM_TEXT_MODEL_URL = getattr(constants, 'LLM_OPENAI_COMPATIBLE_MODEL_URL', None)
+LLM_TEXT_MODEL_KEY = getattr(constants, 'LLM_OPENAI_COMPATIBLE_MODEL_KEY', None)
+
+# Visual Model Configuration
+VISUAL_MODEL_NAME = getattr(constants, 'VISUAL_MODEL_NAME', None)
+VISUAL_MODEL_URL = getattr(constants, 'VISUAL_MODEL_URL', None)
+VISUAL_MODEL_KEY = getattr(constants, 'VISUAL_MODEL_KEY', GEMINI_API_KEY_FOR_GEMINI_MODELS if GEMINI_API_KEY_FOR_GEMINI_MODELS else None)
+
+HTTP_PROXY = getattr(constants, 'HTTP_PROXY', '')
+HTTPS_PROXY = getattr(constants, 'HTTPS_PROXY', '')
+
+# OpenAI-compatible model
+if LLM_TEXT_MODEL_NAME and LLM_TEXT_MODEL_URL and LLM_TEXT_MODEL_KEY:
+    LLM_MODEL_TYPE = 'openai'
+# Gemini model
+elif not LLM_TEXT_MODEL_KEY or not LLM_TEXT_MODEL_URL or not LLM_TEXT_MODEL_NAME \
+        and (GEMINI_API_KEY_FOR_GEMINI_MODELS and GEMINI_MODEL_NAME):
+    print(f"LLM OpenAI-compatible model not configured, using Gemini model instead.")
+    LLM_MODEL_TYPE = 'gemini'
+# 如果都没有
+else:
+    raise ValueError("No LLM model configured for get_compound_id_from_description. Please set LLM_OPENAI_COMPATIBLE_MODEL_NAME, LLM_OPENAI_COMPATIBLE_MODEL_URL, and LLM_OPENAI_COMPATIBLE_MODEL_KEY in constants.py.")
+
+if VISUAL_MODEL_KEY and VISUAL_MODEL_URL and VISUAL_MODEL_NAME:
+    VISUAL_MODEL_TYPE = 'openai'
+    print(f"Info: Using OpenAI-compatible visual model: {VISUAL_MODEL_NAME}")
+elif not VISUAL_MODEL_KEY or not VISUAL_MODEL_URL or not VISUAL_MODEL_NAME \
+        and (GEMINI_API_KEY_FOR_GEMINI_MODELS and GEMINI_MODEL_NAME):
+    print(f"VISUAL_MODEL_NAME not configured, using Gemini model instead.")
+    VISUAL_MODEL_TYPE = 'gemini'
+else:
+    raise ValueError("No visual model configured for structure_to_id. Please set VISUAL_MODEL_NAME, VISUAL_MODEL_URL, and VISUAL_MODEL_KEY in constants.py.")
+
+def proxy_decorator(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        original_http_proxy = os.environ.get('http_proxy')
+        original_https_proxy = os.environ.get('https_proxy')
+        if HTTP_PROXY:
+            os.environ['http_proxy'] = HTTP_PROXY
+        if HTTPS_PROXY:
+            os.environ['https_proxy'] = HTTPS_PROXY
+
+        result = func(*args, **kwargs)
+
+        if original_http_proxy is None:
+            os.environ.pop('http_proxy', None)
+        elif HTTP_PROXY:
+            os.environ['http_proxy'] = original_http_proxy
+
+        if original_https_proxy is None:
+            os.environ.pop('https_proxy', None)
+        elif HTTPS_PROXY:
+            os.environ['https_proxy'] = original_https_proxy
+        return result
+    return wrapper
+
+def cost_time(func):
+    """
+    Decorator to ensure a function takes at least 1.5 seconds.
+    """
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        result = func(*args, **kwargs)
+        end = time.time()
+        cost = end - start
+        if cost < 1.5:
+            time.sleep(1.5 - cost)
+        return result
+    return wrapper
+
+_genai_configured_with_key = None
+def configure_genai(api_key):
+    """
+    Configures the Google Generative AI client.
+    Ensures configuration happens only once or if the key changes.
+    """
+    global _genai_configured_with_key
+    if _genai_configured_with_key == api_key and _genai_configured_with_key is not None:
+        return
+
+    if api_key:
+        genai.configure(api_key=api_key)
+        _genai_configured_with_key = api_key
+    elif os.getenv('GOOGLE_API_KEY'):
+        try:
+            genai.configure()
+            _genai_configured_with_key = os.getenv('GOOGLE_API_KEY')
+            print("Info: Configured GenAI using GOOGLE_API_KEY environment variable.")
+        except Exception as e:
+            print(f"Warning: Failed to configure GenAI with GOOGLE_API_KEY env var: {e}")
+    else:
+        print("Warning: GEMINI_API_KEY not provided for configure_genai and GOOGLE_API_KEY env var not set or failed to configure.")
+
+
+@proxy_decorator
+# @cost_time
+def content_to_dict(content, assay_name, compound_id_list=None, retry=3):
+    """
+    Converts the content of a Markdown text to a dictionary using Google Generative AI.
+    """
+    LLM_MODEL_TYPE = 'openai'
+    if not LLM_TEXT_MODEL_KEY or not LLM_TEXT_MODEL_URL or not LLM_TEXT_MODEL_NAME:
+        print(f"LLM OpenAI-compatible model not configured, using Gemini model instead.")
+        LLM_MODEL_TYPE = 'gemini'
+
+    print(f"Info: Converting content to dict using model type: {LLM_MODEL_TYPE}")
+
+    if compound_id_list is None:
+        compound_id_list_str = '开始提取数据...\n\n'
+    else:
+        # compound_id_list不重复,但顺序不变
+        compound_id_list = list(dict.fromkeys(compound_id_list))
+        compound_id_list_str = '化合物ID列表如下，解析时请不要超出此列表范围：\n'
+        # 保持原有顺序，去除重复
+        compound_id_list = list(dict.fromkeys(compound_id_list))
+        compounds = ', '.join([f'"{cid}"' for cid in compound_id_list])
+        compound_id_list_str += f"{compounds}\n\n"
+        compound_id_list_str += '\n开始提取数据: \n'
+
+    prompt = f'''任务
+从提供的 Markdown 文本中，抽取化合物 ID 与其对应的“{assay_name}”测定值，并输出为字典。
+
+输入
+<MARKDOWN_TEXT>
+{content}
+</MARKDOWN_TEXT>
+
+规则
+1) 只在“提供的化合物ID列表”范围内匹配与输出；不要生成列表之外的ID。
+2) ID 等价匹配（不区分大小写，忽略空格与标点）：
+   - 允许的前缀：Example / Compound / Embodiment / Intermediate / Formula / 实施例 / 化合物
+   - 允许的形式：数字（1）、(1)、No.1、编号1、罗马数字（I，IIa 等）
+   - 当 Markdown 中出现“1”“(1)”等别名时，需与提供的化合物ID列表做等价判断；输出的键使用“提供列表中的规范ID”（如"Example 1"或"Compound 1"），而不是 Markdown 中的别名。
+3) 表格解析优先级：
+   a) 若恰好两列：第1列=化合物编号，第2列=“{assay_name}”。
+   b) 若多于两列：优先使用表头包含“{assay_name}”的列作为取值列；ID 列使用表头含“ID/编号/Example/Compound/Embodiment/Intermediate/Formula/实施例/化合物”等字样的列。
+   c) 若无表头或表头含糊：按列对成对解析（奇数列为ID、其后一列为该ID的“{assay_name}”）。
+4) 同一ID出现多次时：优先取与“{assay_name}”表头最直接对应的那一行；若等同，取首次出现。
+5) 提取值保留原始文本（如“<0.1”“ND”“1.2×10^3”），不要改动单位或数值格式。
+6) 忽略与图/表/方案编号相关的数字，以及带单位但并非“{assay_name}”单元格的数字（如 mg, mL, MHz, ppm, m/z, δ, % 等）。
+7) 仅输出找到的键值对；若某ID未找到对应数值，则不写入结果。
+
+输出
+仅输出 JSON 对象，格式如下：
+```json
+{{
+  "__COMPOUND_ID__": "__ASSAY_VALUE__",
+  "__COMPOUND_ID__": "__ASSAY_VALUE__"
+}}
+```
+{compound_id_list_str}'''
+
+
+    if LLM_MODEL_TYPE == 'gemini':
+        configure_genai(GEMINI_API_KEY_FOR_GEMINI_MODELS)
+        model = genai.GenerativeModel(DEFAULT_GEMINI_TEXT_MODEL_FOR_CONTENT_DICT)
+        response_text_for_error = "N/A" 
+
+        for attempt in range(retry):
+            try:
+                response = model.generate_content(prompt)
+                if not response.candidates or not response.candidates[0].content.parts:
+                    response_text_for_error = str(response)
+                    raise ValueError(f"Model '{DEFAULT_GEMINI_TEXT_MODEL_FOR_CONTENT_DICT}' returned no content/candidates.")
+
+                result_text = response.candidates[0].content.parts[0].text
+                response_text_for_error = result_text
+                result_text = result_text.replace('null', 'None')
+
+                json_content = None
+                if '```json' in result_text:
+                    json_match = result_text.split('```json', 1)
+                    if len(json_match) > 1:
+                        json_content = json_match[1].split('```', 1)[0].strip()
+                elif '```' in result_text and result_text.count('```') >= 2 and json_content is None:
+                    parts = result_text.split('```', 2)
+                    if len(parts) >= 2: json_content = parts[1].strip()
+                elif '“json' in result_text and json_content is None: # Check for new format
+                    json_match = result_text.split('“json', 1)
+                    if len(json_match) > 1:
+                        temp_content = json_match[1].strip()
+                        if temp_content.endswith('”'): temp_content = temp_content[:-1].strip()
+                        json_content = temp_content
+                
+                if json_content is None:
+                    start_brace = result_text.find('{')
+                    end_brace = result_text.rfind('}')
+                    if start_brace != -1 and end_brace != -1 and end_brace > start_brace:
+                        json_content = result_text[start_brace : end_brace+1].strip()
+                    else:
+                        json_content = result_text.strip()
+
+                if not json_content:
+                    raise ValueError("Could not extract JSON content from the model's response.")
+
+                assay_dict = json.loads(json_content)
+                return assay_dict
+            except json.JSONDecodeError as json_e:
+                print(f"Attempt {attempt + 1}/{retry} (JSONDecodeError): {json_e} in model '{DEFAULT_GEMINI_TEXT_MODEL_FOR_CONTENT_DICT}'")
+                print(f"Problematic JSON content: {json_content[:500] if json_content else 'None'}{'...' if json_content and len(json_content) > 500 else ''}")
+                if attempt < retry - 1: time.sleep(1 + attempt); continue
+                print(f"Final attempt failed. Prompt:\n{prompt[:500]}...\nResponse:\n{response_text_for_error}"); raise
+            except Exception as e:
+                print(f"Attempt {attempt + 1}/{retry} (Exception): {e} in model '{DEFAULT_GEMINI_TEXT_MODEL_FOR_CONTENT_DICT}'")
+                if attempt < retry - 1: time.sleep(1 + attempt); continue
+                print(f"Final attempt failed. Prompt:\n{prompt[:500]}...\nResponse:\n{response_text_for_error}"); raise e
+    elif LLM_MODEL_TYPE == 'openai':
+        client = OpenAI(api_key=LLM_TEXT_MODEL_KEY, base_url=LLM_TEXT_MODEL_URL)
+        response_text_for_error = "N/A"
+        for attempt in range(retry):
+            try:
+                print(f"Info: Calling LLM '{LLM_TEXT_MODEL_NAME}' at '{LLM_TEXT_MODEL_URL}' for content_to_dict.")
+                response = client.chat.completions.create(
+                    model=LLM_TEXT_MODEL_NAME,
+                    messages=[
+                        {"role": "system", "content": "You are a helpful assistant designed to output JSON."},
+                        {"role": "user", "content": prompt}
+                    ],
+                    temperature=0.0
+                )
+                response_text_for_error = response.choices[0].message.content
+                response_text_for_error = response_text_for_error.replace('null', 'None')
+                # 去除<think>和</think>之间的所有内容
+                if '<think>' in response_text_for_error and '</think>' in response_text_for_error:
+                    think_start = response_text_for_error.index('<think>') + len('<think>')
+                    think_end = response_text_for_error.index('</think>')
+                    response_text_for_error = response_text_for_error[:think_start] + response_text_for_error[think_end + len('</think>'):]
+
+                json_content = None
+                if '```json' in response_text_for_error:
+                    json_match = response_text_for_error.split('```json', 1)
+                    if len(json_match) > 1:
+                        json_content = json_match[1].split('```', 1)[0].strip()
+                elif '```' in response_text_for_error and response_text_for_error.count('```') >= 2 and json_content is None:
+                    parts = response_text_for_error.split('```', 2)
+                    if len(parts) >= 2: json_content = parts[1].strip()
+                elif '“json' in response_text_for_error and json_content is None: # Check for new format
+                    json_match = response_text_for_error.split('“json', 1)
+                    if len(json_match) > 1:
+                        temp_content = json_match[1].strip()
+                        if temp_content.endswith('”'): temp_content = temp_content[:-1].strip()
+                        json_content = temp_content
+                
+                if json_content is None:
+                    start_brace = response_text_for_error.find('{')
+                    end_brace = response
+                    if start_brace != -1 and end_brace != -1 and end_brace > start_brace:
+                        json_content = response_text_for_error[start_brace : end_brace+1].strip()
+                else:
+                    json_content = json_content.strip()
+                if not json_content:
+                    raise ValueError("Could not extract JSON content from the model's response.")
+                assay_dict = json.loads(json_content)
+                return assay_dict
+            except json.JSONDecodeError as json_e:
+                print(f"Attempt {attempt + 1}/{retry} (JSONDecodeError): {json_e} in model '{LLM_TEXT_MODEL_URL}'")
+                print(f"Problematic JSON content: {json_content[:500] if json_content else 'None'}{'...' if json_content and len(json_content) > 500 else ''}")
+                if attempt < retry - 1: time.sleep(1 + attempt); continue
+                print(f"Final attempt failed. Prompt:\n{prompt[:500]}...\nResponse:\n{response_text_for_error}"); raise
+            except Exception as e:
+                print(f"Attempt {attempt + 1}/{retry} (Exception): {e} in model '{LLM_TEXT_MODEL_URL}'")
+                if attempt < retry - 1: time.sleep(1 + attempt); continue
+                print(f"Final attempt failed. Prompt:\n{prompt[:500]}...\nResponse:\n{response_text_for_error}"); raise e
+    else:
+        print(f"Error: Unsupported LLM model type '{LLM_MODEL_TYPE}' for content_to_dict.")
+    return None
+
+
+def encode_image_to_base64_data_uri(image_path):
+    """Encodes an image file to a base64 data URI."""
+    try:
+        with open(image_path, 'rb') as image_file_obj:
+            encoded_image_bytes = base64.b64encode(image_file_obj.read())
+        encoded_image_text = encoded_image_bytes.decode("utf-8")
+
+        ext = os.path.splitext(image_path)[1].lower()
+        if ext == ".jpg" or ext == ".jpeg": mime_type = "image/jpeg"
+        elif ext == ".png": mime_type = "image/png"
+        elif ext == ".webp": mime_type = "image/webp"
+        elif ext == ".gif": mime_type = "image/gif"
+        else:
+            mime_type = "application/octet-stream"
+            print(f"Warning: Unknown MIME type for {image_path}, using fallback {mime_type}.")
+        return f"data:{mime_type};base64,{encoded_image_text}"
+    except FileNotFoundError: print(f"Error: Image file not found at {image_path}"); raise
+    except Exception as e: print(f"Error encoding image {image_path}: {e}"); raise
+
+
+@proxy_decorator
+# @cost_time
+def structure_to_id(image_file, prompt=None):
+    """
+    Extracts the compound ID from a chemical structure image using the visual model
+    specified by VISUAL_MODEL_TYPE and its associated VISUAL_MODEL_* constants.
+    """
+
+    if not os.path.exists(image_file):
+        raise FileNotFoundError(f"Image file for structure_to_id not found: {image_file}")
+
+    if prompt is None:
+        prompt = """Task
+Return the ID for the red-boxed structure. Output only the ID text; otherwise return None.
+
+Reading order
+Treat the two pages as one spread. Read: top page → bottom page; within each page, left → right. “Same page” = the page that contains most of the box.
+
+Apply rules in order (ALWAYS drop INVALID first)
+1) Table/List row — if the box lies in a table/list row that has a row-leading label/number, return that row’s label (first cell/leading token).
+2) Local label — if a short label is printed inside or immediately under/next to the structure, return it. 
+   • Allowed forms: 1–4 chars alphanumeric like 12, 12a/12A, I/II/IIa, (12), (12a). 
+   • NOT allowed: anything in square brackets [ ], or long/zero-padded numbers (e.g., 0214, 0007).
+3) Reaction scheme (→/⇒) — any section header like “Example/Compound/Intermediate/Formula …” labels the PRODUCT block only (right of the main arrow).
+4) Otherwise — on the same page, scan upward to the nearest VALID ID above the box (smallest vertical distance; tie → pick the lower one). If none on that page, use the last VALID ID from the previous page in reading order.
+
+VALID IDs (positive cues)
+• Headings/phrases: “Example 12”, “Compound 12”, “Intermediate 12”, “Formula 12”, “实施例12”, “化合物12”.
+• Standalone/local: 12/12a/12A/I/IIa only if rule 1 or 2 applies (row-leading or truly local).
+
+INVALID (hard bans)
+• Any square-bracketed counters: “[0159]”, “[0214]”, “[0001]”.
+• Page/line markers: “1/21”, “Page 3”.
+• Figure/Table/Scheme numbers: “Figure 3/图3”, “Table 2/表2”, “Scheme 1/反应式1”.
+• Units/analytic context: mg, mL, MHz, ppm, m/z, δ, %, NMR peaks, etc.
+• Inline bullets/numbering in running text (unless it is the row-leading label in a table/list).
+
+Tie-breaking & normalization
+• Prefer a valid local label over a header if both unambiguously refer to the same structure.
+• Preserve case/spacing; if a heading has extra description (e.g., “Compound 3 (… )”), return only the core ID (“Compound 3”).
+
+Self-check (final gate)
+If your candidate is in [square brackets] OR is only digits with ≥3 characters or leading zeros and lacks a keyword (Compound/Example/Formula/编号/No.), return None."""
+
+
+    response_text = None
+    actual_model_name = VISUAL_MODEL_NAME
+
+    print(f"Info: Using visual model type: {VISUAL_MODEL_TYPE}")
+
+    if VISUAL_MODEL_TYPE == 'gemini':
+        if not GEMINI_API_KEY_FOR_GEMINI_MODELS:
+            raise ValueError("GEMINI_API_KEY not configured in constants.py for Gemini visual model.")
+        if not actual_model_name:
+            # actual_model_name = 'gemini-2.0-flash'
+            actual_model_name = GEMINI_MODEL_NAME
+            print(f"Info: VISUAL_MODEL_NAME for Gemini not set in constants.py, defaulting to '{actual_model_name}'.")
+
+        configure_genai(GEMINI_API_KEY_FOR_GEMINI_MODELS)
+        model = genai.GenerativeModel(actual_model_name)
+        print(f"Info: Using Gemini visual model: {actual_model_name}")
+        try:
+            if PIL is None:
+                 raise ImportError("Pillow (PIL) library is required for Gemini image processing but not found.")
+            img = PIL.Image.open(image_file)
+            mime_type = PIL.Image.MIME.get(img.format.upper())
+            if not mime_type:
+                 raise ValueError(f"Unsupported image format '{img.format}' for Gemini. Supported: PNG, JPEG, WEBP, HEIC, HEIF.")
+
+            with open(image_file, 'rb') as f_bytes: image_bytes = f_bytes.read()
+            image_part = {"mime_type": mime_type, "data": image_bytes}
+
+            print(f"Info: Sending prompt and image ({mime_type}) to Gemini model '{actual_model_name}'.")
+            response = model.generate_content([prompt, image_part])
+
+            if not response.candidates or not response.candidates[0].content.parts:
+                 response_text = f"Error: Gemini model '{actual_model_name}' returned no content or candidates."
+                 print(f"Warning: {response_text}. Full response: {response}")
+            else:
+                response_text = response.text
+        except Exception as e: print(f"Error with Gemini visual model '{actual_model_name}': {e}"); raise
+
+    elif VISUAL_MODEL_TYPE == 'openai':
+        if not VISUAL_MODEL_KEY:
+            raise ValueError("VISUAL_MODEL_KEY (for OpenAI API key) is not configured in constants.py.")
+        if not actual_model_name:
+            actual_model_name = 'gpt-4o'
+            print(f"Info: VISUAL_MODEL_NAME for OpenAI not set in constants.py, defaulting to '{actual_model_name}'.")
+
+        print(f"Info: Using OpenAI visual model: {actual_model_name}")
+        try:
+            client = OpenAI(api_key=VISUAL_MODEL_KEY, base_url=VISUAL_MODEL_URL)
+            image_base64_uri = encode_image_to_base64_data_uri(image_file)
+            messages = [{"role": "user", "content": [
+                {"type": "text", "text": prompt},
+                {"type": "image_url", "image_url": {"url": image_base64_uri}},
+            ]}]
+            print(f"Info: Sending prompt and image to OpenAI model '{actual_model_name}'.")
+            completion = client.chat.completions.create(model=actual_model_name, messages=messages)
+            response_text = completion.choices[0].message.content
+
+            # 去掉<|begin_of_box|>1<|end_of_box|>
+            # if response_text.startswith('<|begin_of_box|>') and response_text.endswith('<|end_of_box|>'):
+            if '<|begin_of_box|>' in response_text and '<|end_of_box|>' in response_text:
+                # response_text = response_text[len('<|begin_of_box|>'):-len('<|end_of_box|>')].strip()
+                response_text = response_text.split('<|begin_of_box|>', 1)[-1].split('<|end_of_box|>', 1)[0].strip()
+            
+
+            # 去掉<think>和</think>之间的所有内容
+            if '<think>' in response_text and '</think>' in response_text:
+                response_text = response_text.split('<think>', 1)[-1]
+                response_text = response_text.split('</think>', 1)[-1]
+
+            # 去掉前后的\n
+            if response_text.startswith('\n'):
+                response_text = response_text[1:]
+            if response_text.endswith('\n'):
+                response_text = response_text[:-1]
+
+            print(f'Info: Received response from {actual_model_name} model: {response_text}')
+        except Exception as e: print(f"Error with OpenAI visual model '{actual_model_name}': {e}"); raise
+
+    return response_text
+
+
+@proxy_decorator
+def get_compound_id_from_description(description):
+    """
+    Extracts a compound ID from a description string using an OpenAI-compatible text model.
+    """
+
+    prompt = f"""任务：从下方文本中抽取该化合物编号（Compound ID）。输入文本可能包含解释性文字、推理过程和多个候选编号；请严格按下述规则只返回一个最终ID。
+
+输入：
+{description}
+
+输出要求（必须同时满足）：
+- 仅输出一行合法 JSON：键固定为 COMPOUND_ID。
+- 若无法确定或不存在，返回 "None"（字符串）。
+- 禁止输出占位符、空值、解释文字、前后空白、代码块或多余字符；**绝不能输出 "__ID__"**。
+- 结果自检：若结果为空、为占位符、或包含“不确定/未知/unknown/maybe/possible/疑似”等词，改为 "None"。
+
+候选定义（先判非法，后选合法）：
+【合法ID（正向模式，区分大小写与空格保持原文）】
+1) 含关键词形式（优先级高于纯数字类）：
+   - 英文：Example 12 / Compound 12 / Embodiment 12 / Intermediate 12 / Formula 12
+   - 中文：实施例12 / 化合物12
+   - 标题带说明：如 “Compound 3 (Hydrochloride Salts of Compound 1)” —— 仅取核心ID“Compound 3”
+2) 局部/行首短标签（仅在表格行首或结构近旁作为本地标签时视为合法）：
+   - 12 / (12) / No.12 / 编号12 / 12a / 12A / I / II / IIa 等
+
+【非法（硬性排除，命中则绝不作为ID）】
+- 段落/页码/行号等：如 “[0159]”“[0001]”“1/21”“Page 3”
+- 图表编号：Figure/图、Table/表、Scheme/反应式 等
+- 含单位或分析上下文：mg、mL、MHz、ppm、m/z、δ、% 及各类谱图/条件描述
+- 普通有序/无序列表编号（非表格行首标签）
+- 任何仅为占位符或模板（如 “__ID__”）
+
+选择与消歧（按顺序执行，命中即停）：
+A. 若存在显式答案行（优先识别这些前缀，不区分大小写）：“Answer:”“Final answer:”“答案：”“输出：”
+   - 取该行（或其后两行内）出现的首个【合法ID】。
+B. 若无显式答案行：在全文中抽取全部【合法ID】，按以下优先级择一：
+   1) 含关键词形式（Example/Compound/Embodiment/Intermediate/Formula/实施例/化合物）优先于纯数字/No./(n)/字母数字标签；
+   2) 在同一优先级内，选择**文末出现的最后一个**（更可能是结论）。
+C. 若仅出现非法候选或无候选，则返回 "None"。
+
+归一化与格式：
+- 若命中“标题+说明”，仅保留核心ID（如 “Compound 3 (… )”→“Compound 3”）。
+- 去除ID前后的标点与多余空白；其余大小写与内部空格保持原文。
+- 仅输出：{{"COMPOUND_ID":"<最终ID或None>"}}
+
+示例（仅作理解，不要在输出中复现）：
+- “Answer: Compound 2” → 输出：{{"COMPOUND_ID":"Compound 2"}}
+- 文末独立一行 “Compound 3” 且上文出现 “[0159]” → 输出：{{"COMPOUND_ID":"Compound 3"}}
+- 全文只有 “[0007]”“Figure 5” 等 → 输出：{{"COMPOUND_ID":"None"}}
+
+现在请基于以上规则给出最终结果；除目标 JSON 外不要输出任何多余字符。"""
+
+    try:
+        if LLM_MODEL_TYPE == 'gemini':
+            if not GEMINI_API_KEY_FOR_GEMINI_MODELS:
+                raise ValueError("GEMINI_API_KEY not configured in constants.py for Gemini text model.")
+            configure_genai(GEMINI_API_KEY_FOR_GEMINI_MODELS)
+            model = genai.GenerativeModel(DEFAULT_GEMINI_TEXT_MODEL_FOR_CONTENT_DICT)
+            print(f"Info: Calling Gemini model '{DEFAULT_GEMINI_TEXT_MODEL_FOR_CONTENT_DICT}' for description to ID.")
+            response = model.generate_content(prompt)
+            content = response.candidates[0].content.parts[0].text
+        else:
+            client = OpenAI(api_key=LLM_TEXT_MODEL_KEY, base_url=LLM_TEXT_MODEL_URL)
+            print(f"Info: Calling LLM '{LLM_TEXT_MODEL_NAME}' at '{LLM_TEXT_MODEL_URL}' for description to ID.")
+            response = client.chat.completions.create(
+                model=LLM_TEXT_MODEL_NAME,
+                messages=[
+                    {"role": "system", "content": "You are a helpful assistant designed to output JSON."},
+                    {"role": "user", "content": prompt}
+                ],
+                temperature=0.2
+            )
+            content = response.choices[0].message.content
+    except Exception as e:
+        print(f"Error calling LLM for get_compound_id_from_description: {e}")
+        return f"Error: Could not get ID due to API error - {e}"
+
+    json_str = None
+    if "```json" in content:
+        json_str = content.split("```json", 1)[-1].split("```", 1)[0].strip()
+    elif "“json" in content and json_str is None:
+        temp_content = content.split("“json", 1)[-1].strip()
+        if temp_content.endswith("”"): temp_content = temp_content[:-1].strip()
+        json_str = temp_content
+    elif json_str is None:
+        start_brace = content.find('{'); end_brace = content.rfind('}')
+        if start_brace != -1 and end_brace != -1 and end_brace > start_brace:
+            json_str = content[start_brace : end_brace+1].strip()
+        else: json_str = content.strip()
+
+    if not json_str:
+        print(f"Warning: Could not extract JSON string (get_compound_id_from_description). Raw: '{content}'")
+        return content
+
+    try:
+        data = json.loads(json_str)
+        return data.get("COMPOUND_ID", content)
+    except json.JSONDecodeError:
+        print(f"Warning: Failed to parse JSON (get_compound_id_from_description). JSON string: '{json_str}'. Raw: '{content}'")
+        return content

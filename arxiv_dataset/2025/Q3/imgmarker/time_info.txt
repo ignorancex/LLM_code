@@ -1,0 +1,16 @@
+imgmarker/__init__.py: 2025-07-29T20:55:25Z
+imgmarker/__main__.py: 2025-06-25T17:50:20Z
+imgmarker/gui/mark.py: 2025-06-25T17:50:20Z
+imgmarker/gui/__init__.py: 2025-06-25T17:50:20Z
+imgmarker/gui/pyqt.py: 2025-06-25T17:50:20Z
+imgmarker/coordinates/__init__.py: 2025-06-25T17:50:20Z
+docs/source/conf.py: 2025-04-03T16:17:37Z
+imgmarker/config.py: 2025-06-25T17:50:20Z
+imgmarker/gui/widget.py: 2025-06-25T17:50:20Z
+imgmarker/image/__init__.py: 2025-06-25T17:50:20Z
+imgmarker/image/convolution.py: 2025-06-25T17:50:20Z
+imgmarker/image/fits.py: 2025-06-25T17:50:20Z
+imgmarker/tests.py: 2025-06-25T17:50:20Z
+imgmarker/io.py: 2025-06-25T17:50:20Z
+imgmarker/gui/window.py: 2025-07-29T20:55:25Z
+tools/readImgmarkerFiles.py: 2025-03-31T20:50:14Z

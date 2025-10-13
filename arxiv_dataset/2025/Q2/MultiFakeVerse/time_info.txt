@@ -1,0 +1,14 @@
+scripts/analyze_captions.py: 2025-05-31T00:11:06Z
+scripts/get_captions.py: 2025-05-31T00:11:06Z
+scripts/generate_manipulations_icedit.py: 2025-05-31T00:11:06Z
+scripts/generate_manipulations_hidream.py: 2025-05-31T00:11:06Z
+scripts/analyze_mask_metrics.py: 2025-05-31T00:11:06Z
+scripts/analyze_comparisons.py: 2025-05-31T00:11:06Z
+scripts/create_train_test_splits.py: 2025-05-31T00:11:06Z
+scripts/generate_manipulations_vlm.py: 2025-05-31T00:11:06Z
+scripts/get_edit_suggestions.py: 2025-05-31T00:11:06Z
+scripts/get_manipulation_masks.py: 2025-05-31T00:11:06Z
+scripts/vlm_compare_images.py: 2025-05-31T00:11:06Z
+scripts/sida_chat.py: 2025-05-31T00:11:06Z
+scripts/infer_qwen_manipulations.py: 2025-05-31T00:11:06Z
+scripts/pipeline_hidream_image_editing.py: 2025-05-31T00:11:06Z

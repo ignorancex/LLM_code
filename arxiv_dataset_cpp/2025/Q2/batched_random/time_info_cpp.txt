@@ -1,0 +1,6 @@
+src/chacha.c: Unknown
+src/batch_shuffle_dice.c: Unknown
+benchmarks/benchmark.cpp: Unknown
+benchmarks/stream.cpp: Unknown
+src/random_bounded.c: Unknown
+tests/basic.cpp: Unknown

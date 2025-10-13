@@ -1,17 +1,15 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 将逐季度纵向 CSV 合并为 4 份宽表：
   - cs / non_cs × (TotalFrequency / RepoCount)
 """
-
+import csv
 import os
 import pandas as pd
 from collections import defaultdict
 
 # ======== 0. 常量配置 ======== #
 OUT_DIR        = "LLM_code/arxiv_result/vars"          # 先前季度文件所在目录
-ALL_QUARTERS   = [f"{y}Q{q}" for y in range(2020, 2025) for q in range(1, 4 + 1)] + ["2025Q1"]
+ALL_QUARTERS   = [f"{y}Q{q}" for y in range(2025, 2026) for q in range(2, 4)]
 CLS_LIST       = ["cs", "non_cs"]                      # 两个类别
 OUT_FILES_META = {                                     # 输出文件名模板
     ("cs",      "freq"): "variable_TotalFrequency_cs.csv",

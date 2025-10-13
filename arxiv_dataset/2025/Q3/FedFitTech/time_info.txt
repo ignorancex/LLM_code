@@ -1,0 +1,12 @@
+FedFitTech/flwr_utils/__init__.py: 2025-07-30T12:37:04Z
+FedFitTech/__init__.py: 2025-05-02T07:31:02Z
+FedFitTech/flwr_utils/client_utils.py: 2025-07-30T12:37:04Z
+FedFitTech/flwr_utils/TinyHAR.py: 2025-07-30T12:37:04Z
+FedFitTech/flwr_utils/server_plotting_function.py: 2025-07-30T12:37:04Z
+FedFitTech/flwr_utils/utils_for_tinyhar.py: 2025-07-30T12:37:04Z
+FedFitTech/client_app.py: 2025-07-30T12:37:04Z
+FedFitTech/flwr_utils/my_strategy_plotting.py: 2025-07-30T12:37:04Z
+FedFitTech/my_strategy.py: 2025-07-30T12:37:04Z
+FedFitTech/task.py: 2025-07-30T12:37:04Z
+FedFitTech/server_app.py: 2025-07-30T12:37:04Z
+config/__init__.py: 2025-07-30T12:37:04Z

@@ -1,0 +1,6 @@
+num_integration.py: 2025-09-15T17:09:20Z
+output_excel_html.py: 2025-09-15T17:11:25Z
+fit_display_surface.py: 2025-09-15T17:11:25Z
+derive_validate_expressions.py: 2025-09-15T17:11:25Z
+expansion_convergence.py: 2025-09-15T17:09:20Z
+symbolic_gram_matrix.py: 2025-09-15T17:09:20Z

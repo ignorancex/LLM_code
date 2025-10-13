@@ -1,0 +1,12 @@
+scripts/lenetfastkan.py: 2025-01-19T15:02:33Z
+scripts/evaluate_moa_logs.py: 2025-01-19T15:01:58Z
+scripts/alexnetcnn.py: 2025-01-19T15:02:33Z
+scripts/download_alexnet.py: 2025-01-21T01:10:18Z
+scripts/alexnetkan.py: 2025-01-19T15:02:33Z
+scripts/lenetcnn.py: 2025-01-19T15:02:33Z
+scripts/lenet_fast_kan_ablation.py: 2025-05-23T17:02:26Z
+scripts/alexnetfastkan.py: 2025-01-19T15:02:33Z
+scripts/lenetkan.py: 2025-01-19T15:02:33Z
+scripts/make_ablation_figures.py: 2025-05-26T17:25:04Z
+scripts/test_models.py: 2025-01-21T01:09:37Z
+scripts/radar_plot.py: 2025-01-21T12:55:20Z

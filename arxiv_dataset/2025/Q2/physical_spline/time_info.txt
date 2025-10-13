@@ -1,0 +1,7 @@
+physical_spline/utils/lgs_fitting_elements.py: 2025-09-03T09:56:13Z
+physical_spline/utils/lgs_regularisation_elements.py: 2025-09-03T09:56:13Z
+physical_spline/utils/spline_evaluator.py: 2025-09-03T09:56:13Z
+physical_spline/utils/simple_fitting.py: 2025-09-03T09:56:13Z
+physical_spline/__init__.py: 2025-09-03T09:56:13Z
+physical_spline/spline_designer.py: 2025-09-03T09:56:13Z
+physical_spline/utils/matrix_operations.py: 2025-09-03T09:56:13Z

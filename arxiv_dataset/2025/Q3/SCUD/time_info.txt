@@ -1,0 +1,17 @@
+ema.py: 2025-03-05T20:25:02Z
+nets.py: 2025-06-30T15:32:44Z
+scud/classical_diffusion.py: 2025-03-05T20:25:02Z
+scud/__init__.py: 2025-02-14T17:33:22Z
+scud/mutual_info_schedule.py: 2025-03-05T20:25:02Z
+data.py: 2025-03-05T20:25:02Z
+scud/continuous_time_diffusion.py: 2025-03-05T20:25:02Z
+scud/masking_diffusion.py: 2025-06-30T14:02:46Z
+scud/root_finder.py: 2025-02-14T17:33:22Z
+scud/schedule_sample.py: 2025-02-14T17:33:22Z
+scud/scud.py: 2025-02-15T01:32:56Z
+scud/trainer.py: 2025-06-30T13:58:40Z
+scud/unet.py: 2025-02-15T01:32:56Z
+scud/utils.py: 2025-06-30T15:33:56Z
+scud/protein_convnet.py: 2025-02-15T01:32:56Z
+setup.py: 2025-02-14T17:31:30Z
+train.py: 2025-05-15T12:55:47Z

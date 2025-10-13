@@ -1,0 +1,17 @@
+acro/utils.py: 2024-06-03T16:42:56Z
+acro/acro.py: 2024-06-03T16:42:56Z
+acro/acro_regression.py: 2024-06-03T20:23:03Z
+acro/__init__.py: 2024-01-29T17:18:55Z
+acro/record.py: 2024-06-03T20:23:03Z
+acro/stata_config.py: 2024-06-03T16:42:56Z
+acro/acro_stata_parser.py: 2024-06-03T20:23:03Z
+acro/acro_tables.py: 2025-01-29T14:23:50Z
+notebooks/acro_demo_v2.py: 2025-03-06T20:50:02Z
+notebooks/test-nursery.py: 2025-01-29T14:23:50Z
+docs/source/conf.py: 2025-07-02T18:10:21Z
+test/test_initial.py: 2025-01-29T14:23:50Z
+notebooks/acro_demo.py: 2024-06-03T16:42:56Z
+acro/version.py: 2025-07-02T18:13:21Z
+test/__init__.py: 2022-09-12T15:33:55Z
+test/test_stata17_interface.py: 2025-01-29T14:23:50Z
+test/test_stata_interface.py: 2025-01-29T14:23:50Z

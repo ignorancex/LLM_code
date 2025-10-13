@@ -19192,5 +19192,3657 @@
       "link": "https://github.com/zzxslp/SoM-LLaVA",
       "categories": "cs.CV"
     }
+  ],
+  "2025Q2": [
+    {
+      "link": "https://github.com/SHI-Labs/StyleNAT",
+      "categories": "cs.CV cs.AI cs.LG"
+    },
+    {
+      "link": "https://github.com/OpenGVLab/STM-Evaluation",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/YBZh/Point-DAE",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/petitioner/HE.CNNtraining",
+      "categories": "cs.CR cs.CV cs.LG"
+    },
+    {
+      "link": "https://github.com/XY-boy/LGTD",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/LUMIA-Group/FourierTransformer",
+      "categories": "cs.CL"
+    },
+    {
+      "link": "https://github.com/jeongminpark417/GIDS",
+      "categories": "cs.DC cs.AI cs.AR cs.LG"
+    },
+    {
+      "link": "https://github.com/icpm-kth/uqsa",
+      "categories": "q-bio.QM q-bio.SC"
+    },
+    {
+      "link": "https://github.com/Jianningli/medshapenet-feedback",
+      "categories": "cs.CV cs.DB cs.LG"
+    },
+    {
+      "link": "https://github.com/m-abr/FCPCodebase",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/mxin262/SwinTextSpotterv2",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/QueensGambit/CrazyAra",
+      "categories": "cs.LG"
+    },
+    {
+      "link": "https://github.com/shanry/RNA-Undesign",
+      "categories": "cs.DS"
+    },
+    {
+      "link": "https://github.com/RoyZry98/T-REX-Pytorch",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/qqplot/dcpmi",
+      "categories": "cs.CL cs.AI"
+    },
+    {
+      "link": "https://github.com/abhishekaich27/proscale-pytorch",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/yuhaozhang7/NGD-SLAM",
+      "categories": "cs.RO cs.CV"
+    },
+    {
+      "link": "https://github.com/Aaronhuang-778/SliM-LLM",
+      "categories": "cs.LG cs.CL"
+    },
+    {
+      "link": "https://github.com/jishengpeng/ControlSpeech",
+      "categories": "eess.AS cs.LG cs.SD"
+    },
+    {
+      "link": "https://github.com/synsin0/EFFOcc",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/openpsi-project/ReaLHF",
+      "categories": "cs.DC cs.AI cs.CL cs.LG"
+    },
+    {
+      "link": "https://github.com/assafbk/DeciMamba",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/LehengTHU/AlphaRec",
+      "categories": "cs.IR cs.AI"
+    },
+    {
+      "link": "https://github.com/bio-mlhui/LGRNet",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/yahooo-m/S3",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/yibozhong/lily",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/BICLab/SpikeYOLO",
+      "categories": "cs.AI"
+    },
+    {
+      "link": "https://github.com/lemire/batched_random",
+      "categories": "cs.DS"
+    },
+    {
+      "link": "https://github.com/tub-rip/ES-PTAM",
+      "categories": "cs.RO cs.CV eess.SP"
+    },
+    {
+      "link": "https://github.com/bronyayang/Law_of_Vision_Representation_in_MLLMs",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Chongjie-Si/Subspace-Tuning",
+      "categories": "cs.CL cs.CV cs.LG"
+    },
+    {
+      "link": "https://github.com/tub-rip/MouseSIS",
+      "categories": "cs.CV cs.LG cs.RO"
+    },
+    {
+      "link": "https://github.com/YunzeMan/Lexicon3D",
+      "categories": "cs.CV cs.AI cs.CL cs.LG cs.RO"
+    },
+    {
+      "link": "https://github.com/miguelzuma/GLoW_public",
+      "categories": "gr-qc astro-ph.CO astro-ph.GA astro-ph.IM"
+    },
+    {
+      "link": "https://github.com/zehao-wang/IndoorTraj",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/LMMMEng/SparX",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/XuandongZhao/llm-watermark-location",
+      "categories": "cs.CL"
+    },
+    {
+      "link": "https://github.com/furiosa-ai/ssm-peft",
+      "categories": "cs.LG cs.CL"
+    },
+    {
+      "link": "https://github.com/OrangeSodahub/SceneCraft",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/ywyeli/UniDrive",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/sail-sg/VocabularyParallelism",
+      "categories": "cs.DC"
+    },
+    {
+      "link": "https://github.com/yeongjoonJu/MIRe",
+      "categories": "cs.CV cs.AI cs.IR cs.MM"
+    },
+    {
+      "link": "https://github.com/aiha-lab/MX-QLLM",
+      "categories": "cs.AI"
+    },
+    {
+      "link": "https://github.com/immel-f/m3tr",
+      "categories": "cs.CV cs.RO"
+    },
+    {
+      "link": "https://github.com/CxsGhost/CNNSum",
+      "categories": "cs.CL cs.AI"
+    },
+    {
+      "link": "https://github.com/king/ctdg-info-flow",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/ShuYuMo2003/ArtFormer",
+      "categories": "cs.CV cs.AI cs.RO"
+    },
+    {
+      "link": "https://github.com/s3anwu/pbrnerf",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/wenhao728/AsymRnR",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/CP-Security/CP-Guard",
+      "categories": "cs.AI"
+    },
+    {
+      "link": "https://github.com/robotics-upo/gaussian-rio-cpp",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/microsoft/LMOps",
+      "categories": "cs.IR cs.CL"
+    },
+    {
+      "link": "https://github.com/Unsigned-Long/eKalibr",
+      "categories": "cs.RO cs.CV"
+    },
+    {
+      "link": "https://github.com/qiongwu86/PPO-Based-Vehicle-Control-for-Ramp-Merging-Scheme-Assisted-by-Enhanced-C-V2X",
+      "categories": "cs.NI cs.LG"
+    },
+    {
+      "link": "https://github.com/shim0114/T2V-Diffusion-Search",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/czi-ai/oc-guidance",
+      "categories": "cs.LG cs.AI cs.CV stat.ML"
+    },
+    {
+      "link": "https://github.com/tada0347/PuDDing",
+      "categories": "cs.CL cs.AI"
+    },
+    {
+      "link": "https://github.com/ipsitmantri/DiTASK",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/OswaldHe/InTAR",
+      "categories": "cs.AR cs.LG"
+    },
+    {
+      "link": "https://github.com/dannigt/mid-align",
+      "categories": "cs.CL cs.AI"
+    },
+    {
+      "link": "https://github.com/jinda-liu/R-LoRA",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/aigc3d/LAM",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/cognaclee/nopain",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/JeongHun0716/MMS-LLaMA",
+      "categories": "cs.CV cs.MM cs.SD eess.AS"
+    },
+    {
+      "link": "https://github.com/RWKV/RWKV-LM",
+      "categories": "cs.CL cs.AI cs.LG"
+    },
+    {
+      "link": "https://github.com/patgies/inclusive-D0-UPC",
+      "categories": "hep-ph nucl-th"
+    },
+    {
+      "link": "https://github.com/ZhaochongAn/GFS-VL",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/LLMkvsys/rethink-kv-compression",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/fhgyuanshen/HybridGL",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/Visual-AI/vCLR",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/OSU-NLP-Group/reversal-curse-binding",
+      "categories": "cs.CL cs.LG"
+    },
+    {
+      "link": "https://github.com/FFTYYY/RaanA",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/oliverphilcox/PolySpec",
+      "categories": "astro-ph.CO astro-ph.GA gr-qc hep-ph hep-th"
+    },
+    {
+      "link": "https://github.com/AnjanB3012/abstract-infinity",
+      "categories": "cs.PL cs.DS"
+    },
+    {
+      "link": "https://github.com/trewes/ZykovColor",
+      "categories": "cs.DM cs.AI cs.DS cs.LO"
+    },
+    {
+      "link": "https://github.com/cvlab-stonybrook/few-shot-scanpath",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Eyeline-Research/FlashDepth",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/apple/embedding-atlas",
+      "categories": "cs.HC cs.LG"
+    },
+    {
+      "link": "https://github.com/YaNLlan-ljb/ContrastiveGaussian",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/SunshineWYC/BlockGaussian",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/DrLuo/SemiETS",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/TUM-AVS/GGGVDiagrams",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/vLAR-group/GrabS",
+      "categories": "cs.CV cs.AI cs.LG cs.RO"
+    },
+    {
+      "link": "https://github.com/LexieYang/3D-PointZshotS",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Soltanilara/Krysalis_Hand",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/facebookresearch/perception_models",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/codeboy5/stamp",
+      "categories": "cs.LG cs.CL cs.CR"
+    },
+    {
+      "link": "https://github.com/kris-sigurdson/NSphere",
+      "categories": "astro-ph.GA astro-ph.CO hep-ph hep-th"
+    },
+    {
+      "link": "https://github.com/zhengchen1999/NTIRE2025_ImageSR_x4",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/zhengchen1999/NTIRE2025_RealWorld_Face_Restoration",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/hchen799/ForgeBench",
+      "categories": "cs.AR"
+    },
+    {
+      "link": "https://github.com/DistributedML/FedFetch",
+      "categories": "cs.LG cs.DC"
+    },
+    {
+      "link": "https://github.com/jcwang0602/PLVL",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/leggedrobotics/grand_tour_box",
+      "categories": "cs.RO cs.SY eess.SY"
+    },
+    {
+      "link": "https://github.com/AidenZhao/FlexPara",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/sebsassi/zebradm",
+      "categories": "hep-ph"
+    },
+    {
+      "link": "https://github.com/lzzzzzm/STCOcc",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Efficient-ML/Qwen3-Quantization",
+      "categories": "cs.LG"
+    },
+    {
+      "link": "https://github.com/HMUNACHI/pete",
+      "categories": "cs.CL cs.AI cs.LG"
+    },
+    {
+      "link": "https://github.com/Seeker98/CRWKV",
+      "categories": "eess.IV cs.CV"
+    },
+    {
+      "link": "https://github.com/munich-quantum-toolkit/debugger",
+      "categories": "quant-ph"
+    },
+    {
+      "link": "https://github.com/aralab-unr/ESM_ICP",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/imtheva/CottonSim",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/ArrayDPS/ArrayDPS",
+      "categories": "eess.AS cs.LG cs.MM cs.SD eess.SP"
+    },
+    {
+      "link": "https://github.com/Dotori-HJ/DiGIT",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/zhumorui/M3CAD",
+      "categories": "cs.RO cs.CV"
+    },
+    {
+      "link": "https://github.com/HySonLab/PointDistill",
+      "categories": "cs.CV cs.LG"
+    },
+    {
+      "link": "https://github.com/MobiSense/SpecOffload-public",
+      "categories": "cs.LG"
+    },
+    {
+      "link": "https://github.com/kaka0910/MFogHub",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Jennieett/DecompileBench",
+      "categories": "cs.SE cs.AI"
+    },
+    {
+      "link": "https://github.com/albertan017/LLM4Decompile",
+      "categories": "cs.SE"
+    },
+    {
+      "link": "https://github.com/appliedgeometry/EuLearn_db",
+      "categories": "cs.CG cs.CV cs.LG math.DG math.GT"
+    },
+    {
+      "link": "https://github.com/raphaelsulzer/PixelsPointsPolygons",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/michigan-traffic-lab/Behavioral-Safety-Assessment",
+      "categories": "cs.RO cs.SE"
+    },
+    {
+      "link": "https://github.com/lnikioffic/track-anything-annotate",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/ScopeX-ASU/SP2RINT",
+      "categories": "physics.optics cs.AI cs.LG"
+    },
+    {
+      "link": "https://github.com/jdta95/svc",
+      "categories": "stat.ME stat.AP"
+    },
+    {
+      "link": "https://github.com/OreoChocolate/LAIN",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/hkr04/LLACA",
+      "categories": "cs.CL cs.AI"
+    },
+    {
+      "link": "https://github.com/PKU-YuanGroup/OpenS2V-Nexus",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/JiHoonLee9898/RVCD",
+      "categories": "cs.CV cs.AI cs.LG"
+    },
+    {
+      "link": "https://github.com/yanzq95/LIAR",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/makinyilmaz/DiMoSR",
+      "categories": "cs.CV eess.IV"
+    },
+    {
+      "link": "https://github.com/TNeutron/ESP32-CAM-Performence-Reference-Benchmark",
+      "categories": "cs.RO cs.SY eess.IV eess.SY"
+    },
+    {
+      "link": "https://github.com/Milad-Khanchi/DepthMOT",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Pawel-96/Avcorr",
+      "categories": "astro-ph.CO"
+    },
+    {
+      "link": "https://github.com/JasonLSC/GSCodec_Studio",
+      "categories": "cs.CV cs.MM"
+    },
+    {
+      "link": "https://github.com/JAMESYJL/ShapeLLM-Omni",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/ByteDance-Seed/BM-code",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/ethanhcoo/K3entropy",
+      "categories": "math.DS math.AG"
+    },
+    {
+      "link": "https://github.com/tummfm/chemtrain",
+      "categories": "physics.comp-ph cs.LG physics.chem-ph"
+    },
+    {
+      "link": "https://github.com/NSphere-SIDM/NSphere-SIDM",
+      "categories": "astro-ph.CO astro-ph.GA hep-ph hep-th"
+    },
+    {
+      "link": "https://github.com/danini/superansac",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/awadwehbe/fidelpart",
+      "categories": "quant-ph"
+    },
+    {
+      "link": "https://github.com/iMSquared/prime-the-search",
+      "categories": "cs.RO cs.AI"
+    },
+    {
+      "link": "https://github.com/AI4Science-WestlakeU/GGBall",
+      "categories": "cs.LG"
+    },
+    {
+      "link": "https://github.com/limshoonkit/ros2-agent-ws",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/AyinMostima/PalynoKit",
+      "categories": "cs.CV cs.LG"
+    },
+    {
+      "link": "https://github.com/AhmedHumais/E-STMFlow",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/divelab/AIRS",
+      "categories": "cs.LG physics.flu-dyn"
+    },
+    {
+      "link": "https://github.com/ant-research/scalelsd",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/bscho333/ReVisiT",
+      "categories": "cs.CV cs.AI cs.CL"
+    },
+    {
+      "link": "https://github.com/delCayr/ContextRefine-Clip",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Adios42/Textailor",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/ta012/SSLAM",
+      "categories": "cs.SD cs.AI cs.LG eess.AS"
+    },
+    {
+      "link": "https://github.com/Ry3nG/SA-LUT",
+      "categories": "cs.CV eess.IV"
+    },
+    {
+      "link": "https://github.com/snt-arg/bipm_g2o",
+      "categories": "cs.RO cs.SY eess.SY"
+    },
+    {
+      "link": "https://github.com/LLM360/Reasoning360",
+      "categories": "cs.LG cs.AI cs.CL"
+    },
+    {
+      "link": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/facebookresearch/wmar",
+      "categories": "cs.LG cs.AI cs.CR cs.CV"
+    },
+    {
+      "link": "https://github.com/princeton-pli/PruLong",
+      "categories": "cs.CL"
+    },
+    {
+      "link": "https://github.com/Howard-coder191/Relation3D",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/zhifeng1703/cpp-released-code",
+      "categories": "math.DG cs.NA math.NA"
+    },
+    {
+      "link": "https://github.com/kawser-ahmed-byte/TritonZ",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/Mavis-Liang/Bayesian_integrative_FA_tutorial",
+      "categories": "stat.AP"
+    },
+    {
+      "link": "https://github.com/ntnu-arl/mimosa",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/Cheng-Hanyu/CLASS_reio_gpr",
+      "categories": "astro-ph.CO hep-ph"
+    },
+    {
+      "link": "https://github.com/gaurav00700/Selfsupervised-NVSF",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/kmsmith137/kszx",
+      "categories": "astro-ph.CO"
+    },
+    {
+      "link": "https://github.com/ozzyuni/LMPVC",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/SHI-Labs/StyleNAT",
+      "categories": "cs.CV cs.AI cs.LG"
+    },
+    {
+      "link": "https://github.com/OpenGVLab/STM-Evaluation",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/YBZh/Point-DAE",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/petitioner/HE.CNNtraining",
+      "categories": "cs.CR cs.CV cs.LG"
+    },
+    {
+      "link": "https://github.com/XY-boy/LGTD",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/LUMIA-Group/FourierTransformer",
+      "categories": "cs.CL"
+    },
+    {
+      "link": "https://github.com/jeongminpark417/GIDS",
+      "categories": "cs.DC cs.AI cs.AR cs.LG"
+    },
+    {
+      "link": "https://github.com/icpm-kth/uqsa",
+      "categories": "q-bio.QM q-bio.SC"
+    },
+    {
+      "link": "https://github.com/Jianningli/medshapenet-feedback",
+      "categories": "cs.CV cs.DB cs.LG"
+    },
+    {
+      "link": "https://github.com/m-abr/FCPCodebase",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/mxin262/SwinTextSpotterv2",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/QueensGambit/CrazyAra",
+      "categories": "cs.LG"
+    },
+    {
+      "link": "https://github.com/shanry/RNA-Undesign",
+      "categories": "cs.DS"
+    },
+    {
+      "link": "https://github.com/RoyZry98/T-REX-Pytorch",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/qqplot/dcpmi",
+      "categories": "cs.CL cs.AI"
+    },
+    {
+      "link": "https://github.com/abhishekaich27/proscale-pytorch",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/yuhaozhang7/NGD-SLAM",
+      "categories": "cs.RO cs.CV"
+    },
+    {
+      "link": "https://github.com/Aaronhuang-778/SliM-LLM",
+      "categories": "cs.LG cs.CL"
+    },
+    {
+      "link": "https://github.com/jishengpeng/ControlSpeech",
+      "categories": "eess.AS cs.LG cs.SD"
+    },
+    {
+      "link": "https://github.com/synsin0/EFFOcc",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/openpsi-project/ReaLHF",
+      "categories": "cs.DC cs.AI cs.CL cs.LG"
+    },
+    {
+      "link": "https://github.com/assafbk/DeciMamba",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/LehengTHU/AlphaRec",
+      "categories": "cs.IR cs.AI"
+    },
+    {
+      "link": "https://github.com/bio-mlhui/LGRNet",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/yahooo-m/S3",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/yibozhong/lily",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/BICLab/SpikeYOLO",
+      "categories": "cs.AI"
+    },
+    {
+      "link": "https://github.com/lemire/batched_random",
+      "categories": "cs.DS"
+    },
+    {
+      "link": "https://github.com/tub-rip/ES-PTAM",
+      "categories": "cs.RO cs.CV eess.SP"
+    },
+    {
+      "link": "https://github.com/bronyayang/Law_of_Vision_Representation_in_MLLMs",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Chongjie-Si/Subspace-Tuning",
+      "categories": "cs.CL cs.CV cs.LG"
+    },
+    {
+      "link": "https://github.com/tub-rip/MouseSIS",
+      "categories": "cs.CV cs.LG cs.RO"
+    },
+    {
+      "link": "https://github.com/YunzeMan/Lexicon3D",
+      "categories": "cs.CV cs.AI cs.CL cs.LG cs.RO"
+    },
+    {
+      "link": "https://github.com/miguelzuma/GLoW_public",
+      "categories": "gr-qc astro-ph.CO astro-ph.GA astro-ph.IM"
+    },
+    {
+      "link": "https://github.com/zehao-wang/IndoorTraj",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/LMMMEng/SparX",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/XuandongZhao/llm-watermark-location",
+      "categories": "cs.CL"
+    },
+    {
+      "link": "https://github.com/furiosa-ai/ssm-peft",
+      "categories": "cs.LG cs.CL"
+    },
+    {
+      "link": "https://github.com/OrangeSodahub/SceneCraft",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/ywyeli/UniDrive",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/sail-sg/VocabularyParallelism",
+      "categories": "cs.DC"
+    },
+    {
+      "link": "https://github.com/yeongjoonJu/MIRe",
+      "categories": "cs.CV cs.AI cs.IR cs.MM"
+    },
+    {
+      "link": "https://github.com/aiha-lab/MX-QLLM",
+      "categories": "cs.AI"
+    },
+    {
+      "link": "https://github.com/immel-f/m3tr",
+      "categories": "cs.CV cs.RO"
+    },
+    {
+      "link": "https://github.com/CxsGhost/CNNSum",
+      "categories": "cs.CL cs.AI"
+    },
+    {
+      "link": "https://github.com/king/ctdg-info-flow",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/ShuYuMo2003/ArtFormer",
+      "categories": "cs.CV cs.AI cs.RO"
+    },
+    {
+      "link": "https://github.com/s3anwu/pbrnerf",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/wenhao728/AsymRnR",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/CP-Security/CP-Guard",
+      "categories": "cs.AI"
+    },
+    {
+      "link": "https://github.com/robotics-upo/gaussian-rio-cpp",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/microsoft/LMOps",
+      "categories": "cs.IR cs.CL"
+    },
+    {
+      "link": "https://github.com/Unsigned-Long/eKalibr",
+      "categories": "cs.RO cs.CV"
+    },
+    {
+      "link": "https://github.com/qiongwu86/PPO-Based-Vehicle-Control-for-Ramp-Merging-Scheme-Assisted-by-Enhanced-C-V2X",
+      "categories": "cs.NI cs.LG"
+    },
+    {
+      "link": "https://github.com/shim0114/T2V-Diffusion-Search",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/czi-ai/oc-guidance",
+      "categories": "cs.LG cs.AI cs.CV stat.ML"
+    },
+    {
+      "link": "https://github.com/tada0347/PuDDing",
+      "categories": "cs.CL cs.AI"
+    },
+    {
+      "link": "https://github.com/ipsitmantri/DiTASK",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/OswaldHe/InTAR",
+      "categories": "cs.AR cs.LG"
+    },
+    {
+      "link": "https://github.com/dannigt/mid-align",
+      "categories": "cs.CL cs.AI"
+    },
+    {
+      "link": "https://github.com/jinda-liu/R-LoRA",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/aigc3d/LAM",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/cognaclee/nopain",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/JeongHun0716/MMS-LLaMA",
+      "categories": "cs.CV cs.MM cs.SD eess.AS"
+    },
+    {
+      "link": "https://github.com/RWKV/RWKV-LM",
+      "categories": "cs.CL cs.AI cs.LG"
+    },
+    {
+      "link": "https://github.com/patgies/inclusive-D0-UPC",
+      "categories": "hep-ph nucl-th"
+    },
+    {
+      "link": "https://github.com/ZhaochongAn/GFS-VL",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/LLMkvsys/rethink-kv-compression",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/fhgyuanshen/HybridGL",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/Visual-AI/vCLR",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/OSU-NLP-Group/reversal-curse-binding",
+      "categories": "cs.CL cs.LG"
+    },
+    {
+      "link": "https://github.com/FFTYYY/RaanA",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/oliverphilcox/PolySpec",
+      "categories": "astro-ph.CO astro-ph.GA gr-qc hep-ph hep-th"
+    },
+    {
+      "link": "https://github.com/AnjanB3012/abstract-infinity",
+      "categories": "cs.PL cs.DS"
+    },
+    {
+      "link": "https://github.com/trewes/ZykovColor",
+      "categories": "cs.DM cs.AI cs.DS cs.LO"
+    },
+    {
+      "link": "https://github.com/cvlab-stonybrook/few-shot-scanpath",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Eyeline-Research/FlashDepth",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/apple/embedding-atlas",
+      "categories": "cs.HC cs.LG"
+    },
+    {
+      "link": "https://github.com/YaNLlan-ljb/ContrastiveGaussian",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/SunshineWYC/BlockGaussian",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/DrLuo/SemiETS",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/TUM-AVS/GGGVDiagrams",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/vLAR-group/GrabS",
+      "categories": "cs.CV cs.AI cs.LG cs.RO"
+    },
+    {
+      "link": "https://github.com/LexieYang/3D-PointZshotS",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Soltanilara/Krysalis_Hand",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/facebookresearch/perception_models",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/codeboy5/stamp",
+      "categories": "cs.LG cs.CL cs.CR"
+    },
+    {
+      "link": "https://github.com/kris-sigurdson/NSphere",
+      "categories": "astro-ph.GA astro-ph.CO hep-ph hep-th"
+    },
+    {
+      "link": "https://github.com/zhengchen1999/NTIRE2025_ImageSR_x4",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/zhengchen1999/NTIRE2025_RealWorld_Face_Restoration",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/hchen799/ForgeBench",
+      "categories": "cs.AR"
+    },
+    {
+      "link": "https://github.com/DistributedML/FedFetch",
+      "categories": "cs.LG cs.DC"
+    },
+    {
+      "link": "https://github.com/jcwang0602/PLVL",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/leggedrobotics/grand_tour_box",
+      "categories": "cs.RO cs.SY eess.SY"
+    },
+    {
+      "link": "https://github.com/AidenZhao/FlexPara",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/sebsassi/zebradm",
+      "categories": "hep-ph"
+    },
+    {
+      "link": "https://github.com/lzzzzzm/STCOcc",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Efficient-ML/Qwen3-Quantization",
+      "categories": "cs.LG"
+    },
+    {
+      "link": "https://github.com/HMUNACHI/pete",
+      "categories": "cs.CL cs.AI cs.LG"
+    },
+    {
+      "link": "https://github.com/Seeker98/CRWKV",
+      "categories": "eess.IV cs.CV"
+    },
+    {
+      "link": "https://github.com/munich-quantum-toolkit/debugger",
+      "categories": "quant-ph"
+    },
+    {
+      "link": "https://github.com/aralab-unr/ESM_ICP",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/imtheva/CottonSim",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/ArrayDPS/ArrayDPS",
+      "categories": "eess.AS cs.LG cs.MM cs.SD eess.SP"
+    },
+    {
+      "link": "https://github.com/Dotori-HJ/DiGIT",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/zhumorui/M3CAD",
+      "categories": "cs.RO cs.CV"
+    },
+    {
+      "link": "https://github.com/HySonLab/PointDistill",
+      "categories": "cs.CV cs.LG"
+    },
+    {
+      "link": "https://github.com/MobiSense/SpecOffload-public",
+      "categories": "cs.LG"
+    },
+    {
+      "link": "https://github.com/kaka0910/MFogHub",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Jennieett/DecompileBench",
+      "categories": "cs.SE cs.AI"
+    },
+    {
+      "link": "https://github.com/albertan017/LLM4Decompile",
+      "categories": "cs.SE"
+    },
+    {
+      "link": "https://github.com/appliedgeometry/EuLearn_db",
+      "categories": "cs.CG cs.CV cs.LG math.DG math.GT"
+    },
+    {
+      "link": "https://github.com/raphaelsulzer/PixelsPointsPolygons",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/michigan-traffic-lab/Behavioral-Safety-Assessment",
+      "categories": "cs.RO cs.SE"
+    },
+    {
+      "link": "https://github.com/lnikioffic/track-anything-annotate",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/ScopeX-ASU/SP2RINT",
+      "categories": "physics.optics cs.AI cs.LG"
+    },
+    {
+      "link": "https://github.com/jdta95/svc",
+      "categories": "stat.ME stat.AP"
+    },
+    {
+      "link": "https://github.com/OreoChocolate/LAIN",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/hkr04/LLACA",
+      "categories": "cs.CL cs.AI"
+    },
+    {
+      "link": "https://github.com/PKU-YuanGroup/OpenS2V-Nexus",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/JiHoonLee9898/RVCD",
+      "categories": "cs.CV cs.AI cs.LG"
+    },
+    {
+      "link": "https://github.com/yanzq95/LIAR",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/makinyilmaz/DiMoSR",
+      "categories": "cs.CV eess.IV"
+    },
+    {
+      "link": "https://github.com/TNeutron/ESP32-CAM-Performence-Reference-Benchmark",
+      "categories": "cs.RO cs.SY eess.IV eess.SY"
+    },
+    {
+      "link": "https://github.com/Milad-Khanchi/DepthMOT",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Pawel-96/Avcorr",
+      "categories": "astro-ph.CO"
+    },
+    {
+      "link": "https://github.com/JasonLSC/GSCodec_Studio",
+      "categories": "cs.CV cs.MM"
+    },
+    {
+      "link": "https://github.com/JAMESYJL/ShapeLLM-Omni",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/ByteDance-Seed/BM-code",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/ethanhcoo/K3entropy",
+      "categories": "math.DS math.AG"
+    },
+    {
+      "link": "https://github.com/tummfm/chemtrain",
+      "categories": "physics.comp-ph cs.LG physics.chem-ph"
+    },
+    {
+      "link": "https://github.com/NSphere-SIDM/NSphere-SIDM",
+      "categories": "astro-ph.CO astro-ph.GA hep-ph hep-th"
+    },
+    {
+      "link": "https://github.com/danini/superansac",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/awadwehbe/fidelpart",
+      "categories": "quant-ph"
+    },
+    {
+      "link": "https://github.com/iMSquared/prime-the-search",
+      "categories": "cs.RO cs.AI"
+    },
+    {
+      "link": "https://github.com/AI4Science-WestlakeU/GGBall",
+      "categories": "cs.LG"
+    },
+    {
+      "link": "https://github.com/limshoonkit/ros2-agent-ws",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/AyinMostima/PalynoKit",
+      "categories": "cs.CV cs.LG"
+    },
+    {
+      "link": "https://github.com/AhmedHumais/E-STMFlow",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/divelab/AIRS",
+      "categories": "cs.LG physics.flu-dyn"
+    },
+    {
+      "link": "https://github.com/ant-research/scalelsd",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/bscho333/ReVisiT",
+      "categories": "cs.CV cs.AI cs.CL"
+    },
+    {
+      "link": "https://github.com/delCayr/ContextRefine-Clip",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Adios42/Textailor",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/ta012/SSLAM",
+      "categories": "cs.SD cs.AI cs.LG eess.AS"
+    },
+    {
+      "link": "https://github.com/Ry3nG/SA-LUT",
+      "categories": "cs.CV eess.IV"
+    },
+    {
+      "link": "https://github.com/snt-arg/bipm_g2o",
+      "categories": "cs.RO cs.SY eess.SY"
+    },
+    {
+      "link": "https://github.com/LLM360/Reasoning360",
+      "categories": "cs.LG cs.AI cs.CL"
+    },
+    {
+      "link": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/facebookresearch/wmar",
+      "categories": "cs.LG cs.AI cs.CR cs.CV"
+    },
+    {
+      "link": "https://github.com/princeton-pli/PruLong",
+      "categories": "cs.CL"
+    },
+    {
+      "link": "https://github.com/Howard-coder191/Relation3D",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/zhifeng1703/cpp-released-code",
+      "categories": "math.DG cs.NA math.NA"
+    },
+    {
+      "link": "https://github.com/kawser-ahmed-byte/TritonZ",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/Mavis-Liang/Bayesian_integrative_FA_tutorial",
+      "categories": "stat.AP"
+    },
+    {
+      "link": "https://github.com/ntnu-arl/mimosa",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/Cheng-Hanyu/CLASS_reio_gpr",
+      "categories": "astro-ph.CO hep-ph"
+    },
+    {
+      "link": "https://github.com/gaurav00700/Selfsupervised-NVSF",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/kmsmith137/kszx",
+      "categories": "astro-ph.CO"
+    },
+    {
+      "link": "https://github.com/ozzyuni/LMPVC",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/lizhuoxi-97/TCDT",
+      "categories": "stat.ME econ.EM math.ST stat.ML stat.TH"
+    },
+    {
+      "link": "https://github.com/zixichen007115/Tacchi",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/Zyj061/SpikeCV",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Rand2AI/FedKL",
+      "categories": "cs.LG cs.AI cs.CV"
+    },
+    {
+      "link": "https://github.com/PJLab-ADG/3DTrans",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Once2gain/PersonalityDetection",
+      "categories": "cs.CY cs.CL"
+    },
+    {
+      "link": "https://github.com/jhuangBU/pnm",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/savadikarc/wegeft",
+      "categories": "cs.CV cs.LG"
+    },
+    {
+      "link": "https://github.com/albertan017/LLM4Decompile",
+      "categories": "cs.SE"
+    },
+    {
+      "link": "https://github.com/liuzhi1993/muscle",
+      "categories": "stat.ME math.ST stat.TH"
+    },
+    {
+      "link": "https://github.com/xmindflow/LHUNet",
+      "categories": "eess.IV cs.CV cs.LG"
+    },
+    {
+      "link": "https://github.com/sntubix/robocar",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/cruiseresearchgroup/spectraformer",
+      "categories": "cs.LG"
+    },
+    {
+      "link": "https://github.com/Maelic/SGG-Benchmark",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/yangcaoai/CoDA_NeurIPS2023",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/vision-agh/gcnn-dvs-fpga",
+      "categories": "cs.CV cs.AR eess.IV"
+    },
+    {
+      "link": "https://github.com/gdmnl/Spectral-GNN-Benchmark",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/ethanygao/training-free_generalizable_relative_pose",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Seung-Hun-Lee/CAVIS",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/MOLAorg/mola",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/uhhhci/RealityFusion",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/zhirui-gao/PartGS",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/vukasin-stanojevic/BoostTrack",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/SHAMIK-97/InSeIn",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/lh3/ropebwt3",
+      "categories": "q-bio.GN"
+    },
+    {
+      "link": "https://github.com/d-gomon/icmstate",
+      "categories": "stat.ME"
+    },
+    {
+      "link": "https://github.com/cmubig/SEAL",
+      "categories": "cs.RO cs.AI cs.LG"
+    },
+    {
+      "link": "https://github.com/lukasHoel/3DGS-LM",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/jmiemirza/GLOV",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/rreischke/OneCovariance",
+      "categories": "astro-ph.CO"
+    },
+    {
+      "link": "https://github.com/jerryfeng2003/PointGST",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/CMU-SAFARI/RawHash",
+      "categories": "q-bio.GN"
+    },
+    {
+      "link": "https://github.com/Gattocrucco/lsqfitgp",
+      "categories": "stat.ML cs.LG"
+    },
+    {
+      "link": "https://github.com/hzyu17/VIMP",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/pkqbajng/LOcc",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/mumax/plus",
+      "categories": "cond-mat.mes-hall"
+    },
+    {
+      "link": "https://github.com/WalkerMitty/EmoAva",
+      "categories": "cs.AI cs.CV"
+    },
+    {
+      "link": "https://github.com/realtime-intelligence/evrt-detr",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/chansongoal/LaMoFC",
+      "categories": "cs.MM"
+    },
+    {
+      "link": "https://github.com/Vchitect/Evaluation-Agent",
+      "categories": "cs.CV cs.AI cs.CL"
+    },
+    {
+      "link": "https://github.com/tub-rip/epba",
+      "categories": "cs.CV cs.RO eess.SP math.OC"
+    },
+    {
+      "link": "https://github.com/HVision-NKU/TAR3D",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Leon022/RAHP",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/bauerhenne/diqtok-forge",
+      "categories": "quant-ph"
+    },
+    {
+      "link": "https://github.com/SparklingH/BloomScene",
+      "categories": "cs.CV cs.AI cs.GR cs.LG"
+    },
+    {
+      "link": "https://github.com/LantaoLi/RG-Attn",
+      "categories": "cs.RO cs.CV cs.NI eess.IV"
+    },
+    {
+      "link": "https://github.com/ssovukluk/ENFORCpp",
+      "categories": "cs.RO math.OC"
+    },
+    {
+      "link": "https://github.com/ControlNet/NAVER",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Amps-GPU/BG-Trees",
+      "categories": "hep-ph physics.comp-ph"
+    },
+    {
+      "link": "https://github.com/uiuc-focal-lab/CRANE",
+      "categories": "cs.PL cs.LG"
+    },
+    {
+      "link": "https://github.com/liuyuqi123study/RankSVM_for_SLR",
+      "categories": "cs.CL"
+    },
+    {
+      "link": "https://github.com/continueyang/DeltaDiff",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/wjurayj/final_answer",
+      "categories": "cs.CL"
+    },
+    {
+      "link": "https://github.com/NVlabs/FeatSharp",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/radar-lab/Lidar_Camera_Automatic_Calibration",
+      "categories": "cs.CV cs.SY eess.SY"
+    },
+    {
+      "link": "https://github.com/YJJfish/Multi-Cali-Anything",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/ThomasCoudert/MR-WAVES-public",
+      "categories": "physics.med-ph physics.bio-ph"
+    },
+    {
+      "link": "https://github.com/sail-sg/zero-bubble-pipeline-parallelism",
+      "categories": "cs.LG cs.AI cs.DC"
+    },
+    {
+      "link": "https://github.com/snt-arg/PRENOM",
+      "categories": "cs.CV cs.RO"
+    },
+    {
+      "link": "https://github.com/JeongHun0716/zero-avsr",
+      "categories": "cs.CV cs.MM cs.SD eess.AS"
+    },
+    {
+      "link": "https://github.com/justuskarlsson/wildfire-mod14-vnp14",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/multimodal-art-projection/YuE",
+      "categories": "eess.AS cs.AI cs.MM cs.SD"
+    },
+    {
+      "link": "https://github.com/SingleZombie/AFLDM",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/24wenjie-li/DMNet",
+      "categories": "eess.IV cs.CV"
+    },
+    {
+      "link": "https://github.com/duyuwen-duen/RoCo-Sim",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/boqian-li/ETCH",
+      "categories": "cs.CV cs.AI cs.GR"
+    },
+    {
+      "link": "https://github.com/TFwang-9527/GS-3I",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/YitianShi/vMF-Contact",
+      "categories": "cs.RO cs.CV"
+    },
+    {
+      "link": "https://github.com/HVision-NKU/AR123",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/yayafengzi/LMM-HiMTok",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/FastQuantum/impurityMPS",
+      "categories": "cond-mat.str-el cond-mat.mes-hall quant-ph"
+    },
+    {
+      "link": "https://github.com/alimd94/FedVSR",
+      "categories": "cs.CV cs.DC"
+    },
+    {
+      "link": "https://github.com/HorizonRobotics/GeoFlowSlam",
+      "categories": "cs.RO cs.AI"
+    },
+    {
+      "link": "https://github.com/wish44165/YOLOv12-BoT-SORT-ReID",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/antgroup/vsag",
+      "categories": "cs.DB"
+    },
+    {
+      "link": "https://github.com/HongyuYann/SymmCompletion",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/AIRI-Institute/SAE-Reasoning",
+      "categories": "cs.CL"
+    },
+    {
+      "link": "https://github.com/hypermania/BlackholePerturbations",
+      "categories": "gr-qc astro-ph.HE hep-th"
+    },
+    {
+      "link": "https://github.com/yuyijiong/parallel-decoding-in-one-sequence",
+      "categories": "cs.CL"
+    },
+    {
+      "link": "https://github.com/Vchitect/VBench",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Unsigned-Long/eKalibr",
+      "categories": "cs.RO cs.CV"
+    },
+    {
+      "link": "https://github.com/sunblaze-ucb/llm-api-audit",
+      "categories": "cs.CL cs.CR cs.LG"
+    },
+    {
+      "link": "https://github.com/Lakonik/GMFlow",
+      "categories": "cs.LG cs.CV"
+    },
+    {
+      "link": "https://github.com/The-Inscrutable-X/TACQ",
+      "categories": "cs.LG cs.AI cs.CL"
+    },
+    {
+      "link": "https://github.com/Event-AHU/OpenPAR",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/ASIG-X/RESPLE",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/facebookresearch/perception_models",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/LawrenceRLiu/NoWag",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/ustcivclab/IPM",
+      "categories": "eess.IV cs.CV"
+    },
+    {
+      "link": "https://github.com/apik/SSm0",
+      "categories": "hep-ph"
+    },
+    {
+      "link": "https://github.com/CaraJ7/T2I-R1",
+      "categories": "cs.CV cs.AI cs.CL cs.LG"
+    },
+    {
+      "link": "https://github.com/recursal/RADLADS-paper",
+      "categories": "cs.CL cs.AI cs.LG"
+    },
+    {
+      "link": "https://github.com/FocoosAI/ShowOrTell",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/PieceZhang/MrTrack",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/microsoft/tokenweave",
+      "categories": "cs.DC cs.LG"
+    },
+    {
+      "link": "https://github.com/YaoChengTang/Diving-into-the-Fusion-of-Monocular-Priors-for-Generalized-Stereo-Matching",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/theflash987/RUSplatting",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Anonymous1252022/fp4-all-the-way",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/CerulloE1996/MetaOrdDTA",
+      "categories": "stat.ME"
+    },
+    {
+      "link": "https://github.com/HKUST-KnowComp/AutoSchemaKG",
+      "categories": "cs.CL cs.AI"
+    },
+    {
+      "link": "https://github.com/mirandrom/zsl",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/DrunkenPoet/GHAP",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/ictnlp/FlexRAG",
+      "categories": "cs.CL cs.IR"
+    },
+    {
+      "link": "https://github.com/lh3/minisplice",
+      "categories": "q-bio.GN"
+    },
+    {
+      "link": "https://github.com/Gen-Verse/ReasonFlux",
+      "categories": "cs.CL"
+    },
+    {
+      "link": "https://github.com/Linketic/TC-Light",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/zhirui-gao/Curve-Gaussian",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/xuhang07/FreeDNA",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/hypermania/Cosmic-Fields-Lite",
+      "categories": "physics.comp-ph astro-ph.CO gr-qc math-ph math.MP"
+    },
+    {
+      "link": "https://github.com/lineojcd/GSNBV",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/kaai520/PGFA",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/NikolasMorshuis/SDR",
+      "categories": "eess.IV cs.CV"
+    },
+    {
+      "link": "https://github.com/qhfan/MALA",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/bokveizen/gaudi-geometric-learning",
+      "categories": "cs.LG cs.SE"
+    },
+    {
+      "link": "https://github.com/egretwAlker/c-opt-clifford-layers",
+      "categories": "cs.LG cs.AI cs.NE cs.PF"
+    },
+    {
+      "link": "https://github.com/Laka-3DV/TurboReg",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/zhoujiahuan1991/ICCV2025-SPRED",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/XiaZunhui/MedFormer",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/VisionXLab/PWOOD",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/nikhilchandak/answer-matching",
+      "categories": "cs.CL cs.AI cs.LG"
+    },
+    {
+      "link": "https://github.com/facebookresearch/any4",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/cocowy1/SMoE-Stereo",
+      "categories": "cs.CV cs.AI cs.RO"
+    },
+    {
+      "link": "https://github.com/LAB123-tech/PointGAC",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Bears-R-Us/arkouda-njit",
+      "categories": "cs.DC cs.DS"
+    },
+    {
+      "link": "https://github.com/yangyifanYYF/MK-Pose",
+      "categories": "cs.CV cs.RO"
+    },
+    {
+      "link": "https://github.com/Supercomputing-System-AI-Lab/FlexGaussian",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/initial-d/ml-quant-trading",
+      "categories": "q-fin.PM cs.CE"
+    },
+    {
+      "link": "https://github.com/TUM-AVS/motion-planning-supervisor",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/Silentbarber/DLBAcalib",
+      "categories": "cs.RO cs.CL"
+    },
+    {
+      "link": "https://github.com/shiyi-mu/S3AD-Code",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/wencan25/Fast3D",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/BouriMohammed/GBM",
+      "categories": "cs.CL cs.AI cs.LG"
+    },
+    {
+      "link": "https://github.com/henry-pay/RayEncoder",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/wangjks/FFI-VTR",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/Zirconium233/PanTiny",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/mhostert/tauALP",
+      "categories": "hep-ph hep-ex"
+    },
+    {
+      "link": "https://github.com/fballestermacia/simphony",
+      "categories": "cond-mat.mtrl-sci"
+    },
+    {
+      "link": "https://github.com/hugocarlesso/GeMix",
+      "categories": "cs.CV cs.AI cs.LG"
+    },
+    {
+      "link": "https://github.com/G-1nOnly/Dens3R",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/keneniwt/DWCNET-Robust-Point-Cloud-Completion-against-Corruptions",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/OliverFHD/CosMomentum",
+      "categories": "astro-ph.CO"
+    },
+    {
+      "link": "https://github.com/AXNing/DFDNet",
+      "categories": "cs.CV eess.IV"
+    },
+    {
+      "link": "https://github.com/konskara/TerraPlan",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/SainingZhang/CRUISE",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Quantum-Chemistry-Group-BNU/PyNQS",
+      "categories": "physics.chem-ph cond-mat.str-el"
+    },
+    {
+      "link": "https://github.com/Seung-Hun-Lee/LOMM",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Pantheon-temple/Prometheus",
+      "categories": "cs.SE"
+    },
+    {
+      "link": "https://github.com/Yanyin-Guo/LSFDNet",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Orange-OpenSource/Cool-Chic",
+      "categories": "cs.MM eess.IV"
+    },
+    {
+      "link": "https://github.com/fesvhtr/TRIG",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/rlwilliams34/BiGG-E",
+      "categories": "cs.LG"
+    },
+    {
+      "link": "https://github.com/CIawevy/FreeFine",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/amazon-science/cyber-zero",
+      "categories": "cs.CR cs.CL cs.LG"
+    },
+    {
+      "link": "https://github.com/AIDC-AI/Marco-Voice",
+      "categories": "cs.CL cs.SD eess.AS"
+    },
+    {
+      "link": "https://github.com/SmallDoges/flash-dmattn",
+      "categories": "cs.AI cs.CL cs.LG"
+    },
+    {
+      "link": "https://github.com/GENTEL-lab/AuroBind",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/MikolajZielinski/genie",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/NEDE-Cosmo/DRMD-CLASS",
+      "categories": "astro-ph.CO hep-ph hep-th"
+    },
+    {
+      "link": "https://github.com/Event-AHU/SAV",
+      "categories": "cs.CV cs.AI cs.LG"
+    },
+    {
+      "link": "https://github.com/YuruiAI/DistillDrive",
+      "categories": "cs.RO cs.CV"
+    },
+    {
+      "link": "https://github.com/UWASL/dedup-bench",
+      "categories": "cs.DC cs.AR"
+    },
+    {
+      "link": "https://github.com/FrozenWolf-Cyber/Indic-CL-ASR",
+      "categories": "cs.LG"
+    },
+    {
+      "link": "https://github.com/Seeyn/Anti-Tamper-Perturbation",
+      "categories": "cs.CR cs.CV"
+    },
+    {
+      "link": "https://github.com/bio-mlhui/EventRR",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/csxmli2016/MARCONetPlusPlus",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/davidarps/silm",
+      "categories": "cs.CL"
+    },
+    {
+      "link": "https://github.com/SimWangArizona/FIER",
+      "categories": "cs.DB"
+    },
+    {
+      "link": "https://github.com/jsalvasoler/trigger_arc_tsp",
+      "categories": "cs.AI cs.DM"
+    },
+    {
+      "link": "https://github.com/AugustRushG/TOTNet",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/vLAR-group/TRACE",
+      "categories": "cs.CV cs.AI cs.CE cs.LG cs.RO"
+    },
+    {
+      "link": "https://github.com/vLAR-group/RayletDF",
+      "categories": "cs.CV cs.AI cs.GR cs.LG cs.RO"
+    },
+    {
+      "link": "https://github.com/DelMaestroGroup/papers-code-BHZUEdgeReconstruction",
+      "categories": "cond-mat.mes-hall"
+    },
+    {
+      "link": "https://github.com/abhi1kumar/CHARM3R",
+      "categories": "cs.CV cs.LG"
+    },
+    {
+      "link": "https://github.com/anonym-auth/n-grf",
+      "categories": "eess.SP cs.NI"
+    },
+    {
+      "link": "https://github.com/MiliLab/S5",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/ayushgupta4897/DRL-Cache",
+      "categories": "cs.LG cs.AI cs.DB cs.NI"
+    },
+    {
+      "link": "https://github.com/chenkangjie1123/Co-Adaptation-of-3DGS",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Chen13d/Deep-DSCM",
+      "categories": "physics.optics"
+    },
+    {
+      "link": "https://github.com/personalrobotics/IGHAStar",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/kangpx/onlineTiny2023",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/Kin-Zhang/DeltaFlow",
+      "categories": "cs.CV cs.RO"
+    },
+    {
+      "link": "https://github.com/StructuresComp/agri-chrono",
+      "categories": "cs.RO cs.AI cs.SY eess.SY"
+    },
+    {
+      "link": "https://github.com/SideofMan/VPPE",
+      "categories": "stat.CO stat.AP"
+    },
+    {
+      "link": "https://github.com/xtudbxk/GPSToken",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/jkeger/arctic",
+      "categories": "astro-ph.IM astro-ph.EP astro-ph.GA astro-ph.SR"
+    },
+    {
+      "link": "https://github.com/rainermd/ISO-ISBOCapture",
+      "categories": "astro-ph.EP astro-ph.GA"
+    },
+    {
+      "link": "https://github.com/Unsigned-Long/eKalibr",
+      "categories": "cs.RO cs.CV"
+    },
+    {
+      "link": "https://github.com/venovako/libpvn",
+      "categories": "math.NA cs.NA"
+    },
+    {
+      "link": "https://github.com/ciquezada/photfun",
+      "categories": "astro-ph.GA"
+    },
+    {
+      "link": "https://github.com/lh3/longdust",
+      "categories": "q-bio.GN"
+    },
+    {
+      "link": "https://github.com/opendilab/LightZero",
+      "categories": "cs.LG"
+    },
+    {
+      "link": "https://github.com/cqs-thu/feynman-decision-diagram",
+      "categories": "quant-ph cs.DS"
+    },
+    {
+      "link": "https://github.com/vc-bonn/saft",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/ljm1729-scholar/MOO_framework",
+      "categories": "math.OC"
+    },
+    {
+      "link": "https://github.com/MosyMosy/Purge-Gate",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/ngobibibnbe/uncertain-identity-aware-tracking",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/CASP-Systems-BU/orq",
+      "categories": "cs.CR cs.DB"
+    },
+    {
+      "link": "https://github.com/DragonisCV/RAM",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/bardiya2254kariminia/An-Age-Transformation-whitout-racial-bias-for-Kinship-verification",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/wdqin/VLN-NAP",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/IntelligentControlSystems/ClutteredEnvironment",
+      "categories": "cs.RO cs.SY eess.SY math.OC"
+    },
+    {
+      "link": "https://github.com/xuhang-2/Embodied-Agent-Planning",
+      "categories": "cs.AI"
+    },
+    {
+      "link": "https://github.com/DevChoco/CAP-VTON",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/usnistgov/readme_ai",
+      "categories": "cs.CL cs.AI"
+    },
+    {
+      "link": "https://github.com/rohan2810/musiCRS",
+      "categories": "cs.SD cs.MM"
+    },
+    {
+      "link": "https://github.com/cg-tuwien/lidarscout",
+      "categories": "cs.GR"
+    },
+    {
+      "link": "https://github.com/Intellindust-AI-Lab/DEIMv2",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/col14m/tun3d",
+      "categories": "cs.CV eess.IV"
+    },
+    {
+      "link": "https://github.com/SalvaUrrea2/GLoBES-EFT",
+      "categories": "hep-ph"
+    },
+    {
+      "link": "https://github.com/Event-AHU/OpenPAR",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/zghhui/GCPO",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/weAIDB/PARROT",
+      "categories": "cs.DB cs.AI cs.CL cs.IR cs.LG"
+    },
+    {
+      "link": "https://github.com/Tian-Nian/control_your_robot",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/krennic999/STAGE",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/bogdanraonic3/OOD_Detection_ScientificML",
+      "categories": "cs.LG"
+    },
+    {
+      "link": "https://github.com/AI4HealthUOL/ecg-fm-benchmarking",
+      "categories": "eess.SP cs.LG"
+    },
+    {
+      "link": "https://github.com/SHI-Labs/StyleNAT",
+      "categories": "cs.CV cs.AI cs.LG"
+    },
+    {
+      "link": "https://github.com/OpenGVLab/STM-Evaluation",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/YBZh/Point-DAE",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/petitioner/HE.CNNtraining",
+      "categories": "cs.CR cs.CV cs.LG"
+    },
+    {
+      "link": "https://github.com/XY-boy/LGTD",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/LUMIA-Group/FourierTransformer",
+      "categories": "cs.CL"
+    },
+    {
+      "link": "https://github.com/jeongminpark417/GIDS",
+      "categories": "cs.DC cs.AI cs.AR cs.LG"
+    },
+    {
+      "link": "https://github.com/icpm-kth/uqsa",
+      "categories": "q-bio.QM q-bio.SC"
+    },
+    {
+      "link": "https://github.com/Jianningli/medshapenet-feedback",
+      "categories": "cs.CV cs.DB cs.LG"
+    },
+    {
+      "link": "https://github.com/m-abr/FCPCodebase",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/mxin262/SwinTextSpotterv2",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/QueensGambit/CrazyAra",
+      "categories": "cs.LG"
+    },
+    {
+      "link": "https://github.com/shanry/RNA-Undesign",
+      "categories": "cs.DS"
+    },
+    {
+      "link": "https://github.com/RoyZry98/T-REX-Pytorch",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/qqplot/dcpmi",
+      "categories": "cs.CL cs.AI"
+    },
+    {
+      "link": "https://github.com/abhishekaich27/proscale-pytorch",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/yuhaozhang7/NGD-SLAM",
+      "categories": "cs.RO cs.CV"
+    },
+    {
+      "link": "https://github.com/Aaronhuang-778/SliM-LLM",
+      "categories": "cs.LG cs.CL"
+    },
+    {
+      "link": "https://github.com/jishengpeng/ControlSpeech",
+      "categories": "eess.AS cs.LG cs.SD"
+    },
+    {
+      "link": "https://github.com/synsin0/EFFOcc",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/openpsi-project/ReaLHF",
+      "categories": "cs.DC cs.AI cs.CL cs.LG"
+    },
+    {
+      "link": "https://github.com/assafbk/DeciMamba",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/LehengTHU/AlphaRec",
+      "categories": "cs.IR cs.AI"
+    },
+    {
+      "link": "https://github.com/bio-mlhui/LGRNet",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/yahooo-m/S3",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/yibozhong/lily",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/BICLab/SpikeYOLO",
+      "categories": "cs.AI"
+    },
+    {
+      "link": "https://github.com/lemire/batched_random",
+      "categories": "cs.DS"
+    },
+    {
+      "link": "https://github.com/tub-rip/ES-PTAM",
+      "categories": "cs.RO cs.CV eess.SP"
+    },
+    {
+      "link": "https://github.com/bronyayang/Law_of_Vision_Representation_in_MLLMs",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Chongjie-Si/Subspace-Tuning",
+      "categories": "cs.CL cs.CV cs.LG"
+    },
+    {
+      "link": "https://github.com/tub-rip/MouseSIS",
+      "categories": "cs.CV cs.LG cs.RO"
+    },
+    {
+      "link": "https://github.com/YunzeMan/Lexicon3D",
+      "categories": "cs.CV cs.AI cs.CL cs.LG cs.RO"
+    },
+    {
+      "link": "https://github.com/miguelzuma/GLoW_public",
+      "categories": "gr-qc astro-ph.CO astro-ph.GA astro-ph.IM"
+    },
+    {
+      "link": "https://github.com/zehao-wang/IndoorTraj",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/LMMMEng/SparX",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/XuandongZhao/llm-watermark-location",
+      "categories": "cs.CL"
+    },
+    {
+      "link": "https://github.com/furiosa-ai/ssm-peft",
+      "categories": "cs.LG cs.CL"
+    },
+    {
+      "link": "https://github.com/OrangeSodahub/SceneCraft",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/ywyeli/UniDrive",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/sail-sg/VocabularyParallelism",
+      "categories": "cs.DC"
+    },
+    {
+      "link": "https://github.com/yeongjoonJu/MIRe",
+      "categories": "cs.CV cs.AI cs.IR cs.MM"
+    },
+    {
+      "link": "https://github.com/aiha-lab/MX-QLLM",
+      "categories": "cs.AI"
+    },
+    {
+      "link": "https://github.com/immel-f/m3tr",
+      "categories": "cs.CV cs.RO"
+    },
+    {
+      "link": "https://github.com/CxsGhost/CNNSum",
+      "categories": "cs.CL cs.AI"
+    },
+    {
+      "link": "https://github.com/king/ctdg-info-flow",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/ShuYuMo2003/ArtFormer",
+      "categories": "cs.CV cs.AI cs.RO"
+    },
+    {
+      "link": "https://github.com/s3anwu/pbrnerf",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/wenhao728/AsymRnR",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/CP-Security/CP-Guard",
+      "categories": "cs.AI"
+    },
+    {
+      "link": "https://github.com/robotics-upo/gaussian-rio-cpp",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/microsoft/LMOps",
+      "categories": "cs.IR cs.CL"
+    },
+    {
+      "link": "https://github.com/Unsigned-Long/eKalibr",
+      "categories": "cs.RO cs.CV"
+    },
+    {
+      "link": "https://github.com/qiongwu86/PPO-Based-Vehicle-Control-for-Ramp-Merging-Scheme-Assisted-by-Enhanced-C-V2X",
+      "categories": "cs.NI cs.LG"
+    },
+    {
+      "link": "https://github.com/shim0114/T2V-Diffusion-Search",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/czi-ai/oc-guidance",
+      "categories": "cs.LG cs.AI cs.CV stat.ML"
+    },
+    {
+      "link": "https://github.com/tada0347/PuDDing",
+      "categories": "cs.CL cs.AI"
+    },
+    {
+      "link": "https://github.com/ipsitmantri/DiTASK",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/OswaldHe/InTAR",
+      "categories": "cs.AR cs.LG"
+    },
+    {
+      "link": "https://github.com/dannigt/mid-align",
+      "categories": "cs.CL cs.AI"
+    },
+    {
+      "link": "https://github.com/jinda-liu/R-LoRA",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/aigc3d/LAM",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/cognaclee/nopain",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/JeongHun0716/MMS-LLaMA",
+      "categories": "cs.CV cs.MM cs.SD eess.AS"
+    },
+    {
+      "link": "https://github.com/RWKV/RWKV-LM",
+      "categories": "cs.CL cs.AI cs.LG"
+    },
+    {
+      "link": "https://github.com/patgies/inclusive-D0-UPC",
+      "categories": "hep-ph nucl-th"
+    },
+    {
+      "link": "https://github.com/ZhaochongAn/GFS-VL",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/LLMkvsys/rethink-kv-compression",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/fhgyuanshen/HybridGL",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/Visual-AI/vCLR",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/OSU-NLP-Group/reversal-curse-binding",
+      "categories": "cs.CL cs.LG"
+    },
+    {
+      "link": "https://github.com/FFTYYY/RaanA",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/oliverphilcox/PolySpec",
+      "categories": "astro-ph.CO astro-ph.GA gr-qc hep-ph hep-th"
+    },
+    {
+      "link": "https://github.com/AnjanB3012/abstract-infinity",
+      "categories": "cs.PL cs.DS"
+    },
+    {
+      "link": "https://github.com/trewes/ZykovColor",
+      "categories": "cs.DM cs.AI cs.DS cs.LO"
+    },
+    {
+      "link": "https://github.com/cvlab-stonybrook/few-shot-scanpath",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Eyeline-Research/FlashDepth",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/apple/embedding-atlas",
+      "categories": "cs.HC cs.LG"
+    },
+    {
+      "link": "https://github.com/YaNLlan-ljb/ContrastiveGaussian",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/SunshineWYC/BlockGaussian",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/DrLuo/SemiETS",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/TUM-AVS/GGGVDiagrams",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/vLAR-group/GrabS",
+      "categories": "cs.CV cs.AI cs.LG cs.RO"
+    },
+    {
+      "link": "https://github.com/LexieYang/3D-PointZshotS",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Soltanilara/Krysalis_Hand",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/facebookresearch/perception_models",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/codeboy5/stamp",
+      "categories": "cs.LG cs.CL cs.CR"
+    },
+    {
+      "link": "https://github.com/kris-sigurdson/NSphere",
+      "categories": "astro-ph.GA astro-ph.CO hep-ph hep-th"
+    },
+    {
+      "link": "https://github.com/zhengchen1999/NTIRE2025_ImageSR_x4",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/zhengchen1999/NTIRE2025_RealWorld_Face_Restoration",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/hchen799/ForgeBench",
+      "categories": "cs.AR"
+    },
+    {
+      "link": "https://github.com/DistributedML/FedFetch",
+      "categories": "cs.LG cs.DC"
+    },
+    {
+      "link": "https://github.com/jcwang0602/PLVL",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/leggedrobotics/grand_tour_box",
+      "categories": "cs.RO cs.SY eess.SY"
+    },
+    {
+      "link": "https://github.com/AidenZhao/FlexPara",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/sebsassi/zebradm",
+      "categories": "hep-ph"
+    },
+    {
+      "link": "https://github.com/lzzzzzm/STCOcc",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Efficient-ML/Qwen3-Quantization",
+      "categories": "cs.LG"
+    },
+    {
+      "link": "https://github.com/HMUNACHI/pete",
+      "categories": "cs.CL cs.AI cs.LG"
+    },
+    {
+      "link": "https://github.com/Seeker98/CRWKV",
+      "categories": "eess.IV cs.CV"
+    },
+    {
+      "link": "https://github.com/munich-quantum-toolkit/debugger",
+      "categories": "quant-ph"
+    },
+    {
+      "link": "https://github.com/aralab-unr/ESM_ICP",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/imtheva/CottonSim",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/ArrayDPS/ArrayDPS",
+      "categories": "eess.AS cs.LG cs.MM cs.SD eess.SP"
+    },
+    {
+      "link": "https://github.com/Dotori-HJ/DiGIT",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/zhumorui/M3CAD",
+      "categories": "cs.RO cs.CV"
+    },
+    {
+      "link": "https://github.com/HySonLab/PointDistill",
+      "categories": "cs.CV cs.LG"
+    },
+    {
+      "link": "https://github.com/MobiSense/SpecOffload-public",
+      "categories": "cs.LG"
+    },
+    {
+      "link": "https://github.com/kaka0910/MFogHub",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Jennieett/DecompileBench",
+      "categories": "cs.SE cs.AI"
+    },
+    {
+      "link": "https://github.com/albertan017/LLM4Decompile",
+      "categories": "cs.SE"
+    },
+    {
+      "link": "https://github.com/appliedgeometry/EuLearn_db",
+      "categories": "cs.CG cs.CV cs.LG math.DG math.GT"
+    },
+    {
+      "link": "https://github.com/raphaelsulzer/PixelsPointsPolygons",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/michigan-traffic-lab/Behavioral-Safety-Assessment",
+      "categories": "cs.RO cs.SE"
+    },
+    {
+      "link": "https://github.com/lnikioffic/track-anything-annotate",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/ScopeX-ASU/SP2RINT",
+      "categories": "physics.optics cs.AI cs.LG"
+    },
+    {
+      "link": "https://github.com/jdta95/svc",
+      "categories": "stat.ME stat.AP"
+    },
+    {
+      "link": "https://github.com/OreoChocolate/LAIN",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/hkr04/LLACA",
+      "categories": "cs.CL cs.AI"
+    },
+    {
+      "link": "https://github.com/PKU-YuanGroup/OpenS2V-Nexus",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/JiHoonLee9898/RVCD",
+      "categories": "cs.CV cs.AI cs.LG"
+    },
+    {
+      "link": "https://github.com/yanzq95/LIAR",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/makinyilmaz/DiMoSR",
+      "categories": "cs.CV eess.IV"
+    },
+    {
+      "link": "https://github.com/TNeutron/ESP32-CAM-Performence-Reference-Benchmark",
+      "categories": "cs.RO cs.SY eess.IV eess.SY"
+    },
+    {
+      "link": "https://github.com/Milad-Khanchi/DepthMOT",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Pawel-96/Avcorr",
+      "categories": "astro-ph.CO"
+    },
+    {
+      "link": "https://github.com/JasonLSC/GSCodec_Studio",
+      "categories": "cs.CV cs.MM"
+    },
+    {
+      "link": "https://github.com/JAMESYJL/ShapeLLM-Omni",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/ByteDance-Seed/BM-code",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/ethanhcoo/K3entropy",
+      "categories": "math.DS math.AG"
+    },
+    {
+      "link": "https://github.com/tummfm/chemtrain",
+      "categories": "physics.comp-ph cs.LG physics.chem-ph"
+    },
+    {
+      "link": "https://github.com/NSphere-SIDM/NSphere-SIDM",
+      "categories": "astro-ph.CO astro-ph.GA hep-ph hep-th"
+    },
+    {
+      "link": "https://github.com/danini/superansac",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/awadwehbe/fidelpart",
+      "categories": "quant-ph"
+    },
+    {
+      "link": "https://github.com/iMSquared/prime-the-search",
+      "categories": "cs.RO cs.AI"
+    },
+    {
+      "link": "https://github.com/AI4Science-WestlakeU/GGBall",
+      "categories": "cs.LG"
+    },
+    {
+      "link": "https://github.com/limshoonkit/ros2-agent-ws",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/AyinMostima/PalynoKit",
+      "categories": "cs.CV cs.LG"
+    },
+    {
+      "link": "https://github.com/AhmedHumais/E-STMFlow",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/divelab/AIRS",
+      "categories": "cs.LG physics.flu-dyn"
+    },
+    {
+      "link": "https://github.com/ant-research/scalelsd",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/bscho333/ReVisiT",
+      "categories": "cs.CV cs.AI cs.CL"
+    },
+    {
+      "link": "https://github.com/delCayr/ContextRefine-Clip",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Adios42/Textailor",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/ta012/SSLAM",
+      "categories": "cs.SD cs.AI cs.LG eess.AS"
+    },
+    {
+      "link": "https://github.com/Ry3nG/SA-LUT",
+      "categories": "cs.CV eess.IV"
+    },
+    {
+      "link": "https://github.com/snt-arg/bipm_g2o",
+      "categories": "cs.RO cs.SY eess.SY"
+    },
+    {
+      "link": "https://github.com/LLM360/Reasoning360",
+      "categories": "cs.LG cs.AI cs.CL"
+    },
+    {
+      "link": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/facebookresearch/wmar",
+      "categories": "cs.LG cs.AI cs.CR cs.CV"
+    },
+    {
+      "link": "https://github.com/princeton-pli/PruLong",
+      "categories": "cs.CL"
+    },
+    {
+      "link": "https://github.com/Howard-coder191/Relation3D",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/zhifeng1703/cpp-released-code",
+      "categories": "math.DG cs.NA math.NA"
+    },
+    {
+      "link": "https://github.com/kawser-ahmed-byte/TritonZ",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/Mavis-Liang/Bayesian_integrative_FA_tutorial",
+      "categories": "stat.AP"
+    },
+    {
+      "link": "https://github.com/ntnu-arl/mimosa",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/Cheng-Hanyu/CLASS_reio_gpr",
+      "categories": "astro-ph.CO hep-ph"
+    },
+    {
+      "link": "https://github.com/gaurav00700/Selfsupervised-NVSF",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/kmsmith137/kszx",
+      "categories": "astro-ph.CO"
+    },
+    {
+      "link": "https://github.com/ozzyuni/LMPVC",
+      "categories": "cs.RO"
+    }
+  ],
+  "2025Q3": [
+    {
+      "link": "https://github.com/lizhuoxi-97/TCDT",
+      "categories": "stat.ME econ.EM math.ST stat.ML stat.TH"
+    },
+    {
+      "link": "https://github.com/zixichen007115/Tacchi",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/Zyj061/SpikeCV",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Rand2AI/FedKL",
+      "categories": "cs.LG cs.AI cs.CV"
+    },
+    {
+      "link": "https://github.com/PJLab-ADG/3DTrans",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Once2gain/PersonalityDetection",
+      "categories": "cs.CY cs.CL"
+    },
+    {
+      "link": "https://github.com/jhuangBU/pnm",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/savadikarc/wegeft",
+      "categories": "cs.CV cs.LG"
+    },
+    {
+      "link": "https://github.com/albertan017/LLM4Decompile",
+      "categories": "cs.SE"
+    },
+    {
+      "link": "https://github.com/liuzhi1993/muscle",
+      "categories": "stat.ME math.ST stat.TH"
+    },
+    {
+      "link": "https://github.com/xmindflow/LHUNet",
+      "categories": "eess.IV cs.CV cs.LG"
+    },
+    {
+      "link": "https://github.com/sntubix/robocar",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/cruiseresearchgroup/spectraformer",
+      "categories": "cs.LG"
+    },
+    {
+      "link": "https://github.com/Maelic/SGG-Benchmark",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/yangcaoai/CoDA_NeurIPS2023",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/vision-agh/gcnn-dvs-fpga",
+      "categories": "cs.CV cs.AR eess.IV"
+    },
+    {
+      "link": "https://github.com/gdmnl/Spectral-GNN-Benchmark",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/ethanygao/training-free_generalizable_relative_pose",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Seung-Hun-Lee/CAVIS",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/MOLAorg/mola",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/uhhhci/RealityFusion",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/zhirui-gao/PartGS",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/vukasin-stanojevic/BoostTrack",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/SHAMIK-97/InSeIn",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/lh3/ropebwt3",
+      "categories": "q-bio.GN"
+    },
+    {
+      "link": "https://github.com/d-gomon/icmstate",
+      "categories": "stat.ME"
+    },
+    {
+      "link": "https://github.com/cmubig/SEAL",
+      "categories": "cs.RO cs.AI cs.LG"
+    },
+    {
+      "link": "https://github.com/lukasHoel/3DGS-LM",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/jmiemirza/GLOV",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/rreischke/OneCovariance",
+      "categories": "astro-ph.CO"
+    },
+    {
+      "link": "https://github.com/jerryfeng2003/PointGST",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/CMU-SAFARI/RawHash",
+      "categories": "q-bio.GN"
+    },
+    {
+      "link": "https://github.com/Gattocrucco/lsqfitgp",
+      "categories": "stat.ML cs.LG"
+    },
+    {
+      "link": "https://github.com/hzyu17/VIMP",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/pkqbajng/LOcc",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/mumax/plus",
+      "categories": "cond-mat.mes-hall"
+    },
+    {
+      "link": "https://github.com/WalkerMitty/EmoAva",
+      "categories": "cs.AI cs.CV"
+    },
+    {
+      "link": "https://github.com/realtime-intelligence/evrt-detr",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/chansongoal/LaMoFC",
+      "categories": "cs.MM"
+    },
+    {
+      "link": "https://github.com/Vchitect/Evaluation-Agent",
+      "categories": "cs.CV cs.AI cs.CL"
+    },
+    {
+      "link": "https://github.com/tub-rip/epba",
+      "categories": "cs.CV cs.RO eess.SP math.OC"
+    },
+    {
+      "link": "https://github.com/HVision-NKU/TAR3D",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Leon022/RAHP",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/bauerhenne/diqtok-forge",
+      "categories": "quant-ph"
+    },
+    {
+      "link": "https://github.com/SparklingH/BloomScene",
+      "categories": "cs.CV cs.AI cs.GR cs.LG"
+    },
+    {
+      "link": "https://github.com/LantaoLi/RG-Attn",
+      "categories": "cs.RO cs.CV cs.NI eess.IV"
+    },
+    {
+      "link": "https://github.com/ssovukluk/ENFORCpp",
+      "categories": "cs.RO math.OC"
+    },
+    {
+      "link": "https://github.com/ControlNet/NAVER",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Amps-GPU/BG-Trees",
+      "categories": "hep-ph physics.comp-ph"
+    },
+    {
+      "link": "https://github.com/uiuc-focal-lab/CRANE",
+      "categories": "cs.PL cs.LG"
+    },
+    {
+      "link": "https://github.com/liuyuqi123study/RankSVM_for_SLR",
+      "categories": "cs.CL"
+    },
+    {
+      "link": "https://github.com/continueyang/DeltaDiff",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/wjurayj/final_answer",
+      "categories": "cs.CL"
+    },
+    {
+      "link": "https://github.com/NVlabs/FeatSharp",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/radar-lab/Lidar_Camera_Automatic_Calibration",
+      "categories": "cs.CV cs.SY eess.SY"
+    },
+    {
+      "link": "https://github.com/YJJfish/Multi-Cali-Anything",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/ThomasCoudert/MR-WAVES-public",
+      "categories": "physics.med-ph physics.bio-ph"
+    },
+    {
+      "link": "https://github.com/sail-sg/zero-bubble-pipeline-parallelism",
+      "categories": "cs.LG cs.AI cs.DC"
+    },
+    {
+      "link": "https://github.com/snt-arg/PRENOM",
+      "categories": "cs.CV cs.RO"
+    },
+    {
+      "link": "https://github.com/JeongHun0716/zero-avsr",
+      "categories": "cs.CV cs.MM cs.SD eess.AS"
+    },
+    {
+      "link": "https://github.com/justuskarlsson/wildfire-mod14-vnp14",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/multimodal-art-projection/YuE",
+      "categories": "eess.AS cs.AI cs.MM cs.SD"
+    },
+    {
+      "link": "https://github.com/SingleZombie/AFLDM",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/24wenjie-li/DMNet",
+      "categories": "eess.IV cs.CV"
+    },
+    {
+      "link": "https://github.com/duyuwen-duen/RoCo-Sim",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/boqian-li/ETCH",
+      "categories": "cs.CV cs.AI cs.GR"
+    },
+    {
+      "link": "https://github.com/TFwang-9527/GS-3I",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/YitianShi/vMF-Contact",
+      "categories": "cs.RO cs.CV"
+    },
+    {
+      "link": "https://github.com/HVision-NKU/AR123",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/yayafengzi/LMM-HiMTok",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/FastQuantum/impurityMPS",
+      "categories": "cond-mat.str-el cond-mat.mes-hall quant-ph"
+    },
+    {
+      "link": "https://github.com/alimd94/FedVSR",
+      "categories": "cs.CV cs.DC"
+    },
+    {
+      "link": "https://github.com/HorizonRobotics/GeoFlowSlam",
+      "categories": "cs.RO cs.AI"
+    },
+    {
+      "link": "https://github.com/wish44165/YOLOv12-BoT-SORT-ReID",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/antgroup/vsag",
+      "categories": "cs.DB"
+    },
+    {
+      "link": "https://github.com/HongyuYann/SymmCompletion",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/AIRI-Institute/SAE-Reasoning",
+      "categories": "cs.CL"
+    },
+    {
+      "link": "https://github.com/hypermania/BlackholePerturbations",
+      "categories": "gr-qc astro-ph.HE hep-th"
+    },
+    {
+      "link": "https://github.com/yuyijiong/parallel-decoding-in-one-sequence",
+      "categories": "cs.CL"
+    },
+    {
+      "link": "https://github.com/Vchitect/VBench",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Unsigned-Long/eKalibr",
+      "categories": "cs.RO cs.CV"
+    },
+    {
+      "link": "https://github.com/sunblaze-ucb/llm-api-audit",
+      "categories": "cs.CL cs.CR cs.LG"
+    },
+    {
+      "link": "https://github.com/Lakonik/GMFlow",
+      "categories": "cs.LG cs.CV"
+    },
+    {
+      "link": "https://github.com/The-Inscrutable-X/TACQ",
+      "categories": "cs.LG cs.AI cs.CL"
+    },
+    {
+      "link": "https://github.com/Event-AHU/OpenPAR",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/ASIG-X/RESPLE",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/facebookresearch/perception_models",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/LawrenceRLiu/NoWag",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/ustcivclab/IPM",
+      "categories": "eess.IV cs.CV"
+    },
+    {
+      "link": "https://github.com/apik/SSm0",
+      "categories": "hep-ph"
+    },
+    {
+      "link": "https://github.com/CaraJ7/T2I-R1",
+      "categories": "cs.CV cs.AI cs.CL cs.LG"
+    },
+    {
+      "link": "https://github.com/recursal/RADLADS-paper",
+      "categories": "cs.CL cs.AI cs.LG"
+    },
+    {
+      "link": "https://github.com/FocoosAI/ShowOrTell",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/PieceZhang/MrTrack",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/microsoft/tokenweave",
+      "categories": "cs.DC cs.LG"
+    },
+    {
+      "link": "https://github.com/YaoChengTang/Diving-into-the-Fusion-of-Monocular-Priors-for-Generalized-Stereo-Matching",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/theflash987/RUSplatting",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Anonymous1252022/fp4-all-the-way",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/CerulloE1996/MetaOrdDTA",
+      "categories": "stat.ME"
+    },
+    {
+      "link": "https://github.com/HKUST-KnowComp/AutoSchemaKG",
+      "categories": "cs.CL cs.AI"
+    },
+    {
+      "link": "https://github.com/mirandrom/zsl",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/DrunkenPoet/GHAP",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/ictnlp/FlexRAG",
+      "categories": "cs.CL cs.IR"
+    },
+    {
+      "link": "https://github.com/lh3/minisplice",
+      "categories": "q-bio.GN"
+    },
+    {
+      "link": "https://github.com/Gen-Verse/ReasonFlux",
+      "categories": "cs.CL"
+    },
+    {
+      "link": "https://github.com/Linketic/TC-Light",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/zhirui-gao/Curve-Gaussian",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/xuhang07/FreeDNA",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/hypermania/Cosmic-Fields-Lite",
+      "categories": "physics.comp-ph astro-ph.CO gr-qc math-ph math.MP"
+    },
+    {
+      "link": "https://github.com/lineojcd/GSNBV",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/kaai520/PGFA",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/NikolasMorshuis/SDR",
+      "categories": "eess.IV cs.CV"
+    },
+    {
+      "link": "https://github.com/qhfan/MALA",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/bokveizen/gaudi-geometric-learning",
+      "categories": "cs.LG cs.SE"
+    },
+    {
+      "link": "https://github.com/egretwAlker/c-opt-clifford-layers",
+      "categories": "cs.LG cs.AI cs.NE cs.PF"
+    },
+    {
+      "link": "https://github.com/Laka-3DV/TurboReg",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/zhoujiahuan1991/ICCV2025-SPRED",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/XiaZunhui/MedFormer",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/VisionXLab/PWOOD",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/nikhilchandak/answer-matching",
+      "categories": "cs.CL cs.AI cs.LG"
+    },
+    {
+      "link": "https://github.com/facebookresearch/any4",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/cocowy1/SMoE-Stereo",
+      "categories": "cs.CV cs.AI cs.RO"
+    },
+    {
+      "link": "https://github.com/LAB123-tech/PointGAC",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Bears-R-Us/arkouda-njit",
+      "categories": "cs.DC cs.DS"
+    },
+    {
+      "link": "https://github.com/yangyifanYYF/MK-Pose",
+      "categories": "cs.CV cs.RO"
+    },
+    {
+      "link": "https://github.com/Supercomputing-System-AI-Lab/FlexGaussian",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/initial-d/ml-quant-trading",
+      "categories": "q-fin.PM cs.CE"
+    },
+    {
+      "link": "https://github.com/TUM-AVS/motion-planning-supervisor",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/Silentbarber/DLBAcalib",
+      "categories": "cs.RO cs.CL"
+    },
+    {
+      "link": "https://github.com/shiyi-mu/S3AD-Code",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/wencan25/Fast3D",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/BouriMohammed/GBM",
+      "categories": "cs.CL cs.AI cs.LG"
+    },
+    {
+      "link": "https://github.com/henry-pay/RayEncoder",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/wangjks/FFI-VTR",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/Zirconium233/PanTiny",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/mhostert/tauALP",
+      "categories": "hep-ph hep-ex"
+    },
+    {
+      "link": "https://github.com/fballestermacia/simphony",
+      "categories": "cond-mat.mtrl-sci"
+    },
+    {
+      "link": "https://github.com/hugocarlesso/GeMix",
+      "categories": "cs.CV cs.AI cs.LG"
+    },
+    {
+      "link": "https://github.com/G-1nOnly/Dens3R",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/keneniwt/DWCNET-Robust-Point-Cloud-Completion-against-Corruptions",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/OliverFHD/CosMomentum",
+      "categories": "astro-ph.CO"
+    },
+    {
+      "link": "https://github.com/AXNing/DFDNet",
+      "categories": "cs.CV eess.IV"
+    },
+    {
+      "link": "https://github.com/konskara/TerraPlan",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/SainingZhang/CRUISE",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Quantum-Chemistry-Group-BNU/PyNQS",
+      "categories": "physics.chem-ph cond-mat.str-el"
+    },
+    {
+      "link": "https://github.com/Seung-Hun-Lee/LOMM",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Pantheon-temple/Prometheus",
+      "categories": "cs.SE"
+    },
+    {
+      "link": "https://github.com/Yanyin-Guo/LSFDNet",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Orange-OpenSource/Cool-Chic",
+      "categories": "cs.MM eess.IV"
+    },
+    {
+      "link": "https://github.com/fesvhtr/TRIG",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/rlwilliams34/BiGG-E",
+      "categories": "cs.LG"
+    },
+    {
+      "link": "https://github.com/CIawevy/FreeFine",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/amazon-science/cyber-zero",
+      "categories": "cs.CR cs.CL cs.LG"
+    },
+    {
+      "link": "https://github.com/AIDC-AI/Marco-Voice",
+      "categories": "cs.CL cs.SD eess.AS"
+    },
+    {
+      "link": "https://github.com/SmallDoges/flash-dmattn",
+      "categories": "cs.AI cs.CL cs.LG"
+    },
+    {
+      "link": "https://github.com/GENTEL-lab/AuroBind",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/MikolajZielinski/genie",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/NEDE-Cosmo/DRMD-CLASS",
+      "categories": "astro-ph.CO hep-ph hep-th"
+    },
+    {
+      "link": "https://github.com/Event-AHU/SAV",
+      "categories": "cs.CV cs.AI cs.LG"
+    },
+    {
+      "link": "https://github.com/YuruiAI/DistillDrive",
+      "categories": "cs.RO cs.CV"
+    },
+    {
+      "link": "https://github.com/UWASL/dedup-bench",
+      "categories": "cs.DC cs.AR"
+    },
+    {
+      "link": "https://github.com/FrozenWolf-Cyber/Indic-CL-ASR",
+      "categories": "cs.LG"
+    },
+    {
+      "link": "https://github.com/Seeyn/Anti-Tamper-Perturbation",
+      "categories": "cs.CR cs.CV"
+    },
+    {
+      "link": "https://github.com/bio-mlhui/EventRR",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/csxmli2016/MARCONetPlusPlus",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/davidarps/silm",
+      "categories": "cs.CL"
+    },
+    {
+      "link": "https://github.com/SimWangArizona/FIER",
+      "categories": "cs.DB"
+    },
+    {
+      "link": "https://github.com/jsalvasoler/trigger_arc_tsp",
+      "categories": "cs.AI cs.DM"
+    },
+    {
+      "link": "https://github.com/AugustRushG/TOTNet",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/vLAR-group/TRACE",
+      "categories": "cs.CV cs.AI cs.CE cs.LG cs.RO"
+    },
+    {
+      "link": "https://github.com/vLAR-group/RayletDF",
+      "categories": "cs.CV cs.AI cs.GR cs.LG cs.RO"
+    },
+    {
+      "link": "https://github.com/DelMaestroGroup/papers-code-BHZUEdgeReconstruction",
+      "categories": "cond-mat.mes-hall"
+    },
+    {
+      "link": "https://github.com/abhi1kumar/CHARM3R",
+      "categories": "cs.CV cs.LG"
+    },
+    {
+      "link": "https://github.com/anonym-auth/n-grf",
+      "categories": "eess.SP cs.NI"
+    },
+    {
+      "link": "https://github.com/MiliLab/S5",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/ayushgupta4897/DRL-Cache",
+      "categories": "cs.LG cs.AI cs.DB cs.NI"
+    },
+    {
+      "link": "https://github.com/chenkangjie1123/Co-Adaptation-of-3DGS",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/Chen13d/Deep-DSCM",
+      "categories": "physics.optics"
+    },
+    {
+      "link": "https://github.com/personalrobotics/IGHAStar",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/kangpx/onlineTiny2023",
+      "categories": "cs.LG cs.AI"
+    },
+    {
+      "link": "https://github.com/Kin-Zhang/DeltaFlow",
+      "categories": "cs.CV cs.RO"
+    },
+    {
+      "link": "https://github.com/StructuresComp/agri-chrono",
+      "categories": "cs.RO cs.AI cs.SY eess.SY"
+    },
+    {
+      "link": "https://github.com/SideofMan/VPPE",
+      "categories": "stat.CO stat.AP"
+    },
+    {
+      "link": "https://github.com/xtudbxk/GPSToken",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/jkeger/arctic",
+      "categories": "astro-ph.IM astro-ph.EP astro-ph.GA astro-ph.SR"
+    },
+    {
+      "link": "https://github.com/rainermd/ISO-ISBOCapture",
+      "categories": "astro-ph.EP astro-ph.GA"
+    },
+    {
+      "link": "https://github.com/Unsigned-Long/eKalibr",
+      "categories": "cs.RO cs.CV"
+    },
+    {
+      "link": "https://github.com/venovako/libpvn",
+      "categories": "math.NA cs.NA"
+    },
+    {
+      "link": "https://github.com/ciquezada/photfun",
+      "categories": "astro-ph.GA"
+    },
+    {
+      "link": "https://github.com/lh3/longdust",
+      "categories": "q-bio.GN"
+    },
+    {
+      "link": "https://github.com/opendilab/LightZero",
+      "categories": "cs.LG"
+    },
+    {
+      "link": "https://github.com/cqs-thu/feynman-decision-diagram",
+      "categories": "quant-ph cs.DS"
+    },
+    {
+      "link": "https://github.com/vc-bonn/saft",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/ljm1729-scholar/MOO_framework",
+      "categories": "math.OC"
+    },
+    {
+      "link": "https://github.com/MosyMosy/Purge-Gate",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/ngobibibnbe/uncertain-identity-aware-tracking",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/CASP-Systems-BU/orq",
+      "categories": "cs.CR cs.DB"
+    },
+    {
+      "link": "https://github.com/DragonisCV/RAM",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/bardiya2254kariminia/An-Age-Transformation-whitout-racial-bias-for-Kinship-verification",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/wdqin/VLN-NAP",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/IntelligentControlSystems/ClutteredEnvironment",
+      "categories": "cs.RO cs.SY eess.SY math.OC"
+    },
+    {
+      "link": "https://github.com/xuhang-2/Embodied-Agent-Planning",
+      "categories": "cs.AI"
+    },
+    {
+      "link": "https://github.com/DevChoco/CAP-VTON",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/usnistgov/readme_ai",
+      "categories": "cs.CL cs.AI"
+    },
+    {
+      "link": "https://github.com/rohan2810/musiCRS",
+      "categories": "cs.SD cs.MM"
+    },
+    {
+      "link": "https://github.com/cg-tuwien/lidarscout",
+      "categories": "cs.GR"
+    },
+    {
+      "link": "https://github.com/Intellindust-AI-Lab/DEIMv2",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/col14m/tun3d",
+      "categories": "cs.CV eess.IV"
+    },
+    {
+      "link": "https://github.com/SalvaUrrea2/GLoBES-EFT",
+      "categories": "hep-ph"
+    },
+    {
+      "link": "https://github.com/Event-AHU/OpenPAR",
+      "categories": "cs.CV cs.AI"
+    },
+    {
+      "link": "https://github.com/zghhui/GCPO",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/weAIDB/PARROT",
+      "categories": "cs.DB cs.AI cs.CL cs.IR cs.LG"
+    },
+    {
+      "link": "https://github.com/Tian-Nian/control_your_robot",
+      "categories": "cs.RO"
+    },
+    {
+      "link": "https://github.com/krennic999/STAGE",
+      "categories": "cs.CV"
+    },
+    {
+      "link": "https://github.com/bogdanraonic3/OOD_Detection_ScientificML",
+      "categories": "cs.LG"
+    },
+    {
+      "link": "https://github.com/AI4HealthUOL/ecg-fm-benchmarking",
+      "categories": "eess.SP cs.LG"
+    }
   ]
 }

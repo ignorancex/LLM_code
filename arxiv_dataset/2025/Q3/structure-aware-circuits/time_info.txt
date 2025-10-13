@@ -1,0 +1,6 @@
+schmidt_circuit_optimization.py: 2025-07-31T16:58:43Z
+hybrid_model.py: 2025-07-31T16:58:43Z
+only_classical_head.py: 2025-07-31T16:58:43Z
+schmidt_decomposition.py: 2025-07-31T16:58:43Z
+data_loaders.py: 2025-07-31T16:58:43Z
+only_classical_head_with_reduced_vecs.py: 2025-07-31T16:58:43Z

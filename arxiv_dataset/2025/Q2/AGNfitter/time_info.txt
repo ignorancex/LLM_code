@@ -1,0 +1,17 @@
+functions/DICTIONARIES_AGNfitter.py: 2024-02-14T12:50:21Z
+RUN_AGNfitter_multi.py: 2024-02-14T12:50:21Z
+example/SETTINGS_AGNfitter.py: 2024-02-14T19:50:46Z
+functions/DATA_AGNfitter.py: 2024-02-14T19:50:46Z
+example/SETTINGS_AGNfitter_new.py: 2021-11-17T20:50:26Z
+docs/source/conf.py: 2024-02-10T11:09:18Z
+example/LOFARqso_xrayradio.py: 2023-04-27T10:54:57Z
+docs/conf.py: 2024-02-09T13:01:21Z
+functions/MCMC_AGNfitter.py: 2024-02-14T12:50:21Z
+functions/FILTERS_AGNfitter.py: 2024-02-14T19:50:46Z
+functions/MODEL_AGNfitter.py: 2024-02-14T19:50:46Z
+functions/PARAMETERSPACE_AGNfitter.py: 2024-02-09T15:00:31Z
+functions/__init__.py: 2016-06-23T18:36:05Z
+functions/PRIORS_AGNfitter.py: 2024-01-29T13:35:04Z
+functions/corner.py: 2021-11-17T20:50:26Z
+functions/PLOTandWRITE_AGNfitter.py: 2024-02-14T19:50:46Z
+functions/triangle.py: 2020-07-14T03:07:52Z

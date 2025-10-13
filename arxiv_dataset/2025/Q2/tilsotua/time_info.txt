@@ -1,0 +1,13 @@
+tilsotua/__init__.py: 2022-02-26T01:07:14Z
+tilsotua/LRIS_Mask_Coords_to_WCS.py: 2025-02-25T03:28:11Z
+setup.py: 2025-02-12T21:26:18Z
+docs/conf.py: 2025-02-21T00:31:27Z
+tilsotua/create_quicklookplot.py: 2025-02-24T21:46:17Z
+Examples/test.py: 2025-02-20T23:55:18Z
+tilsotua/callcode.py: 2025-02-20T23:55:18Z
+tilsotua/astrometrycorrection.py: 2025-02-24T21:46:17Z
+tilsotua/find_shifts.py: 2025-02-24T21:46:17Z
+tilsotua/write_ds9_file.py: 2025-02-24T21:46:17Z
+tilsotua/precessionroutine.py: 2025-02-24T21:46:17Z
+tilsotua/use_autoslit_input.py: 2025-02-24T21:46:17Z
+tilsotua/refractioncorrection.py: 2025-02-24T21:46:17Z

@@ -1,0 +1,16 @@
+src/detect_methods/perplexity.py: 2025-06-23T02:57:56Z
+src/detect_methods/activation_decoding_entropy.py: 2025-06-23T02:57:56Z
+src/detect_methods/self_check.py: 2025-02-13T16:12:14Z
+src/detect_methods/eigen_score.py: 2025-02-13T16:12:14Z
+src/detect_methods/verbalized.py: 2025-06-23T02:57:56Z
+src/detect_methods/llm_check.py: 2025-02-13T16:12:14Z
+src/detect_methods/__init__.py: 2025-02-13T16:12:14Z
+src/fine-tune/preprocess.py: 2025-02-13T16:12:14Z
+src/task/__init__.py: 2025-02-13T16:12:14Z
+src/task/_detection.py: 2025-06-23T02:57:56Z
+src/task/_qa_utils.py: 2025-02-13T16:12:14Z
+src/task/mcqa.py: 2025-06-23T02:57:56Z
+src/task/qa.py: 2025-06-23T02:57:56Z
+src/task/truthful_qa.py: 2025-06-23T02:57:56Z
+src/task/_generation.py: 2025-06-23T02:57:56Z
+src/utils.py: 2025-06-23T02:57:56Z

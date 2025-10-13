@@ -1,0 +1,6 @@
+examples/test_vat2.py: 2025-03-20T19:36:25Z
+vat_clustering/__init__.py: 2025-03-20T19:36:25Z
+vat_clustering/vat.py: 2025-03-20T19:36:25Z
+setup.py: 2025-03-20T19:52:28Z
+vat_clustering/optimization.py: 2025-03-20T19:36:25Z
+examples/test_vat.py: 2025-03-20T19:36:25Z

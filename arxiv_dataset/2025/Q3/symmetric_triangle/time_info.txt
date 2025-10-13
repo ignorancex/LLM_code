@@ -1,0 +1,11 @@
+e1e2_nsi_boundary_improved.py: 2025-03-06T21:08:36Z
+boundary_validation.py: 2025-03-05T13:39:25Z
+fig4a.py: 2025-03-07T17:23:03Z
+lambdapm_class_boundary.py: 2025-03-06T21:08:36Z
+fig4b.py: 2025-03-06T21:08:36Z
+e1e2_nsi_boundary_old.py: 2025-03-06T21:08:36Z
+figure_symmetric_local_set.py: 2025-03-14T17:36:58Z
+exploratory_analysis.py: 2025-03-10T19:49:13Z
+triangle.py: 2025-03-03T16:13:38Z
+triangle_inequalities.py: 2025-03-14T17:36:58Z
+polynomials.py: 2025-03-14T17:36:58Z

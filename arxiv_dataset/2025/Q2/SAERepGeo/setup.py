@@ -1,0 +1,37 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="saerepgeo",
+    version="1.0.0",
+    description="Sparsification and Reconstruction from Representation Geometry",
+    long_description=open("README.md", encoding="utf-8").read(),
+    long_description_content_type="text/markdown",
+    author="Anonymous Authors",
+    author_email="anonymous@neurips2025.org",
+    url="https://github.com/SAERepGeo/SAERepGeo",
+    packages=find_packages(where="src"),
+    package_dir={"": "src"},
+    install_requires=[
+        "torch==2.5.1",
+        "sae-lens==5.9.1",
+        "pandas==2.2.3",
+        "numpy==1.26.4",
+        "scikit-learn==1.6.0",
+        "umap-learn==0.5.7",
+        "hdbscan==0.8.40",
+        "scikit-dimension==0.3.4",
+        "scipy==1.14.1",
+        "POT==0.9.5",
+    ],
+    python_requires=">=3.10",
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.10",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        "Intended Audience :: Researchers",
+        "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    ],
+    license="MIT",
+    keywords="sparse autoencoders, representation geometry, mechanistic interpretability",
+)

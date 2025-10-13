@@ -1,0 +1,5 @@
+code/pyrt/pyrt.cpp: Unknown
+code/pyrt/common/gdt/gdt/gdt.cpp: Unknown
+code/pyrt/optix.cpp: Unknown
+code/pyrt/common/3rdParty/ply.cpp: Unknown
+code/pyrt/SampleRenderer.cpp: Unknown

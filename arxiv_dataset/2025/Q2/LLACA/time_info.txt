@@ -1,0 +1,14 @@
+TrieGram.py: 2025-06-26T05:14:05Z
+setup.py: 2025-05-29T11:12:00Z
+automaton/__init__.py: 2025-05-29T11:12:00Z
+suffix_array/__init__.py: 2025-05-29T11:12:00Z
+demo.py: 2025-05-29T11:12:00Z
+LLACA.py: 2025-05-29T11:12:00Z
+__init__.py: 2025-05-29T11:12:00Z
+automaton/setup.py: 2025-05-29T11:12:00Z
+utils/benchmark.py: 2025-05-29T11:12:00Z
+utils/__init__.py: 2025-05-29T11:12:00Z
+test.py: 2025-05-29T11:12:00Z
+utils/common.py: 2025-05-29T11:12:00Z
+utils/dict_utils.py: 2025-05-29T11:12:00Z
+suffix_array/setup.py: 2025-05-29T11:12:00Z

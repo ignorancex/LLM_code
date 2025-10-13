@@ -1,0 +1,3 @@
+submodules/fused-ssim/ext.cpp: 2025-08-19T09:20:06Z
+submodules/diff-cur-rasterization/ext.cpp: 2025-08-19T14:31:52Z
+submodules/simple-knn/ext.cpp: 2025-08-19T09:20:06Z

@@ -13,13 +13,13 @@ warnings.filterwarnings("ignore", category=SyntaxWarning)
 
 # ---------- 0. 路径与常量 ----------
 # 假设 arxiv_result 目录与 arxiv_dataset 目录在同一层级
-BASE_DATA_DIR = "LLM_code/arxiv_dataset" # 基础数据目录
-CATEGORIES_JSON = "LLM_code/arxiv_result/github_links/python_dataset_links.json"
+BASE_DATA_DIR = "arxiv_dataset" # 基础数据目录
+CATEGORIES_JSON = "dataset_collection/github/links/python_dataset_links.json"
 OUT_DIR = "LLM_code/arxiv_result/vars" # 输出目录
 os.makedirs(OUT_DIR, exist_ok=True) # 确保输出目录存在
 
 # 定义所有需要处理的季度
-ALL_QUARTERS = [f"{y}Q{q}" for y in range(2020, 2025) for q in range(1, 5)] + ["2025Q1"]
+ALL_QUARTERS = [f"{y}Q{q}" for y in range(2025, 2026) for q in range(2, 4)]
 
 # 定义并行处理的最大工作线程数
 MAX_WORKERS = os.cpu_count() or 4 # 默认为CPU核心数，至少为4

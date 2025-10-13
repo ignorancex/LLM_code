@@ -1,0 +1,16 @@
+fig_03_gas_bh_properties.py: 2025-07-30T14:27:26Z
+__init__.py: 2025-04-22T14:35:04Z
+fig_08_fhalo.py: 2025-07-30T14:27:26Z
+fig_02_key_galaxy_properties.py: 2025-07-30T14:27:26Z
+fig_05_rates_of_change.py: 2025-07-30T14:27:26Z
+gcgmics/__init__.py: 2025-07-29T18:22:46Z
+fig_04_z0_mass_function.py: 2025-07-30T14:27:26Z
+fig_06_07_gc_properties.py: 2025-07-31T16:29:43Z
+gcgmics/common_functions.py: 2025-07-31T16:29:43Z
+tests/test_common_functions.py: 2025-07-31T16:29:43Z
+tests/test_process_data.py: 2025-07-22T19:02:02Z
+gcgmics/settings.py: 2025-07-28T19:36:37Z
+gcgmics/process_data.py: 2025-07-22T19:02:02Z
+print_paper_results.py: 2025-07-30T14:27:26Z
+run_all_scripts.py: 2025-07-30T12:24:01Z
+tests/test_settings.py: 2025-07-28T19:36:37Z

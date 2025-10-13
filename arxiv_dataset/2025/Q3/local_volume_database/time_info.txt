@@ -1,0 +1,10 @@
+code/__init__.py: 2024-09-21T14:53:21Z
+scripts/unit_tests.py: 2025-07-11T01:54:23Z
+scripts/combine_table_general.py: 2025-08-25T18:37:26Z
+scripts/create_latex_table.py: 2025-03-17T03:49:57Z
+docs/source/conf.py: 2023-12-07T21:23:48Z
+scripts/check_bib_file.py: 2024-10-02T19:06:51Z
+scripts/create_yaml.py: 2024-10-02T19:06:51Z
+scripts/create_summary_plots.py: 2025-06-30T20:42:23Z
+src/local_volume_database/__init__.py: 2024-10-31T20:49:54Z
+src/local_volume_database/lvdb_functions.py: 2025-08-25T18:37:26Z

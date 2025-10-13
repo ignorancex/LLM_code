@@ -1,0 +1,14 @@
+config/config_3sat.py: 2025-04-06T03:45:28Z
+dataset_sat.py: 2025-04-06T03:45:28Z
+config/config_qbf.py: 2025-04-06T03:45:28Z
+dataset_qbf.py: 2025-04-06T03:45:28Z
+einstein_generator.py: 2025-04-06T03:45:28Z
+config/config_puzzle.py: 2025-04-06T03:45:28Z
+einstein_solver.py: 2025-04-06T03:45:28Z
+configurator.py: 2025-04-06T03:45:28Z
+pencil_utils.py: 2025-04-06T03:45:28Z
+tokenizer.py: 2025-04-06T03:45:28Z
+train.py: 2025-04-06T03:45:28Z
+model.py: 2025-04-06T03:45:28Z
+train_puzzle.py: 2025-04-06T03:45:28Z
+eval.py: 2025-04-06T03:45:28Z

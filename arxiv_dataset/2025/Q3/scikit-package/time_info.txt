@@ -1,0 +1,30 @@
+src/scikit_package/cli/create.py: 2025-06-21T18:26:35Z
+docs/source/conf.py: 2025-07-02T05:59:47Z
+hooks/post_gen_project.py: 2025-10-04T17:47:11Z
+src/scikit_package/cli/update/cf.py: 2025-07-19T22:14:09Z
+src/scikit_package/cli/add.py: 2025-06-03T17:08:49Z
+src/scikit_package/__init__.py: 2025-05-13T18:26:27Z
+hooks/local_extensions.py: 2025-09-22T00:35:16Z
+src/scikit_package/cli/build/api_doc.py: 2025-07-02T12:39:43Z
+src/scikit_package/scikit_package_app.py: 2025-08-22T01:43:56Z
+src/scikit_package/utils/auth.py: 2025-06-03T09:46:47Z
+src/scikit_package/utils/io.py: 2025-07-22T15:44:56Z
+src/scikit_package/utils/cookie.py: 2025-07-23T18:30:02Z
+src/scikit_package/utils/pypi.py: 2025-07-02T12:11:53Z
+src/scikit_package/version.py: 2025-07-29T21:00:14Z
+src/scikit_package/utils/shell.py: 2025-06-08T22:05:36Z
+tests/conftest.py: 2025-07-21T16:59:00Z
+tests/test_extensions.py: 2025-09-22T00:50:50Z
+tests/test_add_news.py: 2025-08-27T18:25:02Z
+tests/test_update_cf.py: 2025-07-23T20:28:08Z
+tests/test_pypi.py: 2025-07-02T12:11:53Z
+tests/test_version.py: 2025-01-03T23:54:55Z
+tests/test_io.py: 2025-08-18T17:19:54Z
+{{ cookiecutter.github_repo_name }}/docs/source/conf.py: 2025-07-02T12:39:43Z
+{{ cookiecutter.github_repo_name }}/src/{{ cookiecutter.package_dir_name }}/__init__.py: 2025-06-03T17:09:04Z
+{{ cookiecutter.github_repo_name }}/src/{{ cookiecutter.package_dir_name }}/functions.py: 2025-04-24T03:43:59Z
+{{ cookiecutter.github_repo_name }}/src/{{ cookiecutter.package_dir_name }}/version.py: 2025-07-29T21:00:14Z
+{{ cookiecutter.github_repo_name }}/src/{{ cookiecutter.package_dir_name }}/{{ cookiecutter.package_dir_name.split('.')[-1] }}_app.py: 2025-07-07T22:13:03Z
+{{ cookiecutter.github_repo_name }}/tests/test_functions.py: 2025-06-09T20:43:30Z
+{{ cookiecutter.github_repo_name }}/tests/conftest.py: 2025-01-02T19:37:46Z
+{{ cookiecutter.github_repo_name }}/tests/test_version.py: 2025-06-03T17:09:04Z

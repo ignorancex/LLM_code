@@ -1,0 +1,3 @@
+from .env import MedicalConsultationEnv
+from .env_patient_llm import MedicalConsultationEnvWithPatientLLM
+from .env_patient_llm_rm import MedicalConsultationEnvWithPatientLLMandRM

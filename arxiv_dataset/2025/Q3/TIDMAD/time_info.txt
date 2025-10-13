@@ -1,0 +1,12 @@
+analysis.py: 2024-06-03T01:25:39Z
+benchmark.py: 2024-09-27T14:22:49Z
+array2h5.py: 2024-06-03T01:25:39Z
+download_data.py: 2024-09-27T14:23:21Z
+inference.py: 2025-09-19T19:00:53Z
+network.py: 2025-09-19T19:00:53Z
+PlotFuncs_TIDMAD.py: 2024-06-04T20:01:16Z
+brazilband.py: 2024-06-03T01:25:39Z
+train_nosplit.py: 2025-09-19T19:00:53Z
+train.py: 2025-09-19T19:00:53Z
+setup.py: 2024-06-03T13:55:34Z
+process_science_data.py: 2024-06-05T21:20:02Z

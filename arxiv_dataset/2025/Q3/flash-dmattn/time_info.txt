@@ -1,0 +1,16 @@
+benchmarks/grad_equivalence.py: 2025-08-10T11:58:39Z
+benchmarks/backward_performance.py: 2025-09-12T14:32:22Z
+examples/modeling/modeling_doge.py: 2025-09-21T09:37:12Z
+examples/modeling/configuration_doge.py: 2025-08-07T15:47:35Z
+benchmarks/forward_equivalence.py: 2025-09-12T14:32:22Z
+csrc/flash_dmattn/src/generate_kernels.py: 2025-09-18T08:55:01Z
+benchmarks/backward_equivalence.py: 2025-09-13T10:38:21Z
+benchmarks/forward_performance.py: 2025-09-12T14:32:22Z
+flash_dmattn/__init__.py: 2025-10-01T16:57:45Z
+flash_dmattn/flash_dmattn_flex.py: 2025-08-08T14:11:22Z
+flash_dmattn/flash_dmattn_interface.py: 2025-10-01T16:25:08Z
+flash_dmattn/integrations/import_utils.py: 2025-08-23T10:07:23Z
+flash_dmattn/integrations/modeling_flash_dynamic_mask_attention_utils.py: 2025-09-21T09:34:01Z
+setup.py: 2025-09-20T12:40:11Z
+flash_dmattn/flash_dmattn_triton.py: 2025-08-23T05:21:51Z
+flash_dmattn/integrations/flash_dynamic_mask_attention.py: 2025-09-19T16:54:44Z

@@ -1,0 +1,16 @@
+learning/ppo.py: 2025-06-08T20:44:03Z
+learning/module.py: 2025-06-08T20:44:03Z
+learning/train.py: 2025-06-08T20:44:03Z
+learning/dagger.py: 2025-06-08T20:44:03Z
+uav_sim/attitudecontroller.py: 2024-08-29T22:47:43Z
+animate.py: 2024-09-19T05:23:38Z
+uav_sim/__init__.py: 2024-08-29T22:47:43Z
+simulate.py: 2024-09-19T22:48:15Z
+uav_sim/motor.py: 2024-08-29T22:47:43Z
+uav_sim/mixer.py: 2024-08-29T22:47:43Z
+xadapt_controller/controller.py: 2025-06-08T21:03:28Z
+xadapt_controller/deploy.py: 2024-08-29T22:47:43Z
+xadapt_controller/__init__.py: 2024-08-29T22:47:43Z
+uav_sim/vehicle.py: 2024-08-29T22:47:43Z
+xadapt_controller/utils.py: 2025-06-08T21:03:28Z
+uav_sim/positioncontroller.py: 2024-09-19T05:23:38Z

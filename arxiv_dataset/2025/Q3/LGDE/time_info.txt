@@ -1,0 +1,13 @@
+experiments/redgab/redgab_textrank_gridsearch.py: 2025-02-18T13:33:54Z
+lgde/__init__.py: 2025-02-18T13:33:24Z
+experiments/20newsgroups/newsgroups_textrank_gridsearch.py: 2025-02-18T13:34:10Z
+experiments/4chan/4chan_gridsearch.py: 2024-05-27T14:05:07Z
+experiments/redgab/redgab_gridsearch_local_mod.py: 2025-02-18T13:33:54Z
+experiments/redgab/redgab_gridsearch.py: 2025-02-18T13:33:54Z
+experiments/20newsgroups/newsgroups_gridsearch_local_mod.py: 2025-02-18T13:34:10Z
+experiments/20newsgroups/newsgroups_gridsearch.py: 2025-02-18T13:34:10Z
+lgde/baselines.py: 2025-02-18T13:33:24Z
+lgde/evaluation.py: 2025-02-18T13:33:24Z
+lgde/lgde.py: 2025-02-18T13:33:24Z
+setup.py: 2025-04-22T10:23:17Z
+lgde/plotting.py: 2024-05-27T14:03:53Z

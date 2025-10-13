@@ -1,0 +1,6 @@
+Burgers/tanh/tanh.py: 2025-06-26T16:18:50Z
+Burgers/lctanh/lctanh.py: 2025-06-26T16:18:50Z
+KdV/lcxsinx/lcxsinx.py: 2025-06-26T16:18:50Z
+AC/tanh/tanh.py: 2025-06-26T16:18:50Z
+AC/lctanh/lctanh.py: 2025-06-26T16:18:50Z
+KdV/tanh/tanh.py: 2025-06-26T16:18:50Z

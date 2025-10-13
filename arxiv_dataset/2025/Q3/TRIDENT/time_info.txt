@@ -1,0 +1,7 @@
+principles/finance_principles.py: 2025-05-16T09:36:21Z
+code/harmful_fin_templates.py: 2025-05-16T09:36:21Z
+code/harmful_medical_templates.py: 2025-05-16T09:36:21Z
+code/genration.py: 2025-05-16T09:36:21Z
+code/harmful_law_templates.py: 2025-05-16T09:36:21Z
+principles/med_principles.py: 2025-05-16T09:36:21Z
+principles/law_principles.py: 2025-05-16T09:36:21Z

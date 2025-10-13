@@ -1,0 +1,13 @@
+custom_callbacks/error_convergence_callback.py: 2025-04-16T14:54:06Z
+custom_callbacks/image_label_visualization_callback.py: 2025-04-16T14:54:06Z
+custom_callbacks/__init__.py: 2025-04-16T14:54:06Z
+datamodules/torchvision_datamodule.py: 2025-05-26T13:57:03Z
+custom_callbacks/visualization_callback.py: 2025-04-16T14:54:06Z
+datamodules/__init__.py: 2025-05-26T13:57:03Z
+get_arch.py: 2025-05-26T13:57:03Z
+custom_callbacks/state_comparison_callback.py: 2025-05-26T13:57:03Z
+mnist_poc/analytical_solution.py: 2025-05-26T13:57:03Z
+mnist_poc/tracked_pce.py: 2025-05-26T13:57:03Z
+pc_e.py: 2025-05-26T13:57:03Z
+pc_variants.py: 2025-05-26T13:57:03Z
+sweep.py: 2025-05-26T13:57:03Z

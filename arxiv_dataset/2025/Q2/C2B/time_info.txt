@@ -1,0 +1,62 @@
+C2B-pipeline/bias_measurement/image classification/measure_biases.py: 2025-06-30T11:49:24Z
+C2B-pipeline/bias_measurement/face attribute classification/facexformer/measure_biases.py: 2025-06-30T11:49:24Z
+C2B-pipeline/bias_measurement/image classification/eval_models_retrieved.py: 2025-06-30T11:49:24Z
+C2B-pipeline/LLM_bias_caption_generation/bias_generation.py: 2025-06-30T11:49:24Z
+C2B-pipeline/bias_measurement/face attribute classification/facexformer/inference.py: 2025-06-30T11:49:24Z
+C2B-pipeline/LLM_bias_caption_generation/caption_template_generation.py: 2025-06-30T11:49:24Z
+C2B-pipeline/bias_measurement/face attribute classification/facexformer/run_model_on_all_retrieved_images.py: 2025-06-30T11:49:24Z
+C2B-pipeline/bias_measurement/image classification/retrieved_dataset.py: 2025-06-30T11:49:24Z
+C2B-pipeline/text_to_image_retrieval/retrieval_client_t2i_bing.py: 2025-06-30T11:49:24Z
+base_models/celeba_face_attribute_classification/data/celeba.py: 2025-06-30T11:49:24Z
+C2B-pipeline/text_to_image_retrieval/retrieval_client_t2i_cc12m.py: 2025-06-30T11:49:24Z
+C2B-pipeline/text_to_image_retrieval/web_crawler.py: 2025-06-30T11:49:24Z
+base_models/celeba_face_attribute_classification/facexformer/network/__init__.py: 2025-06-30T11:49:24Z
+base_models/celeba_face_attribute_classification/facexformer/inference.py: 2025-06-30T11:49:24Z
+base_models/celeba_face_attribute_classification/facexformer/network/models/transformer.py: 2025-06-30T11:49:24Z
+base_models/celeba_face_attribute_classification/facexformer/network/models/facexformer.py: 2025-06-30T11:49:24Z
+base_models/celeba_face_attribute_classification/facexformer/network/models/__init__.py: 2025-06-30T11:49:24Z
+base_models/imagenet-x_classification/data/extract_inx_dataset.py: 2025-06-30T11:49:24Z
+base_models/imagenet-x_classification/torchvision_models/eval_models_inx.py: 2025-06-30T11:49:24Z
+base_models/celeba_face_attribute_classification/facexformer/run_model_on_all_celeba_images.py: 2025-06-30T11:49:24Z
+competitors/B2T-repro/b2t_celeba.py: 2025-06-30T11:49:24Z
+competitors/B2T-repro/b2t_inx.py: 2025-06-30T11:49:24Z
+competitors/B2T-repro/data/celeba.py: 2025-06-30T11:49:24Z
+competitors/B2T-repro/extract_all_detected_keywords.py: 2025-06-30T11:49:24Z
+competitors/B2T-repro/function/calculate_similarity.py: 2025-06-30T11:49:24Z
+competitors/B2T-repro/function/extract_caption.py: 2025-06-30T11:49:24Z
+competitors/B2T-repro/function/extract_keyword.py: 2025-06-30T11:49:24Z
+competitors/B2T-repro/function/print_similarity.py: 2025-06-30T11:49:24Z
+evaluation/ground_truth_annotations_evaluation/celeba_face_attribute_classification/bias_matching_captions/generate_b2t_captions.py: 2025-06-30T11:49:24Z
+evaluation/ground_truth_annotations_evaluation/celeba_face_attribute_classification/bias_matching_captions/generate_gt_captions.py: 2025-06-30T11:49:24Z
+evaluation/ground_truth_annotations_evaluation/celeba_face_attribute_classification/measure_gt_biases.py: 2025-06-30T11:49:24Z
+evaluation/ground_truth_annotations_evaluation/celeba_face_attribute_classification/evaluate_bias_detection.py: 2025-06-30T11:49:24Z
+evaluation/ground_truth_annotations_evaluation/celeba_face_attribute_classification/export_b2t_biases.py: 2025-06-30T11:49:24Z
+evaluation/ground_truth_annotations_evaluation/imagenet-x_classification/bias_matching_captions/concatenate_b2t_captions.py: 2025-06-30T11:49:24Z
+evaluation/ground_truth_annotations_evaluation/imagenet-x_classification/bias_matching_captions/generate_b2t_captions.py: 2025-06-30T11:49:24Z
+evaluation/ground_truth_annotations_evaluation/celeba_face_attribute_classification/offline_bias_matching.py: 2025-06-30T11:49:24Z
+evaluation/ground_truth_annotations_evaluation/imagenet-x_classification/bias_matching_captions/generate_gt_captions.py: 2025-06-30T11:49:24Z
+evaluation/ground_truth_annotations_evaluation/imagenet-x_classification/evaluate_bias_detection.py: 2025-06-30T11:49:24Z
+evaluation/ground_truth_annotations_evaluation/imagenet-x_classification/export_b2t_biases.py: 2025-06-30T11:49:24Z
+evaluation/ground_truth_annotations_evaluation/imagenet-x_classification/offline_bias_matching.py: 2025-06-30T11:49:24Z
+evaluation/vqa_evaluation/celeba_face_attribute_classification/build_vqa_questions/generate_b2t_binary_questions.py: 2025-06-30T11:49:24Z
+evaluation/vqa_evaluation/celeba_face_attribute_classification/build_vqa_questions/generate_c2b_mcq_questions.py: 2025-06-30T11:49:24Z
+evaluation/ground_truth_annotations_evaluation/imagenet-x_classification/measure_gt_biases.py: 2025-06-30T11:49:24Z
+evaluation/vqa_evaluation/celeba_face_attribute_classification/compute_biases_from_clean_vqa_results/compute_b2t_vqa_biases.py: 2025-06-30T11:49:24Z
+evaluation/vqa_evaluation/celeba_face_attribute_classification/compute_biases_from_clean_vqa_results/compute_c2b_vqa_biases.py: 2025-06-30T11:49:24Z
+evaluation/vqa_evaluation/celeba_face_attribute_classification/concat_and_clean_vqa_results/concat_and_clean_b2t_vqa.py: 2025-06-30T11:49:24Z
+evaluation/vqa_evaluation/celeba_face_attribute_classification/concat_and_clean_vqa_results/concat_and_clean_c2b_vqa.py: 2025-06-30T11:49:24Z
+evaluation/vqa_evaluation/celeba_face_attribute_classification/final_vqa_agreement/b2t_vqa_agreement.py: 2025-06-30T11:49:24Z
+evaluation/vqa_evaluation/celeba_face_attribute_classification/final_vqa_agreement/c2b_vqa_agreement.py: 2025-06-30T11:49:24Z
+evaluation/vqa_evaluation/celeba_face_attribute_classification/run_vqa/run_vqa_b2t_keyword_questions.py: 2025-06-30T11:49:24Z
+evaluation/vqa_evaluation/celeba_face_attribute_classification/run_vqa/run_vqa_c2b_bias_questions.py: 2025-06-30T11:49:24Z
+evaluation/vqa_evaluation/imagenet-x_classification/build_vqa_questions/generate_b2t_binary_questions.py: 2025-06-30T11:49:24Z
+evaluation/vqa_evaluation/imagenet-x_classification/build_vqa_questions/generate_c2b_mcq_questions.py: 2025-06-30T11:49:24Z
+evaluation/vqa_evaluation/imagenet-x_classification/compute_biases_from_clean_vqa_results/compute_c2b_vqa_biases.py: 2025-06-30T11:49:24Z
+evaluation/vqa_evaluation/imagenet-x_classification/concat_and_clean_vqa_results/concat_and_clean_c2b_vqa.py: 2025-06-30T11:49:24Z
+evaluation/vqa_evaluation/imagenet-x_classification/compute_biases_from_clean_vqa_results/compute_b2t_vqa_biases.py: 2025-06-30T11:49:24Z
+evaluation/vqa_evaluation/imagenet-x_classification/final_vqa_agreement/b2t_vqa_agreement.py: 2025-06-30T11:49:24Z
+evaluation/vqa_evaluation/imagenet-x_classification/concat_and_clean_vqa_results/concat_and_clean_b2t_vqa.py: 2025-06-30T11:49:24Z
+evaluation/vqa_evaluation/imagenet-x_classification/final_vqa_agreement/c2b_vqa_agreement.py: 2025-06-30T11:49:24Z
+evaluation/vqa_evaluation/imagenet-x_classification/run_vqa/run_vqa_c2b_bias_questions.py: 2025-06-30T11:49:24Z
+evaluation/vqa_evaluation/imagenet-x_classification/run_vqa/run_vqa_b2t_keyword_questions.py: 2025-06-30T11:49:24Z
+C2B-pipeline/LLM_bias_caption_generation/caption_generation.py: 2025-06-30T11:49:24Z

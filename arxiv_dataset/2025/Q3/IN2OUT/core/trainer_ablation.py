@@ -1,0 +1,407 @@
+import os
+import glob
+import logging
+import importlib
+from tqdm import tqdm
+import numpy as np
+import torch
+import torch.nn as nn
+from torch.utils.data import DataLoader
+from torch.utils.data.distributed import DistributedSampler
+from torch.nn.parallel import DistributedDataParallel as DDP
+import wandb
+from core.lr_scheduler import MultiStepRestartLR, CosineAnnealingRestartLR
+from core.loss import AdversarialLoss
+from torchvision.utils import save_image
+from core.dataset import TrainDataset
+from model.modules.flow_comp import FlowCompletionLoss
+
+class Trainer:
+    def __init__(self, config):
+        self.config = config
+        self.log = config["wandb_log"]
+        self.epoch = 0
+        self.iteration = 0
+        self.num_local_frames = config['train_data_loader']['num_local_frames']
+        self.num_ref_frames = config['train_data_loader']['num_ref_frames']
+        self.adv_range = self.config['losses']['adversarial_range']
+        self.adv_full = self.config['losses']['adversarial_full'] == 1
+        self.spynet_lr = config['trainer'].get('spynet_lr', 1.0)
+
+        # setup data set and data loader
+        self.train_dataset = TrainDataset(config['train_data_loader'])
+
+        self.train_sampler = None
+        self.train_args = config['trainer']
+        if config['distributed']:
+            self.train_sampler = DistributedSampler(
+                self.train_dataset,
+                num_replicas=config['world_size'],
+                rank=config['global_rank'])
+
+        self.train_loader = DataLoader(
+            self.train_dataset,
+            batch_size=self.train_args['batch_size'] // config['world_size'],
+            shuffle=(self.train_sampler is None),
+            num_workers=self.train_args['num_workers'],
+            sampler=self.train_sampler)
+
+        # set loss functions
+        self.adversarial_loss = AdversarialLoss(
+            type=self.config['losses']['GAN_LOSS'])
+        self.adversarial_loss = self.adversarial_loss.to(self.config['device'])
+        self.l1_loss = nn.L1Loss()
+        # self.l2_loss = nn.MSELoss(reduction='none')
+        self.flow_comp_loss = FlowCompletionLoss().to(self.config['device'])
+
+        # setup models including generator and discriminator
+        net = importlib.import_module('model.' + config['model']['net'])
+        self.netG = net.InpaintGenerator()
+        self.netG.load_state_dict(torch.load('release_model/E2FGVI-HQ-CVPR22.pth', map_location='cpu'))
+        self.netG = self.netG.to(self.config['device'])
+        if not self.config['model']['no_dis']:
+            self.netD = net.Discriminator(
+                in_channels=3,
+                use_sigmoid=config['losses']['GAN_LOSS'] != 'hinge')
+            self.netD = self.netD.to(self.config['device'])
+
+        # setup optimizers and schedulers
+        self.setup_optimizers()
+        self.setup_schedulers()
+        # self.load()
+
+        if config['distributed']:
+            self.netG = DDP(self.netG,
+                            device_ids=[self.config['local_rank']],
+                            output_device=self.config['local_rank'],
+                            broadcast_buffers=True,
+                            find_unused_parameters=True)
+            if not self.config['model']['no_dis']:
+                self.netD = DDP(self.netD,
+                                device_ids=[self.config['local_rank']],
+                                output_device=self.config['local_rank'],
+                                broadcast_buffers=True,
+                                find_unused_parameters=False)
+
+    def setup_optimizers(self):
+        """Set up optimizers."""
+        backbone_params = []
+        spynet_params = []
+        for name, param in self.netG.named_parameters():
+            if 'update_spynet' in name:
+                spynet_params.append(param)
+            else:
+                backbone_params.append(param)
+
+        optim_params = [
+            {
+                'params': backbone_params,
+                'lr': self.config['trainer']['lr']
+            },
+            {  # finetuning learning rate for spynet
+                'params': spynet_params,
+                'lr': self.config['trainer']['lr'] * self.spynet_lr
+            },
+        ]
+
+        self.optimG = torch.optim.Adam(optim_params,
+                                       betas=(self.config['trainer']['beta1'],
+                                              self.config['trainer']['beta2']))
+
+        if not self.config['model']['no_dis']:
+            self.optimD = torch.optim.Adam(
+                self.netD.parameters(),
+                lr=self.config['trainer']['dis_lr'],
+                betas=(self.config['trainer']['dis_beta1'],
+                       self.config['trainer']['dis_beta2']))
+
+    def setup_schedulers(self):
+        """Set up schedulers."""
+        scheduler_opt = self.config['trainer']['scheduler']
+        scheduler_type = scheduler_opt.pop('type')
+
+        if scheduler_type in ['MultiStepLR', 'MultiStepRestartLR']:
+            self.scheG = MultiStepRestartLR(
+                self.optimG,
+                milestones=scheduler_opt['milestones'],
+                gamma=scheduler_opt['gamma'])
+            if not self.config['model']['no_dis']:
+                self.scheD = MultiStepRestartLR(
+                    self.optimD,
+                    milestones=scheduler_opt['milestones'],
+                    gamma=scheduler_opt['gamma'])
+        elif scheduler_type == 'CosineAnnealingRestartLR':
+            self.scheG = CosineAnnealingRestartLR(
+                self.optimG,
+                periods=scheduler_opt['periods'],
+                restart_weights=scheduler_opt['restart_weights'])
+            if not self.config['model']['no_dis']:
+                self.scheD = CosineAnnealingRestartLR(
+                    self.optimD,
+                    periods=scheduler_opt['periods'],
+                    restart_weights=scheduler_opt['restart_weights'])
+        else:
+            raise NotImplementedError(
+                f'Scheduler {scheduler_type} is not implemented yet.')
+
+    def update_learning_rate(self):
+        """Update learning rate."""
+        self.scheG.step()
+        if not self.config['model']['no_dis']:
+            self.scheD.step()
+        # self.noiseSchedule.step()q
+
+    def get_lr(self):
+        """Get current learning rate."""
+        return self.optimG.param_groups[0]['lr']
+
+    def load(self):
+        """Load netG (and netD)."""
+        # get the latest checkpoint
+        model_path = self.config['save_dir']
+        if os.path.isfile(os.path.join(model_path, 'latest.ckpt')):
+            latest_epoch = open(os.path.join(model_path, 'latest.ckpt'),
+                                'r').read().splitlines()[-1]
+        else:
+            ckpts = [
+                os.path.basename(i).split('.pth')[0]
+                for i in glob.glob(os.path.join(model_path, '*.pth'))
+            ]
+            ckpts.sort()
+            latest_epoch = ckpts[-1] if len(ckpts) > 0 else None
+
+        if latest_epoch is not None:
+            gen_path = os.path.join(model_path,
+                                    f'gen_{int(latest_epoch):06d}.pth')
+            dis_path = os.path.join(model_path,
+                                    f'dis_{int(latest_epoch):06d}.pth')
+            opt_path = os.path.join(model_path,
+                                    f'opt_{int(latest_epoch):06d}.pth')
+
+            if self.config['global_rank'] == 0:
+                print(f'Loading model from {gen_path}...')
+            dataG = torch.load(gen_path, map_location=self.config['device'])
+            self.netG.load_state_dict(dataG)
+            if not self.config['model']['no_dis']:
+                dataD = torch.load(dis_path,
+                                   map_location=self.config['device'])
+                self.netD.load_state_dict(dataD)
+
+            data_opt = torch.load(opt_path, map_location=self.config['device'])
+            self.optimG.load_state_dict(data_opt['optimG'])
+            self.scheG.load_state_dict(data_opt['scheG'])
+            if not self.config['model']['no_dis']:
+                self.optimD.load_state_dict(data_opt['optimD'])
+                self.scheD.load_state_dict(data_opt['scheD'])
+            self.epoch = data_opt['epoch']
+            self.iteration = data_opt['iteration']
+
+        else:
+            if self.config['global_rank'] == 0:
+                print('Warnning: There is no trained model found.'
+                      'An initialized model will be used.')
+
+    def save(self, it):
+        """Save parameters every eval_epoch"""
+        if self.config['global_rank'] == 0:
+            # configure path
+            gen_path = os.path.join(self.config['save_dir'],
+                                    f'gen_{it:06d}.pth')
+            dis_path = os.path.join(self.config['save_dir'],
+                                    f'dis_{it:06d}.pth')
+            opt_path = os.path.join(self.config['save_dir'],
+                                    f'opt_{it:06d}.pth')
+            print(f'\nsaving model to {gen_path} ...')
+
+            # remove .module for saving
+            if isinstance(self.netG, torch.nn.DataParallel) \
+               or isinstance(self.netG, DDP):
+                netG = self.netG.module
+                if not self.config['model']['no_dis']:
+                    netD = self.netD.module
+            else:
+                netG = self.netG
+                if not self.config['model']['no_dis']:
+                    netD = self.netD
+
+            # save checkpoints
+            torch.save(netG.state_dict(), gen_path)
+            if not self.config['model']['no_dis']:
+                torch.save(netD.state_dict(), dis_path)
+                torch.save(
+                    {
+                        'epoch': self.epoch,
+                        'iteration': self.iteration,
+                        'optimG': self.optimG.state_dict(),
+                        'optimD': self.optimD.state_dict(),
+                        'scheG': self.scheG.state_dict(),
+                        'scheD': self.scheD.state_dict()
+                    }, opt_path)
+            else:
+                torch.save(
+                    {
+                        'epoch': self.epoch,
+                        'iteration': self.iteration,
+                        'optimG': self.optimG.state_dict(),
+                        'scheG': self.scheG.state_dict()
+                    }, opt_path)
+
+            latest_path = os.path.join(self.config['save_dir'], 'latest.ckpt')
+            os.system(f"echo {it:06d} > {latest_path}")
+
+    def train(self):
+        """training entry"""
+        if self.config['global_rank'] == 0 and self.log:
+            wandb.init(project="SK-Outpainting", entity="haewonc")
+        pbar = range(int(self.train_args['iterations']))
+        if self.config['global_rank'] == 0:
+            pbar = tqdm(pbar,
+                        initial=self.iteration,
+                        dynamic_ncols=True,
+                        smoothing=0.01)
+
+        os.makedirs('logs', exist_ok=True)
+
+        logging.basicConfig(
+            level=logging.INFO,
+            format="%(asctime)s %(filename)s[line:%(lineno)d]"
+            "%(levelname)s %(message)s",
+            datefmt="%a, %d %b %Y %H:%M:%S",
+            filename=f"logs/{self.config['save_dir'].split('/')[-1]}.log",
+            filemode='w')
+
+        while True:
+            self.epoch += 1
+            if self.config['distributed']:
+                self.train_sampler.set_epoch(self.epoch)
+
+            self._train_epoch(pbar)
+            if self.iteration > self.train_args['iterations']:
+                break
+        print('\nEnd training....')
+
+    def _train_epoch(self, pbar):
+        """Process input and calculate loss every training epoch"""
+        device = self.config['device']
+
+        for frames, masks, _, divider in self.train_loader:
+            self.iteration += 1
+            frames, masks = frames.to(device), masks.to(device)
+            l_t = self.num_local_frames
+            b, t, c, h, w = frames.size()
+
+            masked_frames = (frames * (1 - masks).float())
+            gt_local_frames = (frames[:, :l_t, ...] + 1) / 2
+
+            pred_imgs, pred_flows = self.netG(masked_frames, l_t)
+            pred_imgs = pred_imgs.view(b, -1, c, h, w)
+            comp_imgs = frames * (1. - masks) + masks * pred_imgs
+
+            # compute flow completion loss
+            flow_loss = self.flow_comp_loss(pred_flows, gt_local_frames)
+
+            gen_loss = 0
+            dis_loss = 0
+            log = {}
+
+            if not self.config['model']['no_dis']:
+                # discriminator adversarial loss
+                fake_frames = comp_imgs.detach()
+
+                if self.adv_full:
+                    real_clip = self.netD(frames)
+                    fake_clip = self.netD(fake_frames)
+                    dis_real_loss = self.adversarial_loss(real_clip, True, True)
+                    dis_fake_loss = self.adversarial_loss(fake_clip, False, True)
+                    dis_loss = (dis_real_loss + dis_fake_loss) / 2
+                else:
+                    frames_l = frames[...,:int(w*self.adv_range)]
+                    frames_r = frames[...,-int(w*self.adv_range):]
+                    real_clip_l = self.netD(frames_l)
+                    real_clip_r = self.netD(frames_r)
+                    dis_real_loss = (self.adversarial_loss(real_clip_l, True, True) + self.adversarial_loss(real_clip_r, True, True)) / 2
+
+                    fake_frames_l = fake_frames[...,:int(w*self.adv_range)]
+                    fake_frames_r = fake_frames[...,-int(w*self.adv_range):]
+                    fake_clip_l = self.netD(fake_frames_l)
+                    fake_clip_r = self.netD(fake_frames_r)
+                    dis_fake_loss = (self.adversarial_loss(fake_clip_l, False, True) + self.adversarial_loss(fake_clip_r, False, True)) / 2
+                    dis_loss = (dis_fake_loss + dis_real_loss)/2
+        
+                self.optimD.zero_grad()
+                dis_loss.backward()
+                self.optimD.step()
+
+                # generator adversarial loss
+                
+                gen_clip_l = self.netD(comp_imgs[...,:int(w*self.adv_range)])
+                gan_loss_l = self.adversarial_loss(gen_clip_l, True, False)
+                gen_clip_r = self.netD(comp_imgs[...,-int(w*self.adv_range):])
+                gan_loss_r = self.adversarial_loss(gen_clip_r, True, False)
+                gan_loss = (gan_loss_l + gan_loss_r) / 2
+                gan_loss = gan_loss \
+                    * self.config['losses']['adversarial_weight']
+                gen_loss += gan_loss
+                log['loss/gan_loss'] = gan_loss.item()
+            
+                log['loss/dis_loss'] = dis_loss.item()
+                
+
+            flow_loss = flow_loss * self.config['losses']['flow_weight']
+            gen_loss += flow_loss
+            log['loss/flow_loss'] = flow_loss.item()
+
+            # generator l1 loss
+            hole_loss = self.l1_loss(pred_imgs * masks, frames * masks)
+            hole_loss = hole_loss / torch.mean(masks) \
+                * self.config['losses']['hole_weight']
+            gen_loss += hole_loss
+            log['loss/hole_loss'] = hole_loss.item()
+
+            valid_loss = self.l1_loss(pred_imgs * (1 - masks),
+                                      frames * (1 - masks))
+            valid_loss = valid_loss / torch.mean(1-masks) \
+                * self.config['losses']['valid_weight']
+            gen_loss += valid_loss
+            log['loss/valid_loss'] = valid_loss.item()
+
+            self.optimG.zero_grad()
+            gen_loss.backward()
+            self.optimG.step()
+
+            self.update_learning_rate()
+
+            # console logs
+            if self.config['global_rank'] == 0:
+                pbar.update(1)
+                if self.log:
+                    wandb.log(log)
+                if not self.config['model']['no_dis']:
+                    pbar.set_description((f"flow: {flow_loss.item():.3f}; "
+                                          f"d: {dis_loss.item():.3f}; "
+                                          f"hole: {hole_loss.item():.3f}; "
+                                          f"valid: {valid_loss.item():.3f}"))
+                else:
+                    pbar.set_description((f"flow: {flow_loss.item():.3f}; "
+                                          f"hole: {hole_loss.item():.3f}; "
+                                          f"valid: {valid_loss.item():.3f}"))
+
+                if self.iteration % self.train_args['log_freq'] == 0:
+                    if not self.config['model']['no_dis']:
+                        logging.info(f"[Iter {self.iteration}] "
+                                     f"flow: {flow_loss.item():.4f}; "
+                                     f"d: {dis_loss.item():.4f}; "
+                                     f"hole: {hole_loss.item():.4f}; "
+                                     f"valid: {valid_loss.item():.4f}")
+                    else:
+                        logging.info(f"[Iter {self.iteration}] "
+                                     f"flow: {flow_loss.item():.4f}; "
+                                     f"hole: {hole_loss.item():.4f}; "
+                                     f"valid: {valid_loss.item():.4f}")
+
+            # saving models
+            if self.iteration % self.train_args['save_freq'] == 0:
+                self.save(int(self.iteration))
+
+            if self.iteration > self.train_args['iterations']:
+                break

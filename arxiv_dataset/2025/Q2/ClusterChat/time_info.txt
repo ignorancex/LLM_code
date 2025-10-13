@@ -1,0 +1,57 @@
+backend/0. pubmed_data_collection/pipeline.py: 2025-06-02T16:15:23Z
+backend/0. pubmed_data_collection/pipeline_components/extractor.py: 2025-06-02T16:15:23Z
+app/scripts/creating_arrows.py: 2025-06-13T13:29:59Z
+app/scripts/read_arrows.py: 2025-06-13T13:30:19Z
+app/scripts/utils.py: 2025-07-08T01:37:41Z
+backend/0. pubmed_data_collection/pipeline_components/loader.py: 2025-06-02T16:15:23Z
+backend/0. pubmed_data_collection/__init__.py: 2025-05-13T11:02:06Z
+app/scripts/test.py: 2025-06-13T13:30:19Z
+backend/0. pubmed_data_collection/pipeline_helpers/loader_helper/__init__.py: 2025-05-13T11:02:06Z
+backend/0. pubmed_data_collection/pipeline_components/transformer.py: 2025-06-02T16:15:23Z
+backend/0. pubmed_data_collection/pipeline_helpers/extractor_helpers/extractor_utils.py: 2025-06-02T16:15:23Z
+backend/0. pubmed_data_collection/pipeline_helpers/__init__.py: 2025-05-13T11:02:06Z
+backend/0. pubmed_data_collection/pipeline_helpers/loader_helper/database_insert.py: 2025-06-02T16:15:23Z
+backend/0. pubmed_data_collection/pipeline_helpers/loader_helper/database_main.py: 2025-06-02T16:15:23Z
+backend/0. pubmed_data_collection/pipeline_helpers/loader_helper/database_create.py: 2025-06-02T16:15:23Z
+backend/0. pubmed_data_collection/pipeline_helpers/loader_helper/database_mapping.py: 2025-06-02T16:15:23Z
+backend/1. embedding_data_storage/main.py: 2025-06-06T11:13:16Z
+backend/0. pubmed_data_collection/utils.py: 2025-06-02T16:15:23Z
+backend/1. embedding_data_storage/tasks/database/__init__.py: 2024-09-16T17:48:20Z
+backend/1. embedding_data_storage/tasks/database/database_create.py: 2025-06-06T11:13:16Z
+backend/1. embedding_data_storage/tasks/database/database_insert.py: 2025-06-06T11:13:16Z
+backend/1. embedding_data_storage/tasks/database/database_connection.py: 2025-06-06T11:13:16Z
+backend/1. embedding_data_storage/tasks/__init__.py: 2024-09-16T17:48:20Z
+backend/1. embedding_data_storage/tasks/database/database_mapping.py: 2025-06-06T11:13:16Z
+backend/2. topic_modelling/tasks/database/__init__.py: 2024-10-11T17:13:16Z
+backend/2. topic_modelling/main.py: 2025-06-06T11:13:16Z
+backend/2. topic_modelling/supporting_scripts/count_bertopic_topics.py: 2025-06-06T11:13:16Z
+backend/1. embedding_data_storage/utils.py: 2025-06-06T11:13:16Z
+backend/2. topic_modelling/tasks/topic_modelling.py: 2025-06-06T11:13:16Z
+backend/2. topic_modelling/tasks/__init__.py: 2024-10-11T17:13:16Z
+backend/2. topic_modelling/tasks/database/database_read.py: 2025-06-06T11:13:16Z
+backend/2. topic_modelling/tasks/database/database_connection.py: 2025-06-06T11:13:16Z
+backend/3. cluster_information/main.py: 2025-06-06T11:13:16Z
+backend/2. topic_modelling/utils.py: 2025-06-06T11:13:16Z
+backend/3. cluster_information/supporting_scripts/main_dimensionality_reduction_model.py: 2025-06-06T11:13:16Z
+backend/3. cluster_information/supporting_scripts/utils.py: 2025-07-07T13:11:21Z
+backend/3. cluster_information/tasks/database/__init__.py: 2025-05-14T10:40:56Z
+backend/3. cluster_information/tasks/__init__.py: 2025-05-26T10:32:11Z
+backend/3. cluster_information/tasks/create_hierarchy.py: 2025-06-06T11:13:16Z
+backend/3. cluster_information/supporting_scripts/main_cluster_label.py: 2025-07-07T13:11:21Z
+backend/3. cluster_information/tasks/database/index_cluster.py: 2025-06-06T11:13:16Z
+backend/3. cluster_information/tasks/database/database_connection.py: 2025-06-06T11:13:16Z
+backend/3. cluster_information/tasks/database/index_documents.py: 2025-06-06T11:13:16Z
+backend/3. cluster_information/tasks/database/database_read.py: 2025-06-06T11:13:16Z
+backend/rag_pipeline/main.py: 2025-07-13T22:06:08Z
+backend/3. cluster_information/tasks/process_bertopic.py: 2025-06-06T11:13:16Z
+backend/3. cluster_information/tasks/update_clusters.py: 2025-06-06T11:13:16Z
+backend/3. cluster_information/utils.py: 2025-06-06T11:13:16Z
+backend/rag_pipeline/tasks/__init__.py: 2025-07-13T22:06:08Z
+backend/rag_pipeline/pipeline.py: 2025-07-14T23:50:32Z
+backend/rag_pipeline/tasks/database/database_connection.py: 2025-07-13T22:06:08Z
+backend/rag_pipeline/tasks/database/__init__.py: 2025-07-13T22:06:08Z
+backend/rag_pipeline/tasks/rag_components/__init__.py: 2025-07-13T22:06:08Z
+backend/rag_pipeline/tasks/rag_components/rag_loader.py: 2025-07-13T22:06:08Z
+backend/rag_pipeline/tasks/rag_components/rag_prompt.py: 2025-07-13T22:06:08Z
+backend/rag_pipeline/tasks/rag_components/rag_chatmodel.py: 2025-07-28T14:39:33Z
+backend/rag_pipeline/utils.py: 2025-07-13T22:06:08Z

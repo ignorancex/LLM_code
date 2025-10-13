@@ -1,0 +1,12 @@
+simple_gaussian.py: 2025-04-26T09:07:34Z
+class_day.py: 2025-04-26T09:07:34Z
+composite_and_fit_model.py: 2025-05-23T14:09:38Z
+optimize_pattern.py: 2025-04-28T07:02:57Z
+comparative_baseline.py: 2025-05-23T14:09:38Z
+cons.py: 2025-05-23T14:09:38Z
+SGD_patterns_decomposition.py: 2025-05-23T14:09:38Z
+plot_synthetic_weekly.py: 2025-05-23T14:09:38Z
+skewed_gaussian.py: 2025-05-23T14:09:38Z
+tools.py: 2025-05-23T14:09:38Z
+symmetric_gaussian_baseline.py: 2025-05-23T14:09:38Z
+simple_plot_with_gaussian_pattern.py: 2025-04-26T09:07:34Z

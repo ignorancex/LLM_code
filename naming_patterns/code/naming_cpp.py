@@ -5,13 +5,14 @@ import warnings
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm
-from tree_sitter import Language, Parser
+from tree_sitter import Language, Parser, load_language
 warnings.filterwarnings('ignore', category=SyntaxWarning)
-TS_LIB_PATH = 'new/my-languages.so'
+TS_LIB_PATH = 'build/my-languages.so'
 if not os.path.exists(TS_LIB_PATH):
     raise RuntimeError(f'找不到 {TS_LIB_PATH}\n请先运行 build_lang_so.py (脚本见本文末尾) 编译 tree-sitter-c & tree-sitter-cpp')
-C_LANGUAGE = Language(TS_LIB_PATH, 'c')
-CPP_LANGUAGE = Language(TS_LIB_PATH, 'cpp')
+
+C_LANGUAGE = load_language(TS_LIB_PATH, 'c')
+CPP_LANGUAGE = load_language(TS_LIB_PATH, 'cpp')
 PARSER_C = Parser()
 PARSER_C.set_language(C_LANGUAGE)
 PARSER_CPP = Parser()
@@ -87,9 +88,9 @@ def process_project(project_name, quarter_path, quarter_key, quarter_repo_catego
     func_ratios = {p: func_counts[p] / func_total if func_total else 0.0 for p in naming_patterns}
     var_ratios = {p: var_counts[p] / var_total if var_total else 0.0 for p in naming_patterns}
     return (project_category, func_ratios, var_ratios)
-BASE_DIR = 'LLM_code/arxiv_dataset_cpp'
-OUTPUT_DIR = 'LLM_code/arxiv_result/naming_patterns_c_cpp'
-CATEGORIES_JS = 'LLM_code/code/github_links/cpp_dataset_links_new.json'
+BASE_DIR = 'arxiv_dataset_cpp'
+OUTPUT_DIR = 'naming_patterns/github_result/naming_patterns_cpp'
+CATEGORIES_JS = 'dataset_collection/github/links/cpp_dataset_links.json'
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 SKIPPED_LOG = os.path.join(OUTPUT_DIR, 'skipped_files.txt')
 if os.path.exists(SKIPPED_LOG):
@@ -103,9 +104,9 @@ for (quarter, items) in all_categories.items():
         quarter_repo_category[quarter][repo_name] = classify_category(item['categories'])
 quarter_func_ratios = defaultdict(lambda : defaultdict(lambda : defaultdict(list)))
 quarter_var_ratios = defaultdict(lambda : defaultdict(lambda : defaultdict(list)))
-for year in range(2020, 2026):
-    max_q = 1 if year == 2025 else 4
-    for q in range(1, max_q + 1):
+for year in range(2025, 2026):
+    max_q = 3 if year == 2025 else 4
+    for q in range(2, max_q + 1):
         quarter_key = f'{year}Q{q}'
         quarter_path = os.path.join(BASE_DIR, str(year), f'Q{q}')
         if not os.path.isdir(quarter_path):
@@ -136,8 +137,8 @@ def aggregate(qcv):
 final_func = aggregate(quarter_func_ratios)
 final_var = aggregate(quarter_var_ratios)
 os.makedirs(OUTPUT_DIR, exist_ok=True)
-FUNC_JSON = os.path.join(OUTPUT_DIR, 'naming_patterns_function.json')
-VAR_JSON = os.path.join(OUTPUT_DIR, 'naming_patterns_variable.json')
+FUNC_JSON = os.path.join(OUTPUT_DIR, 'naming_patterns_function_1.json')
+VAR_JSON = os.path.join(OUTPUT_DIR, 'naming_patterns_variable_1.json')
 with open(FUNC_JSON, 'w', encoding='utf-8') as f:
     json.dump(final_func, f, ensure_ascii=False, indent=2)
 with open(VAR_JSON, 'w', encoding='utf-8') as f:

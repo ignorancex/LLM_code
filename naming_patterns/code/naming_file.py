@@ -34,9 +34,9 @@ def process_project(project_name, quarter_path, quarter_key, quarter_repo_catego
                 pattern = get_naming_pattern(filename_without_ext)
                 local_filename_counts[project_category, pattern] += 1
     return local_filename_counts
-base_dir = 'LLM_code/arxiv_dataset'
-output_dir = 'LLM_code/arxiv_result/naming_patterns_python'
-categories_file = 'LLM_code/code/github_links/python_dataset_links_1.json'
+base_dir = 'arxiv_dataset'
+output_dir = 'naming_patterns/github_result/naming_patterns_python'
+categories_file = 'dataset_collection/github/links/python_dataset_links.json'
 os.makedirs(output_dir, exist_ok=True)
 with open(categories_file, 'r', encoding='utf-8') as f:
     all_categories = json.load(f)
@@ -48,9 +48,9 @@ for (quarter, items) in all_categories.items():
         repo_name = link.rstrip('/').split('/')[-1]
         quarter_repo_category[quarter][repo_name] = classify_category(categories)
 quarter_filename_counts = defaultdict(lambda : defaultdict(lambda : defaultdict(int)))
-for year in range(2020, 2026):
-    max_quarter = 1 if year == 2025 else 4
-    for q in range(1, max_quarter + 1):
+for year in range(2025, 2026):
+    max_quarter = 3 if year == 2025 else 4
+    for q in range(2, max_quarter + 1):
         quarter_name = f'Q{q}'
         year_str = str(year)
         quarter_key = f'{year_str}Q{q}'
@@ -86,6 +86,6 @@ def compute_ratios(quarter_category_counts):
                 result[quarter][cat][pattern] = round(proportion, 6)
     return result
 final_filename_output = compute_ratios(quarter_filename_counts)
-filename_output_path = os.path.join(output_dir, 'naming_patterns_filename.json')
+filename_output_path = os.path.join(output_dir, 'naming_patterns_filename_1.json')
 with open(filename_output_path, 'w', encoding='utf-8') as f:
     json.dump(final_filename_output, f, ensure_ascii=False, indent=2)

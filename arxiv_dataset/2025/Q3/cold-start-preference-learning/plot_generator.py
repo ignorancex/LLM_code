@@ -1,0 +1,28 @@
+import matplotlib.pyplot as plt
+import seaborn as sns
+from Config.util import *
+
+
+while True:
+    path = input('file name: ')
+    if path == 'end':
+        break
+    UB, UP, RB , line, _ = load_accs(F"Plots/{path}_acc.pkl")
+    average_f1_scores_UB = np.mean(UB, axis=0)
+    average_f1_scores_UP = np.mean(UP, axis=0)
+    average_f1_scores_RB = np.mean(RB, axis=0)
+
+    step, num_samples = 50, 800
+
+    plt.figure(figsize=(12, 6))
+    plt.plot(range(step, num_samples+1, step), average_f1_scores_UB, label='Warm-Start Policy', color='blue')
+    plt.plot(range(step, num_samples+1, step), average_f1_scores_UP, label='Cold-Start Policy', color='orange')
+    plt.plot(range(step, num_samples+1, step), average_f1_scores_RB, label='Random Selection Policy', color='green')
+    plt.axhline(y = line, color = 'r', linestyle = 'dashed', label='Practical Performance Limit')
+    plt.xlabel('Number of Training Samples')
+    plt.ylabel('Test Data Performance')
+    plt.title(F'{path.capitalize()} Dataset')
+    plt.legend()
+    plt.grid(True)
+    plt.savefig(F'Images/{path}.png', bbox_inches='tight')
+    # plt.show()

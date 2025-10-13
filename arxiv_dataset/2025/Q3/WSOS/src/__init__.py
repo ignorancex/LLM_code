@@ -1,0 +1,2 @@
+from src.data.fgbg_datamodule import ForegroundTextureDataModule
+from src.data.birds_datamodule import BirdsDataModule

@@ -1,0 +1,1 @@
+OPENAI_KEY = "xxx" # Replace with your OpenAI API key

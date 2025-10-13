@@ -1,0 +1,16 @@
+dire_jax/__init__.py: 2025-09-02T17:50:29Z
+setup.py: 2025-09-21T14:58:42Z
+dire_jax/dire.py: 2025-09-19T00:31:08Z
+dire_jax/hpmetrics.py: 2025-09-02T17:50:29Z
+dire_jax/dire_utils.py: 2025-03-16T00:25:50Z
+dire_jax/hpindex.py: 2025-09-18T22:49:16Z
+docs/source/conf.py: 2025-05-29T00:18:27Z
+tests/__init__.py: 2025-03-16T19:06:00Z
+tests/benchmark_memory.py: 2025-09-02T17:50:29Z
+tests/check_memory_methods.py: 2025-09-02T17:50:29Z
+tests/test_mpa_comparison.py: 2025-09-02T17:50:29Z
+tests/simple_test.py: 2025-09-02T17:50:29Z
+tests/unit/__init__.py: 2025-03-16T00:07:35Z
+tests/run_tests.py: 2025-09-02T17:50:29Z
+tests/unit/test_utils.py: 2025-09-02T17:50:29Z
+tests/unit/test_dire.py: 2025-09-02T17:50:29Z

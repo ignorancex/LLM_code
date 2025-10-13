@@ -1,0 +1,9 @@
+src/main.cpp: 2025-05-25T16:57:18Z
+src/amplitudelib.cpp: 2025-05-25T16:57:18Z
+src/function.cpp: 2025-05-25T16:57:18Z
+src/fourier.c: 2025-05-25T16:57:18Z
+src/interpolation.cpp: 2025-05-25T16:57:18Z
+src/integral_D0.cpp: 2025-05-25T16:57:18Z
+src/integral_parton.cpp: 2025-05-25T16:57:18Z
+src/datafile.cpp: 2025-05-25T16:57:18Z
+src/tools.cpp: 2025-05-25T16:57:18Z

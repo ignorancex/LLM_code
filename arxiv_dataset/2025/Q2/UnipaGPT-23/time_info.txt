@@ -1,0 +1,6 @@
+code/ingest_data_openAI_embeddings.py: 2024-10-16T11:42:44Z
+code/evaluate.py: 2024-10-16T15:05:19Z
+code/retrieve.py: 2024-10-16T14:45:22Z
+code/query_models_openAI.py: 2024-10-16T14:52:23Z
+code/query_models_open.py: 2024-10-16T14:19:07Z
+code/ingest_data_open.py: 2024-10-16T11:45:14Z

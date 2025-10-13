@@ -1,0 +1,9 @@
+mlp.py: 2025-07-11T19:36:58Z
+train.py: 2025-07-11T19:36:58Z
+save_logs.py: 2025-07-11T19:36:58Z
+prepare_cifar5m.py: 2025-07-11T19:36:58Z
+main.py: 2025-07-11T19:36:58Z
+transformer.py: 2025-07-11T19:36:58Z
+data.py: 2025-07-11T19:36:58Z
+prepare_chess.py: 2025-07-11T19:36:58Z
+utils.py: 2025-07-11T19:36:58Z

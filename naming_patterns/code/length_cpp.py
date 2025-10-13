@@ -77,12 +77,12 @@ def aggregate_results(length_dict):
     return result
 
 # === 主程序配置 ===
-base_dir = f"LLM_code/arxiv_dataset_cpp"
-output_dir = "LLM_code/arxiv_result/naming_patterns_cpp"
+base_dir = f"arxiv_dataset_cpp"
+output_dir = "naming_patterns/github_result/naming_patterns_cpp"
 os.makedirs(output_dir, exist_ok=True)
 
 # === 加载分类文件 ===
-categories_file = "LLM_code/arxiv_result/github_links/cpp_dataset_links.json"
+categories_file = "dataset_collection/github/links/cpp_dataset_links.json"
 with open(categories_file, "r", encoding="utf-8") as f:
     all_categories = json.load(f)
 quarter_repo_category = defaultdict(dict)
@@ -97,9 +97,9 @@ for quarter, items in all_categories.items():
 quarter_avg_lengths = defaultdict(lambda: defaultdict(list))  # quarter -> cs/non_cs -> [(func_len, var_len, file_len)]
 
 # === 遍历每个季度 ===
-for year in range(2020, 2026):
-    max_q = 1 if year == 2025 else 4
-    for q in range(1, max_q + 1):
+for year in range(2025, 2026):
+    max_q = 3 if year == 2025 else 4
+    for q in range(2, max_q + 1):
         quarter = f"{year}Q{q}"
         quarter_dir = os.path.join(base_dir, str(year), f"Q{q}")
         if not os.path.isdir(quarter_dir):
@@ -122,7 +122,7 @@ for year in range(2020, 2026):
 
 # === 保存输出 ===
 avg_result = aggregate_results(quarter_avg_lengths)
-out_path = os.path.join(output_dir, f"average_lengths_cs_split.json")
+out_path = os.path.join(output_dir, f"average_lengths_cs_split_1.json")
 with open(out_path, "w", encoding="utf-8") as f:
     json.dump(avg_result, f, ensure_ascii=False, indent=2)
 

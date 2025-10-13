@@ -1,0 +1,17 @@
+evaluation/models/bge-reranker-v2-m3/bge-reranker-v2-m3.py: 2025-03-10T05:42:21Z
+evaluation/models/BM25/BM25.py: 2025-03-10T05:42:21Z
+evaluation/models/bge-en-icl/bge-en-icl.py: 2025-03-10T05:42:21Z
+evaluation/metrics/task3_format_invariant.py: 2025-03-10T05:42:21Z
+evaluation/metrics/task1_complexity_robustness.py: 2025-03-10T05:42:21Z
+evaluation/metrics/task2_relevance_monotonicity.py: 2025-03-10T05:42:21Z
+evaluation/models/bge-reranker-v2-gemma/bge-reranker-v2-gemma.py: 2025-03-10T05:42:21Z
+evaluation/metrics/task4_document_length.py: 2025-03-10T05:42:21Z
+evaluation/models/followIR/followIR.py: 2025-03-10T05:42:21Z
+evaluation/models/gte-Qwen2-7B-instruct/gte-Qwen2-7B-instruct.py: 2025-03-10T05:42:21Z
+evaluation/models/gte-Qwen2-1.5B-instruct/gte-Qwen2-1.5B-instruct.py: 2025-03-10T05:42:21Z
+evaluation/models/gte-large/gte_large.py: 2025-03-10T05:42:21Z
+evaluation/models/jina/jina.py: 2025-03-10T05:42:21Z
+evaluation/models/gritlm/GritLM.py: 2025-03-10T05:42:21Z
+evaluation/models/e5-mistral/e5_mistral.py: 2025-03-10T05:42:21Z
+evaluation/models/llm2vec/llm2vec.py: 2025-03-10T05:42:21Z
+evaluation/models/nv-embed/nv_embed.py: 2025-03-10T05:42:21Z

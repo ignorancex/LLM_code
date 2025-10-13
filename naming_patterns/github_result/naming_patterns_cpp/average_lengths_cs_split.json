@@ -250,5 +250,29 @@
       "avg_var_len": 6.1397,
       "avg_file_len": 15.0653
     }
+  },
+  "2025Q2": {
+    "cs": {
+      "avg_func_len": 8.5602,
+      "avg_var_len": 3.0413,
+      "avg_file_len": 9.5248
+    },
+    "non_cs": {
+      "avg_func_len": 10.877,
+      "avg_var_len": 4.895,
+      "avg_file_len": 12.0857
+    }
+  },
+  "2025Q3": {
+    "cs": {
+      "avg_func_len": 11.8684,
+      "avg_var_len": 4.1366,
+      "avg_file_len": 13.4612
+    },
+    "non_cs": {
+      "avg_func_len": 13.5619,
+      "avg_var_len": 5.1679,
+      "avg_file_len": 12.8896
+    }
   }
 }
