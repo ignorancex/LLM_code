@@ -39,12 +39,14 @@ def load_quarter_repo_category(json_path):
             quarter_repo_category[quarter][repo] = 'cs' if category.startswith('cs.') else 'non_cs'
     return quarter_repo_category
 
-def main(root='LLM_code/arxiv_dataset', category_json='LLM_code/code/github_links/python_dataset_links_1.json', out_csv='github_py_metrics_by_category.csv'):
-    fields = ['quarter', 'category', 'h1', 'h2', 'N1', 'N2', 'vocabulary', 'length', 'calculated_length', 'volume', 'difficulty', 'effort', 'time_sec', 'bugs', 'cyclomatic', 'sloc', 'lloc', 'comment_rate', 'mi_std', 'mi_custom']
+def main(root='arxiv_dataset', category_json='dataset_collection/github/links/python_dataset_links.json', out_csv='Metrics/result/github_py_metrics_by_category_1.csv'):
+    # fields = ['quarter', 'category', 'h1', 'h2', 'N1', 'N2', 'vocabulary', 'length', 'calculated_length', 'volume', 'difficulty', 'effort', 'time_sec', 'bugs', 'cyclomatic', 'sloc', 'lloc', 'comment_rate', 'mi_std', 'mi_custom']
+    fields = ['cyclomatic', 'sloc']
+
     rows = []
     quarter_repo_category = load_quarter_repo_category(category_json)
     for year in range(2020, 2026):
-        quarters = ['Q1', 'Q2', 'Q3', 'Q4'] if year < 2025 else ['Q1']
+        quarters = ['Q1', 'Q2', 'Q3', 'Q4'] if year != 2025 else quarters=['Q1']
         for q in quarters:
             quarter = f'{year}{q}'
             quarter_dir = os.path.join(root, str(year), q)

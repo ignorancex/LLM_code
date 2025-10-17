@@ -502,5 +502,49 @@
       "endsWithDigits": 0.012706,
       "Other": 0.190597
     }
+  },
+  "2025Q2": {
+    "cs": {
+      "single_letter": 0.0,
+      "lowercase": 0.302817,
+      "UPPERCASE": 0.0,
+      "camelCase": 0.005634,
+      "snake_case": 0.526761,
+      "PascalCase": 0.019718,
+      "endsWithDigits": 0.011268,
+      "Other": 0.133803
+    },
+    "non_cs": {
+      "single_letter": 0.0,
+      "lowercase": 0.383803,
+      "UPPERCASE": 0.007042,
+      "camelCase": 0.077465,
+      "snake_case": 0.411972,
+      "PascalCase": 0.06338,
+      "endsWithDigits": 0.021127,
+      "Other": 0.035211
+    }
+  },
+  "2025Q3": {
+    "cs": {
+      "single_letter": 0.0,
+      "lowercase": 0.228286,
+      "UPPERCASE": 0.003843,
+      "camelCase": 0.008455,
+      "snake_case": 0.492698,
+      "PascalCase": 0.072252,
+      "endsWithDigits": 0.051499,
+      "Other": 0.142967
+    },
+    "non_cs": {
+      "single_letter": 0.0,
+      "lowercase": 0.449791,
+      "UPPERCASE": 0.002092,
+      "camelCase": 0.004184,
+      "snake_case": 0.351464,
+      "PascalCase": 0.023013,
+      "endsWithDigits": 0.039749,
+      "Other": 0.129707
+    }
   }
 }

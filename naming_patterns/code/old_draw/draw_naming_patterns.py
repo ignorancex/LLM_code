@@ -17,10 +17,7 @@ def get_xticks(quarters):
     return ticks, labels
 
 def get_best_legend_loc(x_vals, y_vals):
-    """
-    自动选择图例放置位置，避免遮挡线条。
-    将图分成4象限，选择点最少的象限。
-    """
+
     quadrants = defaultdict(int)
     x_mid = len(x_vals) // 2
     y_all = [y for series in y_vals for y in series]
@@ -101,7 +98,6 @@ def plot_naming_trends(function_file, variable_file, filename_file, output_dir):
 
     print(f"\n🎨 All plots saved in subdirectories of {output_dir}")
 
-# === 主程序 ===
 if __name__ == "__main__":
     lang = "python"
     base_dir = f"naming_patterns/github_result/naming_patterns_{lang}"

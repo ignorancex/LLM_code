@@ -6,7 +6,6 @@ from tqdm import tqdm
 
 
 def load_repo_field_mapping(json_path):
-    """加载 repo -> (cs / non-cs) 的映射"""
     with open(json_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
@@ -22,7 +21,6 @@ def load_repo_field_mapping(json_path):
                 else:
                     repo_field_map[repo_name] = 'non-cs'
             except Exception:
-                # 出错时跳过该条
                 continue
     return repo_field_map
 
@@ -33,7 +31,6 @@ repo_field_map = load_repo_field_mapping(
 
 
 def count_comment_and_total_lines_tokenize(file_path):
-    """统计代码文件的注释行数和总代码行数"""
     comment_lines = set()
     total_lines = 0
     try:
@@ -50,7 +47,6 @@ def count_comment_and_total_lines_tokenize(file_path):
 
 
 def compute_quarter_avg_comment_ratio(quarter_path):
-    """计算某个季度的 CS / non-CS 平均注释率"""
     cs_ratios = []
     noncs_ratios = []
 
@@ -82,12 +78,11 @@ def compute_quarter_avg_comment_ratio(quarter_path):
     return cs_avg, noncs_avg
 
 
-# === 主流程 ===
 base_dir = 'arxiv_dataset'
 results = {}
 
 for year in sorted(os.listdir(base_dir)):
-    if not year.isdigit() or int(year) != 2025:  # 只处理 2025
+    if not year.isdigit() or int(year) != 2025: 
         continue
     year_path = os.path.join(base_dir, year)
     if not os.path.isdir(year_path):
@@ -102,7 +97,6 @@ for year in sorted(os.listdir(base_dir)):
         cs_avg, noncs_avg = compute_quarter_avg_comment_ratio(quarter_path)
         results[quarter_key] = {'cs': cs_avg, 'noncs': noncs_avg}
 
-# === 输出 CSV ===
 csv_path = 'comment_ratio_python_by_group.csv'
 os.makedirs(os.path.dirname(csv_path) or ".", exist_ok=True)
 

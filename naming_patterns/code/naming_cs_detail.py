@@ -9,10 +9,8 @@ import concurrent.futures
 import warnings
 warnings.filterwarnings('ignore', category=SyntaxWarning)
 
-# === 启用分类 ===
 classify_enabled = True
 
-# === 命名模式定义 ===
 naming_patterns = {
     'single_letter': '^[a-zA-Z]$',
     'lowercase': '^[a-z]+$',
@@ -20,7 +18,6 @@ naming_patterns = {
     'camelCase': '^[a-z]+(?:[A-Z][a-z]*)*$',
     'snake_case': '^[a-z]+(?:_[a-z]+)+$',
     'PascalCase': '^[A-Z][a-z]+(?:[A-Z][a-z]*)*$',
-    'UPPER_SNAKE_CASE': '^[A-Z]+(?:_[A-Z]+)+$',
     'endsWithDigits': '^[A-Za-z_]+[0-9]+$',
     'Other': '.*'
 }
@@ -33,7 +30,6 @@ def get_naming_pattern(name):
     return 'Other'
 
 
-# === 提取函数与变量名 ===
 def extract_code_info(file_path, skipped_files_log):
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
@@ -60,7 +56,6 @@ def extract_code_info(file_path, skipped_files_log):
     return (function_names, variable_names)
 
 
-# === 仅保留三类: cs.CV / cs.CL / cs.LG ===
 def classify_category(cat):
     if cat.startswith('cs.CV'):
         return 'cs.CV'
@@ -72,7 +67,6 @@ def classify_category(cat):
         return 'other'
 
 
-# === 处理单个项目 ===
 def process_project(project_name, quarter_path, quarter_key, quarter_repo_category, skipped_files_log):
     project_path = os.path.join(quarter_path, project_name)
     if classify_enabled:
@@ -104,7 +98,6 @@ def process_project(project_name, quarter_path, quarter_key, quarter_repo_catego
     return (project_category, func_ratios, var_ratios)
 
 
-# === 主路径与配置 ===
 base_dir = f'arxiv_dataset'
 output_dir = 'naming_new'
 categories_file = 'dataset_collection/github/links/python_dataset_links.json'
@@ -114,7 +107,6 @@ if os.path.exists(skipped_files_log):
     os.remove(skipped_files_log)
 
 
-# === 分类加载 ===
 if classify_enabled:
     with open(categories_file, 'r', encoding='utf-8') as f:
         all_categories = json.load(f)
@@ -128,14 +120,12 @@ if classify_enabled:
 else:
     quarter_repo_category = {}
 
-# === 仅分析这三类 ===
 category_list = ['cs.CV', 'cs.CL', 'cs.LG']
 
 quarter_func_ratios = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
 quarter_var_ratios = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
 
 
-# === 主循环 ===
 for year in range(2020, 2026):
     max_q = 1 if year == 2025 else 4
     for q in range(1, max_q + 1):
@@ -160,7 +150,6 @@ for year in range(2020, 2026):
                     quarter_var_ratios[quarter_key][cat][pat].append(rt)
 
 
-# === 计算均值与标准差 ===
 def aggregate_with_std(ratios):
     out = {}
     for quarter in sorted(ratios.keys()):
@@ -178,7 +167,6 @@ def aggregate_with_std(ratios):
     return out
 
 
-# === 汇总输出 ===
 final_func = aggregate_with_std(quarter_func_ratios)
 final_var = aggregate_with_std(quarter_var_ratios)
 

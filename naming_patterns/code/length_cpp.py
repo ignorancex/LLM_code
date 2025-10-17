@@ -8,11 +8,9 @@ import concurrent.futures
 
 warnings.filterwarnings("ignore", category=SyntaxWarning)
 
-# === 分类函数 ===
 def classify_category(cat_str):
     return "cs" if cat_str.startswith("cs.") else "non_cs"
 
-# === 提取函数名/变量名（基于正则）===
 def extract_code_info(file_path):
     try:
         with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
@@ -22,16 +20,13 @@ def extract_code_info(file_path):
     except Exception:
         return set(), set()
 
-    # 函数名匹配（函数返回类型 + 名称 + 括号）
     func_pattern = re.compile(r'\b[a-zA-Z_][a-zA-Z0-9_]*\s+([a-zA-Z_][a-zA-Z0-9_]*)\s*\([^;]*?\)\s*\{')
-    # 变量名匹配（简化：类型名 + 名称 + 分号）
     var_pattern = re.compile(r'\b[a-zA-Z_][a-zA-Z0-9_]*\s+([a-zA-Z_][a-zA-Z0-9_]*)\s*;')
 
     function_names = set(func_pattern.findall(code))
     variable_names = set(var_pattern.findall(code))
     return function_names, variable_names
 
-# === 项目级处理 ===
 def process_project(project_path):
     func_lengths, var_lengths, file_name_lengths = [], [], []
 
@@ -51,7 +46,6 @@ def process_project(project_path):
 
     return avg_func_len, avg_var_len, avg_file_len
 
-# === 聚合函数 ===
 def aggregate_results(length_dict):
     result = {}
     for quarter in sorted(length_dict.keys()):
@@ -76,12 +70,10 @@ def aggregate_results(length_dict):
                 }
     return result
 
-# === 主程序配置 ===
 base_dir = f"arxiv_dataset_cpp"
 output_dir = "naming_patterns/github_result/naming_patterns_cpp"
 os.makedirs(output_dir, exist_ok=True)
 
-# === 加载分类文件 ===
 categories_file = "dataset_collection/github/links/cpp_dataset_links.json"
 with open(categories_file, "r", encoding="utf-8") as f:
     all_categories = json.load(f)
@@ -93,10 +85,8 @@ for quarter, items in all_categories.items():
         repo_name = link.rstrip("/").split("/")[-1]
         quarter_repo_category[quarter][repo_name] = classify_category(category)
 
-# === 初始化结构 ===
 quarter_avg_lengths = defaultdict(lambda: defaultdict(list))  # quarter -> cs/non_cs -> [(func_len, var_len, file_len)]
 
-# === 遍历每个季度 ===
 for year in range(2025, 2026):
     max_q = 3 if year == 2025 else 4
     for q in range(2, max_q + 1):
@@ -120,7 +110,6 @@ for year in range(2025, 2026):
 
         print(f"✅ Finished {quarter}")
 
-# === 保存输出 ===
 avg_result = aggregate_results(quarter_avg_lengths)
 out_path = os.path.join(output_dir, f"average_lengths_cs_split_1.json")
 with open(out_path, "w", encoding="utf-8") as f:

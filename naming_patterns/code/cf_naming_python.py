@@ -5,7 +5,6 @@ from pathlib import Path
 from collections import Counter, defaultdict
 import os
 
-# === 1. 命名模式定义 ===
 naming_patterns = {
     'single_letter': '^[a-zA-Z]$',
     'lowercase':     '^[a-z]+$',
@@ -24,7 +23,6 @@ def get_naming_category(name: str) -> str:
             return key
     return 'Other'
 
-# === 2. Python 代码分析 ===
 def analyze_code(code: str):
     var_counter = Counter()
     func_counter = Counter()
@@ -54,14 +52,11 @@ def analyze_code(code: str):
 
     return var_counter, func_counter, sum_var_len, count_var, sum_func_len, count_func
 
-# === 3. 预加载人类代码（ac）数据 ===
 unique_path = Path('dataset/unique_problem_python.json')
 with unique_path.open('r', encoding='utf-8') as f:
     unique_items = json.load(f)
-# 假设 model items 中有 submission_id 字段，用于映射
 ac_map = {item['submission_id']: item['sourceCode'] for item in unique_items}
 
-# === 4. 主流程：读取 JSON，统计比例 + 平均长度 ===
 input_files = {
     'DeepSeek': 'LLM_code/codeforces/simulation/output/DeepSeek_python.json',
     'Gemma':    'LLM_code/codeforces/simulation/output/Gemma_python.json',
@@ -95,7 +90,6 @@ for model_name, file_path in input_files.items():
         count_func = 0
 
         for item in items:
-            # 如果是 ac（人类代码），从 ac_map 中获取
             if label == 'ac':
                 sid = item.get('submission_id')
                 code = ac_map.get(sid, '')
@@ -112,7 +106,6 @@ for model_name, file_path in input_files.items():
             sum_func_len += sfl
             count_func   += cfunc
 
-        # 构造输出：比例 + 平均长度字段
         variable_result['python'][model_name][label] = {
             **{k: (var_counter[k] / total_var_counts if total_var_counts else 0.0)
                for k in naming_patterns},
@@ -124,7 +117,6 @@ for model_name, file_path in input_files.items():
             'avg_length': (sum_func_len / count_func if count_func else 0.0)
         }
 
-# === 5. 写入结果 ===
 os.makedirs('LLM_code/codeforces/simulation/result', exist_ok=True)
 with open('LLM_code/codeforces/simulation/result/variable_naming_all_models_python.json', 'w', encoding='utf-8') as f:
     json.dump(variable_result, f, indent=2, ensure_ascii=False)

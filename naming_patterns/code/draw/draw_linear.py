@@ -38,7 +38,6 @@ def get_best_legend_loc(x_vals, y_vals):
     return min(quadrants, key=quadrants.get)
 
 def fit_and_plot(x_idx, y_vals, category):
-    """ 对某个时间段做线性回归并画虚线（CS=蓝，non-CS=红） """
     x = np.array(x_idx)
     y = np.array(y_vals)
     mask = ~np.isnan(y)
@@ -54,7 +53,6 @@ def fit_and_plot(x_idx, y_vals, category):
 def plot_pattern_trend(data, quarters, patterns, output_dir, label_prefix, colors, xticks, xtick_labels):
     os.makedirs(output_dir, exist_ok=True)
 
-    # 定义两个阶段
     stage1 = [q for q in quarters if "2020Q1" <= q <= "2023Q1"]
     stage2 = [q for q in quarters if "2023Q2" <= q <= "2025Q3"]
 
@@ -65,11 +63,9 @@ def plot_pattern_trend(data, quarters, patterns, output_dir, label_prefix, color
         for category in colors:
             y = [data.get(q, {}).get(category, {}).get(pattern, np.nan) for q in quarters]
             legend_y_vals.append(y)
-            # 原始折线（蓝/橙，无 marker）
             plt.plot(quarters, y, linestyle='-', label=category,
                      linewidth=2, color=colors[category])
 
-            # === 拟合两段直线 ===
             x_idx1 = [i for i, q in enumerate(quarters) if q in stage1]
             y1 = [y[i] for i in x_idx1]
             fit_and_plot(x_idx1, y1, category)
@@ -78,24 +74,21 @@ def plot_pattern_trend(data, quarters, patterns, output_dir, label_prefix, color
             y2 = [y[i] for i in x_idx2]
             fit_and_plot(x_idx2, y2, category)
 
-        # y 轴范围
         all_y = [v for series in legend_y_vals for v in series if not np.isnan(v)]
         y_min, y_max = min(all_y), max(all_y)
         margin = (y_max - y_min) * 0.1
         plt.ylim(max(0, y_min - margin), min(1, y_max + margin) if y_max + margin > 0 else 0.05)
 
         plt.ylabel("Proportion", fontsize=10)
-        plt.xticks(xticks, xtick_labels, fontsize=10)  # 横坐标保持原来季度
+        plt.xticks(xticks, xtick_labels, fontsize=10) 
         plt.yticks(fontsize=10)
         plt.grid(False)
 
-        # 图例靠边
         best_loc = get_best_legend_loc(quarters, legend_y_vals)
         plt.legend(fontsize=9, loc=best_loc, frameon=True,
                    facecolor='white', framealpha=1, labelspacing=0.2,
                   )
 
-        # === 在 2023Q1 加竖直黑虚线和固定箭头 ===
         if "2023Q1" in quarters:
             idx = quarters.index("2023Q1")
             plt.axvline(x=quarters[idx], color="gray", linestyle="--", linewidth=1)
@@ -112,8 +105,7 @@ def plot_naming_trends(function_file, variable_file, filename_file, output_dir):
     file_data = load_json(filename_file)
 
     quarters = sorted(func_data.keys())
-    colors = {"cs": "#1f77b4", "non_cs": "#ff7f0e"}  # 原始曲线蓝/橙
-    # colors = {"cs": "#ff7f0e", "non_cs": "#1f77b4"}  # 原始曲线蓝/橙
+    colors = {"cs": "#1f77b4", "non_cs": "#ff7f0e"} 
     xticks, xtick_labels = get_xticks(quarters)
 
     example_pattern_set = list(next(iter(next(iter(func_data.values())).values())).keys())
@@ -127,13 +119,12 @@ def plot_naming_trends(function_file, variable_file, filename_file, output_dir):
 
     print(f"\n🎨 All plots saved in subdirectories of {output_dir}")
 
-# === 主程序 ===
 if __name__ == "__main__":
-    lang = "python"
+    lang = "cpp"
     base_dir = f"naming_patterns/github_result/naming_patterns_{lang}"
     plot_naming_trends(
-        function_file=os.path.join(base_dir, "mean_results_function.json"),
-        variable_file=os.path.join(base_dir, "mean_results_variable.json"),
+        function_file=os.path.join(base_dir, "naming_patterns_function.json"),
+        variable_file=os.path.join(base_dir, "naming_patterns_variable.json"),
         filename_file=os.path.join(base_dir, "naming_patterns_filename.json"),
         output_dir=os.path.join(base_dir, f"plots_{lang}_linear_1")
     )

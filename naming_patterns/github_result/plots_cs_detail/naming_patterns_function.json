@@ -1,0 +1,2186 @@
+{
+  "2020Q1": {
+    "cs.CV": {
+      "single_letter": {
+        "mean": 0.000595,
+        "std": 0.003471
+      },
+      "lowercase": {
+        "mean": 0.156096,
+        "std": 0.079124
+      },
+      "UPPERCASE": {
+        "mean": 0.009745,
+        "std": 0.016384
+      },
+      "camelCase": {
+        "mean": 0.024017,
+        "std": 0.063241
+      },
+      "snake_case": {
+        "mean": 0.391075,
+        "std": 0.175365
+      },
+      "PascalCase": {
+        "mean": 0.126702,
+        "std": 0.078385
+      },
+      "endsWithDigits": {
+        "mean": 0.025177,
+        "std": 0.035992
+      },
+      "Other": {
+        "mean": 0.262791,
+        "std": 0.111997
+      }
+    },
+    "cs.CL": {
+      "single_letter": {
+        "mean": 0.000206,
+        "std": 0.000665
+      },
+      "lowercase": {
+        "mean": 0.168425,
+        "std": 0.104466
+      },
+      "UPPERCASE": {
+        "mean": 0.005935,
+        "std": 0.014369
+      },
+      "camelCase": {
+        "mean": 0.008772,
+        "std": 0.022846
+      },
+      "snake_case": {
+        "mean": 0.506314,
+        "std": 0.155809
+      },
+      "PascalCase": {
+        "mean": 0.107517,
+        "std": 0.059336
+      },
+      "endsWithDigits": {
+        "mean": 0.006524,
+        "std": 0.008691
+      },
+      "Other": {
+        "mean": 0.196307,
+        "std": 0.093187
+      }
+    },
+    "cs.LG": {
+      "single_letter": {
+        "mean": 0.001819,
+        "std": 0.008201
+      },
+      "lowercase": {
+        "mean": 0.179268,
+        "std": 0.094236
+      },
+      "UPPERCASE": {
+        "mean": 0.011596,
+        "std": 0.02156
+      },
+      "camelCase": {
+        "mean": 0.03105,
+        "std": 0.120547
+      },
+      "snake_case": {
+        "mean": 0.391541,
+        "std": 0.185556
+      },
+      "PascalCase": {
+        "mean": 0.122935,
+        "std": 0.105049
+      },
+      "endsWithDigits": {
+        "mean": 0.029535,
+        "std": 0.043605
+      },
+      "Other": {
+        "mean": 0.223249,
+        "std": 0.113313
+      }
+    }
+  },
+  "2020Q2": {
+    "cs.CV": {
+      "single_letter": {
+        "mean": 0.000477,
+        "std": 0.002664
+      },
+      "lowercase": {
+        "mean": 0.159316,
+        "std": 0.083921
+      },
+      "UPPERCASE": {
+        "mean": 0.010447,
+        "std": 0.024041
+      },
+      "camelCase": {
+        "mean": 0.022073,
+        "std": 0.077027
+      },
+      "snake_case": {
+        "mean": 0.376414,
+        "std": 0.176642
+      },
+      "PascalCase": {
+        "mean": 0.120074,
+        "std": 0.082284
+      },
+      "endsWithDigits": {
+        "mean": 0.027715,
+        "std": 0.05876
+      },
+      "Other": {
+        "mean": 0.264545,
+        "std": 0.115681
+      }
+    },
+    "cs.CL": {
+      "single_letter": {
+        "mean": 3e-06,
+        "std": 2.8e-05
+      },
+      "lowercase": {
+        "mean": 0.158299,
+        "std": 0.136115
+      },
+      "UPPERCASE": {
+        "mean": 0.005373,
+        "std": 0.01695
+      },
+      "camelCase": {
+        "mean": 0.02829,
+        "std": 0.123769
+      },
+      "snake_case": {
+        "mean": 0.449758,
+        "std": 0.18941
+      },
+      "PascalCase": {
+        "mean": 0.106776,
+        "std": 0.079939
+      },
+      "endsWithDigits": {
+        "mean": 0.005582,
+        "std": 0.01214
+      },
+      "Other": {
+        "mean": 0.189581,
+        "std": 0.114387
+      }
+    },
+    "cs.LG": {
+      "single_letter": {
+        "mean": 0.001676,
+        "std": 0.007003
+      },
+      "lowercase": {
+        "mean": 0.182706,
+        "std": 0.094638
+      },
+      "UPPERCASE": {
+        "mean": 0.012514,
+        "std": 0.026111
+      },
+      "camelCase": {
+        "mean": 0.007756,
+        "std": 0.02233
+      },
+      "snake_case": {
+        "mean": 0.415993,
+        "std": 0.16427
+      },
+      "PascalCase": {
+        "mean": 0.122555,
+        "std": 0.073854
+      },
+      "endsWithDigits": {
+        "mean": 0.02237,
+        "std": 0.041691
+      },
+      "Other": {
+        "mean": 0.224906,
+        "std": 0.11166
+      }
+    }
+  },
+  "2020Q3": {
+    "cs.CV": {
+      "single_letter": {
+        "mean": 0.000374,
+        "std": 0.001895
+      },
+      "lowercase": {
+        "mean": 0.15972,
+        "std": 0.074683
+      },
+      "UPPERCASE": {
+        "mean": 0.011545,
+        "std": 0.026901
+      },
+      "camelCase": {
+        "mean": 0.024186,
+        "std": 0.090413
+      },
+      "snake_case": {
+        "mean": 0.364163,
+        "std": 0.173029
+      },
+      "PascalCase": {
+        "mean": 0.131989,
+        "std": 0.092306
+      },
+      "endsWithDigits": {
+        "mean": 0.024924,
+        "std": 0.036106
+      },
+      "Other": {
+        "mean": 0.271648,
+        "std": 0.116881
+      }
+    },
+    "cs.CL": {
+      "single_letter": {
+        "mean": 0.000184,
+        "std": 0.001199
+      },
+      "lowercase": {
+        "mean": 0.149673,
+        "std": 0.090208
+      },
+      "UPPERCASE": {
+        "mean": 0.00524,
+        "std": 0.008179
+      },
+      "camelCase": {
+        "mean": 0.015951,
+        "std": 0.034355
+      },
+      "snake_case": {
+        "mean": 0.470035,
+        "std": 0.159135
+      },
+      "PascalCase": {
+        "mean": 0.138299,
+        "std": 0.090518
+      },
+      "endsWithDigits": {
+        "mean": 0.007713,
+        "std": 0.014187
+      },
+      "Other": {
+        "mean": 0.212903,
+        "std": 0.091095
+      }
+    },
+    "cs.LG": {
+      "single_letter": {
+        "mean": 0.000522,
+        "std": 0.001917
+      },
+      "lowercase": {
+        "mean": 0.181393,
+        "std": 0.092362
+      },
+      "UPPERCASE": {
+        "mean": 0.012003,
+        "std": 0.020687
+      },
+      "camelCase": {
+        "mean": 0.025948,
+        "std": 0.066881
+      },
+      "snake_case": {
+        "mean": 0.403384,
+        "std": 0.162052
+      },
+      "PascalCase": {
+        "mean": 0.111865,
+        "std": 0.069418
+      },
+      "endsWithDigits": {
+        "mean": 0.019454,
+        "std": 0.028684
+      },
+      "Other": {
+        "mean": 0.245431,
+        "std": 0.118293
+      }
+    }
+  },
+  "2020Q4": {
+    "cs.CV": {
+      "single_letter": {
+        "mean": 0.000562,
+        "std": 0.002466
+      },
+      "lowercase": {
+        "mean": 0.158916,
+        "std": 0.081894
+      },
+      "UPPERCASE": {
+        "mean": 0.007729,
+        "std": 0.01339
+      },
+      "camelCase": {
+        "mean": 0.01834,
+        "std": 0.04439
+      },
+      "snake_case": {
+        "mean": 0.390386,
+        "std": 0.140181
+      },
+      "PascalCase": {
+        "mean": 0.124819,
+        "std": 0.087495
+      },
+      "endsWithDigits": {
+        "mean": 0.031964,
+        "std": 0.06894
+      },
+      "Other": {
+        "mean": 0.262182,
+        "std": 0.104843
+      }
+    },
+    "cs.CL": {
+      "single_letter": {
+        "mean": 0.000423,
+        "std": 0.001899
+      },
+      "lowercase": {
+        "mean": 0.147808,
+        "std": 0.074298
+      },
+      "UPPERCASE": {
+        "mean": 0.004571,
+        "std": 0.009093
+      },
+      "camelCase": {
+        "mean": 0.033723,
+        "std": 0.110199
+      },
+      "snake_case": {
+        "mean": 0.450944,
+        "std": 0.155771
+      },
+      "PascalCase": {
+        "mean": 0.12883,
+        "std": 0.111183
+      },
+      "endsWithDigits": {
+        "mean": 0.007297,
+        "std": 0.015705
+      },
+      "Other": {
+        "mean": 0.20931,
+        "std": 0.106168
+      }
+    },
+    "cs.LG": {
+      "single_letter": {
+        "mean": 0.000954,
+        "std": 0.003274
+      },
+      "lowercase": {
+        "mean": 0.179125,
+        "std": 0.114304
+      },
+      "UPPERCASE": {
+        "mean": 0.010901,
+        "std": 0.0212
+      },
+      "camelCase": {
+        "mean": 0.017734,
+        "std": 0.070323
+      },
+      "snake_case": {
+        "mean": 0.40136,
+        "std": 0.170656
+      },
+      "PascalCase": {
+        "mean": 0.119969,
+        "std": 0.080881
+      },
+      "endsWithDigits": {
+        "mean": 0.024194,
+        "std": 0.041002
+      },
+      "Other": {
+        "mean": 0.237429,
+        "std": 0.121178
+      }
+    }
+  },
+  "2021Q1": {
+    "cs.CV": {
+      "single_letter": {
+        "mean": 0.001128,
+        "std": 0.005802
+      },
+      "lowercase": {
+        "mean": 0.158218,
+        "std": 0.073695
+      },
+      "UPPERCASE": {
+        "mean": 0.009706,
+        "std": 0.021499
+      },
+      "camelCase": {
+        "mean": 0.014799,
+        "std": 0.042591
+      },
+      "snake_case": {
+        "mean": 0.383774,
+        "std": 0.147952
+      },
+      "PascalCase": {
+        "mean": 0.128224,
+        "std": 0.069918
+      },
+      "endsWithDigits": {
+        "mean": 0.022975,
+        "std": 0.033969
+      },
+      "Other": {
+        "mean": 0.277111,
+        "std": 0.102562
+      }
+    },
+    "cs.CL": {
+      "single_letter": {
+        "mean": 0.000112,
+        "std": 0.00069
+      },
+      "lowercase": {
+        "mean": 0.129108,
+        "std": 0.074694
+      },
+      "UPPERCASE": {
+        "mean": 0.004408,
+        "std": 0.007784
+      },
+      "camelCase": {
+        "mean": 0.016289,
+        "std": 0.058106
+      },
+      "snake_case": {
+        "mean": 0.482954,
+        "std": 0.182905
+      },
+      "PascalCase": {
+        "mean": 0.143403,
+        "std": 0.084783
+      },
+      "endsWithDigits": {
+        "mean": 0.013739,
+        "std": 0.032392
+      },
+      "Other": {
+        "mean": 0.209987,
+        "std": 0.146477
+      }
+    },
+    "cs.LG": {
+      "single_letter": {
+        "mean": 0.000661,
+        "std": 0.002797
+      },
+      "lowercase": {
+        "mean": 0.17749,
+        "std": 0.091663
+      },
+      "UPPERCASE": {
+        "mean": 0.014122,
+        "std": 0.028277
+      },
+      "camelCase": {
+        "mean": 0.011117,
+        "std": 0.03844
+      },
+      "snake_case": {
+        "mean": 0.400719,
+        "std": 0.190271
+      },
+      "PascalCase": {
+        "mean": 0.115177,
+        "std": 0.08311
+      },
+      "endsWithDigits": {
+        "mean": 0.03683,
+        "std": 0.070316
+      },
+      "Other": {
+        "mean": 0.243883,
+        "std": 0.117031
+      }
+    }
+  },
+  "2021Q2": {
+    "cs.CV": {
+      "single_letter": {
+        "mean": 0.000642,
+        "std": 0.00275
+      },
+      "lowercase": {
+        "mean": 0.160952,
+        "std": 0.061432
+      },
+      "UPPERCASE": {
+        "mean": 0.011514,
+        "std": 0.018642
+      },
+      "camelCase": {
+        "mean": 0.015519,
+        "std": 0.056379
+      },
+      "snake_case": {
+        "mean": 0.368182,
+        "std": 0.142056
+      },
+      "PascalCase": {
+        "mean": 0.135468,
+        "std": 0.071598
+      },
+      "endsWithDigits": {
+        "mean": 0.025347,
+        "std": 0.038076
+      },
+      "Other": {
+        "mean": 0.282376,
+        "std": 0.098939
+      }
+    },
+    "cs.CL": {
+      "single_letter": {
+        "mean": 0.00018,
+        "std": 0.000934
+      },
+      "lowercase": {
+        "mean": 0.15261,
+        "std": 0.082076
+      },
+      "UPPERCASE": {
+        "mean": 0.004695,
+        "std": 0.009119
+      },
+      "camelCase": {
+        "mean": 0.021307,
+        "std": 0.07269
+      },
+      "snake_case": {
+        "mean": 0.469858,
+        "std": 0.175781
+      },
+      "PascalCase": {
+        "mean": 0.124967,
+        "std": 0.080995
+      },
+      "endsWithDigits": {
+        "mean": 0.005759,
+        "std": 0.01003
+      },
+      "Other": {
+        "mean": 0.211532,
+        "std": 0.097885
+      }
+    },
+    "cs.LG": {
+      "single_letter": {
+        "mean": 0.001204,
+        "std": 0.004549
+      },
+      "lowercase": {
+        "mean": 0.166209,
+        "std": 0.080487
+      },
+      "UPPERCASE": {
+        "mean": 0.016049,
+        "std": 0.03047
+      },
+      "camelCase": {
+        "mean": 0.015559,
+        "std": 0.0725
+      },
+      "snake_case": {
+        "mean": 0.398747,
+        "std": 0.16386
+      },
+      "PascalCase": {
+        "mean": 0.135258,
+        "std": 0.078247
+      },
+      "endsWithDigits": {
+        "mean": 0.028502,
+        "std": 0.040737
+      },
+      "Other": {
+        "mean": 0.238472,
+        "std": 0.097442
+      }
+    }
+  },
+  "2021Q3": {
+    "cs.CV": {
+      "single_letter": {
+        "mean": 0.001068,
+        "std": 0.005353
+      },
+      "lowercase": {
+        "mean": 0.164572,
+        "std": 0.084711
+      },
+      "UPPERCASE": {
+        "mean": 0.008656,
+        "std": 0.014226
+      },
+      "camelCase": {
+        "mean": 0.016209,
+        "std": 0.048209
+      },
+      "snake_case": {
+        "mean": 0.382996,
+        "std": 0.143573
+      },
+      "PascalCase": {
+        "mean": 0.136476,
+        "std": 0.076854
+      },
+      "endsWithDigits": {
+        "mean": 0.029084,
+        "std": 0.038759
+      },
+      "Other": {
+        "mean": 0.260939,
+        "std": 0.09472
+      }
+    },
+    "cs.CL": {
+      "single_letter": {
+        "mean": 0.00077,
+        "std": 0.00492
+      },
+      "lowercase": {
+        "mean": 0.148221,
+        "std": 0.071022
+      },
+      "UPPERCASE": {
+        "mean": 0.00741,
+        "std": 0.022689
+      },
+      "camelCase": {
+        "mean": 0.018432,
+        "std": 0.073296
+      },
+      "snake_case": {
+        "mean": 0.48841,
+        "std": 0.149646
+      },
+      "PascalCase": {
+        "mean": 0.11259,
+        "std": 0.073035
+      },
+      "endsWithDigits": {
+        "mean": 0.007066,
+        "std": 0.012429
+      },
+      "Other": {
+        "mean": 0.217101,
+        "std": 0.098555
+      }
+    },
+    "cs.LG": {
+      "single_letter": {
+        "mean": 0.000441,
+        "std": 0.001438
+      },
+      "lowercase": {
+        "mean": 0.172119,
+        "std": 0.077306
+      },
+      "UPPERCASE": {
+        "mean": 0.013542,
+        "std": 0.023555
+      },
+      "camelCase": {
+        "mean": 0.014094,
+        "std": 0.066858
+      },
+      "snake_case": {
+        "mean": 0.389662,
+        "std": 0.176154
+      },
+      "PascalCase": {
+        "mean": 0.129073,
+        "std": 0.093869
+      },
+      "endsWithDigits": {
+        "mean": 0.036752,
+        "std": 0.077256
+      },
+      "Other": {
+        "mean": 0.244318,
+        "std": 0.117628
+      }
+    }
+  },
+  "2021Q4": {
+    "cs.CV": {
+      "single_letter": {
+        "mean": 0.000412,
+        "std": 0.002197
+      },
+      "lowercase": {
+        "mean": 0.152148,
+        "std": 0.069775
+      },
+      "UPPERCASE": {
+        "mean": 0.010231,
+        "std": 0.019928
+      },
+      "camelCase": {
+        "mean": 0.015416,
+        "std": 0.045855
+      },
+      "snake_case": {
+        "mean": 0.384992,
+        "std": 0.15483
+      },
+      "PascalCase": {
+        "mean": 0.135574,
+        "std": 0.069038
+      },
+      "endsWithDigits": {
+        "mean": 0.027118,
+        "std": 0.037236
+      },
+      "Other": {
+        "mean": 0.270157,
+        "std": 0.109485
+      }
+    },
+    "cs.CL": {
+      "single_letter": {
+        "mean": 0.000649,
+        "std": 0.003133
+      },
+      "lowercase": {
+        "mean": 0.143,
+        "std": 0.085444
+      },
+      "UPPERCASE": {
+        "mean": 0.005623,
+        "std": 0.01554
+      },
+      "camelCase": {
+        "mean": 0.007377,
+        "std": 0.021419
+      },
+      "snake_case": {
+        "mean": 0.482191,
+        "std": 0.169337
+      },
+      "PascalCase": {
+        "mean": 0.101594,
+        "std": 0.068173
+      },
+      "endsWithDigits": {
+        "mean": 0.014724,
+        "std": 0.025967
+      },
+      "Other": {
+        "mean": 0.224433,
+        "std": 0.130543
+      }
+    },
+    "cs.LG": {
+      "single_letter": {
+        "mean": 0.001154,
+        "std": 0.005385
+      },
+      "lowercase": {
+        "mean": 0.175135,
+        "std": 0.115844
+      },
+      "UPPERCASE": {
+        "mean": 0.013094,
+        "std": 0.020008
+      },
+      "camelCase": {
+        "mean": 0.011633,
+        "std": 0.043974
+      },
+      "snake_case": {
+        "mean": 0.405144,
+        "std": 0.166696
+      },
+      "PascalCase": {
+        "mean": 0.116127,
+        "std": 0.067909
+      },
+      "endsWithDigits": {
+        "mean": 0.024131,
+        "std": 0.034152
+      },
+      "Other": {
+        "mean": 0.246174,
+        "std": 0.115363
+      }
+    }
+  },
+  "2022Q1": {
+    "cs.CV": {
+      "single_letter": {
+        "mean": 0.000553,
+        "std": 0.003525
+      },
+      "lowercase": {
+        "mean": 0.149318,
+        "std": 0.059701
+      },
+      "UPPERCASE": {
+        "mean": 0.008937,
+        "std": 0.015285
+      },
+      "camelCase": {
+        "mean": 0.015239,
+        "std": 0.042721
+      },
+      "snake_case": {
+        "mean": 0.387029,
+        "std": 0.139485
+      },
+      "PascalCase": {
+        "mean": 0.141808,
+        "std": 0.075394
+      },
+      "endsWithDigits": {
+        "mean": 0.022702,
+        "std": 0.030678
+      },
+      "Other": {
+        "mean": 0.270724,
+        "std": 0.086841
+      }
+    },
+    "cs.CL": {
+      "single_letter": {
+        "mean": 0.000224,
+        "std": 0.001107
+      },
+      "lowercase": {
+        "mean": 0.152337,
+        "std": 0.076088
+      },
+      "UPPERCASE": {
+        "mean": 0.004681,
+        "std": 0.010515
+      },
+      "camelCase": {
+        "mean": 0.006015,
+        "std": 0.019283
+      },
+      "snake_case": {
+        "mean": 0.475314,
+        "std": 0.15761
+      },
+      "PascalCase": {
+        "mean": 0.132208,
+        "std": 0.084457
+      },
+      "endsWithDigits": {
+        "mean": 0.017053,
+        "std": 0.059932
+      },
+      "Other": {
+        "mean": 0.212168,
+        "std": 0.11174
+      }
+    },
+    "cs.LG": {
+      "single_letter": {
+        "mean": 0.001568,
+        "std": 0.005564
+      },
+      "lowercase": {
+        "mean": 0.171374,
+        "std": 0.082346
+      },
+      "UPPERCASE": {
+        "mean": 0.01424,
+        "std": 0.023899
+      },
+      "camelCase": {
+        "mean": 0.019455,
+        "std": 0.06693
+      },
+      "snake_case": {
+        "mean": 0.422195,
+        "std": 0.17567
+      },
+      "PascalCase": {
+        "mean": 0.128201,
+        "std": 0.071657
+      },
+      "endsWithDigits": {
+        "mean": 0.026979,
+        "std": 0.045652
+      },
+      "Other": {
+        "mean": 0.215988,
+        "std": 0.09999
+      }
+    }
+  },
+  "2022Q2": {
+    "cs.CV": {
+      "single_letter": {
+        "mean": 0.000294,
+        "std": 0.001294
+      },
+      "lowercase": {
+        "mean": 0.147969,
+        "std": 0.057542
+      },
+      "UPPERCASE": {
+        "mean": 0.010377,
+        "std": 0.015275
+      },
+      "camelCase": {
+        "mean": 0.013149,
+        "std": 0.052319
+      },
+      "snake_case": {
+        "mean": 0.394281,
+        "std": 0.161385
+      },
+      "PascalCase": {
+        "mean": 0.14008,
+        "std": 0.072425
+      },
+      "endsWithDigits": {
+        "mean": 0.023004,
+        "std": 0.032477
+      },
+      "Other": {
+        "mean": 0.270846,
+        "std": 0.095587
+      }
+    },
+    "cs.CL": {
+      "single_letter": {
+        "mean": 5.4e-05,
+        "std": 0.000214
+      },
+      "lowercase": {
+        "mean": 0.156429,
+        "std": 0.093687
+      },
+      "UPPERCASE": {
+        "mean": 0.006477,
+        "std": 0.016052
+      },
+      "camelCase": {
+        "mean": 0.014829,
+        "std": 0.05134
+      },
+      "snake_case": {
+        "mean": 0.471368,
+        "std": 0.168536
+      },
+      "PascalCase": {
+        "mean": 0.11579,
+        "std": 0.087811
+      },
+      "endsWithDigits": {
+        "mean": 0.013494,
+        "std": 0.058734
+      },
+      "Other": {
+        "mean": 0.221559,
+        "std": 0.104498
+      }
+    },
+    "cs.LG": {
+      "single_letter": {
+        "mean": 0.000885,
+        "std": 0.004382
+      },
+      "lowercase": {
+        "mean": 0.179778,
+        "std": 0.084405
+      },
+      "UPPERCASE": {
+        "mean": 0.016515,
+        "std": 0.027705
+      },
+      "camelCase": {
+        "mean": 0.017086,
+        "std": 0.07374
+      },
+      "snake_case": {
+        "mean": 0.389567,
+        "std": 0.131117
+      },
+      "PascalCase": {
+        "mean": 0.13123,
+        "std": 0.07598
+      },
+      "endsWithDigits": {
+        "mean": 0.029511,
+        "std": 0.049493
+      },
+      "Other": {
+        "mean": 0.235429,
+        "std": 0.103804
+      }
+    }
+  },
+  "2022Q3": {
+    "cs.CV": {
+      "single_letter": {
+        "mean": 0.00095,
+        "std": 0.007256
+      },
+      "lowercase": {
+        "mean": 0.152485,
+        "std": 0.059844
+      },
+      "UPPERCASE": {
+        "mean": 0.01074,
+        "std": 0.018179
+      },
+      "camelCase": {
+        "mean": 0.016958,
+        "std": 0.064982
+      },
+      "snake_case": {
+        "mean": 0.377937,
+        "std": 0.12835
+      },
+      "PascalCase": {
+        "mean": 0.13798,
+        "std": 0.066275
+      },
+      "endsWithDigits": {
+        "mean": 0.022809,
+        "std": 0.031641
+      },
+      "Other": {
+        "mean": 0.276797,
+        "std": 0.09025
+      }
+    },
+    "cs.CL": {
+      "single_letter": {
+        "mean": 5.6e-05,
+        "std": 0.000328
+      },
+      "lowercase": {
+        "mean": 0.136229,
+        "std": 0.109651
+      },
+      "UPPERCASE": {
+        "mean": 0.002839,
+        "std": 0.010341
+      },
+      "camelCase": {
+        "mean": 0.011444,
+        "std": 0.025587
+      },
+      "snake_case": {
+        "mean": 0.510276,
+        "std": 0.170624
+      },
+      "PascalCase": {
+        "mean": 0.112291,
+        "std": 0.077894
+      },
+      "endsWithDigits": {
+        "mean": 0.009714,
+        "std": 0.014471
+      },
+      "Other": {
+        "mean": 0.217151,
+        "std": 0.108058
+      }
+    },
+    "cs.LG": {
+      "single_letter": {
+        "mean": 0.002649,
+        "std": 0.013363
+      },
+      "lowercase": {
+        "mean": 0.163225,
+        "std": 0.099373
+      },
+      "UPPERCASE": {
+        "mean": 0.012302,
+        "std": 0.015361
+      },
+      "camelCase": {
+        "mean": 0.025367,
+        "std": 0.105183
+      },
+      "snake_case": {
+        "mean": 0.412117,
+        "std": 0.178586
+      },
+      "PascalCase": {
+        "mean": 0.126527,
+        "std": 0.075026
+      },
+      "endsWithDigits": {
+        "mean": 0.028323,
+        "std": 0.050657
+      },
+      "Other": {
+        "mean": 0.217585,
+        "std": 0.095757
+      }
+    }
+  },
+  "2022Q4": {
+    "cs.CV": {
+      "single_letter": {
+        "mean": 0.00072,
+        "std": 0.003608
+      },
+      "lowercase": {
+        "mean": 0.146335,
+        "std": 0.053723
+      },
+      "UPPERCASE": {
+        "mean": 0.011804,
+        "std": 0.020981
+      },
+      "camelCase": {
+        "mean": 0.01354,
+        "std": 0.044544
+      },
+      "snake_case": {
+        "mean": 0.383751,
+        "std": 0.125442
+      },
+      "PascalCase": {
+        "mean": 0.138779,
+        "std": 0.066604
+      },
+      "endsWithDigits": {
+        "mean": 0.027334,
+        "std": 0.046399
+      },
+      "Other": {
+        "mean": 0.277738,
+        "std": 0.087155
+      }
+    },
+    "cs.CL": {
+      "single_letter": {
+        "mean": 0.000237,
+        "std": 0.001145
+      },
+      "lowercase": {
+        "mean": 0.137289,
+        "std": 0.080565
+      },
+      "UPPERCASE": {
+        "mean": 0.003872,
+        "std": 0.008884
+      },
+      "camelCase": {
+        "mean": 0.005582,
+        "std": 0.019316
+      },
+      "snake_case": {
+        "mean": 0.476758,
+        "std": 0.148532
+      },
+      "PascalCase": {
+        "mean": 0.116131,
+        "std": 0.080579
+      },
+      "endsWithDigits": {
+        "mean": 0.009772,
+        "std": 0.022379
+      },
+      "Other": {
+        "mean": 0.238312,
+        "std": 0.114274
+      }
+    },
+    "cs.LG": {
+      "single_letter": {
+        "mean": 0.001498,
+        "std": 0.00479
+      },
+      "lowercase": {
+        "mean": 0.168026,
+        "std": 0.080427
+      },
+      "UPPERCASE": {
+        "mean": 0.013709,
+        "std": 0.021429
+      },
+      "camelCase": {
+        "mean": 0.006475,
+        "std": 0.021536
+      },
+      "snake_case": {
+        "mean": 0.419972,
+        "std": 0.155089
+      },
+      "PascalCase": {
+        "mean": 0.118583,
+        "std": 0.058974
+      },
+      "endsWithDigits": {
+        "mean": 0.028967,
+        "std": 0.045586
+      },
+      "Other": {
+        "mean": 0.242769,
+        "std": 0.108369
+      }
+    }
+  },
+  "2023Q1": {
+    "cs.CV": {
+      "single_letter": {
+        "mean": 0.000714,
+        "std": 0.003931
+      },
+      "lowercase": {
+        "mean": 0.152793,
+        "std": 0.059903
+      },
+      "UPPERCASE": {
+        "mean": 0.010656,
+        "std": 0.018288
+      },
+      "camelCase": {
+        "mean": 0.009212,
+        "std": 0.026974
+      },
+      "snake_case": {
+        "mean": 0.393186,
+        "std": 0.115897
+      },
+      "PascalCase": {
+        "mean": 0.139432,
+        "std": 0.066298
+      },
+      "endsWithDigits": {
+        "mean": 0.022017,
+        "std": 0.030263
+      },
+      "Other": {
+        "mean": 0.271989,
+        "std": 0.094338
+      }
+    },
+    "cs.CL": {
+      "single_letter": {
+        "mean": 0.000963,
+        "std": 0.006675
+      },
+      "lowercase": {
+        "mean": 0.130708,
+        "std": 0.070334
+      },
+      "UPPERCASE": {
+        "mean": 0.008215,
+        "std": 0.019226
+      },
+      "camelCase": {
+        "mean": 0.009894,
+        "std": 0.033756
+      },
+      "snake_case": {
+        "mean": 0.450795,
+        "std": 0.151712
+      },
+      "PascalCase": {
+        "mean": 0.132166,
+        "std": 0.084655
+      },
+      "endsWithDigits": {
+        "mean": 0.021199,
+        "std": 0.081516
+      },
+      "Other": {
+        "mean": 0.24606,
+        "std": 0.103066
+      }
+    },
+    "cs.LG": {
+      "single_letter": {
+        "mean": 0.000796,
+        "std": 0.003721
+      },
+      "lowercase": {
+        "mean": 0.160454,
+        "std": 0.073176
+      },
+      "UPPERCASE": {
+        "mean": 0.01254,
+        "std": 0.018166
+      },
+      "camelCase": {
+        "mean": 0.008496,
+        "std": 0.028117
+      },
+      "snake_case": {
+        "mean": 0.433233,
+        "std": 0.136678
+      },
+      "PascalCase": {
+        "mean": 0.130439,
+        "std": 0.074766
+      },
+      "endsWithDigits": {
+        "mean": 0.024524,
+        "std": 0.042742
+      },
+      "Other": {
+        "mean": 0.229517,
+        "std": 0.088483
+      }
+    }
+  },
+  "2023Q2": {
+    "cs.CV": {
+      "single_letter": {
+        "mean": 0.00042,
+        "std": 0.001834
+      },
+      "lowercase": {
+        "mean": 0.139664,
+        "std": 0.064021
+      },
+      "UPPERCASE": {
+        "mean": 0.011366,
+        "std": 0.017757
+      },
+      "camelCase": {
+        "mean": 0.009654,
+        "std": 0.049903
+      },
+      "snake_case": {
+        "mean": 0.408563,
+        "std": 0.163218
+      },
+      "PascalCase": {
+        "mean": 0.131524,
+        "std": 0.074885
+      },
+      "endsWithDigits": {
+        "mean": 0.021139,
+        "std": 0.030523
+      },
+      "Other": {
+        "mean": 0.25574,
+        "std": 0.104203
+      }
+    },
+    "cs.CL": {
+      "single_letter": {
+        "mean": 0.000362,
+        "std": 0.002012
+      },
+      "lowercase": {
+        "mean": 0.122007,
+        "std": 0.062386
+      },
+      "UPPERCASE": {
+        "mean": 0.006407,
+        "std": 0.016301
+      },
+      "camelCase": {
+        "mean": 0.013754,
+        "std": 0.047283
+      },
+      "snake_case": {
+        "mean": 0.524404,
+        "std": 0.166998
+      },
+      "PascalCase": {
+        "mean": 0.119862,
+        "std": 0.085152
+      },
+      "endsWithDigits": {
+        "mean": 0.008777,
+        "std": 0.019007
+      },
+      "Other": {
+        "mean": 0.204427,
+        "std": 0.113922
+      }
+    },
+    "cs.LG": {
+      "single_letter": {
+        "mean": 0.001302,
+        "std": 0.006599
+      },
+      "lowercase": {
+        "mean": 0.16255,
+        "std": 0.084679
+      },
+      "UPPERCASE": {
+        "mean": 0.01702,
+        "std": 0.027707
+      },
+      "camelCase": {
+        "mean": 0.008423,
+        "std": 0.031654
+      },
+      "snake_case": {
+        "mean": 0.410239,
+        "std": 0.157069
+      },
+      "PascalCase": {
+        "mean": 0.127007,
+        "std": 0.071058
+      },
+      "endsWithDigits": {
+        "mean": 0.02739,
+        "std": 0.045657
+      },
+      "Other": {
+        "mean": 0.237666,
+        "std": 0.091729
+      }
+    }
+  },
+  "2023Q3": {
+    "cs.CV": {
+      "single_letter": {
+        "mean": 0.000577,
+        "std": 0.002737
+      },
+      "lowercase": {
+        "mean": 0.145143,
+        "std": 0.073512
+      },
+      "UPPERCASE": {
+        "mean": 0.009906,
+        "std": 0.020176
+      },
+      "camelCase": {
+        "mean": 0.011142,
+        "std": 0.032271
+      },
+      "snake_case": {
+        "mean": 0.403813,
+        "std": 0.138858
+      },
+      "PascalCase": {
+        "mean": 0.138946,
+        "std": 0.071
+      },
+      "endsWithDigits": {
+        "mean": 0.017628,
+        "std": 0.024722
+      },
+      "Other": {
+        "mean": 0.272844,
+        "std": 0.103544
+      }
+    },
+    "cs.CL": {
+      "single_letter": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "lowercase": {
+        "mean": 0.12088,
+        "std": 0.111023
+      },
+      "UPPERCASE": {
+        "mean": 0.006805,
+        "std": 0.016541
+      },
+      "camelCase": {
+        "mean": 0.003574,
+        "std": 0.009409
+      },
+      "snake_case": {
+        "mean": 0.492878,
+        "std": 0.180225
+      },
+      "PascalCase": {
+        "mean": 0.105375,
+        "std": 0.073345
+      },
+      "endsWithDigits": {
+        "mean": 0.023007,
+        "std": 0.084474
+      },
+      "Other": {
+        "mean": 0.224753,
+        "std": 0.127773
+      }
+    },
+    "cs.LG": {
+      "single_letter": {
+        "mean": 0.001806,
+        "std": 0.006187
+      },
+      "lowercase": {
+        "mean": 0.17109,
+        "std": 0.074531
+      },
+      "UPPERCASE": {
+        "mean": 0.01538,
+        "std": 0.034863
+      },
+      "camelCase": {
+        "mean": 0.015356,
+        "std": 0.049632
+      },
+      "snake_case": {
+        "mean": 0.401444,
+        "std": 0.148102
+      },
+      "PascalCase": {
+        "mean": 0.131248,
+        "std": 0.078561
+      },
+      "endsWithDigits": {
+        "mean": 0.025369,
+        "std": 0.047281
+      },
+      "Other": {
+        "mean": 0.238307,
+        "std": 0.09423
+      }
+    }
+  },
+  "2023Q4": {
+    "cs.CV": {
+      "single_letter": {
+        "mean": 0.000241,
+        "std": 0.001391
+      },
+      "lowercase": {
+        "mean": 0.138331,
+        "std": 0.053226
+      },
+      "UPPERCASE": {
+        "mean": 0.010746,
+        "std": 0.019005
+      },
+      "camelCase": {
+        "mean": 0.010685,
+        "std": 0.038787
+      },
+      "snake_case": {
+        "mean": 0.415587,
+        "std": 0.150051
+      },
+      "PascalCase": {
+        "mean": 0.134144,
+        "std": 0.0586
+      },
+      "endsWithDigits": {
+        "mean": 0.017905,
+        "std": 0.023974
+      },
+      "Other": {
+        "mean": 0.272361,
+        "std": 0.104644
+      }
+    },
+    "cs.CL": {
+      "single_letter": {
+        "mean": 0.000303,
+        "std": 0.001543
+      },
+      "lowercase": {
+        "mean": 0.167527,
+        "std": 0.167696
+      },
+      "UPPERCASE": {
+        "mean": 0.004383,
+        "std": 0.00805
+      },
+      "camelCase": {
+        "mean": 0.011792,
+        "std": 0.041517
+      },
+      "snake_case": {
+        "mean": 0.49894,
+        "std": 0.176134
+      },
+      "PascalCase": {
+        "mean": 0.113127,
+        "std": 0.083639
+      },
+      "endsWithDigits": {
+        "mean": 0.007161,
+        "std": 0.012672
+      },
+      "Other": {
+        "mean": 0.196766,
+        "std": 0.110335
+      }
+    },
+    "cs.LG": {
+      "single_letter": {
+        "mean": 0.00112,
+        "std": 0.004354
+      },
+      "lowercase": {
+        "mean": 0.171848,
+        "std": 0.072146
+      },
+      "UPPERCASE": {
+        "mean": 0.018739,
+        "std": 0.026347
+      },
+      "camelCase": {
+        "mean": 0.008084,
+        "std": 0.023504
+      },
+      "snake_case": {
+        "mean": 0.40089,
+        "std": 0.16178
+      },
+      "PascalCase": {
+        "mean": 0.13183,
+        "std": 0.076981
+      },
+      "endsWithDigits": {
+        "mean": 0.022179,
+        "std": 0.037197
+      },
+      "Other": {
+        "mean": 0.24531,
+        "std": 0.109836
+      }
+    }
+  },
+  "2024Q1": {
+    "cs.CV": {
+      "single_letter": {
+        "mean": 0.00044,
+        "std": 0.001531
+      },
+      "lowercase": {
+        "mean": 0.139587,
+        "std": 0.058916
+      },
+      "UPPERCASE": {
+        "mean": 0.009579,
+        "std": 0.016082
+      },
+      "camelCase": {
+        "mean": 0.008137,
+        "std": 0.024355
+      },
+      "snake_case": {
+        "mean": 0.407138,
+        "std": 0.135139
+      },
+      "PascalCase": {
+        "mean": 0.137747,
+        "std": 0.066497
+      },
+      "endsWithDigits": {
+        "mean": 0.022421,
+        "std": 0.028426
+      },
+      "Other": {
+        "mean": 0.274949,
+        "std": 0.092166
+      }
+    },
+    "cs.CL": {
+      "single_letter": {
+        "mean": 0.000278,
+        "std": 0.00239
+      },
+      "lowercase": {
+        "mean": 0.12865,
+        "std": 0.093937
+      },
+      "UPPERCASE": {
+        "mean": 0.007363,
+        "std": 0.025657
+      },
+      "camelCase": {
+        "mean": 0.011535,
+        "std": 0.050086
+      },
+      "snake_case": {
+        "mean": 0.534231,
+        "std": 0.191558
+      },
+      "PascalCase": {
+        "mean": 0.108246,
+        "std": 0.073769
+      },
+      "endsWithDigits": {
+        "mean": 0.005259,
+        "std": 0.009871
+      },
+      "Other": {
+        "mean": 0.177771,
+        "std": 0.120098
+      }
+    },
+    "cs.LG": {
+      "single_letter": {
+        "mean": 0.00127,
+        "std": 0.004516
+      },
+      "lowercase": {
+        "mean": 0.162195,
+        "std": 0.085975
+      },
+      "UPPERCASE": {
+        "mean": 0.013506,
+        "std": 0.022497
+      },
+      "camelCase": {
+        "mean": 0.012157,
+        "std": 0.048512
+      },
+      "snake_case": {
+        "mean": 0.418344,
+        "std": 0.182809
+      },
+      "PascalCase": {
+        "mean": 0.124349,
+        "std": 0.068948
+      },
+      "endsWithDigits": {
+        "mean": 0.028247,
+        "std": 0.053322
+      },
+      "Other": {
+        "mean": 0.230221,
+        "std": 0.11161
+      }
+    }
+  },
+  "2024Q2": {
+    "cs.CV": {
+      "single_letter": {
+        "mean": 0.000466,
+        "std": 0.003392
+      },
+      "lowercase": {
+        "mean": 0.148072,
+        "std": 0.068553
+      },
+      "UPPERCASE": {
+        "mean": 0.008642,
+        "std": 0.013055
+      },
+      "camelCase": {
+        "mean": 0.007265,
+        "std": 0.020378
+      },
+      "snake_case": {
+        "mean": 0.416539,
+        "std": 0.137394
+      },
+      "PascalCase": {
+        "mean": 0.136852,
+        "std": 0.075851
+      },
+      "endsWithDigits": {
+        "mean": 0.021453,
+        "std": 0.034251
+      },
+      "Other": {
+        "mean": 0.256457,
+        "std": 0.089421
+      }
+    },
+    "cs.CL": {
+      "single_letter": {
+        "mean": 0.000247,
+        "std": 0.001296
+      },
+      "lowercase": {
+        "mean": 0.13657,
+        "std": 0.087211
+      },
+      "UPPERCASE": {
+        "mean": 0.004251,
+        "std": 0.009753
+      },
+      "camelCase": {
+        "mean": 0.016165,
+        "std": 0.055558
+      },
+      "snake_case": {
+        "mean": 0.546906,
+        "std": 0.175942
+      },
+      "PascalCase": {
+        "mean": 0.103292,
+        "std": 0.078948
+      },
+      "endsWithDigits": {
+        "mean": 0.010381,
+        "std": 0.020872
+      },
+      "Other": {
+        "mean": 0.182188,
+        "std": 0.124237
+      }
+    },
+    "cs.LG": {
+      "single_letter": {
+        "mean": 0.000984,
+        "std": 0.003538
+      },
+      "lowercase": {
+        "mean": 0.158135,
+        "std": 0.068206
+      },
+      "UPPERCASE": {
+        "mean": 0.01467,
+        "std": 0.019923
+      },
+      "camelCase": {
+        "mean": 0.006021,
+        "std": 0.021351
+      },
+      "snake_case": {
+        "mean": 0.439534,
+        "std": 0.142315
+      },
+      "PascalCase": {
+        "mean": 0.129314,
+        "std": 0.072778
+      },
+      "endsWithDigits": {
+        "mean": 0.019205,
+        "std": 0.042178
+      },
+      "Other": {
+        "mean": 0.232136,
+        "std": 0.08386
+      }
+    }
+  },
+  "2024Q3": {
+    "cs.CV": {
+      "single_letter": {
+        "mean": 0.000336,
+        "std": 0.001317
+      },
+      "lowercase": {
+        "mean": 0.13817,
+        "std": 0.063022
+      },
+      "UPPERCASE": {
+        "mean": 0.013409,
+        "std": 0.043976
+      },
+      "camelCase": {
+        "mean": 0.013773,
+        "std": 0.053513
+      },
+      "snake_case": {
+        "mean": 0.410646,
+        "std": 0.138356
+      },
+      "PascalCase": {
+        "mean": 0.136303,
+        "std": 0.066431
+      },
+      "endsWithDigits": {
+        "mean": 0.018406,
+        "std": 0.020732
+      },
+      "Other": {
+        "mean": 0.268957,
+        "std": 0.088481
+      }
+    },
+    "cs.CL": {
+      "single_letter": {
+        "mean": 0.000831,
+        "std": 0.006985
+      },
+      "lowercase": {
+        "mean": 0.151665,
+        "std": 0.135874
+      },
+      "UPPERCASE": {
+        "mean": 0.004175,
+        "std": 0.010958
+      },
+      "camelCase": {
+        "mean": 0.00866,
+        "std": 0.048647
+      },
+      "snake_case": {
+        "mean": 0.530319,
+        "std": 0.191947
+      },
+      "PascalCase": {
+        "mean": 0.095986,
+        "std": 0.079604
+      },
+      "endsWithDigits": {
+        "mean": 0.014869,
+        "std": 0.046445
+      },
+      "Other": {
+        "mean": 0.193494,
+        "std": 0.130018
+      }
+    },
+    "cs.LG": {
+      "single_letter": {
+        "mean": 0.001435,
+        "std": 0.009239
+      },
+      "lowercase": {
+        "mean": 0.161809,
+        "std": 0.083958
+      },
+      "UPPERCASE": {
+        "mean": 0.015619,
+        "std": 0.029111
+      },
+      "camelCase": {
+        "mean": 0.013357,
+        "std": 0.057448
+      },
+      "snake_case": {
+        "mean": 0.425388,
+        "std": 0.172583
+      },
+      "PascalCase": {
+        "mean": 0.118904,
+        "std": 0.071129
+      },
+      "endsWithDigits": {
+        "mean": 0.023991,
+        "std": 0.045606
+      },
+      "Other": {
+        "mean": 0.239496,
+        "std": 0.116433
+      }
+    }
+  },
+  "2024Q4": {
+    "cs.CV": {
+      "single_letter": {
+        "mean": 0.000523,
+        "std": 0.003213
+      },
+      "lowercase": {
+        "mean": 0.140258,
+        "std": 0.075245
+      },
+      "UPPERCASE": {
+        "mean": 0.009797,
+        "std": 0.017538
+      },
+      "camelCase": {
+        "mean": 0.006637,
+        "std": 0.014615
+      },
+      "snake_case": {
+        "mean": 0.43671,
+        "std": 0.139316
+      },
+      "PascalCase": {
+        "mean": 0.131164,
+        "std": 0.057028
+      },
+      "endsWithDigits": {
+        "mean": 0.018958,
+        "std": 0.023525
+      },
+      "Other": {
+        "mean": 0.255953,
+        "std": 0.092116
+      }
+    },
+    "cs.CL": {
+      "single_letter": {
+        "mean": 0.000289,
+        "std": 0.001668
+      },
+      "lowercase": {
+        "mean": 0.121849,
+        "std": 0.072019
+      },
+      "UPPERCASE": {
+        "mean": 0.003963,
+        "std": 0.008443
+      },
+      "camelCase": {
+        "mean": 0.009872,
+        "std": 0.052316
+      },
+      "snake_case": {
+        "mean": 0.522363,
+        "std": 0.205827
+      },
+      "PascalCase": {
+        "mean": 0.128622,
+        "std": 0.099624
+      },
+      "endsWithDigits": {
+        "mean": 0.009113,
+        "std": 0.01875
+      },
+      "Other": {
+        "mean": 0.190229,
+        "std": 0.119866
+      }
+    },
+    "cs.LG": {
+      "single_letter": {
+        "mean": 0.000826,
+        "std": 0.003635
+      },
+      "lowercase": {
+        "mean": 0.15581,
+        "std": 0.071514
+      },
+      "UPPERCASE": {
+        "mean": 0.017322,
+        "std": 0.027772
+      },
+      "camelCase": {
+        "mean": 0.009155,
+        "std": 0.032716
+      },
+      "snake_case": {
+        "mean": 0.403602,
+        "std": 0.159717
+      },
+      "PascalCase": {
+        "mean": 0.134884,
+        "std": 0.073577
+      },
+      "endsWithDigits": {
+        "mean": 0.021546,
+        "std": 0.034346
+      },
+      "Other": {
+        "mean": 0.249042,
+        "std": 0.101783
+      }
+    }
+  },
+  "2025Q1": {
+    "cs.CV": {
+      "single_letter": {
+        "mean": 0.00032,
+        "std": 0.001315
+      },
+      "lowercase": {
+        "mean": 0.150567,
+        "std": 0.0769
+      },
+      "UPPERCASE": {
+        "mean": 0.009632,
+        "std": 0.013494
+      },
+      "camelCase": {
+        "mean": 0.009503,
+        "std": 0.027662
+      },
+      "snake_case": {
+        "mean": 0.424084,
+        "std": 0.133541
+      },
+      "PascalCase": {
+        "mean": 0.128915,
+        "std": 0.05912
+      },
+      "endsWithDigits": {
+        "mean": 0.020051,
+        "std": 0.065023
+      },
+      "Other": {
+        "mean": 0.256929,
+        "std": 0.089936
+      }
+    },
+    "cs.CL": {
+      "single_letter": {
+        "mean": 0.000499,
+        "std": 0.002855
+      },
+      "lowercase": {
+        "mean": 0.134204,
+        "std": 0.109975
+      },
+      "UPPERCASE": {
+        "mean": 0.007511,
+        "std": 0.023718
+      },
+      "camelCase": {
+        "mean": 0.01724,
+        "std": 0.057878
+      },
+      "snake_case": {
+        "mean": 0.562236,
+        "std": 0.19399
+      },
+      "PascalCase": {
+        "mean": 0.097141,
+        "std": 0.076783
+      },
+      "endsWithDigits": {
+        "mean": 0.012279,
+        "std": 0.031415
+      },
+      "Other": {
+        "mean": 0.16889,
+        "std": 0.108024
+      }
+    },
+    "cs.LG": {
+      "single_letter": {
+        "mean": 0.001582,
+        "std": 0.006663
+      },
+      "lowercase": {
+        "mean": 0.16067,
+        "std": 0.093536
+      },
+      "UPPERCASE": {
+        "mean": 0.00858,
+        "std": 0.01319
+      },
+      "camelCase": {
+        "mean": 0.007809,
+        "std": 0.037384
+      },
+      "snake_case": {
+        "mean": 0.444245,
+        "std": 0.162668
+      },
+      "PascalCase": {
+        "mean": 0.12256,
+        "std": 0.07105
+      },
+      "endsWithDigits": {
+        "mean": 0.02161,
+        "std": 0.038249
+      },
+      "Other": {
+        "mean": 0.232943,
+        "std": 0.112244
+      }
+    }
+  }
+}

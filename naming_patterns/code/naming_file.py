@@ -6,7 +6,7 @@ from collections import defaultdict
 from tqdm import tqdm
 import concurrent.futures
 warnings.filterwarnings('ignore', category=SyntaxWarning)
-naming_patterns = {'single_letter': '^[a-zA-Z]$', 'lowercase': '^[a-z]+$', 'UPPERCASE': '^[A-Z]+$', 'camelCase': '^[a-z]+(?:[A-Z][a-z]*)*$', 'snake_case': '^[a-z]+(?:_[a-z]+)+$', 'PascalCase': '^[A-Z][a-z]+(?:[A-Z][a-z]*)*$', 'UPPER_SNAKE_CASE': '^[A-Z]+(?:_[A-Z]+)+$', 'endsWithDigits': '^[A-Za-z_]+[0-9]+$', 'Other': '.*'}
+naming_patterns = {'single_letter': '^[a-zA-Z]$', 'lowercase': '^[a-z]+$', 'UPPERCASE': '^[A-Z]+$', 'camelCase': '^[a-z]+(?:[A-Z][a-z]*)*$', 'snake_case': '^[a-z]+(?:_[a-z]+)+$', 'PascalCase': '^[A-Z][a-z]+(?:[A-Z][a-z]*)*$',  'endsWithDigits': '^[A-Za-z_]+[0-9]+$', 'Other': '.*'}
 
 def get_naming_pattern(name):
     name = str(name)
@@ -29,14 +29,14 @@ def process_project(project_name, quarter_path, quarter_key, quarter_repo_catego
     local_filename_counts = defaultdict(int)
     for (root, _, files) in os.walk(project_path):
         for file in files:
-            if file.endswith('.py'):
+            if file.endswith('.c') or file.endswith('.cpp'):
                 filename_without_ext = os.path.splitext(file)[0]
                 pattern = get_naming_pattern(filename_without_ext)
                 local_filename_counts[project_category, pattern] += 1
     return local_filename_counts
-base_dir = 'arxiv_dataset'
-output_dir = 'naming_patterns/github_result/naming_patterns_python'
-categories_file = 'dataset_collection/github/links/python_dataset_links.json'
+base_dir = 'arxiv_dataset_cpp'
+output_dir = 'naming_patterns/github_result/naming_patterns_cpp'
+categories_file = 'dataset_collection/github/links/cpp_dataset_links.json'
 os.makedirs(output_dir, exist_ok=True)
 with open(categories_file, 'r', encoding='utf-8') as f:
     all_categories = json.load(f)

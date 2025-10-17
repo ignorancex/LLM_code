@@ -5,7 +5,6 @@ import numpy as np
 from collections import defaultdict
 
 def get_best_legend_corner(x_vals, y_vals_list):
-    """自动选择数据点最少重叠的角落"""
     quadrants = defaultdict(float)
     n = len(x_vals)
     x_mid = n / 2
@@ -28,7 +27,6 @@ def get_best_legend_corner(x_vals, y_vals_list):
     return min(quadrants, key=quadrants.get) if quadrants else 'upper right'
 
 def fit_and_plot(x_idx, y_vals, color):
-    """对一个阶段的数据做线性拟合并画虚线"""
     x = np.array(x_idx)
     y = np.array(y_vals)
     mask = ~np.isnan(y)
@@ -46,7 +44,6 @@ def plot_avg_lengths(json_path, output_dir, metric_key, ylabel):
     cs_vals    = [data[q]['cs'][metric_key] if 'cs' in data[q] else np.nan for q in quarters]
     noncs_vals = [data[q]['non_cs'][metric_key] if 'non_cs' in data[q] else np.nan for q in quarters]
 
-    # xticks: 每年第一个季度
     custom_xticks, custom_xtick_labels = [], []
     for q in quarters:
         if q.endswith('Q1') or q == '2025Q1':
@@ -57,11 +54,9 @@ def plot_avg_lengths(json_path, output_dir, metric_key, ylabel):
 
     plt.figure(figsize=(3.5, 2.5))
 
-    # 主曲线
     plt.plot(quarters, cs_vals, linestyle='-', linewidth=2, label='cs', color='#1f77b4')
     plt.plot(quarters, noncs_vals, linestyle='-', linewidth=2, label='non-cs', color='#ff7f0e')
 
-    # === 拟合两个阶段 ===
     stage1 = [q for q in quarters if "2020Q1" <= q <= "2023Q1"]
     stage2 = [q for q in quarters if "2023Q2" <= q <= "2025Q3"]
 
@@ -77,7 +72,6 @@ def plot_avg_lengths(json_path, output_dir, metric_key, ylabel):
     fit_and_plot(x_idx2, y2_cs, "blue")
     fit_and_plot(x_idx2, y2_noncs, "red")
 
-    # y 轴范围
     all_y = [v for v in cs_vals + noncs_vals if not np.isnan(v)]
     if all_y:
         y_min, y_max = min(all_y), max(all_y)
@@ -91,7 +85,6 @@ def plot_avg_lengths(json_path, output_dir, metric_key, ylabel):
     plt.yticks(fontsize=10)
     plt.grid(False)
 
-    # 图例：自动贴边
     legend_loc = get_best_legend_corner(quarters, [cs_vals, noncs_vals])
     anchor_map = {
         "upper left": (0.0, 1.0),
@@ -109,7 +102,6 @@ def plot_avg_lengths(json_path, output_dir, metric_key, ylabel):
         labelspacing=0.2
     )
 
-    # === 在 2023Q1 加竖直黑虚线 ===
     if "2023Q1" in quarters:
         idx = quarters.index("2023Q1")
         plt.axvline(x=quarters[idx], color="gray", linestyle="--", linewidth=1)

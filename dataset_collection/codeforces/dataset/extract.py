@@ -12,12 +12,12 @@ with open('LLM_code/codeforces/simulation/models/Qwen_cpp.json', 'r', encoding='
     data = json.load(f)
 
 for item in data:
-    # 检查是否所有字段都已存在
+
     if all(k in item for k in [
         'generate_reasoning', 'generate_code_block',
         'generate_ref_reasoning', 'generate_ref_code_block'
     ]):
-        continue  # 已处理，跳过
+        continue 
 
     gen = item.get('generate_code', '')
     ref = item.get('generate_code_ref', '')

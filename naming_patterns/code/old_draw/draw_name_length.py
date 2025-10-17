@@ -4,10 +4,7 @@ import matplotlib.pyplot as plt
 from collections import defaultdict
 
 def get_best_legend_corner(x_vals, y_vals_list):
-    """
-    在四个角（upper left, upper right, lower left, lower right）中
-    选择与数据点最少重叠的角落。
-    """
+
     quadrants = defaultdict(float)
     n = len(x_vals)
     x_mid = n / 2
@@ -35,7 +32,7 @@ def plot_avg_lengths(json_path, output_dir, metric_key, ylabel):
     cs_vals    = [data[q]['cs'][metric_key]    for q in quarters]
     noncs_vals = [data[q]['non_cs'][metric_key] for q in quarters]
 
-    # 自定义 xticks
+
     custom_xticks = []
     custom_xtick_labels = []
     for q in quarters:
@@ -66,7 +63,6 @@ def plot_avg_lengths(json_path, output_dir, metric_key, ylabel):
     plt.yticks(fontsize=10)
     plt.grid(False)
 
-    # 自动选择图例位置
     legend_loc = get_best_legend_corner(quarters, [cs_vals, noncs_vals])
     plt.legend(
         fontsize=10,

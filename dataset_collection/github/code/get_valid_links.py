@@ -52,7 +52,7 @@ def has_target_file(user, repo, extensions):
         return False
 
 
-# === 读入输入数据 ===
+
 with open(only_links_path, 'r', encoding='utf-8') as f:
     all_only_links = json.load(f)
 
@@ -78,7 +78,7 @@ for quarter in quarters:
         os.makedirs(output_dir, exist_ok=True)
         output_file = os.path.join(output_dir, f'target_{quarter}_{task_name}.jsonl')
 
-        # === 找到上次运行到的位置 ===
+       
         last_link = None
         if os.path.exists(output_file):
             with open(output_file, 'r', encoding='utf-8') as fin:
@@ -91,7 +91,7 @@ for quarter in quarters:
 
         start_index = 0
         if last_link and last_link in to_check_links:
-            start_index = to_check_links.index(last_link) + 1  # 从最后一条的下一个开始
+            start_index = to_check_links.index(last_link) + 1  
 
         remaining_links = to_check_links[start_index:]
 
@@ -110,4 +110,4 @@ for quarter in quarters:
                 progress_bar.update(1)
                 time.sleep(0.2)
 
-        print(f"{quarter}-{task_name}: 检查完成，结果追加到 {output_file}")
+

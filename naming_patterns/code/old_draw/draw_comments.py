@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 from collections import defaultdict
 
 def get_best_legend_loc(x_vals, y_vals):
-    """自动选择图例位置：分4个象限，选数据点最少的一个"""
     quadrants = defaultdict(int)
     x_mid = len(x_vals) // 2
     y_all = [y for series in y_vals for y in series]
@@ -24,7 +23,6 @@ def get_best_legend_loc(x_vals, y_vals):
     return min(quadrants, key=quadrants.get)
 
 def plot_comment_ratio_from_csv(comment_csv_file, output_dir, lang="python"):
-    # === 加载 CSV 数据 ===
     df = pd.read_csv(comment_csv_file)
     df = df.sort_values("Quarter")
 
@@ -32,7 +30,6 @@ def plot_comment_ratio_from_csv(comment_csv_file, output_dir, lang="python"):
     cs_ratios = df["CS_Comment_Ratio"].tolist()
     noncs_ratios = df["NonCS_Comment_Ratio"].tolist()
 
-    # 自定义 xticks（显示每年）
     custom_xticks = []
     custom_xtick_labels = []
     for q in quarters:
@@ -43,7 +40,6 @@ def plot_comment_ratio_from_csv(comment_csv_file, output_dir, lang="python"):
     colors = {"cs": "#4589c8ff", "non_cs": "#ee7c7aff"}
     os.makedirs(output_dir, exist_ok=True)
 
-    # === 绘图 ===
     plt.figure(figsize=(3.5, 2.5))
     plt.plot(quarters, cs_ratios, marker='x', linestyle='--', linewidth=2, markersize=4,
              label="cs", color=colors["cs"])
@@ -58,7 +54,6 @@ def plot_comment_ratio_from_csv(comment_csv_file, output_dir, lang="python"):
         min(1, y_max + margin) if y_max + margin > 0 else 0.05
     )
 
-    # === 移除标题 ===
     # plt.title(...)
 
     plt.ylabel("Comment Ratio", fontsize=10)
@@ -66,7 +61,6 @@ def plot_comment_ratio_from_csv(comment_csv_file, output_dir, lang="python"):
     plt.yticks(fontsize=10)
     plt.grid(False)
 
-    # === 自动图例位置（不遮挡）===
     best_loc = get_best_legend_loc(quarters, [cs_ratios, noncs_ratios])
     plt.legend(
         fontsize=10,
@@ -84,7 +78,6 @@ def plot_comment_ratio_from_csv(comment_csv_file, output_dir, lang="python"):
     plt.close()
     print(f"✅ Comment ratio plot saved to: {save_path}")
 
-# === 主程序调用 ===
 if __name__ == "__main__":
     lang = "python"
     comment_csv_file = f"LLM_code/arxiv_result/comments/comment_ratio_{lang}_by_group.csv"

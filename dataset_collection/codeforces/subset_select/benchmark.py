@@ -75,7 +75,7 @@ def build_benchmark(input_path, output_path, total_questions=200):
         total_in_bucket = sum((len(alg_groups[alg]) for alg in target_algorithms))
         for alg in target_algorithms:
             if len(alg_groups[alg]) == 0:
-                raise ValueError(f"❌ Error: {bucket} 区间缺少算法类别 '{alg}'，无法满足要求。")
+                raise ValueError(f"❌ Error")
         algo_quota = {}
         for alg in target_algorithms:
             ratio = len(alg_groups[alg]) / total_in_bucket
@@ -92,7 +92,7 @@ def build_benchmark(input_path, output_path, total_questions=200):
         for alg in target_algorithms:
             items = alg_groups[alg]
             if len(items) < algo_quota[alg]:
-                raise ValueError(f"❌ Error: {bucket} 区间算法 '{alg}' 可选题量不足，只有 {len(items)}，要求 {algo_quota[alg]}")
+                raise ValueError(f"❌ Error")
             bucket_selected.extend(random.sample(items, algo_quota[alg]))
         selected.extend(bucket_selected)
     save_jsonl(selected, output_path)

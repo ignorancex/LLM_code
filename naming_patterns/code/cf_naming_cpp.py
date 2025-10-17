@@ -4,7 +4,6 @@ import os
 from pathlib import Path
 from collections import Counter, defaultdict
 
-# === 1. 命名模式定义 ===
 naming_patterns = {
     'single_letter': r'^[a-zA-Z]$',
     'lowercase': r'^[a-z]+$',
@@ -23,10 +22,9 @@ def get_naming_category(name: str) -> str:
             return key
     return 'Other'
 
-# === 2. C++ 分析函数，返回 counters + 名称长度总和与计数 ===
 func_def_re = re.compile(
-    r'\b([A-Za-z_]\w*)\s*::\s*([A-Za-z_]\w*)\s*\([^;]*\)\s*\{|'      # 类成员函数 A::foo(
-    r'\b([A-Za-z_]\w*)\s+([A-Za-z_]\w*)\s*\([^;]*\)\s*(?:const\s*)?\{'  # 普通函数 int foo(
+    r'\b([A-Za-z_]\w*)\s*::\s*([A-Za-z_]\w*)\s*\([^;]*\)\s*\{|'      
+    r'\b([A-Za-z_]\w*)\s+([A-Za-z_]\w*)\s*\([^;]*\)\s*(?:const\s*)?\{' 
 )
 var_decl_re = re.compile(
     r'\b(?:unsigned\s+)?(?:int|long|short|float|double|char|bool|auto|std::\w+<[^>]+>)\s+([A-Za-z_]\w*)'
@@ -40,10 +38,8 @@ def analyze_cpp_code(code: str):
     sum_var_len = 0
     count_var = 0
 
-    # 去除注释
     code_nc = re.sub(r'//.*?$|/\*.*?\*/', '', code, flags=re.DOTALL | re.MULTILINE)
 
-    # 找函数名
     for m in func_def_re.finditer(code_nc):
         name = m.group(2) or m.group(4) or m.group(1)
         if name:
@@ -52,7 +48,6 @@ def analyze_cpp_code(code: str):
             sum_func_len += len(name)
             count_func += 1
 
-    # 找变量名
     for m in var_decl_re.finditer(code_nc):
         name = m.group(1)
         cat = get_naming_category(name)
@@ -62,7 +57,6 @@ def analyze_cpp_code(code: str):
 
     return var_counter, func_counter, sum_var_len, count_var, sum_func_len, count_func
 
-# === 3. 读取输入 JSON 并统计 ===
 input_files = {
     'DeepSeek': 'LLM_code/codeforces/simulation/output/DeepSeek_cpp.json',
     'Gemma':    'LLM_code/codeforces/simulation/output/Gemma_cpp.json',
@@ -106,7 +100,6 @@ for model_name, file_path in input_files.items():
             sum_func_len += f_len
             cnt_func += f_ct
 
-        # 计算比例并加入平均长度
         variable_result['cpp'][model_name][label] = {
             **{k: (var_counter[k] / total_var if total_var else 0.0) for k in naming_patterns},
             'avg_length': (sum_var_len / cnt_var if cnt_var else 0.0)
@@ -116,7 +109,6 @@ for model_name, file_path in input_files.items():
             'avg_length': (sum_func_len / cnt_func if cnt_func else 0.0)
         }
 
-# === 4. 写入结果 JSON ===
 os.makedirs('LLM_code/codeforces/simulation/result', exist_ok=True)
 with open('LLM_code/codeforces/simulation/result/variable_naming_all_models_cpp.json', 'w', encoding='utf-8') as f:
     json.dump(variable_result, f, indent=2, ensure_ascii=False)
