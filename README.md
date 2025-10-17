@@ -11,22 +11,23 @@
 </div>
 
 ## Contents
+
 - [Contents](#contents)
 - [Data Collection](#data-collection)
-	- [GitHub Data](#github-data)
-	- [Human-Written Code](#human-written-code)
+  - [GitHub Data](#github-data)
+  - [Human-Written Code](#human-written-code)
 - [Naming Patterns](#naming-patterns)
 - [Complexity and Maintainability](#complexity-and-maintainability)
 - [Code Similarity](#code-similarity)
 - [Labels in the Reasoning Process](#labels-in-the-reasoning-process)
-- [Repository Structure](#repository-structure)
 - [Citation](#citation)
 
 ## Data Collection
 
 ### GitHub Data
 
-**We collect a total of 19,898 GitHub repositories and 926,935 source code files, corresponding to arXiv papers from the first quarter of 2020 to the first quarter of 2025.** Our arXiv dataset is organized across two GitHub repositories: Python files are in ```LLM_code/arxiv_dataset```, and C/C++ code is in ```LLM_code/arxiv_dataset_cpp```.
+**We collect a total of 19,898 GitHub repositories and 926,935 source code files, corresponding to arXiv papers from the first quarter of 2020 to the first quarter of 2025.** Our arXiv dataset is organized across two GitHub repositories: Python files are in `LLM_code/arxiv_dataset`, and C/C++ code is in `LLM_code/arxiv_dataset_cpp`.
+
 ```
 ├── 2020                   // Year
     ├── Q1                 // Quarter
@@ -42,37 +43,32 @@ We utilize _Code4Bench_, a multidimensional benchmark based on Codeforces data. 
 
 ## Naming Patterns
 
-we categorize variable, function, and file names into several distinct formats (e.g. _snake\_case_). The length of the names has also been considered.
+we categorize variable, function, and file names into several distinct formats (e.g. _snake_case_). The length of the names has also been considered.
 
 <img src="naming_patterns/case_study/figures/naming_pattern.png">
 
-> [!IMPORTANT]
-> **_Finding 1_: The coding style of human-written code may be influenced by LLMs: they may not only mirror existing norms but also subtly reshape them, gradually pushing human developers toward greater stylistic alignment with LLM-preferred conventions.**
+> [!IMPORTANT] > **_Finding 1_: The coding style of human-written code may be influenced by LLMs: they may not only mirror existing norms but also subtly reshape them, gradually pushing human developers toward greater stylistic alignment with LLM-preferred conventions.**
 
 ## Complexity and Maintainability
 
 Cyclomatic complexity is a metric used to measure the number of linearly independent paths in the code.
 
 <div align="center">
-<img src="naming_patterns/case_study/figures/metrics.png" style="width: 70%; height: auto;">
+<img src="naming_patterns/case_study/figures/metrics.png">
 <p align="center">
 
 </p>
 </div>
 
-> [!IMPORTANT]
-> **_Finding 2_: LLM's code writing has lower complexity and higher maintainability than humans in the scenario of IO algorithm problems. At the same time, the output is stable, and its rewritten code indicators are inferior to direct generation.**
+> [!IMPORTANT] > **_Finding 2_: For I/O algorithm problems, LLM-generated code tends to exhibit higher maintainability, lower difficulty, and fewer bugs than human-written solutions, which aligns with the evolution of Github code after 2023Q1. Moreover, the quality of reference-guided code is generally inferior to that of directly generated code.**
 
 ## Code Similarity
 
 We compare three versions of each problem’s code: the original human-authored solution (**AC**), the LLM’s output given only the problem description (**ANS**), and the LLM’s output when additionally conditioned on the human solution (**REF**). We compute **pairwise cosine and Jaccard similarities** among AC, ANS, and REF.
 
-
-
 <img src="naming_patterns/case_study/figures/similarity.png" alt="">
 
-> [!IMPORTANT]
-> **_Finding 3_: LLMs can effectively mimic human coding style when given reference code, but without such guidance, their generated solutions diverge significantly from human-written code—especially in IO algorithm tasks.**
+> [!IMPORTANT] > **_Finding 3_: LLMs can effectively mimic human coding style when given reference code, but without such guidance, their generated solutions diverge significantly from human-written code—especially in IO algorithm tasks.**
 
 ## Labels in the Reasoning Process
 
@@ -93,20 +89,22 @@ where $\mathbf{1}(\cdot)$ is the indicator function: it returns 1 if the conditi
 
 <img src="naming_patterns/case_study/figures/match.png" alt="">
 
-> [!IMPORTANT]
-> **_Finding 4_: LLMs have low algorithm analysis capabilities, are more inclined to approach C/C++ code from an algorithmic perspective, and harder problems may better activate their algorithmic reasoning capabilities.**
-
-
-## Repository Structure
+> [!IMPORTANT] > **_Finding 4_: LLMs have low algorithm analysis capabilities, are more inclined to approach C/C++ code from an algorithmic perspective, and harder problems may better activate their algorithmic reasoning capabilities.**
 
 ## Citation
 
 ```
+@article{xu2025code_transformed,
+  title={code\_transformed: The Influence of Large Language Models on Code},
+  author={Xu, Yuliang and Huang, Siming and Geng, Mingmeng and Wan, Yao and Shi, Xuanhua and Chen, Dongping},
+  journal={arXiv preprint arXiv:2506.12014},
+  year={2025}
+}
 ```
 
-<!-- 
+<!--
 ```
-├── code     								// Our code for analyze  
+├── code     								// Our code for analyze
 	├── data_processing
 	├── label
 		├── caltag.py                  // Calculate frequency of each tag
@@ -130,7 +128,7 @@ where $\mathbf{1}(\cdot)$ is the indicator function: it returns 1 if the conditi
 	├── tags_frequencies_count.csv             // The tags frequency of the models' output (count one in one output)
 	├── tags_py.jsonl                                        // Tags of every python problems
 	├── tags_cpp.jsonl                                      // Tags of every C/C++ problems
-	├── qwen32b_cpp_ans_match_report.csv  // model_lang_type_(match or error)_report.csv means match and error cases of every problems in the models' output 
+	├── qwen32b_cpp_ans_match_report.csv  // model_lang_type_(match or error)_report.csv means match and error cases of every problems in the models' output
 	 ... ...
 ├── metrics                             // Scoring indicator results
 	├──  benchmark                 // Code4bench dataset result
